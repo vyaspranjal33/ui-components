@@ -1,5 +1,6 @@
 # Bundle
 dist
+flow-typed
 
 # Logs
 logs
