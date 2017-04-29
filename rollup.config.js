@@ -14,6 +14,12 @@ export default {
   plugins: [
     babel({
       exclude: 'node_modules/**',
+      babelrc: false,
+      presets: ['react', 'es2015-rollup', 'flow', 'stage-3'],
+      plugins: [
+        'external-helpers',
+        'transform-export-extensions',
+      ],
     }),
     nodeResolve({
       jsnext: true,

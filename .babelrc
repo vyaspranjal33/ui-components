@@ -1,15 +1,8 @@
 {
   "presets": [
-    [
-      "es2015",
-      {
-        "modules": false
-      }
-    ],
-    "react"
-  ],
-  "plugins": [
-    "external-helpers",
-    "transform-export-extensions"
+    "es2015",
+    "react",
+    "flow",
+    "stage-3"
   ]
 }
