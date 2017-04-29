@@ -1,7 +1,7 @@
 // @flow
 import React, { Children } from 'react';
 
-type ButtonListProps = {
+export type ButtonListProps = {
   children: Children[]
 };
 
