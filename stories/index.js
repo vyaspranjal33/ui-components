@@ -7,6 +7,7 @@ import Welcome from './Welcome';
 import css from '../style-guide/app/scss/style-guide.scss';
 // eslint-disable-next-line no-unused-vars
 import morecss from '../public/storybook.css';
+import Card from '../src/components/Card';
 
 storiesOf('Welcome', module).add("to SendGrid's Storybook", () => (
   <Welcome showApp={linkTo('Button')} />
@@ -63,3 +64,40 @@ storiesOf('Button', module)
       😀 😎 👍 💯
     </Button>
   ));
+
+
+const cardStyle = {
+  width: "350px",
+  margin: "20px"
+};
+
+storiesOf("Card", module)
+  .add("Standard with textacular", () => (
+    <Card small style={{ ...cardStyle }} centered={true}>
+      Let's test your integration
+    </Card>
+  ))
+  .add("Large with text", () => (
+    <Card  style={{ ...cardStyle }} centered={true}>
+      Let's test your integration
+    </Card>
+  ))
+  .add("Inline Card", () => (
+    <div>
+      <Card small inline={true} style={{ ...cardStyle }} centered={true}>
+        Let's test your integrations
+      </Card>
+      <Card small inline={true} style={{ ...cardStyle }} centered={true}>
+        Let's test your integration
+      </Card>
+    </div>
+  )).add("Module Cards", () => (
+  <div>
+    <Card small module={true} style={{ width:'80px' }} centered={true}>
+      <p><i className="sg-icon sg-icon-images" /> Image</p>
+    </Card>
+    <Card small module={true} style={{ width:"80px" }} centered={true}>
+      <p><i className="sg-icon sg-icon-images" /> Image </p>
+    </Card>
+  </div>
+));
