@@ -7,22 +7,20 @@ export const StandardLoader = ({
   small,
   dark,
 }: { large?: boolean, small?: boolean, dark?: boolean }) => (
-  <svg>
-    <svg
-      className={cn('sg-loader', {
-        'is-small': small,
-        'is-large': large,
-        'loader-on-dark': dark,
-      })}
-    >
-      <rect className="logo-square bottom-left" />
-      <rect className="logo-square bottom-middle" />
-      <rect className="logo-square middle" />
-      <rect className="logo-square top-middle" />
-      <rect className="logo-square top-right" />
-      <rect className="logo-square middle-left" />
-      <rect className="logo-square middle-right" />
-    </svg>
+  <svg
+    className={cn('sg-loader', {
+      'is-small': small,
+      'is-large': large,
+      'loader-on-dark': dark,
+    })}
+  >
+    <rect className="logo-square bottom-left" />
+    <rect className="logo-square bottom-middle" />
+    <rect className="logo-square middle" />
+    <rect className="logo-square top-middle" />
+    <rect className="logo-square top-right" />
+    <rect className="logo-square middle-left" />
+    <rect className="logo-square middle-right" />
   </svg>
 );
 
