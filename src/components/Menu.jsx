@@ -5,24 +5,29 @@ import MenuItem from './MenuItem';
 import Icon from './Icons';
 
 class Menu extends React.Component {
-  constructor() {
-    super();
-    this.state = { active: false };
-  }
-  state: {
-    active: boolean,
-  };
-  props: {
-    children?: MenuItem[] | MenuItem,
-    gear?: boolean,
-    text?: string,
-    primary?: boolean,
-  };
   static defaultProps: {
     gear: false,
     text: '',
     primary: false,
+    children: {},
   };
+
+  constructor() {
+    super();
+    this.state = { active: false };
+  }
+
+  state: {
+    active: boolean,
+  };
+
+  props: {
+    children: MenuItem[] | MenuItem,
+    gear: boolean,
+    text: string,
+    primary: boolean,
+  };
+
   render() {
     return (
       <div
@@ -36,7 +41,7 @@ class Menu extends React.Component {
         }}
         role="button"
       >
-        {this.props.gear ? <Icon type="gear" size="small" /> : ''}
+        {this.props.gear && <Icon type="gear" size="small" />}
         {this.props.text}
         <ul className="dropdown-menu">
           {this.props.children}
