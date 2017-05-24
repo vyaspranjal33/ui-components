@@ -2,7 +2,7 @@
 const genDefaultConfig = require('@kadira/storybook/dist/server/config/defaults/webpack.config.js');
 const path = require('path');
 
-module.exports = (config: any, env: any) => {
+module.exports = (config, env) => {
   let generated_config = genDefaultConfig(config, env);
 
   generated_config.module.loaders.push({
