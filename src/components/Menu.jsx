@@ -22,7 +22,7 @@ class Menu extends React.Component {
   };
 
   props: {
-    children: MenuItem[] | MenuItem,
+    children: MenuItem[] | MenuItem | Object,
     gear: boolean,
     text: string,
     primary: boolean,

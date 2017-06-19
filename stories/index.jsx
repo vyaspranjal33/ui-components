@@ -1,22 +1,21 @@
 // @flow
 import React from 'react';
-import { storiesOf, action, linkTo } from '@kadira/storybook';
+import { storiesOf } from '@storybook/react';
+import { action } from '@storybook/addon-actions';
+// import { linkTo } from '@storybook/addon-links';
 import Button from '../src/components/Button';
 import Welcome from './Welcome';
-// eslint-disable-next-line no-unused-vars
-import css from '../style-guide/app/scss/style-guide.scss';
-// eslint-disable-next-line no-unused-vars
-import morecss from './storybook.css';
+import '../style-guide/app/scss/style-guide.scss';
 import Card from '../src/components/Card';
 import { StandardLoader, FragmentLoader } from '../src/components/Loader';
 import ButtonList from '../src/components/ButtonList';
 import Menu from '../src/components/Menu';
 import MenuItem from '../src/components/MenuItem';
 import Icon, { icons } from '../src/components/Icons';
+import Badge, { BadgeNames } from '../src/components/Badge';
+import Meter from '../src/components/Meter';
 
-storiesOf('Welcome', module).add("to SendGrid's Storybook", () => (
-  <Welcome showApp={linkTo('Button')} />
-));
+storiesOf('Welcome', module).add("to SendGrid's Storybook", () => <Welcome />);
 
 storiesOf('Button', module)
   .add('Primary', () => (
@@ -140,7 +139,7 @@ storiesOf('Loader', module)
   .add('Fragment Loader', () => <FragmentLoader />);
 storiesOf('Menu is still janky', module).add('Menu', () => (
   <div>
-    <Menu text="ROBOTS" primary>
+    <Menu text="Robots" primary>
       <MenuItem> shit whaddup! </MenuItem>
     </Menu>
     <Menu text="ROBOTS">
@@ -162,9 +161,8 @@ storiesOf('Icon', module)
     const divStyle = {
       margin: '10px',
       display: 'inline-block',
-      border: '1px solid gray',
-      padding: '10px',
       overflowWrap: 'break-word',
+      padding: '10px',
       textAlign: 'center',
       backgroundColor: 'white',
     };
@@ -181,3 +179,46 @@ storiesOf('Icon', module)
       </div>
     );
   });
+
+const badgeList: any = Object.keys(BadgeNames);
+const badgeStyles = {
+  display: 'block',
+  float: 'left',
+  marginLeft: '15px',
+};
+storiesOf('Badge', module).add('All Badges', () => (
+  <div>
+    {badgeList.map(eleType => (
+      <div style={badgeStyles}>
+        <Badge badgeName={eleType}> {eleType} </Badge>
+      </div>
+    ))}
+  </div>
+));
+
+badgeList.forEach((eleType) => {
+  storiesOf('Badge', module).add(eleType, () => (
+    <div>
+      <Badge badgeName={eleType}> {eleType} </Badge>
+    </div>
+  ));
+});
+
+storiesOf('Meter', module)
+  .add('Side By Sides', () => (
+    <div>
+      <div><Meter title="Money" percentage={8} /></div>
+      <div><Meter title="Rage" percentage={20} /></div>
+      <div><Meter title="Mana" percentage={40} /></div>
+      <div><Meter title="Health" percentage={60} /></div>
+      <div><Meter title="Energy" percentage={80} /></div>
+      <div><Meter title="Experience" percentage={100} /></div>
+    </div>
+  ))
+  .add('20% Meter', () => <div><Meter title="Mana" percentage={20} /></div>)
+  .add('40% Meter', () => <div><Meter title="Mana" percentage={40} /></div>)
+  .add('60% Meter', () => <div><Meter title="Health" percentage={60} /></div>)
+  .add('80% Meter', () => <div><Meter title="Energy" percentage={80} /></div>)
+  .add('100% Meter', () => (
+    <div><Meter title="Experience" percentage={100} /></div>
+  ));
