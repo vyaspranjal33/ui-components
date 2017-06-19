@@ -13,10 +13,10 @@ export type CardProps = {
 
 const Card = ({
   style,
-  small = false,
-  centered = false,
-  inline = false,
-  module = false,
+  small,
+  centered,
+  inline,
+  module,
   children,
 }: CardProps) => (
   <div

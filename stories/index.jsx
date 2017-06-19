@@ -14,6 +14,10 @@ import MenuItem from '../src/components/MenuItem';
 import Icon, { icons } from '../src/components/Icons';
 import Badge, { BadgeNames } from '../src/components/Badge';
 import Meter from '../src/components/Meter';
+import Progress from '../src/components/Progress';
+import ProgressItem from '../src/components/ProgressItem';
+import NumberedSteps from '../src/components/NumberedSteps';
+import Step from '../src/components/Step';
 
 storiesOf('Welcome', module).add("to SendGrid's Storybook", () => <Welcome />);
 
@@ -206,7 +210,7 @@ badgeList.forEach((eleType) => {
 
 storiesOf('Meter', module)
   .add('Side By Sides', () => (
-    <div>
+    <div style={{ backgroundColor: 'white', padding: '20px' }}>
       <div><Meter title="Money" percentage={8} /></div>
       <div><Meter title="Rage" percentage={20} /></div>
       <div><Meter title="Mana" percentage={40} /></div>
@@ -221,4 +225,47 @@ storiesOf('Meter', module)
   .add('80% Meter', () => <div><Meter title="Energy" percentage={80} /></div>)
   .add('100% Meter', () => (
     <div><Meter title="Experience" percentage={100} /></div>
+  ));
+
+storiesOf('Progress', module)
+  .add('Horizontal Progress', () => (
+    <div style={{ backgroundColor: 'white', padding: '20px' }}>
+      <Progress>
+        <ProgressItem label="Transactional" done />
+        <ProgressItem label="Blamsactional" done />
+        <ProgressItem label="Escargot" selected />
+        <ProgressItem label="Fourthteenth" />
+        <ProgressItem label="Xenotech" />
+      </Progress>
+    </div>
+  ))
+  .add('Vertical Progress', () => (
+    <div style={{ backgroundColor: 'white', padding: '20px' }}>
+      <Progress vertical>
+        <ProgressItem label="Transactional" done />
+        <ProgressItem label="Blamsactional" selected />
+        <ProgressItem label="Escargot" />
+        <ProgressItem label="Fourthteenth" />
+        <ProgressItem label="Xenotech" />
+      </Progress>
+    </div>
+  ))
+  .add('Numbered Steps', () => (
+    <div style={{ backgroundColor: 'white', padding: '20px' }}>
+      <NumberedSteps>
+        <Step
+          title="Use these settings"
+          description="Configure your application with the settings below.
+          Use your account credentials in the areas highlighted."
+        />
+        <Step
+          title="Send your first email"
+          description="Test your integration by sending email through your application."
+        />
+        <Step
+          title="See email activity"
+          description="After you have successfully sent your first message, view a log of events."
+        />
+      </NumberedSteps>
+    </div>
   ));
