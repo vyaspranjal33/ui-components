@@ -1,3 +1,4 @@
+// @flow
 import React from 'react';
 
 const styles = {
@@ -32,28 +33,22 @@ const styles = {
   },
 };
 
-export default class Welcome extends React.Component {
-  showApp(e) {
-    e.preventDefault();
-    if (this.props.showApp) this.props.showApp();
-  }
+const Welcome = () => (
+  <div style={styles.main}>
+    <h1>Welcome to the SendGrid Storybook</h1>
+    <p>
+      This is a UI component dev environment for your app.
+    </p>
+    <p>
+      We've added some style-guide stories inside the
+      <code style={styles.code}>src/stories</code>
+      directory.
+    </p>
+    <p>
+      A story is a single state of one or more UI components.
+      You can have as many stories as you want.
+    </p>
+  </div>
+);
 
-  render() {
-    return (
-      <div style={styles.main}>
-        <h1>Welcome to the SendGrid Storybook</h1>
-        <p>
-          This is a UI component dev environment for your app.
-        </p>
-        <p>
-          We've added some style-guide stories inside the
-          <code style={styles.code}>src/stories</code>
-          directory.
-        </p>
-        <p>
-          A story is a single state of one or more UI components. You can have as many stories as you want.
-        </p>
-      </div>
-    );
-  }
-}
+export default Welcome;
