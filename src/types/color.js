@@ -1,0 +1,23 @@
+// @flow
+export type color =
+  | 'default'
+  | 'sgBlue'
+  | 'slate'
+  | 'ronBurgandy'
+  | 'burntOrange'
+  | 'carrot'
+  | 'mango'
+  | 'mantis'
+  | 'spruce'
+  | 'grassStain'
+  | 'lime'
+  | 'cobalt'
+  | 'bluebird'
+  | 'seafoam'
+  | 'caribbean'
+  | 'crown'
+  | 'screample'
+  | 'sangria'
+  | 'lavender'
+  | 'wildStrawberry'
+  | 'steel';
