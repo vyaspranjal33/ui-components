@@ -1,8 +1,6 @@
-// @flow
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
-// import { linkTo } from '@storybook/addon-links';
 import Button from '../src/components/Button';
 import Welcome from './Welcome';
 import '../style-guide/app/scss/style-guide.scss';
@@ -12,7 +10,7 @@ import ButtonList from '../src/components/ButtonList';
 import Menu from '../src/components/Menu';
 import MenuItem from '../src/components/MenuItem';
 import Icon, { icons } from '../src/components/Icons';
-import Badge, { BadgeNames } from '../src/components/Badge';
+import Badge from '../src/components/Badge';
 import Meter from '../src/components/Meter';
 import Progress from '../src/components/Progress';
 import ProgressItem from '../src/components/ProgressItem';

@@ -1,6 +1,5 @@
 // @flow
 export type color =
-  | 'default'
   | 'sgBlue'
   | 'slate'
   | 'ronBurgandy'
