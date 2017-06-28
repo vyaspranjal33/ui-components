@@ -18,5 +18,3 @@ Badge.defaultProps = {
 };
 
 export default Badge;
-
-// "postinstall": "cd style-guide && npm install && cd ..",

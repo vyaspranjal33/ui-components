@@ -1,6 +1,7 @@
 // @flow
 import React from 'react';
 import cx from 'classnames';
+import type { ReactChildren } from 'react-flow-types';
 
 export type CardProps = {
   small?: boolean,
@@ -8,7 +9,7 @@ export type CardProps = {
   centered?: boolean,
   inline?: boolean,
   module?: boolean,
-  children?: string,
+  children?: ReactChildren,
 };
 
 const Card = ({
@@ -16,21 +17,20 @@ const Card = ({
   small,
   centered,
   inline,
-  module,
+  module: isModule,
   children,
-}: CardProps) => (
+}: CardProps) =>
   <div
     className={cx('card', {
       'is-thin': small,
       'is-centered': centered,
       'is-inline': inline,
-      'is-module': module,
+      'is-module': isModule,
     })}
     style={{ ...style }}
   >
     {children}
-  </div>
-);
+  </div>;
 
 Card.defaultProps = {
   centered: false,
@@ -38,7 +38,7 @@ Card.defaultProps = {
   module: false,
   small: false,
   style: {},
-  children: {},
+  children: <div />,
 };
 
 export default Card;
