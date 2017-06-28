@@ -35,5 +35,3 @@ const Badge = ({ children, badgeName }: BadgeTypes) => (
 );
 
 export default Badge;
-
-// "postinstall": "cd style-guide && npm install && cd ..",

@@ -13,7 +13,7 @@ const ButtonList = ({ children }: ButtonListProps) => {
     }),
   );
   return (
-    <div className="btn-group">
+    <div className="btn-list">
       {items}
     </div>
   );
