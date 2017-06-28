@@ -1,20 +1,18 @@
 // @flow
 import React, { Children } from 'react';
-import type Button from './Button';
+import Button from './Button';
 
 export type ButtonListProps = {
   children?: Button[] | ?Button,
 };
 
 const ButtonList = ({ children }: ButtonListProps) => {
-  const items = Children.map(children, child =>
-    React.cloneElement(child, {
-      group: true,
-    }),
+  const buttons = Children.map(children, ({ props }) =>
+    <Button {...props} group />,
   );
   return (
     <div className="btn-list">
-      {items}
+      {buttons}
     </div>
   );
 };
