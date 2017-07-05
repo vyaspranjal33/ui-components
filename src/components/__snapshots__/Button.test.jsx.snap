@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button Buttons with icons should match the snapshot 1`] = `
+<button
+  className="btn btn-undefined"
+>
+  <Icon
+    size="small"
+    type="x"
+  />
+   Button
+</button>
+`;

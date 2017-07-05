@@ -2,7 +2,9 @@
 import React from 'react';
 
 // How I grabbed the icons from style-guide
-// var thing = $('.style-guide-example .sg-icon').toArray().map((ele) => ($(ele.classList).toArray().reduce((acc, val)=>( val != 'sg-icon' ? val : ''))))
+// var thing = $('.style-guide-example .sg-icon').toArray()
+//              .map((ele) => ($(ele.classList).toArray()
+//              .reduce((acc, val)=>( val != 'sg-icon' ? val : ''))))
 
 export const icons = {
   'airplane-fill': 'sg-icon-airplane',
@@ -88,4 +90,5 @@ const Icon = ({
 Icon.defaultProps = {
   size: 'small',
 };
+
 export default Icon;

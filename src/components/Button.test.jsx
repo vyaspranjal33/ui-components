@@ -2,9 +2,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 import Button from './Button';
+import Icon from './Icon';
 
 describe('Button', () => {
-  const noop = () => {};
+  const noop = () => { };
 
   it('should have a class of .btn', () => {
     const wrapper = shallow(
@@ -113,6 +114,17 @@ describe('Button', () => {
         <Button onClick={noop} type="danger">Button</Button>,
       );
       expect(wrapper.hasClass('btn-danger')).toBe(true);
+    });
+  });
+
+  describe('Buttons with icons', () => {
+    it('should match the snapshot', () => {
+      const wrapper = shallow(
+        <Button>
+          <Icon type="x" /> Button
+        </Button>,
+      );
+      expect(wrapper).toMatchSnapshot();
     });
   });
 

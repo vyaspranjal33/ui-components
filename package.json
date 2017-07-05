@@ -14,6 +14,11 @@
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook"
   },
+  "jest": {
+    "snapshotSerializers": [
+      "<rootDir>/node_modules/enzyme-to-json/serializer"
+    ]
+  },
   "repository": "https://github.com/sendgrid/ui-components.git",
   "author": "SendGrid <careers@sendgrid.com>",
   "license": "MIT",
@@ -37,6 +42,7 @@
     "css-loader": "^0.28.4",
     "empty": "^0.10.1",
     "enzyme": "^2.8.2",
+    "enzyme-to-json": "^1.5.1",
     "eslint": "^3.19.0",
     "eslint-config-airbnb": "^14.1.0",
     "eslint-plugin-import": "^2.2.0",
