@@ -1,7 +1,7 @@
 // @flow
 import React from 'react';
 import cx from 'classnames';
-import { StandardLoader } from './Loader';
+import Badge from './Badge';
 
 type ButtonType = 'primary' | 'secondary' | 'danger';
 
@@ -9,7 +9,7 @@ export type ButtonProps = {
   children?: string,
   disabled?: boolean,
   loading?: boolean,
-  badge?: ?number | StandardLoader,
+  badge?: ?number | ?string,
   small?: boolean,
   icon?: ?React.Element<*>,
   onDark?: boolean,
@@ -48,7 +48,7 @@ const Button = ({
       })}
       onClick={onClick}
     >
-      {hasBadge && <span className="badge">{badge}</span>}
+      {hasBadge && <Badge>{badge}</Badge>}
       {hasIcon && icon}
       {children}
     </button>

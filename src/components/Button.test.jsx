@@ -1,6 +1,6 @@
 // @flow
 import React from 'react';
-import { shallow } from 'enzyme';
+import { shallow, mount } from 'enzyme';
 import Button from './Button';
 
 describe('Button', () => {
@@ -72,7 +72,7 @@ describe('Button', () => {
     });
 
     it('should have a span with the class of .badge if a badge count is provided', () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Button onClick={noop} type="secondary" badge={2}>Button</Button>,
       );
       expect(wrapper.find('.badge').length).toBe(1);
@@ -86,7 +86,7 @@ describe('Button', () => {
     });
 
     it('should display the badge count in the .badge span', () => {
-      const wrapper = shallow(
+      const wrapper = mount(
         <Button onClick={noop} type="secondary" badge={2}>Button</Button>,
       );
       expect(wrapper.find('.badge').text()).toBe('2');

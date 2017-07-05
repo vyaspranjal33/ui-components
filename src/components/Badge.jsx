@@ -1,37 +1,19 @@
 // @flow
 import React from 'react';
 import cn from 'classnames';
+import type { color as validColor } from '../types/color';
 
-export const BadgeNames = {
-  'sg-blue': null,
-  slate: null,
-  'ron-burgundy': null,
-  'burnt-orange': null,
-  carrot: null,
-  mango: null,
-  mantis: null,
-  spruce: null,
-  'grass-stain': null,
-  lime: null,
-  cobalt: null,
-  bluebird: null,
-  seafoam: null,
-  caribbean: null,
-  crown: null,
-  screample: null,
-  sangria: null,
-  lavender: null,
-  'wild-strawberry': null,
-  steel: null,
+export type BadgeProps = {
+  children?: string | number,
+  color?: validColor,
 };
 
-type BadgeTypes = {
-  children: ?React.Element<*>,
-  badgeName: $Keys<typeof BadgeNames>,
-};
+const Badge = ({ children, color }: BadgeProps) =>
+  <span className={cn('badge', color)}>{children}</span>;
 
-const Badge = ({ children, badgeName }: BadgeTypes) => (
-  <span className={cn('badge', badgeName)}>{children}</span>
-);
+Badge.defaultProps = {
+  children: 0,
+  color: '',
+};
 
 export default Badge;
