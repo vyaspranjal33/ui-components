@@ -53,3 +53,5 @@ FragmentLoader.defaultProps = {
   small: false,
   dark: false,
 };
+
+export default StandardLoader;

@@ -11,7 +11,6 @@ export type ButtonProps = {
   loading?: boolean,
   badge?: ?number | ?string,
   small?: boolean,
-  icon?: ?React.Element<*>,
   onDark?: boolean,
   type: ButtonType,
   onClick: Function,
@@ -26,14 +25,12 @@ const Button = ({
   disabled,
   loading,
   small,
-  icon,
   onDark,
   onClick,
   group,
   active,
 }: ButtonProps) => {
   const hasBadge: boolean = !!badge || badge === 0;
-  const hasIcon: boolean = !!icon;
   return (
     <button
       className={cx('btn', `btn-${type}`, {
@@ -42,14 +39,12 @@ const Button = ({
         'has-badge': hasBadge,
         'btn-small': small,
         'btn-on-dark': onDark,
-        'has-icon': hasIcon,
         'btn-group-item': group,
         'is-active': active,
       })}
       onClick={onClick}
     >
       {hasBadge && <Badge>{badge}</Badge>}
-      {hasIcon && icon}
       {children}
     </button>
   );
@@ -62,7 +57,6 @@ Button.defaultProps = {
   small: false,
   onDark: false,
   badge: null,
-  icon: null,
   group: false,
   active: false,
 };
