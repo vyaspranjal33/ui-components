@@ -2,15 +2,20 @@
 import React from 'react';
 import cn from 'classnames';
 
+export const sizes = {
+  small: 'is-small',
+  large: 'is-large',
+};
+
+export type sizeType = $Keys<typeof sizes>;
+
 export const StandardLoader = ({
-  large,
-  small,
+  size,
   dark,
-}: { large?: boolean, small?: boolean, dark?: boolean }) => (
+}: { size?: sizeType, dark?: boolean }) => (
   <svg
     className={cn('sg-loader', {
-      'is-small': small,
-      'is-large': large,
+      [sizes[size]]: size,
       'loader-on-dark': dark,
     })}
   >
@@ -31,14 +36,12 @@ StandardLoader.defaultProps = {
 };
 
 export const FragmentLoader = ({
-  large,
-  small,
+  size,
   dark,
-}: { large?: boolean, small?: boolean, dark?: boolean }) => (
+}: { size?: sizeType, dark?: boolean }) => (
   <svg
     className={cn('fragment-loader', {
-      'is-small': small,
-      'is-large': large,
+      [sizes[size]]: size,
       'loader-on-dark': dark,
     })}
   >
