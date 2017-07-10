@@ -11,13 +11,6 @@ describe('StandardLoader', () => {
     expect(wrapper).toMatchSnapshot();
   });
 
-  it('should work with a "small" attribute', () => {
-    const wrapper = shallow(
-      <StandardLoader small />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should work with a "large" attribute', () => {
     const wrapper = shallow(
       <StandardLoader large />,
@@ -34,13 +27,6 @@ describe('StandardLoader', () => {
 });
 
 describe('FragmentLoader', () => {
-  it('should work with a "small" attribute', () => {
-    const wrapper = shallow(
-      <FragmentLoader small />,
-    );
-    expect(wrapper).toMatchSnapshot();
-  });
-
   it('should work with a "small" attribute', () => {
     const wrapper = shallow(
       <FragmentLoader small />,
