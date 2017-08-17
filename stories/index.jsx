@@ -1,6 +1,7 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
 import { action } from '@storybook/addon-actions';
+import Accordion, { AccordionChecklistItem } from '../src/components/Accordion';
 import Button from '../src/components/Button';
 import Welcome from './Welcome';
 import '../style-guide/app/scss/style-guide.scss';
@@ -9,7 +10,7 @@ import { StandardLoader, FragmentLoader } from '../src/components/Loader';
 import ButtonList from '../src/components/ButtonList';
 import Menu from '../src/components/Menu';
 import MenuItem from '../src/components/MenuItem';
-import Icon, { icons } from '../src/components/Icons';
+import Icon, { icons } from '../src/components/Icon';
 import Badge from '../src/components/Badge';
 import Meter from '../src/components/Meter';
 import Progress from '../src/components/Progress';
@@ -18,6 +19,64 @@ import NumberedSteps from '../src/components/NumberedSteps';
 import Step from '../src/components/Step';
 
 storiesOf('Welcome', module).add("to SendGrid's Storybook", () => <Welcome />);
+
+storiesOf('Accordion', module)
+  .add('Standard', () => (
+    <Accordion title="Standard Accordion">
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+        <p>Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+    </Accordion>
+  ))
+  .add('Nested', () => (
+    <Accordion title="I heard you liked accordions" includesNestedAccordions>
+      <Accordion title="So I added an accordion" isChildAccordion>
+        <p>to your accordion</p>
+      </Accordion>
+    </Accordion>
+  ))
+  .add('Caret Left', () => (
+    <Accordion title="🥕 Left" caretLeft>
+      <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+      <p>Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+      <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+    </Accordion>
+  ))
+  .add('Large', () => (
+    <div>
+      <Accordion title="Large Accordion" large>
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+        <p>Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+      </Accordion>
+      <Accordion title={
+        <span>
+          <i className="accordion-icon sg-icon sg-icon-airplane" />
+          <span>Large Accordion with Icon</span>
+        </span>
+      } large>
+        <p>Leverage agile frameworks to provide a robust synopsis for high level overviews.</p>
+        <p>Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+        <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment.</p>
+      </Accordion>
+    </div>
+  ))
+  .add('Large List', () => (
+    <Accordion title="Large List" large containsList>
+      <ul>
+        <AccordionChecklistItem isComplete>
+          <h3>Leverage agile frameworks</h3>
+          <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment</p>
+          <button className="btn btn-secondary">Start</button>
+        </AccordionChecklistItem>
+        <AccordionChecklistItem>
+          <h3>Leverage agile frameworks</h3>
+          <p>Organically grow the holistic world view of disruptive innovation via workplace diversity and empowerment</p>
+          <button className="btn btn-secondary">Start</button>
+        </AccordionChecklistItem>
+      </ul>
+    </Accordion>
+  ))
 
 storiesOf('Button', module)
   .add('Primary', () => (
@@ -182,7 +241,30 @@ storiesOf('Icon', module)
     );
   });
 
-const badgeList: any = Object.keys(BadgeNames);
+const BadgeNames = [
+  'sg-blue',
+  'slate',
+  'ron-burgundy',
+  'burnt-orange',
+  'carrot',
+  'mango',
+  'mantis',
+  'spruce',
+  'grass-stain',
+  'lime',
+  'cobalt',
+  'bluebird',
+  'seafoam',
+  'caribbean',
+  'crown',
+  'screample',
+  'sangria',
+  'lavender',
+  'wild-strawberry',
+  'steel',
+];
+
+const badgeList: any = BadgeNames;
 const badgeStyles = {
   display: 'block',
   float: 'left',
@@ -192,7 +274,7 @@ storiesOf('Badge', module).add('All Badges', () => (
   <div>
     {badgeList.map(eleType => (
       <div style={badgeStyles}>
-        <Badge badgeName={eleType}> {eleType} </Badge>
+        <Badge color={eleType}> {eleType} </Badge>
       </div>
     ))}
   </div>
@@ -201,7 +283,7 @@ storiesOf('Badge', module).add('All Badges', () => (
 badgeList.forEach((eleType) => {
   storiesOf('Badge', module).add(eleType, () => (
     <div>
-      <Badge badgeName={eleType}> {eleType} </Badge>
+      <Badge color={eleType}> {eleType} </Badge>
     </div>
   ));
 });

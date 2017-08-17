@@ -2,7 +2,7 @@
 export type color =
   | 'sg-blue'
   | 'slate'
-  | 'ron-burgandy'
+  | 'ron-burgundy'
   | 'burnt-orange'
   | 'carrot'
   | 'mango'
