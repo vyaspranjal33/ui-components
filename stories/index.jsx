@@ -126,8 +126,8 @@ storiesOf('Card', module)
   ));
 storiesOf('Loader', module)
   .add('Standard Loader', () => <StandardLoader />)
-  .add('Standard Loader small', () => <StandardLoader small />)
-  .add('Standard Loader large', () => <StandardLoader large />)
+  .add('Standard Loader small', () => <StandardLoader size="small" />)
+  .add('Standard Loader large', () => <StandardLoader size="large" />)
   .add('Standard Loader dark', () => (
     <div
       style={{
