@@ -2,7 +2,7 @@
 import React from 'react';
 import cn from 'classnames';
 import MenuItem from './MenuItem';
-import Icon from './Icons';
+import Icon from './Icon';
 
 class Menu extends React.Component {
   static defaultProps: {
