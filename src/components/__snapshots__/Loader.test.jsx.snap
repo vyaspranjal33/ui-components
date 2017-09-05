@@ -2,7 +2,7 @@
 
 exports[`FragmentLoader should work with a "large" attribute 1`] = `
 <svg
-  className="fragment-loader is-large"
+  className="fragment-loader"
 >
   <rect
     className="fragment-square left"
@@ -18,7 +18,7 @@ exports[`FragmentLoader should work with a "large" attribute 1`] = `
 
 exports[`FragmentLoader should work with a "small" and "dark" attributes 1`] = `
 <svg
-  className="fragment-loader is-small loader-on-dark"
+  className="fragment-loader loader-on-dark"
 >
   <rect
     className="fragment-square left"
@@ -34,23 +34,7 @@ exports[`FragmentLoader should work with a "small" and "dark" attributes 1`] = `
 
 exports[`FragmentLoader should work with a "small" attribute 1`] = `
 <svg
-  className="fragment-loader is-small"
->
-  <rect
-    className="fragment-square left"
-  />
-  <rect
-    className="fragment-square middle"
-  />
-  <rect
-    className="fragment-square right"
-  />
-</svg>
-`;
-
-exports[`FragmentLoader should work with a "small" attribute 2`] = `
-<svg
-  className="fragment-loader is-small"
+  className="fragment-loader"
 >
   <rect
     className="fragment-square left"
@@ -66,7 +50,7 @@ exports[`FragmentLoader should work with a "small" attribute 2`] = `
 
 exports[`StandardLoader should work with a "large" attribute 1`] = `
 <svg
-  className="sg-loader is-large"
+  className="sg-loader"
 >
   <rect
     className="logo-square bottom-left"
@@ -94,7 +78,7 @@ exports[`StandardLoader should work with a "large" attribute 1`] = `
 
 exports[`StandardLoader should work with a "small" and "dark" attributes 1`] = `
 <svg
-  className="sg-loader is-small loader-on-dark"
+  className="sg-loader loader-on-dark"
 >
   <rect
     className="logo-square bottom-left"
@@ -122,35 +106,7 @@ exports[`StandardLoader should work with a "small" and "dark" attributes 1`] = `
 
 exports[`StandardLoader should work with a "small" attribute 1`] = `
 <svg
-  className="sg-loader is-small"
->
-  <rect
-    className="logo-square bottom-left"
-  />
-  <rect
-    className="logo-square bottom-middle"
-  />
-  <rect
-    className="logo-square middle"
-  />
-  <rect
-    className="logo-square top-middle"
-  />
-  <rect
-    className="logo-square top-right"
-  />
-  <rect
-    className="logo-square middle-left"
-  />
-  <rect
-    className="logo-square middle-right"
-  />
-</svg>
-`;
-
-exports[`StandardLoader should work with a "small" attribute 2`] = `
-<svg
-  className="sg-loader is-small"
+  className="sg-loader"
 >
   <rect
     className="logo-square bottom-left"
