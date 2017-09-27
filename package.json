@@ -26,7 +26,8 @@
     "classnames": "^2.2.5",
     "react": "^15.5.4",
     "react-dom": "^15.5.4",
-    "react-flow-types": "^0.1.1"
+    "react-flow-types": "^0.1.1",
+    "sendgrid-style-guide": "git+ssh://git@github.com/sendgrid/style-guide.git#master"
   },
   "devDependencies": {
     "@storybook/react": "^3.1.3",
