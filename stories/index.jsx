@@ -4,7 +4,7 @@ import { action } from '@storybook/addon-actions';
 import Accordion, { AccordionChecklistItem } from '../src/components/Accordion';
 import Button from '../src/components/Button';
 import Welcome from './Welcome';
-import '../style-guide/app/scss/style-guide.scss';
+import 'sendgrid-style-guide/app/scss/style-guide.scss';
 import Card from '../src/components/Card';
 import { StandardLoader, FragmentLoader } from '../src/components/Loader';
 import ButtonList from '../src/components/ButtonList';
