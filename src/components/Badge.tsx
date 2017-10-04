@@ -5,10 +5,11 @@ import { color as validColor } from '../types/color';
 export type BadgeProps = {
   children?: string | number;
   color?: string;
+  content?: string | number;
 };
 
-const Badge: React.SFC<BadgeProps> = ({ children, color }) => (
-  <span className={cn('badge', color)}>{children}</span>
+const Badge: React.SFC<BadgeProps> = ({ children, color, content }) => (
+  <span className={cn('badge', color)}>{children || content}</span>
 );
 
 Badge.defaultProps = {

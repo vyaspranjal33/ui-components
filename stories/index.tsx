@@ -9,6 +9,7 @@ import Alert from '../src/components/Alert';
 import Badge from '../src/components/Badge';
 import Button from '../src/components/Button';
 import ButtonList from '../src/components/ButtonList';
+import Card from '../src/components/Card';
 import Loader from '../src/components/Loader';
 import ToggleButtons from '../src/components/ToggleButtons';
 
@@ -216,4 +217,90 @@ alertStories.add('Danger Alert with Custom Icon', () => (
     Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
     nec augue eu lacus aliquam lobortis.
   </Alert>
+));
+
+const cardStories = storiesOf('Card', module);
+
+cardStories.add('Card with Title and Body', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="SMTP Relay"
+        body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+      />
+    </div>
+  </div>
+));
+
+cardStories.add('Card with Title and Body (Centered)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="SMTP Relay"
+        body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+        centered
+      />
+    </div>
+  </div>
+));
+
+cardStories.add('Card with Title and Body (with Custom Children)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="SMTP Relay"
+        body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+      >
+        <Button type="primary">Choose</Button>
+      </Card>
+    </div>
+  </div>
+));
+
+cardStories.add(
+  'Card with Title and Body (with Custom Children and Centered)',
+  () => (
+    <div className="row">
+      <div className="col-4" style={{ width: '300px' }}>
+        <Card
+          title="SMTP Relay"
+          body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+          centered
+        >
+          <Button type="primary">Choose</Button>
+        </Card>
+      </div>
+    </div>
+  ),
+);
+
+cardStories.add('Card with Badge', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="SMTP Relay"
+        body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+        badge={{
+          color: 'mantis',
+          content: 'Recommended',
+        }}
+      />
+    </div>
+  </div>
+));
+
+cardStories.add('Card with Badge (Centered)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="SMTP Relay"
+        body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+        badge={{
+          color: 'mantis',
+          content: 'Recommended',
+        }}
+        centered
+      />
+    </div>
+  </div>
 ));
