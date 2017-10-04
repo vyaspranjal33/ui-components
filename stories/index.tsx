@@ -5,6 +5,7 @@ import 'sendgrid-style-guide/app/scss/style-guide.scss';
 
 import colors from '../src/utilities/colors';
 
+import Alert from '../src/components/Alert';
 import Badge from '../src/components/Badge';
 import Button from '../src/components/Button';
 import ButtonList from '../src/components/ButtonList';
@@ -171,4 +172,48 @@ loaderStories.add('Loader on Dark', () => (
   <div style={{ backgroundColor: '#294661', height: '100vh' }}>
     <Loader onDark centered large />
   </div>
+));
+
+const alertStories = storiesOf('Alerts', module);
+
+alertStories.add('Success Alert', () => (
+  <Alert type="success" onClick={action('Alert Dismissed')}>
+    Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
+    nec augue eu lacus aliquam lobortis.
+  </Alert>
+));
+
+alertStories.add('Warning Alert', () => (
+  <Alert type="warning" onClick={action('Alert Dismissed')}>
+    Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
+    nec augue eu lacus aliquam lobortis.
+  </Alert>
+));
+
+alertStories.add('Danger Alert', () => (
+  <Alert type="danger" onClick={action('Alert Dismissed')}>
+    Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
+    nec augue eu lacus aliquam lobortis.
+  </Alert>
+));
+
+alertStories.add('Success Alert with Custom Icon', () => (
+  <Alert type="success" icon="clean-ui" onClick={action('Alert Dismissed')}>
+    Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
+    nec augue eu lacus aliquam lobortis.
+  </Alert>
+));
+
+alertStories.add('Warning Alert with Custom Icon', () => (
+  <Alert type="warning" icon="clean-ui" onClick={action('Alert Dismissed')}>
+    Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
+    nec augue eu lacus aliquam lobortis.
+  </Alert>
+));
+
+alertStories.add('Danger Alert with Custom Icon', () => (
+  <Alert type="danger" icon="clean-ui" onClick={action('Alert Dismissed')}>
+    Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
+    nec augue eu lacus aliquam lobortis.
+  </Alert>
 ));

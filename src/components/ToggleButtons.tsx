@@ -4,7 +4,7 @@ export type ToggleButtonsProps = {
   children?: React.ReactElement<any>[];
 };
 
-const { map, toArray } = React.Children;
+const { map } = React.Children;
 
 type ToggleButtonProps = {
   children: React.ReactElement<any>[];
