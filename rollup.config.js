@@ -1,4 +1,5 @@
-import babel from 'rollup-plugin-babel';
+import typescript from 'typescript';
+import typescriptRollup from 'rollup-plugin-typescript';
 import commonjs from 'rollup-plugin-commonjs';
 import nodeResolve from 'rollup-plugin-node-resolve';
 import replace from 'rollup-plugin-replace';
@@ -8,28 +9,23 @@ const pkg = require('./package.json');
 const external = Object.keys(pkg.dependencies);
 
 export default {
-  entry: 'src/index.js',
+  entry: 'src/index.ts',
   dest: 'dist/ui-components.js',
   format: 'es',
+  globals: {
+    react: 'React',
+  },
   plugins: [
-    babel({
-      exclude: 'node_modules/**',
-      babelrc: false,
-      presets: ['react', 'es2015-rollup', 'flow', 'stage-3'],
-      plugins: [
-        'external-helpers',
-        'transform-export-extensions',
-      ],
+    typescriptRollup({
+      typescript,
     }),
     nodeResolve({
       jsnext: true,
     }),
     commonjs({
       include: 'node_modules/**',
-      namedExports:
-      {
-        './node_modules/react/react.js':
-        [
+      namedExports: {
+        './node_modules/react/react.js': [
           'cloneElement',
           'createElement',
           'PropTypes',
@@ -43,17 +39,4 @@ export default {
     }),
   ],
   external,
-  targets: [
-    {
-      dest: pkg.main,
-      format: 'umd',
-      moduleName: 'rollupStarterProject',
-      sourceMap: true,
-    },
-    {
-      dest: pkg.module,
-      format: 'es',
-      sourceMap: true,
-    },
-  ],
 };
