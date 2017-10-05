@@ -1,10 +1,10 @@
 import * as cn from 'classnames';
 import * as React from 'react';
-import Color from '../types/Color';
+import { color as validColor } from '../types/color';
 
 export interface BadgeProps {
   children?: string | number;
-  color?: Color;
+  color?: string;
   content?: string | number;
 }
 
@@ -14,7 +14,7 @@ const Badge: React.SFC<BadgeProps> = ({ children, color, content }) => (
 
 Badge.defaultProps = {
   children: 0,
-  color: Color.None,
+  color: '',
 };
 
 export default Badge;

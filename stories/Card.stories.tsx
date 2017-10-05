@@ -5,7 +5,6 @@ import * as React from 'react';
 import { Action, Actions } from '../src/components/Actions';
 import Button from '../src/components/Button';
 import Card from '../src/components/Card';
-import Color from '../src/types/Color';
 
 const stories = storiesOf('Card', module);
 
@@ -69,7 +68,7 @@ stories.add('Card with Badge', () => (
         title="SMTP Relay"
         body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
         badge={{
-          color: Color.Mantis,
+          color: 'mantis',
           content: 'Recommended',
         }}
       />
@@ -84,7 +83,7 @@ stories.add('Card with Badge (Centered)', () => (
         title="SMTP Relay"
         body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
         badge={{
-          color: Color.Mantis,
+          color: 'mantis',
           content: 'Recommended',
         }}
         centered
