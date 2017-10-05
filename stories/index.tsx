@@ -5,6 +5,7 @@ import 'sendgrid-style-guide/app/scss/style-guide.scss';
 
 import colors from '../src/utilities/colors';
 
+import { Actions, Action } from '../src/components/Actions';
 import Alert from '../src/components/Alert';
 import Badge from '../src/components/Badge';
 import Button from '../src/components/Button';
@@ -301,6 +302,36 @@ cardStories.add('Card with Badge (Centered)', () => (
         }}
         centered
       />
+    </div>
+  </div>
+));
+
+cardStories.add('Card with Actions', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="Event Annoucements"
+        body="Hear about our latest events and when we're coming to a city near you."
+        centered
+      >
+        <Actions>
+          <Action
+            title="Edit"
+            icon="pencil"
+            onClick={action('Edit Action Clicked')}
+          />
+          <Action
+            title="Preview"
+            icon="view"
+            onClick={action('Preview Action Clicked')}
+          />
+          <Action
+            title="Export"
+            icon="export"
+            onClick={action('Export Action Clicked')}
+          />
+        </Actions>
+      </Card>
     </div>
   </div>
 ));

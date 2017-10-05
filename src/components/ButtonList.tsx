@@ -1,7 +1,8 @@
 import * as React from 'react';
+import { ButtonProps } from './Button';
 
 export type ButtonListProps = {
-  children?: React.ReactElement<any>[];
+  children?: React.ReactElement<ButtonProps>[];
   onDark?: boolean;
 };
 
