@@ -1,22 +1,25 @@
-export type color =
-  | ''
-  | 'sg-blue'
-  | 'slate'
-  | 'ron-burgundy'
-  | 'burnt-orange'
-  | 'carrot'
-  | 'mango'
-  | 'mantis'
-  | 'spruce'
-  | 'grass-stain'
-  | 'lime'
-  | 'cobalt'
-  | 'bluebird'
-  | 'seafoam'
-  | 'caribbean'
-  | 'crown'
-  | 'screample'
-  | 'sangria'
-  | 'lavender'
-  | 'wild-strawberry'
-  | 'steel';
+enum Color {
+  None = '',
+  SgBlue = 'sg-blue',
+  Slate = 'slate',
+  RonBurundy = 'ron-burgundy',
+  BurntOrange = 'burnt-orange',
+  Carrot = 'carrot',
+  Mango = 'mango',
+  Mantis = 'mantis',
+  Spruce = 'spruce',
+  GrassStain = 'grass-stain',
+  Lime = 'lime',
+  Cobalt = 'cobalt',
+  BlueBird = 'bluebird',
+  SeaFoam = 'seafoam',
+  Caribbean = 'caribbean',
+  Crown = 'crown',
+  Screample = 'screample',
+  Sangria = 'sangria',
+  Lavender = 'lavender',
+  WildStrawberry = 'wild-strawberry',
+  Steel = 'steel',
+}
+
+export default Color
