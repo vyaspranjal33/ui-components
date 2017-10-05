@@ -1,9 +1,9 @@
 const path = require('path');
-const genDefaultConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
+const storybookBaseConfig = require('@storybook/react/dist/server/config/defaults/webpack.config.js');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 module.exports = function(config, env) {
-  var config = genDefaultConfig(config, env);
+  config = storybookBaseConfig(config, env);
 
   config.module.rules.push({
     test: /\.tsx?$/,
@@ -27,7 +27,7 @@ module.exports = function(config, env) {
   config.resolve.extensions.push('.ts');
   config.resolve.extensions.push('.js');
   config.resolve.extensions.push('.css');
-  config.resolve.extensions.push('.less');
+  config.resolve.extensions.push('.scss');
 
   return config;
 };
