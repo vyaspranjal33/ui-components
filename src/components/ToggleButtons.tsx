@@ -1,4 +1,5 @@
 import * as React from 'react';
+import findActiveIndex from '../utilities/find-active-index';
 import { ButtonProps } from './Button';
 
 export interface ToggleButtonsProps {
@@ -23,13 +24,10 @@ class ToggleButtons extends React.Component<
   constructor(props: ToggleButtonProps) {
     super();
 
-    const activeButton = map(
-      props.children,
-      (button: React.ReactElement<any>) => button.props.active,
-    ).indexOf(true);
+    const activeIndex = findActiveIndex(props.children);
 
     this.state = {
-      activeIndex: activeButton !== -1 ? activeButton : 0,
+      activeIndex,
     };
   }
 
