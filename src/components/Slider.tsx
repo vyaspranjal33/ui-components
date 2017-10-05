@@ -7,7 +7,7 @@ export interface SliderProps {
   onChange?: (event: any, value?: number) => void;
 }
 
-const Slider: React.SFC<SliderProps> = ({
+export const Slider: React.SFC<SliderProps> = ({
   value,
   id,
   label,

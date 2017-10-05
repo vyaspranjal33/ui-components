@@ -1,7 +1,8 @@
 import * as React from 'react';
+import { ButtonProps } from './Button';
 
 export interface ToggleButtonsProps {
-  children?: Array<React.ReactElement<any>>;
+  children?: Array<React.ReactElement<ButtonProps>>;
 }
 
 const { map } = React.Children;
@@ -11,7 +12,14 @@ interface ToggleButtonProps {
   onChange?: (children: React.ReactNode) => any;
 }
 
-class ToggleButtons extends React.Component<ToggleButtonProps, any> {
+interface ToggleButtonState {
+  activeIndex: number;
+}
+
+class ToggleButtons extends React.Component<
+  ToggleButtonProps,
+  ToggleButtonState
+> {
   constructor(props: ToggleButtonProps) {
     super();
 

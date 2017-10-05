@@ -89,3 +89,87 @@ stories.add('Danger Button (Disabled)', () => (
     Danger (Disabled)
   </Button>
 ));
+
+stories.add('Small Primary Button', () => (
+  <Button type="primary" onClick={action('Button Clicked')} small>
+    Primary
+  </Button>
+));
+
+stories.add('Small Secondary Button', () => (
+  <Button type="secondary" onClick={action('Button Clicked')} small>
+    Secondary
+  </Button>
+));
+
+stories.add('Small Danger Button', () => (
+  <Button type="danger" onClick={action('Button Clicked')} small>
+    Danger
+  </Button>
+));
+
+stories.add('Small Primary Button with Icon', () => (
+  <Button type="primary" icon="create" onClick={action('Button Clicked')} small>
+    Primary
+  </Button>
+));
+
+stories.add('Small Secondary Button with Icon', () => (
+  <Button type="secondary" icon="copy" onClick={action('Button Clicked')} small>
+    Secondary
+  </Button>
+));
+
+stories.add('Small Danger Button with Icon', () => (
+  <Button type="danger" icon="trash" onClick={action('Button Clicked')} small>
+    Danger
+  </Button>
+));
+
+stories.add('Small Primary Button with Badge', () => (
+  <Button type="primary" badge={1} onClick={action('Button Clicked')} small>
+    Primary
+  </Button>
+));
+
+stories.add('Small Secondary Button with Badge', () => (
+  <Button type="secondary" badge={1} onClick={action('Button Clicked')} small>
+    Secondary
+  </Button>
+));
+
+stories.add('Small Danger Button with Badge', () => (
+  <Button type="danger" badge={1} onClick={action('Button Clicked')} small>
+    Danger
+  </Button>
+));
+
+stories.add('Small Primary Button (Loading)', () => (
+  <Button type="primary" loading onClick={action('Button Clicked')} small>
+    Primary (Loading)
+  </Button>
+));
+
+stories.add('Small Secondary Button (Loading)', () => (
+  <Button type="secondary" loading onClick={action('Button Clicked')} small>
+    Secondary (Loading)
+  </Button>
+));
+
+stories.add('Small Primary Button (Disabled)', () => (
+  <Button type="primary" disabled onClick={action('Button Clicked')} small>
+    Primary (Disabled)
+  </Button>
+));
+
+stories.add('Small Secondary Button (Disabled)', () => (
+  <Button type="secondary" disabled onClick={action('Button Clicked')} small>
+    Secondary (Disabled)
+  </Button>
+));
+
+stories.add('Small Danger Button (Disabled)', () => (
+  <Button type="danger" disabled onClick={action('Button Clicked')} small>
+    Danger (Disabled)
+  </Button>
+));

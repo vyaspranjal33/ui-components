@@ -21,7 +21,7 @@ export interface ButtonProps {
   icon?: IconType;
 }
 
-const Button: React.SFC<ButtonProps> = ({
+export const Button: React.SFC<ButtonProps> = ({
   children,
   type,
   badge,
@@ -40,6 +40,7 @@ const Button: React.SFC<ButtonProps> = ({
     <button
       className={cn('btn', `btn-${type}`, {
         'btn-on-dark': onDark,
+        'btn-small': small,
         'has-badge': hasBadge,
         'has-icon': hasIcon || loading,
         'is-active': active,
