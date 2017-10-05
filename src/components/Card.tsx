@@ -1,9 +1,9 @@
-import * as React from 'react';
 import * as cn from 'classnames';
-import Badge from './Badge';
+import * as React from 'react';
 import { color as ValidColor } from '../types/color';
+import Badge from './Badge';
 
-export type CardProps = {
+export interface CardProps {
   children?: React.ReactElement<any>;
   centered?: boolean;
   thin?: boolean;
@@ -16,16 +16,16 @@ export type CardProps = {
         color: ValidColor;
       }
     | React.ReactElement<any>;
-};
+}
 
 const Card: React.SFC<CardProps> = ({
+  badge,
+  body,
   centered,
   children,
-  thin,
   inline,
+  thin,
   title,
-  body,
-  badge,
 }) => {
   return (
     <div

@@ -1,24 +1,28 @@
-import * as React from 'react';
 import * as cn from 'classnames';
+import * as React from 'react';
 
-export type LoaderProps = {
+export interface LoaderProps {
   onDark?: boolean;
   large?: boolean;
   small?: boolean;
   centered?: boolean;
-};
+}
 
 const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered }) => {
   let size = 10;
-  if (large) size *= 2;
-  if (small) size /= 2;
+  if (large) {
+    size *= 2;
+  }
+  if (small) {
+    size /= 2;
+  }
   return (
     <svg
       className={cn('sg-loader', {
-        'loader-on-dark': onDark,
+        'is-centered': centered,
         'is-large': large,
         'is-small': small,
-        'is-centered': centered,
+        'loader-on-dark': onDark,
       })}
     >
       <rect className="logo-square bottom-left" width={size} height={size} />

@@ -1,20 +1,22 @@
-import * as React from 'react';
 import * as cn from 'classnames';
-import Icon from './Icon';
+import * as React from 'react';
 import { IconType } from '../types/icons';
+import Icon from './Icon';
 
 export type AlertType = 'success' | 'warning' | 'danger';
 
-export type AlertProps = {
+export interface AlertProps {
   children: any;
   icon?: IconType;
   type: AlertType;
   hidden?: boolean;
   onClick?: (event: any) => void;
-};
+}
 
 const iconFor = (type: AlertType): IconType => {
-  if (type === 'success') return 'check-circle';
+  if (type === 'success') {
+    return 'check-circle';
+  }
   return 'warning';
 };
 

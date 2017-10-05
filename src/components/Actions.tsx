@@ -1,10 +1,12 @@
 import * as React from 'react';
-import Icon from './Icon';
 import { IconType } from '../types/icons';
+import Icon from './Icon';
 
-export type ActionsProps = {
-  children: React.ReactElement<ActionProps> | React.ReactElement<ActionProps>[];
-};
+export interface ActionsProps {
+  children:
+    | React.ReactElement<ActionProps>
+    | Array<React.ReactElement<ActionProps>>;
+}
 
 export const Actions: React.SFC<ActionsProps> = ({ children }) => {
   return (
@@ -15,11 +17,11 @@ export const Actions: React.SFC<ActionsProps> = ({ children }) => {
   );
 };
 
-export type ActionProps = {
+export interface ActionProps {
   title: string;
   icon: IconType;
   onClick: (event: any) => void;
-};
+}
 
 export const Action: React.SFC<ActionProps> = ({
   title,

@@ -1,11 +1,11 @@
 import * as React from 'react';
 
-export type SliderProps = {
+export interface SliderProps {
   value: number;
   id?: string;
   label?: boolean;
   onChange?: (event: any, value?: number) => void;
-};
+}
 
 const Slider: React.SFC<SliderProps> = ({
   value,
@@ -17,11 +17,11 @@ const Slider: React.SFC<SliderProps> = ({
     <div className="input-range-wrap">
       <input
         id={id}
-        type="range"
-        min="0"
         max="100"
-        value={value}
+        min="0"
         onChange={handleChange}
+        type="range"
+        value={value}
       />
       {label && <div className="input-range-percent">{value}%</div>}
     </div>
@@ -40,14 +40,14 @@ export class StatefulSlider extends React.Component<
     this.handleChange = this.handleChange.bind(this);
   }
 
-  handleChange(event: any) {
+  public handleChange(event: any) {
     const value = event.target.value;
     this.setState({ value }, () => {
       this.props.onChange(event, value);
     });
   }
 
-  render() {
+  public render() {
     const { onChange } = this.props;
     const { value } = this.state;
     return (
@@ -57,8 +57,8 @@ export class StatefulSlider extends React.Component<
 }
 
 Slider.defaultProps = {
-  value: 0,
   label: true,
+  value: 0,
 };
 
 export default Slider;

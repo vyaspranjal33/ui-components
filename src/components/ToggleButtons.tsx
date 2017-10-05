@@ -1,15 +1,15 @@
 import * as React from 'react';
 
-export type ToggleButtonsProps = {
-  children?: React.ReactElement<any>[];
-};
+export interface ToggleButtonsProps {
+  children?: Array<React.ReactElement<any>>;
+}
 
 const { map } = React.Children;
 
-type ToggleButtonProps = {
-  children: React.ReactElement<any>[];
+interface ToggleButtonProps {
+  children: Array<React.ReactElement<any>>;
   onChange?: (children: React.ReactNode) => any;
-};
+}
 
 class ToggleButtons extends React.Component<ToggleButtonProps, any> {
   constructor(props: ToggleButtonProps) {
@@ -25,7 +25,7 @@ class ToggleButtons extends React.Component<ToggleButtonProps, any> {
     };
   }
 
-  handleClick(index: number) {
+  public handleClick(index: number) {
     const { children, onChange } = this.props;
     return (event: any) => {
       this.setState(
@@ -47,9 +47,9 @@ class ToggleButtons extends React.Component<ToggleButtonProps, any> {
         {map(children, (button: React.ReactElement<any>, index) => {
           const active = index === activeIndex;
           return React.cloneElement(button, {
-            type: 'group-item',
             active,
             onClick: this.handleClick(index).bind(this),
+            type: 'group-item',
           });
         })}
       </div>

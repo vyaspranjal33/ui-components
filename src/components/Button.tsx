@@ -1,13 +1,13 @@
-import * as React from 'react';
 import * as cn from 'classnames';
+import * as React from 'react';
+import { IconType } from '../types/icons';
 import Badge from './Badge';
 import Icon from './Icon';
 import Loader from './Loader';
-import { IconType } from '../types/icons';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
 
-export type ButtonProps = {
+export interface ButtonProps {
   children?: string;
   disabled?: boolean;
   loading?: boolean;
@@ -19,7 +19,7 @@ export type ButtonProps = {
   group?: boolean;
   active?: boolean;
   icon?: IconType;
-};
+}
 
 const Button: React.SFC<ButtonProps> = ({
   children,
@@ -39,12 +39,12 @@ const Button: React.SFC<ButtonProps> = ({
   return (
     <button
       className={cn('btn', `btn-${type}`, {
+        'btn-on-dark': onDark,
         'has-badge': hasBadge,
         'has-icon': hasIcon || loading,
+        'is-active': active,
         'is-disabled': disabled,
         'is-loading': loading,
-        'btn-on-dark': onDark,
-        'is-active': active,
       })}
       onClick={onClick}
     >
@@ -57,17 +57,17 @@ const Button: React.SFC<ButtonProps> = ({
 };
 
 Button.defaultProps = {
-  children: '',
-  badge: null,
-  disabled: false,
-  loading: false,
-  small: false,
-  onDark: false,
-  group: false,
   active: false,
+  badge: null,
+  children: '',
+  disabled: false,
+  group: false,
   icon: null,
-  type: 'secondary',
+  loading: false,
   onClick: () => {},
+  onDark: false,
+  small: false,
+  type: 'secondary',
 };
 
 export default Button;

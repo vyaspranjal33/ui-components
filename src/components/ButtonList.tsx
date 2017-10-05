@@ -1,10 +1,10 @@
 import * as React from 'react';
 import { ButtonProps } from './Button';
 
-export type ButtonListProps = {
-  children?: React.ReactElement<ButtonProps>[];
+export interface ButtonListProps {
+  children?: Array<React.ReactElement<ButtonProps>>;
   onDark?: boolean;
-};
+}
 
 const { map } = React.Children;
 
