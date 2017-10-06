@@ -77,6 +77,19 @@ storiesOf('Accordion', module)
       </ul>
     </Accordion>
   ))
+  .add('NestedWithPurpose', () => (
+    <Accordion title="an overloaded menu" role="outermost-menu" includesNestedAccordions>
+      <Accordion title="a submenu for foo" role="foo-menu" isChildAccordion>
+        <p>content for foo</p>
+      </Accordion>
+      <Accordion title="a submenu for bar" role="bar-menu" isChildAccordion>
+      <p>content for bar</p>
+      </Accordion>
+      <Accordion title="a submenu for baz" role="baz-menu" isChildAccordion>
+      <p>content for baz</p>
+      </Accordion>
+    </Accordion>
+  ))
 
 storiesOf('Button', module)
   .add('Primary', () => (

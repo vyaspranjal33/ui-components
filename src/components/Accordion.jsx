@@ -31,6 +31,7 @@ class Accordion extends React.Component {
     isChildAccordion: boolean,
     includesNestedAccordions: boolean,
     containsList: boolean,
+    role: string,
   }
 
   toggleVisibility() {
@@ -41,7 +42,7 @@ class Accordion extends React.Component {
 
   render() {
     return (
-      <div className={cn('accordion-wrapper', {
+      <div role={`accordion-${this.props.role}`} className={cn('accordion-wrapper', {
         'accordion-caret-left': this.props.caretLeft,
         'accordion-large': this.props.large,
       })}>
