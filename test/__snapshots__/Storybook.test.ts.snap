@@ -1,0 +1,2503 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Alerts Danger Alert 1`] = `
+<div
+  className="alert alert-danger"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-warning"
+      onClick={undefined}
+    />
+    Lorem ipsum dolor sit amet, 
+    <a
+      href="#"
+    >
+      consectetur adipiscing elit
+    </a>
+    . In nec augue eu lacus aliquam lobortis.
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={[Function]}
+    />
+  </p>
+</div>
+`;
+
+exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
+<div
+  className="alert alert-danger"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-clean-ui"
+      onClick={undefined}
+    />
+    Lorem ipsum dolor sit amet, 
+    <a
+      href="#"
+    >
+      consectetur adipiscing elit
+    </a>
+    . In nec augue eu lacus aliquam lobortis.
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={[Function]}
+    />
+  </p>
+</div>
+`;
+
+exports[`Storyshots Alerts Success Alert 1`] = `
+<div
+  className="alert alert-success"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-check-circle"
+      onClick={undefined}
+    />
+    Lorem ipsum dolor sit amet, 
+    <a
+      href="#"
+    >
+      consectetur adipiscing elit
+    </a>
+    . In nec augue eu lacus aliquam lobortis.
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={[Function]}
+    />
+  </p>
+</div>
+`;
+
+exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
+<div
+  className="alert alert-success"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-clean-ui"
+      onClick={undefined}
+    />
+    Lorem ipsum dolor sit amet, 
+    <a
+      href="#"
+    >
+      consectetur adipiscing elit
+    </a>
+    . In nec augue eu lacus aliquam lobortis.
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={[Function]}
+    />
+  </p>
+</div>
+`;
+
+exports[`Storyshots Alerts Warning Alert 1`] = `
+<div
+  className="alert alert-warning"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-warning"
+      onClick={undefined}
+    />
+    Lorem ipsum dolor sit amet, 
+    <a
+      href="#"
+    >
+      consectetur adipiscing elit
+    </a>
+    . In nec augue eu lacus aliquam lobortis.
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={[Function]}
+    />
+  </p>
+</div>
+`;
+
+exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
+<div
+  className="alert alert-warning"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-clean-ui"
+      onClick={undefined}
+    />
+    Lorem ipsum dolor sit amet, 
+    <a
+      href="#"
+    >
+      consectetur adipiscing elit
+    </a>
+    . In nec augue eu lacus aliquam lobortis.
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={[Function]}
+    />
+  </p>
+</div>
+`;
+
+exports[`Storyshots Badge bluebird 1`] = `
+<span
+  className="badge bluebird"
+>
+  bluebird
+</span>
+`;
+
+exports[`Storyshots Badge burnt-orange 1`] = `
+<span
+  className="badge burnt-orange"
+>
+  burnt-orange
+</span>
+`;
+
+exports[`Storyshots Badge caribbean 1`] = `
+<span
+  className="badge caribbean"
+>
+  caribbean
+</span>
+`;
+
+exports[`Storyshots Badge carrot 1`] = `
+<span
+  className="badge carrot"
+>
+  carrot
+</span>
+`;
+
+exports[`Storyshots Badge cobalt 1`] = `
+<span
+  className="badge cobalt"
+>
+  cobalt
+</span>
+`;
+
+exports[`Storyshots Badge crown 1`] = `
+<span
+  className="badge crown"
+>
+  crown
+</span>
+`;
+
+exports[`Storyshots Badge grass-stain 1`] = `
+<span
+  className="badge grass-stain"
+>
+  grass-stain
+</span>
+`;
+
+exports[`Storyshots Badge lavender 1`] = `
+<span
+  className="badge lavender"
+>
+  lavender
+</span>
+`;
+
+exports[`Storyshots Badge lime 1`] = `
+<span
+  className="badge lime"
+>
+  lime
+</span>
+`;
+
+exports[`Storyshots Badge mango 1`] = `
+<span
+  className="badge mango"
+>
+  mango
+</span>
+`;
+
+exports[`Storyshots Badge mantis 1`] = `
+<span
+  className="badge mantis"
+>
+  mantis
+</span>
+`;
+
+exports[`Storyshots Badge ron-burgundy 1`] = `
+<span
+  className="badge ron-burgundy"
+>
+  ron-burgundy
+</span>
+`;
+
+exports[`Storyshots Badge sangria 1`] = `
+<span
+  className="badge sangria"
+>
+  sangria
+</span>
+`;
+
+exports[`Storyshots Badge screample 1`] = `
+<span
+  className="badge screample"
+>
+  screample
+</span>
+`;
+
+exports[`Storyshots Badge seafoam 1`] = `
+<span
+  className="badge seafoam"
+>
+  seafoam
+</span>
+`;
+
+exports[`Storyshots Badge sg-blue 1`] = `
+<span
+  className="badge sg-blue"
+>
+  sg-blue
+</span>
+`;
+
+exports[`Storyshots Badge slate 1`] = `
+<span
+  className="badge slate"
+>
+  slate
+</span>
+`;
+
+exports[`Storyshots Badge spruce 1`] = `
+<span
+  className="badge spruce"
+>
+  spruce
+</span>
+`;
+
+exports[`Storyshots Badge steel 1`] = `
+<span
+  className="badge steel"
+>
+  steel
+</span>
+`;
+
+exports[`Storyshots Badge wild-strawberry 1`] = `
+<span
+  className="badge wild-strawberry"
+>
+  wild-strawberry
+</span>
+`;
+
+exports[`Storyshots Button Danger Button (Disabled) 1`] = `
+<button
+  className="btn btn-danger is-disabled"
+  onClick={[Function]}
+>
+  Danger (Disabled)
+</button>
+`;
+
+exports[`Storyshots Button Danger Button 1`] = `
+<button
+  className="btn btn-danger"
+  onClick={[Function]}
+>
+  Danger
+</button>
+`;
+
+exports[`Storyshots Button Danger Button with Badge 1`] = `
+<button
+  className="btn btn-danger has-badge"
+  onClick={[Function]}
+>
+  <span
+    className="badge"
+  >
+    1
+  </span>
+  Danger
+</button>
+`;
+
+exports[`Storyshots Button Danger Button with Icon 1`] = `
+<button
+  className="btn btn-danger has-icon"
+  onClick={[Function]}
+>
+  <i
+    className="sg-icon sg-icon-trash"
+    onClick={undefined}
+  />
+  Danger
+</button>
+`;
+
+exports[`Storyshots Button List Button List on a Dark Background 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#294661",
+      "height": "100vh",
+    }
+  }
+>
+  <div
+    className="btn-list"
+  >
+    <button
+      className="btn btn-primary btn-on-dark"
+      onClick={[Function]}
+    >
+      Primary
+    </button>
+    <button
+      className="btn btn-secondary btn-on-dark"
+      onClick={[Function]}
+    >
+      Secondary
+    </button>
+    <button
+      className="btn btn-secondary btn-on-dark is-disabled"
+      onClick={[Function]}
+    >
+      Disabled
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Button List Button List on a Light Background 1`] = `
+<div
+  className="btn-list"
+>
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    Primary
+  </button>
+  <button
+    className="btn btn-secondary"
+    onClick={[Function]}
+  >
+    Secondary
+  </button>
+  <button
+    className="btn btn-danger"
+    onClick={[Function]}
+  >
+    Danger
+  </button>
+</div>
+`;
+
+exports[`Storyshots Button Primary Button (Disabled) 1`] = `
+<button
+  className="btn btn-primary is-disabled"
+  onClick={[Function]}
+>
+  Primary (Disabled)
+</button>
+`;
+
+exports[`Storyshots Button Primary Button (Loading) 1`] = `
+<button
+  className="btn btn-primary has-icon is-loading"
+  onClick={[Function]}
+>
+  <svg
+    className="sg-loader is-small loader-on-dark"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-right"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={5}
+      width={5}
+    />
+  </svg>
+  Primary (Loading)
+</button>
+`;
+
+exports[`Storyshots Button Primary Button 1`] = `
+<button
+  className="btn btn-primary"
+  onClick={[Function]}
+>
+  Primary
+</button>
+`;
+
+exports[`Storyshots Button Primary Button with Badge 1`] = `
+<button
+  className="btn btn-primary has-badge"
+  onClick={[Function]}
+>
+  <span
+    className="badge"
+  >
+    1
+  </span>
+  Primary
+</button>
+`;
+
+exports[`Storyshots Button Primary Button with Icon 1`] = `
+<button
+  className="btn btn-primary has-icon"
+  onClick={[Function]}
+>
+  <i
+    className="sg-icon sg-icon-create"
+    onClick={undefined}
+  />
+  Primary
+</button>
+`;
+
+exports[`Storyshots Button Secondary Button (Disabled) 1`] = `
+<button
+  className="btn btn-secondary is-disabled"
+  onClick={[Function]}
+>
+  Secondary (Disabled)
+</button>
+`;
+
+exports[`Storyshots Button Secondary Button (Loading) 1`] = `
+<button
+  className="btn btn-secondary has-icon is-loading"
+  onClick={[Function]}
+>
+  <svg
+    className="sg-loader is-small"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-right"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={5}
+      width={5}
+    />
+  </svg>
+  Secondary (Loading)
+</button>
+`;
+
+exports[`Storyshots Button Secondary Button 1`] = `
+<button
+  className="btn btn-secondary"
+  onClick={[Function]}
+>
+  Secondary
+</button>
+`;
+
+exports[`Storyshots Button Secondary Button with Badge 1`] = `
+<button
+  className="btn btn-secondary has-badge"
+  onClick={[Function]}
+>
+  <span
+    className="badge"
+  >
+    1
+  </span>
+  Secondary
+</button>
+`;
+
+exports[`Storyshots Button Secondary Button with Icon 1`] = `
+<button
+  className="btn btn-secondary has-icon"
+  onClick={[Function]}
+>
+  <i
+    className="sg-icon sg-icon-copy"
+    onClick={undefined}
+  />
+  Secondary
+</button>
+`;
+
+exports[`Storyshots Button Small Danger Button (Disabled) 1`] = `
+<button
+  className="btn btn-danger btn-small is-disabled"
+  onClick={[Function]}
+>
+  Danger (Disabled)
+</button>
+`;
+
+exports[`Storyshots Button Small Danger Button 1`] = `
+<button
+  className="btn btn-danger btn-small"
+  onClick={[Function]}
+>
+  Danger
+</button>
+`;
+
+exports[`Storyshots Button Small Danger Button with Badge 1`] = `
+<button
+  className="btn btn-danger btn-small has-badge"
+  onClick={[Function]}
+>
+  <span
+    className="badge"
+  >
+    1
+  </span>
+  Danger
+</button>
+`;
+
+exports[`Storyshots Button Small Danger Button with Icon 1`] = `
+<button
+  className="btn btn-danger btn-small has-icon"
+  onClick={[Function]}
+>
+  <i
+    className="sg-icon sg-icon-trash"
+    onClick={undefined}
+  />
+  Danger
+</button>
+`;
+
+exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
+<button
+  className="btn btn-primary btn-small is-disabled"
+  onClick={[Function]}
+>
+  Primary (Disabled)
+</button>
+`;
+
+exports[`Storyshots Button Small Primary Button (Loading) 1`] = `
+<button
+  className="btn btn-primary btn-small has-icon is-loading"
+  onClick={[Function]}
+>
+  <svg
+    className="sg-loader is-small loader-on-dark"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-right"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={5}
+      width={5}
+    />
+  </svg>
+  Primary (Loading)
+</button>
+`;
+
+exports[`Storyshots Button Small Primary Button 1`] = `
+<button
+  className="btn btn-primary btn-small"
+  onClick={[Function]}
+>
+  Primary
+</button>
+`;
+
+exports[`Storyshots Button Small Primary Button with Badge 1`] = `
+<button
+  className="btn btn-primary btn-small has-badge"
+  onClick={[Function]}
+>
+  <span
+    className="badge"
+  >
+    1
+  </span>
+  Primary
+</button>
+`;
+
+exports[`Storyshots Button Small Primary Button with Icon 1`] = `
+<button
+  className="btn btn-primary btn-small has-icon"
+  onClick={[Function]}
+>
+  <i
+    className="sg-icon sg-icon-create"
+    onClick={undefined}
+  />
+  Primary
+</button>
+`;
+
+exports[`Storyshots Button Small Secondary Button (Disabled) 1`] = `
+<button
+  className="btn btn-secondary btn-small is-disabled"
+  onClick={[Function]}
+>
+  Secondary (Disabled)
+</button>
+`;
+
+exports[`Storyshots Button Small Secondary Button (Loading) 1`] = `
+<button
+  className="btn btn-secondary btn-small has-icon is-loading"
+  onClick={[Function]}
+>
+  <svg
+    className="sg-loader is-small"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-right"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={5}
+      width={5}
+    />
+  </svg>
+  Secondary (Loading)
+</button>
+`;
+
+exports[`Storyshots Button Small Secondary Button 1`] = `
+<button
+  className="btn btn-secondary btn-small"
+  onClick={[Function]}
+>
+  Secondary
+</button>
+`;
+
+exports[`Storyshots Button Small Secondary Button with Badge 1`] = `
+<button
+  className="btn btn-secondary btn-small has-badge"
+  onClick={[Function]}
+>
+  <span
+    className="badge"
+  >
+    1
+  </span>
+  Secondary
+</button>
+`;
+
+exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
+<button
+  className="btn btn-secondary btn-small has-icon"
+  onClick={[Function]}
+>
+  <i
+    className="sg-icon sg-icon-copy"
+    onClick={undefined}
+  />
+  Secondary
+</button>
+`;
+
+exports[`Storyshots Card Card with Actions 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2>
+        Event Annoucements
+      </h2>
+      <p>
+        Hear about our latest events and when we're coming to a city near you.
+      </p>
+      <div
+        className="actions"
+      >
+        <i
+          className="sg-icon sg-icon-ellipsis"
+          onClick={undefined}
+        />
+        <div
+          className="action-icons"
+        >
+          <span
+            data-tooltip="Edit"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+            />
+          </span>
+          <span
+            data-tooltip="Preview"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-view"
+              onClick={undefined}
+            />
+          </span>
+          <span
+            data-tooltip="Export"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-export"
+              onClick={undefined}
+            />
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Badge (Centered) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <span
+        className="badge mantis"
+      >
+        Recommended
+      </span>
+      <h2>
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Badge 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card"
+    >
+      <span
+        className="badge mantis"
+      >
+        Recommended
+      </span>
+      <h2>
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Title and Body (Centered) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2>
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Title and Body (with Custom Children and Centered) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2>
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card"
+    >
+      <h2>
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Title and Body 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card"
+    >
+      <h2>
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Checkbox Checked Checkbox 1`] = `
+<div
+  className="input-checkbox-wrap"
+>
+  <input
+    defaultChecked={true}
+    disabled={undefined}
+    id="checkbox-transactional"
+    onChange={[Function]}
+    type="checkbox"
+    value="Transactional"
+  />
+  <label
+    className="input-checkbox-label"
+    htmlFor="checkbox-transactional"
+  >
+    Transactional
+  </label>
+</div>
+`;
+
+exports[`Storyshots Checkbox Checked and Disabled Checkbox 1`] = `
+<div
+  className="input-checkbox-wrap"
+>
+  <input
+    defaultChecked={true}
+    disabled={true}
+    id="checkbox-transactional"
+    onChange={[Function]}
+    type="checkbox"
+    value="Transactional"
+  />
+  <label
+    className="input-checkbox-label"
+    htmlFor="checkbox-transactional"
+  >
+    Transactional
+  </label>
+</div>
+`;
+
+exports[`Storyshots Checkbox Disabled Checkbox 1`] = `
+<div
+  className="input-checkbox-wrap"
+>
+  <input
+    defaultChecked={undefined}
+    disabled={true}
+    id="checkbox-transactional"
+    onChange={[Function]}
+    type="checkbox"
+    value="Transactional"
+  />
+  <label
+    className="input-checkbox-label"
+    htmlFor="checkbox-transactional"
+  >
+    Transactional
+  </label>
+</div>
+`;
+
+exports[`Storyshots Checkbox Standard Checkbox 1`] = `
+<div
+  className="input-checkbox-wrap"
+>
+  <input
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="checkbox-transactional"
+    onChange={[Function]}
+    type="checkbox"
+    value="Transactional"
+  />
+  <label
+    className="input-checkbox-label"
+    htmlFor="checkbox-transactional"
+  >
+    Transactional
+  </label>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-undefined btn-dropdown-gear"
+    onClick={[Function]}
+  >
+    <i
+      className="sg-icon sg-icon-gear"
+      onClick={undefined}
+    />
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Primary Dropdown (Small) 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-primary btn-small"
+    onClick={[Function]}
+  >
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Primary Dropdown 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-primary"
+    onClick={[Function]}
+  >
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Primary Dropdown with Badge (Small) 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-primary btn-small has-badge"
+    onClick={[Function]}
+  >
+    <span
+      className="badge"
+    >
+      1
+    </span>
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Primary Dropdown with Badge 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-primary has-badge"
+    onClick={[Function]}
+  >
+    <span
+      className="badge"
+    >
+      1
+    </span>
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Primary Dropdown with Icon (Small) 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-primary btn-small has-icon"
+    onClick={[Function]}
+  >
+    <i
+      className="sg-icon sg-icon-create"
+      onClick={undefined}
+    />
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Primary Dropdown with Icon 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-primary has-icon"
+    onClick={[Function]}
+  >
+    <i
+      className="sg-icon sg-icon-create"
+      onClick={undefined}
+    />
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Secondary Dropdown (Small) 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-secondary btn-small"
+    onClick={[Function]}
+  >
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Secondary Dropdown 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-secondary"
+    onClick={[Function]}
+  >
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Secondary Dropdown with Badge (Small) 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-secondary btn-small has-badge"
+    onClick={[Function]}
+  >
+    <span
+      className="badge"
+    >
+      2
+    </span>
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Secondary Dropdown with Badge 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-secondary has-badge"
+    onClick={[Function]}
+  >
+    <span
+      className="badge"
+    >
+      2
+    </span>
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Secondary Dropdown with Icon (Small) 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-secondary btn-small has-icon"
+    onClick={[Function]}
+  >
+    <i
+      className="sg-icon sg-icon-create"
+      onClick={undefined}
+    />
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
+<div
+  className="btn-list"
+>
+  <div
+    className="btn btn-dropdown dropdown btn-secondary has-icon"
+    onClick={[Function]}
+  >
+    <i
+      className="sg-icon sg-icon-create"
+      onClick={undefined}
+    />
+    Button
+    <ul
+      className="dropdown-menu"
+    >
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Sender
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new IP
+      </a>
+      <a
+        className="undefined dropdown-link"
+        href="#"
+      >
+        Add new Template
+      </a>
+    </ul>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Loaders Centered Loader 1`] = `
+<div
+  style={
+    Object {
+      "height": "100vh",
+    }
+  }
+>
+  <svg
+    className="sg-loader is-centered"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={10}
+      width={10}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={10}
+      width={10}
+    />
+    <rect
+      className="logo-square middle"
+      height={10}
+      width={10}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={10}
+      width={10}
+    />
+    <rect
+      className="logo-square top-right"
+      height={10}
+      width={10}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={10}
+      width={10}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={10}
+      width={10}
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Loaders Large Loader 1`] = `
+<svg
+  className="sg-loader is-large"
+>
+  <rect
+    className="logo-square bottom-left"
+    height={20}
+    width={20}
+  />
+  <rect
+    className="logo-square bottom-middle"
+    height={20}
+    width={20}
+  />
+  <rect
+    className="logo-square middle"
+    height={20}
+    width={20}
+  />
+  <rect
+    className="logo-square top-middle"
+    height={20}
+    width={20}
+  />
+  <rect
+    className="logo-square top-right"
+    height={20}
+    width={20}
+  />
+  <rect
+    className="logo-square middle-left"
+    height={20}
+    width={20}
+  />
+  <rect
+    className="logo-square middle-right"
+    height={20}
+    width={20}
+  />
+</svg>
+`;
+
+exports[`Storyshots Loaders Loader on Dark 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#294661",
+      "height": "100vh",
+    }
+  }
+>
+  <svg
+    className="sg-loader is-centered is-large loader-on-dark"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={20}
+      width={20}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={20}
+      width={20}
+    />
+    <rect
+      className="logo-square middle"
+      height={20}
+      width={20}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={20}
+      width={20}
+    />
+    <rect
+      className="logo-square top-right"
+      height={20}
+      width={20}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={20}
+      width={20}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={20}
+      width={20}
+    />
+  </svg>
+</div>
+`;
+
+exports[`Storyshots Loaders Small Loader 1`] = `
+<svg
+  className="sg-loader is-small"
+>
+  <rect
+    className="logo-square bottom-left"
+    height={5}
+    width={5}
+  />
+  <rect
+    className="logo-square bottom-middle"
+    height={5}
+    width={5}
+  />
+  <rect
+    className="logo-square middle"
+    height={5}
+    width={5}
+  />
+  <rect
+    className="logo-square top-middle"
+    height={5}
+    width={5}
+  />
+  <rect
+    className="logo-square top-right"
+    height={5}
+    width={5}
+  />
+  <rect
+    className="logo-square middle-left"
+    height={5}
+    width={5}
+  />
+  <rect
+    className="logo-square middle-right"
+    height={5}
+    width={5}
+  />
+</svg>
+`;
+
+exports[`Storyshots Loaders Standard Loader 1`] = `
+<svg
+  className="sg-loader"
+>
+  <rect
+    className="logo-square bottom-left"
+    height={10}
+    width={10}
+  />
+  <rect
+    className="logo-square bottom-middle"
+    height={10}
+    width={10}
+  />
+  <rect
+    className="logo-square middle"
+    height={10}
+    width={10}
+  />
+  <rect
+    className="logo-square top-middle"
+    height={10}
+    width={10}
+  />
+  <rect
+    className="logo-square top-right"
+    height={10}
+    width={10}
+  />
+  <rect
+    className="logo-square middle-left"
+    height={10}
+    width={10}
+  />
+  <rect
+    className="logo-square middle-right"
+    height={10}
+    width={10}
+  />
+</svg>
+`;
+
+exports[`Storyshots Meter Meter Above 50 1`] = `
+<div
+  className="meter-container"
+>
+  <span
+    className="meter-title"
+  >
+    Health
+  </span>
+  <span
+    className="meter-value"
+  >
+    95
+    %
+  </span>
+  <div
+    className="meter-bar"
+  >
+    <div
+      className="meter-bar-fill is-above-50"
+      style={
+        Object {
+          "width": "95%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Meter Meter Below 25 1`] = `
+<div
+  className="meter-container"
+>
+  <span
+    className="meter-title"
+  >
+    Stamina
+  </span>
+  <span
+    className="meter-value"
+  >
+    13
+    %
+  </span>
+  <div
+    className="meter-bar"
+  >
+    <div
+      className="meter-bar-fill is-below-25"
+      style={
+        Object {
+          "width": "13%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Meter Meter Below 50 1`] = `
+<div
+  className="meter-container"
+>
+  <span
+    className="meter-title"
+  >
+    Mana
+  </span>
+  <span
+    className="meter-value"
+  >
+    43
+    %
+  </span>
+  <div
+    className="meter-bar"
+  >
+    <div
+      className="meter-bar-fill is-below-50"
+      style={
+        Object {
+          "width": "43%",
+        }
+      }
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Disabled Select 1`] = `
+<div
+  className="input-select-wrap is-disabled"
+>
+  <label
+    className="input-select-label"
+    htmlFor="select2-example-required"
+  >
+    Sender
+  </label>
+  <select
+    aria-hidden="true"
+    className="input-select2 select2-hidden-accessible"
+    data-placeholder="Select a Sender"
+    id="select2-example-required"
+    tabIndex={-1}
+  >
+    <option />
+    <option
+      value="Jason"
+    >
+      Jason
+    </option>
+    <option
+      value="Evan"
+    >
+      Evan
+    </option>
+    <option
+      value="Katrina"
+    >
+      Katrina
+    </option>
+  </select>
+  <span
+    className="select2 select2-container select2-container--default select2-container--below"
+    dir="ltr"
+    onBlur={[Function]}
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="selection"
+    >
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-labelledby="select2-select2-example-required-container"
+        className="select2-selection select2-selection--single"
+        role="combobox"
+        tabIndex={0}
+      >
+        <span
+          className="select2-selection__rendered"
+          id="select2-select2-example-required-container"
+        >
+          <span
+            className="select2-selection__placeholder"
+          >
+            Select a Sender
+          </span>
+        </span>
+        <span
+          className="select2-selection__arrow"
+          role="presentation"
+        >
+          <b
+            role="presentation"
+          />
+        </span>
+      </span>
+    </span>
+    <span
+      aria-hidden="true"
+      className="dropdown-wrapper"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select Required Select 1`] = `
+<div
+  className="input-select-wrap is-required"
+>
+  <label
+    className="input-select-label"
+    htmlFor="select2-example-required"
+  >
+    Sender
+  </label>
+  <select
+    aria-hidden="true"
+    className="input-select2 select2-hidden-accessible"
+    data-placeholder="Select a Sender"
+    id="select2-example-required"
+    tabIndex={-1}
+  >
+    <option />
+    <option
+      value="Jason"
+    >
+      Jason
+    </option>
+    <option
+      value="Evan"
+    >
+      Evan
+    </option>
+    <option
+      value="Katrina"
+    >
+      Katrina
+    </option>
+  </select>
+  <span
+    className="select2 select2-container select2-container--default select2-container--below"
+    dir="ltr"
+    onBlur={[Function]}
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="selection"
+    >
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-labelledby="select2-select2-example-required-container"
+        className="select2-selection select2-selection--single"
+        role="combobox"
+        tabIndex={0}
+      >
+        <span
+          className="select2-selection__rendered"
+          id="select2-select2-example-required-container"
+        >
+          <span
+            className="select2-selection__placeholder"
+          >
+            Select a Sender
+          </span>
+        </span>
+        <span
+          className="select2-selection__arrow"
+          role="presentation"
+        >
+          <b
+            role="presentation"
+          />
+        </span>
+      </span>
+    </span>
+    <span
+      aria-hidden="true"
+      className="dropdown-wrapper"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select Select with Error 1`] = `
+<div
+  className="input-select-wrap is-error"
+>
+  <label
+    className="input-select-label"
+    htmlFor="select2-example-required"
+  >
+    Sender
+  </label>
+  <select
+    aria-hidden="true"
+    className="input-select2 select2-hidden-accessible"
+    data-placeholder="Select a Sender"
+    id="select2-example-required"
+    tabIndex={-1}
+  >
+    <option />
+    <option
+      value="Jason"
+    >
+      Jason
+    </option>
+    <option
+      value="Evan"
+    >
+      Evan
+    </option>
+    <option
+      value="Katrina"
+    >
+      Katrina
+    </option>
+  </select>
+  <span
+    className="select2 select2-container select2-container--default select2-container--below"
+    dir="ltr"
+    onBlur={[Function]}
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="selection"
+    >
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-labelledby="select2-select2-example-required-container"
+        className="select2-selection select2-selection--single"
+        role="combobox"
+        tabIndex={0}
+      >
+        <span
+          className="select2-selection__rendered"
+          id="select2-select2-example-required-container"
+        >
+          <span
+            className="select2-selection__placeholder"
+          >
+            Select a Sender
+          </span>
+        </span>
+        <span
+          className="select2-selection__arrow"
+          role="presentation"
+        >
+          <b
+            role="presentation"
+          />
+        </span>
+      </span>
+    </span>
+    <span
+      aria-hidden="true"
+      className="dropdown-wrapper"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select Standard Select 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <label
+    className="input-select-label"
+    htmlFor="select2-example-required"
+  >
+    Sender
+  </label>
+  <select
+    aria-hidden="true"
+    className="input-select2 select2-hidden-accessible"
+    data-placeholder="Select a Sender"
+    id="select2-example-required"
+    tabIndex={-1}
+  >
+    <option />
+    <option
+      value="Jason"
+    >
+      Jason
+    </option>
+    <option
+      value="Evan"
+    >
+      Evan
+    </option>
+    <option
+      value="Katrina"
+    >
+      Katrina
+    </option>
+  </select>
+  <span
+    className="select2 select2-container select2-container--default select2-container--below"
+    dir="ltr"
+    onBlur={[Function]}
+    onClick={[Function]}
+    style={
+      Object {
+        "width": "100%",
+      }
+    }
+  >
+    <span
+      className="selection"
+    >
+      <span
+        aria-expanded="false"
+        aria-haspopup="true"
+        aria-labelledby="select2-select2-example-required-container"
+        className="select2-selection select2-selection--single"
+        role="combobox"
+        tabIndex={0}
+      >
+        <span
+          className="select2-selection__rendered"
+          id="select2-select2-example-required-container"
+        >
+          <span
+            className="select2-selection__placeholder"
+          >
+            Select a Sender
+          </span>
+        </span>
+        <span
+          className="select2-selection__arrow"
+          role="presentation"
+        >
+          <b
+            role="presentation"
+          />
+        </span>
+      </span>
+    </span>
+    <span
+      aria-hidden="true"
+      className="dropdown-wrapper"
+    />
+  </span>
+</div>
+`;
+
+exports[`Storyshots Slider Slider with Label 1`] = `
+<div
+  className="input-range-wrap"
+>
+  <input
+    id={undefined}
+    max="100"
+    min="0"
+    onChange={[Function]}
+    type="range"
+    value={40}
+  />
+  <div
+    className="input-range-percent"
+  >
+    40
+    %
+  </div>
+</div>
+`;
+
+exports[`Storyshots Slider Slider without Label 1`] = `
+<div
+  className="input-range-wrap"
+>
+  <input
+    id={undefined}
+    max="100"
+    min="0"
+    onChange={[Function]}
+    type="range"
+    value={40}
+  />
+</div>
+`;
+
+exports[`Storyshots Tabs Centered Tabs 1`] = `
+<ul
+  className="tab-wrapper is-centered"
+>
+  <li
+    className="tab is-active"
+    onClick={[Function]}
+  >
+    All
+     
+  </li>
+  <li
+    className="tab"
+    onClick={[Function]}
+  >
+    Requesting Access
+     
+    <span
+      className="tab-number"
+    >
+      3
+    </span>
+  </li>
+  <li
+    className="tab"
+    onClick={[Function]}
+  >
+    Invited
+     
+    <span
+      className="tab-number"
+    >
+      5
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Tabs Standard Tabs 1`] = `
+<ul
+  className="tab-wrapper"
+>
+  <li
+    className="tab is-active"
+    onClick={[Function]}
+  >
+    All
+     
+  </li>
+  <li
+    className="tab"
+    onClick={[Function]}
+  >
+    Requesting Access
+     
+    <span
+      className="tab-number"
+    >
+      3
+    </span>
+  </li>
+  <li
+    className="tab"
+    onClick={[Function]}
+  >
+    Invited
+     
+    <span
+      className="tab-number"
+    >
+      5
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots Tabs Zero-Border Tabs 1`] = `
+<ul
+  className="tab-wrapper zero-border"
+>
+  <li
+    className="tab is-active"
+    onClick={[Function]}
+  >
+    All
+     
+  </li>
+  <li
+    className="tab"
+    onClick={[Function]}
+  >
+    Requesting Access
+     
+    <span
+      className="tab-number"
+    >
+      3
+    </span>
+  </li>
+  <li
+    className="tab"
+    onClick={[Function]}
+  >
+    Invited
+     
+    <span
+      className="tab-number"
+    >
+      5
+    </span>
+  </li>
+</ul>
+`;
+
+exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
+<div
+  className="btn-group"
+>
+  <button
+    className="btn btn-group-item is-active"
+    onClick={[Function]}
+  >
+    Day
+  </button>
+  <button
+    className="btn btn-group-item"
+    onClick={[Function]}
+  >
+    Week
+  </button>
+  <button
+    className="btn btn-group-item"
+    onClick={[Function]}
+  >
+    Month
+  </button>
+</div>
+`;
+
+exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 1`] = `
+<div
+  className="btn-group"
+>
+  <button
+    className="btn btn-group-item"
+    onClick={[Function]}
+  >
+    Day
+  </button>
+  <button
+    className="btn btn-group-item"
+    onClick={[Function]}
+  >
+    Week
+  </button>
+  <button
+    className="btn btn-group-item is-active"
+    onClick={[Function]}
+  >
+    Month
+  </button>
+</div>
+`;
