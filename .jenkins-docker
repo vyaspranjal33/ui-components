@@ -1,0 +1,11 @@
+#!/bin/bash
+
+set -e
+echo "Building: $sha1"
+
+image=docker.sendgrid.net/sendgrid/ui-components
+
+time docker pull $image
+time docker build -t $image:latest .
+time docker run $image:latest bash -c "yarn test"
+time docker push $image:latest
