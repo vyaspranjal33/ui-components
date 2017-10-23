@@ -37,10 +37,10 @@ const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered }) => {
 };
 
 Loader.defaultProps = {
-  onDark: false,
-  large: false,
-  small: false,
   centered: false,
+  large: false,
+  onDark: false,
+  small: false,
 };
 
 export default Loader;
