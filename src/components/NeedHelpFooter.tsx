@@ -2,20 +2,27 @@ import * as cn from 'classnames';
 import * as React from 'react';
 
 import { IconType } from '../types/icons';
+import Icon from './Icon';
 
 export interface NeedHelpFooterProps {
-  children?: any;
+  children?:
+    | Array<React.ReactElement<any>|string>
+    | React.ReactElement<any>
+    | string;
 }
 
-export const NeedHelpFooter: React.SFC<NeedHelpFooterProps> = ({
+const NeedHelpFooter: React.SFC<NeedHelpFooterProps> = ({
   children,
 }) => (
-  <p className="small is-center">
-    <i className="sg-icon sg-icon-help"></i>
+  <footer className='small is-center'>
+    <Icon type='help'></Icon>
+    { ' ' }
     <strong>
       Need help?
     </strong>
-    { " " }
+    { ' ' }
     {children}
-  </p>
+  </footer>
 );
+
+export default NeedHelpFooter;

@@ -13,15 +13,17 @@ export interface EmptyStateProps {
   header?: string;
 }
 
-export const EmptyState: React.SFC<EmptyStateProps> = ({
+const EmptyState: React.SFC<EmptyStateProps> = ({
   children,
   icon,
   buttons,
   header,
 }) => (
-  <div className="table-state is-empty">
+  <div className='table-state is-empty'>
     { icon && <i className={`sg-icon sg-icon-${icon}`}></i> }
     { header && <h2>{header}</h2> }
     {children}
   </div>
 );
+
+export default EmptyState;
