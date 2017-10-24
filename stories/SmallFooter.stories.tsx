@@ -1,9 +1,9 @@
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 
-import Footer, { NeedHelpFooter } from '../src/components/SmallFooter';
+import Footer from '../src/components/SmallFooter';
 
-const stories = storiesOf('Need Help Footer', module);
+const stories = storiesOf('Small Footer', module);
 
 stories.add('Footer Simple', () => (
   <Footer icon='help' header='What the what?'>
@@ -12,16 +12,16 @@ stories.add('Footer Simple', () => (
 ));
 
 stories.add('Need Help Footer Simple', () => (
-  <NeedHelpFooter>
+  <Footer icon='help' header='Need help?'>
     Get more info on adding and updating contacts.
-  </NeedHelpFooter>
+  </Footer>
 ));
 
 stories.add('Need Help Footer with Link', () => (
-  <NeedHelpFooter>
+  <Footer icon='help' header='Need help?'>
     <a href='#'>
       Get more info
     </a>{ ' ' }
     on adding and updating contacts.
-  </NeedHelpFooter>
+  </Footer>
 ));

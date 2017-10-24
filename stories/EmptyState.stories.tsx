@@ -5,7 +5,7 @@ import * as React from 'react';
 import EmptyState from '../src/components/EmptyState';
 import Button from '../src/components/Button';
 import ButtonList from '../src/components/ButtonList';
-import { NeedHelpFooter } from '../src/components/SmallFooter';
+import Footer from '../src/components/SmallFooter';
 
 const stories = storiesOf('Empty State', module);
 
@@ -54,11 +54,11 @@ stories.add('Empty State With Everything', () => (
         </Button>
       </ButtonList>
     </EmptyState>
-    <NeedHelpFooter>
+    <Footer icon='help' header='Need help?'>
       <a href='#'>
         Get more info
       </a>{ ' ' }
       on adding and updating contacts.
-    </NeedHelpFooter>
+    </Footer>
   </div>
 ));
