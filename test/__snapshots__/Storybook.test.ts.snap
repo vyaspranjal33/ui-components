@@ -3,6 +3,7 @@
 exports[`Storyshots Alerts Danger Alert 1`] = `
 <div
   className="alert alert-danger"
+  role="alert"
 >
   <p>
     <i
@@ -27,6 +28,7 @@ exports[`Storyshots Alerts Danger Alert 1`] = `
 exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
 <div
   className="alert alert-danger"
+  role="alert"
 >
   <p>
     <i
@@ -51,6 +53,7 @@ exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
 exports[`Storyshots Alerts Success Alert 1`] = `
 <div
   className="alert alert-success"
+  role="alert"
 >
   <p>
     <i
@@ -75,6 +78,7 @@ exports[`Storyshots Alerts Success Alert 1`] = `
 exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
 <div
   className="alert alert-success"
+  role="alert"
 >
   <p>
     <i
@@ -99,6 +103,7 @@ exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
 exports[`Storyshots Alerts Warning Alert 1`] = `
 <div
   className="alert alert-warning"
+  role="alert"
 >
   <p>
     <i
@@ -123,6 +128,7 @@ exports[`Storyshots Alerts Warning Alert 1`] = `
 exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
 <div
   className="alert alert-warning"
+  role="alert"
 >
   <p>
     <i
@@ -1650,29 +1656,30 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
 `;
 
 exports[`Storyshots Dropzone Dropzone (Active) 1`] = `
-<div
+<section
   className="dropzone is-active"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (Hovered) 1`] = `
-<div
+<section
   className="dropzone is-hovered"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (Large) 1`] = `
-<div
+<section
   className="dropzone is-large"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
-<div
+<section
   className="dropzone has-inline-alert"
 >
   <div
     className="alert alert-warning alert-inline"
+    role="alert"
   >
     <p>
       <i
@@ -1692,11 +1699,11 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
       />
     </p>
   </div>
-</div>
+</section>
 `;
 
 exports[`Storyshots Dropzone Dropzone 1`] = `
-<div
+<section
   className="dropzone"
 />
 `;

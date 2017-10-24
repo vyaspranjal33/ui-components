@@ -33,6 +33,7 @@ const Alert: React.SFC<AlertProps> = ({
       className={cn('alert', `alert-${type}`, {
         'alert-inline': inline,
       })}
+      role="alert"
     >
       <p>
         <Icon type={icon || iconFor(type)} />

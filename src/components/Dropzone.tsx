@@ -18,7 +18,7 @@ const Dropzone: React.SFC<DropzoneProps> = ({
   large,
 }) => {
   return (
-    <div
+    <section
       className={cn('dropzone', {
         'has-inline-alert': !!alert,
         'is-active': active,
@@ -31,7 +31,7 @@ const Dropzone: React.SFC<DropzoneProps> = ({
           ...alert.props,
           inline: true,
         })}
-    </div>
+    </section>
   );
 };
 
