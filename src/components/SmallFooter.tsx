@@ -51,5 +51,5 @@ const Footer: React.SFC<FooterProps> = ({
   </footer>
 );
 
-export default NeedHelpFooter;
+export default Footer;
 export { NeedHelpFooter };

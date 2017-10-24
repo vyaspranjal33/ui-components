@@ -5,7 +5,7 @@ import * as React from 'react';
 import EmptyState from '../src/components/EmptyState';
 import Button from '../src/components/Button';
 import ButtonList from '../src/components/ButtonList';
-import NeedHelpFooter from '../src/components/NeedHelpFooter';
+import { NeedHelpFooter } from '../src/components/SmallFooter';
 
 const stories = storiesOf('Empty State', module);
 

@@ -1,9 +1,15 @@
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 
-import NeedHelpFooter from '../src/components/NeedHelpFooter';
+import Footer, { NeedHelpFooter } from '../src/components/SmallFooter';
 
 const stories = storiesOf('Need Help Footer', module);
+
+stories.add('Footer Simple', () => (
+  <Footer icon='help' header='What the what?'>
+    This component is just fantastic.
+  </Footer>
+));
 
 stories.add('Need Help Footer Simple', () => (
   <NeedHelpFooter>
