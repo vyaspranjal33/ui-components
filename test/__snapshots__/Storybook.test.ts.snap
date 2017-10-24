@@ -1161,27 +1161,6 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
 </div>
 `;
 
-exports[`Storyshots Divider Divider (Thin) 1`] = `
-<hr
-  className="is-thin"
-  data-label={null}
-/>
-`;
-
-exports[`Storyshots Divider Divider (with Label) 1`] = `
-<hr
-  className=""
-  data-label="Very Important"
-/>
-`;
-
-exports[`Storyshots Divider Divider 1`] = `
-<hr
-  className=""
-  data-label={null}
-/>
-`;
-
 exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
 <div
   className="btn-list"
@@ -1679,24 +1658,28 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
 exports[`Storyshots Dropzone Dropzone (Active) 1`] = `
 <section
   className="dropzone is-active"
+  role="hidden"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (Hovered) 1`] = `
 <section
   className="dropzone is-hovered"
+  role="hidden"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (Large) 1`] = `
 <section
   className="dropzone is-large"
+  role="hidden"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
 <section
   className="dropzone has-inline-alert"
+  role="hidden"
 >
   <div
     className="alert alert-warning alert-inline"
@@ -1726,6 +1709,7 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
 exports[`Storyshots Dropzone Dropzone 1`] = `
 <section
   className="dropzone"
+  role="hidden"
 />
 `;
 
