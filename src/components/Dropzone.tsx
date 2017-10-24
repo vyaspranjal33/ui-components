@@ -25,6 +25,7 @@ const Dropzone: React.SFC<DropzoneProps> = ({
         'is-hovered': hovered,
         'is-large': large,
       })}
+      role="hidden"
     >
       {alert &&
         React.cloneElement(alert, {
