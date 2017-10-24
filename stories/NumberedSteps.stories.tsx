@@ -6,13 +6,13 @@ import { NumberedStep, NumberedSteps } from '../src/components/NumberedSteps';
 const stories = storiesOf('NumberedSteps', module);
 
 stories.add('Numbered Steps with short content', () => (
-  <div className="row">
-    <div className="col-4" style={{ width: '300px' }}>
+  <div className='row'>
+    <div className='col-4' style={{ width: '300px' }}>
       <NumberedSteps>
-        <NumberedStep header="Use these settings">
+        <NumberedStep header='Use these settings'>
           <p>Configure your application with the settings below.</p>
         </NumberedStep>
-        <NumberedStep header="Send your first email">
+        <NumberedStep header='Send your first email'>
           <p>Test your integration by sending email through your application.</p>
         </NumberedStep>
       </NumberedSteps>
@@ -21,10 +21,10 @@ stories.add('Numbered Steps with short content', () => (
 ));
 
 stories.add('Numbered Steps with longer content', () => (
-  <div className="row">
-    <div className="col-4" style={{ width: '300px' }}>
+  <div className='row'>
+    <div className='col-4' style={{ width: '300px' }}>
       <NumberedSteps>
-        <NumberedStep header="Use these settings">
+        <NumberedStep header='Use these settings'>
           <p>Configure your application with the settings below.</p>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum neque nec felis pellentesque,
@@ -36,7 +36,7 @@ stories.add('Numbered Steps with longer content', () => (
             blandit diam, in venenatis risus leo luctus orci.
           </p>
         </NumberedStep>
-        <NumberedStep header="Send your first email">
+        <NumberedStep header='Send your first email'>
           <div>
             <p>Test your integration by sending email through your application.</p>
             <p>
