@@ -8,6 +8,7 @@ export type AlertType = 'success' | 'warning' | 'danger';
 export interface AlertProps {
   children: any;
   icon?: IconType;
+  inline?: boolean;
   type: AlertType;
   hidden?: boolean;
   onClick?: (event: any) => void;
@@ -22,12 +23,18 @@ const iconFor = (type: AlertType): IconType => {
 
 const Alert: React.SFC<AlertProps> = ({
   children,
-  type,
   icon,
+  inline,
   onClick: handleClick,
+  type,
 }) => {
   return (
-    <div className={cn('alert', `alert-${type}`)}>
+    <div
+      className={cn('alert', `alert-${type}`, {
+        'alert-inline': inline,
+      })}
+      role="alert"
+    >
       <p>
         <Icon type={icon || iconFor(type)} />
         {children}
@@ -35,6 +42,11 @@ const Alert: React.SFC<AlertProps> = ({
       </p>
     </div>
   );
+};
+
+Alert.defaultProps = {
+  hidden: false,
+  inline: false,
 };
 
 export default Alert;

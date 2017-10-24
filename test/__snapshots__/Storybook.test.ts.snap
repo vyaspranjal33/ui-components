@@ -3,6 +3,7 @@
 exports[`Storyshots Alerts Danger Alert 1`] = `
 <div
   className="alert alert-danger"
+  role="alert"
 >
   <p>
     <i
@@ -27,6 +28,7 @@ exports[`Storyshots Alerts Danger Alert 1`] = `
 exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
 <div
   className="alert alert-danger"
+  role="alert"
 >
   <p>
     <i
@@ -51,6 +53,7 @@ exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
 exports[`Storyshots Alerts Success Alert 1`] = `
 <div
   className="alert alert-success"
+  role="alert"
 >
   <p>
     <i
@@ -75,6 +78,7 @@ exports[`Storyshots Alerts Success Alert 1`] = `
 exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
 <div
   className="alert alert-success"
+  role="alert"
 >
   <p>
     <i
@@ -99,6 +103,7 @@ exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
 exports[`Storyshots Alerts Warning Alert 1`] = `
 <div
   className="alert alert-warning"
+  role="alert"
 >
   <p>
     <i
@@ -123,6 +128,7 @@ exports[`Storyshots Alerts Warning Alert 1`] = `
 exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
 <div
   className="alert alert-warning"
+  role="alert"
 >
   <p>
     <i
@@ -1649,6 +1655,59 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
 </div>
 `;
 
+exports[`Storyshots Dropzone Dropzone (Active) 1`] = `
+<section
+  className="dropzone is-active"
+/>
+`;
+
+exports[`Storyshots Dropzone Dropzone (Hovered) 1`] = `
+<section
+  className="dropzone is-hovered"
+/>
+`;
+
+exports[`Storyshots Dropzone Dropzone (Large) 1`] = `
+<section
+  className="dropzone is-large"
+/>
+`;
+
+exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
+<section
+  className="dropzone has-inline-alert"
+>
+  <div
+    className="alert alert-warning alert-inline"
+    role="alert"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-warning"
+        onClick={undefined}
+      />
+      Lorem ipsum dolor sit amet, 
+      <a
+        href="#"
+      >
+        consectetur adipiscing elit
+      </a>
+      . In nec augue eu lacus aliquam lobortis.
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={[Function]}
+      />
+    </p>
+  </div>
+</section>
+`;
+
+exports[`Storyshots Dropzone Dropzone 1`] = `
+<section
+  className="dropzone"
+/>
+`;
+
 exports[`Storyshots Loaders Centered Loader 1`] = `
 <div
   style={
@@ -1962,6 +2021,86 @@ exports[`Storyshots Meter Meter Below 50 1`] = `
         }
       }
     />
+  </div>
+</div>
+`;
+
+exports[`Storyshots NumberedSteps Numbered Steps with longer content 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <ol
+      className="numbered-steps"
+    >
+      <li>
+        <h3>
+          Use these settings
+        </h3>
+        <p>
+          Configure your application with the settings below.
+        </p>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean rutrum neque nec felis pellentesque, mollis varius libero consectetur. Nulla elementum pellentesque accumsan. Fusce sit amet quam quis elit lobortis egestas sed eu turpis. Nullam luctus pellentesque enim placerat pretium. Vivamus viverra nunc a tortor convallis egestas. Vestibulum mattis, nunc quis dapibus rhoncus, dui magna feugiat tortor, ut rutrum orci dui dictum leo. Fusce convallis diam sit amet luctus maximus. Pellentesque vehicula faucibus nunc, at cursus mi congue quis. Pellentesque tempus, est eget vestibulum ultricies, elit odio blandit diam, in venenatis risus leo luctus orci.
+        </p>
+      </li>
+      <li>
+        <h3>
+          Send your first email
+        </h3>
+        <div>
+          <p>
+            Test your integration by sending email through your application.
+          </p>
+          <p>
+            Vivamus quis volutpat nibh. Maecenas nibh eros, fermentum posuere convallis sed, consectetur et massa. Donec feugiat a nisl quis porttitor. Ut egestas, libero non cursus posuere, quam nulla feugiat magna, eget rutrum justo odio a nisi. Donec tincidunt urna in vulputate ultricies. Fusce id dolor vehicula, tincidunt neque vel, iaculis nulla. Duis sed arcu leo.
+          </p>
+        </div>
+      </li>
+    </ol>
+  </div>
+</div>
+`;
+
+exports[`Storyshots NumberedSteps Numbered Steps with short content 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <ol
+      className="numbered-steps"
+    >
+      <li>
+        <h3>
+          Use these settings
+        </h3>
+        <p>
+          Configure your application with the settings below.
+        </p>
+      </li>
+      <li>
+        <h3>
+          Send your first email
+        </h3>
+        <p>
+          Test your integration by sending email through your application.
+        </p>
+      </li>
+    </ol>
   </div>
 </div>
 `;
