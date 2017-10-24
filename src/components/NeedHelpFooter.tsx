@@ -14,7 +14,7 @@ export interface NeedHelpFooterProps {
 const NeedHelpFooter: React.SFC<NeedHelpFooterProps> = ({
   children,
 }) => (
-  <footer className='small is-center'>
+  <Footer>
     <Icon type='help'></Icon>
     { ' ' }
     <strong>
@@ -22,7 +22,20 @@ const NeedHelpFooter: React.SFC<NeedHelpFooterProps> = ({
     </strong>
     { ' ' }
     {children}
+  </Footer>
+);
+
+export interface FooterProps {
+  children?: any;
+}
+
+const Footer: React.SFC<FooterProps> = ({
+  children,
+}) => (
+  <footer className='small is-center'>
+    {children}
   </footer>
 );
 
 export default NeedHelpFooter;
+export { NeedHelpFooter };
