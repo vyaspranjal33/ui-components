@@ -12,7 +12,7 @@
     "ci-test": "yarn lint && yarn test",
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook",
-    "precommit": "yarn test"
+    "precommit": "yarn test && yarn build && git add dist/"
   },
   "repository": "https://github.com/sendgrid/ui-components.git",
   "author": "SendGrid <careers@sendgrid.com>",
