@@ -1658,24 +1658,28 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
 exports[`Storyshots Dropzone Dropzone (Active) 1`] = `
 <section
   className="dropzone is-active"
+  role="hidden"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (Hovered) 1`] = `
 <section
   className="dropzone is-hovered"
+  role="hidden"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (Large) 1`] = `
 <section
   className="dropzone is-large"
+  role="hidden"
 />
 `;
 
 exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
 <section
   className="dropzone has-inline-alert"
+  role="hidden"
 >
   <div
     className="alert alert-warning alert-inline"
@@ -1705,7 +1709,110 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
 exports[`Storyshots Dropzone Dropzone 1`] = `
 <section
   className="dropzone"
+  role="hidden"
 />
+`;
+
+exports[`Storyshots Empty State Empty State With Buttons 1`] = `
+<div
+  className="table-state is-empty"
+>
+  <h2>
+    Get started adding contacts
+  </h2>
+  <p>
+    Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting.  Use the Add List or Segment button above to get started.
+  </p>
+  <div
+    className="btn-list"
+  >
+    <button
+      className="btn btn-primary"
+      onClick={[Function]}
+    >
+      Primary
+    </button>
+    <button
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      Secondary
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Empty State Empty State With Everything 1`] = `
+<div>
+  <div
+    className="table-state is-empty"
+  >
+    <i
+      className="sg-icon sg-icon-contacts"
+      onClick={undefined}
+    />
+    <h2>
+      Get started adding contacts
+    </h2>
+    <p>
+      Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting.  Use the Add List or Segment button above to get started.
+    </p>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-primary"
+        onClick={[Function]}
+      >
+        Primary
+      </button>
+      <button
+        className="btn btn-secondary"
+        onClick={[Function]}
+      >
+        Secondary
+      </button>
+    </div>
+  </div>
+  <footer
+    className="small is-center"
+  >
+    <span>
+      <i
+        className="sg-icon sg-icon-help"
+        onClick={undefined}
+      />
+       
+    </span>
+    <strong>
+      Need help? 
+    </strong>
+    <a
+      href="#"
+    >
+      Get more info
+    </a>
+     
+    on adding and updating contacts.
+  </footer>
+</div>
+`;
+
+exports[`Storyshots Empty State Empty State With Icon 1`] = `
+<div
+  className="table-state is-empty"
+>
+  <i
+    className="sg-icon sg-icon-contacts"
+    onClick={undefined}
+  />
+  <h2>
+    Get started adding contacts
+  </h2>
+  <p>
+    Add and update your contacts via CSV upload or manually add them one at a time, then create static lists or dynamic segments for better targeting.  Use the Add List or Segment button above to get started.
+  </p>
+</div>
 `;
 
 exports[`Storyshots Loaders Centered Loader 1`] = `
@@ -2475,6 +2582,66 @@ exports[`Storyshots Slider Slider without Label 1`] = `
     value={40}
   />
 </div>
+`;
+
+exports[`Storyshots Small Footer Footer Simple 1`] = `
+<footer
+  className="small is-center"
+>
+  <span>
+    <i
+      className="sg-icon sg-icon-help"
+      onClick={undefined}
+    />
+     
+  </span>
+  <strong>
+    What the what? 
+  </strong>
+  This component is just fantastic.
+</footer>
+`;
+
+exports[`Storyshots Small Footer Need Help Footer Simple 1`] = `
+<footer
+  className="small is-center"
+>
+  <span>
+    <i
+      className="sg-icon sg-icon-help"
+      onClick={undefined}
+    />
+     
+  </span>
+  <strong>
+    Need help? 
+  </strong>
+  Get more info on adding and updating contacts.
+</footer>
+`;
+
+exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
+<footer
+  className="small is-center"
+>
+  <span>
+    <i
+      className="sg-icon sg-icon-help"
+      onClick={undefined}
+    />
+     
+  </span>
+  <strong>
+    Need help? 
+  </strong>
+  <a
+    href="#"
+  >
+    Get more info
+  </a>
+   
+  on adding and updating contacts.
+</footer>
 `;
 
 exports[`Storyshots Tabs Centered Tabs 1`] = `
