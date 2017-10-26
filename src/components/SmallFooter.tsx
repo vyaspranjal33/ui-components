@@ -9,8 +9,8 @@ export interface FooterProps {
   | Array<React.ReactElement<any>|string>
   | React.ReactElement<any>
   | string;
-  icon?: IconType,
-  header?: string
+  icon?: IconType;
+  header?: string;
 }
 
 const Footer: React.SFC<FooterProps> = ({
@@ -18,18 +18,18 @@ const Footer: React.SFC<FooterProps> = ({
   icon,
   header,
 }) => (
-  <footer className='small is-center'>
+  <footer className="small is-center">
     {
       icon &&
       <span>
-        <Icon type={ icon }></Icon>
-        { ' ' }
+        <Icon type={icon} />
+        {' '}
       </span>
     }
     {
       header &&
       <strong>
-        { `${header} ` }
+        {`${header} `}
       </strong>
     }
     {children}

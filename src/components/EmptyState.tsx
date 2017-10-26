@@ -20,9 +20,9 @@ const EmptyState: React.SFC<EmptyStateProps> = ({
   buttons,
   header,
 }) => (
-  <div className='table-state is-empty'>
-    { icon && <Icon type={icon}></Icon> }
-    { header && <h2>{header}</h2> }
+  <div className="table-state is-empty">
+    {icon && <Icon type={icon} />}
+    {header && <h2>{header}</h2>}
     {children}
   </div>
 );
