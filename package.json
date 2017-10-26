@@ -7,6 +7,7 @@
     "start": "yarn run storybook",
     "build": "tsc",
     "lint": "tslint --project ./tslint.json",
+    "lint-fix": "tslint --project ./tslint.json --fix",
     "test": "jest --coverage",
     "ci-test": "yarn lint && yarn test",
     "storybook": "start-storybook -s ./ -p 6006",
