@@ -8,7 +8,7 @@ export interface LoaderProps {
   centered?: boolean;
 }
 
-const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered }) => {
+export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered }) => {
   let size = 10;
   if (large) {
     size *= 2;

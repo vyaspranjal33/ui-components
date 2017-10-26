@@ -6,7 +6,7 @@ export interface MeterProps {
   value: number;
 }
 
-const Meter: React.SFC<MeterProps> = ({ title, value }) => {
+export const Meter: React.SFC<MeterProps> = ({ title, value }) => {
   return (
     <div className="meter-container">
       <span className="meter-title">{title}</span>

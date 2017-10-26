@@ -6,7 +6,7 @@ export interface IconProps {
   onClick?: (event: any) => void;
 }
 
-const Icon: React.SFC<IconProps> = ({ type, onClick: handleClick }) => (
+export const Icon: React.SFC<IconProps> = ({ type, onClick: handleClick }) => (
   <i className={`sg-icon sg-icon-${type}`} onClick={handleClick} />
 );
 
