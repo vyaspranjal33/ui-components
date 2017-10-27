@@ -1161,6 +1161,27 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
 </div>
 `;
 
+exports[`Storyshots Divider Divider (Thin) 1`] = `
+<hr
+  className="is-thin"
+  data-label={null}
+/>
+`;
+
+exports[`Storyshots Divider Divider (with Label) 1`] = `
+<hr
+  className=""
+  data-label="Very Important"
+/>
+`;
+
+exports[`Storyshots Divider Divider 1`] = `
+<hr
+  className=""
+  data-label={null}
+/>
+`;
+
 exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
 <div
   className="btn-list"
@@ -2210,6 +2231,70 @@ exports[`Storyshots NumberedSteps Numbered Steps with short content 1`] = `
     </ol>
   </div>
 </div>
+`;
+
+exports[`Storyshots Progress Horizontal Progress 1`] = `
+<section
+  className="progress-container"
+>
+  <ul
+    className="progress-stages"
+  >
+    <li
+      className="is-done"
+    >
+      <label>
+        Step One
+      </label>
+    </li>
+    <li
+      className="is-selected"
+    >
+      <label>
+        Step Two
+      </label>
+    </li>
+    <li
+      className=""
+    >
+      <label>
+        Step Three
+      </label>
+    </li>
+  </ul>
+</section>
+`;
+
+exports[`Storyshots Progress Vertical Progress 1`] = `
+<section
+  className="progress-container is-vertical"
+>
+  <ul
+    className="progress-stages"
+  >
+    <li
+      className="is-done"
+    >
+      <label>
+        Step One
+      </label>
+    </li>
+    <li
+      className="is-selected"
+    >
+      <label>
+        Step Two
+      </label>
+    </li>
+    <li
+      className=""
+    >
+      <label>
+        Step Three
+      </label>
+    </li>
+  </ul>
+</section>
 `;
 
 exports[`Storyshots Select Disabled Select 1`] = `
