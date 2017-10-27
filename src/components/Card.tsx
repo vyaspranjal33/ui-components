@@ -18,7 +18,7 @@ export interface CardProps {
     | React.ReactElement<any>;
 }
 
-const Card: React.SFC<CardProps> = ({
+export const Card: React.SFC<CardProps> = ({
   badge,
   body,
   centered,

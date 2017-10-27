@@ -13,7 +13,7 @@ export interface FooterProps {
   header?: string;
 }
 
-const Footer: React.SFC<FooterProps> = ({
+export const Footer: React.SFC<FooterProps> = ({
   children,
   icon,
   header,

@@ -11,7 +11,7 @@ export interface DropzoneProps {
   children?: React.ReactElement<AlertProps>;
 }
 
-const Dropzone: React.SFC<DropzoneProps> = ({
+export const Dropzone: React.SFC<DropzoneProps> = ({
   active,
   children: alert,
   hovered,

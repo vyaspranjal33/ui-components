@@ -25,10 +25,8 @@ export interface NumberedStepsProps {
 
 export const NumberedSteps: React.SFC<NumberedStepsProps> = ({
   children,
-}) => {
-  return (
-    <ol className="numbered-steps">
-      {children}
-    </ol>
-  );
-};
+}) => (
+  <ol className="numbered-steps">
+    {children}
+  </ol>
+);

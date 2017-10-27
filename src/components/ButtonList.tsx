@@ -8,7 +8,7 @@ export interface ButtonListProps {
 
 const { map } = React.Children;
 
-const ButtonList: React.SFC<ButtonListProps> = ({ children, onDark }) => {
+export const ButtonList: React.SFC<ButtonListProps> = ({ children, onDark }) => {
   return (
     <div className="btn-list">
       {map(children, (button: React.ReactElement<any>) => {

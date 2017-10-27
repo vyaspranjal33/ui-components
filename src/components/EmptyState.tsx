@@ -14,7 +14,7 @@ export interface EmptyStateProps {
   header?: string;
 }
 
-const EmptyState: React.SFC<EmptyStateProps> = ({
+export const EmptyState: React.SFC<EmptyStateProps> = ({
   children,
   icon,
   buttons,

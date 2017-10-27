@@ -21,7 +21,7 @@ const iconFor = (type: AlertType): IconType => {
   return 'warning';
 };
 
-const Alert: React.SFC<AlertProps> = ({
+export const Alert: React.SFC<AlertProps> = ({
   children,
   icon,
   inline,
