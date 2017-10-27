@@ -1,6 +1,5 @@
 import {shallow} from 'enzyme';
 import * as React from 'react';
-import * as TestUtils from 'react-addons-test-utils';
 
 import { TextInput } from './TextInput';
 
