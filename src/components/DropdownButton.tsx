@@ -20,7 +20,7 @@ export class DropdownButton extends React.Component<
   DropdownButtonProps & ButtonProps,
   DropdownButtonState
 > {
-  public defaultProps = Button.defaultProps;
+  public static defaultProps = Button.defaultProps;
 
   constructor() {
     super();

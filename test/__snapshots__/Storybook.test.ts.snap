@@ -1187,7 +1187,7 @@ exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-undefined btn-dropdown-gear"
+    className="btn btn-dropdown dropdown btn-secondary btn-dropdown-gear"
     onClick={[Function]}
   >
     <i
