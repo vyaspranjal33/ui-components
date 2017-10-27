@@ -9,7 +9,7 @@ export interface MeterProps {
 const Meter: React.SFC<MeterProps> = ({ title, value }) => {
   return (
     <div className="meter-container">
-      <span className="meter-title">{title}</span>
+      <span className="meter-title">{title}</span>{' '}
       <span className="meter-value">{value}%</span>
       <div className="meter-bar">
         <div

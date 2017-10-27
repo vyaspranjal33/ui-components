@@ -2072,6 +2072,7 @@ exports[`Storyshots Meter Meter Above 50 1`] = `
   >
     Health
   </span>
+   
   <span
     className="meter-value"
   >
@@ -2102,6 +2103,7 @@ exports[`Storyshots Meter Meter Below 25 1`] = `
   >
     Stamina
   </span>
+   
   <span
     className="meter-value"
   >
@@ -2132,6 +2134,7 @@ exports[`Storyshots Meter Meter Below 50 1`] = `
   >
     Mana
   </span>
+   
   <span
     className="meter-value"
   >
