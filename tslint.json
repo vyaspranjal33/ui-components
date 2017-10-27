@@ -8,7 +8,8 @@
     "jsx-no-multiline-js": false,
     "jsx-boolean-value": false,
     "no-empty": false,
-    "variable-name": false
+    "variable-name": false,
+    "max-classes-per-file": false
   },
   "rulesDirectory": []
 }

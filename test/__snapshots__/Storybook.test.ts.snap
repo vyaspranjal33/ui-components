@@ -2758,6 +2758,156 @@ exports[`Storyshots Tabs Zero-Border Tabs 1`] = `
 </ul>
 `;
 
+exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
+<div
+  className="input-text-wrap is-disabled"
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    An Input
+  </label>
+  <input
+    aria-describedby={null}
+    id="test-input-simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Text Input Text Input Large 1`] = `
+<div
+  className="input-text-wrap is-large"
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    Large Input
+  </label>
+  <input
+    aria-describedby={null}
+    id="test-input-simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Text Input Text Input Simple 1`] = `
+<div
+  className="input-text-wrap is-required"
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    Test Input
+  </label>
+  <input
+    aria-describedby={null}
+    id="test-input-simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Text Input Text Input With Error 1`] = `
+<div
+  className="input-text-wrap is-error"
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    An Input
+  </label>
+  <input
+    aria-describedby="test-input-simple-info"
+    id="test-input-simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+  <span
+    className="input-info danger"
+    id="test-input-simple-info"
+  >
+    This test input is wrong somehow.
+  </span>
+</div>
+`;
+
+exports[`Storyshots Text Input Text Input With Info 1`] = `
+<div
+  className="input-text-wrap"
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    An Input
+  </label>
+  <input
+    aria-describedby="test-input-simple-info"
+    id="test-input-simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+  <span
+    className="input-info"
+    id="test-input-simple-info"
+  >
+    This test input is better then your test input.
+  </span>
+</div>
+`;
+
+exports[`Storyshots Text Input Text Input With Numbers 1`] = `
+<div
+  className="input-text-wrap"
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    A Number
+  </label>
+  <input
+    aria-describedby="test-input-simple-info"
+    id="test-input-simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="number"
+    value=""
+  />
+  <span
+    className="input-info"
+    id="test-input-simple-info"
+  >
+    This input always returns a number, not a string.
+  </span>
+</div>
+`;
+
 exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
 <div
   className="btn-group"
