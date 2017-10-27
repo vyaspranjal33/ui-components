@@ -355,6 +355,47 @@ exports[`Storyshots Button Danger Button with Icon 1`] = `
 </button>
 `;
 
+exports[`Storyshots Button Link Anchor Button Link 1`] = `
+<a
+  className="btn btn-primary"
+  href="#"
+  onClick={[Function]}
+>
+  This is an anchor
+</a>
+`;
+
+exports[`Storyshots Button Link Div Button Link 1`] = `
+<div
+  className="btn btn-primary"
+  onClick={[Function]}
+>
+  This is a div
+</div>
+`;
+
+exports[`Storyshots Button Link Div Danger Button Link 1`] = `
+<div
+  className="btn btn-danger has-icon"
+  onClick={[Function]}
+>
+  <i
+    className="sg-icon sg-icon-trash"
+    onClick={undefined}
+  />
+  This is a div
+</div>
+`;
+
+exports[`Storyshots Button Link Div Secondary Button Link 1`] = `
+<div
+  className="btn btn-secondary"
+  onClick={[Function]}
+>
+  This is a div
+</div>
+`;
+
 exports[`Storyshots Button List Button List on a Dark Background 1`] = `
 <div
   style={
