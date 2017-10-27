@@ -7,8 +7,7 @@ import Loader from './Loader';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
 
-export interface ButtonProps {
-  children?: string;
+interface AllButtonProps {
   disabled?: boolean;
   loading?: boolean;
   badge?: number | string;
@@ -19,9 +18,28 @@ export interface ButtonProps {
   group?: boolean;
   active?: boolean;
   icon?: IconType;
+  isLink?: boolean;
 }
 
-export const Button: React.SFC<ButtonProps> = ({
+export interface ButtonProps extends AllButtonProps {
+  children?: string;
+}
+
+export interface ButtonizedProps extends AllButtonProps {
+  children?: React.ReactElement<ButtonProps>;
+}
+
+export const Button: React.SFC<ButtonProps> = (props) => {
+  return (
+    <Buttonized {...props} >
+      <button>
+        {props.children}
+      </button>
+    </Buttonized>
+  );
+};
+
+export const Buttonized: React.SFC<ButtonizedProps> = ({
   children,
   type,
   badge,
@@ -36,24 +54,50 @@ export const Button: React.SFC<ButtonProps> = ({
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
+  const content: any[] = [];
+
+  if (hasBadge) {
+    content.push(
+      <Badge key={1}>{badge}</Badge>,
+    );
+  }
+
+  if (hasIcon) {
+    content.push(
+      <Icon key={2} type={icon} />,
+    );
+  }
+
+  if (loading) {
+    content.push(
+      <Loader key={3} small onDark={type === 'primary'} />,
+    );
+  }
+
+  // the children of the element being buttonized
+  if (children.props.children) {
+    content.push(
+      children.props.children,
+    );
+  }
+
   return (
-    <button
-      className={cn('btn', `btn-${type}`, {
-        'btn-on-dark': onDark,
-        'btn-small': small,
-        'has-badge': hasBadge,
-        'has-icon': hasIcon || loading,
-        'is-active': active,
-        'is-disabled': disabled,
-        'is-loading': loading,
-      })}
-      onClick={onClick}
-    >
-      {hasBadge && <Badge>{badge}</Badge>}
-      {hasIcon && <Icon type={icon} />}
-      {loading && <Loader small onDark={type === 'primary'} />}
-      {children}
-    </button>
+    React.cloneElement(
+      children,
+      {
+        className: cn('btn', `btn-${type}`, {
+          'btn-on-dark': onDark,
+          'btn-small': small,
+          'has-badge': hasBadge,
+          'has-icon': hasIcon || loading,
+          'is-active': active,
+          'is-disabled': disabled,
+          'is-loading': loading,
+        }),
+        onClick,
+      },
+      content,
+    )
   );
 };
 
@@ -68,7 +112,7 @@ Button.defaultProps = {
   onClick: () => {},
   onDark: false,
   small: false,
-  type: 'secondary',
+  type: 'primary',
 };
 
 export default Button;
