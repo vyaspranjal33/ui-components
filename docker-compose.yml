@@ -4,3 +4,12 @@ services:
   test:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     command: yarn ci-test
+  develop:
+    image: docker.sendgrid.net/sendgrid/ui-components:latest
+    build:
+      context: .
+    volumes:
+    - /opt/sendgrid/ui-components/node_modules
+    - .:/opt/sendgrid/ui-components
+    ports:
+    - "6006:6006"
