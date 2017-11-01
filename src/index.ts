@@ -16,4 +16,5 @@ export { Select } from './components/Select';
 export { Slider } from './components/Slider';
 export { Footer as SmallFooter } from './components/SmallFooter';
 export { Tab, Tabs } from './components/Tabs';
+export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';
