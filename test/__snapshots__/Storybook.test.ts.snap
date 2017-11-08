@@ -1836,7 +1836,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
       </button>
     </div>
   </div>
-  <footer
+  <p
     className="small is-center"
   >
     <span>
@@ -1856,7 +1856,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
     </a>
      
     on adding and updating contacts.
-  </footer>
+  </p>
 </div>
 `;
 
@@ -2714,7 +2714,7 @@ exports[`Storyshots Slider Slider without Label 1`] = `
 `;
 
 exports[`Storyshots Small Footer Footer Simple 1`] = `
-<footer
+<p
   className="small is-center"
 >
   <span>
@@ -2728,11 +2728,11 @@ exports[`Storyshots Small Footer Footer Simple 1`] = `
     What the what? 
   </strong>
   This component is just fantastic.
-</footer>
+</p>
 `;
 
 exports[`Storyshots Small Footer Need Help Footer Simple 1`] = `
-<footer
+<p
   className="small is-center"
 >
   <span>
@@ -2746,11 +2746,11 @@ exports[`Storyshots Small Footer Need Help Footer Simple 1`] = `
     Need help? 
   </strong>
   Get more info on adding and updating contacts.
-</footer>
+</p>
 `;
 
 exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
-<footer
+<p
   className="small is-center"
 >
   <span>
@@ -2770,7 +2770,7 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
   </a>
    
   on adding and updating contacts.
-</footer>
+</p>
 `;
 
 exports[`Storyshots Tabs Centered Tabs 1`] = `
