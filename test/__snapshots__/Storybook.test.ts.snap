@@ -2677,6 +2677,382 @@ exports[`Storyshots Select Standard Select 1`] = `
 </div>
 `;
 
+exports[`Storyshots Select2 Disabled 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-3"
+  >
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="standard-select"
+      >
+        Sender
+      </label>
+      <select
+        disabled={true}
+        id="standard-select"
+        multiple={false}
+        value="Jason"
+      >
+        <option
+          disabled={undefined}
+          value="Jason"
+        >
+          Jason
+        </option>
+        <option
+          disabled={undefined}
+          value="Evan"
+        >
+          Evan
+        </option>
+        <option
+          disabled={undefined}
+          value="Katrina"
+        >
+          Katrina
+        </option>
+      </select>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select2 Error 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-3"
+  >
+    <div
+      className="input-select-wrap is-error"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="standard-select"
+      >
+        Sender
+      </label>
+      <select
+        disabled={false}
+        id="standard-select"
+        multiple={false}
+        value="Jason"
+      >
+        <option
+          disabled={undefined}
+          value="Jason"
+        >
+          Jason
+        </option>
+        <option
+          disabled={undefined}
+          value="Evan"
+        >
+          Evan
+        </option>
+        <option
+          disabled={undefined}
+          value="Katrina"
+        >
+          Katrina
+        </option>
+      </select>
+      <span
+        className="input-info danger"
+      >
+        You must construct additional pylons.
+      </span>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select2 Multiple 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-3"
+  >
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="standard-select"
+      >
+        Sender
+      </label>
+      <select
+        disabled={false}
+        id="standard-select"
+        multiple={true}
+        value={
+          Array [
+            "Jason",
+            "Katrina",
+          ]
+        }
+      >
+        <option
+          disabled={undefined}
+          value="Jason"
+        >
+          Jason
+        </option>
+        <option
+          disabled={undefined}
+          value="Evan"
+        >
+          Evan
+        </option>
+        <option
+          disabled={undefined}
+          value="Katrina"
+        >
+          Katrina
+        </option>
+      </select>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select2 Required 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-3"
+  >
+    <div
+      className="input-select-wrap is-required"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="standard-select"
+      >
+        Sender
+      </label>
+      <select
+        disabled={false}
+        id="standard-select"
+        multiple={false}
+        value="Jason"
+      >
+        <option
+          disabled={undefined}
+          value="Jason"
+        >
+          Jason
+        </option>
+        <option
+          disabled={undefined}
+          value="Evan"
+        >
+          Evan
+        </option>
+        <option
+          disabled={undefined}
+          value="Katrina"
+        >
+          Katrina
+        </option>
+      </select>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select2 Standard with some options disabled 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-3"
+  >
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="standard-select"
+      >
+        Sender
+      </label>
+      <select
+        disabled={false}
+        id="standard-select"
+        multiple={false}
+        value="Jason"
+      >
+        <option
+          disabled={undefined}
+          value="styleguide-master"
+        >
+          Jason
+        </option>
+        <option
+          disabled={undefined}
+          value="Evan"
+        >
+          Evan
+        </option>
+        <option
+          disabled={undefined}
+          value="Katrina"
+        >
+          Katrina
+        </option>
+        <option
+          disabled={true}
+          value="Travis"
+        >
+          Travis
+        </option>
+        <option
+          disabled={true}
+          value="Tyler"
+        >
+          Tyler
+        </option>
+      </select>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select2 With option groups 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-3"
+  >
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="standard-select"
+      >
+        Sender
+      </label>
+      <select
+        disabled={false}
+        id="standard-select"
+        multiple={false}
+        value="Craig"
+      >
+        <optgroup
+          label="Designers"
+        >
+          <option
+            disabled={undefined}
+            value="Jason"
+          >
+            Jason
+          </option>
+          <option
+            disabled={undefined}
+            value="Evan"
+          >
+            Evan
+          </option>
+          <option
+            disabled={undefined}
+            value="Katrina"
+          >
+            Katrina
+          </option>
+        </optgroup>
+        <optgroup
+          label="Engineers"
+        >
+          <option
+            disabled={undefined}
+            value="Andrew"
+          >
+            Andrew
+          </option>
+          <option
+            disabled={undefined}
+            value="Chris"
+          >
+            Chris
+          </option>
+          <option
+            disabled={undefined}
+            value="Craig"
+          >
+            Craig
+          </option>
+        </optgroup>
+      </select>
+      
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select2 Without search 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-3"
+  >
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="standard-select"
+      >
+        Sender
+      </label>
+      <select
+        disabled={false}
+        id="standard-select"
+        multiple={false}
+        value="Jason"
+      >
+        <option
+          disabled={undefined}
+          value="Jason"
+        >
+          Jason
+        </option>
+        <option
+          disabled={undefined}
+          value="Evan"
+        >
+          Evan
+        </option>
+        <option
+          disabled={undefined}
+          value="Katrina"
+        >
+          Katrina
+        </option>
+      </select>
+      
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Slider Slider with Label 1`] = `
 <div
   className="input-range-wrap"

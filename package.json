@@ -19,12 +19,16 @@
   "license": "MIT",
   "dependencies": {
     "@types/classnames": "^2.2.3",
+    "@types/jquery": "^3.2.16",
     "@types/react-dom": "^16.0.0",
+    "@types/select2": "^4.0.41",
     "@types/storybook__addon-actions": "^3.0.1",
     "@types/storybook__react": "^3.0.5",
     "classnames": "^2.2.5",
+    "jquery": "^3.2.1",
     "react": "^16.0.0",
-    "react-dom": "^16.0.0"
+    "react-dom": "^16.0.0",
+    "select2": "^4.0.6-rc.0"
   },
   "devDependencies": {
     "@storybook/addon-storyshots": "^3.2.12",

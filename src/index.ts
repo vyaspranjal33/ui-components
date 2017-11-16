@@ -13,6 +13,7 @@ export { Loader } from './components/Loader';
 export { Meter } from './components/Meter';
 export { NumberedStep, NumberedSteps } from './components/NumberedSteps';
 export { Select } from './components/Select';
+export { Select2, Option, OptGroup } from './components/Select2';
 export { Slider } from './components/Slider';
 export { Footer as SmallFooter } from './components/SmallFooter';
 export { Tab, Tabs } from './components/Tabs';
