@@ -8,12 +8,13 @@ export interface RadioProps {
   onChange : (event : any) => void;
 }
 
-export const Radio : React.SFC < RadioProps > = ({checked, children: value, disabled, id, onChange}) => {
+export const Radio : React.SFC < RadioProps > = ({defaultChecked, checked, children: value, disabled, id, onChange}) => {
   id = id || `radio-${value.toLowerCase()}`;
   return (
     <div className="input-radio-wrap">
       <input
-        defaultChecked={checked}
+        defaultChecked={defaultChecked}
+        checked={checked}
         disabled={disabled}
         id={id}
         type="radio"
