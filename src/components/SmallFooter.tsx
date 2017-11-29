@@ -18,7 +18,7 @@ export const Footer: React.SFC<FooterProps> = ({
   icon,
   header,
 }) => (
-  <footer className="small is-center">
+  <p className="small is-center">
     {
       icon &&
       <span>
@@ -33,7 +33,7 @@ export const Footer: React.SFC<FooterProps> = ({
       </strong>
     }
     {children}
-  </footer>
+  </p>
 );
 
 export default Footer;
