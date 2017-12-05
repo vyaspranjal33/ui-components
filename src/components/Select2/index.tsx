@@ -1,6 +1,6 @@
 import * as cn from 'classnames';
-import * as React from 'react';
 import * as $ from 'jquery';
+import * as React from 'react';
 import 'select2';
 
 import { OptGroup, Option } from './Option';
@@ -22,55 +22,55 @@ export interface Select2Props {
 }
 
 export class Select2 extends React.Component<Select2Props> {
-  private select: any;
-
   public static defaultProps = {
     disabled: false,
-    required: false,
+    error: '',
     multiple: false,
     noSearch: false,
-    error: '',
     placeholder: '',
+    required: false,
     width: '100%',
   };
 
-  componentDidMount() {
+  private select: any;
+
+  public componentDidMount() {
     const { placeholder, width } = this.props;
 
     $(this.select).select2({
+      minimumResultsForSearch: this.props.noSearch ? -1 : undefined,
       placeholder,
       width,
-      minimumResultsForSearch: this.props.noSearch ? -1 : undefined,
     })
     .focus(() => $(this.select).select2('open'))
     .on('change', (e: JQuery.Event) => this.props.onChange(e, $(this.select).val()));
   }
 
-  componentWillUnmount() {
+  public componentWillUnmount() {
     $(this.select).select2('destroy');
   }
 
   public render() {
     const {
-      label,
-      id,
       error,
+      id,
+      label,
     } = this.props;
 
     return (
       <div
         className={cn('input-select-wrap', {
-          'is-required': this.props.required,
           'is-error': !!error,
+          'is-required': this.props.required,
         })}
       >
         {label && <label className="input-select-label" htmlFor={id}>{label}</label>}
         <select
-          id={id}
-          ref={c => this.select = c}
-          value={this.props.value}
           disabled={this.props.disabled}
+          id={id}
           multiple={this.props.multiple}
+          ref={(c) => this.select = c}
+          value={this.props.value}
         >
           {this.props.children}
         </select>

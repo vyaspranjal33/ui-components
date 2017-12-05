@@ -12,19 +12,22 @@ export const OptGroup: React.SFC<OptGroupProps> = ({ label, children }) => (
 );
 
 export interface OptionProps {
+  children?: string | number;
   disabled?: boolean;
   value?: string | number;
-  children?: string | number;
 }
 
 export const Option: React.SFC<OptionProps> = ({ value, children, disabled }) => {
-  if (!value && !children) return <option />;
+  if (!value && !children) {
+    return <option />;
+  }
 
   return (
     <option
       disabled={disabled}
-      value={value || children}>
-        {children}
+      value={value || children}
+    >
+      {children}
     </option>
   );
 };

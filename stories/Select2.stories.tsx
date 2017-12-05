@@ -2,14 +2,11 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 
-import { Option, OptGroup, Select2 } from '../src/components/Select2';
+import { OptGroup, Option, Select2 } from '../src/components/Select2';
 
 const stories = storiesOf('Select2', module);
 
-const onChange = (e: JQuery.Event, val: string[] | string | number[] | number) => {
-  console && console.log('Select2 change event published, value: ', val);
-};
-
+const onChange = (e: JQuery.Event, val: string[] | string | number[] | number) => {};
 
 const Wrapper = (props: any) => (
   <div className="row">
