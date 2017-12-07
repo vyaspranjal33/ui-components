@@ -1,5 +1,5 @@
 {
-  "name": "ui-components",
+  "name": "@sendgrid/ui-components",
   "version": "0.0.2",
   "description": "Resuable UI components for Sendgrid's applications.",
   "main": "dist/index.js",
