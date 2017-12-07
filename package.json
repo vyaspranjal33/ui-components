@@ -9,7 +9,7 @@
     "lint": "tslint --project ./tslint.json",
     "lint-fix": "tslint --project ./tslint.json --fix",
     "test": "jest --coverage",
-    "ci-test": "yarn lint && yarn test && yarn build-storybook",
+    "ci-test": "yarn lint && yarn test",
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook",
     "precommit": "yarn test"
