@@ -1,5 +1,6 @@
-import * as React from 'react';
+import React from 'react';
 import { IconType } from '../types/icons';
+import cn from '../utilities/classnames';
 
 export interface IconProps {
   type: IconType;

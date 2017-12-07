@@ -1,6 +1,6 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
+import cn from '../../utilities/classnames';
 import Option from './Option';
 export { Option };
 

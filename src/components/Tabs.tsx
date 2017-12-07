@@ -1,5 +1,5 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
+import cn from '../utilities/classnames';
 import findActiveIndex from '../utilities/find-active-index';
 
 const { map } = React.Children;

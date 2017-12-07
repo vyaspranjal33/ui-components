@@ -1,5 +1,5 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
+import cn from '../utilities/classnames';
 import Badge from './Badge';
 import { Button, ButtonProps } from './Button';
 import Icon from './Icon';
