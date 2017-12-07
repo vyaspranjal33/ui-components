@@ -1,6 +1,6 @@
 {
   "name": "@sendgrid/ui-components",
-  "version": "0.0.4",
+  "version": "0.0.3",
   "description": "Resuable UI components for Sendgrid's applications.",
   "main": "dist/index.js",
   "scripts": {
@@ -12,7 +12,8 @@
     "ci-test": "yarn lint && yarn test",
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook",
-    "precommit": "yarn test"
+    "precommit": "yarn test",
+    "prepublish": "yarn build"
   },
   "repository": "https://github.com/sendgrid/ui-components.git",
   "author": "SendGrid <careers@sendgrid.com>",
