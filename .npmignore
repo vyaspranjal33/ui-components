@@ -1,0 +1,6 @@
+.storybook
+coverage
+src
+stories
+test
+storybook-static
