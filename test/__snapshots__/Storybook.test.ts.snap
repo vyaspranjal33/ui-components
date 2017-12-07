@@ -2341,6 +2341,90 @@ exports[`Storyshots Progress Vertical Progress 1`] = `
 </section>
 `;
 
+exports[`Storyshots Radio Checked Radio 1`] = `
+<div
+  className="input-radio-wrap"
+>
+  <input
+    defaultChecked={true}
+    disabled={undefined}
+    id="radio-transactional"
+    onChange={[Function]}
+    type="radio"
+    value="Transactional"
+  />
+  <label
+    className="input-radio-label"
+    htmlFor="radio-transactional"
+  >
+    Transactional
+  </label>
+</div>
+`;
+
+exports[`Storyshots Radio Checked and Disabled Radio 1`] = `
+<div
+  className="input-radio-wrap"
+>
+  <input
+    defaultChecked={true}
+    disabled={true}
+    id="radio-transactional"
+    onChange={[Function]}
+    type="radio"
+    value="Transactional"
+  />
+  <label
+    className="input-radio-label"
+    htmlFor="radio-transactional"
+  >
+    Transactional
+  </label>
+</div>
+`;
+
+exports[`Storyshots Radio Disabled Radio 1`] = `
+<div
+  className="input-radio-wrap"
+>
+  <input
+    defaultChecked={undefined}
+    disabled={true}
+    id="radio-transactional"
+    onChange={[Function]}
+    type="radio"
+    value="Transactional"
+  />
+  <label
+    className="input-radio-label"
+    htmlFor="radio-transactional"
+  >
+    Transactional
+  </label>
+</div>
+`;
+
+exports[`Storyshots Radio Standard Radio 1`] = `
+<div
+  className="input-radio-wrap"
+>
+  <input
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="radio-transactional"
+    onChange={[Function]}
+    type="radio"
+    value="Transactional"
+  />
+  <label
+    className="input-radio-label"
+    htmlFor="radio-transactional"
+  >
+    Transactional
+  </label>
+</div>
+`;
+
 exports[`Storyshots Select Disabled Select 1`] = `
 <div
   className="input-select-wrap is-disabled"
