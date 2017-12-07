@@ -33,7 +33,7 @@ export class StatefulSlider extends React.Component<
   { value: number }
 > {
   constructor(props: SliderProps) {
-    super();
+    super(props);
     this.state = {
       value: props.value,
     };

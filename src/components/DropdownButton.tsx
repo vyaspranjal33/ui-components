@@ -22,8 +22,8 @@ export class DropdownButton extends React.Component<
 > {
   public static defaultProps = Button.defaultProps;
 
-  constructor() {
-    super();
+  constructor(props: DropdownButtonProps) {
+    super(props);
 
     this.state = {
       active: false,

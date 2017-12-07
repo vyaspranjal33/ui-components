@@ -38,7 +38,7 @@ export class StatefulToggleButtons extends React.Component<
   ToggleButtonsState
 > {
   constructor(props: ToggleButtonsProps) {
-    super();
+    super(props);
 
     const activeIndex = findActiveIndex(props.children);
 

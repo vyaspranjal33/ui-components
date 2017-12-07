@@ -69,7 +69,7 @@ export const Tabs: React.SFC<any> = ({
 
 export class StatefulTabs extends React.Component<TabsProps, any> {
   constructor(props: TabsProps) {
-    super();
+    super(props);
 
     const activeIndex = findActiveIndex(props.children);
 

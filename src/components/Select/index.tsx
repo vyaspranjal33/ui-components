@@ -21,7 +21,7 @@ export interface SelectState {
 
 export class Select extends React.Component<SelectProps, SelectState> {
   constructor(props: SelectProps) {
-    super();
+    super(props);
 
     this.state = {
       focus: false,
