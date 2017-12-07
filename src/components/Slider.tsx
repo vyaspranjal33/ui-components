@@ -1,4 +1,4 @@
-import * as React from 'react';
+import React from 'react';
 
 export interface SliderProps {
   value: number;
@@ -32,15 +32,11 @@ export class StatefulSlider extends React.Component<
   SliderProps,
   { value: number }
 > {
-  constructor(props: SliderProps) {
-    super();
-    this.state = {
-      value: props.value,
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
+  public state = {
+    value: this.props.value,
+  };
 
-  public handleChange(event: any) {
+  public handleChange = (event: any) => {
     const value = event.target.value;
     this.setState({ value }, () => {
       this.props.onChange(event, value);

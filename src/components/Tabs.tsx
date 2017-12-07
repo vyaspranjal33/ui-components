@@ -1,5 +1,5 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
+import cn from '../utilities/classnames';
 import findActiveIndex from '../utilities/find-active-index';
 
 const { map } = React.Children;
@@ -68,19 +68,11 @@ export const Tabs: React.SFC<any> = ({
 };
 
 export class StatefulTabs extends React.Component<TabsProps, any> {
-  constructor(props: TabsProps) {
-    super();
+  public state = {
+    activeIndex: findActiveIndex(this.props.children),
+  };
 
-    const activeIndex = findActiveIndex(props.children);
-
-    this.state = {
-      activeIndex,
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  public handleChange(event: any, label: string, index: number) {
+  public handleChange = (event: any, label: string, index: number) => {
     const { onChange: handleChange } = this.props;
     this.setState(
       {

@@ -1,6 +1,6 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
 
+import cn from '../../utilities/classnames';
 import Option from './Option';
 export { Option };
 
@@ -20,25 +20,18 @@ export interface SelectState {
 }
 
 export class Select extends React.Component<SelectProps, SelectState> {
-  constructor(props: SelectProps) {
-    super();
+  public state = {
+    focus: false,
+    open: false,
+  };
 
-    this.state = {
-      focus: false,
-      open: false,
-    };
-
-    this.openMenu = this.openMenu.bind(this);
-    this.removeFocus = this.removeFocus.bind(this);
-  }
-
-  public openMenu() {
+  public openMenu = () => {
     this.setState({
       open: true,
     });
   }
 
-  public removeFocus() {
+  public removeFocus = () => {
     this.setState({
       focus: false,
       open: false,

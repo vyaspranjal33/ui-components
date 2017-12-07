@@ -1,6 +1,6 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
 import { IconType } from '../types/icons';
+import cn from '../utilities/classnames';
 import Icon from './Icon';
 
 export type AlertType = 'success' | 'warning' | 'danger';

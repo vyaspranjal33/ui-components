@@ -1,5 +1,5 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
+import cn from '../utilities/classnames';
 import Badge from './Badge';
 import { Button, ButtonProps } from './Button';
 import Icon from './Icon';
@@ -22,17 +22,11 @@ export class DropdownButton extends React.Component<
 > {
   public static defaultProps = Button.defaultProps;
 
-  constructor() {
-    super();
+  public state = {
+    active: false,
+  };
 
-    this.state = {
-      active: false,
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  public handleClick() {
+  public handleClick = () => {
     const { active } = this.state;
     this.setState({ active: !active });
   }

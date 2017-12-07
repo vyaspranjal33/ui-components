@@ -1,5 +1,5 @@
-import * as cn from 'classnames';
-import * as React from 'react';
+import React from 'react';
+import cn from '../utilities/classnames';
 
 export interface MeterProps {
   title: string;
