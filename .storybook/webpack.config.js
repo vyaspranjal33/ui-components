@@ -5,10 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = function(config, env) {
   config = storybookBaseConfig(config, env);
 
-  config.externals = {
-    'react': 'React'
-  },
-
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: /node_modules/,
