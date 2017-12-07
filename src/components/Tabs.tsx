@@ -68,19 +68,11 @@ export const Tabs: React.SFC<any> = ({
 };
 
 export class StatefulTabs extends React.Component<TabsProps, any> {
-  constructor(props: TabsProps) {
-    super();
+  public state = {
+    activeIndex: findActiveIndex(this.props.children),
+  };
 
-    const activeIndex = findActiveIndex(props.children);
-
-    this.state = {
-      activeIndex,
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  public handleChange(event: any, label: string, index: number) {
+  public handleChange = (event: any, label: string, index: number) => {
     const { onChange: handleChange } = this.props;
     this.setState(
       {
@@ -90,7 +82,7 @@ export class StatefulTabs extends React.Component<TabsProps, any> {
         handleChange(event, label, index);
       },
     );
-  }
+  };
 
   public render() {
     const { activeIndex } = this.state;

@@ -22,17 +22,11 @@ export class DropdownButton extends React.Component<
 > {
   public static defaultProps = Button.defaultProps;
 
-  constructor() {
-    super();
+  public state = {
+    active: false,
+  };
 
-    this.state = {
-      active: false,
-    };
-
-    this.handleClick = this.handleClick.bind(this);
-  }
-
-  public handleClick() {
+  public handleClick = () => {
     const { active } = this.state;
     this.setState({ active: !active });
   }

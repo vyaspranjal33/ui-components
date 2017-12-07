@@ -38,17 +38,9 @@ export class StatefulToggleButtons extends React.Component<
   ToggleButtonsProps,
   ToggleButtonsState
 > {
-  constructor(props: ToggleButtonsProps) {
-    super();
-
-    const activeIndex = findActiveIndex(props.children);
-
-    this.state = {
-      activeIndex,
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
+  public state = {
+    activeIndex: findActiveIndex(this.props.children),
+  };
 
   public render() {
     const { activeIndex } = this.state;

@@ -20,25 +20,18 @@ export interface SelectState {
 }
 
 export class Select extends React.Component<SelectProps, SelectState> {
-  constructor(props: SelectProps) {
-    super();
+  state = {
+    focus: false,
+    open: false,
+  };
 
-    this.state = {
-      focus: false,
-      open: false,
-    };
-
-    this.openMenu = this.openMenu.bind(this);
-    this.removeFocus = this.removeFocus.bind(this);
-  }
-
-  public openMenu() {
+  public openMenu = () => {
     this.setState({
       open: true,
     });
   }
 
-  public removeFocus() {
+  public removeFocus = () => {
     this.setState({
       focus: false,
       open: false,
