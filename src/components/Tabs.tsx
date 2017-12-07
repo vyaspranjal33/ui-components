@@ -82,7 +82,7 @@ export class StatefulTabs extends React.Component<TabsProps, any> {
         handleChange(event, label, index);
       },
     );
-  };
+  }
 
   public render() {
     const { activeIndex } = this.state;

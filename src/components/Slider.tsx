@@ -41,7 +41,7 @@ export class StatefulSlider extends React.Component<
     this.setState({ value }, () => {
       this.props.onChange(event, value);
     });
-  };
+  }
 
   public render() {
     const { onChange } = this.props;

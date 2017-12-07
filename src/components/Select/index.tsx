@@ -20,7 +20,7 @@ export interface SelectState {
 }
 
 export class Select extends React.Component<SelectProps, SelectState> {
-  state = {
+  public state = {
     focus: false,
     open: false,
   };
