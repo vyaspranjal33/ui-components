@@ -3,13 +3,15 @@ import * as React from 'react';
 export interface RadioProps {
   checked?: boolean;
   children: string;
+  value?: string;
   disabled?: boolean;
   id?: string;
   name?: string;
   onChange: (event: any) => void;
 }
 
-export const Radio: React.SFC < RadioProps > = ({checked, children: value, disabled, id, name, onChange}) => {
+export const Radio: React.SFC < RadioProps > = ({checked, children, value, disabled, id, name, onChange}) => {
+  value = value || children;
   id = id || `radio-${value.toLowerCase()}`;
   return (
     <div className="input-radio-wrap">
@@ -23,7 +25,7 @@ export const Radio: React.SFC < RadioProps > = ({checked, children: value, disab
         onChange={onChange}
       />
       <label className="input-radio-label" htmlFor={id}>
-        {value}
+        {children}
       </label>
     </div>
   );

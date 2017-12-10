@@ -8,11 +8,11 @@ const stories = storiesOf('Radio', module);
 const onChange = action('Radio Changed');
 
 stories.add('Standard Radio', () => (
-  <Radio onChange={onChange}>Transactional</Radio>
+  <Radio onChange={onChange} value="SYSTEM_TX_VAL">Transactional</Radio>
 ));
 
 stories.add('Checked Radio', () => (
-  <Radio checked onChange={onChange}>
+  <Radio checked onChange={onChange} id="cust-id-1">
     Transactional
   </Radio>
 ));

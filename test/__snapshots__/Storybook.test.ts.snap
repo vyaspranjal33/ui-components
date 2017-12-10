@@ -2348,7 +2348,7 @@ exports[`Storyshots Radio Checked Radio 1`] = `
   <input
     defaultChecked={true}
     disabled={undefined}
-    id="radio-transactional"
+    id="cust-id-1"
     name={undefined}
     onChange={[Function]}
     type="radio"
@@ -2356,7 +2356,7 @@ exports[`Storyshots Radio Checked Radio 1`] = `
   />
   <label
     className="input-radio-label"
-    htmlFor="radio-transactional"
+    htmlFor="cust-id-1"
   >
     Transactional
   </label>
@@ -2457,15 +2457,15 @@ exports[`Storyshots Radio Standard Radio 1`] = `
   <input
     defaultChecked={undefined}
     disabled={undefined}
-    id="radio-transactional"
+    id="radio-system_tx_val"
     name={undefined}
     onChange={[Function]}
     type="radio"
-    value="Transactional"
+    value="SYSTEM_TX_VAL"
   />
   <label
     className="input-radio-label"
-    htmlFor="radio-transactional"
+    htmlFor="radio-system_tx_val"
   >
     Transactional
   </label>
