@@ -47,3 +47,6 @@ jspm_packages
 
 # vim swap files
 *.swp
+
+storybook-static
+todo
