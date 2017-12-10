@@ -2346,7 +2346,8 @@ exports[`Storyshots Radio Checked Radio 1`] = `
   className="input-radio-wrap"
 >
   <input
-    defaultChecked={true}
+    checked={true}
+    defaultChecked={undefined}
     disabled={undefined}
     id="cust-id-1"
     name={undefined}
@@ -2368,7 +2369,8 @@ exports[`Storyshots Radio Checked and Disabled Radio 1`] = `
   className="input-radio-wrap"
 >
   <input
-    defaultChecked={true}
+    checked={true}
+    defaultChecked={undefined}
     disabled={true}
     id="radio-transactional"
     name={undefined}
@@ -2390,6 +2392,7 @@ exports[`Storyshots Radio Disabled Radio 1`] = `
   className="input-radio-wrap"
 >
   <input
+    checked={false}
     defaultChecked={undefined}
     disabled={true}
     id="radio-transactional"
@@ -2409,10 +2412,14 @@ exports[`Storyshots Radio Disabled Radio 1`] = `
 
 exports[`Storyshots Radio Multiple radio btns 1`] = `
 <div>
+  <p>
+    Non stateful example, checked is controlled by props only
+  </p>
   <div
     className="input-radio-wrap"
   >
     <input
+      checked={true}
       defaultChecked={undefined}
       disabled={undefined}
       id="radio-choice 1"
@@ -2432,6 +2439,7 @@ exports[`Storyshots Radio Multiple radio btns 1`] = `
     className="input-radio-wrap"
   >
     <input
+      checked={false}
       defaultChecked={undefined}
       disabled={undefined}
       id="radio-choice 2"
@@ -2455,6 +2463,7 @@ exports[`Storyshots Radio Standard Radio 1`] = `
   className="input-radio-wrap"
 >
   <input
+    checked={false}
     defaultChecked={undefined}
     disabled={undefined}
     id="radio-system_tx_val"
