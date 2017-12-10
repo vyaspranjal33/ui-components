@@ -310,6 +310,57 @@ exports[`Storyshots Badge wild-strawberry 1`] = `
 </span>
 `;
 
+exports[`Storyshots Breadcrumb Breadcrumb with single item 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li>
+    <a
+      href="#"
+    >
+      Contacts
+    </a>
+  </li>
+  <li />
+</ol>
+`;
+
+exports[`Storyshots Breadcrumb Breadcrumb with two items 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li>
+    <a
+      href="#"
+    >
+      Contacts
+    </a>
+  </li>
+  <li>
+    <a
+      href="#"
+    >
+      Upload CSV
+    </a>
+  </li>
+  <li />
+</ol>
+`;
+
+exports[`Storyshots Breadcrumb Breadcrumb without trailing slash 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li>
+    <a
+      href="#"
+    >
+      Contacts
+    </a>
+  </li>
+</ol>
+`;
+
 exports[`Storyshots Button Danger Button (Disabled) 1`] = `
 <button
   className="btn btn-danger is-disabled"

@@ -1,6 +1,7 @@
 export { Action, Actions } from './components/Actions';
 export { Alert } from './components/Alert';
 export { Badge } from './components/Badge';
+export { Breadcrumb } from './components/Breadcrumb';
 export { Button, Buttonized } from './components/Button';
 export { ButtonList } from './components/ButtonList';
 export { Card } from './components/Card';
