@@ -25,7 +25,7 @@ stories.add('Segment terms', () => (
       </SegmentTerm>
     </SegmentTermWrap>
     <SegmentTermWrap>
-      <SegmentTermTitle label="Or" justifyRight />
+      <SegmentTermTitle label="Or" justify="right" />
       <SegmentTerm>
         <SegmentTermDescription
           label="Every time a contact is added to"
