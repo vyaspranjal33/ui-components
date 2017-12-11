@@ -2,15 +2,20 @@ import React from 'react';
 
 export interface BreadcrumbProps {
   children:
-    | Array<React.ReactElement<any>>
-    | React.ReactElement<any>;
+    | Array<React.ReactElement<ChildProps>>
+    | React.ReactElement<ChildProps>;
   withoutTrailingSlash?: boolean;
 }
 
+interface ChildProps {
+  to?: string;
+  href?: string;
+}
+
 const { map } = React.Children;
-const mapper = (children: Array<React.ReactElement<any>> | React.ReactElement<any>) => (
-  map(children, (child: React.ReactElement<any>, i: number) => (
-    child && <li key={i}><child.type {...child.props} /></li>
+const mapper = (children: Array<React.ReactElement<ChildProps>> | React.ReactElement<ChildProps>) => (
+  map(children, (child: React.ReactElement<ChildProps>, i: number) => (
+    child && <li key={child.props.to || child.props.href}><child.type {...child.props} /></li>
   ))
 );
 
