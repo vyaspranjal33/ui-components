@@ -1,42 +1,68 @@
-import * as React from 'react';
+import React, { Fragment } from 'react';
 
-export interface RadioProps {
-  defaultChecked?: boolean;
-  checked: boolean;
-  children: string;
-  value?: string;
-  disabled?: boolean;
-  id?: string;
-  name?: string;
+export interface RadioGroupProps {
+  children: Array<React.ReactElement<RadioProps>>;
+  name: string;
   onChange: (event: any) => void;
 }
 
-export const Radio: React.SFC < RadioProps > = ({
-  defaultChecked,
+const { map } = React.Children;
+const radioGroupMapper = (props: RadioGroupProps) => (
+  map(props.children, (child: React.ReactElement<RadioProps> | null) => (
+    child && (
+      <child.type
+        key={child.props.value}
+        name={props.name}
+        onChange={props.onChange}
+        {...child.props}
+      />
+    )
+  ))
+);
+
+export const RadioGroup: React.SFC <RadioGroupProps> = (props: RadioGroupProps) => (
+  <Fragment>
+    {radioGroupMapper(props)}
+  </Fragment>
+);
+
+export interface RadioProps {
+  checked: boolean;
+  defaultChecked?: boolean;
+  disabled?: boolean;
+  id?: string;
+  label: string;
+  name?: string;
+  onChange?: (event: any) => void;
+  value: string;
+}
+
+export const Radio: React.SFC <RadioProps> = ({
   checked,
   children,
-  value,
+  defaultChecked,
   disabled,
   id,
+  label,
   name,
   onChange,
+  value,
 }) => {
-  value = value || children;
   id = id || `radio-${value.toLowerCase()}`;
   return (
     <div className="input-radio-wrap">
       <input
-        defaultChecked={defaultChecked}
         checked={checked}
+        defaultChecked={defaultChecked}
         disabled={disabled}
         id={id}
         name={name}
+        onChange={onChange}
         type="radio"
         value={value}
-        onChange={onChange}
       />
       <label className="input-radio-label" htmlFor={id}>
-        {children}
+        {label}
       </label>
     </div>
   );

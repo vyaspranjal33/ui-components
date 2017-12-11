@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 
-import { Radio, StatefulRadio } from '../src/components/Radio';
+import { Radio, RadioGroup, StatefulRadio } from '../src/components/Radio';
 
 const stories = storiesOf('Radio', module);
 const onChange = action('Radio Changed');
@@ -12,33 +12,46 @@ stories.add('Standard Radio', () => (
     onChange={onChange}
     value="SYSTEM_TX_VAL"
     checked={false}
-  >
-    Transactional
-  </StatefulRadio>
+    label="Transactional"
+    id="cust-type"
+  />
 ));
 
 stories.add('Checked Radio', () => (
-  <StatefulRadio checked onChange={onChange} id="cust-id-1">
-    Transactional
-  </StatefulRadio>
+  <StatefulRadio
+    checked
+    onChange={onChange}
+    id="cust-id-1"
+    label="Jim"
+    value="jim-id-7"
+  />
 ));
 
 stories.add('Disabled Radio', () => (
-  <StatefulRadio disabled checked={false} onChange={onChange}>
-    Transactional
-  </StatefulRadio>
+  <StatefulRadio
+    disabled
+    checked={false}
+    onChange={onChange}
+    label="disabled Jim"
+    value="disabled-jim-id-7"
+    id="disabled-cust-1"
+  />
 ));
 
 stories.add('Checked and Disabled Radio', () => (
-  <StatefulRadio checked disabled onChange={onChange}>
-    Transactional
-  </StatefulRadio>
+  <StatefulRadio
+    checked
+    disabled
+    onChange={onChange}
+    id="bill"
+    label="Bill"
+    value="bill-id-1"
+  />
 ));
 
 stories.add('Multiple radio btns', () => (
-  <div>
-    <p>Non stateful example, checked is controlled by props only</p>
-    <Radio name="demo" onChange={onChange} checked>Choice 1</Radio>
-    <Radio name="demo" onChange={onChange} checked={false}>Choice 2</Radio>
-  </div>
+  <RadioGroup name="radio-grp-1" onChange={onChange}>
+    <Radio checked label="Choice 1" value="choice-1" />
+    <Radio checked={false} label="Choice 2" value="choice-2" />
+  </RadioGroup>
 ));
