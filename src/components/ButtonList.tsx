@@ -12,7 +12,7 @@ export const ButtonList: React.SFC<ButtonListProps> = ({ children, onDark }) => 
   return (
     <div className="btn-list">
       {map(children, (button: React.ReactElement<any>) => {
-        return React.cloneElement(button, { onDark });
+        return button && React.cloneElement(button, { onDark });
       })}
     </div>
   );

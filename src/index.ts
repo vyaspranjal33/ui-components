@@ -15,6 +15,13 @@ export { NumberedStep, NumberedSteps } from './components/NumberedSteps';
 export { Select } from './components/Select';
 export { Slider } from './components/Slider';
 export { Footer as SmallFooter } from './components/SmallFooter';
+export {
+  SegmentTerm,
+  SegmentTermControls,
+  SegmentTermDescription,
+  SegmentTermTitle,
+  SegmentTermWrap,
+} from './components/SegmentTerm';
 export { Tab, Tabs } from './components/Tabs';
 export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';
