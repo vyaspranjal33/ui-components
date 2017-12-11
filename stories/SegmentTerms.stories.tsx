@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import {
   SegmentTerm,
@@ -13,7 +13,7 @@ import {
 const stories = storiesOf('Segment Term', module);
 
 stories.add('Segment terms', () => (
-  <div>
+  <Fragment>
     <SegmentTermWrap>
       <SegmentTermTitle label="Entry Criteria" smallLabel="=" />
       <SegmentTerm hasSeparator>
@@ -34,7 +34,7 @@ stories.add('Segment terms', () => (
         <SegmentTermControls isEditable />
       </SegmentTerm>
     </SegmentTermWrap>
-  </div>
+  </Fragment>
 ));
 
 stories.add('Segment terms which cannot be edited', () => (

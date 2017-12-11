@@ -20,17 +20,17 @@ export interface SegmentTermProps {
   children: React.ReactNode;
   hasSeparator?: boolean;
   isEditing?: boolean;
-  onCreateChip?: (e: any) => void;
+  onCreate?: (e: any) => void;
 }
 
-export const SegmentTerm: React.SFC<SegmentTermProps> = ({ children, hasSeparator, isEditing, onCreateChip }) => (
+export const SegmentTerm: React.SFC<SegmentTermProps> = ({ children, hasSeparator, isEditing, onCreate }) => (
   <span className={cn('segment-term', { 'has-separator': hasSeparator })}>
     <section className={cn('segment-term-inputs', { 'is-editable': isEditing })}>
       {children}
     </section>
     {
       !hasSeparator &&
-        <Icon type="create" onClick={isEditing ? undefined : onCreateChip} />
+        <Icon type="create" onClick={isEditing ? undefined : onCreate} />
     }
   </span>
 );

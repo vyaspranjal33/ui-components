@@ -2426,7 +2426,7 @@ exports[`Storyshots Radio Standard Radio 1`] = `
 `;
 
 exports[`Storyshots Segment Term Segment terms 1`] = `
-<div>
+Array [
   <section
     className="segment-term-wrap"
   >
@@ -2462,7 +2462,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         />
       </section>
     </span>
-  </section>
+  </section>,
   <section
     className="segment-term-wrap"
   >
@@ -2500,8 +2500,8 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         onClick={undefined}
       />
     </span>
-  </section>
-</div>
+  </section>,
+]
 `;
 
 exports[`Storyshots Segment Term Segment terms which cannot be edited 1`] = `
