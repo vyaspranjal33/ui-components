@@ -8,17 +8,17 @@ export type SegmentTermTitleJustify =
 export interface SegmentTermTitleProps {
   justify?: SegmentTermTitleJustify;
   label: string;
-  smallLabel?: string;
+  secondaryLabel?: string;
 }
 
-export const SegmentTermTitle: React.SFC<SegmentTermTitleProps> = ({ label, justify, smallLabel }) => (
+export const SegmentTermTitle: React.SFC<SegmentTermTitleProps> = ({ label, justify, secondaryLabel }) => (
   <span className="segment-term-title">
     <strong className={cn({ 'segment-terms-or': justify === 'right' })}>{label}</strong>
-    {smallLabel && <small>{smallLabel}</small>}
+    {secondaryLabel && <small>{secondaryLabel}</small>}
   </span>
 );
 
 SegmentTermTitle.defaultProps = {
   justify: 'left',
-  smallLabel: '',
+  secondaryLabel: '',
 };

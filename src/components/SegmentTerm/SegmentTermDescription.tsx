@@ -2,15 +2,15 @@ import React from 'react';
 
 export interface SegmentTermDescription {
   label: string;
-  strongText: string;
+  queryName: string;
 }
 
 export const SegmentTermDescription: React.SFC<SegmentTermDescription> = ({
   label,
-  strongText,
+  queryName,
 }) => (
   <span className="segment-term-description">
     {`${label} `}
-    <strong>{strongText}</strong>
+    <strong>{queryName}</strong>
   </span>
 );
