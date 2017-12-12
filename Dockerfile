@@ -1,6 +1,6 @@
 FROM node:8
 
-ADD ./package.json ./yarn.lock /opt/sendgrid/ui-components/
+ADD ./package.json ./yarn.lock ./.npmrc /opt/sendgrid/ui-components/
 
 WORKDIR /opt/sendgrid/ui-components
 RUN yarn install
