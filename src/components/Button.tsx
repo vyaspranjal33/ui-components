@@ -22,7 +22,7 @@ interface AllButtonProps {
 }
 
 export interface ButtonProps extends AllButtonProps {
-  children?: string;
+  children?: string | React.ReactNode;
 }
 
 export interface ButtonizedProps extends AllButtonProps {

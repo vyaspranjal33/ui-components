@@ -310,6 +310,57 @@ exports[`Storyshots Badge wild-strawberry 1`] = `
 </span>
 `;
 
+exports[`Storyshots Breadcrumb Breadcrumb with single item 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li>
+    <a
+      href="#"
+    >
+      Contacts
+    </a>
+  </li>
+  <li />
+</ol>
+`;
+
+exports[`Storyshots Breadcrumb Breadcrumb with two items 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li>
+    <a
+      href="#"
+    >
+      Contacts
+    </a>
+  </li>
+  <li>
+    <a
+      href="#"
+    >
+      Upload CSV
+    </a>
+  </li>
+  <li />
+</ol>
+`;
+
+exports[`Storyshots Breadcrumb Breadcrumb without trailing slash 1`] = `
+<ol
+  className="breadcrumb"
+>
+  <li>
+    <a
+      href="#"
+    >
+      Contacts
+    </a>
+  </li>
+</ol>
+`;
+
 exports[`Storyshots Button Danger Button (Disabled) 1`] = `
 <button
   className="btn btn-danger is-disabled"
@@ -2476,6 +2527,277 @@ exports[`Storyshots Radio Standard Radio 1`] = `
     Transactional
   </label>
 </div>
+`;
+
+exports[`Storyshots Segment Term Segment terms 1`] = `
+Array [
+  <section
+    className="segment-term-wrap"
+  >
+    <span
+      className="segment-term-title"
+    >
+      <strong
+        className=""
+      >
+        Entry Criteria
+      </strong>
+      <small>
+        =
+      </small>
+    </span>
+    <span
+      className="segment-term has-separator"
+    >
+      <section
+        className="segment-term-inputs"
+      >
+        <span
+          className="segment-term-description"
+        >
+          The first time a contact is added to 
+          <strong>
+            People in Los Angeles
+          </strong>
+        </span>
+        <i
+          className="sg-icon sg-icon-pencil segment-term-inputs-edit"
+          onClick={undefined}
+        />
+      </section>
+    </span>
+  </section>,
+  <section
+    className="segment-term-wrap"
+  >
+    <span
+      className="segment-term-title"
+    >
+      <strong
+        className="segment-terms-or"
+      >
+        Or
+      </strong>
+      
+    </span>
+    <span
+      className="segment-term"
+    >
+      <section
+        className="segment-term-inputs"
+      >
+        <span
+          className="segment-term-description"
+        >
+          Every time a contact is added to 
+          <strong>
+            People in Denver
+          </strong>
+        </span>
+        <i
+          className="sg-icon sg-icon-pencil segment-term-inputs-edit"
+          onClick={undefined}
+        />
+      </section>
+      <i
+        className="sg-icon sg-icon-create"
+        onClick={undefined}
+      />
+    </span>
+  </section>,
+]
+`;
+
+exports[`Storyshots Segment Term Segment terms which cannot be edited 1`] = `
+<section
+  className="segment-term-wrap"
+>
+  <span
+    className="segment-term-title"
+  >
+    <strong
+      className=""
+    >
+      Entry Criteria
+    </strong>
+    <small>
+      =
+    </small>
+  </span>
+  <span
+    className="segment-term"
+  >
+    <section
+      className="segment-term-inputs"
+    >
+      <span
+        className="segment-term-description"
+      >
+        The first time a contact is added to 
+        <strong>
+          People in Los Angeles
+        </strong>
+      </span>
+    </section>
+    <i
+      className="sg-icon sg-icon-create"
+      onClick={undefined}
+    />
+  </span>
+</section>
+`;
+
+exports[`Storyshots Segment Term Segment terms which is being edited 1`] = `
+<section
+  className="segment-term-wrap"
+>
+  <span
+    className="segment-term-title"
+  >
+    <strong
+      className=""
+    >
+      Entry Criteria
+    </strong>
+    <small>
+      =
+    </small>
+  </span>
+  <span
+    className="segment-term"
+  >
+    <section
+      className="segment-term-inputs is-editable"
+    >
+      <div
+        className="input-select-wrap"
+      >
+        <label
+          className="input-select-label"
+          htmlFor="select-a"
+        >
+          Select send conditions
+        </label>
+        <select
+          id="select-a"
+        >
+          <option>
+            The first time a contact
+          </option>
+        </select>
+      </div>
+      <div
+        className="input-select-wrap"
+      >
+        <label
+          className="input-select-label"
+          htmlFor="select-b"
+        >
+          Select contact criteria
+        </label>
+        <select
+          id="select-b"
+        >
+          <option>
+            Abandons a cart
+          </option>
+        </select>
+      </div>
+      <div
+        className="btn-list"
+      >
+        <i
+          className="sg-icon sg-icon-x"
+          onClick={undefined}
+        />
+      </div>
+    </section>
+    <i
+      className="sg-icon sg-icon-create"
+      onClick={undefined}
+    />
+  </span>
+</section>
+`;
+
+exports[`Storyshots Segment Term Segment terms which is being edited and is filled out 1`] = `
+<section
+  className="segment-term-wrap"
+>
+  <span
+    className="segment-term-title"
+  >
+    <strong
+      className=""
+    >
+      Entry Criteria
+    </strong>
+    <small>
+      =
+    </small>
+  </span>
+  <span
+    className="segment-term"
+  >
+    <section
+      className="segment-term-inputs is-editable"
+    >
+      <div
+        className="input-select-wrap"
+      >
+        <select
+          id="select-a"
+        >
+          <option>
+            The first time a contact
+          </option>
+        </select>
+      </div>
+      <div
+        className="input-select-wrap"
+      >
+        <select
+          id="select-b"
+        >
+          <option>
+            Abandons a cart
+          </option>
+        </select>
+      </div>
+      <div
+        className="input-select-wrap"
+      >
+        <select
+          id="select-c"
+        >
+          <option>
+            People in Los Angeles
+          </option>
+        </select>
+      </div>
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-check"
+          />
+        </button>
+        <i
+          className="sg-icon sg-icon-x"
+          onClick={undefined}
+        />
+      </div>
+    </section>
+    <i
+      className="sg-icon sg-icon-create"
+      onClick={undefined}
+    />
+  </span>
+</section>
 `;
 
 exports[`Storyshots Select Disabled Select 1`] = `
