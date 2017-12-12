@@ -2397,18 +2397,20 @@ exports[`Storyshots Radio Checked Radio 1`] = `
   className="input-radio-wrap"
 >
   <input
-    defaultChecked={true}
+    checked={true}
+    defaultChecked={undefined}
     disabled={undefined}
-    id="radio-transactional"
+    id="cust-id-1"
+    name={undefined}
     onChange={[Function]}
     type="radio"
-    value="Transactional"
+    value="jim-id-7"
   />
   <label
     className="input-radio-label"
-    htmlFor="radio-transactional"
+    htmlFor="cust-id-1"
   >
-    Transactional
+    Jim
   </label>
 </div>
 `;
@@ -2418,18 +2420,20 @@ exports[`Storyshots Radio Checked and Disabled Radio 1`] = `
   className="input-radio-wrap"
 >
   <input
-    defaultChecked={true}
+    checked={true}
+    defaultChecked={undefined}
     disabled={true}
-    id="radio-transactional"
+    id="bill"
+    name={undefined}
     onChange={[Function]}
     type="radio"
-    value="Transactional"
+    value="bill-id-1"
   />
   <label
     className="input-radio-label"
-    htmlFor="radio-transactional"
+    htmlFor="bill"
   >
-    Transactional
+    Bill
   </label>
 </div>
 `;
@@ -2439,20 +2443,67 @@ exports[`Storyshots Radio Disabled Radio 1`] = `
   className="input-radio-wrap"
 >
   <input
+    checked={false}
     defaultChecked={undefined}
     disabled={true}
-    id="radio-transactional"
+    id="disabled-cust-1"
+    name={undefined}
     onChange={[Function]}
     type="radio"
-    value="Transactional"
+    value="disabled-jim-id-7"
   />
   <label
     className="input-radio-label"
-    htmlFor="radio-transactional"
+    htmlFor="disabled-cust-1"
   >
-    Transactional
+    disabled Jim
   </label>
 </div>
+`;
+
+exports[`Storyshots Radio Multiple radio btns 1`] = `
+Array [
+  <div
+    className="input-radio-wrap"
+  >
+    <input
+      checked={true}
+      defaultChecked={undefined}
+      disabled={undefined}
+      id="radio-choice-1"
+      name="radio-grp-1"
+      onChange={[Function]}
+      type="radio"
+      value="choice-1"
+    />
+    <label
+      className="input-radio-label"
+      htmlFor="radio-choice-1"
+    >
+      Choice 1
+    </label>
+  </div>,
+  <div
+    className="input-radio-wrap"
+  >
+    <input
+      checked={false}
+      defaultChecked={undefined}
+      disabled={undefined}
+      id="radio-choice-2"
+      name="radio-grp-1"
+      onChange={[Function]}
+      type="radio"
+      value="choice-2"
+    />
+    <label
+      className="input-radio-label"
+      htmlFor="radio-choice-2"
+    >
+      Choice 2
+    </label>
+  </div>,
+]
 `;
 
 exports[`Storyshots Radio Standard Radio 1`] = `
@@ -2460,16 +2511,18 @@ exports[`Storyshots Radio Standard Radio 1`] = `
   className="input-radio-wrap"
 >
   <input
+    checked={false}
     defaultChecked={undefined}
     disabled={undefined}
-    id="radio-transactional"
+    id="cust-type"
+    name={undefined}
     onChange={[Function]}
     type="radio"
-    value="Transactional"
+    value="SYSTEM_TX_VAL"
   />
   <label
     className="input-radio-label"
-    htmlFor="radio-transactional"
+    htmlFor="cust-type"
   >
     Transactional
   </label>
