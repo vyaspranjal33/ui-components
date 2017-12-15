@@ -14,10 +14,9 @@ export { Icon } from './components/Icon';
 export { Loader } from './components/Loader';
 export { Meter } from './components/Meter';
 export { NumberedStep, NumberedSteps } from './components/NumberedSteps';
-export { Radio } from './components/Radio';
+export { Radio, RadioGroup } from './components/Radio';
 export { Select } from './components/Select';
 export { Slider } from './components/Slider';
-export { Footer as SmallFooter } from './components/SmallFooter';
 export {
   SegmentTerm,
   SegmentTermControls,

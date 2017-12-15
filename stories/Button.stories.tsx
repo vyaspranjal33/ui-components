@@ -7,7 +7,7 @@ import Button from '../src/components/Button';
 const stories = storiesOf('Button', module);
 
 stories.add('Primary Button', () => (
-  <Button type="primary" onClick={action('Button Clicked')}>
+  <Button type="primary" onClick={action('Button Clicked')} id="stui-test-locator-abc">
     Primary
   </Button>
 ));
