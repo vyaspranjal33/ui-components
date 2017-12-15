@@ -3181,6 +3181,34 @@ exports[`Storyshots Select Standard Select 1`] = `
 </div>
 `;
 
+exports[`Storyshots SideModal SideModal 1`] = `
+Array [
+  <button
+    className="btn btn-primary"
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>,
+  <div
+    className="side-modal"
+  >
+    <h1>
+      Very cool! 😍
+    </h1>
+    <button
+      className="btn btn-secondary"
+      onClick={[Function]}
+    >
+      Alright then
+    </button>
+  </div>,
+  <div
+    className="modal-mask"
+    onClick={[Function]}
+  />,
+]
+`;
+
 exports[`Storyshots Slider Slider with Label 1`] = `
 <div
   className="input-range-wrap"
