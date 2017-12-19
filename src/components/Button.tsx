@@ -18,6 +18,7 @@ interface AllButtonProps {
   group?: boolean;
   active?: boolean;
   icon?: IconType;
+  id?: string;
   isLink?: boolean;
 }
 
@@ -51,6 +52,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   group,
   active,
   icon,
+  id,
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
@@ -94,6 +96,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
           'is-disabled': disabled,
           'is-loading': loading,
         }),
+        id,
         onClick,
       },
       content,
