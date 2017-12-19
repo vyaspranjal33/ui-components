@@ -3185,6 +3185,7 @@ exports[`Storyshots SideModal SideModal 1`] = `
 Array [
   <button
     className="btn btn-primary"
+    id={undefined}
     onClick={[Function]}
   >
     Open Modal
@@ -3197,6 +3198,7 @@ Array [
     </h1>
     <button
       className="btn btn-secondary"
+      id={undefined}
       onClick={[Function]}
     >
       Alright then

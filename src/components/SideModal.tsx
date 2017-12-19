@@ -2,19 +2,29 @@ import React, { Fragment } from 'react';
 import cn from '../utilities/classnames';
 
 export interface SideModalProps {
+  bodyNode?: ElementWithClassList;
   children?: React.ReactNode;
   isOpen: boolean;
   onClose: (evt: any) => void;
 }
 
+interface ElementWithClassList extends Element {
+  classList: DOMTokenList;
+}
+
+const modalOpenClass = 'modal-open';
+
 export class SideModal extends React.Component<SideModalProps> {
+  public static defaultProps: Partial<SideModalProps> = { bodyNode: document.body };
+
   public componentWillReceiveProps(nextProps: SideModalProps) {
     if (nextProps.isOpen === this.props.isOpen) { return; }
 
+    const { bodyNode } = this.props;
     if (nextProps.isOpen) {
-      document.body.classList.add('modal-open');
+      bodyNode.classList.add(modalOpenClass);
     } else {
-      document.body.classList.remove('modal-open');
+      bodyNode.classList.remove(modalOpenClass);
     }
   }
 
