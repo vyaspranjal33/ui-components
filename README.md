@@ -46,7 +46,7 @@ More information: https://semver.org/
 
 # Available Components
 
-This is a list of the available Components and most of the properties. [Run storybook](## starting-storybook) for more information on the styling, properties, and functionalities.
+This is a list of the available Components and most of the properties. [Run storybook](#starting-storybook) for more information on the styling, properties, and functionalities.
 
 - [Actions](https://github.com/sendgrid/ui-components/blob/master/src/components/Actions.tsx)
 - [Alert](https://github.com/sendgrid/ui-components/blob/master/src/components/Alert.tsx)
@@ -122,4 +122,4 @@ If you create a new component on a feature branch, make sure to do the following
 4. Add it to the storybook by creating a story in `stories` folder
 5. Add the component export to `src/index.ts`
 6. Update the `README.md` where appropriate
-7. Make a PR detailing your changes with a [semver](##semver-versioning) Tag and get it CR'ed
+7. Make a PR detailing your changes with a [semver](#semver-versioning) Tag and get it CR'ed
