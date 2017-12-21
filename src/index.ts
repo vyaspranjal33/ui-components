@@ -17,6 +17,7 @@ export { NumberedStep, NumberedSteps } from './components/NumberedSteps';
 export { Progress, ProgressStage } from './components/Progress';
 export { Radio, RadioGroup } from './components/Radio';
 export { Select } from './components/Select';
+export { SideModal } from './components/SideModal';
 export { Slider } from './components/Slider';
 export {
   SegmentTerm,
