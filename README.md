@@ -8,8 +8,7 @@ These components are available as npm package [`@sendgrid/ui-components`](https:
 
 ### Getting Started
 ```
-npm update
-npm install @sendgrid/ui-components
+yarn install @sendgrid/ui-components
 ```
 
 ### Importing ui-components into Your Project
@@ -118,7 +117,7 @@ To make sure your additions don't break `ui-components`, run `npm run test`, whi
 ## Components
 If you create a new component on a feature branch, make sure to do the following
 1. Add the component to `src/components`
-2. Make sure your changes do not break ui-components
+2. Make sure your changes do not break ui-components by running `npm run test`
 4. Add it to the storybook by creating a story in `stories` folder
 5. Add the component export to `src/index.ts`
 6. Update the `README.md` where appropriate
