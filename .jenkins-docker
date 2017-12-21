@@ -35,7 +35,7 @@ if [[ $sha1 == "master" ]]; then
     commit_pkg_update
   elif [[ $lastCommit =~ "#minor" ]]; then
     echo publishing new minor version...
-    docker run -v $(pwd):/opt/sendgrid/ui-components-jenkins/ $image:latest bash -c "cd /opt/sendgrid/ui-components; npm version patch --git echo --force; yarn build; npm publish; cp ./package.json ./package-lock.json /opt/sendgrid/ui-components-jenkins/"
+    docker run -v $(pwd):/opt/sendgrid/ui-components-jenkins/ $image:latest bash -c "cd /opt/sendgrid/ui-components; npm version minor --git echo --force; yarn build; npm publish; cp ./package.json ./package-lock.json /opt/sendgrid/ui-components-jenkins/"
     commit_pkg_update
   else
     echo "last commit msg: $lastCommit was not patch or minor version bump."
