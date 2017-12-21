@@ -8,7 +8,7 @@ These components are available as npm package [`@sendgrid/ui-components`](https:
 
 ### Getting Started
 ```
-yarn install @sendgrid/ui-components
+npm install @sendgrid/ui-components
 ```
 
 ### Importing ui-components into Your Project
