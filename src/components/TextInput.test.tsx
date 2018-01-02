@@ -11,7 +11,7 @@ describe('Input', () => {
   describe('component lifecycle', () => {
     beforeEach(() => {
       cmp = shallow(
-        <TextInput type="text" label="Test Input" id="test-input-simple" onChange={mockOnChange} onBlur={mockOnBlur} />,
+        <TextInput type="text" label="Test Input" id="test-input-simple" onChange={mockOnChange} />,
       );
     });
 
@@ -36,15 +36,15 @@ describe('Input', () => {
       expect(mockOnChange).toHaveBeenCalledWith('this input sucks');
     });
 
-    it('calls onBlur on blur event', () => {
+    it('calls onBlur on blur event with target', () => {
       cmp.find('#test-input-simple').simulate('blur', {target: {value: 'onBlur called'}});
       expect(mockOnBlur).toHaveBeenCalledWith('onBlur called');
     });
 
-    it('sets class on focus and removes on blur', () => {
+    it('sets class on focus and removes on blur without blur event handler', () => {
       cmp.find('#test-input-simple').simulate('focus');
       expect(cmp.find('.is-focused').length).toBe(1);
-      cmp.find('#test-input-simple').simulate('blur', {target: {value: 'onBlur called again'}});
+      cmp.find('#test-input-simple').simulate('blur');
       expect(cmp.find('.is-focused').length).toBe(0);
     });
 

@@ -94,7 +94,9 @@ export class TextInput extends React.Component<
   }
   public onInputBlur(e: any) {
     this.setState({ isInputFocused: false });
+    if(e !== undefined){
     this.props.onBlur(convertInputVal(e.target.value, this.props.type));
+    }
   }
   public render() {
     return getRenderedTextInput.call(this, this.props.value);
@@ -130,10 +132,12 @@ export class StatefulTextInput extends React.Component<
   }
 
   public onInputBlur(e: any) {
-    const val = convertInputVal(e.target.value, this.props.type);
     this.setState({ isInputFocused: false });
+    if(e !== undefined){
+    const val = convertInputVal(e.target.value, this.props.type);
     this.setState({ value: val });
     this.props.onBlur(val);
+    } 
   }
 
   public render() {
