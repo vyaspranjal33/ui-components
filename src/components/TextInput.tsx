@@ -95,7 +95,7 @@ export class TextInput extends React.Component<
   public onInputBlur(e: any) {
     this.setState({ isInputFocused: false });
 
-    if (e !== undefined && this.props.onBlur !== undefined) {
+    if (e !== undefined && this.props.onBlur) {
     this.props.onBlur(convertInputVal(e.target.value, this.props.type));
     }
   }
