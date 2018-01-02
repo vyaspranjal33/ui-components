@@ -7,7 +7,7 @@ describe('Input', () => {
   let cmp: any;
   const mockOnChange = jest.fn();
   const mockOnBlur = jest.fn();
-  
+
   describe('component lifecycle', () => {
     beforeEach(() => {
       cmp = shallow(
@@ -53,7 +53,13 @@ describe('Input', () => {
   describe('number input change', () => {
     it('calls onChange when value changes', () => {
       cmp = shallow(
-        <TextInput type="number" label="Test Input" id="test-input-simple" onChange={mockOnChange} onBlur={mockOnBlur} />,
+        <TextInput
+          type="number"
+          label="Test Input"
+          id="test-input-simple"
+          onChange={mockOnChange}
+          onBlur={mockOnBlur}
+        />,
       );
       cmp.find('#test-input-simple').simulate('change', {target: {value: '123'}});
       expect(mockOnChange).toHaveBeenCalledWith(123);
