@@ -14,6 +14,7 @@ stories.add('Text Input Simple', () => (
     isValid={true}
     id="test-input-simple"
     onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
   />
 ));
 
@@ -25,6 +26,7 @@ stories.add('Text Input Large', () => (
     isValid={true}
     id="test-input-simple"
     onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
   />
 ));
 
@@ -34,6 +36,7 @@ stories.add('Text Input With Info', () => (
     label="An Input"
     id="test-input-simple"
     onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
     info="This test input is better then your test input."
   />
 ));
@@ -45,6 +48,7 @@ stories.add('Text Input With Error', () => (
     isValid={false}
     id="test-input-simple"
     onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
     info="This test input is wrong somehow."
   />
 ));
@@ -56,6 +60,7 @@ stories.add('Text Input Is Disabled', () => (
     isDisabled={true}
     id="test-input-simple"
     onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
   />
 ));
 
@@ -65,6 +70,7 @@ stories.add('Text Input With Numbers', () => (
     label="A Number"
     id="test-input-simple"
     onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
     info="This input always returns a number, not a string."
   />
 ));

@@ -13,10 +13,6 @@ const onInputFocus = function() {
   this.setState({ isInputFocused: true });
 };
 
-const onInputBlur = function() {
-  this.setState({ isInputFocused: false });
-};
-
 const getRenderedTextInput = function(value?: | string | number) {
   const classes = cn('input-text-wrap', {
     'has-value': !!value || value === 0,
@@ -71,6 +67,7 @@ export interface TextInputProps {
   id: string;
   info?: string;
   onChange: (event: any) => void;
+  onBlur: (event: any) => void;
 }
 
 export class TextInput extends React.Component<
@@ -81,7 +78,6 @@ export class TextInput extends React.Component<
     isValid: true,
   };
   public onInputFocus: (event: any) => void;
-  public onInputBlur: (event: any) => void;
   constructor(props: TextInputProps) {
     super(props);
 
@@ -89,14 +85,18 @@ export class TextInput extends React.Component<
       isInputFocused: false,
     };
     this.onInputFocus = onInputFocus.bind(this);
-    this.onInputBlur = onInputBlur.bind(this);
+    this.onInputBlur = this.onInputBlur.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
   }
 
   public onValueChange(e: any) {
     this.props.onChange(convertInputVal(e.target.value, this.props.type));
   }
-
+  public onInputBlur(e: any) {
+    this.setState({ isInputFocused: false });
+    this.props.onBlur(convertInputVal(e.target.value, this.props.type));
+    console.log(this.state.isInputFocused);
+  }
   public render() {
     return getRenderedTextInput.call(this, this.props.value);
   }
@@ -110,7 +110,7 @@ export class StatefulTextInput extends React.Component<
     isValid: true,
   };
   public onInputFocus: (event: any) => void;
-  public onInputBlur: (event: any) => void;
+
   constructor(props: TextInputProps) {
     super(props);
 
@@ -119,7 +119,7 @@ export class StatefulTextInput extends React.Component<
       value: '',
     };
     this.onInputFocus = onInputFocus.bind(this);
-    this.onInputBlur = onInputBlur.bind(this);
+    this.onInputBlur = this.onInputBlur.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
   }
 
@@ -128,6 +128,13 @@ export class StatefulTextInput extends React.Component<
 
     this.setState({ value: val });
     this.props.onChange(val);
+  }
+
+  public onInputBlur(e: any) {
+    const val = convertInputVal(e.target.value, this.props.type);
+    this.setState({ isInputFocused: false });
+    this.setState({ value: val });
+    this.props.onBlur(val);
   }
 
   public render() {
