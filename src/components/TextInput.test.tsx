@@ -11,7 +11,7 @@ describe('Input', () => {
   describe('component lifecycle', () => {
     beforeEach(() => {
       cmp = shallow(
-        <TextInput type="text" label="Test Input" id="test-input-simple" onChange={mockOnChange} onBlur={mockOnBlur}/>,
+        <TextInput type="text" label="Test Input" id="test-input-simple" onChange={mockOnChange} />,
       );
     });
 
