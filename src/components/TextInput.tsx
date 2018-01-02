@@ -67,7 +67,7 @@ export interface TextInputProps {
   id: string;
   info?: string;
   onChange: (event: any) => void;
-  onBlur: (event: any) => void;
+  onBlur?: (event: any) => void;
 }
 
 export class TextInput extends React.Component<
@@ -94,7 +94,7 @@ export class TextInput extends React.Component<
   }
   public onInputBlur(e: any) {
     this.setState({ isInputFocused: false });
-    if (e !== undefined && e.type === 'blur') {
+    if (e !== undefined && e.type === 'blur' && this.props.onBlur) {
     this.props.onBlur(convertInputVal(e.target.value, this.props.type));
     }
   }
@@ -133,7 +133,7 @@ export class StatefulTextInput extends React.Component<
 
   public onInputBlur(e: any) {
     this.setState({ isInputFocused: false });
-    if (e !== undefined && e.type === 'blur') {
+    if (e !== undefined && e.type === 'blur' && this.props.onBlur) {
     const val = convertInputVal(e.target.value, this.props.type);
     this.setState({ value: val });
     this.props.onBlur(val);
