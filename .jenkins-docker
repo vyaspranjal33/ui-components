@@ -4,8 +4,40 @@ set -e
 echo "Building: $sha1"
 
 image=docker.sendgrid.net/sendgrid/ui-components
+branch=master
+
+function co_master() {
+  git fetch
+  git checkout $branch
+  git pull origin $branch
+}
+
+function commit_pkg_update() {
+  git status
+  git add .
+  msg=$(cat package.json | grep version | sed s#[\"\|,]##g)
+  git commit -m "$msg"
+  git push origin $branch
+}
 
 time docker pull $image
 time docker build -t $image:latest .
 time docker-compose run test
 time docker push $image:latest
+
+if [[ $sha1 == "master" ]]; then
+  co_master
+  lastCommit=$(git log -1 --pretty=%B)
+
+  if [[ $lastCommit =~ "#patch" ]]; then
+    echo publishing new patch version...
+    docker run -v $(pwd):/opt/sendgrid/ui-components-jenkins/ $image:latest bash -c "cd /opt/sendgrid/ui-components; npm version patch --git echo --force; yarn build; npm publish; cp ./package.json ./package-lock.json /opt/sendgrid/ui-components-jenkins/"
+    commit_pkg_update
+  elif [[ $lastCommit =~ "#minor" ]]; then
+    echo publishing new minor version...
+    docker run -v $(pwd):/opt/sendgrid/ui-components-jenkins/ $image:latest bash -c "cd /opt/sendgrid/ui-components; npm version minor --git echo --force; yarn build; npm publish; cp ./package.json ./package-lock.json /opt/sendgrid/ui-components-jenkins/"
+    commit_pkg_update
+  else
+    echo "last commit msg: $lastCommit was not patch or minor version bump."
+  fi
+fi
