@@ -61,7 +61,7 @@ export interface TextInputProps {
   label?: string;
   id: string;
   info?: string;
-  onChange: (event: any) => void;
+  onChange: (event: any, value: string | number) => void;
   onBlur?: (event: any, value: string | number) => void;
 }
 
@@ -85,7 +85,8 @@ export class TextInput extends React.Component<
   }
 
   public onValueChange(event: any) {
-    this.props.onChange(convertInputValue(event.target.value, this.props.type));
+    const value = convertInputValue(event.target.value, this.props.type);
+    this.props.onChange(event, value);
   }
 
   public onInputBlur(event: any) {

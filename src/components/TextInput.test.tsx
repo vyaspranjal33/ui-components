@@ -43,10 +43,12 @@ describe('Input', () => {
     });
 
     it('calls onChange when value changes', () => {
+      const value = 'onBlur called';
+      const event = { target: { value } };
       cmp
         .find('#test-input-simple')
-        .simulate('change', { target: { value: 'this input sucks' } });
-      expect(mockOnChange).toHaveBeenCalledWith('this input sucks');
+        .simulate('change', { target: { value } });
+      expect(mockOnChange).toHaveBeenCalledWith(event, value);
     });
 
     it('calls onBlur on blur event with target', () => {
@@ -68,6 +70,8 @@ describe('Input', () => {
 
   describe('number input change', () => {
     it('calls onChange when value changes', () => {
+      const event = { target: { value: '123' } };
+      const value = parseInt(event.target.value, 10);
       cmp = shallow(
         <TextInput
           type="number"
@@ -80,7 +84,7 @@ describe('Input', () => {
       cmp
         .find('#test-input-simple')
         .simulate('change', { target: { value: '123' } });
-      expect(mockOnChange).toHaveBeenCalledWith(123);
+      expect(mockOnChange).toHaveBeenCalledWith(event, value);
     });
   });
 });
