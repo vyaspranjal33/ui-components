@@ -26,7 +26,7 @@ export const SegmentTermControls: React.SFC<SegmentTermControlsProps> = ({
       {
         showConfirm &&
           <Button type="secondary" small onClick={onConfirm}>
-            <i className="sg-icon sg-icon-check" />
+            <Icon type="check" />
           </Button>
       }
       <Icon type="x" onClick={onCancel} />
