@@ -3,17 +3,15 @@ import cn from '../utilities/classnames';
 
 import { InputType } from '../types/inputs';
 
-const convertInputVal = (value: string, inputType: InputType) => {
-  return inputType === 'number' ?
-    parseInt(value, 10) :
-    value;
+const convertInputValue = (value: string, inputType: InputType) => {
+  return inputType === 'number' ? parseInt(value, 10) : value;
 };
 
 const onInputFocus = function() {
   this.setState({ isInputFocused: true });
 };
 
-const getRenderedTextInput = function(value?: | string | number) {
+const getRenderedTextInput = function(value?: string | number) {
   const classes = cn('input-text-wrap', {
     'has-value': !!value || value === 0,
     'is-disabled': this.props.isDisabled,
@@ -23,8 +21,7 @@ const getRenderedTextInput = function(value?: | string | number) {
     'is-required': this.props.isRequired,
   });
 
-  const infoId = this.props.info ? `${this.props.id}-info` :
-    null;
+  const infoId = this.props.info ? `${this.props.id}-info` : null;
 
   return (
     <div className={classes}>
@@ -40,7 +37,7 @@ const getRenderedTextInput = function(value?: | string | number) {
         onBlur={this.onInputBlur}
         aria-describedby={infoId}
       />
-      { this.props.info &&
+      {this.props.info && (
         <span
           className={cn('input-info', {
             danger: !this.props.isValid,
@@ -49,16 +46,14 @@ const getRenderedTextInput = function(value?: | string | number) {
         >
           {this.props.info}
         </span>
-      }
+      )}
     </div>
   );
 };
 
 export interface TextInputProps {
   type: InputType;
-  value?:
-    | string
-    | number;
+  value?: string | number;
   isValid?: boolean;
   isRequired?: boolean;
   isDisabled?: boolean;
@@ -66,8 +61,8 @@ export interface TextInputProps {
   label?: string;
   id: string;
   info?: string;
-  onChange: (event: any) => void;
-  onBlur?: (event: any) => void;
+  onChange: (event: any, value: string | number) => void;
+  onBlur?: (event: any, value: string | number) => void;
 }
 
 export class TextInput extends React.Component<
@@ -89,16 +84,20 @@ export class TextInput extends React.Component<
     this.onValueChange = this.onValueChange.bind(this);
   }
 
-  public onValueChange(e: any) {
-    this.props.onChange(convertInputVal(e.target.value, this.props.type));
+  public onValueChange(event: any) {
+    const value = convertInputValue(event.target.value, this.props.type);
+    this.props.onChange(event, value);
   }
-  public onInputBlur(e: any) {
+
+  public onInputBlur(event: any) {
     this.setState({ isInputFocused: false });
 
-    if (e !== undefined && this.props.onBlur) {
-    this.props.onBlur(convertInputVal(e.target.value, this.props.type));
+    if (event !== undefined && this.props.onBlur) {
+      const value = convertInputValue(event.target.value, this.props.type);
+      this.props.onBlur(event, value);
     }
   }
+
   public render() {
     return getRenderedTextInput.call(this, this.props.value);
   }
@@ -106,7 +105,7 @@ export class TextInput extends React.Component<
 
 export class StatefulTextInput extends React.Component<
   TextInputProps,
-  { isInputFocused: boolean, value: | string | number }
+  { isInputFocused: boolean; value: string | number }
 > {
   public static defaultProps: Partial<TextInputProps> = {
     isValid: true,
@@ -125,20 +124,21 @@ export class StatefulTextInput extends React.Component<
     this.onValueChange = this.onValueChange.bind(this);
   }
 
-  public onValueChange(e: any) {
-    const val = convertInputVal(e.target.value, this.props.type);
+  public onValueChange(event: any) {
+    const value = convertInputValue(event.target.value, this.props.type);
 
-    this.setState({ value: val });
-    this.props.onChange(val);
+    this.setState({ value });
+    this.props.onChange(value);
   }
 
-  public onInputBlur(e: any) {
+  public onInputBlur(event: any) {
     this.setState({ isInputFocused: false });
 
-    if (e !== undefined && this.props.onBlur) {
-    const val = convertInputVal(e.target.value, this.props.type);
-    this.setState({ value: val });
-    this.props.onBlur(val);
+    if (event && this.props.onBlur) {
+      const value = convertInputValue(event.target.value, this.props.type);
+
+      this.setState({ value });
+      this.props.onBlur(event, value);
     }
   }
 

@@ -2829,6 +2829,7 @@ exports[`Storyshots Segment Term Segment terms which is being edited and is fill
         >
           <i
             className="sg-icon sg-icon-check"
+            onClick={undefined}
           />
         </button>
         <i
