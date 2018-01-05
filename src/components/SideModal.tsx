@@ -1,31 +1,21 @@
 import React, { Fragment } from 'react';
 import cn from '../utilities/classnames';
+import {
+  getDefaultModalProps,
+  ModalProps,
+  modalWillReceiveProps,
+} from '../utilities/modals';
 
-export interface SideModalProps {
-  bodyNode?: ElementWithClassList;
+interface SideModalProps extends ModalProps {
   children?: React.ReactNode;
-  isOpen: boolean;
   onClose: (evt: any) => void;
 }
 
-interface ElementWithClassList extends Element {
-  classList: DOMTokenList;
-}
-
-const modalOpenClass = 'modal-open';
-
 export class SideModal extends React.Component<SideModalProps> {
-  public static defaultProps: Partial<SideModalProps> = { bodyNode: document.body };
+  public static defaultProps: Partial<SideModalProps> = getDefaultModalProps();
 
   public componentWillReceiveProps(nextProps: SideModalProps) {
-    if (nextProps.isOpen === this.props.isOpen) { return; }
-
-    const { bodyNode } = this.props;
-    if (nextProps.isOpen) {
-      bodyNode.classList.add(modalOpenClass);
-    } else {
-      bodyNode.classList.remove(modalOpenClass);
-    }
+    modalWillReceiveProps(nextProps, this.props);
   }
 
   public render() {

@@ -2,9 +2,36 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { StatefulTextInput } from '../src/components/TextInput';
+import { StatefulTextInput, TextInput } from '../src/components/TextInput';
 
 const stories = storiesOf('Text Input', module);
+
+class TextInputWrapper extends React.Component<any, { val: string }> {
+  public onChange: (e: any) => void;
+
+  constructor(props: any) {
+    super(props);
+
+    this.onChange = (e) => this.setState({ val: e.target.value });
+    this.state = { val: 'Type in me!' };
+  }
+
+  public render() {
+    return (
+      <TextInput
+        label="Regular text input"
+        value={this.state.val}
+        type="text"
+        id="reg-txt-input"
+        onChange={this.onChange}
+      />
+    );
+  }
+}
+
+stories.add('Regular (non-stateful) text input', () => (
+  <TextInputWrapper />
+));
 
 stories.add('Text Input Simple', () => (
   <StatefulTextInput

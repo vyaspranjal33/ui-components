@@ -128,7 +128,7 @@ export class StatefulTextInput extends React.Component<
     const value = convertInputValue(event.target.value, this.props.type);
 
     this.setState({ value });
-    this.props.onChange(value);
+    this.props.onChange(event, value);
   }
 
   public onInputBlur(event: any) {

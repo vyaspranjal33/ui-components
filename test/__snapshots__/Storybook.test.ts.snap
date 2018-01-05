@@ -1293,6 +1293,58 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
 </div>
 `;
 
+exports[`Storyshots ConfirmationModal ConfirmationModal 1`] = `
+Array [
+  <button
+    className="btn btn-primary"
+    id={undefined}
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>,
+  <div
+    className="sg-modal"
+  >
+    <div
+      className="conf-alert sg-modal-content"
+    >
+      <h2
+        className="conf-alert-header"
+      >
+        Very cool! 😍
+      </h2>
+      <div
+        className="conf-alert-body"
+      >
+        <p
+          className="conf-alert-text"
+        >
+          Deleting this message cannot be undone.
+        </p>
+      </div>
+      <div
+        className="conf-alert-actions"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="btn btn-primary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
 exports[`Storyshots Divider Divider (Thin) 1`] = `
 <hr
   className="is-thin"
@@ -3420,6 +3472,28 @@ exports[`Storyshots Tabs Zero-Border Tabs 1`] = `
     </span>
   </li>
 </ul>
+`;
+
+exports[`Storyshots Text Input Regular (non-stateful) text input 1`] = `
+<div
+  className="input-text-wrap has-value"
+>
+  <label
+    className="input-text-label"
+    htmlFor="reg-txt-input"
+  >
+    Regular text input
+  </label>
+  <input
+    aria-describedby={null}
+    id="reg-txt-input"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value="Type in me!"
+  />
+</div>
 `;
 
 exports[`Storyshots Text Input Text Input Is Disabled 1`] = `

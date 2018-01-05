@@ -6,6 +6,12 @@ export { Button, Buttonized } from './components/Button';
 export { ButtonList } from './components/ButtonList';
 export { Card } from './components/Card';
 export { Checkbox } from './components/Checkbox';
+export {
+  ConfirmationModal,
+  ConfirmationModalActions,
+  ConfirmationModalBody,
+  ConfirmationModalHeader,
+} from './components/ConfirmationModal';
 export { DropdownButton } from './components/DropdownButton';
 export { Dropzone } from './components/Dropzone';
 export { EmptyState } from './components/EmptyState';
