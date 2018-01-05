@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { StatefulTextInput } from '../src/components/TextInput';
+import { StatefulTextInput, TextInput } from '../src/components/TextInput';
 
 const stories = storiesOf('Text Input', module);
 
@@ -72,5 +72,26 @@ stories.add('Text Input With Numbers', () => (
     onChange={action('Input Changed')}
     onBlur={action('onBlur Called')}
     info="This input always returns a number, not a string."
+  />
+));
+
+stories.add('Stateless Text Input with a Value Passed as a Prop', () => (
+  <TextInput
+    type="text"
+    label="Stateless Input"
+    id="test-input-simple"
+    onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
+    value="Passed-In Value"
+  />
+));
+
+stories.add('Stateless Text Input with No Value Passed In', () => (
+  <TextInput
+    type="text"
+    label="Stateless Input"
+    id="test-input-simple"
+    onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
   />
 ));

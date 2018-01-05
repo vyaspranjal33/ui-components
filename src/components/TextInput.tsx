@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { CSSProperties } from 'react';
 import cn from '../utilities/classnames';
 
 import { InputType } from '../types/inputs';
@@ -21,16 +21,16 @@ const getRenderedTextInput = function(value?: string | number) {
     'is-required': this.props.isRequired,
   });
 
-  const infoId = this.props.info ? `${this.props.id}-info` : null;
+  const infoId = this.props.info && `${this.props.id}-info`;
 
   return (
-    <div className={classes}>
+    <div className={classes} style={this.inputStyle}>
       <label className="input-text-label" htmlFor={this.props.id}>
         {this.props.label}
       </label>
       <input
         id={this.props.id}
-        value={value}
+        value={this.props.value}
         type={this.props.type}
         onChange={this.onValueChange}
         onFocus={this.onInputFocus}
@@ -53,26 +53,39 @@ const getRenderedTextInput = function(value?: string | number) {
 
 export interface TextInputProps {
   type: InputType;
+  id: string;
+  onChange: (event: any, value: string | number) => void;
   value?: string | number;
+  fullWidth?: boolean;
   isValid?: boolean;
   isRequired?: boolean;
   isDisabled?: boolean;
   isLarge?: boolean;
   label?: string;
-  id: string;
   info?: string;
-  onChange: (event: any, value: string | number) => void;
   onBlur?: (event: any, value: string | number) => void;
+  style?: CSSProperties;
 }
 
 export class TextInput extends React.Component<
   TextInputProps,
   { isInputFocused: boolean }
 > {
-  public static defaultProps: Partial<TextInputProps> = {
+
+  public static defaultProps = {
+    fullWidth: false,
+    info: '',
+    isDisabled: false,
+    isLarge: false,
+    isRequired: false,
     isValid: true,
+    label: '',
+    style: {} as CSSProperties,
+    value: '',
   };
+
   public onInputFocus: (event: any) => void;
+
   constructor(props: TextInputProps) {
     super(props);
 
@@ -82,6 +95,12 @@ export class TextInput extends React.Component<
     this.onInputFocus = onInputFocus.bind(this);
     this.onInputBlur = this.onInputBlur.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
+  }
+
+  get inputStyle() {
+    const { fullWidth, style } = this.props;
+    if (fullWidth) { return {...style, width: '100%'}; }
+    return style;
   }
 
   public onValueChange(event: any) {
