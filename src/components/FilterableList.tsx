@@ -1,6 +1,5 @@
 import capitalize from 'lodash/capitalize';
 import identity from 'lodash/identity';
-import isArray from 'lodash/isArray';
 import isFunction from 'lodash/isFunction';
 import values from 'lodash/values';
 import React, { PureComponent, ReactElement } from 'react';
@@ -23,7 +22,7 @@ const inlineClearButtonStyle = {
 export interface FilterableListProps {
   clearButtonInHeader?: boolean;
   clearButtonLabel?: string;
-  filterTypes?: string | string[];
+  filterTypes?: string[];
   items: any[];
   onClear?: (event?: any) => void;
   onFilter?: (items: any[], filters: {}) => any[];
@@ -54,11 +53,7 @@ export default class FilterableList extends PureComponent<
   constructor(props: FilterableListProps) {
     super(props);
 
-    const filterTypes = isArray(props.filterTypes)
-      ? props.filterTypes
-      : [props.filterTypes];
-
-    for (const name of filterTypes) {
+    for (const name of props.filterTypes) {
       if (name) {
         this.state[name] = '';
         this.handlers[
