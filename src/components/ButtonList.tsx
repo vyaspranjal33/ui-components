@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { HTMLAttributes } from 'react';
 import { ButtonProps } from './Button';
 
-export interface ButtonListProps {
-  children?: Array<React.ReactElement<ButtonProps>>;
+export interface ButtonListProps extends HTMLAttributes<HTMLDivElement> {
+  children?: React.ReactElement<ButtonProps> | Array<React.ReactElement<ButtonProps>>;
   onDark?: boolean;
 }
 
