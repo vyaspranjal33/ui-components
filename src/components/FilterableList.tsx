@@ -19,17 +19,22 @@ const inlineClearButtonStyle = {
   paddingLeft: '20px',
 };
 
-export interface FilterableListProps {
+export interface FilterableListContainerProps {
   clearButtonInHeader?: boolean;
   clearButtonLabel?: string;
   filterTypes?: string[];
-  items: any[];
+  items?: any[];
   onClear?: (event?: any) => void;
+  onChange?: (event?: any, value?: string | number) => void;
   onFilter?: (items: any[], filters: {}) => any[];
   renderControls: (filterOptions: { [key: string]: any }) => ReactElement<any>;
   renderItems: (items: any[]) => ReactElement<any>;
   showClearButton?: boolean;
   title: string;
+}
+
+export interface FilterableListProps extends FilterableListContainerProps {
+  items: any[];
 }
 
 export interface FilterableListState {
@@ -46,6 +51,12 @@ export default class FilterableList extends PureComponent<
     filterTypes: [''],
     showClearButton: false,
   };
+
+  public static createClass(props: FilterableListContainerProps): React.ComponentClass<any> {
+    return class FilterableListContainer extends PureComponent<FilterableListContainerProps> {
+      public render() { return <FilterableList {...props} items={this.props.items} />; }
+    };
+  }
 
   public state: { [key: string]: string } = {};
   public handlers = {};
@@ -72,18 +83,13 @@ export default class FilterableList extends PureComponent<
   public handleFilterChange(
     filterName: string,
     event: any,
-    callback?: (event?: any, value?: string | number) => void,
   ) {
     const value = event.target.value;
     this.setState(
       {
         [filterName]: value,
       },
-      () => {
-        if (isFunction(callback)) {
-          callback(event, value);
-        }
-      },
+      this.props.onChange,
     );
   }
 

@@ -10,9 +10,14 @@ import { TextInput } from '../src/components/TextInput';
 
 const stories = storiesOf('FilterableList', module);
 
-const noop = action('Filter Input Changed');
+const renderItems = (items: any[]) => (
+  <>{items.map((item) => <Item key={item.title} {...item} />)}</>
+);
 
-interface Item { name: string; type: string; }
+interface Item {
+  name: string;
+  type: string;
+}
 
 const mockItems: Item[] = [
   { name: 'Orange', type: 'Fruit' },
@@ -38,6 +43,7 @@ stories.add('FilterableList', () => (
   <FilterableList
     title="Filter"
     items={mockItems}
+    onChange={action('Filter Input Changed')}
     renderControls={({ value, handleFilterChange }) => {
       return (
         <TextInput
@@ -50,9 +56,7 @@ stories.add('FilterableList', () => (
         />
       );
     }}
-    renderItems={(items: any[]) => (
-      <>{items.map((item) => <Item key={item.title} {...item} />)}</>
-    )}
+    renderItems={renderItems}
   />
 ));
 
@@ -60,41 +64,49 @@ stories.add('FilterableList with Clear Button', () => (
   <FilterableList
     title="Filter"
     items={mockItems}
+    onChange={action('Filter Input Changed')}
     showClearButton
-    renderControls={({ value, handleFilterChange }) => {
-      return (
-        <TextInput
-          type="text"
-          fullWidth
-          label="Name"
-          id="name-filter"
-          value={value as string}
-          onChange={handleFilterChange}
-        />
-      );
-    }}
-    renderItems={(items: any[]) => (
-      <>{items.map((item) => <Item key={item.title} {...item} />)}</>
+    renderControls={({ value, handleFilterChange }) => (
+      <TextInput
+        type="text"
+        fullWidth
+        label="Name"
+        id="name-filter"
+        value={value as string}
+        onChange={handleFilterChange}
+      />
     )}
+    renderItems={renderItems}
   />
 ));
 
-stories.add('FilterableList with Two Input Fields and Custom Filtering Logic', () => (
-  <FilterableList
-    title="Filter"
-    items={mockItems}
-    showClearButton
-    filterTypes={['name', 'type']}
-    onFilter={(items, filters: { [key: string]: string }) => {
-      const { name, type } = filters;
-      return items.filter((item) => {
-        if (!item.name.toLowerCase().includes(name.toLowerCase())) { return false; }
-        if (!item.type.toLowerCase().includes(type.toLowerCase())) { return false; }
-        return true;
-      });
-    }}
-    renderControls={({ name, type, handleFilterNameChange, handleFilterTypeChange }) => {
-      return (
+stories.add(
+  'FilterableList with Two Input Fields and Custom Filtering Logic',
+  () => (
+    <FilterableList
+      title="Filter"
+      items={mockItems}
+      onChange={action('Filter Input Changed')}
+      showClearButton
+      filterTypes={['name', 'type']}
+      onFilter={(items, filters: { [key: string]: string }) => {
+        const { name, type } = filters;
+        return items.filter((item) => {
+          if (!item.name.toLowerCase().includes(name.toLowerCase())) {
+            return false;
+          }
+          if (!item.type.toLowerCase().includes(type.toLowerCase())) {
+            return false;
+          }
+          return true;
+        });
+      }}
+      renderControls={({
+        name,
+        type,
+        handleFilterNameChange,
+        handleFilterTypeChange,
+      }) => (
         <>
           <TextInput
             type="text"
@@ -113,34 +125,53 @@ stories.add('FilterableList with Two Input Fields and Custom Filtering Logic', (
             onChange={handleFilterTypeChange}
           />
         </>
-      );
-    }}
-    renderItems={(items: any[]) => (
-      <>{items.map((item) => <Item key={item.title} {...item} />)}</>
-    )}
-  />
-));
+      )}
+      renderItems={renderItems}
+    />
+  ),
+);
 
 stories.add('FilterableList with Clear Button in Header', () => (
   <FilterableList
     title="Filter"
     showClearButton
-    items={mockItems}
     clearButtonInHeader
-    renderControls={({ value, handleFilterChange }) => {
-      return (
-        <TextInput
-          type="text"
-          fullWidth
-          label="Name"
-          id="name-filter"
-          value={value as string}
-          onChange={handleFilterChange}
-        />
-      );
-    }}
-    renderItems={(items: any[]) => (
-      <>{items.map((item) => <Item key={item.title} {...item} />)}</>
+    items={mockItems}
+    onChange={action('Filter Input Changed')}
+    renderControls={({ value, handleFilterChange }) => (
+      <TextInput
+        type="text"
+        fullWidth
+        label="Name"
+        id="name-filter"
+        value={value as string}
+        onChange={handleFilterChange}
+      />
     )}
+    renderItems={renderItems}
   />
 ));
+
+stories.add('FilterableList as a Container Component', () => {
+  const title = 'Filter Container';
+  const items = mockItems;
+
+  const renderControls = ({ value, handleFilterChange }: { value: string, handleFilterChange: any }) => (
+    <TextInput
+      type="text"
+      fullWidth
+      label="Name"
+      id="name-filter"
+      value={value as string}
+      onChange={handleFilterChange}
+    />
+  );
+
+  const Wrapped = FilterableList.createClass({
+    renderControls,
+    renderItems,
+    title,
+  });
+
+  return <Wrapped items={items} />;
+});
