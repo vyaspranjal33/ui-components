@@ -23,7 +23,7 @@ const inlineClearButtonStyle = {
 export interface FilterableListProps {
   clearButtonInHeader?: boolean;
   clearButtonLabel?: string;
-  filterOn?: string | string[];
+  filterTypes?: string | string[];
   items: any[];
   onClear?: (event?: any) => void;
   onFilter?: (items: any[], filters: {}) => any[];
@@ -44,7 +44,7 @@ export default class FilterableList extends PureComponent<
   public static defaultProps = {
     clearButtonInHeader: false,
     clearButtonLabel: 'Clear',
-    filterOn: [''],
+    filterTypes: [''],
     showClearButton: false,
   };
 
@@ -54,11 +54,11 @@ export default class FilterableList extends PureComponent<
   constructor(props: FilterableListProps) {
     super(props);
 
-    const filterOn = isArray(props.filterOn)
-      ? props.filterOn
-      : [props.filterOn];
+    const filterTypes = isArray(props.filterTypes)
+      ? props.filterTypes
+      : [props.filterTypes];
 
-    for (const name of filterOn) {
+    for (const name of filterTypes) {
       if (name) {
         this.state[name] = '';
         this.handlers[

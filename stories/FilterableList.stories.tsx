@@ -84,7 +84,7 @@ stories.add('FilterableList with Two Input Fields and Custom Filtering Logic', (
     title="Filter"
     items={mockItems}
     showClearButton
-    filterOn={['name', 'type']}
+    filterTypes={['name', 'type']}
     onFilter={(items, filters: { [key: string]: string }) => {
       const { name, type } = filters;
       return items.filter((item) => {
