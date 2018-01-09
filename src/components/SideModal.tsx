@@ -8,7 +8,7 @@ export interface SideModalProps {
   onClose: (evt: any) => void;
 }
 
-interface ElementWithClassList extends Element {
+export interface ElementWithClassList extends Element {
   classList: DOMTokenList;
 }
 
