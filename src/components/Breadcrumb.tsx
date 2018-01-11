@@ -7,7 +7,7 @@ export interface BreadcrumbProps {
   withoutTrailingSlash?: boolean;
 }
 
-export interface ChildProps {
+interface ChildProps {
   to?: string;
   href?: string;
 }

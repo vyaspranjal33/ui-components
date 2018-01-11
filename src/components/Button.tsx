@@ -7,7 +7,7 @@ import Loader from './Loader';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
 
-export interface AllButtonProps {
+interface AllButtonProps {
   disabled?: boolean;
   loading?: boolean;
   badge?: number | string;
