@@ -27,7 +27,10 @@ export interface FilterableListContainerProps {
   onClear?: (event?: any) => void;
   onChange?: (event?: any, value?: string | number) => void;
   onFilter?: (items: any[], filters: {}) => any[];
-  renderControls: (filterOptions: { [key: string]: any }) => ReactElement<any>;
+  renderControls: (
+    filterOptions: { [key: string]: any },
+    handleFilterChange?: any,
+  ) => ReactElement<any>;
   renderItems: (items: any[]) => ReactElement<any>;
   showClearButton?: boolean;
   title: string;
@@ -52,14 +55,20 @@ export default class FilterableList extends PureComponent<
     showClearButton: false,
   };
 
-  public static createClass(props: FilterableListContainerProps): React.ComponentClass<any> {
-    return class FilterableListContainer extends PureComponent<FilterableListContainerProps> {
-      public render() { return <FilterableList {...props} items={this.props.items} />; }
+  public static createClass(
+    props: FilterableListContainerProps,
+  ): React.ComponentClass<any> {
+    return class FilterableListContainer extends PureComponent<
+      FilterableListContainerProps
+    > {
+      public render() {
+        return <FilterableList {...props} items={this.props.items} />;
+      }
     };
   }
 
   public state: { [key: string]: string } = {};
-  public handlers = {};
+  public handlers: { [key: string]: (filterName: string, event: any) => void } = {};
 
   constructor(props: FilterableListProps) {
     super(props);
@@ -80,10 +89,7 @@ export default class FilterableList extends PureComponent<
     }
   }
 
-  public handleFilterChange(
-    filterName: string,
-    event: any,
-  ) {
+  public handleFilterChange = (filterName: string, event: any) => {
     const value = event.target.value;
     this.setState(
       {
@@ -122,7 +128,7 @@ export default class FilterableList extends PureComponent<
   public get clearButton() {
     return (
       <ButtonList style={inlineClearButtonStyle}>
-        <Button small type="secondary"  onClick={this.handleClear}>
+        <Button small type="secondary" onClick={this.handleClear}>
           {this.props.clearButtonLabel}
         </Button>
       </ButtonList>
@@ -154,7 +160,7 @@ export default class FilterableList extends PureComponent<
             {this.showClearButtonInHeader && this.clearButton}
           </div>
           <div className="filter-list" style={filterControlStyle}>
-            {renderControls({ ...this.state, ...this.handlers })}
+            {renderControls({ ...this.state, ...this.handlers }, this.handleFilterChange)}
             {this.showClearButtonInline && this.clearButton}
           </div>
         </div>
@@ -166,9 +172,11 @@ export default class FilterableList extends PureComponent<
   }
 
   private handleClear = (event: any) => {
-    if (this.props.onClear) { return this.props.onClear(event); }
+    if (this.props.onClear) {
+      return this.props.onClear(event);
+    }
     for (const key of Object.keys(this.state)) {
       this.setState({ [key]: '' });
     }
-  }
+  };
 }
