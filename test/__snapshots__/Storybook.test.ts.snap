@@ -9,6 +9,7 @@ exports[`Storyshots Alerts Danger Alert 1`] = `
     <i
       className="sg-icon sg-icon-warning"
       onClick={undefined}
+      style={null}
     />
     Lorem ipsum dolor sit amet, 
     <a
@@ -20,6 +21,7 @@ exports[`Storyshots Alerts Danger Alert 1`] = `
     <i
       className="sg-icon sg-icon-x"
       onClick={[Function]}
+      style={null}
     />
   </p>
 </div>
@@ -34,6 +36,7 @@ exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
     <i
       className="sg-icon sg-icon-clean-ui"
       onClick={undefined}
+      style={null}
     />
     Lorem ipsum dolor sit amet, 
     <a
@@ -45,6 +48,7 @@ exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
     <i
       className="sg-icon sg-icon-x"
       onClick={[Function]}
+      style={null}
     />
   </p>
 </div>
@@ -59,6 +63,7 @@ exports[`Storyshots Alerts Success Alert 1`] = `
     <i
       className="sg-icon sg-icon-check-circle"
       onClick={undefined}
+      style={null}
     />
     Lorem ipsum dolor sit amet, 
     <a
@@ -70,6 +75,7 @@ exports[`Storyshots Alerts Success Alert 1`] = `
     <i
       className="sg-icon sg-icon-x"
       onClick={[Function]}
+      style={null}
     />
   </p>
 </div>
@@ -84,6 +90,7 @@ exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
     <i
       className="sg-icon sg-icon-clean-ui"
       onClick={undefined}
+      style={null}
     />
     Lorem ipsum dolor sit amet, 
     <a
@@ -95,6 +102,7 @@ exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
     <i
       className="sg-icon sg-icon-x"
       onClick={[Function]}
+      style={null}
     />
   </p>
 </div>
@@ -109,6 +117,7 @@ exports[`Storyshots Alerts Warning Alert 1`] = `
     <i
       className="sg-icon sg-icon-warning"
       onClick={undefined}
+      style={null}
     />
     Lorem ipsum dolor sit amet, 
     <a
@@ -120,6 +129,7 @@ exports[`Storyshots Alerts Warning Alert 1`] = `
     <i
       className="sg-icon sg-icon-x"
       onClick={[Function]}
+      style={null}
     />
   </p>
 </div>
@@ -134,6 +144,7 @@ exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
     <i
       className="sg-icon sg-icon-clean-ui"
       onClick={undefined}
+      style={null}
     />
     Lorem ipsum dolor sit amet, 
     <a
@@ -145,6 +156,7 @@ exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
     <i
       className="sg-icon sg-icon-x"
       onClick={[Function]}
+      style={null}
     />
   </p>
 </div>
@@ -405,6 +417,7 @@ exports[`Storyshots Button Danger Button with Icon 1`] = `
   <i
     className="sg-icon sg-icon-trash"
     onClick={undefined}
+    style={null}
   />
   Danger
 </button>
@@ -440,6 +453,7 @@ exports[`Storyshots Button Link Div Danger Button Link 1`] = `
   <i
     className="sg-icon sg-icon-trash"
     onClick={undefined}
+    style={null}
   />
   This is a div
 </div>
@@ -613,6 +627,7 @@ exports[`Storyshots Button Primary Button with Icon 1`] = `
   <i
     className="sg-icon sg-icon-create"
     onClick={undefined}
+    style={null}
   />
   Primary
 </button>
@@ -711,6 +726,7 @@ exports[`Storyshots Button Secondary Button with Icon 1`] = `
   <i
     className="sg-icon sg-icon-copy"
     onClick={undefined}
+    style={null}
   />
   Secondary
 </button>
@@ -760,6 +776,7 @@ exports[`Storyshots Button Small Danger Button with Icon 1`] = `
   <i
     className="sg-icon sg-icon-trash"
     onClick={undefined}
+    style={null}
   />
   Danger
 </button>
@@ -858,6 +875,7 @@ exports[`Storyshots Button Small Primary Button with Icon 1`] = `
   <i
     className="sg-icon sg-icon-create"
     onClick={undefined}
+    style={null}
   />
   Primary
 </button>
@@ -956,6 +974,7 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
   <i
     className="sg-icon sg-icon-copy"
     onClick={undefined}
+    style={null}
   />
   Secondary
 </button>
@@ -988,6 +1007,7 @@ exports[`Storyshots Card Card with Actions 1`] = `
         <i
           className="sg-icon sg-icon-ellipsis"
           onClick={undefined}
+          style={null}
         />
         <div
           className="action-icons"
@@ -1000,6 +1020,7 @@ exports[`Storyshots Card Card with Actions 1`] = `
             <i
               className="sg-icon sg-icon-pencil"
               onClick={undefined}
+              style={null}
             />
           </span>
           <span
@@ -1010,6 +1031,7 @@ exports[`Storyshots Card Card with Actions 1`] = `
             <i
               className="sg-icon sg-icon-view"
               onClick={undefined}
+              style={null}
             />
           </span>
           <span
@@ -1020,6 +1042,7 @@ exports[`Storyshots Card Card with Actions 1`] = `
             <i
               className="sg-icon sg-icon-export"
               onClick={undefined}
+              style={null}
             />
           </span>
         </div>
@@ -1319,12 +1342,13 @@ exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-primary btn-dropdown-gear"
+    className="btn btn-dropdown dropdown btn-secondary btn-dropdown-gear"
     onClick={[Function]}
   >
     <i
       className="sg-icon sg-icon-gear"
       onClick={undefined}
+      style={null}
     />
     <ul
       className="dropdown-menu"
@@ -1357,7 +1381,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown (Small) 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-primary btn-small"
+    className="btn btn-dropdown dropdown btn-secondary btn-small"
     onClick={[Function]}
   >
     Button
@@ -1392,7 +1416,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-primary"
+    className="btn btn-dropdown dropdown btn-secondary"
     onClick={[Function]}
   >
     Button
@@ -1427,7 +1451,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Badge (Small) 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-primary btn-small has-badge"
+    className="btn btn-dropdown dropdown btn-secondary btn-small has-badge"
     onClick={[Function]}
   >
     <span
@@ -1467,7 +1491,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Badge 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-primary has-badge"
+    className="btn btn-dropdown dropdown btn-secondary has-badge"
     onClick={[Function]}
   >
     <span
@@ -1507,12 +1531,17 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Icon (Small) 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-primary btn-small has-icon"
+    className="btn btn-dropdown dropdown btn-secondary btn-small has-icon"
     onClick={[Function]}
   >
     <i
       className="sg-icon sg-icon-create"
       onClick={undefined}
+      style={
+        Object {
+          "color": "white",
+        }
+      }
     />
     Button
     <ul
@@ -1546,12 +1575,17 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Icon 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-primary has-icon"
+    className="btn btn-dropdown dropdown btn-secondary has-icon"
     onClick={[Function]}
   >
     <i
       className="sg-icon sg-icon-create"
       onClick={undefined}
+      style={
+        Object {
+          "color": "white",
+        }
+      }
     />
     Button
     <ul
@@ -1741,6 +1775,7 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon (Small) 1`] = `
     <i
       className="sg-icon sg-icon-create"
       onClick={undefined}
+      style={null}
     />
     Button
     <ul
@@ -1780,6 +1815,7 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
     <i
       className="sg-icon sg-icon-create"
       onClick={undefined}
+      style={null}
     />
     Button
     <ul
@@ -1842,6 +1878,7 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
       <i
         className="sg-icon sg-icon-warning"
         onClick={undefined}
+        style={null}
       />
       Lorem ipsum dolor sit amet, 
       <a
@@ -1853,6 +1890,7 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
       <i
         className="sg-icon sg-icon-x"
         onClick={[Function]}
+        style={null}
       />
     </p>
   </div>
@@ -1905,6 +1943,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
     <i
       className="sg-icon sg-icon-contacts"
       onClick={undefined}
+      style={null}
     />
     <h2>
       Get started adding contacts
@@ -1938,6 +1977,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
       <i
         className="sg-icon sg-icon-help"
         onClick={undefined}
+        style={null}
       />
        
     </span>
@@ -1962,6 +2002,7 @@ exports[`Storyshots Empty State Empty State With Icon 1`] = `
   <i
     className="sg-icon sg-icon-contacts"
     onClick={undefined}
+    style={null}
   />
   <h2>
     Get started adding contacts
@@ -2607,6 +2648,7 @@ Array [
         <i
           className="sg-icon sg-icon-pencil segment-term-inputs-edit"
           onClick={undefined}
+          style={null}
         />
       </section>
     </span>
@@ -2641,11 +2683,13 @@ Array [
         <i
           className="sg-icon sg-icon-pencil segment-term-inputs-edit"
           onClick={undefined}
+          style={null}
         />
       </section>
       <i
         className="sg-icon sg-icon-create"
         onClick={undefined}
+        style={null}
       />
     </span>
   </section>,
@@ -2686,6 +2730,7 @@ exports[`Storyshots Segment Term Segment terms which cannot be edited 1`] = `
     <i
       className="sg-icon sg-icon-create"
       onClick={undefined}
+      style={null}
     />
   </span>
 </section>
@@ -2753,12 +2798,14 @@ exports[`Storyshots Segment Term Segment terms which is being edited 1`] = `
         <i
           className="sg-icon sg-icon-x"
           onClick={undefined}
+          style={null}
         />
       </div>
     </section>
     <i
       className="sg-icon sg-icon-create"
       onClick={undefined}
+      style={null}
     />
   </span>
 </section>
@@ -2830,17 +2877,20 @@ exports[`Storyshots Segment Term Segment terms which is being edited and is fill
           <i
             className="sg-icon sg-icon-check"
             onClick={undefined}
+            style={null}
           />
         </button>
         <i
           className="sg-icon sg-icon-x"
           onClick={undefined}
+          style={null}
         />
       </div>
     </section>
     <i
       className="sg-icon sg-icon-create"
       onClick={undefined}
+      style={null}
     />
   </span>
 </section>
@@ -3256,6 +3306,7 @@ exports[`Storyshots Small Footer Footer Simple 1`] = `
     <i
       className="sg-icon sg-icon-help"
       onClick={undefined}
+      style={null}
     />
      
   </span>
@@ -3274,6 +3325,7 @@ exports[`Storyshots Small Footer Need Help Footer Simple 1`] = `
     <i
       className="sg-icon sg-icon-help"
       onClick={undefined}
+      style={null}
     />
      
   </span>
@@ -3292,6 +3344,7 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
     <i
       className="sg-icon sg-icon-help"
       onClick={undefined}
+      style={null}
     />
      
   </span>

@@ -33,22 +33,24 @@ export class DropdownButton extends React.Component<
 
   public render() {
     const {
-      children,
-      type,
       badge,
+      children,
       disabled,
-      loading,
-      small,
       gear,
-      onDark,
-      onClick,
       group,
       icon,
       label,
+      loading,
+      onClick,
+      onDark,
+      small,
+      type,
     } = this.props;
     const { active } = this.state;
     const hasBadge: boolean = !!badge || badge === 0;
     const hasIcon: boolean = !!icon;
+
+    const buttonType = type || gear ? 'secondary' : 'primary';
 
     const links = map(children, (link: React.ReactElement<any>) => {
       return React.cloneElement(link, {
@@ -59,7 +61,7 @@ export class DropdownButton extends React.Component<
     return (
       <div className="btn-list">
         <div
-          className={cn('btn', 'btn-dropdown', 'dropdown', `btn-${type}`, {
+          className={cn('btn', 'btn-dropdown', 'dropdown', `btn-${buttonType}`, {
             'btn-dropdown-gear': gear,
             'btn-on-dark': onDark,
             'btn-small': small,
@@ -72,7 +74,7 @@ export class DropdownButton extends React.Component<
           onClick={this.handleClick}
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
-          {!gear && hasIcon && <Icon type={icon} />}
+          {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}
           {gear ? <Icon type="gear" /> : label}
           <ul className="dropdown-menu">{links}</ul>
         </div>
