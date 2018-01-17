@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from '../utilities/classnames';
 import Badge from './Badge';
-import { Button, ButtonProps } from './Button';
+import { Button, ButtonProps, ButtonType } from './Button';
 import Icon from './Icon';
 
 export interface DropdownButtonProps {
@@ -50,7 +50,8 @@ export class DropdownButton extends React.Component<
     const hasBadge: boolean = !!badge || badge === 0;
     const hasIcon: boolean = !!icon;
 
-    const buttonType = type || gear ? 'secondary' : 'primary';
+    let buttonType: ButtonType = type;
+    if (gear) { buttonType = 'secondary'; }
 
     const links = map(children, (link: React.ReactElement<any>) => {
       return React.cloneElement(link, {
