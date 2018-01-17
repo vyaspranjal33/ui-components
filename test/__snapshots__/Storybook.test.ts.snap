@@ -1972,6 +1972,659 @@ exports[`Storyshots Empty State Empty State With Icon 1`] = `
 </div>
 `;
 
+exports[`Storyshots FilterableList FilterableList 1`] = `
+<section
+  className="FilterableList"
+>
+  <div
+    className="filter-wrap"
+  >
+    <div
+      className="filter-header"
+    >
+      <p
+        className="filter-title"
+      >
+        Filter
+      </p>
+    </div>
+    <div
+      className="filter-list"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <div
+        className="input-text-wrap"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="input-text-label"
+          htmlFor="name-filter"
+        >
+          Name
+        </label>
+        <input
+          aria-describedby=""
+          id="name-filter"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+  </div>
+  <div
+    className="FilterableListItems"
+  >
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Orange
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Apples
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Tomato
+       (
+      Vegetable
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Cucumber
+       (
+      Vegetable
+      )
+    </article>
+  </div>
+</section>
+`;
+
+exports[`Storyshots FilterableList FilterableList as a Container Component 1`] = `
+<section
+  className="FilterableList"
+>
+  <div
+    className="filter-wrap"
+  >
+    <div
+      className="filter-header"
+    >
+      <p
+        className="filter-title"
+      >
+        Filter Container
+      </p>
+    </div>
+    <div
+      className="filter-list"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <div
+        className="input-text-wrap"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="input-text-label"
+          htmlFor="name-filter"
+        >
+          Name
+        </label>
+        <input
+          aria-describedby=""
+          id="name-filter"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+  </div>
+  <div
+    className="FilterableListItems"
+  >
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Orange
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Apples
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Tomato
+       (
+      Vegetable
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Cucumber
+       (
+      Vegetable
+      )
+    </article>
+  </div>
+</section>
+`;
+
+exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
+<section
+  className="FilterableList"
+>
+  <div
+    className="filter-wrap"
+  >
+    <div
+      className="filter-header"
+    >
+      <p
+        className="filter-title"
+      >
+        Filter
+      </p>
+    </div>
+    <div
+      className="filter-list"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <div
+        className="input-text-wrap"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="input-text-label"
+          htmlFor="name-filter"
+        >
+          Name
+        </label>
+        <input
+          aria-describedby=""
+          id="name-filter"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="text"
+          value=""
+        />
+        
+      </div>
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="FilterableListItems"
+  >
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Orange
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Apples
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Tomato
+       (
+      Vegetable
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Cucumber
+       (
+      Vegetable
+      )
+    </article>
+  </div>
+</section>
+`;
+
+exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`] = `
+<section
+  className="FilterableList"
+>
+  <div
+    className="filter-wrap"
+  >
+    <div
+      className="filter-header"
+    >
+      <p
+        className="filter-title"
+      >
+        Filter
+      </p>
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+    <div
+      className="filter-list"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <div
+        className="input-text-wrap"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="input-text-label"
+          htmlFor="name-filter"
+        >
+          Name
+        </label>
+        <input
+          aria-describedby=""
+          id="name-filter"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="text"
+          value=""
+        />
+        
+      </div>
+    </div>
+  </div>
+  <div
+    className="FilterableListItems"
+  >
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Orange
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Apples
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Tomato
+       (
+      Vegetable
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Cucumber
+       (
+      Vegetable
+      )
+    </article>
+  </div>
+</section>
+`;
+
+exports[`Storyshots FilterableList FilterableList with Two Input Fields and Custom Filtering Logic 1`] = `
+<section
+  className="FilterableList"
+>
+  <div
+    className="filter-wrap"
+  >
+    <div
+      className="filter-header"
+    >
+      <p
+        className="filter-title"
+      >
+        Filter
+      </p>
+    </div>
+    <div
+      className="filter-list"
+      style={
+        Object {
+          "display": "flex",
+          "justifyContent": "space-between",
+        }
+      }
+    >
+      <div
+        className="input-text-wrap"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="input-text-label"
+          htmlFor="name-filter"
+        >
+          Name
+        </label>
+        <input
+          aria-describedby=""
+          id="name-filter"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="text"
+          value=""
+        />
+        
+      </div>
+      <div
+        className="input-text-wrap"
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        <label
+          className="input-text-label"
+          htmlFor="type-filter"
+        >
+          Type
+        </label>
+        <input
+          aria-describedby=""
+          id="type-filter"
+          onBlur={[Function]}
+          onChange={[Function]}
+          onFocus={[Function]}
+          type="text"
+          value=""
+        />
+        
+      </div>
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Clear
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="FilterableListItems"
+  >
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Orange
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Apples
+       (
+      Fruit
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Tomato
+       (
+      Vegetable
+      )
+    </article>
+    <article
+      style={
+        Object {
+          "border": "1px solid #e9ecef",
+          "margin": "10px 0",
+          "padding": "20px",
+          "width": "100%",
+        }
+      }
+    >
+      Cucumber
+       (
+      Vegetable
+      )
+    </article>
+  </div>
+</section>
+`;
+
 exports[`Storyshots Loaders Centered Loader 1`] = `
 <div
   style={
@@ -3422,9 +4075,58 @@ exports[`Storyshots Tabs Zero-Border Tabs 1`] = `
 </ul>
 `;
 
+exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] = `
+<div
+  className="input-text-wrap"
+  style={Object {}}
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    Stateless Input
+  </label>
+  <input
+    aria-describedby=""
+    id="test-input-simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value=""
+  />
+  
+</div>
+`;
+
+exports[`Storyshots Text Input Stateless Text Input with a Value Passed as a Prop 1`] = `
+<div
+  className="input-text-wrap has-value"
+  style={Object {}}
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    Stateless Input
+  </label>
+  <input
+    aria-describedby=""
+    id="test-input-simple"
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value="Passed-In Value"
+  />
+  
+</div>
+`;
+
 exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
 <div
   className="input-text-wrap is-disabled"
+  style={undefined}
 >
   <label
     className="input-text-label"
@@ -3433,13 +4135,13 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
     An Input
   </label>
   <input
-    aria-describedby={null}
+    aria-describedby={undefined}
     id="test-input-simple"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value=""
+    value={undefined}
   />
 </div>
 `;
@@ -3447,6 +4149,7 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
 exports[`Storyshots Text Input Text Input Large 1`] = `
 <div
   className="input-text-wrap is-large"
+  style={undefined}
 >
   <label
     className="input-text-label"
@@ -3455,13 +4158,13 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
     Large Input
   </label>
   <input
-    aria-describedby={null}
+    aria-describedby={undefined}
     id="test-input-simple"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value=""
+    value={undefined}
   />
 </div>
 `;
@@ -3469,6 +4172,7 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
 exports[`Storyshots Text Input Text Input Simple 1`] = `
 <div
   className="input-text-wrap is-required"
+  style={undefined}
 >
   <label
     className="input-text-label"
@@ -3477,13 +4181,13 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
     Test Input
   </label>
   <input
-    aria-describedby={null}
+    aria-describedby={undefined}
     id="test-input-simple"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value=""
+    value={undefined}
   />
 </div>
 `;
@@ -3491,6 +4195,7 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
 exports[`Storyshots Text Input Text Input With Error 1`] = `
 <div
   className="input-text-wrap is-error"
+  style={undefined}
 >
   <label
     className="input-text-label"
@@ -3505,7 +4210,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value=""
+    value={undefined}
   />
   <span
     className="input-info danger"
@@ -3519,6 +4224,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
 exports[`Storyshots Text Input Text Input With Info 1`] = `
 <div
   className="input-text-wrap"
+  style={undefined}
 >
   <label
     className="input-text-label"
@@ -3533,7 +4239,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value=""
+    value={undefined}
   />
   <span
     className="input-info"
@@ -3547,6 +4253,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
 exports[`Storyshots Text Input Text Input With Numbers 1`] = `
 <div
   className="input-text-wrap"
+  style={undefined}
 >
   <label
     className="input-text-label"
@@ -3561,7 +4268,7 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
     onChange={[Function]}
     onFocus={[Function]}
     type="number"
-    value=""
+    value={undefined}
   />
   <span
     className="input-info"

@@ -9,6 +9,7 @@ export { Checkbox } from './components/Checkbox';
 export { DropdownButton } from './components/DropdownButton';
 export { Dropzone } from './components/Dropzone';
 export { EmptyState } from './components/EmptyState';
+export { FilterableList } from './components/FilterableList';
 export { Footer as SmallFooter } from './components/SmallFooter';
 export { Icon } from './components/Icon';
 export { Loader } from './components/Loader';

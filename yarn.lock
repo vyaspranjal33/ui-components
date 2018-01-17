@@ -6,6 +6,10 @@
   version "3.0.9"
   resolved "https://registry.npmjs.org/@hypnosphi/fuse.js/-/fuse.js-3.0.9.tgz#ea99f6121b4a8f065b4c71f85595db2714498807"
 
+"@sendgrid/style-guide-grid@^0.3.0":
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/@sendgrid/style-guide-grid/-/style-guide-grid-0.3.0.tgz#2963ee21f0226c4ea53c02f9311aab20b91996ec"
+
 "@storybook/addon-actions@^3.2.17":
   version "3.2.17"
   resolved "https://registry.yarnpkg.com/@storybook/addon-actions/-/addon-actions-3.2.17.tgz#e85d38f743125157fdaf6669708e089bc2008e50"
@@ -203,6 +207,10 @@
 "@types/jest@^21.1.8":
   version "21.1.8"
   resolved "https://registry.yarnpkg.com/@types/jest/-/jest-21.1.8.tgz#d497213725684f1e5a37900b17a47c9c018f1a97"
+
+"@types/lodash@^4.14.92":
+  version "4.14.92"
+  resolved "https://registry.yarnpkg.com/@types/lodash/-/lodash-4.14.92.tgz#6e3cb0b71a1e12180a47a42a744e856c3ae99a57"
 
 "@types/node@*":
   version "8.0.53"
@@ -4428,7 +4436,7 @@ lodash.uniq@^4.5.0:
 
 lodash@4.x.x, lodash@^4.0.0, lodash@^4.14.0, lodash@^4.15.0, lodash@^4.17.4, lodash@^4.2.1, lodash@~4.17.4:
   version "4.17.4"
-  resolved "https://registry.npmjs.org/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.4.tgz#78203a4d1c328ae1d86dca6460e369b57f4055ae"
 
 lodash@^3.10.1:
   version "3.10.1"
