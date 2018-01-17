@@ -178,5 +178,5 @@ export default class FilterableList extends PureComponent<
     for (const key of Object.keys(this.state)) {
       this.setState({ [key]: '' });
     }
-  };
+  }
 }
