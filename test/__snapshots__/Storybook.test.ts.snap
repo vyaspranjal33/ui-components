@@ -1381,7 +1381,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown (Small) 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-secondary btn-small"
+    className="btn btn-dropdown dropdown btn-primary btn-small"
     onClick={[Function]}
   >
     Button
@@ -1416,7 +1416,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-secondary"
+    className="btn btn-dropdown dropdown btn-primary"
     onClick={[Function]}
   >
     Button
@@ -1451,7 +1451,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Badge (Small) 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-secondary btn-small has-badge"
+    className="btn btn-dropdown dropdown btn-primary btn-small has-badge"
     onClick={[Function]}
   >
     <span
@@ -1491,7 +1491,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Badge 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-secondary has-badge"
+    className="btn btn-dropdown dropdown btn-primary has-badge"
     onClick={[Function]}
   >
     <span
@@ -1531,7 +1531,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Icon (Small) 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-secondary btn-small has-icon"
+    className="btn btn-dropdown dropdown btn-primary btn-small has-icon"
     onClick={[Function]}
   >
     <i
@@ -1575,7 +1575,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Icon 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-secondary has-icon"
+    className="btn btn-dropdown dropdown btn-primary has-icon"
     onClick={[Function]}
   >
     <i
