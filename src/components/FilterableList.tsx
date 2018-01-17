@@ -44,7 +44,7 @@ export interface FilterableListState {
   [key: string]: string;
 }
 
-export default class FilterableList extends PureComponent<
+export class FilterableList extends PureComponent<
   FilterableListProps,
   FilterableListState
 > {
@@ -180,3 +180,5 @@ export default class FilterableList extends PureComponent<
     }
   }
 }
+
+export default FilterableList;
