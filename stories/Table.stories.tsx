@@ -2,6 +2,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { Table, Row, Cell, TableHeader, TableBody, HeaderCell } from '../src/components/Table';
+import Actions from '../src/components/Actions';
 
 const stories = storiesOf('Table', module);
 
@@ -18,20 +19,17 @@ stories.add('Standard', () =>
     </TableHeader>
     <TableBody>
       <Row>
-        <Cell><div className="contact"><a href="#">todd.moy@sendgrid.com</a></div></Cell>
-        <Cell><div className="stats">02/02/2015</div></Cell>
-        <Cell><div className="stats">02/10/2016</div></Cell>
-        <Cell><div className="stats">02/08/2016</div></Cell>
+        <Cell className="contact"><a href="#">todd.moy@sendgrid.com</a></Cell>
+        <Cell className="stats">02/02/2015</Cell>
+        <Cell className="stats">02/10/2016</Cell>
+        <Cell className="stats">02/08/2016</Cell>
         <Cell>
-          <div className="actions">
-            <i className="sg-icon sg-icon-ellipsis"></i>
-            <div className="action-icons">
-              <span data-tooltip="View" data-tooltip-pos="up"><i className="sg-icon sg-icon-view"></i></span>
-              <span data-tooltip="Edit" data-tooltip-pos="up"><i className="sg-icon sg-icon-pencil"></i></span>
-              <span data-tooltip="Copy" data-tooltip-pos="up"><i className="sg-icon sg-icon-copy"></i></span>
-              <span data-tooltip="Delete" data-tooltip-pos="up"><i className="sg-icon sg-icon-trash"></i></span>
-            </div>
-          </div>
+          <Actions>
+            <span data-tooltip="View" data-tooltip-pos="up"><i className="sg-icon sg-icon-view"></i></span>
+            <span data-tooltip="Edit" data-tooltip-pos="up"><i className="sg-icon sg-icon-pencil"></i></span>
+            <span data-tooltip="Copy" data-tooltip-pos="up"><i className="sg-icon sg-icon-copy"></i></span>
+            <span data-tooltip="Delete" data-tooltip-pos="up"><i className="sg-icon sg-icon-trash"></i></span>
+          </Actions>
         </Cell>
       </Row>
     </TableBody>
