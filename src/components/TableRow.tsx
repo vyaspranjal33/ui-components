@@ -11,8 +11,6 @@ interface ElementWithClassList extends Element {
 }
 
 export class Row extends React.Component<TableRowProps> {
-  public static defaultProps: Partial<TableRowProps> = { bodyNode: document.body };
-
   public render() {
     return (
       <tr>
@@ -20,10 +18,6 @@ export class Row extends React.Component<TableRowProps> {
       </tr>
     );
   }
-};
-
-Row.defaultProps = {
-  
 };
 
 export default Row;

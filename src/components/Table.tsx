@@ -1,8 +1,11 @@
 import React from 'react';
 import cn from '../utilities/classnames';
+import TableHeader from './TableHeader';
+import HeaderCell from './TableHeaderCell';
+import TableBody from './TableBody';
 import Row from './TableRow';
 import Cell from './TableCell';
-export { Cell, Row };
+export { Cell, Row, TableHeader, TableBody, HeaderCell };
 
 
 export interface TableProps {
@@ -16,8 +19,6 @@ interface ElementWithClassList extends Element {
 }
 
 export class Table extends React.Component<TableProps> {
-  public static defaultProps: Partial<TableProps> = { bodyNode: document.body };
-
   public render() {
     return (
       <table className="table-wrap">
@@ -25,10 +26,6 @@ export class Table extends React.Component<TableProps> {
       </table>
     );
   }
-};
-
-Table.defaultProps = {
-  
 };
 
 export default Table;

@@ -1,22 +1,22 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Table, Row, Cell } from '../src/components/Table';
+import { Table, Row, Cell, TableHeader, TableBody, HeaderCell } from '../src/components/Table';
 
 const stories = storiesOf('Table', module);
 
 stories.add('Standard', () => 
 	<Table>
-    <thead>
+    <TableHeader>
       <Row>
-        <th>Contacts</th>
-        <th>Date Added</th>
-        <th>Last Opened</th>
-        <th>Last Clicked</th>
-        <th>Actions</th>
+        <HeaderCell>Contacts</HeaderCell>
+        <HeaderCell>Date Added</HeaderCell>
+        <HeaderCell>Last Opened</HeaderCell>
+        <HeaderCell>Last Clicked</HeaderCell>
+        <HeaderCell>Actions</HeaderCell>
       </Row>
-    </thead>
-    <tbody>
+    </TableHeader>
+    <TableBody>
       <Row>
         <Cell><div className="contact"><a href="#">todd.moy@sendgrid.com</a></div></Cell>
         <Cell><div className="stats">02/02/2015</div></Cell>
@@ -34,6 +34,6 @@ stories.add('Standard', () =>
           </div>
         </Cell>
       </Row>
-    </tbody>
+    </TableBody>
   </Table>
 );

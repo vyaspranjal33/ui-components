@@ -28,6 +28,6 @@ export {
   SegmentTermWrap,
 } from './components/SegmentTerm';
 export { Tab, Tabs } from './components/Tabs';
-export { Table, Row, Cell } from './components/Table';
+export { Table, Row, Cell, TableHeader, TableBody } from './components/Table';
 export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';

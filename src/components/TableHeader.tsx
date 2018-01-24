@@ -1,7 +1,7 @@
 import React from 'react';
 import cn from '../utilities/classnames';
 
-export interface TableHeaderCellProps {
+export interface TableHeaderProps {
   bodyNode?: ElementWithClassList;
   children?: React.ReactNode;
 }
@@ -10,14 +10,14 @@ interface ElementWithClassList extends Element {
   classList: DOMTokenList;
 }
 
-export class HeaderCell extends React.Component<TableHeaderCellProps> {
+export class TableHeader extends React.Component<TableHeaderProps> {
   public render() {
     return (
-      <th>
+      <thead>
         {this.props.children}
-      </th>
+      </thead>
     );
   }
 };
 
-export default HeaderCell;
+export default TableHeader;
