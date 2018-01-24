@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import cn from '../utilities/classnames';
+import cn = require( '../utilities/classnames');
 
 export interface SideModalProps {
   bodyNode?: ElementWithClassList;

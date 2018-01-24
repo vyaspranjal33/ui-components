@@ -1,5 +1,5 @@
 import React from 'react';
-import cn from '../utilities/classnames';
+import cn = require( '../utilities/classnames');
 import findActiveIndex from '../utilities/find-active-index';
 import { ButtonProps } from './Button';
 

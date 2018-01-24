@@ -1,6 +1,6 @@
 import React from 'react';
 
-import cn from '../../utilities/classnames';
+import cn = require( '../../utilities/classnames');
 import { Icon } from '../Icon';
 export { SegmentTermControls } from './SegmentTermControls';
 export { SegmentTermDescription } from './SegmentTermDescription';
