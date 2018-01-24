@@ -9,19 +9,16 @@ export { Cell, Row, TableHeader, TableBody, HeaderCell };
 
 
 export interface TableProps {
-  bodyNode?: ElementWithClassList;
   children?: React.ReactNode;
-  classes?: string;
-}
-
-interface ElementWithClassList extends Element {
-  classList: DOMTokenList;
+  className?: string;
 }
 
 export class Table extends React.Component<TableProps> {
   public render() {
+    const classes = this.props.className ? this.props.className + " table-wrap" : "table-wrap"
+
     return (
-      <table className="table-wrap">
+      <table className={classes}>
         {this.props.children}
       </table>
     );
@@ -29,3 +26,5 @@ export class Table extends React.Component<TableProps> {
 };
 
 export default Table;
+
+

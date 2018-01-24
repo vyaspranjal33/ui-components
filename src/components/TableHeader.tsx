@@ -2,18 +2,16 @@ import React from 'react';
 import cn from '../utilities/classnames';
 
 export interface TableHeaderProps {
-  bodyNode?: ElementWithClassList;
   children?: React.ReactNode;
-}
-
-interface ElementWithClassList extends Element {
-  classList: DOMTokenList;
+  className?: string;
 }
 
 export class TableHeader extends React.Component<TableHeaderProps> {
   public render() {
+    const classes = this.props.className ? this.props.className : ""
+    
     return (
-      <thead>
+      <thead className={classes}>
         {this.props.children}
       </thead>
     );
