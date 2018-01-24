@@ -30,3 +30,4 @@ export {
 export { Tab, Tabs } from './components/Tabs';
 export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';
+export { Tooltip } from './components/Tooltip';
