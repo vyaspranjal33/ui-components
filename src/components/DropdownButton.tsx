@@ -1,5 +1,5 @@
 import React from 'react';
-import cn from '../utilities/classnames';
+import cn = require( '../utilities/classnames');
 import Badge from './Badge';
 import { Button, ButtonProps, ButtonType } from './Button';
 import Icon from './Icon';

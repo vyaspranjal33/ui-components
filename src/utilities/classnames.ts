@@ -25,4 +25,4 @@ const classNames = (...args: any[]): string => {
   return result.trim();
 };
 
-export default classNames;
+export = classNames;

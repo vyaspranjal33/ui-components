@@ -1,5 +1,5 @@
 import React from 'react';
-import cn from '../utilities/classnames';
+import cn = require( '../utilities/classnames');
 
 export interface DividerProps {
   label?: string;
