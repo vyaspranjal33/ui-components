@@ -109,11 +109,14 @@ export class FilterableList extends PureComponent<
     const filters = values(this.state)
       .join()
       .toLowerCase();
-    const includesFilters = (value: string) =>
-      value
+
+    const includesFilters = (value: string): boolean => {
+      if (!value.toString) { return false; }
+      return value
         .toString()
         .toLowerCase()
         .includes(filters);
+    };
 
     return items.filter((item: string | {}): boolean => {
       if (typeof item === 'string') {
