@@ -1,6 +1,6 @@
 import React from 'react';
 import { color as ValidColor } from '../types/color';
-import cn = require( '../utilities/classnames');
+import cn from '../utilities/classnames';
 import Badge from './Badge';
 
 export interface CardProps {
