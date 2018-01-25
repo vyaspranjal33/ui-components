@@ -11,9 +11,9 @@ export class HeaderCell extends React.Component<TableHeaderCellProps> {
     const classes = this.props.className ? this.props.className : ""
     
     return (
-      <th className={classes}>
+      <td className={classes}>
         {this.props.children}
-      </th>
+      </td>
     );
   }
 };
