@@ -67,9 +67,11 @@ This is a list of the available Components and most of the properties. [Run stor
 - [Radio Button](https://github.com/sendgrid/ui-components/blob/master/src/components/Radio.tsx)
 - [Slider](https://github.com/sendgrid/ui-components/blob/master/src/components/Slider.tsx)
 - [Small Footer](https://github.com/sendgrid/ui-components/blob/master/src/components/SmallFooter.tsx)
+- [Table](https://github.com/sendgrid/ui-components/blob/master/src/components/Table.tsx)
 - [Tabs](https://github.com/sendgrid/ui-components/blob/master/src/components/Tabs.tsx)
 - [TextInput](https://github.com/sendgrid/ui-components/blob/master/src/components/TextInput.tsx)
 - [Toggle Buttons](https://github.com/sendgrid/ui-components/blob/master/src/components/ToggleButtons.tsx)
+- [Tooltip](https://github.com/sendgrid/ui-components/blob/master/src/components/Tooltip.tsx)
 
 # Available Commands
 * Start Storybook
