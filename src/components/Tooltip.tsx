@@ -39,6 +39,7 @@ export interface HTMLTooltipProps {
 export interface HTMLTooltipState {
   hovered: boolean;
   tooltipHeight: number;
+  opened: boolean;
 }
 
 export class HTMLTooltip extends React.Component<
@@ -53,6 +54,7 @@ export class HTMLTooltip extends React.Component<
     this.state = {
       hovered: false,
       tooltipHeight: 0,
+      opened: false,
     };
 
     this.handleHoverIn = this.handleHoverIn.bind(this);
@@ -60,7 +62,6 @@ export class HTMLTooltip extends React.Component<
   }
 
   public static defaultProps = {
-    hovered: false,
     direction: 'right',
     className: '',
   };
@@ -68,35 +69,47 @@ export class HTMLTooltip extends React.Component<
   public state = {
     hovered: false,
     tooltipHeight: 0,
+    opened: false
+  };
+
+  public shouldComponentUpdate(nextProps?: any, nextState?: any) {
+    if (this.state.opened === nextState.opened) {
+      return false;
+    }
+    return true;
   };
 
   public handleHoverIn = () => {
-    this.setState({ hovered: true }, () => {
-      this.setState({ tooltipHeight: this.tooltipRef.offsetHeight });
+    this.setState({ hovered: true, opened: true, tooltipHeight: this.tooltipRef.offsetHeight }, () => {
+      
     });
   };
 
   public handleHoverOut = () => {
+    this.setState({ hovered: false })
     setTimeout(() => {
-      this.setState({ hovered: false });
+      if (!this.state.hovered) {
+        this.setState({ opened: false });
+      }
     }, 1000);
   };
 
   render() {
     return (
-      <div onMouseOut={this.handleHoverOut}>
-        <div className="tooltip-js-parent" onMouseOver={this.handleHoverIn}>
+      <div>
+        <div className="tooltip-js-parent" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
           {this.props.hoverTarget}
         </div>
         <div
           className={cn(`tooltip-js-content ${this.props.className}`, {
             'is-left': this.props.direction === 'left',
-            'is-visible': this.state.hovered,
+            'is-visible': this.state.opened,
           })}
           style={{ top: -(this.state.tooltipHeight / 2) - 3 }}
           ref={input => {
             this.tooltipRef = input;
           }}
+          onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}
         >
           {this.props.children}
         </div>
