@@ -34,6 +34,7 @@ export interface HTMLTooltipProps {
   className?: string;
   children?: React.ReactElement<any>;
   hoverTarget?: React.ReactElement<any>;
+  debounce?: number;
 }
 
 export interface HTMLTooltipState {
@@ -64,6 +65,7 @@ export class HTMLTooltip extends React.Component<
   public static defaultProps = {
     direction: 'right',
     className: '',
+    debounce: 1000,
   };
 
   public state = {
@@ -80,9 +82,7 @@ export class HTMLTooltip extends React.Component<
   };
 
   public handleHoverIn = () => {
-    this.setState({ hovered: true, opened: true, tooltipHeight: this.tooltipRef.offsetHeight }, () => {
-      
-    });
+    this.setState({ hovered: true, opened: true, tooltipHeight: this.tooltipRef.offsetHeight });
   };
 
   public handleHoverOut = () => {
@@ -91,7 +91,7 @@ export class HTMLTooltip extends React.Component<
       if (!this.state.hovered) {
         this.setState({ opened: false });
       }
-    }, 1000);
+    }, this.props.debounce);
   };
 
   render() {
