@@ -31,4 +31,4 @@ export { Tab, Tabs } from './components/Tabs';
 export { Table, Row, Cell, TableHeader, TableBody } from './components/Table';
 export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';
-export { Tooltip } from './components/Tooltip';
+export { Tooltip, HTMLTooltip } from './components/Tooltip';
