@@ -17,6 +17,15 @@ export const Actions: React.SFC<ActionsProps> = ({ children }) => {
   );
 };
 
+export const ActionsCell: React.SFC<ActionsProps> = ({ children }) => {
+  return (
+    <td className="actions">
+      <Icon type="ellipsis" />
+      <div className="action-icons">{children}</div>
+    </td>
+  );
+};
+
 export interface ActionProps {
   title: string;
   icon: IconType;
