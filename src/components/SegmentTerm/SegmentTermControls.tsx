@@ -26,13 +26,15 @@ export const SegmentTermControls: React.SFC<SegmentTermControlsProps> = ({
       {
         showConfirm &&
           <Button type="secondary" small onClick={onConfirm}>
-            <Icon type="check" />
+            <Icon type="check-thin" />
           </Button>
       }
-      <Icon type="x" onClick={onCancel} />
+      <Button type="danger" small onClick={onCancel}>
+        <Icon type="x" />
+      </Button>
     </ButtonList>
   ) : (
-   isEditable && <Icon type="pencil" className="segment-term-inputs-edit" onClick={onEdit} />
+   isEditable && <Icon type="pencil" className="segment-term-edit" onClick={onEdit} />
   )
 );
 

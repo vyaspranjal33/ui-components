@@ -4,6 +4,7 @@ import React, { Fragment } from 'react';
 
 import {
   SegmentTerm,
+  SegmentTermAddButton,
   SegmentTermControls,
   SegmentTermDescription,
   SegmentTermTitle,
@@ -11,11 +12,14 @@ import {
 } from '../src/components/SegmentTerm';
 
 const stories = storiesOf('Segment Term', module);
+const onClick = () => {};
 
 stories.add('Segment terms', () => (
   <Fragment>
     <SegmentTermWrap>
-      <SegmentTermTitle label="Entry Criteria" secondaryLabel="=" />
+      <SegmentTermTitle>
+        Entry Criteria
+      </SegmentTermTitle>
       <SegmentTerm hasSeparator>
         <SegmentTermDescription
           label="The first time a contact is added to"
@@ -25,7 +29,9 @@ stories.add('Segment terms', () => (
       </SegmentTerm>
     </SegmentTermWrap>
     <SegmentTermWrap>
-      <SegmentTermTitle label="Or" justify="right" />
+      <SegmentTermTitle>
+        Or
+      </SegmentTermTitle>
       <SegmentTerm>
         <SegmentTermDescription
           label="Every time a contact is added to"
@@ -33,13 +39,16 @@ stories.add('Segment terms', () => (
         />
         <SegmentTermControls isEditable />
       </SegmentTerm>
+      <SegmentTermAddButton onClick={onClick} />
     </SegmentTermWrap>
   </Fragment>
 ));
 
 stories.add('Segment terms which cannot be edited', () => (
   <SegmentTermWrap>
-    <SegmentTermTitle label="Entry Criteria" secondaryLabel="=" />
+    <SegmentTermTitle>
+      Entry Criteria
+    </SegmentTermTitle>
     <SegmentTerm>
       <SegmentTermDescription
         label="The first time a contact is added to"
@@ -51,8 +60,10 @@ stories.add('Segment terms which cannot be edited', () => (
 
 stories.add('Segment terms which is being edited', () => (
   <SegmentTermWrap>
-    <SegmentTermTitle label="Entry Criteria" secondaryLabel="=" />
-    <SegmentTerm isEditing>
+    <SegmentTermTitle>
+      Entry Criteria
+    </SegmentTermTitle>
+    <SegmentTerm hasSeparator isEditing>
       <div className="input-select-wrap">
         <label className="input-select-label" htmlFor="select-a">Select send conditions</label>
         <select id="select-a">
@@ -67,13 +78,16 @@ stories.add('Segment terms which is being edited', () => (
       </div>
       <SegmentTermControls isEditing />
     </SegmentTerm>
+    <SegmentTermAddButton onClick={onClick} />
   </SegmentTermWrap>
 ));
 
 stories.add('Segment terms which is being edited and is filled out', () => (
   <SegmentTermWrap>
-    <SegmentTermTitle label="Entry Criteria" secondaryLabel="=" />
-    <SegmentTerm isEditing>
+    <SegmentTermTitle>
+      Entry Criteria
+    </SegmentTermTitle>
+    <SegmentTerm hasSeparator isEditing>
       <div className="input-select-wrap">
         <select id="select-a">
           <option>The first time a contact</option>
@@ -91,5 +105,6 @@ stories.add('Segment terms which is being edited and is filled out', () => (
       </div>
       <SegmentTermControls isEditing showConfirm />
     </SegmentTerm>
+    <SegmentTermAddButton onClick={onClick} />
   </SegmentTermWrap>
 ));

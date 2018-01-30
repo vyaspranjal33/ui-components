@@ -9,8 +9,8 @@ export const SegmentTermDescription: React.SFC<SegmentTermDescription> = ({
   label,
   queryName,
 }) => (
-  <span className="segment-term-description">
+  <p>
     {`${label} `}
     <strong>{queryName}</strong>
-  </span>
+  </p>
 );

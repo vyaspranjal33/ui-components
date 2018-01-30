@@ -1,24 +1,12 @@
 import React from 'react';
 import cn from '../../utilities/classnames';
 
-export type SegmentTermTitleJustify =
-  | 'right'
-  | 'left';
-
 export interface SegmentTermTitleProps {
-  justify?: SegmentTermTitleJustify;
-  label: string;
-  secondaryLabel?: string;
+  children: React.ReactNode;
 }
 
-export const SegmentTermTitle: React.SFC<SegmentTermTitleProps> = ({ label, justify, secondaryLabel }) => (
-  <span className="segment-term-title">
-    <strong className={cn({ 'segment-terms-or': justify === 'right' })}>{label}</strong>
-    {secondaryLabel && <small>{secondaryLabel}</small>}
-  </span>
+export const SegmentTermTitle: React.SFC<SegmentTermTitleProps> = ({ children }) => (
+  <p className="segment-term-title">
+    {children}
+  </p>
 );
-
-SegmentTermTitle.defaultProps = {
-  justify: 'left',
-  secondaryLabel: '',
-};
