@@ -14,10 +14,9 @@ export interface TableProps {
 
 export class Table extends React.Component<TableProps> {
   public render() {
-    const classes = this.props.className ? this.props.className + ' table-wrap' : 'table-wrap';
 
     return (
-      <table className={classes}>
+      <table className={cn('table-wrap', this.props.className)}>
         {this.props.children}
       </table>
     );
