@@ -8,10 +8,9 @@ export interface TableRowProps {
 
 export class Row extends React.Component<TableRowProps> {
   public render() {
-    const classes = this.props.className ? this.props.className : '';
 
     return (
-      <tr className={classes}>
+      <tr className={cn(this.props.className)}>
         {this.props.children}
       </tr>
     );
