@@ -8,10 +8,9 @@ export interface TableCellProps {
 
 export class HeaderCell extends React.Component<TableCellProps> {
   public render() {
-    const classes = this.props.className ? this.props.className : '';
 
     return (
-      <th className={classes}>
+      <th className={cn(this.props.className)}>
         {this.props.children}
       </th>
     );
