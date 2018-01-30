@@ -11,9 +11,13 @@
     "test": "jest --coverage",
     "ci-test": "yarn lint && yarn test && yarn build-storybook",
     "storybook": "start-storybook -s ./ -p 6006",
-    "build-storybook": "build-storybook",
-    "prepublish": "yarn build",
-    "precommit": "yarn lint-fix"
+    "build-storybook": "build-storybook"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn lint-fix",
+      "pre-publish": "yarn build"
+    }
   },
   "repository": "https://github.com/sendgrid/ui-components.git",
   "author": "SendGrid <careers@sendgrid.com>",
@@ -43,7 +47,7 @@
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
-    "husky": "^0.14.3",
+    "husky": "^0.15.0-rc.3",
     "jest": "^21.2.1",
     "node-sass": "^4.7.2",
     "react-test-renderer": "^16.2.0",
@@ -59,17 +63,10 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>jestSetup.js",
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js",
-      "json"
-    ],
+    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
     "transform": {
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testMatch": [
-      "**/*.test.(ts|tsx|js)"
-    ]
+    "testMatch": ["**/*.test.(ts|tsx|js)"]
   }
 }

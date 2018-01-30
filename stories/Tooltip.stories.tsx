@@ -15,13 +15,13 @@ stories.add('Standard (Up)', () => (
 ));
 
 stories.add('Standard (Down)', () => (
-    <h3>
-      Tooltip Down
-      <Tooltip content="Hello." direction="down">
-        <Icon type="info-circle" />
-      </Tooltip>
-    </h3>
-  ));
+  <h3>
+    Tooltip Down
+    <Tooltip content="Hello." direction="down">
+      <Icon type="info-circle" />
+    </Tooltip>
+  </h3>
+));
 
 stories.add('Standard (Left)', () => (
   <h3>
@@ -58,7 +58,7 @@ stories.add('HTML Content', () => (
     <div className="input-info-tooltip">
       <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left">
         <p>
-          The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
+          The <a href="#">CCV number</a> is a 3 or 5 digit security code printed
           on the front or back of your card.
         </p>
       </HTMLTooltip>
