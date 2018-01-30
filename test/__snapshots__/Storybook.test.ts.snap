@@ -1316,6 +1316,122 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
 </div>
 `;
 
+exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] = `
+Array [
+  <button
+    className="btn btn-primary"
+    id={undefined}
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>,
+  <div
+    className="sg-modal"
+  >
+    <div
+      className="conf-alert sg-modal-content"
+    >
+      <h2
+        className="conf-alert-header"
+      >
+        Very cool! 😍
+      </h2>
+      <div
+        className="conf-alert-body"
+      >
+        <p
+          className="conf-alert-text"
+        >
+          This will make a thing happen.
+        </p>
+      </div>
+      <div
+        className="conf-alert-actions"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="btn btn-primary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
+exports[`Storyshots ConfirmationModal ConfirmationModal with rich contents 1`] = `
+Array [
+  <button
+    className="btn btn-primary"
+    id={undefined}
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>,
+  <div
+    className="sg-modal"
+  >
+    <div
+      className="conf-alert sg-modal-content"
+    >
+      <h2
+        className="conf-alert-header"
+      >
+        <p>
+          That's a 
+          <u>
+            spicy
+          </u>
+           meatball!
+        </p>
+      </h2>
+      <div
+        className="conf-alert-body"
+      >
+        <p
+          className="conf-alert-text"
+        >
+          <p>
+            <img
+              src="http://placebeard.it/150/100"
+            />
+            <br />
+            Grooming this beard cannot be undone.
+          </p>
+        </p>
+      </div>
+      <div
+        className="conf-alert-actions"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="btn btn-primary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>,
+]
+`;
+
 exports[`Storyshots Divider Divider (Thin) 1`] = `
 <hr
   className="is-thin"
