@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import cn from '../utilities/classnames';
 import {
   ModalProps,
@@ -15,7 +15,7 @@ const evaluateRenderProp: (prop: string | (() => React.ReactNode)) => React.Reac
   return typeof prop === 'string' ? prop : prop();
 };
 
-export class ConfirmationModal extends React.Component<ConfirmationModalProps> {
+export class ConfirmationModal extends Component<ConfirmationModalProps> {
   public static defaultProps: Partial<ConfirmationModalProps> = { bodyNode: document.body };
 
   public componentWillReceiveProps(nextProps: ConfirmationModalProps) {

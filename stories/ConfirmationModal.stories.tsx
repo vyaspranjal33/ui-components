@@ -9,20 +9,18 @@ const stories = storiesOf('ConfirmationModal', module);
 
 // Need a way to close/open the modal
 class ExampleContainer extends Component<any, { isOpen: boolean }> {
-  public open: (e: any) => void;
-  public close: (e: any) => void;
-
   constructor(props: any) {
     super(props);
 
-    this.open = () => this.setState({ isOpen: true });
-    this.close = () => this.setState({ isOpen: false });
     this.state = { isOpen: false };
   }
 
+  public open = (e: any) => { this.setState({ isOpen: true }); };
+  public close = (e: any) => { this.setState({ isOpen: false }); };
+
   public render() {
     return (
-      <Fragment>
+      <div>
         <Button type="primary" onClick={this.open}>Open Modal</Button>
         <ConfirmationModal
           isOpen={this.state.isOpen}
@@ -35,7 +33,7 @@ class ExampleContainer extends Component<any, { isOpen: boolean }> {
           renderBody={this.props.renderBody}
           renderHeader={this.props.renderHeader}
         />
-      </Fragment>
+      </div>
     );
   }
 }

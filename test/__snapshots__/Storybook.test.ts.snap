@@ -1317,14 +1317,14 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
 `;
 
 exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] = `
-Array [
+<div>
   <button
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
   >
     Open Modal
-  </button>,
+  </button>
   <div
     className="sg-modal"
   >
@@ -1364,19 +1364,19 @@ Array [
         </button>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Storyshots ConfirmationModal ConfirmationModal with rich contents 1`] = `
-Array [
+<div>
   <button
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
   >
     Open Modal
-  </button>,
+  </button>
   <div
     className="sg-modal"
   >
@@ -1428,8 +1428,8 @@ Array [
         </button>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;
 
 exports[`Storyshots Divider Divider (Thin) 1`] = `
