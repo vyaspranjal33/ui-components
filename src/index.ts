@@ -1,4 +1,4 @@
-export { Action, Actions } from './components/Actions';
+export { Action, Actions, ActionsCell } from './components/Actions';
 export { Alert } from './components/Alert';
 export { Badge } from './components/Badge';
 export { Breadcrumb } from './components/Breadcrumb';
@@ -28,5 +28,7 @@ export {
   SegmentTermWrap,
 } from './components/SegmentTerm';
 export { Tab, Tabs } from './components/Tabs';
+export { Table, Row, Cell, TableHeader, TableBody } from './components/Table';
 export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';
+export { Tooltip, HTMLTooltip } from './components/Tooltip';
