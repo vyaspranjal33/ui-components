@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Icon from '../src/components/Icon';
-import { Tooltip, HTMLTooltip } from '../src/components/Tooltip';
+import { HTMLTooltip, Tooltip } from '../src/components/Tooltip';
 
 const stories = storiesOf('Tooltip', module);
 
@@ -15,13 +15,13 @@ stories.add('Standard (Up)', () => (
 ));
 
 stories.add('Standard (Down)', () => (
-  <h3>
-    Tooltip Down
-    <Tooltip content="Hello." direction="down">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
+    <h3>
+      Tooltip Down
+      <Tooltip content="Hello." direction="down">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+  ));
 
 stories.add('Standard (Left)', () => (
   <h3>

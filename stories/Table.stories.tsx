@@ -1,13 +1,13 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Table, Row, Cell, TableHeader, TableBody, HeaderCell } from '../src/components/Table';
 import Actions from '../src/components/Actions';
+import { Cell, HeaderCell, Row, Table, TableBody, TableHeader } from '../src/components/Table';
 
 const stories = storiesOf('Table', module);
 
-stories.add('Standard', () => 
-	<Table>
+stories.add('Standard', () => (
+  <Table>
     <TableHeader>
       <Row>
         <HeaderCell>Contacts</HeaderCell>
@@ -25,13 +25,13 @@ stories.add('Standard', () =>
         <Cell className="stats">02/08/2016</Cell>
         <Cell>
           <Actions>
-            <span data-tooltip="View" data-tooltip-pos="up"><i className="sg-icon sg-icon-view"></i></span>
-            <span data-tooltip="Edit" data-tooltip-pos="up"><i className="sg-icon sg-icon-pencil"></i></span>
-            <span data-tooltip="Copy" data-tooltip-pos="up"><i className="sg-icon sg-icon-copy"></i></span>
-            <span data-tooltip="Delete" data-tooltip-pos="up"><i className="sg-icon sg-icon-trash"></i></span>
+            <span data-tooltip="View" data-tooltip-pos="up"><i className="sg-icon sg-icon-view" /></span>
+            <span data-tooltip="Edit" data-tooltip-pos="up"><i className="sg-icon sg-icon-pencil" /></span>
+            <span data-tooltip="Copy" data-tooltip-pos="up"><i className="sg-icon sg-icon-copy" /></span>
+            <span data-tooltip="Delete" data-tooltip-pos="up"><i className="sg-icon sg-icon-trash" /></span>
           </Actions>
         </Cell>
       </Row>
     </TableBody>
   </Table>
-);
+));

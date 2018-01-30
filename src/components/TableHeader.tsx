@@ -8,14 +8,14 @@ export interface TableHeaderProps {
 
 export class TableHeader extends React.Component<TableHeaderProps> {
   public render() {
-    const classes = this.props.className ? this.props.className : ""
-    
+    const classes = this.props.className ? this.props.className : '';
+
     return (
       <thead className={classes}>
         {this.props.children}
       </thead>
     );
   }
-};
+}
 
 export default TableHeader;

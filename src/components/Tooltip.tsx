@@ -47,6 +47,19 @@ export class HTMLTooltip extends React.Component<
   HTMLTooltipProps,
   HTMLTooltipState
 > {
+
+  public static defaultProps = {
+    className: '',
+    debounce: 1000,
+    direction: 'right',
+  };
+
+  public state = {
+    hovered: false,
+    opened: false,
+    tooltipHeight: 0,
+  };
+
   private tooltipRef: HTMLDivElement;
 
   constructor(props: HTMLTooltipProps) {
@@ -54,47 +67,35 @@ export class HTMLTooltip extends React.Component<
 
     this.state = {
       hovered: false,
-      tooltipHeight: 0,
       opened: false,
+      tooltipHeight: 0,
     };
 
     this.handleHoverIn = this.handleHoverIn.bind(this);
     this.handleHoverOut = this.handleHoverOut.bind(this);
   }
 
-  public static defaultProps = {
-    direction: 'right',
-    className: '',
-    debounce: 1000,
-  };
-
-  public state = {
-    hovered: false,
-    tooltipHeight: 0,
-    opened: false
-  };
-
   public shouldComponentUpdate(nextProps?: any, nextState?: any) {
     if (this.state.opened === nextState.opened) {
       return false;
     }
     return true;
-  };
+  }
 
   public handleHoverIn = () => {
     this.setState({ hovered: true, opened: true, tooltipHeight: this.tooltipRef.offsetHeight });
-  };
+  }
 
   public handleHoverOut = () => {
-    this.setState({ hovered: false })
+    this.setState({ hovered: false });
     setTimeout(() => {
       if (!this.state.hovered) {
         this.setState({ opened: false });
       }
     }, this.props.debounce);
-  };
+  }
 
-  render() {
+  public render() {
     return (
       <div>
         <div className="tooltip-js-parent" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
@@ -106,10 +107,11 @@ export class HTMLTooltip extends React.Component<
             'is-visible': this.state.opened,
           })}
           style={{ top: -(this.state.tooltipHeight / 2) - 3 }}
-          ref={input => {
+          ref={(input) => {
             this.tooltipRef = input;
           }}
-          onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}
+          onMouseEnter={this.handleHoverIn}
+          onMouseLeave={this.handleHoverOut}
         >
           {this.props.children}
         </div>

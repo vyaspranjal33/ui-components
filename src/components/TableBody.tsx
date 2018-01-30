@@ -8,7 +8,7 @@ export interface TableBodyProps {
 
 export class TableBody extends React.Component<TableBodyProps> {
   public render() {
-    const classes = this.props.className ? this.props.className : ""
+    const classes = this.props.className ? this.props.className : '';
 
     return (
       <tbody className={classes}>
@@ -16,6 +16,6 @@ export class TableBody extends React.Component<TableBodyProps> {
       </tbody>
     );
   }
-};
+}
 
 export default TableBody;

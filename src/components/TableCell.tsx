@@ -8,14 +8,14 @@ export interface TableHeaderCellProps {
 
 export class HeaderCell extends React.Component<TableHeaderCellProps> {
   public render() {
-    const classes = this.props.className ? this.props.className : ""
-    
+    const classes = this.props.className ? this.props.className : '';
+
     return (
       <td className={classes}>
         {this.props.children}
       </td>
     );
   }
-};
+}
 
 export default HeaderCell;
