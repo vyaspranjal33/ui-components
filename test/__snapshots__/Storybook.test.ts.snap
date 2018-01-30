@@ -4014,6 +4014,127 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
 </p>
 `;
 
+exports[`Storyshots Table Standard 1`] = `
+<table
+  className="table-wrap"
+>
+  <thead
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <th
+        className=""
+      >
+        Contacts
+      </th>
+      <th
+        className=""
+      >
+        Date Added
+      </th>
+      <th
+        className=""
+      >
+        Last Opened
+      </th>
+      <th
+        className=""
+      >
+        Last Clicked
+      </th>
+      <th
+        className=""
+      >
+        Actions
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <td
+        className="contact"
+      >
+        <a
+          href="#"
+        >
+          todd.moy@sendgrid.com
+        </a>
+      </td>
+      <td
+        className="stats"
+      >
+        02/02/2015
+      </td>
+      <td
+        className="stats"
+      >
+        02/10/2016
+      </td>
+      <td
+        className="stats"
+      >
+        02/08/2016
+      </td>
+      <td
+        className=""
+      >
+        <div
+          className="actions"
+        >
+          <i
+            className="sg-icon sg-icon-ellipsis"
+            onClick={undefined}
+            style={null}
+          />
+          <div
+            className="action-icons"
+          >
+            <span
+              data-tooltip="View"
+              data-tooltip-pos="up"
+            >
+              <i
+                className="sg-icon sg-icon-view"
+              />
+            </span>
+            <span
+              data-tooltip="Edit"
+              data-tooltip-pos="up"
+            >
+              <i
+                className="sg-icon sg-icon-pencil"
+              />
+            </span>
+            <span
+              data-tooltip="Copy"
+              data-tooltip-pos="up"
+            >
+              <i
+                className="sg-icon sg-icon-copy"
+              />
+            </span>
+            <span
+              data-tooltip="Delete"
+              data-tooltip-pos="up"
+            >
+              <i
+                className="sg-icon sg-icon-trash"
+              />
+            </span>
+          </div>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`Storyshots Tabs Centered Tabs 1`] = `
 <ul
   className="tab-wrapper is-centered"
@@ -4386,4 +4507,137 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
     Month
   </button>
 </div>
+`;
+
+exports[`Storyshots Tooltip HTML Content 1`] = `
+<div
+  className="input-text-wrap"
+>
+  <label
+    className="input-text-label"
+  >
+    CCV
+  </label>
+  <input
+    id="input-text-example-ccv"
+    type="text"
+  />
+  <div
+    className="input-info-tooltip"
+  >
+    <div>
+      <div
+        className="tooltip-js-parent"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-info-circle"
+          onClick={undefined}
+          style={null}
+        />
+      </div>
+      <div
+        className="tooltip-js-content  is-left"
+        onMouseEnter={[Function]}
+        onMouseLeave={[Function]}
+        style={
+          Object {
+            "top": -3,
+          }
+        }
+      >
+        <p>
+          The 
+          <a
+            href="#"
+          >
+            CCV number
+          </a>
+           is a 3 or 4 digit security code printed on the front or back of your card.
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Tooltip Standard (Down) 1`] = `
+<h3>
+  Tooltip Down
+  <span
+    className={undefined}
+    data-tooltip="Hello."
+    data-tooltip-pos="down"
+  >
+    <i
+      className="sg-icon sg-icon-info-circle"
+      onClick={undefined}
+      style={null}
+    />
+  </span>
+</h3>
+`;
+
+exports[`Storyshots Tooltip Standard (Left) 1`] = `
+<h3>
+  Tooltip Left
+  <span
+    className={undefined}
+    data-tooltip="Hello."
+    data-tooltip-pos="left"
+  >
+    <i
+      className="sg-icon sg-icon-info-circle"
+      onClick={undefined}
+      style={null}
+    />
+  </span>
+</h3>
+`;
+
+exports[`Storyshots Tooltip Standard (Right) 1`] = `
+<h3>
+  Tooltip Right
+  <span
+    className={undefined}
+    data-tooltip="Hello."
+    data-tooltip-pos="right"
+  >
+    <i
+      className="sg-icon sg-icon-info-circle"
+      onClick={undefined}
+      style={null}
+    />
+  </span>
+</h3>
+`;
+
+exports[`Storyshots Tooltip Standard (Up) 1`] = `
+<h3>
+  Tooltip Up
+  <span
+    className={undefined}
+    data-tooltip="Hello."
+    data-tooltip-pos="up"
+  >
+    <i
+      className="sg-icon sg-icon-info-circle"
+      onClick={undefined}
+      style={null}
+    />
+  </span>
+</h3>
+`;
+
+exports[`Storyshots Tooltip Underline 1`] = `
+<span
+  className="has-underline"
+  data-tooltip="That means automatic teller machine."
+  data-tooltip-pos="right"
+>
+  <span>
+    ATM
+  </span>
+</span>
 `;
