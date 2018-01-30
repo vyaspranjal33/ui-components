@@ -4082,52 +4082,60 @@ exports[`Storyshots Table Standard 1`] = `
         02/08/2016
       </td>
       <td
-        className=""
+        className="actions"
       >
+        <i
+          className="sg-icon sg-icon-ellipsis"
+          onClick={undefined}
+          style={null}
+        />
         <div
-          className="actions"
+          className="action-icons"
         >
-          <i
-            className="sg-icon sg-icon-ellipsis"
-            onClick={undefined}
-            style={null}
-          />
-          <div
-            className="action-icons"
+          <span
+            data-tooltip="View"
+            data-tooltip-pos="up"
+            onClick={[Function]}
           >
-            <span
-              data-tooltip="View"
-              data-tooltip-pos="up"
-            >
-              <i
-                className="sg-icon sg-icon-view"
-              />
-            </span>
-            <span
-              data-tooltip="Edit"
-              data-tooltip-pos="up"
-            >
-              <i
-                className="sg-icon sg-icon-pencil"
-              />
-            </span>
-            <span
-              data-tooltip="Copy"
-              data-tooltip-pos="up"
-            >
-              <i
-                className="sg-icon sg-icon-copy"
-              />
-            </span>
-            <span
-              data-tooltip="Delete"
-              data-tooltip-pos="up"
-            >
-              <i
-                className="sg-icon sg-icon-trash"
-              />
-            </span>
-          </div>
+            <i
+              className="sg-icon sg-icon-view"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Edit"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Copy"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-copy"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Delete"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-trash"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
         </div>
       </td>
     </tr>
