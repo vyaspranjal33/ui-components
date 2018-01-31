@@ -9,7 +9,7 @@ import { PageHeader, PageHeading } from '../src/components/PageHeader';
 const stories = storiesOf('PageHeader', module);
 const breadcrumbs = [{to: 'Aaa', href: '#'}, {to: 'Bbb', href: '#'}];
 
-stories.add('Page Header', () => (
+stories.add('Page Header containing: Breadcrumbs and a Page Heading', () => (
   <PageHeader>
     <Breadcrumb>
       <a href="#">Contacts</a>
