@@ -3182,6 +3182,61 @@ exports[`Storyshots NumberedSteps Numbered Steps with short content 1`] = `
 </div>
 `;
 
+exports[`Storyshots PageHeader Page Header 1`] = `
+<header>
+  <ol
+    className="breadcrumb"
+  >
+    <li>
+      <a
+        href="#"
+      >
+        Contacts
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+      >
+        Upload CSV
+      </a>
+    </li>
+    <li />
+  </ol>
+  <div
+    className="content-header"
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "color": "#294661",
+          "fontFamily": "Colfax,Proxima Nova,Helvetica,sans-serif",
+          "fontWeight": 300,
+        }
+      }
+    >
+      Page Title
+    </h1>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-primary"
+        id={undefined}
+        onClick={[Function]}
+      >
+        Create Campaign
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
 exports[`Storyshots Progress Horizontal Progress 1`] = `
 <section
   className="progress-container"
