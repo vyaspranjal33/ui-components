@@ -4765,3 +4765,52 @@ exports[`Storyshots Tooltip Underline 1`] = `
   </span>
 </span>
 `;
+
+exports[`Storyshots TruncatedList 1 string, limit default 1`] = `
+<span
+  className=""
+>
+  Boromir
+  
+</span>
+`;
+
+exports[`Storyshots TruncatedList 5 strings, limit 2 1`] = `
+<span
+  className=""
+>
+  Boromir, Elrond
+  <span>
+    , 
+    <abbr>
+      <a
+        href="#"
+      >
+        +
+        3
+         more
+      </a>
+    </abbr>
+  </span>
+</span>
+`;
+
+exports[`Storyshots TruncatedList 5 strings, limit default 1`] = `
+<span
+  className=""
+>
+  Boromir, Elrond, Frodo
+  <span>
+    , 
+    <abbr>
+      <a
+        href="#"
+      >
+        +
+        2
+         more
+      </a>
+    </abbr>
+  </span>
+</span>
+`;
