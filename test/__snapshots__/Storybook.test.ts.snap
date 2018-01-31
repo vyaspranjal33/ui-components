@@ -4784,7 +4784,7 @@ exports[`Storyshots TruncatedList 5 strings, limit 2 1`] = `
     , 
     <abbr>
       <a
-        href="#"
+        href="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
       >
         +
         3
@@ -4804,7 +4804,7 @@ exports[`Storyshots TruncatedList 5 strings, limit default 1`] = `
     , 
     <abbr>
       <a
-        href="#"
+        href="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
       >
         +
         2
