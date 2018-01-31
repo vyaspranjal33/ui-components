@@ -1,9 +1,9 @@
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Icon from '../src/components/Icon';
-import { HTMLTooltip, Tooltip } from '../src/components/Tooltip';
 import { TextInput } from '../src/components/TextInput';
-import { action } from '@storybook/addon-actions';
+import { HTMLTooltip, Tooltip } from '../src/components/Tooltip';
 
 const stories = storiesOf('Tooltip', module);
 
@@ -61,7 +61,7 @@ stories.add('HTML Content', () => (
       id="input-text-example-ccv"
       onChange={action('Input Changed')}
     >
-      
+
     <div className="input-info-tooltip">
       <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left">
         <p>
