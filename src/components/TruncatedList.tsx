@@ -21,7 +21,8 @@ export const TruncatedList: React.SFC<TruncatedListProps> = ({
 
   return (
     <span className={cn(className)}>
-      {shownContent}{(truncated.length > 0) ? <span>, <abbr><a href={link}>+{truncatedLength} more</a></abbr></span> : ''}
+      {shownContent}
+      {(truncated.length > 0) ? <span>, <abbr><a href={link}>+{truncatedLength} more</a></abbr></span> : ''}
     </span>
   );
 };
