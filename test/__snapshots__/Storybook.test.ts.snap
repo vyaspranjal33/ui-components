@@ -2782,6 +2782,27 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
 </section>
 `;
 
+exports[`Storyshots Grid Row & Column 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-6 col-offset-3"
+  >
+    <div
+      className="card"
+    >
+      <h2>
+        A Six-Wide Column
+      </h2>
+      <p>
+        This card is in a column six units wide, offset by three.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Loaders Centered Loader 1`] = `
 <div
   style={

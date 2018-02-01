@@ -5,6 +5,7 @@ export { Breadcrumb } from './components/Breadcrumb';
 export { Button, Buttonized } from './components/Button';
 export { ButtonList } from './components/ButtonList';
 export { Card } from './components/Card';
+export { Column } from './components/Grid/Column';
 export { Checkbox } from './components/Checkbox';
 export { Row } from './components/Grid/Row';
 export { ConfirmationModal } from './components/ConfirmationModal';
