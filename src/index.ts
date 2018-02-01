@@ -9,6 +9,7 @@ export { Column } from './components/Grid/Column';
 export { Checkbox } from './components/Checkbox';
 export { Row } from './components/Grid/Row';
 export { ConfirmationModal } from './components/ConfirmationModal';
+export { Divider } from './components/Divider';
 export { DropdownButton } from './components/DropdownButton';
 export { Dropzone } from './components/Dropzone';
 export { EmptyState } from './components/EmptyState';

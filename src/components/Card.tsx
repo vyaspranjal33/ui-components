@@ -29,7 +29,7 @@ export const Card: React.SFC<CardProps> = ({
 }) => {
 
   const titleStyle = {
-    width: "100%",
+    width: '100%',
   } as React.CSSProperties;
 
   return (
