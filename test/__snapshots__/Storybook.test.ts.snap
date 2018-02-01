@@ -3182,7 +3182,7 @@ exports[`Storyshots NumberedSteps Numbered Steps with short content 1`] = `
 </div>
 `;
 
-exports[`Storyshots PageHeader Page Header 1`] = `
+exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page Heading 1`] = `
 <header>
   <ol
     className="breadcrumb"
