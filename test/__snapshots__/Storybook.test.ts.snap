@@ -2831,6 +2831,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
 `;
 
 exports[`Storyshots Grid 4/8 Column Config 1`] = `
+<<<<<<< HEAD
 <div>
   <div
     className="row"
@@ -2884,11 +2885,17 @@ exports[`Storyshots Grid 4/8 Column Config 1`] = `
 `;
 
 exports[`Storyshots Grid Default (No Width or Offset) 1`] = `
+=======
+>>>>>>> Fix cards
 <div
   className="row"
 >
   <div
+<<<<<<< HEAD
     className=""
+=======
+    className="col-4 col-offset-0"
+>>>>>>> Fix cards
   >
     <div
       className="card"
@@ -2900,6 +2907,7 @@ exports[`Storyshots Grid Default (No Width or Offset) 1`] = `
           }
         }
       >
+<<<<<<< HEAD
         A Default Column
       </h2>
       <p>
@@ -2916,6 +2924,17 @@ exports[`Storyshots Grid Offset 5 1`] = `
 >
   <div
     className="col-offset-5"
+=======
+        A Four-Wide Column
+      </h2>
+      <p>
+        This card is four columns wide.
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-8 col-offset-0"
+>>>>>>> Fix cards
   >
     <div
       className="card"
@@ -2927,17 +2946,28 @@ exports[`Storyshots Grid Offset 5 1`] = `
           }
         }
       >
+<<<<<<< HEAD
         An Offset Only Column
       </h2>
       <p>
         This card specifies 5 offset and no width.
+=======
+        An Eight-Wide Column
+      </h2>
+      <p>
+        This card is eight columns wide.
+>>>>>>> Fix cards
       </p>
     </div>
   </div>
 </div>
 `;
 
+<<<<<<< HEAD
 exports[`Storyshots Grid Using Width & Offset 1`] = `
+=======
+exports[`Storyshots Grid Row & Column 1`] = `
+>>>>>>> Fix cards
 <div
   className="row"
 >
