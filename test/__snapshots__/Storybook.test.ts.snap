@@ -2178,6 +2178,7 @@ exports[`Storyshots FilterableList FilterableList 1`] = `
           value=""
         />
         
+        
       </div>
     </div>
   </div>
@@ -2297,6 +2298,7 @@ exports[`Storyshots FilterableList FilterableList as a Container Component 1`] =
           value=""
         />
         
+        
       </div>
     </div>
   </div>
@@ -2415,6 +2417,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
           type="text"
           value=""
         />
+        
         
       </div>
       <div
@@ -2557,6 +2560,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
           value=""
         />
         
+        
       </div>
     </div>
   </div>
@@ -2676,6 +2680,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
           value=""
         />
         
+        
       </div>
       <div
         className="input-text-wrap"
@@ -2700,6 +2705,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
           type="text"
           value=""
         />
+        
         
       </div>
       <div
@@ -4392,6 +4398,7 @@ exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] 
     value=""
   />
   
+  
 </div>
 `;
 
@@ -4416,6 +4423,7 @@ exports[`Storyshots Text Input Stateless Text Input with a Value Passed as a Pro
     value="Passed-In Value"
   />
   
+  
 </div>
 `;
 
@@ -4439,6 +4447,7 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
     type="text"
     value={undefined}
   />
+  
 </div>
 `;
 
@@ -4462,6 +4471,7 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
     type="text"
     value={undefined}
   />
+  
 </div>
 `;
 
@@ -4485,6 +4495,7 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
     type="text"
     value={undefined}
   />
+  
 </div>
 `;
 
@@ -4514,6 +4525,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
   >
     This test input is wrong somehow.
   </span>
+  
 </div>
 `;
 
@@ -4543,6 +4555,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
   >
     This test input is better then your test input.
   </span>
+  
 </div>
 `;
 
@@ -4572,6 +4585,7 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
   >
     This input always returns a number, not a string.
   </span>
+  
 </div>
 `;
 
@@ -4635,49 +4649,61 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
 <div
   className="input-text-wrap"
 >
-  <label
-    className="input-text-label"
-  >
-    CCV
-  </label>
-  <input
-    id="input-text-example-ccv"
-    type="text"
-  />
   <div
-    className="input-info-tooltip"
+    className="input-text-wrap"
+    style={Object {}}
   >
-    <div>
-      <div
-        className="tooltip-js-parent"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <i
-          className="sg-icon sg-icon-info-circle"
-          onClick={undefined}
-          style={null}
-        />
-      </div>
-      <div
-        className="tooltip-js-content  is-left"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "top": -3,
+    <label
+      className="input-text-label"
+      htmlFor="input-text-example-ccv"
+    >
+      CCV
+    </label>
+    <input
+      aria-describedby=""
+      id="input-text-example-ccv"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="text"
+      value=""
+    />
+    
+    <div
+      className="input-info-tooltip"
+    >
+      <div>
+        <div
+          className="tooltip-js-parent"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-info-circle"
+            onClick={undefined}
+            style={null}
+          />
+        </div>
+        <div
+          className="tooltip-js-content  is-left"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "top": -3,
+            }
           }
-        }
-      >
-        <p>
-          The 
-          <a
-            href="#"
-          >
-            CCV number
-          </a>
-           is a 3 or 4 digit security code printed on the front or back of your card.
-        </p>
+        >
+          <p>
+            The 
+            <a
+              href="#"
+            >
+              CCV number
+            </a>
+             is a 3 or 4 digit security code printed on the front or back of your card.
+          </p>
+        </div>
       </div>
     </div>
   </div>
