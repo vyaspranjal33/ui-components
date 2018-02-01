@@ -2825,49 +2825,55 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
 `;
 
 exports[`Storyshots Grid 4/8 Column Config 1`] = `
-<div
-  className="row"
->
+<div>
   <div
-    className="col-4 col-offset-0"
+    className="row"
   >
     <div
-      className="card"
+      className="col-4 col-offset-0"
     >
-      <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+      <div
+        className="card"
       >
-        A Four-Wide Column
-      </h2>
-      <p>
-        This card is four columns wide.
-      </p>
+        <h2
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          A Four-Wide Column
+        </h2>
+        <p>
+          This card is four columns wide.
+        </p>
+      </div>
     </div>
-  </div>
-  <div
-    className="col-8 col-offset-0"
-  >
     <div
-      className="card"
+      className="col-8 col-offset-0"
     >
-      <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+      <div
+        className="card"
       >
-        An Eight-Wide Column
-      </h2>
-      <p>
-        This card is eight columns wide.
-      </p>
+        <h2
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          An Eight-Wide Column
+        </h2>
+        <p>
+          This card is eight columns wide.
+        </p>
+      </div>
     </div>
   </div>
+  <hr
+    className="is-thin"
+    data-label={null}
+  />
 </div>
 `;
 

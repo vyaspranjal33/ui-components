@@ -3,9 +3,9 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { Card } from '../src/components/Card';
+import Divider from '../src/components/Divider';
 import { Column } from '../src/components/Grid/Column';
 import { Row } from '../src/components/Grid/Row';
-import Divider from '../src/components/Divider';
 
 const stories = storiesOf('Grid', module);
 
