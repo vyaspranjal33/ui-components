@@ -2,7 +2,7 @@ import React from 'react';
 import cn from '../../utilities/classnames';
 
 export interface RowProps {
-  children?: React.ReactElement<any>;
+  children?: React.ReactNode;
 }
 
 export const Row: React.SFC<RowProps> = ({

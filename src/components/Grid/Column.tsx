@@ -2,7 +2,7 @@ import React from 'react';
 import cn from '../../utilities/classnames';
 
 export interface ColumnProps {
-  children?: React.ReactElement<any>;
+  children?: React.ReactNode;
   width?: string;
   offset?: string;
 }

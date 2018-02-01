@@ -995,7 +995,13 @@ exports[`Storyshots Card Card with Actions 1`] = `
     <div
       className="card is-centered"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         Event Annoucements
       </h2>
       <p>
@@ -1072,7 +1078,13 @@ exports[`Storyshots Card Card with Badge (Centered) 1`] = `
       >
         Recommended
       </span>
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1103,7 +1115,13 @@ exports[`Storyshots Card Card with Badge 1`] = `
       >
         Recommended
       </span>
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1129,7 +1147,13 @@ exports[`Storyshots Card Card with Title and Body (Centered) 1`] = `
     <div
       className="card is-centered"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1155,7 +1179,13 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children and Cent
     <div
       className="card is-centered"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1188,7 +1218,13 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
     <div
       className="card"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1221,7 +1257,13 @@ exports[`Storyshots Card Card with Title and Body 1`] = `
     <div
       className="card"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -2782,6 +2824,53 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
 </section>
 `;
 
+exports[`Storyshots Grid 4/8 Column Config 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4 col-offset-0"
+  >
+    <div
+      className="card"
+    >
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        A Four-Wide Column
+      </h2>
+      <p>
+        This card is four columns wide.
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-8 col-offset-0"
+  >
+    <div
+      className="card"
+    >
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        An Eight-Wide Column
+      </h2>
+      <p>
+        This card is eight columns wide.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Grid Row & Column 1`] = `
 <div
   className="row"
@@ -2792,7 +2881,13 @@ exports[`Storyshots Grid Row & Column 1`] = `
     <div
       className="card"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         A Six-Wide Column
       </h2>
       <p>

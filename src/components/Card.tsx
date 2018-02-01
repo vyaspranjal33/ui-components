@@ -27,6 +27,11 @@ export const Card: React.SFC<CardProps> = ({
   thin,
   title,
 }) => {
+
+  const titleStyle = {
+    width: "100%",
+  } as React.CSSProperties;
+
   return (
     <div
       className={cn('card', {
@@ -35,7 +40,7 @@ export const Card: React.SFC<CardProps> = ({
       })}
     >
       {badge && <Badge {...badge} />}
-      {title && <h2>{title}</h2>}
+      {title && <h2 style={titleStyle}>{title}</h2>}
       {body && <p>{body}</p>}
       {children}
     </div>
