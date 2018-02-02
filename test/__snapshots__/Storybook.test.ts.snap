@@ -2904,7 +2904,7 @@ exports[`Storyshots Grid Default (No Width or Offset) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Grid USing Width & Offset 1`] = `
+exports[`Storyshots Grid Using Width & Offset 1`] = `
 <div
   className="row"
 >
