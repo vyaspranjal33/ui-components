@@ -1,6 +1,6 @@
 import React from 'react';
 import { color as validColor } from '../types/color';
-import cn = require( '../utilities/classnames');
+import cn from '../utilities/classnames';
 
 export interface BadgeProps {
   children?: string | number;

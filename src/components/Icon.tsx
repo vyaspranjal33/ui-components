@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconType } from '../types/icons';
-import cn = require( '../utilities/classnames');
+import cn from '../utilities/classnames';
 
 export interface IconProps {
   type: IconType;
