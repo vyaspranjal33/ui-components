@@ -7,8 +7,8 @@ export interface TableHeaderProps {
 }
 
 export class TableHeader extends React.Component<TableHeaderProps> {
-  public render() {
 
+  public render() {
     return (
       <thead className={cn(this.props.className)}>
         {this.props.children}
