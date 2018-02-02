@@ -11,7 +11,7 @@ const stories = storiesOf('Grid', module);
 
 stories.add('Row & Column', () => (
   <Row>
-    <Column width="6" offset="3">
+    <Column width={6} offset={3}>
       <Card
         title="A Six-Wide Column"
         body="This card is in a column six units wide, offset by three."
@@ -23,13 +23,13 @@ stories.add('Row & Column', () => (
 stories.add('4/8 Column Config', () => (
   <div>
     <Row>
-      <Column width="4">
+      <Column width={4}>
         <Card
           title="A Four-Wide Column"
           body="This card is four columns wide."
         />
       </Column>
-      <Column width="8">
+      <Column width={8}>
         <Card
           title="An Eight-Wide Column"
           body="This card is eight columns wide."

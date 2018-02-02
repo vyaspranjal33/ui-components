@@ -3,17 +3,17 @@ import cn from '../../utilities/classnames';
 
 export interface ColumnProps {
   children?: React.ReactNode;
-  width?: string;
-  offset?: string;
+  width?: number;
+  offset?: number;
 }
 
 export const Column: React.SFC<ColumnProps> = ({
   children,
-  width = '12',
-  offset = '0',
+  width = 12,
+  offset = 0,
 }) => {
-  const colWidth = 'col-' + width;
-  const colOffset = 'col-offset-' + offset;
+  const colWidth = 'col-' + width.toString();
+  const colOffset = 'col-offset-' + offset.toString();
 
   return (
     <div
