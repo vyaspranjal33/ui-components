@@ -16,8 +16,8 @@ export const Column: React.SFC<ColumnProps> = ({
   return (
     <div
       className={cn(
-        (width > 0 ? 'col-' + width.toString() : ''), 
-        (offset > 0 ? 'col-offset-' + offset.toString() : '')
+        (width > 0 ? 'col-' + width.toString() : ''),
+        (offset > 0 ? 'col-offset-' + offset.toString() : ''),
       )}
     >
       {children}
