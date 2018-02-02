@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import cn from '../utilities/classnames';
+import cn = require( '../utilities/classnames');
 
 import { InputType } from '../types/inputs';
 
