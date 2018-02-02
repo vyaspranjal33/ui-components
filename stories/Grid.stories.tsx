@@ -9,7 +9,7 @@ import { Row } from '../src/components/Grid/Row';
 
 const stories = storiesOf('Grid', module);
 
-stories.add('USing Width & Offset', () => (
+stories.add('Using Width & Offset', () => (
   <Row>
     <Column width={6} offset={3}>
       <Card
