@@ -4,8 +4,8 @@ import Icon from './Icon';
 
 export interface ActionsProps {
   children:
-    | React.ReactElement<ActionProps>
-    | Array<React.ReactElement<ActionProps>>;
+    React.ReactElement<ActionProps> |
+    Array<React.ReactElement<ActionProps>>;
 }
 
 export const Actions: React.SFC<ActionsProps> = ({ children }) => {
