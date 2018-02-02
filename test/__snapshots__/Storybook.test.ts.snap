@@ -4041,26 +4041,31 @@ exports[`Storyshots Table Standard 1`] = `
     >
       <th
         className=""
+        onClick={[Function]}
       >
         Contacts
       </th>
       <th
-        className=""
+        className="sort sort-asc"
+        onClick={[Function]}
       >
         Date Added
       </th>
       <th
         className=""
+        onClick={[Function]}
       >
         Last Opened
       </th>
       <th
         className=""
+        onClick={[Function]}
       >
         Last Clicked
       </th>
       <th
         className=""
+        onClick={[Function]}
       >
         Actions
       </th>
@@ -4095,6 +4100,176 @@ exports[`Storyshots Table Standard 1`] = `
         className="stats"
       >
         02/08/2016
+      </td>
+      <td
+        className="actions"
+      >
+        <i
+          className="sg-icon sg-icon-ellipsis"
+          onClick={undefined}
+          style={null}
+        />
+        <div
+          className="action-icons"
+        >
+          <span
+            data-tooltip="View"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-view"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Edit"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Copy"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-copy"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Delete"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-trash"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className=""
+    >
+      <td
+        className="contact"
+      >
+        <a
+          href="#"
+        >
+          eric.tjossem@sendgrid.com
+        </a>
+      </td>
+      <td
+        className="stats"
+      >
+        03/03/2015
+      </td>
+      <td
+        className="stats"
+      >
+        04/10/2016
+      </td>
+      <td
+        className="stats"
+      >
+        04/08/2016
+      </td>
+      <td
+        className="actions"
+      >
+        <i
+          className="sg-icon sg-icon-ellipsis"
+          onClick={undefined}
+          style={null}
+        />
+        <div
+          className="action-icons"
+        >
+          <span
+            data-tooltip="View"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-view"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Edit"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Copy"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-copy"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Delete"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-trash"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+        </div>
+      </td>
+    </tr>
+    <tr
+      className=""
+    >
+      <td
+        className="contact"
+      >
+        <a
+          href="#"
+        >
+          alex.thomsen@sendgrid.com
+        </a>
+      </td>
+      <td
+        className="stats"
+      >
+        05/02/2015
+      </td>
+      <td
+        className="stats"
+      >
+        06/10/2016
+      </td>
+      <td
+        className="stats"
+      >
+        07/08/2016
       </td>
       <td
         className="actions"

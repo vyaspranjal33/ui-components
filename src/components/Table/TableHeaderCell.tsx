@@ -16,12 +16,12 @@ export class HeaderCell extends React.Component<TableHeaderCellProps, TableHeade
     super(props);
 
     this.state = {
-      sorted: (props.sortable ? 'asc' : false)
-    }
+      sorted: (props.sortable ? 'asc' : false),
+    };
   }
 
   public handleClick = () => {
-    if (this.props.sortable) {  
+    if (this.props.sortable) {
       if (this.state.sorted === 'asc') {
         this.setState({ sorted: 'desc' });
       } else {
@@ -32,11 +32,15 @@ export class HeaderCell extends React.Component<TableHeaderCellProps, TableHeade
 
   public render() {
     return (
-      <th className={cn(this.props.className, 
-        { 'sort': this.props.sortable }, 
-        { 'sort-asc': this.state.sorted === 'asc' }, 
-        { 'sort-desc': this.state.sorted === 'desc'})} 
-        onClick={this.handleClick}>
+      <th
+        className={
+          cn(this.props.className,
+            { sort: this.props.sortable },
+            { 'sort-asc': this.state.sorted === 'asc' },
+            { 'sort-desc': this.state.sorted === 'desc'})
+          }
+        onClick={this.handleClick}
+      >
         {this.props.children}
       </th>
     );
