@@ -1,4 +1,4 @@
-const classNames = (...args: any[]): string => {
+export default function classNames(...args: any[]): string {
   let result = '';
 
   for (const arg of args) {
@@ -23,6 +23,4 @@ const classNames = (...args: any[]): string => {
   }
 
   return result.trim();
-};
-
-export default classNames;
+}
