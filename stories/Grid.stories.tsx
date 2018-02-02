@@ -9,7 +9,7 @@ import { Row } from '../src/components/Grid/Row';
 
 const stories = storiesOf('Grid', module);
 
-stories.add('Row & Column', () => (
+stories.add('USing Width & Offset', () => (
   <Row>
     <Column width={6} offset={3}>
       <Card
@@ -38,4 +38,15 @@ stories.add('4/8 Column Config', () => (
     </Row>
     <Divider thin />
   </div>
+));
+
+stories.add('Default (No Width or Offset)', () => (
+  <Row>
+    <Column>
+      <Card
+        title="A Default Column"
+        body="This card is in a column with no width or offset."
+      />
+    </Column>
+  </Row>
 ));

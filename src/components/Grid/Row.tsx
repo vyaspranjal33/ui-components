@@ -10,7 +10,7 @@ export const Row: React.SFC<RowProps> = ({
 }) => {
   return (
     <div
-      className={cn('row')}
+      className="row"
     >
       {children}
     </div>

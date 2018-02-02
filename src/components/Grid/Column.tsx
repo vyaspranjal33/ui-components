@@ -9,15 +9,16 @@ export interface ColumnProps {
 
 export const Column: React.SFC<ColumnProps> = ({
   children,
-  width = 12,
-  offset = 0,
+  width,
+  offset,
 }) => {
-  const colWidth = 'col-' + width.toString();
-  const colOffset = 'col-offset-' + offset.toString();
 
   return (
     <div
-      className={cn(colWidth, colOffset)}
+      className={cn(
+        (width > 0 ? 'col-' + width.toString() : ''), 
+        (offset > 0 ? 'col-offset-' + offset.toString() : '')
+      )}
     >
       {children}
     </div>
