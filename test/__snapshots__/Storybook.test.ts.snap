@@ -2904,6 +2904,33 @@ exports[`Storyshots Grid Default (No Width or Offset) 1`] = `
 </div>
 `;
 
+exports[`Storyshots Grid Offset 5 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-offset-5"
+  >
+    <div
+      className="card"
+    >
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        An Offset Only Column
+      </h2>
+      <p>
+        This card specifies 5 offset and no width.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Grid Using Width & Offset 1`] = `
 <div
   className="row"
@@ -2925,6 +2952,33 @@ exports[`Storyshots Grid Using Width & Offset 1`] = `
       </h2>
       <p>
         This card is in a column six units wide, offset by three.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Width 12 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-12"
+  >
+    <div
+      className="card"
+    >
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        A Width Only Column
+      </h2>
+      <p>
+        This card specifies 12 width and no offset.
       </p>
     </div>
   </div>

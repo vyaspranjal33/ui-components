@@ -50,3 +50,25 @@ stories.add('Default (No Width or Offset)', () => (
     </Column>
   </Row>
 ));
+
+stories.add('Width 12', () => (
+  <Row>
+    <Column width={12}>
+      <Card
+        title="A Width Only Column"
+        body="This card specifies 12 width and no offset."
+      />
+    </Column>
+  </Row>
+));
+
+stories.add('Offset 5', () => (
+  <Row>
+    <Column offset={5}>
+      <Card
+        title="An Offset Only Column"
+        body="This card specifies 5 offset and no width."
+      />
+    </Column>
+  </Row>
+));
