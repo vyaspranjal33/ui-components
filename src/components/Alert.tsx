@@ -1,6 +1,6 @@
 import React from 'react';
 import { IconType } from '../types/icons';
-import cn = require( '../utilities/classnames');
+import cn from '../utilities/classnames';
 import Icon from './Icon';
 
 export type AlertType = 'success' | 'warning' | 'danger';
