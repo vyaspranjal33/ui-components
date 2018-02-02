@@ -11,6 +11,7 @@ export type IconType =
   | 'caret'
   | 'check'
   | 'check-circle'
+  | 'check-thin'
   | 'clean-ui'
   | 'clock'
   | 'code'

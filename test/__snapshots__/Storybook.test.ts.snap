@@ -3438,621 +3438,283 @@ exports[`Storyshots Radio Standard Radio 1`] = `
 </div>
 `;
 
-exports[`Storyshots Segment Term Segment terms 1`] = `
-Array [
-  <section
-    className="segment-term-wrap"
+exports[`Storyshots Segment Term Segment term which cannot be edited 1`] = `
+<div
+  className="segment-term-wrap"
+>
+  <p
+    className="segment-term-title"
   >
-    <span
-      className="segment-term-title"
-    >
-      <strong
-        className=""
-      >
-        Entry Criteria
+    Entry Criteria
+  </p>
+  <div
+    className="segment-term"
+    onClick={undefined}
+  >
+    <p>
+      The first time a contact is added to 
+      <strong>
+        People in Los Angeles
       </strong>
-      <small>
-        =
-      </small>
-    </span>
-    <span
-      className="segment-term has-separator"
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
+<div
+  className="segment-term-wrap"
+>
+  <p
+    className="segment-term-title"
+  >
+    Entry Criteria
+  </p>
+  <div
+    className="segment-term has-separator is-editable"
+    onClick={undefined}
+  >
+    <div
+      className="input-select-wrap"
     >
-      <section
-        className="segment-term-inputs"
+      <label
+        className="input-select-label"
+        htmlFor="select-a"
       >
-        <span
-          className="segment-term-description"
-        >
-          The first time a contact is added to 
-          <strong>
-            People in Los Angeles
-          </strong>
-        </span>
+        Select send conditions
+      </label>
+      <select
+        id="select-a"
+      >
+        <option>
+          The first time a contact
+        </option>
+      </select>
+    </div>
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="select-b"
+      >
+        Select contact criteria
+      </label>
+      <select
+        id="select-b"
+      >
+        <option>
+          Abandons a cart
+        </option>
+      </select>
+    </div>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-danger btn-small"
+        id={undefined}
+        onClick={[Function]}
+      >
         <i
-          className="sg-icon sg-icon-pencil segment-term-inputs-edit"
+          className="sg-icon sg-icon-x"
           onClick={undefined}
           style={null}
         />
-      </section>
-    </span>
-  </section>,
-  <section
-    className="segment-term-wrap"
+      </button>
+    </div>
+  </div>
+  <div
+    className="btn-list"
   >
-    <span
-      className="segment-term-title"
+    <button
+      className="btn btn-secondary has-icon"
+      id={undefined}
+      onClick={[Function]}
     >
-      <strong
-        className="segment-terms-or"
-      >
-        Or
-      </strong>
-      
-    </span>
-    <span
-      className="segment-term"
-    >
-      <section
-        className="segment-term-inputs"
-      >
-        <span
-          className="segment-term-description"
-        >
-          Every time a contact is added to 
-          <strong>
-            People in Denver
-          </strong>
-        </span>
-        <i
-          className="sg-icon sg-icon-pencil segment-term-inputs-edit"
-          onClick={undefined}
-          style={null}
-        />
-      </section>
       <i
-        className="sg-icon sg-icon-create"
+        className="sg-icon sg-icon-plus"
         onClick={undefined}
         style={null}
       />
-    </span>
-  </section>,
-]
+      Add Condition
+    </button>
+  </div>
+</div>
 `;
 
-exports[`Storyshots Segment Term Segment terms which cannot be edited 1`] = `
-<section
+exports[`Storyshots Segment Term Segment term which is being edited and is filled out 1`] = `
+<div
   className="segment-term-wrap"
 >
-  <span
+  <p
     className="segment-term-title"
   >
-    <strong
-      className=""
+    Entry Criteria
+  </p>
+  <div
+    className="segment-term has-separator is-editable"
+    onClick={undefined}
+  >
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="select-a"
+      >
+        Select send conditions
+      </label>
+      <select
+        id="select-a"
+      >
+        <option>
+          The first time a contact
+        </option>
+      </select>
+    </div>
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="select-b"
+      >
+        Select contact criteria
+      </label>
+      <select
+        id="select-b"
+      >
+        <option>
+          Abandons a cart
+        </option>
+      </select>
+    </div>
+    <div
+      className="input-select-wrap"
+    >
+      <select
+        id="select-c"
+      >
+        <option>
+          People in Los Angeles
+        </option>
+      </select>
+    </div>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-secondary btn-small"
+        id={undefined}
+        onClick={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-check-thin"
+          onClick={undefined}
+          style={null}
+        />
+      </button>
+      <button
+        className="btn btn-danger btn-small"
+        id={undefined}
+        onClick={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-x"
+          onClick={undefined}
+          style={null}
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="btn-list"
+  >
+    <button
+      className="btn btn-secondary has-icon"
+      id={undefined}
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-plus"
+        onClick={undefined}
+        style={null}
+      />
+      Add Condition
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Segment Term Segment terms 1`] = `
+<div>
+  <div
+    className="segment-term-wrap"
+  >
+    <p
+      className="segment-term-title"
     >
       Entry Criteria
-    </strong>
-    <small>
-      =
-    </small>
-  </span>
-  <span
-    className="segment-term"
-  >
-    <section
-      className="segment-term-inputs"
+    </p>
+    <div
+      className="segment-term has-separator"
+      onClick={[Function]}
     >
-      <span
-        className="segment-term-description"
-      >
+      <p>
         The first time a contact is added to 
         <strong>
           People in Los Angeles
         </strong>
-      </span>
-    </section>
-    <i
-      className="sg-icon sg-icon-create"
-      onClick={undefined}
-      style={null}
-    />
-  </span>
-</section>
-`;
-
-exports[`Storyshots Segment Term Segment terms which is being edited 1`] = `
-<section
-  className="segment-term-wrap"
->
-  <span
-    className="segment-term-title"
+      </p>
+      <i
+        className="sg-icon sg-icon-pencil segment-term-edit"
+        onClick={undefined}
+        style={null}
+      />
+    </div>
+  </div>
+  <div
+    className="segment-term-wrap"
   >
-    <strong
-      className=""
+    <p
+      className="segment-term-title"
     >
-      Entry Criteria
-    </strong>
-    <small>
-      =
-    </small>
-  </span>
-  <span
-    className="segment-term"
-  >
-    <section
-      className="segment-term-inputs is-editable"
+      Or
+    </p>
+    <div
+      className="segment-term"
+      onClick={[Function]}
     >
-      <div
-        className="input-select-wrap"
-      >
-        <label
-          className="input-select-label"
-          htmlFor="select-a"
-        >
-          Select send conditions
-        </label>
-        <select
-          id="select-a"
-        >
-          <option>
-            The first time a contact
-          </option>
-        </select>
-      </div>
-      <div
-        className="input-select-wrap"
-      >
-        <label
-          className="input-select-label"
-          htmlFor="select-b"
-        >
-          Select contact criteria
-        </label>
-        <select
-          id="select-b"
-        >
-          <option>
-            Abandons a cart
-          </option>
-        </select>
-      </div>
-      <div
-        className="btn-list"
+      <p>
+        Every time a contact is added to 
+        <strong>
+          People in Denver
+        </strong>
+      </p>
+      <i
+        className="sg-icon sg-icon-pencil segment-term-edit"
+        onClick={undefined}
+        style={null}
+      />
+    </div>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-secondary has-icon"
+        id={undefined}
+        onClick={[Function]}
       >
         <i
-          className="sg-icon sg-icon-x"
+          className="sg-icon sg-icon-plus"
           onClick={undefined}
           style={null}
         />
-      </div>
-    </section>
-    <i
-      className="sg-icon sg-icon-create"
-      onClick={undefined}
-      style={null}
-    />
-  </span>
-</section>
-`;
-
-exports[`Storyshots Segment Term Segment terms which is being edited and is filled out 1`] = `
-<section
-  className="segment-term-wrap"
->
-  <span
-    className="segment-term-title"
-  >
-    <strong
-      className=""
-    >
-      Entry Criteria
-    </strong>
-    <small>
-      =
-    </small>
-  </span>
-  <span
-    className="segment-term"
-  >
-    <section
-      className="segment-term-inputs is-editable"
-    >
-      <div
-        className="input-select-wrap"
-      >
-        <select
-          id="select-a"
-        >
-          <option>
-            The first time a contact
-          </option>
-        </select>
-      </div>
-      <div
-        className="input-select-wrap"
-      >
-        <select
-          id="select-b"
-        >
-          <option>
-            Abandons a cart
-          </option>
-        </select>
-      </div>
-      <div
-        className="input-select-wrap"
-      >
-        <select
-          id="select-c"
-        >
-          <option>
-            People in Los Angeles
-          </option>
-        </select>
-      </div>
-      <div
-        className="btn-list"
-      >
-        <button
-          className="btn btn-secondary btn-small"
-          id={undefined}
-          onClick={[Function]}
-        >
-          <i
-            className="sg-icon sg-icon-check"
-            onClick={undefined}
-            style={null}
-          />
-        </button>
-        <i
-          className="sg-icon sg-icon-x"
-          onClick={undefined}
-          style={null}
-        />
-      </div>
-    </section>
-    <i
-      className="sg-icon sg-icon-create"
-      onClick={undefined}
-      style={null}
-    />
-  </span>
-</section>
-`;
-
-exports[`Storyshots Select Disabled Select 1`] = `
-<div
-  className="input-select-wrap is-disabled"
->
-  <label
-    className="input-select-label"
-    htmlFor="select2-example-required"
-  >
-    Sender
-  </label>
-  <select
-    aria-hidden="true"
-    className="input-select2 select2-hidden-accessible"
-    data-placeholder="Select a Sender"
-    id="select2-example-required"
-    tabIndex={-1}
-  >
-    <option />
-    <option
-      value="Jason"
-    >
-      Jason
-    </option>
-    <option
-      value="Evan"
-    >
-      Evan
-    </option>
-    <option
-      value="Katrina"
-    >
-      Katrina
-    </option>
-  </select>
-  <span
-    className="select2 select2-container select2-container--default select2-container--below"
-    dir="ltr"
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
-  >
-    <span
-      className="selection"
-    >
-      <span
-        aria-expanded="false"
-        aria-haspopup="true"
-        aria-labelledby="select2-select2-example-required-container"
-        className="select2-selection select2-selection--single"
-        role="combobox"
-        tabIndex={0}
-      >
-        <span
-          className="select2-selection__rendered"
-          id="select2-select2-example-required-container"
-        >
-          <span
-            className="select2-selection__placeholder"
-          >
-            Select a Sender
-          </span>
-        </span>
-        <span
-          className="select2-selection__arrow"
-          role="presentation"
-        >
-          <b
-            role="presentation"
-          />
-        </span>
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      className="dropdown-wrapper"
-    />
-  </span>
-</div>
-`;
-
-exports[`Storyshots Select Required Select 1`] = `
-<div
-  className="input-select-wrap is-required"
->
-  <label
-    className="input-select-label"
-    htmlFor="select2-example-required"
-  >
-    Sender
-  </label>
-  <select
-    aria-hidden="true"
-    className="input-select2 select2-hidden-accessible"
-    data-placeholder="Select a Sender"
-    id="select2-example-required"
-    tabIndex={-1}
-  >
-    <option />
-    <option
-      value="Jason"
-    >
-      Jason
-    </option>
-    <option
-      value="Evan"
-    >
-      Evan
-    </option>
-    <option
-      value="Katrina"
-    >
-      Katrina
-    </option>
-  </select>
-  <span
-    className="select2 select2-container select2-container--default select2-container--below"
-    dir="ltr"
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
-  >
-    <span
-      className="selection"
-    >
-      <span
-        aria-expanded="false"
-        aria-haspopup="true"
-        aria-labelledby="select2-select2-example-required-container"
-        className="select2-selection select2-selection--single"
-        role="combobox"
-        tabIndex={0}
-      >
-        <span
-          className="select2-selection__rendered"
-          id="select2-select2-example-required-container"
-        >
-          <span
-            className="select2-selection__placeholder"
-          >
-            Select a Sender
-          </span>
-        </span>
-        <span
-          className="select2-selection__arrow"
-          role="presentation"
-        >
-          <b
-            role="presentation"
-          />
-        </span>
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      className="dropdown-wrapper"
-    />
-  </span>
-</div>
-`;
-
-exports[`Storyshots Select Select with Error 1`] = `
-<div
-  className="input-select-wrap is-error"
->
-  <label
-    className="input-select-label"
-    htmlFor="select2-example-required"
-  >
-    Sender
-  </label>
-  <select
-    aria-hidden="true"
-    className="input-select2 select2-hidden-accessible"
-    data-placeholder="Select a Sender"
-    id="select2-example-required"
-    tabIndex={-1}
-  >
-    <option />
-    <option
-      value="Jason"
-    >
-      Jason
-    </option>
-    <option
-      value="Evan"
-    >
-      Evan
-    </option>
-    <option
-      value="Katrina"
-    >
-      Katrina
-    </option>
-  </select>
-  <span
-    className="select2 select2-container select2-container--default select2-container--below"
-    dir="ltr"
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
-  >
-    <span
-      className="selection"
-    >
-      <span
-        aria-expanded="false"
-        aria-haspopup="true"
-        aria-labelledby="select2-select2-example-required-container"
-        className="select2-selection select2-selection--single"
-        role="combobox"
-        tabIndex={0}
-      >
-        <span
-          className="select2-selection__rendered"
-          id="select2-select2-example-required-container"
-        >
-          <span
-            className="select2-selection__placeholder"
-          >
-            Select a Sender
-          </span>
-        </span>
-        <span
-          className="select2-selection__arrow"
-          role="presentation"
-        >
-          <b
-            role="presentation"
-          />
-        </span>
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      className="dropdown-wrapper"
-    />
-  </span>
-</div>
-`;
-
-exports[`Storyshots Select Standard Select 1`] = `
-<div
-  className="input-select-wrap"
->
-  <label
-    className="input-select-label"
-    htmlFor="select2-example-required"
-  >
-    Sender
-  </label>
-  <select
-    aria-hidden="true"
-    className="input-select2 select2-hidden-accessible"
-    data-placeholder="Select a Sender"
-    id="select2-example-required"
-    tabIndex={-1}
-  >
-    <option />
-    <option
-      value="Jason"
-    >
-      Jason
-    </option>
-    <option
-      value="Evan"
-    >
-      Evan
-    </option>
-    <option
-      value="Katrina"
-    >
-      Katrina
-    </option>
-  </select>
-  <span
-    className="select2 select2-container select2-container--default select2-container--below"
-    dir="ltr"
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
-  >
-    <span
-      className="selection"
-    >
-      <span
-        aria-expanded="false"
-        aria-haspopup="true"
-        aria-labelledby="select2-select2-example-required-container"
-        className="select2-selection select2-selection--single"
-        role="combobox"
-        tabIndex={0}
-      >
-        <span
-          className="select2-selection__rendered"
-          id="select2-select2-example-required-container"
-        >
-          <span
-            className="select2-selection__placeholder"
-          >
-            Select a Sender
-          </span>
-        </span>
-        <span
-          className="select2-selection__arrow"
-          role="presentation"
-        >
-          <b
-            role="presentation"
-          />
-        </span>
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      className="dropdown-wrapper"
-    />
-  </span>
+        Add Condition
+      </button>
+    </div>
+  </div>
 </div>
 `;
 

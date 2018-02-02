@@ -19,16 +19,9 @@ export { NumberedStep, NumberedSteps } from './components/NumberedSteps';
 export { Progress, ProgressStage } from './components/Progress';
 export { PageHeader, PageHeading } from './components/PageHeader';
 export { Radio, RadioGroup } from './components/Radio';
-export { Select } from './components/Select';
 export { SideModal } from './components/SideModal';
 export { Slider } from './components/Slider';
-export {
-  SegmentTerm,
-  SegmentTermControls,
-  SegmentTermDescription,
-  SegmentTermTitle,
-  SegmentTermWrap,
-} from './components/SegmentTerm';
+export { SegmentTerm } from './components/SegmentTerm';
 export { Tab, Tabs } from './components/Tabs';
 export { Table, Row, Cell, TableHeader, TableBody } from './components/Table';
 export { TextInput } from './components/TextInput';
