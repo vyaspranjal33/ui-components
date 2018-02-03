@@ -29,8 +29,8 @@ export const Alert: React.SFC<AlertProps> = ({
   onClick: handleClick,
   type,
 }) => {
-  if (hidden) return null;
-  
+  if (hidden) { return null; }
+
   return (
     <div
       className={cn('alert', `alert-${type}`, {
