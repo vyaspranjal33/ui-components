@@ -24,10 +24,13 @@ const iconFor = (type: AlertType): IconType => {
 export const Alert: React.SFC<AlertProps> = ({
   children,
   icon,
+  hidden,
   inline,
   onClick: handleClick,
   type,
 }) => {
+  if (hidden) return null;
+  
   return (
     <div
       className={cn('alert', `alert-${type}`, {
