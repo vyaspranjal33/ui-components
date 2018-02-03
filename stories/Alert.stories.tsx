@@ -40,12 +40,14 @@ class ExampleContainer extends Component<any, { isHidden: boolean }> {
       <>
         {
           this.state.isHidden &&
-            <Button
-              type="primary"
-              onClick={this.show}
-            >
-              Show Alert
-            </Button>
+            (
+              <Button
+                type="primary"
+                onClick={this.show}
+              >
+                Show Alert
+              </Button>
+            )
         }
         {alertWithProps}
       </>
