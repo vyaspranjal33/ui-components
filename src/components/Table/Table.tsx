@@ -12,15 +12,15 @@ export interface TableProps {
   className?: string;
 }
 
-export class Table extends React.Component<TableProps> {
-  public render() {
-
-    return (
-      <table className={cn('table-wrap', this.props.className)}>
-        {this.props.children}
-      </table>
-    );
-  }
+export const Table: React.SFC<TableProps> = ({
+  children,
+  className,
+}) => {
+  return (
+    <table className={cn('table-wrap', className)}>
+      {children}
+    </table>
+  );
 }
 
 export default Table;

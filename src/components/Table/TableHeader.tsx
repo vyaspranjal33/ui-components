@@ -6,15 +6,15 @@ export interface TableHeaderProps {
   className?: string;
 }
 
-export class TableHeader extends React.Component<TableHeaderProps> {
-
-  public render() {
-    return (
-      <thead className={cn(this.props.className)}>
-        {this.props.children}
-      </thead>
-    );
-  }
+export const TableHeader: React.SFC<TableHeaderProps> = ({
+  children,
+  className,
+}) => {
+  return (
+    <thead className={cn(className)}>
+      {children}
+    </thead>
+  );
 }
 
 export default TableHeader;

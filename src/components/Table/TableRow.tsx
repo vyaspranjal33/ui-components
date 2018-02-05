@@ -6,15 +6,15 @@ export interface TableRowProps {
   className?: string;
 }
 
-export class TableRow extends React.Component<TableRowProps> {
-  public render() {
-
-    return (
-      <tr className={cn(this.props.className)}>
-        {this.props.children}
-      </tr>
-    );
-  }
+export const TableRow: React.SFC<TableRowProps> = ({
+  children,
+  className,
+}) => {
+  return (
+    <tr className={cn(className)}>
+      {children}
+    </tr>
+  );
 }
 
 export default TableRow;

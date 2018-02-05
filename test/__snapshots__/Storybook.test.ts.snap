@@ -4029,6 +4029,107 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
 </p>
 `;
 
+exports[`Storyshots Table Sortable 1`] = `
+<table
+  className="table-wrap"
+>
+  <thead
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <th
+        className="sort sort-asc"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        className="sort sort-asc"
+        onClick={[Function]}
+      >
+        Date
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className=""
+  >
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        Monday
+      </td>
+      <td
+        className=""
+      >
+        5
+      </td>
+    </tr>
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        Tuesday
+      </td>
+      <td
+        className=""
+      >
+        6
+      </td>
+    </tr>
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        Wednesday
+      </td>
+      <td
+        className=""
+      >
+        7
+      </td>
+    </tr>
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        Thursday
+      </td>
+      <td
+        className=""
+      >
+        8
+      </td>
+    </tr>
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        Friday
+      </td>
+      <td
+        className=""
+      >
+        9
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
 exports[`Storyshots Table Standard 1`] = `
 <table
   className="table-wrap"
