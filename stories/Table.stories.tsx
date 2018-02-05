@@ -3,34 +3,34 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { Action, ActionsCell } from '../src/components/Actions';
-import { Cell, HeaderCell, Row, Table, TableBody, TableHeader } from '../src/components/Table';
+import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from '../src/components/Table/Table';
 
 const stories = storiesOf('Table', module);
 
 stories.add('Standard', () => (
   <Table>
     <TableHeader>
-      <Row>
+      <TableRow>
         <HeaderCell>Contacts</HeaderCell>
         <HeaderCell>Date Added</HeaderCell>
         <HeaderCell>Last Opened</HeaderCell>
         <HeaderCell>Last Clicked</HeaderCell>
         <HeaderCell>Actions</HeaderCell>
-      </Row>
+      </TableRow>
     </TableHeader>
     <TableBody>
-      <Row>
-        <Cell className="contact"><a href="#">todd.moy@sendgrid.com</a></Cell>
-        <Cell className="stats">02/02/2015</Cell>
-        <Cell className="stats">02/10/2016</Cell>
-        <Cell className="stats">02/08/2016</Cell>
+      <TableRow>
+        <TableCell className="contact"><a href="#">todd.moy@sendgrid.com</a></TableCell>
+        <TableCell className="stats">02/02/2015</TableCell>
+        <TableCell className="stats">02/10/2016</TableCell>
+        <TableCell className="stats">02/08/2016</TableCell>
         <ActionsCell>
           <Action title="View" icon="view" onClick={action('View Action Clicked')} />
           <Action title="Edit" icon="pencil" onClick={action('Edit Action Clicked')} />
           <Action title="Copy" icon="copy" onClick={action('Copy Action Clicked')} />
           <Action title="Delete" icon="trash" onClick={action('Delete Action Clicked')} />
         </ActionsCell>
-      </Row>
+      </TableRow>
     </TableBody>
   </Table>
 ));
