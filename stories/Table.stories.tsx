@@ -12,7 +12,7 @@ stories.add('Standard', () => (
     <TableHeader>
       <TableRow>
         <HeaderCell>Contacts</HeaderCell>
-        <HeaderCell sortable>Date Added</HeaderCell>
+        <HeaderCell>Date Added</HeaderCell>
         <HeaderCell>Last Opened</HeaderCell>
         <HeaderCell>Last Clicked</HeaderCell>
         <HeaderCell>Actions</HeaderCell>

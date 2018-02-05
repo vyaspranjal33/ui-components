@@ -4147,7 +4147,7 @@ exports[`Storyshots Table Standard 1`] = `
         Contacts
       </th>
       <th
-        className="sort sort-asc"
+        className=""
         onClick={[Function]}
       >
         Date Added
