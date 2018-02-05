@@ -4,7 +4,7 @@ import cn from '../../utilities/classnames';
 export interface TableHeaderCellProps {
   children?: React.ReactNode;
   className?: string;
-  sortable?: boolean;
+  sortKey?: string;
 }
 
 export interface TableHeaderCellState {
@@ -16,12 +16,12 @@ export class HeaderCell extends React.Component<TableHeaderCellProps, TableHeade
     super(props);
 
     this.state = {
-      sorted: (props.sortable ? 'asc' : false),
+      sorted: false,
     };
   }
 
   public handleClick = () => {
-    if (this.props.sortable) {
+    if (this.props.sortKey) {
       if (this.state.sorted === 'asc') {
         this.setState({ sorted: 'desc' });
       } else {
@@ -35,7 +35,7 @@ export class HeaderCell extends React.Component<TableHeaderCellProps, TableHeade
       <th
         className={
           cn(this.props.className,
-            { sort: this.props.sortable },
+            { sort: !this.props.sortKey === undefined },
             { 'sort-asc': this.state.sorted === 'asc' },
             { 'sort-desc': this.state.sorted === 'desc'})
           }

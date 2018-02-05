@@ -9,14 +9,6 @@ const stories = storiesOf('Table', module);
 
 const data = [
   {
-    name: "Monday",
-    date: 5
-  },
-  {
-    name: "Tuesday",
-    date: 6
-  },
-  {
     name: "Wednesday",
     date: 7
   },
@@ -25,28 +17,44 @@ const data = [
     date: 8
   },
   {
+    name: "Tuesday",
+    date: 6
+  },
+  {
     name: "Friday",
     date: 9
+  },
+  {
+    name: "Monday",
+    date: 5
   }
 ]
 
 const column = [
   {
     name: "Name",
-    sorter: function(arr: Array<any>) {
-      return arr.sort();
+    dataKey: "name",
+    sort: function(array: Array<any>, dataKey: string) {
+      return array.sort(function(a, b) {
+        var x = a[dataKey]; var y = b[dataKey];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+      })
     }
   },
   {
     name: "Date",
-    sorter: function(arr: Array<any>) {
-      return arr.sort();
+    dataKey: "date",
+    sort: function(array: Array<any>, dataKey: string) {
+      return array.sort(function(a, b) {
+        var x = a[dataKey]; var y = b[dataKey];
+        return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+      })
     }
   }
 ]
 
 const RowRenderer = ({name, date} : {name: string, date: number}) => (
-  <TableRow key={name}>
+  <TableRow>
     <TableCell>
       {name}
     </TableCell>
@@ -56,8 +64,8 @@ const RowRenderer = ({name, date} : {name: string, date: number}) => (
   </TableRow>
 )
 
-const ColumnRenderer = ({name, sorter} : {name: string, sorter: Function}) => (
-  <HeaderCell key={name} sortable>
+const ColumnRenderer = ({name, sort, dataKey} : {name: string, dataKey: string, sort: Function}) => (
+  <HeaderCell sortKey={dataKey}>
     {name}
   </HeaderCell>
 )
