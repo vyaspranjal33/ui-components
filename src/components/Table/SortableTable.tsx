@@ -32,6 +32,10 @@ export default class SortableTable extends React.Component<SortableTableProps, S
     this.handleHeaderClick = this.handleHeaderClick.bind(this);
     this.sortData = this.sortData.bind(this);
   }
+  
+  public componentDidMount() {
+    this.sortData(this.props.headerData[0].dataKey, false);
+  }
 
   private performSort(rowData: Array<object>, headerData: Array<HeaderData>, sortBy: string) {
     const sortIndex = headerData.findIndex(ele => ele.dataKey === sortBy);

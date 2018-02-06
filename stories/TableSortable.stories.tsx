@@ -9,23 +9,23 @@ const stories = storiesOf('Table', module);
 
 const data = [
   {
-    name: "Wednesday",
+    name: "Awesome Wednesday",
     date: 7
   },
   {
-    name: "Thursday",
+    name: "Beautiful Thursday",
     date: 8
   },
   {
-    name: "Tuesday",
+    name: "Celebratory Tuesday",
     date: 6
   },
   {
-    name: "Friday",
+    name: "Delightful Friday",
     date: 9
   },
   {
-    name: "Monday",
+    name: "Excellent Monday",
     date: 5
   }
 ]
