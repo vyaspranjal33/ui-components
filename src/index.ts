@@ -20,6 +20,7 @@ export { Loader } from './components/Loader';
 export { Meter } from './components/Meter';
 export { NumberedStep, NumberedSteps } from './components/NumberedSteps';
 export { Progress, ProgressStage } from './components/Progress';
+export { PageHeader, PageHeading } from './components/PageHeader';
 export { Radio, RadioGroup } from './components/Radio';
 export { SideModal } from './components/SideModal';
 export { Slider } from './components/Slider';
