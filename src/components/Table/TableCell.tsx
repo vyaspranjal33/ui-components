@@ -1,12 +1,12 @@
 import React from 'react';
-import cn from '../utilities/classnames';
+import cn from '../../utilities/classnames';
 
-export interface TableHeaderCellProps {
+export interface TableCellProps {
   children?: React.ReactNode;
   className?: string;
 }
 
-export class HeaderCell extends React.Component<TableHeaderCellProps> {
+export class TableCell extends React.Component<TableCellProps> {
   public render() {
 
     return (
@@ -17,4 +17,4 @@ export class HeaderCell extends React.Component<TableHeaderCellProps> {
   }
 }
 
-export default HeaderCell;
+export default TableCell;
