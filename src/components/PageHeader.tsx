@@ -29,7 +29,7 @@ export const PageHeader: React.SFC<PageHeaderProps> = ({ children }) => (
 export const PageHeading: React.SFC<PageHeadingProps> = ({ children, title }) => (
   <div className="content-header" style={headerStyle}>
     <h1 style={headingStyle}>{title}</h1>
-    {children ? <div className="btn-list">{children}</div> : ''}
+    {children && <div className="btn-list">{children}</div>}
   </div>
 );
 
