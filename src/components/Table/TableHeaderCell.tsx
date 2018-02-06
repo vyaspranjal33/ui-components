@@ -5,6 +5,7 @@ export interface TableHeaderCellProps {
   children?: React.ReactNode;
   className?: string;
   sortKey?: string;
+  clickEvent?: Function;
 }
 
 export interface TableHeaderCellState {
@@ -24,8 +25,10 @@ export class HeaderCell extends React.Component<TableHeaderCellProps, TableHeade
     if (this.props.sortKey) {
       if (this.state.sorted === 'asc') {
         this.setState({ sorted: 'desc' });
+        this.props.clickEvent(this.props.sortKey, true);
       } else {
         this.setState({ sorted: 'asc' });
+        this.props.clickEvent(this.props.sortKey, false);
       }
     }
   }
