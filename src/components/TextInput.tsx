@@ -22,6 +22,7 @@ const getRenderedTextInput = function(value?: string | number) {
   });
 
   const infoId = this.props.info && `${this.props.id}-info`;
+  const children = this.props.children || '';
 
   return (
     <div className={classes} style={this.inputStyle}>
@@ -47,11 +48,13 @@ const getRenderedTextInput = function(value?: string | number) {
           {this.props.info}
         </span>
       )}
+      {children}
     </div>
   );
 };
 
 export interface TextInputProps {
+  children?: React.ReactNode;
   type: InputType;
   id: string;
   onChange: (event: any, value: string | number) => void;
