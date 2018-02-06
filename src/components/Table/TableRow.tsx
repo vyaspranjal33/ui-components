@@ -1,12 +1,12 @@
 import React from 'react';
-import cn from '../utilities/classnames';
+import cn from '../../utilities/classnames';
 
 export interface TableRowProps {
   children?: React.ReactNode;
   className?: string;
 }
 
-export class Row extends React.Component<TableRowProps> {
+export class TableRow extends React.Component<TableRowProps> {
   public render() {
 
     return (
@@ -17,4 +17,4 @@ export class Row extends React.Component<TableRowProps> {
   }
 }
 
-export default Row;
+export default TableRow;
