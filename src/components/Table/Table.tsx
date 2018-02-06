@@ -1,11 +1,11 @@
 import React from 'react';
-import cn from '../utilities/classnames';
+import cn from '../../utilities/classnames';
 import TableBody from './TableBody';
-import Cell from './TableCell';
+import TableCell from './TableCell';
 import TableHeader from './TableHeader';
 import HeaderCell from './TableHeaderCell';
-import Row from './TableRow';
-export { Cell, Row, TableHeader, TableBody, HeaderCell };
+import TableRow from './TableRow';
+export { TableCell, TableRow, TableHeader, TableBody, HeaderCell };
 
 export interface TableProps {
   children?: React.ReactNode;
