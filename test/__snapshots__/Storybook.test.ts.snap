@@ -4040,13 +4040,13 @@ exports[`Storyshots Table Sortable 1`] = `
       className=""
     >
       <th
-        className="sort sort-asc"
+        className=""
         onClick={[Function]}
       >
         Name
       </th>
       <th
-        className="sort sort-asc"
+        className=""
         onClick={[Function]}
       >
         Date
@@ -4062,35 +4062,7 @@ exports[`Storyshots Table Sortable 1`] = `
       <td
         className=""
       >
-        Monday
-      </td>
-      <td
-        className=""
-      >
-        5
-      </td>
-    </tr>
-    <tr
-      className=""
-    >
-      <td
-        className=""
-      >
-        Tuesday
-      </td>
-      <td
-        className=""
-      >
-        6
-      </td>
-    </tr>
-    <tr
-      className=""
-    >
-      <td
-        className=""
-      >
-        Wednesday
+        Awesome Wednesday
       </td>
       <td
         className=""
@@ -4104,7 +4076,7 @@ exports[`Storyshots Table Sortable 1`] = `
       <td
         className=""
       >
-        Thursday
+        Beautiful Thursday
       </td>
       <td
         className=""
@@ -4118,12 +4090,40 @@ exports[`Storyshots Table Sortable 1`] = `
       <td
         className=""
       >
-        Friday
+        Celebratory Tuesday
+      </td>
+      <td
+        className=""
+      >
+        6
+      </td>
+    </tr>
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        Delightful Friday
       </td>
       <td
         className=""
       >
         9
+      </td>
+    </tr>
+    <tr
+      className=""
+    >
+      <td
+        className=""
+      >
+        Excellent Monday
+      </td>
+      <td
+        className=""
+      >
+        5
       </td>
     </tr>
   </tbody>
