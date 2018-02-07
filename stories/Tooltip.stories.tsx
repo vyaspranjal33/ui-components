@@ -1,6 +1,8 @@
+import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import Icon from '../src/components/Icon';
+import { TextInput } from '../src/components/TextInput';
 import { HTMLTooltip, Tooltip } from '../src/components/Tooltip';
 
 const stories = storiesOf('Tooltip', module);
@@ -53,8 +55,13 @@ stories.add('Underline', () => (
 
 stories.add('HTML Content', () => (
   <div className="input-text-wrap">
-    <label className="input-text-label">CCV</label>
-    <input type="text" id="input-text-example-ccv" />
+    <TextInput
+      type="text"
+      label="CCV"
+      id="input-text-example-ccv"
+      onChange={action('Input Changed')}
+    >
+
     <div className="input-info-tooltip">
       <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left">
         <p>
@@ -63,5 +70,6 @@ stories.add('HTML Content', () => (
         </p>
       </HTMLTooltip>
     </div>
+    </TextInput>
   </div>
 ));

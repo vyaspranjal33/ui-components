@@ -995,7 +995,13 @@ exports[`Storyshots Card Card with Actions 1`] = `
     <div
       className="card is-centered"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         Event Annoucements
       </h2>
       <p>
@@ -1072,7 +1078,13 @@ exports[`Storyshots Card Card with Badge (Centered) 1`] = `
       >
         Recommended
       </span>
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1103,7 +1115,13 @@ exports[`Storyshots Card Card with Badge 1`] = `
       >
         Recommended
       </span>
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1129,7 +1147,13 @@ exports[`Storyshots Card Card with Title and Body (Centered) 1`] = `
     <div
       className="card is-centered"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1155,7 +1179,13 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children and Cent
     <div
       className="card is-centered"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1188,7 +1218,13 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
     <div
       className="card"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -1221,7 +1257,13 @@ exports[`Storyshots Card Card with Title and Body 1`] = `
     <div
       className="card"
     >
-      <h2>
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
         SMTP Relay
       </h2>
       <p>
@@ -2178,6 +2220,7 @@ exports[`Storyshots FilterableList FilterableList 1`] = `
           value=""
         />
         
+        
       </div>
     </div>
   </div>
@@ -2297,6 +2340,7 @@ exports[`Storyshots FilterableList FilterableList as a Container Component 1`] =
           value=""
         />
         
+        
       </div>
     </div>
   </div>
@@ -2415,6 +2459,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
           type="text"
           value=""
         />
+        
         
       </div>
       <div
@@ -2557,6 +2602,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
           value=""
         />
         
+        
       </div>
     </div>
   </div>
@@ -2676,6 +2722,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
           value=""
         />
         
+        
       </div>
       <div
         className="input-text-wrap"
@@ -2700,6 +2747,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
           type="text"
           value=""
         />
+        
         
       </div>
       <div
@@ -2780,6 +2828,167 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
     </article>
   </div>
 </section>
+`;
+
+exports[`Storyshots Grid 4/8 Column Config 1`] = `
+<div>
+  <div
+    className="row"
+  >
+    <div
+      className="col-4"
+    >
+      <div
+        className="card"
+      >
+        <h2
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          A Four-Wide Column
+        </h2>
+        <p>
+          This card is four columns wide.
+        </p>
+      </div>
+    </div>
+    <div
+      className="col-8"
+    >
+      <div
+        className="card"
+      >
+        <h2
+          style={
+            Object {
+              "width": "100%",
+            }
+          }
+        >
+          An Eight-Wide Column
+        </h2>
+        <p>
+          This card is eight columns wide.
+        </p>
+      </div>
+    </div>
+  </div>
+  <hr
+    className="is-thin"
+    data-label={null}
+  />
+</div>
+`;
+
+exports[`Storyshots Grid Default (No Width or Offset) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className=""
+  >
+    <div
+      className="card"
+    >
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        A Default Column
+      </h2>
+      <p>
+        This card is in a column with no width or offset.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Offset 5 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-offset-5"
+  >
+    <div
+      className="card"
+    >
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        An Offset Only Column
+      </h2>
+      <p>
+        This card specifies 5 offset and no width.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Using Width & Offset 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-6 col-offset-3"
+  >
+    <div
+      className="card"
+    >
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        A Six-Wide Column
+      </h2>
+      <p>
+        This card is in a column six units wide, offset by three.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Grid Width 12 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-12"
+  >
+    <div
+      className="card"
+    >
+      <h2
+        style={
+          Object {
+            "width": "100%",
+          }
+        }
+      >
+        A Width Only Column
+      </h2>
+      <p>
+        This card specifies 12 width and no offset.
+      </p>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Loaders Centered Loader 1`] = `
@@ -3182,6 +3391,61 @@ exports[`Storyshots NumberedSteps Numbered Steps with short content 1`] = `
 </div>
 `;
 
+exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page Heading 1`] = `
+<header>
+  <ol
+    className="breadcrumb"
+  >
+    <li>
+      <a
+        href="#"
+      >
+        Contacts
+      </a>
+    </li>
+    <li>
+      <a
+        href="#"
+      >
+        Upload CSV
+      </a>
+    </li>
+    <li />
+  </ol>
+  <div
+    className="content-header"
+    style={
+      Object {
+        "marginTop": 10,
+      }
+    }
+  >
+    <h1
+      style={
+        Object {
+          "color": "#294661",
+          "fontFamily": "Colfax,Proxima Nova,Helvetica,sans-serif",
+          "fontWeight": 300,
+        }
+      }
+    >
+      Page Title
+    </h1>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-primary"
+        id={undefined}
+        onClick={[Function]}
+      >
+        Create Campaign
+      </button>
+    </div>
+  </div>
+</header>
+`;
+
 exports[`Storyshots Progress Horizontal Progress 1`] = `
 <section
   className="progress-container"
@@ -3383,621 +3647,283 @@ exports[`Storyshots Radio Standard Radio 1`] = `
 </div>
 `;
 
-exports[`Storyshots Segment Term Segment terms 1`] = `
-Array [
-  <section
-    className="segment-term-wrap"
+exports[`Storyshots Segment Term Segment term which cannot be edited 1`] = `
+<div
+  className="segment-term-wrap"
+>
+  <p
+    className="segment-term-title"
   >
-    <span
-      className="segment-term-title"
-    >
-      <strong
-        className=""
-      >
-        Entry Criteria
+    Entry Criteria
+  </p>
+  <div
+    className="segment-term"
+    onClick={undefined}
+  >
+    <p>
+      The first time a contact is added to 
+      <strong>
+        People in Los Angeles
       </strong>
-      <small>
-        =
-      </small>
-    </span>
-    <span
-      className="segment-term has-separator"
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
+<div
+  className="segment-term-wrap"
+>
+  <p
+    className="segment-term-title"
+  >
+    Entry Criteria
+  </p>
+  <div
+    className="segment-term has-separator is-editable"
+    onClick={undefined}
+  >
+    <div
+      className="input-select-wrap"
     >
-      <section
-        className="segment-term-inputs"
+      <label
+        className="input-select-label"
+        htmlFor="select-a"
       >
-        <span
-          className="segment-term-description"
-        >
-          The first time a contact is added to 
-          <strong>
-            People in Los Angeles
-          </strong>
-        </span>
+        Select send conditions
+      </label>
+      <select
+        id="select-a"
+      >
+        <option>
+          The first time a contact
+        </option>
+      </select>
+    </div>
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="select-b"
+      >
+        Select contact criteria
+      </label>
+      <select
+        id="select-b"
+      >
+        <option>
+          Abandons a cart
+        </option>
+      </select>
+    </div>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-danger btn-small"
+        id={undefined}
+        onClick={[Function]}
+      >
         <i
-          className="sg-icon sg-icon-pencil segment-term-inputs-edit"
+          className="sg-icon sg-icon-x"
           onClick={undefined}
           style={null}
         />
-      </section>
-    </span>
-  </section>,
-  <section
-    className="segment-term-wrap"
+      </button>
+    </div>
+  </div>
+  <div
+    className="btn-list"
   >
-    <span
-      className="segment-term-title"
+    <button
+      className="btn btn-secondary has-icon"
+      id={undefined}
+      onClick={[Function]}
     >
-      <strong
-        className="segment-terms-or"
-      >
-        Or
-      </strong>
-      
-    </span>
-    <span
-      className="segment-term"
-    >
-      <section
-        className="segment-term-inputs"
-      >
-        <span
-          className="segment-term-description"
-        >
-          Every time a contact is added to 
-          <strong>
-            People in Denver
-          </strong>
-        </span>
-        <i
-          className="sg-icon sg-icon-pencil segment-term-inputs-edit"
-          onClick={undefined}
-          style={null}
-        />
-      </section>
       <i
-        className="sg-icon sg-icon-create"
+        className="sg-icon sg-icon-plus"
         onClick={undefined}
         style={null}
       />
-    </span>
-  </section>,
-]
+      Add Condition
+    </button>
+  </div>
+</div>
 `;
 
-exports[`Storyshots Segment Term Segment terms which cannot be edited 1`] = `
-<section
+exports[`Storyshots Segment Term Segment term which is being edited and is filled out 1`] = `
+<div
   className="segment-term-wrap"
 >
-  <span
+  <p
     className="segment-term-title"
   >
-    <strong
-      className=""
+    Entry Criteria
+  </p>
+  <div
+    className="segment-term has-separator is-editable"
+    onClick={undefined}
+  >
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="select-a"
+      >
+        Select send conditions
+      </label>
+      <select
+        id="select-a"
+      >
+        <option>
+          The first time a contact
+        </option>
+      </select>
+    </div>
+    <div
+      className="input-select-wrap"
+    >
+      <label
+        className="input-select-label"
+        htmlFor="select-b"
+      >
+        Select contact criteria
+      </label>
+      <select
+        id="select-b"
+      >
+        <option>
+          Abandons a cart
+        </option>
+      </select>
+    </div>
+    <div
+      className="input-select-wrap"
+    >
+      <select
+        id="select-c"
+      >
+        <option>
+          People in Los Angeles
+        </option>
+      </select>
+    </div>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-secondary btn-small"
+        id={undefined}
+        onClick={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-check-thin"
+          onClick={undefined}
+          style={null}
+        />
+      </button>
+      <button
+        className="btn btn-danger btn-small"
+        id={undefined}
+        onClick={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-x"
+          onClick={undefined}
+          style={null}
+        />
+      </button>
+    </div>
+  </div>
+  <div
+    className="btn-list"
+  >
+    <button
+      className="btn btn-secondary has-icon"
+      id={undefined}
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-plus"
+        onClick={undefined}
+        style={null}
+      />
+      Add Condition
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Segment Term Segment terms 1`] = `
+<div>
+  <div
+    className="segment-term-wrap"
+  >
+    <p
+      className="segment-term-title"
     >
       Entry Criteria
-    </strong>
-    <small>
-      =
-    </small>
-  </span>
-  <span
-    className="segment-term"
-  >
-    <section
-      className="segment-term-inputs"
+    </p>
+    <div
+      className="segment-term has-separator"
+      onClick={[Function]}
     >
-      <span
-        className="segment-term-description"
-      >
+      <p>
         The first time a contact is added to 
         <strong>
           People in Los Angeles
         </strong>
-      </span>
-    </section>
-    <i
-      className="sg-icon sg-icon-create"
-      onClick={undefined}
-      style={null}
-    />
-  </span>
-</section>
-`;
-
-exports[`Storyshots Segment Term Segment terms which is being edited 1`] = `
-<section
-  className="segment-term-wrap"
->
-  <span
-    className="segment-term-title"
+      </p>
+      <i
+        className="sg-icon sg-icon-pencil segment-term-edit"
+        onClick={undefined}
+        style={null}
+      />
+    </div>
+  </div>
+  <div
+    className="segment-term-wrap"
   >
-    <strong
-      className=""
+    <p
+      className="segment-term-title"
     >
-      Entry Criteria
-    </strong>
-    <small>
-      =
-    </small>
-  </span>
-  <span
-    className="segment-term"
-  >
-    <section
-      className="segment-term-inputs is-editable"
+      Or
+    </p>
+    <div
+      className="segment-term"
+      onClick={[Function]}
     >
-      <div
-        className="input-select-wrap"
-      >
-        <label
-          className="input-select-label"
-          htmlFor="select-a"
-        >
-          Select send conditions
-        </label>
-        <select
-          id="select-a"
-        >
-          <option>
-            The first time a contact
-          </option>
-        </select>
-      </div>
-      <div
-        className="input-select-wrap"
-      >
-        <label
-          className="input-select-label"
-          htmlFor="select-b"
-        >
-          Select contact criteria
-        </label>
-        <select
-          id="select-b"
-        >
-          <option>
-            Abandons a cart
-          </option>
-        </select>
-      </div>
-      <div
-        className="btn-list"
+      <p>
+        Every time a contact is added to 
+        <strong>
+          People in Denver
+        </strong>
+      </p>
+      <i
+        className="sg-icon sg-icon-pencil segment-term-edit"
+        onClick={undefined}
+        style={null}
+      />
+    </div>
+    <div
+      className="btn-list"
+    >
+      <button
+        className="btn btn-secondary has-icon"
+        id={undefined}
+        onClick={[Function]}
       >
         <i
-          className="sg-icon sg-icon-x"
+          className="sg-icon sg-icon-plus"
           onClick={undefined}
           style={null}
         />
-      </div>
-    </section>
-    <i
-      className="sg-icon sg-icon-create"
-      onClick={undefined}
-      style={null}
-    />
-  </span>
-</section>
-`;
-
-exports[`Storyshots Segment Term Segment terms which is being edited and is filled out 1`] = `
-<section
-  className="segment-term-wrap"
->
-  <span
-    className="segment-term-title"
-  >
-    <strong
-      className=""
-    >
-      Entry Criteria
-    </strong>
-    <small>
-      =
-    </small>
-  </span>
-  <span
-    className="segment-term"
-  >
-    <section
-      className="segment-term-inputs is-editable"
-    >
-      <div
-        className="input-select-wrap"
-      >
-        <select
-          id="select-a"
-        >
-          <option>
-            The first time a contact
-          </option>
-        </select>
-      </div>
-      <div
-        className="input-select-wrap"
-      >
-        <select
-          id="select-b"
-        >
-          <option>
-            Abandons a cart
-          </option>
-        </select>
-      </div>
-      <div
-        className="input-select-wrap"
-      >
-        <select
-          id="select-c"
-        >
-          <option>
-            People in Los Angeles
-          </option>
-        </select>
-      </div>
-      <div
-        className="btn-list"
-      >
-        <button
-          className="btn btn-secondary btn-small"
-          id={undefined}
-          onClick={[Function]}
-        >
-          <i
-            className="sg-icon sg-icon-check"
-            onClick={undefined}
-            style={null}
-          />
-        </button>
-        <i
-          className="sg-icon sg-icon-x"
-          onClick={undefined}
-          style={null}
-        />
-      </div>
-    </section>
-    <i
-      className="sg-icon sg-icon-create"
-      onClick={undefined}
-      style={null}
-    />
-  </span>
-</section>
-`;
-
-exports[`Storyshots Select Disabled Select 1`] = `
-<div
-  className="input-select-wrap is-disabled"
->
-  <label
-    className="input-select-label"
-    htmlFor="select2-example-required"
-  >
-    Sender
-  </label>
-  <select
-    aria-hidden="true"
-    className="input-select2 select2-hidden-accessible"
-    data-placeholder="Select a Sender"
-    id="select2-example-required"
-    tabIndex={-1}
-  >
-    <option />
-    <option
-      value="Jason"
-    >
-      Jason
-    </option>
-    <option
-      value="Evan"
-    >
-      Evan
-    </option>
-    <option
-      value="Katrina"
-    >
-      Katrina
-    </option>
-  </select>
-  <span
-    className="select2 select2-container select2-container--default select2-container--below"
-    dir="ltr"
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
-  >
-    <span
-      className="selection"
-    >
-      <span
-        aria-expanded="false"
-        aria-haspopup="true"
-        aria-labelledby="select2-select2-example-required-container"
-        className="select2-selection select2-selection--single"
-        role="combobox"
-        tabIndex={0}
-      >
-        <span
-          className="select2-selection__rendered"
-          id="select2-select2-example-required-container"
-        >
-          <span
-            className="select2-selection__placeholder"
-          >
-            Select a Sender
-          </span>
-        </span>
-        <span
-          className="select2-selection__arrow"
-          role="presentation"
-        >
-          <b
-            role="presentation"
-          />
-        </span>
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      className="dropdown-wrapper"
-    />
-  </span>
-</div>
-`;
-
-exports[`Storyshots Select Required Select 1`] = `
-<div
-  className="input-select-wrap is-required"
->
-  <label
-    className="input-select-label"
-    htmlFor="select2-example-required"
-  >
-    Sender
-  </label>
-  <select
-    aria-hidden="true"
-    className="input-select2 select2-hidden-accessible"
-    data-placeholder="Select a Sender"
-    id="select2-example-required"
-    tabIndex={-1}
-  >
-    <option />
-    <option
-      value="Jason"
-    >
-      Jason
-    </option>
-    <option
-      value="Evan"
-    >
-      Evan
-    </option>
-    <option
-      value="Katrina"
-    >
-      Katrina
-    </option>
-  </select>
-  <span
-    className="select2 select2-container select2-container--default select2-container--below"
-    dir="ltr"
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
-  >
-    <span
-      className="selection"
-    >
-      <span
-        aria-expanded="false"
-        aria-haspopup="true"
-        aria-labelledby="select2-select2-example-required-container"
-        className="select2-selection select2-selection--single"
-        role="combobox"
-        tabIndex={0}
-      >
-        <span
-          className="select2-selection__rendered"
-          id="select2-select2-example-required-container"
-        >
-          <span
-            className="select2-selection__placeholder"
-          >
-            Select a Sender
-          </span>
-        </span>
-        <span
-          className="select2-selection__arrow"
-          role="presentation"
-        >
-          <b
-            role="presentation"
-          />
-        </span>
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      className="dropdown-wrapper"
-    />
-  </span>
-</div>
-`;
-
-exports[`Storyshots Select Select with Error 1`] = `
-<div
-  className="input-select-wrap is-error"
->
-  <label
-    className="input-select-label"
-    htmlFor="select2-example-required"
-  >
-    Sender
-  </label>
-  <select
-    aria-hidden="true"
-    className="input-select2 select2-hidden-accessible"
-    data-placeholder="Select a Sender"
-    id="select2-example-required"
-    tabIndex={-1}
-  >
-    <option />
-    <option
-      value="Jason"
-    >
-      Jason
-    </option>
-    <option
-      value="Evan"
-    >
-      Evan
-    </option>
-    <option
-      value="Katrina"
-    >
-      Katrina
-    </option>
-  </select>
-  <span
-    className="select2 select2-container select2-container--default select2-container--below"
-    dir="ltr"
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
-  >
-    <span
-      className="selection"
-    >
-      <span
-        aria-expanded="false"
-        aria-haspopup="true"
-        aria-labelledby="select2-select2-example-required-container"
-        className="select2-selection select2-selection--single"
-        role="combobox"
-        tabIndex={0}
-      >
-        <span
-          className="select2-selection__rendered"
-          id="select2-select2-example-required-container"
-        >
-          <span
-            className="select2-selection__placeholder"
-          >
-            Select a Sender
-          </span>
-        </span>
-        <span
-          className="select2-selection__arrow"
-          role="presentation"
-        >
-          <b
-            role="presentation"
-          />
-        </span>
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      className="dropdown-wrapper"
-    />
-  </span>
-</div>
-`;
-
-exports[`Storyshots Select Standard Select 1`] = `
-<div
-  className="input-select-wrap"
->
-  <label
-    className="input-select-label"
-    htmlFor="select2-example-required"
-  >
-    Sender
-  </label>
-  <select
-    aria-hidden="true"
-    className="input-select2 select2-hidden-accessible"
-    data-placeholder="Select a Sender"
-    id="select2-example-required"
-    tabIndex={-1}
-  >
-    <option />
-    <option
-      value="Jason"
-    >
-      Jason
-    </option>
-    <option
-      value="Evan"
-    >
-      Evan
-    </option>
-    <option
-      value="Katrina"
-    >
-      Katrina
-    </option>
-  </select>
-  <span
-    className="select2 select2-container select2-container--default select2-container--below"
-    dir="ltr"
-    onBlur={[Function]}
-    onClick={[Function]}
-    style={
-      Object {
-        "width": "100%",
-      }
-    }
-  >
-    <span
-      className="selection"
-    >
-      <span
-        aria-expanded="false"
-        aria-haspopup="true"
-        aria-labelledby="select2-select2-example-required-container"
-        className="select2-selection select2-selection--single"
-        role="combobox"
-        tabIndex={0}
-      >
-        <span
-          className="select2-selection__rendered"
-          id="select2-select2-example-required-container"
-        >
-          <span
-            className="select2-selection__placeholder"
-          >
-            Select a Sender
-          </span>
-        </span>
-        <span
-          className="select2-selection__arrow"
-          role="presentation"
-        >
-          <b
-            role="presentation"
-          />
-        </span>
-      </span>
-    </span>
-    <span
-      aria-hidden="true"
-      className="dropdown-wrapper"
-    />
-  </span>
+        Add Condition
+      </button>
+    </div>
+  </div>
 </div>
 `;
 
@@ -4394,6 +4320,7 @@ exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] 
     value=""
   />
   
+  
 </div>
 `;
 
@@ -4418,6 +4345,7 @@ exports[`Storyshots Text Input Stateless Text Input with a Value Passed as a Pro
     value="Passed-In Value"
   />
   
+  
 </div>
 `;
 
@@ -4441,6 +4369,7 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
     type="text"
     value={undefined}
   />
+  
 </div>
 `;
 
@@ -4464,6 +4393,7 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
     type="text"
     value={undefined}
   />
+  
 </div>
 `;
 
@@ -4487,6 +4417,7 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
     type="text"
     value={undefined}
   />
+  
 </div>
 `;
 
@@ -4516,6 +4447,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
   >
     This test input is wrong somehow.
   </span>
+  
 </div>
 `;
 
@@ -4545,6 +4477,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
   >
     This test input is better then your test input.
   </span>
+  
 </div>
 `;
 
@@ -4574,6 +4507,7 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
   >
     This input always returns a number, not a string.
   </span>
+  
 </div>
 `;
 
@@ -4637,49 +4571,61 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
 <div
   className="input-text-wrap"
 >
-  <label
-    className="input-text-label"
-  >
-    CCV
-  </label>
-  <input
-    id="input-text-example-ccv"
-    type="text"
-  />
   <div
-    className="input-info-tooltip"
+    className="input-text-wrap"
+    style={Object {}}
   >
-    <div>
-      <div
-        className="tooltip-js-parent"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-      >
-        <i
-          className="sg-icon sg-icon-info-circle"
-          onClick={undefined}
-          style={null}
-        />
-      </div>
-      <div
-        className="tooltip-js-content  is-left"
-        onMouseEnter={[Function]}
-        onMouseLeave={[Function]}
-        style={
-          Object {
-            "top": -3,
+    <label
+      className="input-text-label"
+      htmlFor="input-text-example-ccv"
+    >
+      CCV
+    </label>
+    <input
+      aria-describedby=""
+      id="input-text-example-ccv"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      type="text"
+      value=""
+    />
+    
+    <div
+      className="input-info-tooltip"
+    >
+      <div>
+        <div
+          className="tooltip-js-parent"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-info-circle"
+            onClick={undefined}
+            style={null}
+          />
+        </div>
+        <div
+          className="tooltip-js-content  is-left"
+          onMouseEnter={[Function]}
+          onMouseLeave={[Function]}
+          style={
+            Object {
+              "top": -3,
+            }
           }
-        }
-      >
-        <p>
-          The 
-          <a
-            href="#"
-          >
-            CCV number
-          </a>
-           is a 3 or 4 digit security code printed on the front or back of your card.
-        </p>
+        >
+          <p>
+            The 
+            <a
+              href="#"
+            >
+              CCV number
+            </a>
+             is a 3 or 4 digit security code printed on the front or back of your card.
+          </p>
+        </div>
       </div>
     </div>
   </div>

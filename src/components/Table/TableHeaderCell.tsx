@@ -1,5 +1,5 @@
 import React from 'react';
-import cn from '../utilities/classnames';
+import cn from '../../utilities/classnames';
 
 export interface TableCellProps {
   children?: React.ReactNode;

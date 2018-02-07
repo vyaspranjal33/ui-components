@@ -5,8 +5,11 @@ export { Breadcrumb } from './components/Breadcrumb';
 export { Button, Buttonized } from './components/Button';
 export { ButtonList } from './components/ButtonList';
 export { Card } from './components/Card';
+export { Column } from './components/Grid/Column';
 export { Checkbox } from './components/Checkbox';
+export { Row } from './components/Grid/Row';
 export { ConfirmationModal } from './components/ConfirmationModal';
+export { Divider } from './components/Divider';
 export { DropdownButton } from './components/DropdownButton';
 export { Dropzone } from './components/Dropzone';
 export { EmptyState } from './components/EmptyState';
@@ -17,19 +20,13 @@ export { Loader } from './components/Loader';
 export { Meter } from './components/Meter';
 export { NumberedStep, NumberedSteps } from './components/NumberedSteps';
 export { Progress, ProgressStage } from './components/Progress';
+export { PageHeader, PageHeading } from './components/PageHeader';
 export { Radio, RadioGroup } from './components/Radio';
-export { Select } from './components/Select';
 export { SideModal } from './components/SideModal';
 export { Slider } from './components/Slider';
-export {
-  SegmentTerm,
-  SegmentTermControls,
-  SegmentTermDescription,
-  SegmentTermTitle,
-  SegmentTermWrap,
-} from './components/SegmentTerm';
+export { SegmentTerm } from './components/SegmentTerm';
 export { Tab, Tabs } from './components/Tabs';
-export { Table, Row, Cell, TableHeader, TableBody } from './components/Table';
+export { Table, TableRow, TableCell, TableHeader, TableBody } from './components/Table/Table';
 export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';
 export { Tooltip, HTMLTooltip } from './components/Tooltip';
