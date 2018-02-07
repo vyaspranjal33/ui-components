@@ -15,6 +15,6 @@ export const TableCell: React.SFC<TableCellProps> = ({
       {children}
     </td>
   );
-}
+};
 
 export default TableCell;

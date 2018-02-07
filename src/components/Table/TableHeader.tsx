@@ -15,6 +15,6 @@ export const TableHeader: React.SFC<TableHeaderProps> = ({
       {children}
     </thead>
   );
-}
+};
 
 export default TableHeader;

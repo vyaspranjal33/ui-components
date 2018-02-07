@@ -5,6 +5,8 @@ export interface TableHeaderCellProps {
   children?: React.ReactNode;
   className?: string;
   sortKey?: string;
+  // clickEvent must be a generic function.
+  // tslint:disable-next-line: ban-types
   clickEvent?: Function;
 }
 

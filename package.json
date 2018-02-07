@@ -6,14 +6,16 @@
   "scripts": {
     "start": "yarn run storybook",
     "build": "rollup -c rollup.config.ts",
-    "lint": "tslint --project ./tslint.json",
-    "lint-fix": "tslint --project ./tslint.json --fix",
+    "lint": "tslint --project ./tsconfig.json",
+    "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",
     "ci-test": "yarn lint && yarn test && yarn build-storybook",
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook",
     "prepublish": "yarn build",
-    "precommit": "yarn lint-fix"
+    "precommit": "yarn lint-fix",
+    "snapshot": "yarn test -u",
+    "lint-snapshot": "yarn lint-fix && yarn snapshot"
   },
   "repository": "https://github.com/sendgrid/ui-components.git",
   "author": "SendGrid <careers@sendgrid.com>",

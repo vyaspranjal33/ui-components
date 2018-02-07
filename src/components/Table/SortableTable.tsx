@@ -1,24 +1,24 @@
 import React from 'react';
 import cn from '../../utilities/classnames';
-import { Table, TableCell, TableRow, TableHeader, TableBody, HeaderCell } from './Table';
+import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from './Table';
 
 export interface SortableTableProps {
   children?: React.ReactNode;
   className?: string;
-  rowData?: Array<object>;
+  rowData?: object[];
   rowRenderer?: React.SFC<any>;
-  headerData?: Array<HeaderData>;
+  headerData?: HeaderData[];
   headerRenderer?: React.SFC<any>;
 }
 
 interface HeaderData {
-  name: string,
-  dataKey: string,
-  sort?: Function,
+  name: string;
+  dataKey: string;
+  sort?: (rowData: object[], dataKey: string) => object[];
 }
 
 export interface SortableTableState {
-  data?: Array<object>
+  data?: object[];
 }
 
 export default class SortableTable extends React.Component<SortableTableProps, SortableTableState> {
@@ -26,26 +26,18 @@ export default class SortableTable extends React.Component<SortableTableProps, S
     super(props);
 
     this.state = {
-      data: []
-    }
+      data: [],
+    };
 
     this.handleHeaderClick = this.handleHeaderClick.bind(this);
     this.sortData = this.sortData.bind(this);
   }
-  
+
   public componentDidMount() {
     this.sortData(this.props.headerData[0].dataKey, false);
   }
 
-  private performSort(rowData: Array<object>, headerData: Array<HeaderData>, sortBy: string) {
-    const sortIndex = headerData.findIndex(ele => ele.dataKey === sortBy);
-    let data = [] as Array<object>;
-    data = headerData[sortIndex].sort(rowData, headerData[sortIndex].dataKey);
-    return data;
-  }
-
   public handleHeaderClick(dataKey: string, descending: boolean) {
-    console.log(dataKey);
     this.sortData(dataKey, descending);
   }
 
@@ -54,7 +46,7 @@ export default class SortableTable extends React.Component<SortableTableProps, S
     if (descending) {
       this.setState({data: data.reverse()});
     } else {
-      this.setState({data: data});
+      this.setState({data});
     }
   }
 
@@ -66,13 +58,27 @@ export default class SortableTable extends React.Component<SortableTableProps, S
       <Table>
         <TableHeader>
           <TableRow>
-            {this.props.headerData.map(ele => <HeaderRenderer {...ele} clickEvent={this.handleHeaderClick} />)}
+            {this.props.headerData.map((ele) =>
+              <HeaderRenderer
+                {...ele}
+                key={ele.dataKey}
+                clickEvent={this.handleHeaderClick}
+              />,
+            )}
           </TableRow>
         </TableHeader>
         <TableBody>
-          {this.state.data.map(ele => <RowRenderer {...ele} />)}
+          {this.state.data.map((ele) => <RowRenderer {...ele} key={this.state.data.indexOf(ele)} />)}
         </TableBody>
       </Table>
     );
   }
+
+  private performSort(rowData: object[], headerData: HeaderData[], sortBy: string) {
+    const sortIndex = headerData.findIndex((ele) => ele.dataKey === sortBy);
+    let data = [] as object[];
+    data = headerData[sortIndex].sort(rowData, headerData[sortIndex].dataKey);
+    return data;
+  }
+
 }

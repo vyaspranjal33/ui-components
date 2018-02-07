@@ -15,6 +15,6 @@ export const TableRow: React.SFC<TableRowProps> = ({
       {children}
     </tr>
   );
-}
+};
 
 export default TableRow;

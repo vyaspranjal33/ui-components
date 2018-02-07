@@ -15,6 +15,6 @@ export const TableBody: React.SFC<TableBodyProps> = ({
       {children}
     </tbody>
   );
-}
+};
 
 export default TableBody;

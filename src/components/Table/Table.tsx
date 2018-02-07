@@ -21,6 +21,6 @@ export const Table: React.SFC<TableProps> = ({
       {children}
     </table>
   );
-}
+};
 
 export default Table;
