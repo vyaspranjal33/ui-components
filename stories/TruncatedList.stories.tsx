@@ -16,7 +16,7 @@ const objectList = [
   { name: 'Legolas', dies: false },
 ];
 
-stories.add('Inline - Limit 2', () => (
+stories.add('Standard - Limit 2', () => (
   <TruncatedList
     items={list}
     limit={limit}
@@ -24,21 +24,21 @@ stories.add('Inline - Limit 2', () => (
   />
 ));
 
-stories.add('Inline - Limit Default', () => (
+stories.add('Standard - Limit Default', () => (
   <TruncatedList
     items={list}
     link="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
   />
 ));
 
-stories.add('Inline - Only 1 Item', () => (
+stories.add('Standard - Only 1 Item', () => (
   <TruncatedList
     items={singleItemList}
     link="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
   />
 ));
 
-stories.add('HTML - Custom Renderers', () => (
+stories.add('Custom Render Props', () => (
   <TruncatedList
     items={objectList}
     link="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
