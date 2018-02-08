@@ -4713,53 +4713,46 @@ exports[`Storyshots Tooltip Underline 1`] = `
 `;
 
 exports[`Storyshots Truncated List HTML - Custom Renderers 1`] = `
-<div>
-  <div>
-    <h1>
-      Boromir
-    </h1>
-    <p>
-      Dies in the movies? 
-      Yep.
-    </p>
-  </div>
-  <div>
-    <h1>
-      Elrond
-    </h1>
-    <p>
-      Dies in the movies? 
-      Nah!
-    </p>
-  </div>
-  <div>
-    <h1>
-      Frodo
-    </h1>
-    <p>
-      Dies in the movies? 
-      Nah!
-    </p>
-  </div>
-  <div>
-    <a
-      href="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
-    >
-      Plus 
-      2
-       more!
-    </a>
-  </div>
-</div>
+<span
+  className={undefined}
+>
+  <span>
+    Boromir
+     
+    (Dead)
+    ,
+     
+  </span>
+  <span>
+    Elrond
+     
+    ,
+     
+  </span>
+  <span>
+    Frodo
+     
+    ,
+     
+  </span>
+  <a
+    href="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
+  >
+    and 
+    2
+     more…
+  </a>
+</span>
 `;
 
 exports[`Storyshots Truncated List Inline - Limit 2 1`] = `
 <span
-  className=""
+  className={undefined}
 >
   Boromir, Elrond
   <span>
-    , 
+    ,
+     
     <abbr>
       <a
         href="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
@@ -4775,11 +4768,12 @@ exports[`Storyshots Truncated List Inline - Limit 2 1`] = `
 
 exports[`Storyshots Truncated List Inline - Limit Default 1`] = `
 <span
-  className=""
+  className={undefined}
 >
   Boromir, Elrond, Frodo
   <span>
-    , 
+    ,
+     
     <abbr>
       <a
         href="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
@@ -4795,9 +4789,21 @@ exports[`Storyshots Truncated List Inline - Limit Default 1`] = `
 
 exports[`Storyshots Truncated List Inline - Only 1 Item 1`] = `
 <span
-  className=""
+  className={undefined}
 >
   Boromir
-  
+  <span>
+    ,
+     
+    <abbr>
+      <a
+        href="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
+      >
+        +
+        0
+         more
+      </a>
+    </abbr>
+  </span>
 </span>
 `;
