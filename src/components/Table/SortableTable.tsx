@@ -21,7 +21,7 @@ export interface SortableTableState {
   data?: object[];
 }
 
-export default class SortableTable extends React.Component<SortableTableProps, SortableTableState> {
+export class SortableTable extends React.Component<SortableTableProps, SortableTableState> {
   constructor(props: SortableTableProps) {
     super(props);
 
@@ -80,5 +80,6 @@ export default class SortableTable extends React.Component<SortableTableProps, S
     data = headerData[sortIndex].sort(rowData, headerData[sortIndex].dataKey);
     return data;
   }
-
 }
+
+export default SortableTable;
