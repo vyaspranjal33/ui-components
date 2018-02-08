@@ -1,59 +1,45 @@
 import React from 'react';
 import cn from '../utilities/classnames';
 
-export interface TruncatedInlineListProps {
-  items?: string[];
+export interface TruncatedListProps {
+  items: any[];
   limit?: number;
   className?: string;
   link?: string;
+  renderItems?: (item: any[]) => JSX.Element;
+  renderMore?: (truncatedCount: string, link: string) => any;
 }
 
-export interface TruncatedHTMLListProps {
-  items?: object[];
-  limit?: number;
-  className?: string;
-  link?: string;
-  itemRenderer?: (item: object) => any;
-  moreRenderer?: (truncatedCount: string, link: string) => any;
-}
-
-export const TruncatedInlineList: React.SFC<TruncatedInlineListProps> = ({
+export const TruncatedList: React.SFC<TruncatedListProps> = ({
   items,
   limit = 3,
   className,
   link,
+  renderItems,
+  renderMore,
 }) => {
   const shown = items.slice(0, limit);
-  const truncated = items.slice(limit);
-  const truncatedLength = truncated.length.toString();
   const shownText = shown.join(', ');
+  const truncated = items.slice(limit);
+  const numberOfAdditionalItems = truncated.length;
+  const hasAdditionalItems = numberOfAdditionalItems > 0;
+  const additionalItemText = (
+    <span>
+      ,{' '}
+      <abbr>
+        <a href={link}>+{numberOfAdditionalItems} more</a>
+      </abbr>
+    </span>
+  );
+
   return (
-    <span className={cn(className)}>
-      {shownText}
-      {(truncated.length > 0) ? <span>, <abbr><a href={link}>+{truncatedLength} more</a></abbr></span> : ''}
+    <span className={className}>
+      {renderItems ? renderItems(shown) : shownText}
+      {renderMore
+        ? renderMore(numberOfAdditionalItems.toString(), link)
+        : additionalItemText}
     </span>
   );
 };
 
-export const TruncatedHTMLList: React.SFC<TruncatedHTMLListProps> = ({
-  items,
-  limit = 3,
-  className,
-  link,
-  itemRenderer,
-  moreRenderer,
-}) => {
-  const shown = items.slice(0, limit);
-  const truncated = items.slice(limit);
-  const truncatedLength = truncated.length.toString();
-  const shownHTML = shown.map((item) => itemRenderer(item));
-  const moreHTML = moreRenderer(truncatedLength, link);
-  return(
-    <div>
-      {shownHTML}
-      {moreHTML}
-    </div>
-  );
-};
-
-export default TruncatedInlineList;
+export default TruncatedList;
