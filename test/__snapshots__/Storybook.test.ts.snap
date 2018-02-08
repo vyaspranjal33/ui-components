@@ -4712,7 +4712,7 @@ exports[`Storyshots Tooltip Underline 1`] = `
 </span>
 `;
 
-exports[`Storyshots Truncated List HTML - Custom Renderers 1`] = `
+exports[`Storyshots Truncated List Custom Render Props 1`] = `
 <span
   className={undefined}
 >
@@ -4745,7 +4745,7 @@ exports[`Storyshots Truncated List HTML - Custom Renderers 1`] = `
 </span>
 `;
 
-exports[`Storyshots Truncated List Inline - Limit 2 1`] = `
+exports[`Storyshots Truncated List Standard - Limit 2 1`] = `
 <span
   className={undefined}
 >
@@ -4766,7 +4766,7 @@ exports[`Storyshots Truncated List Inline - Limit 2 1`] = `
 </span>
 `;
 
-exports[`Storyshots Truncated List Inline - Limit Default 1`] = `
+exports[`Storyshots Truncated List Standard - Limit Default 1`] = `
 <span
   className={undefined}
 >
@@ -4787,23 +4787,10 @@ exports[`Storyshots Truncated List Inline - Limit Default 1`] = `
 </span>
 `;
 
-exports[`Storyshots Truncated List Inline - Only 1 Item 1`] = `
+exports[`Storyshots Truncated List Standard - Only 1 Item 1`] = `
 <span
   className={undefined}
 >
   Boromir
-  <span>
-    ,
-     
-    <abbr>
-      <a
-        href="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
-      >
-        +
-        0
-         more
-      </a>
-    </abbr>
-  </span>
 </span>
 `;
