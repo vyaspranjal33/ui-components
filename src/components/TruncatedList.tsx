@@ -7,7 +7,7 @@ export interface TruncatedListProps {
   className?: string;
   link?: string;
   renderItems?: (item: any[]) => JSX.Element;
-  renderMore?: (truncatedCount: string, link: string) => any;
+  renderMore?: (truncatedCount: string, link: string) => JSX.Element;
 }
 
 export const TruncatedList: React.SFC<TruncatedListProps> = ({
