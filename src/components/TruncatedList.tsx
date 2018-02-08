@@ -2,12 +2,12 @@ import React from 'react';
 import cn from '../utilities/classnames';
 
 export interface TruncatedListProps {
-  items: any[];
+  items: string[] | object [];
   limit?: number;
   className?: string;
   link?: string;
   renderItems?: (item: any[]) => JSX.Element;
-  renderMore?: (truncatedCount: string, link: string) => any;
+  renderMore?: (truncatedCount: string, link: string) => JSX.Element;
 }
 
 export const TruncatedList: React.SFC<TruncatedListProps> = ({
@@ -35,9 +35,8 @@ export const TruncatedList: React.SFC<TruncatedListProps> = ({
   return (
     <span className={className}>
       {renderItems ? renderItems(shown) : shownText}
-      {renderMore
-        ? renderMore(numberOfAdditionalItems.toString(), link)
-        : additionalItemText}
+      {renderMore && renderMore(numberOfAdditionalItems.toString(), link)}
+      {!renderMore && hasAdditionalItems && additionalItemText}
     </span>
   );
 };
