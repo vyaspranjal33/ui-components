@@ -31,3 +31,4 @@ export { Table, TableRow, TableCell, TableHeader, TableBody, HeaderCell } from '
 export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';
 export { Tooltip, HTMLTooltip } from './components/Tooltip';
+export { TruncatedList } from './components/TruncatedList';
