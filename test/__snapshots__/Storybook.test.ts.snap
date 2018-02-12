@@ -4067,13 +4067,13 @@ exports[`Storyshots Table Sortable 1`] = `
       className={undefined}
     >
       <th
-        className=""
+        className="sort"
         onClick={[Function]}
       >
         Name
       </th>
       <th
-        className=""
+        className="sort"
         onClick={[Function]}
       >
         Date
