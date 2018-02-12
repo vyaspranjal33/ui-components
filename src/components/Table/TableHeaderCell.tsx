@@ -42,7 +42,7 @@ export class HeaderCell extends React.Component<TableHeaderCellProps, TableHeade
       <th
         className={
           cn(this.props.className,
-            { sort: !this.props.sortKey === undefined },
+            { sort: !(this.props.sortKey === undefined) },
             { 'sort-asc': this.state.sorted && this.state.ascending === true },
             { 'sort-desc': this.state.sorted && this.state.ascending === false})
           }
