@@ -4061,10 +4061,10 @@ exports[`Storyshots Table Sortable 1`] = `
   className="table-wrap"
 >
   <thead
-    className=""
+    className={undefined}
   >
     <tr
-      className=""
+      className={undefined}
     >
       <th
         className=""
@@ -4081,74 +4081,74 @@ exports[`Storyshots Table Sortable 1`] = `
     </tr>
   </thead>
   <tbody
-    className=""
+    className={undefined}
   >
     <tr
-      className=""
+      className={undefined}
     >
       <td
-        className=""
+        className={undefined}
       >
         Awesome Wednesday
       </td>
       <td
-        className=""
+        className={undefined}
       >
         7
       </td>
     </tr>
     <tr
-      className=""
+      className={undefined}
     >
       <td
-        className=""
+        className={undefined}
       >
         Beautiful Thursday
       </td>
       <td
-        className=""
+        className={undefined}
       >
         8
       </td>
     </tr>
     <tr
-      className=""
+      className={undefined}
     >
       <td
-        className=""
+        className={undefined}
       >
         Celebratory Tuesday
       </td>
       <td
-        className=""
+        className={undefined}
       >
         6
       </td>
     </tr>
     <tr
-      className=""
+      className={undefined}
     >
       <td
-        className=""
+        className={undefined}
       >
         Delightful Friday
       </td>
       <td
-        className=""
+        className={undefined}
       >
         9
       </td>
     </tr>
     <tr
-      className=""
+      className={undefined}
     >
       <td
-        className=""
+        className={undefined}
       >
         Excellent Monday
       </td>
       <td
-        className=""
+        className={undefined}
       >
         5
       </td>
@@ -4162,10 +4162,10 @@ exports[`Storyshots Table Standard 1`] = `
   className="table-wrap"
 >
   <thead
-    className=""
+    className={undefined}
   >
     <tr
-      className=""
+      className={undefined}
     >
       <th
         className=""
@@ -4200,10 +4200,10 @@ exports[`Storyshots Table Standard 1`] = `
     </tr>
   </thead>
   <tbody
-    className=""
+    className={undefined}
   >
     <tr
-      className=""
+      className={undefined}
     >
       <td
         className="contact"
@@ -4288,7 +4288,7 @@ exports[`Storyshots Table Standard 1`] = `
       </td>
     </tr>
     <tr
-      className=""
+      className={undefined}
     >
       <td
         className="contact"
@@ -4373,7 +4373,7 @@ exports[`Storyshots Table Standard 1`] = `
       </td>
     </tr>
     <tr
-      className=""
+      className={undefined}
     >
       <td
         className="contact"
