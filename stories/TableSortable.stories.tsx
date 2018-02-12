@@ -64,8 +64,8 @@ const RowRenderer = ({name, date} : {name: string, date: number}) => (
   </TableRow>
 )
 
-const ColumnRenderer = ({name, sort, dataKey, clickEvent} : {name: string, dataKey: string, sort: Function, clickEvent: Function}) => (
-  <HeaderCell sortKey={dataKey} clickEvent={clickEvent}>
+const ColumnRenderer = ({name, sort, dataKey, onClick} : {name: string, dataKey: string, sort: Function, onClick: Function}) => (
+  <HeaderCell sortKey={dataKey} onClick={onClick}>
     {name}
   </HeaderCell>
 )

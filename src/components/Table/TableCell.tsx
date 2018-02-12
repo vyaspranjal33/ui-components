@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from '../../utilities/classnames';
 
 export interface TableCellProps {
   children?: React.ReactNode;
@@ -11,7 +10,7 @@ export const TableCell: React.SFC<TableCellProps> = ({
   className,
 }) => {
   return (
-    <td className={cn(className)}>
+    <td className={className}>
       {children}
     </td>
   );

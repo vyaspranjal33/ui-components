@@ -62,7 +62,7 @@ export class SortableTable extends React.Component<SortableTableProps, SortableT
               <HeaderRenderer
                 {...ele}
                 key={ele.dataKey}
-                clickEvent={this.handleHeaderClick}
+                onClick={this.handleHeaderClick}
               />,
             )}
           </TableRow>

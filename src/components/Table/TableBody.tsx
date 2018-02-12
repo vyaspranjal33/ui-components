@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from '../../utilities/classnames';
 
 export interface TableBodyProps {
   children?: React.ReactNode;
@@ -11,7 +10,7 @@ export const TableBody: React.SFC<TableBodyProps> = ({
   className,
 }) => {
   return (
-    <tbody className={cn(className)}>
+    <tbody className={className}>
       {children}
     </tbody>
   );

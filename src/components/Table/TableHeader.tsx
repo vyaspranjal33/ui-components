@@ -1,5 +1,4 @@
 import React from 'react';
-import cn from '../../utilities/classnames';
 
 export interface TableHeaderProps {
   children?: React.ReactNode;
@@ -11,7 +10,7 @@ export const TableHeader: React.SFC<TableHeaderProps> = ({
   className,
 }) => {
   return (
-    <thead className={cn(className)}>
+    <thead className={className}>
       {children}
     </thead>
   );
