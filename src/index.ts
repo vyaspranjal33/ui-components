@@ -27,7 +27,14 @@ export { Slider } from './components/Slider';
 export { SegmentTerm } from './components/SegmentTerm';
 export { SortableTable } from './components/Table/SortableTable';
 export { Tab, Tabs } from './components/Tabs';
-export { Table, TableRow, TableCell, TableHeader, TableBody, HeaderCell } from './components/Table/Table';
+export {
+  Table,
+  TableRow,
+  HeaderCell,
+  TableCell,
+  TableHeader,
+  TableBody,
+} from './components/Table/Table';
 export { TextInput } from './components/TextInput';
 export { ToggleButtons } from './components/ToggleButtons';
 export { Tooltip, HTMLTooltip } from './components/Tooltip';
