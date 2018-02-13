@@ -8,30 +8,20 @@ export interface TableHeaderCellProps {
   // onClick must be a generic function.
   // tslint:disable-next-line: ban-types
   onClick?: Function;
-}
-
-export interface TableHeaderCellState {
   ascending?: boolean;
-  sorted: boolean;
+  sorted?: boolean;
 }
 
-export class HeaderCell extends React.Component<TableHeaderCellProps, TableHeaderCellState> {
+export class HeaderCell extends React.Component<TableHeaderCellProps> {
   constructor(props: TableHeaderCellProps) {
     super(props);
-
-    this.state = {
-      ascending: undefined,
-      sorted: false,
-    };
   }
 
   public handleClick = () => {
     if (this.props.sortKey) {
-      if (this.state.ascending === false) {
-        this.setState({ ascending: true, sorted: true });
+      if (this.props.ascending === false) {
         this.props.onClick(this.props.sortKey, false);
       } else {
-        this.setState({ ascending: false, sorted: true });
         this.props.onClick(this.props.sortKey, true);
       }
     }
@@ -43,8 +33,8 @@ export class HeaderCell extends React.Component<TableHeaderCellProps, TableHeade
         className={
           cn(this.props.className,
             { sort: !(this.props.sortKey === undefined) },
-            { 'sort-asc': this.state.sorted && this.state.ascending === true },
-            { 'sort-desc': this.state.sorted && this.state.ascending === false})
+            { 'sort-asc': this.props.sorted && this.props.ascending === true },
+            { 'sort-desc': this.props.sorted && this.props.ascending === false})
           }
         onClick={this.handleClick}
       >

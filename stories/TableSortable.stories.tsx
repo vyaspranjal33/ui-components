@@ -34,6 +34,17 @@ const column = [
   {
     name: "Name",
     dataKey: "name",
+  },
+  {
+    name: "Date",
+    dataKey: "date",
+  }
+]
+
+const columnWithSort = [
+  {
+    name: "Name",
+    dataKey: "name",
     sort: function(array: Array<any>, dataKey: string) {
       return array.sort(function(a, b) {
         var x = a[dataKey]; var y = b[dataKey];
@@ -53,24 +64,34 @@ const column = [
   }
 ]
 
-const RowRenderer = ({name, date} : {name: string, date: number}) => (
+const RowRenderer = ({columns} : {columns: Array<object>}) => (
   <TableRow>
     <TableCell>
-      {name}
+      <a href="#">{columns["name"]}</a>
     </TableCell>
     <TableCell>
-      {date}
+      2/{columns["date"]}/2018
     </TableCell>
   </TableRow>
 )
 
-const ColumnRenderer = ({name, sort, dataKey, onClick} : {name: string, dataKey: string, sort: Function, onClick: Function}) => (
-  <HeaderCell sortKey={dataKey} onClick={onClick}>
-    {name}
+const ColumnRenderer = ({name, dataKey, onClick, sort, ascending, sortBy} : {name: any, dataKey: string, onClick: Function, sort?: Function, ascending?: boolean, sortBy: string}) => (
+  <HeaderCell sortKey={dataKey} onClick={onClick} ascending={ascending} sorted={dataKey === sortBy}>
+    <span className="sg-icon sg-icon-button"></span> {name}
   </HeaderCell>
 )
 
-stories.add('Sortable', () => (
-  <SortableTable rowRenderer={RowRenderer} rowData={data} headerData={column} headerRenderer={ColumnRenderer}>
+stories.add('Sortable (Defaults)', () => (
+  <SortableTable rowData={data} headerData={column}>
+  </SortableTable>
+));
+
+stories.add('Sortable (Default Render, Custom Sort)', () => (
+  <SortableTable rowData={data} headerData={columnWithSort}>
+  </SortableTable>
+));
+
+stories.add('Sortable (Custom Render)', () => (
+  <SortableTable rowRenderer={RowRenderer} rowData={data} headerData={columnWithSort} headerRenderer={ColumnRenderer}>
   </SortableTable>
 ));
