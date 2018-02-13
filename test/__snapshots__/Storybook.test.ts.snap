@@ -4056,7 +4056,7 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
 </p>
 `;
 
-exports[`Storyshots Table Sortable 1`] = `
+exports[`Storyshots Table Sortable (Custom Render) 1`] = `
 <table
   className="table-wrap"
 >
@@ -4067,7 +4067,247 @@ exports[`Storyshots Table Sortable 1`] = `
       className={undefined}
     >
       <th
+        className="sort sort-asc"
+        onClick={[Function]}
+      >
+        <span
+          className="sg-icon sg-icon-button"
+        />
+         
+        Name
+      </th>
+      <th
         className="sort"
+        onClick={[Function]}
+      >
+        <span
+          className="sg-icon sg-icon-button"
+        />
+         
+        Date
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className={undefined}
+  >
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        <a
+          href="#"
+        >
+          Awesome Wednesday
+        </a>
+      </td>
+      <td
+        className={undefined}
+      >
+        2/
+        7
+        /2018
+      </td>
+    </tr>
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        <a
+          href="#"
+        >
+          Beautiful Thursday
+        </a>
+      </td>
+      <td
+        className={undefined}
+      >
+        2/
+        8
+        /2018
+      </td>
+    </tr>
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        <a
+          href="#"
+        >
+          Celebratory Tuesday
+        </a>
+      </td>
+      <td
+        className={undefined}
+      >
+        2/
+        6
+        /2018
+      </td>
+    </tr>
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        <a
+          href="#"
+        >
+          Delightful Friday
+        </a>
+      </td>
+      <td
+        className={undefined}
+      >
+        2/
+        9
+        /2018
+      </td>
+    </tr>
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        <a
+          href="#"
+        >
+          Excellent Monday
+        </a>
+      </td>
+      <td
+        className={undefined}
+      >
+        2/
+        5
+        /2018
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots Table Sortable (Default Render, Custom Sort) 1`] = `
+<table
+  className="table-wrap"
+>
+  <thead
+    className={undefined}
+  >
+    <tr
+      className={undefined}
+    >
+      <th
+        className="sort sort-asc"
+        onClick={[Function]}
+      >
+        Name
+      </th>
+      <th
+        className="sort"
+        onClick={[Function]}
+      >
+        Date
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className={undefined}
+  >
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        Awesome Wednesday
+      </td>
+      <td
+        className={undefined}
+      >
+        7
+      </td>
+    </tr>
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        Beautiful Thursday
+      </td>
+      <td
+        className={undefined}
+      >
+        8
+      </td>
+    </tr>
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        Celebratory Tuesday
+      </td>
+      <td
+        className={undefined}
+      >
+        6
+      </td>
+    </tr>
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        Delightful Friday
+      </td>
+      <td
+        className={undefined}
+      >
+        9
+      </td>
+    </tr>
+    <tr
+      className={undefined}
+    >
+      <td
+        className={undefined}
+      >
+        Excellent Monday
+      </td>
+      <td
+        className={undefined}
+      >
+        5
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots Table Sortable (Defaults) 1`] = `
+<table
+  className="table-wrap"
+>
+  <thead
+    className={undefined}
+  >
+    <tr
+      className={undefined}
+    >
+      <th
+        className="sort sort-asc"
         onClick={[Function]}
       >
         Name
