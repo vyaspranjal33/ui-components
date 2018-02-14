@@ -98,6 +98,14 @@ yarn lint-fix
 ```
 yarn test
 ```
+* Update tests (retake snapshots)
+```
+yarn snapshot
+```
+* Lint & update tests
+```
+yarn lint-snapshot
+```
 * Test used for Jenkins CI build (doesn't use interactive mode)
 ```
 yarn ci-test
@@ -110,7 +118,6 @@ yarn build-storybook
 ```
 yarn prepublish
 ```
-
 # Testing
 To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report.
 
