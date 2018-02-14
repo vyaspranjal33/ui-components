@@ -13,7 +13,9 @@
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook",
     "prepublish": "yarn build",
-    "precommit": "yarn lint-fix"
+    "precommit": "yarn lint-fix",
+    "snapshot": "yarn test -u",
+    "lint-snapshot": "yarn lint-fix && yarn snapshot"
   },
   "repository": "https://github.com/sendgrid/ui-components.git",
   "author": "SendGrid <careers@sendgrid.com>",

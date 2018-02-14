@@ -1,20 +1,19 @@
 import React from 'react';
-import cn from '../../utilities/classnames';
 
 export interface TableBodyProps {
   children?: React.ReactNode;
   className?: string;
 }
 
-export class TableBody extends React.Component<TableBodyProps> {
-  public render() {
-
-    return (
-      <tbody className={cn(this.props.className)}>
-        {this.props.children}
-      </tbody>
-    );
-  }
-}
+export const TableBody: React.SFC<TableBodyProps> = ({
+  children,
+  className,
+}) => {
+  return (
+    <tbody className={className}>
+      {children}
+    </tbody>
+  );
+};
 
 export default TableBody;
