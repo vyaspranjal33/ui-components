@@ -37,7 +37,7 @@ export type HtmlTooltipDirection = 'left' | 'right';
 export type HtmlTooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
 
 export interface HTMLTooltipProps {
-  direction?: TooltipDirection;
+  direction?: HtmlTooltipDirection;
   length?: HtmlTooltipLength;
   className?: string;
   children?: React.ReactElement<any>;
