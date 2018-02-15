@@ -118,3 +118,63 @@ stories.add('HTML Content', () => (
     </TextInput>
   </div>
 ));
+
+stories.add('HTML Content (Small-content)', () => (
+  <div className="input-text-wrap">
+    <TextInput
+      type="text"
+      label="CCV"
+      id="input-text-example-ccv"
+      onChange={action('Input Changed')}
+    >
+
+      <div className="input-info-tooltip">
+        <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="small">
+          <p>
+            Click <a href="#">here</a>.
+          </p>
+        </HTMLTooltip>
+      </div>
+    </TextInput>
+  </div>
+));
+
+stories.add('HTML Content (Medium-content)', () => (
+  <div className="input-text-wrap">
+    <TextInput
+      type="text"
+      label="CCV"
+      id="input-text-example-ccv"
+      onChange={action('Input Changed')}
+    >
+
+      <div className="input-info-tooltip">
+        <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="medium">
+          <p>
+            This is a <a href="#">decent-sized</a> blurb.
+          </p>
+        </HTMLTooltip>
+      </div>
+    </TextInput>
+  </div>
+));
+
+stories.add('HTML Content (Large-content)', () => (
+  <div className="input-text-wrap">
+    <TextInput
+      type="text"
+      label="CCV"
+      id="input-text-example-ccv"
+      onChange={action('Input Changed')}
+    >
+
+      <div className="input-info-tooltip">
+        <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="large">
+          <p>
+            Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. <a href="#">Lorem</a> ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </HTMLTooltip>
+      </div>
+    </TextInput>
+  </div>
+));

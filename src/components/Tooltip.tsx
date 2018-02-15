@@ -34,8 +34,11 @@ export const Tooltip: React.SFC<TooltipProps> = ({
 
 export type HtmlTooltipDirection = 'left' | 'right';
 
+export type HtmlTooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
+
 export interface HTMLTooltipProps {
   direction?: TooltipDirection;
+  length?: HtmlTooltipLength;
   className?: string;
   children?: React.ReactElement<any>;
   hoverTarget?: React.ReactElement<any>;
@@ -112,6 +115,7 @@ export class HTMLTooltip extends React.Component<
             'is-visible': this.state.opened,
           })}
           style={{ top: -(this.state.tooltipHeight / 2) - 3 }}
+          data-tooltip-length={this.props.length}
           ref={(input) => {
             this.tooltipRef = input;
           }}
