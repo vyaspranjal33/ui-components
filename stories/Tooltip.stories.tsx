@@ -114,7 +114,7 @@ stories.add('HTML Content (Small-content)', () => (
   <div className="input-text-wrap">
     <TextInput
       type="text"
-      label="CCV"
+      label="Small Content"
       id="input-text-example-ccv"
       onChange={action('Input Changed')}
     >
@@ -122,7 +122,7 @@ stories.add('HTML Content (Small-content)', () => (
       <div className="input-info-tooltip">
         <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="small">
           <p>
-            Click <a href="#">here</a>.
+            <a href="#">Click</a>.
           </p>
         </HTMLTooltip>
       </div>
@@ -134,7 +134,7 @@ stories.add('HTML Content (Medium-content)', () => (
   <div className="input-text-wrap">
     <TextInput
       type="text"
-      label="CCV"
+      label="Medium Content"
       id="input-text-example-ccv"
       onChange={action('Input Changed')}
     >
@@ -154,7 +154,7 @@ stories.add('HTML Content (Large-content)', () => (
   <div className="input-text-wrap">
     <TextInput
       type="text"
-      label="CCV"
+      label="Large Content"
       id="input-text-example-ccv"
       onChange={action('Input Changed')}
     >
