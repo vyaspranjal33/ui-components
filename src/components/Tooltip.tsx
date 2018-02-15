@@ -3,9 +3,12 @@ import cn from '../utilities/classnames';
 
 export type TooltipDirection = 'up' | 'down' | 'left' | 'right';
 
+export type TooltipLength = 'fit' | 'small' | 'medium' | 'large' | 'xlarge';
+
 export interface TooltipProps {
   content?: string;
   direction?: TooltipDirection;
+  length?: TooltipLength;
   className?: string;
   children?: React.ReactElement<any>;
 }
@@ -13,6 +16,7 @@ export interface TooltipProps {
 export const Tooltip: React.SFC<TooltipProps> = ({
   content,
   direction,
+  length,
   className,
   children,
 }) => {
@@ -21,6 +25,7 @@ export const Tooltip: React.SFC<TooltipProps> = ({
       className={className}
       data-tooltip={content}
       data-tooltip-pos={direction}
+      data-tooltip-length={length}
     >
       {children}
     </span>
@@ -46,7 +51,7 @@ export interface HTMLTooltipState {
 export class HTMLTooltip extends React.Component<
   HTMLTooltipProps,
   HTMLTooltipState
-> {
+  > {
 
   public static defaultProps = {
     className: '',
