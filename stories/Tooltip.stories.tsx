@@ -43,15 +43,6 @@ stories.add('Standard (Right)', () => (
   </h3>
 ));
 
-stories.add('Standard (Fit-content)', () => (
-  <h3>
-    Tooltip Right
-    <Tooltip content="Hello." direction="right" length="fit">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
 stories.add('Standard (Small-content)', () => (
   <h3>
     Tooltip Small Content

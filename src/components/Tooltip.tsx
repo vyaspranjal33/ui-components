@@ -3,7 +3,7 @@ import cn from '../utilities/classnames';
 
 export type TooltipDirection = 'up' | 'down' | 'left' | 'right';
 
-export type TooltipLength = 'fit' | 'small' | 'medium' | 'large' | 'xlarge';
+export type TooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
 
 export interface TooltipProps {
   content?: string;
