@@ -168,82 +168,150 @@ stories.add('Underline', () => (
 ));
 
 stories.add('HTML Content', () => (
-  <div className="input-text-wrap">
-    <TextInput
-      type="text"
-      label="CCV"
-      id="input-text-example-ccv"
-      onChange={action('Input Changed')}
-    >
-
-      <div className="input-info-tooltip">
-        <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left">
-          <p>
-            The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
-            on the front or back of your card.
-        </p>
-        </HTMLTooltip>
-      </div>
-    </TextInput>
-  </div>
-));
-
-stories.add('HTML Content (Small-content)', () => (
-  <div className="input-text-wrap">
-    <TextInput
-      type="text"
-      label="Small Content"
-      id="input-text-example-ccv"
-      onChange={action('Input Changed')}
-    >
-
-      <div className="input-info-tooltip">
-        <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="small">
-          <p>
-            <a href="#">Click</a>.
+  <div style={{ maxWidth: "500px", width: "100%", margin: "0 auto" }}>
+    <h2>No Direction Specified</h2>
+    <div className="input-text-wrap">
+      <TextInput
+        type="text"
+        label="Label"
+        id="input-text-example-ccv"
+        onChange={action('Input Changed')}
+      >
+        <div className="input-info-tooltip">
+          <HTMLTooltip hoverTarget={<Icon type="info-circle" />}>
+            <p>
+              The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
+              on the front or back of your card.
           </p>
-        </HTMLTooltip>
-      </div>
-    </TextInput>
-  </div>
-));
-
-stories.add('HTML Content (Medium-content)', () => (
-  <div className="input-text-wrap">
-    <TextInput
-      type="text"
-      label="Medium Content"
-      id="input-text-example-ccv"
-      onChange={action('Input Changed')}
-    >
-
-      <div className="input-info-tooltip">
-        <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="medium">
-          <p>
-            This is a <a href="#">decent-sized</a> blurb.
+          </HTMLTooltip>
+        </div>
+      </TextInput>
+    </div>
+    <hr />
+    <h2>No Length Specified</h2>
+    <div className="input-text-wrap">
+      <TextInput
+        type="text"
+        label="Label"
+        id="input-text-example-ccv"
+        onChange={action('Input Changed')}
+      >
+        <div className="input-info-tooltip">
+          <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="right">
+            <p>
+              The <a href="#">CCV number</a> is a 3 or 4 digit security code printed
+              on the front or back of your card.
           </p>
-        </HTMLTooltip>
-      </div>
-    </TextInput>
+          </HTMLTooltip>
+        </div>
+      </TextInput>
+    </div>
+    <hr />
+    <h2>Small Content</h2>
+    <div className="input-text-wrap">
+      <TextInput
+        type="text"
+        label="Left"
+        id="input-text-example-ccv"
+        onChange={action('Input Changed')}
+      >
+        <div className="input-info-tooltip">
+          <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="small">
+            <p>
+              <a href="#">Click</a>.
+            </p>
+          </HTMLTooltip>
+        </div>
+      </TextInput>
+    </div>
+    <div className="input-text-wrap">
+      <TextInput
+        type="text"
+        label="Right"
+        id="input-text-example-ccv"
+        onChange={action('Input Changed')}
+      >
+        <div className="input-info-tooltip">
+          <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="right" length="small">
+            <p>
+              <a href="#">Click</a>.
+            </p>
+          </HTMLTooltip>
+        </div>
+      </TextInput>
+    </div>
+    <hr />
+    <h2>Medium Content</h2>
+    <div className="input-text-wrap">
+      <TextInput
+        type="text"
+        label="Left"
+        id="input-text-example-ccv"
+        onChange={action('Input Changed')}
+      >
+        <div className="input-info-tooltip">
+          <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="medium">
+            <p>
+              This is a <a href="#">decent-sized</a> blurb.
+            </p>
+          </HTMLTooltip>
+        </div>
+      </TextInput>
+    </div>
+    <div className="input-text-wrap">
+      <TextInput
+        type="text"
+        label="Right"
+        id="input-text-example-ccv"
+        onChange={action('Input Changed')}
+      >
+        <div className="input-info-tooltip">
+          <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="right" length="medium">
+            <p>
+              This is a <a href="#">decent-sized</a> blurb.
+            </p>
+          </HTMLTooltip>
+        </div>
+      </TextInput>
+    </div>
+    <hr />
+    <h2>Large Content</h2>
+    <div className="input-text-wrap">
+      <TextInput
+        type="text"
+        label="Left"
+        id="input-text-example-ccv"
+        onChange={action('Input Changed')}
+      >
+        <div className="input-info-tooltip">
+          <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="large">
+            <p>
+              Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. <a href="#">Lorem</a> ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </HTMLTooltip>
+        </div>
+      </TextInput>
+    </div>
+    <div className="input-text-wrap">
+      <TextInput
+        type="text"
+        label="Right"
+        id="input-text-example-ccv"
+        onChange={action('Input Changed')}
+      >
+        <div className="input-info-tooltip">
+          <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="right" length="large">
+            <p>
+              Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. <a href="#">Lorem</a> ipsum dolor sit amet, consectetur adipiscing elit.
+            </p>
+          </HTMLTooltip>
+        </div>
+      </TextInput>
+    </div>
   </div>
 ));
 
-stories.add('HTML Content (Large-content)', () => (
-  <div className="input-text-wrap">
-    <TextInput
-      type="text"
-      label="Large Content"
-      id="input-text-example-ccv"
-      onChange={action('Input Changed')}
-    >
 
-      <div className="input-info-tooltip">
-        <HTMLTooltip hoverTarget={<Icon type="info-circle" />} direction="left" length="large">
-          <p>
-            Donec sed odio dui. Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Etiam porta sem malesuada magna mollis euismod. <a href="#">Lorem</a> ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-        </HTMLTooltip>
-      </div>
-    </TextInput>
-  </div>
-));
+
+
+
