@@ -8,7 +8,7 @@ import { HTMLTooltip, Tooltip } from '../src/components/Tooltip';
 const stories = storiesOf('Tooltip', module);
 
 stories.add('Standard', () => (
-  <div style={{ textAlign: "center" }}>
+  <div style={{ maxWidth: "500px", width: "100%", margin: "0 auto" }}>
     <h2>No Direction Specified</h2>
     <h3>
       Up
