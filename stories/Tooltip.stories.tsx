@@ -89,6 +89,15 @@ stories.add('Underline', () => (
   </Tooltip>
 ));
 
+stories.add('Style Bleed', () => (
+  <h3 style={{ letterSpacing: "5px", textTransform: "uppercase", fontFamily: "Comic Sans MS", fontSize: "2em", color: "rebeccapurple" }}>
+    Oh god why
+    <Tooltip content="This should not display any of the following styles set on the parent element: text-transform, letter-spacing, font-size, font-family, or color." direction="right" length="large">
+      <Icon type="info-circle" />
+    </Tooltip>
+  </h3>
+));
+
 stories.add('HTML Content', () => (
   <div className="input-text-wrap">
     <TextInput
