@@ -7,6 +7,15 @@ import { HTMLTooltip, Tooltip } from '../src/components/Tooltip';
 
 const stories = storiesOf('Tooltip', module);
 
+stories.add('Standard (No direction given)', () => (
+  <h3>
+    Tooltip Up
+    <Tooltip content="Hello.">
+      <Icon type="info-circle" />
+    </Tooltip>
+  </h3>
+));
+
 stories.add('Standard (Up)', () => (
   <h3>
     Tooltip Up

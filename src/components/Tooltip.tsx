@@ -32,6 +32,10 @@ export const Tooltip: React.SFC<TooltipProps> = ({
   );
 };
 
+Tooltip.defaultProps = {
+  direction: 'up',
+};
+
 export type HtmlTooltipDirection = 'left' | 'right';
 
 export type HtmlTooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
