@@ -9,7 +9,7 @@ const stories = storiesOf('Tooltip', module);
 
 stories.add('Standard (No direction given)', () => (
   <h3>
-    Tooltip Up
+    Tooltip With No Direction Given Should Default To "Up"
     <Tooltip content="Hello.">
       <Icon type="info-circle" />
     </Tooltip>
