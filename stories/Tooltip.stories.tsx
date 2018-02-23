@@ -7,85 +7,146 @@ import { HTMLTooltip, Tooltip } from '../src/components/Tooltip';
 
 const stories = storiesOf('Tooltip', module);
 
-stories.add('Standard (No direction given)', () => (
-  <h3>
-    Tooltip With No Direction Given Should Default To "Up"
-    <Tooltip content="Hello.">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
-stories.add('Standard (Up)', () => (
-  <h3>
-    Tooltip Up
-    <Tooltip content="Hello." direction="up">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
-stories.add('Standard (Down)', () => (
-  <h3>
-    Tooltip Down
+stories.add('Standard', () => (
+  <div style={{ textAlign: "center" }}>
+    <h2>No Direction Specified</h2>
+    <h3>
+      Up
+      <Tooltip content="Hello.">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <hr />
+    <h2>No Length Specified</h2>
+    <h3>
+      Up
+      <Tooltip content="Hello." direction="up">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Right
+      <Tooltip content="Hello." direction="right">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Down
       <Tooltip content="Hello." direction="down">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
-stories.add('Standard (Left)', () => (
-  <h3>
-    Tooltip Left
-    <Tooltip content="Hello." direction="left">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
-stories.add('Standard (Right)', () => (
-  <h3>
-    Tooltip Right
-    <Tooltip content="Hello." direction="right">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
-stories.add('Standard (Small-content)', () => (
-  <h3>
-    Tooltip Small Content
-    <Tooltip content="A blurb." direction="right" length="small">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
-stories.add('Standard (Medium-content)', () => (
-  <h3>
-    Tooltip Medium Content
-    <Tooltip content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet." direction="right" length="medium">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
-stories.add('Standard (Large-content)', () => (
-  <h3>
-    Tooltip Large Content
-    <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="down" length="large">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
-));
-
-stories.add('Standard (XLarge-content)', () => (
-  <h3>
-    Tooltip XLarge Content
-    <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="down" length="xlarge">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Left
+      <Tooltip content="Hello." direction="left">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <hr />
+    <h2>Small Content</h2>
+    <h3>
+      Up
+      <Tooltip content="A blurb." direction="up" length="small">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Right
+      <Tooltip content="A blurb." direction="right" length="small">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Down
+      <Tooltip content="A blurb." direction="down" length="small">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Left
+      <Tooltip content="A blurb." direction="left" length="small">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <hr />
+    <h2>Medium Content</h2>
+    <h3>
+      Up
+      <Tooltip content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet." direction="up" length="medium">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Right
+      <Tooltip content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet." direction="right" length="medium">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Down
+      <Tooltip content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet." direction="down" length="medium">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Left
+      <Tooltip content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet." direction="left" length="medium">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <hr />
+    <h2>Large Content</h2>
+    <h3>
+      Up
+      <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="up" length="large">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Right
+      <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="right" length="large">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Down
+      <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="down" length="large">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Left
+      <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="left" length="large">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <hr />
+    <h2>X Large Content</h2>
+    <h3>
+      Up
+      <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="up" length="xlarge">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Right
+      <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="right" length="xlarge">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Down
+      <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="down" length="xlarge">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+    <h3>
+      Left
+      <Tooltip content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam." direction="left" length="xlarge">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
+  </div>
 ));
 
 stories.add('Underline', () => (
