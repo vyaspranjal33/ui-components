@@ -158,13 +158,172 @@ stories.add('Standard', () => (
 ));
 
 stories.add('Underline', () => (
-  <Tooltip
-    content="That means automatic teller machine."
-    direction="right"
-    className="has-underline"
-  >
-    <span>ATM</span>
-  </Tooltip>
+  <div style={{ maxWidth: "500px", width: "100%", margin: "0 auto" }}>
+    <h2>No Length Specified</h2>
+    <Tooltip
+      content="That means automatic teller machine."
+      direction="right"
+      className="has-underline"
+    >
+      <span>Right</span>
+    </Tooltip>
+    <hr />
+    <h2>No Direction Specified</h2>
+    <Tooltip
+      content="That means automatic teller machine."
+      className="has-underline"
+    >
+      <span>Up</span>
+    </Tooltip>
+    <hr />
+    <h2>Small Content</h2>
+    <Tooltip
+      content="A word."
+      length="small"
+      direction="up"
+      className="has-underline"
+    >
+      <span>Up</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="A word."
+      length="small"
+      direction="right"
+      className="has-underline"
+    >
+      <span>Right</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="A word."
+      length="small"
+      direction="down"
+      className="has-underline"
+    >
+      <span>Down</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="A word."
+      length="small"
+      direction="left"
+      className="has-underline"
+    >
+      <span>Left</span>
+    </Tooltip>
+    <hr />
+    <h2>Medium Content</h2>
+    <Tooltip
+      content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+      length="medium"
+      direction="up"
+      className="has-underline"
+    >
+      <span>Up</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+      length="medium"
+      direction="right"
+      className="has-underline"
+    >
+      <span>Right</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+      length="medium"
+      direction="down"
+      className="has-underline"
+    >
+      <span>Down</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Nulla vitae elit libero, a pharetra augue. Integer posuere erat a ante venenatis dapibus posuere velit aliquet."
+      length="medium"
+      direction="left"
+      className="has-underline"
+    >
+      <span>Left</span>
+    </Tooltip>
+    <hr />
+    <h2>Large Content</h2>
+    <Tooltip
+      content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+      length="large"
+      direction="up"
+      className="has-underline"
+    >
+      <span>Up</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+      length="large"
+      direction="right"
+      className="has-underline"
+    >
+      <span>Right</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+      length="large"
+      direction="down"
+      className="has-underline"
+    >
+      <span>Down</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+      length="large"
+      direction="left"
+      className="has-underline"
+    >
+      <span>Left</span>
+    </Tooltip>
+    <hr />
+    <h2>X Large Content</h2>
+    <Tooltip
+      content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+      length="xlarge"
+      direction="up"
+      className="has-underline"
+    >
+      <span>Up</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+      length="xlarge"
+      direction="right"
+      className="has-underline"
+    >
+      <span>Right</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+      length="xlarge"
+      direction="down"
+      className="has-underline"
+    >
+      <span>Down</span>
+    </Tooltip>
+    {" • "}
+    <Tooltip
+      content="Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum. Donec id elit non mi porta gravida at eget metus. Cras mattis consectetur purus sit amet fermentum. Maecenas faucibus mollis interdum. Donec id elit non mi porta gravida at eget metus. Cras justo odio, dapibus ac facilisis in, egestas eget quam."
+      length="xlarge"
+      direction="left"
+      className="has-underline"
+    >
+      <span>Left</span>
+    </Tooltip>
+  </div>
 ));
 
 stories.add('HTML Content', () => (
