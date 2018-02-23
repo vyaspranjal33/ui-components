@@ -146,6 +146,14 @@ stories.add('Standard', () => (
         <Icon type="info-circle" />
       </Tooltip>
     </h3>
+    <hr />
+    <h2>Style Bleed</h2>
+    <h3 style={{ letterSpacing: "5px", textTransform: "uppercase", fontFamily: "Comic Sans MS", fontSize: "2em", color: "rebeccapurple" }}>
+      Oh god why
+      <Tooltip content="This should not display any of the following styles set on the parent element: text-transform, letter-spacing, font-size, font-family, or color." direction="right" length="large">
+        <Icon type="info-circle" />
+      </Tooltip>
+    </h3>
   </div>
 ));
 
@@ -157,15 +165,6 @@ stories.add('Underline', () => (
   >
     <span>ATM</span>
   </Tooltip>
-));
-
-stories.add('Style Bleed', () => (
-  <h3 style={{ letterSpacing: "5px", textTransform: "uppercase", fontFamily: "Comic Sans MS", fontSize: "2em", color: "rebeccapurple" }}>
-    Oh god why
-    <Tooltip content="This should not display any of the following styles set on the parent element: text-transform, letter-spacing, font-size, font-family, or color." direction="right" length="large">
-      <Icon type="info-circle" />
-    </Tooltip>
-  </h3>
 ));
 
 stories.add('HTML Content', () => (
