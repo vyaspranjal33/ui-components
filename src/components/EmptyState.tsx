@@ -6,7 +6,7 @@ import Icon from './Icon';
 
 const evaluateRenderProp: (
   prop: IconType | (() => React.ReactNode),
-) => React.ReactNode = prop => {
+) => React.ReactNode = (prop) => {
   if (typeof prop === 'function') {
     return prop();
   } else {
