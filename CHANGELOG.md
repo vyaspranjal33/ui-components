@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.10.0
+- Add support for data-tooltip-length attribute
+
 ## 0.9.5
 - EmptyState component can now take a react node as an icon type
 
