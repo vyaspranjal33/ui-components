@@ -19,6 +19,7 @@ const getRenderedTextInput = function(value?: string | number) {
     'is-focused': this.state.isInputFocused,
     'is-large': this.props.isLarge,
     'is-required': this.props.isRequired,
+    'is-search': this.props.isSearch,
   });
 
   const infoId = this.props.info && `${this.props.id}-info`;
@@ -64,6 +65,7 @@ export interface TextInputProps {
   isRequired?: boolean;
   isDisabled?: boolean;
   isLarge?: boolean;
+  isSearch?: boolean;
   label?: string;
   info?: string;
   onBlur?: (event: any, value: string | number) => void;
@@ -82,6 +84,7 @@ export class TextInput extends React.Component<
     isLarge: false,
     isRequired: false,
     isValid: true,
+    isSearch: false,
     label: '',
     style: {} as CSSProperties,
     value: '',
