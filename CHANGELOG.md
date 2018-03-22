@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.11.0
+## 0.12.0
 - Add center modal
 - Remove incorrect confirmation modal example
 
