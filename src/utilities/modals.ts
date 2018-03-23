@@ -1,6 +1,6 @@
 export interface ModalProps {
   bodyNode?: ElementWithClassList;
-  isOpen: boolean;
+  isOpen?: boolean;
 }
 
 interface ElementWithClassList extends Element {

@@ -44,18 +44,3 @@ stories.add('ConfirmationModal with plain contents', () => (
     renderBody="This will make a thing happen."
   />
 ));
-
-stories.add('ConfirmationModal with rich contents', () => (
-  <ExampleContainer
-    renderHeader={() => (
-      <p>That's a <u>spicy</u> meatball!</p>
-    )}
-    renderBody={() => (
-      <p>
-        <img src="http://placebeard.it/150/100" />
-        <br />
-        Grooming this beard cannot be undone.
-      </p>
-    )}
-  />
-));
