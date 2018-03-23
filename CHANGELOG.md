@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## 0.12.0
+- Add center modal
+- Remove incorrect confirmation modal example
+
+## 0.9.5
+- EmptyState component can now take a react node as an icon type
+
 ## 0.9.4
 - Added components PageHeading and PageHeader
 - Added CONTRIBUTING
