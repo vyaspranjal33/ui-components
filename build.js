@@ -6,7 +6,6 @@ const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 const json = require('rollup-plugin-json');
 const typescriptPlugin = require('rollup-plugin-typescript');
-const multiEntry = require('rollup-plugin-multi-entry');
 const typescript = require('typescript');
 const glob = require('glob');
 const { paramCase } = require('change-case');
