@@ -5,7 +5,7 @@
   "main": "dist/ui-components.js",
   "scripts": {
     "start": "yarn run storybook",
-    "build": "node build.js",
+    "build": "rimraf dist && node build.js",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",
