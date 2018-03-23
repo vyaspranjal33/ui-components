@@ -29,7 +29,7 @@ const getFiles = () =>
       if (error) return reject(error);
       resolve(
         files.filter(
-          file => !file.includes('test') || !file.includes('index.tsx'),
+          file => !file.includes('test') && !file.includes('index'),
         ),
       );
     });
@@ -68,7 +68,7 @@ const outputOptions = {
   mainBundle.write({
     ...outputOptions,
     name: 'UI Components',
-    file: 'packages/ui-components/ui-components.js',
+    file: 'packages/ui-components/index.js',
   });
 
   const files = await getFiles();
