@@ -1,5 +1,5 @@
 {
-  "name": "@sendgrid/ui-components",
+  "name": "@sendgrid/ui-components-base",
   "version": "0.12.1",
   "description": "Resuable UI components for Sendgrid's applications.",
   "main": "dist/ui-components.js",
@@ -28,6 +28,7 @@
     "@types/storybook__addon-actions": "^3.0.1",
     "@types/storybook__react": "^3.0.5",
     "classnames": "^2.2.5",
+    "lerna": "^2.9.0",
     "lodash": "^4.17.4",
     "raf": "^3.4.0",
     "react": "^16.2.0",
