@@ -13,8 +13,7 @@ const { paramCase } = require('change-case');
 
 const extension = '.tsx';
 const filePath = path.join(__dirname, 'src', 'components');
-const componentPath = path.join(__dirname, 'components');
-const bundlePath = path.join(__dirname, 'dist');
+const packagePath = path.join(__dirname, 'packages', 'ui-components');
 
 const cleanDirectory = directory =>
   new Promise((resolve, reject) => {
@@ -61,9 +60,6 @@ const outputOptions = {
 };
 
 (async () => {
-  await cleanDirectory(bundlePath);
-  await cleanDirectory(componentPath);
-
   const mainBundle = await rollup.rollup({
     ...inputOptions,
     input: 'src/index.ts',
@@ -72,7 +68,7 @@ const outputOptions = {
   mainBundle.write({
     ...outputOptions,
     name: 'UI Components',
-    file: 'dist/ui-components.js',
+    file: 'packages/ui-components/ui-components.js',
   });
 
   const files = await getFiles();
@@ -89,7 +85,7 @@ const outputOptions = {
     componentBundle.write({
       ...outputOptions,
       name: component,
-      file: `components/${fileName}.js`,
+      file: `packages/ui-components/${fileName}.js`,
     });
   }
 })();
