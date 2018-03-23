@@ -3,9 +3,13 @@
   "version": "0.12.1",
   "description": "Resuable UI components for Sendgrid's applications.",
   "main": "dist/ui-components.js",
+  "files": [
+    "dist",
+    "components"
+  ],
   "scripts": {
     "start": "yarn run storybook",
-    "build": "rimraf dist && node build.js",
+    "build": "node build.js",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",

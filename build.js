@@ -1,5 +1,6 @@
 const fs = require('fs');
 const path = require('path');
+const rimraf = require('rimraf');
 
 const rollup = require('rollup');
 const commonjs = require('rollup-plugin-commonjs');
@@ -11,7 +12,17 @@ const glob = require('glob');
 const { paramCase } = require('change-case');
 
 const extension = '.tsx';
-const filePath = path.join('.', 'src', 'components');
+const filePath = path.join(__dirname, 'src', 'components');
+const componentPath = path.join(__dirname, 'components');
+const bundlePath = path.join(__dirname, 'dist');
+
+const cleanDirectory = directory =>
+  new Promise((resolve, reject) => {
+    rimraf(directory, (error, ...args) => {
+      if (error) reject(error);
+      resolve(...args);
+    });
+  });
 
 const getFiles = () =>
   new Promise((resolve, reject) => {
@@ -42,44 +53,43 @@ const inputOptions = {
 const outputOptions = {
   globals: {
     react: 'React',
-    classnames: 'classNames'
+    classnames: 'classNames',
   },
   sourcemap: true,
   format: 'umd',
   exports: 'named',
 };
 
-rollup
-  .rollup({
+(async () => {
+  await cleanDirectory(bundlePath);
+  await cleanDirectory(componentPath);
+
+  const mainBundle = await rollup.rollup({
     ...inputOptions,
     input: 'src/index.ts',
-  })
-  .then(bundle => {
-    bundle.write({
-      ...outputOptions,
-      name: 'UI Components',
-      file: 'dist/ui-components.js',
-    });
   });
 
-getFiles()
-  .then(files => {
-    for (const file of files) {
-      const component = path.parse(file).name;
-      const fileName = paramCase(component);
+  mainBundle.write({
+    ...outputOptions,
+    name: 'UI Components',
+    file: 'dist/ui-components.js',
+  });
 
-      rollup
-        .rollup({
-          ...inputOptions,
-          input: file,
-        })
-        .then(bundle => {
-          bundle.write({
-            ...outputOptions,
-            name: component,
-            file: `dist/${fileName}.js`,
-          });
-        });
-    }
-  })
-  .catch(console.error);
+  const files = await getFiles();
+
+  for (const file of files) {
+    const component = path.parse(file).name;
+    const fileName = paramCase(component);
+
+    const componentBundle = await rollup.rollup({
+      ...inputOptions,
+      input: file,
+    });
+
+    componentBundle.write({
+      ...outputOptions,
+      name: component,
+      file: `components/${fileName}.js`,
+    });
+  }
+})();
