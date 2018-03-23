@@ -1,8 +1,6 @@
 # Bundle
 dist
 components
-packages/ui-components/*.js
-packages/ui-components/*.js.map
 
 #Commiting our flow types because we want consistency across dev's and environments
 #flow-typed
