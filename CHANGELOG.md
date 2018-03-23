@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.12.0
+- Add center modal
+- Remove incorrect confirmation modal example
+
 ## 0.10.0
 - Add support for data-tooltip-length attribute
 

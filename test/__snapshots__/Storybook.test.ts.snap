@@ -1274,6 +1274,82 @@ exports[`Storyshots Card Card with Title and Body 1`] = `
 </div>
 `;
 
+exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    id={undefined}
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+  <div
+    className="center-modal"
+  >
+    <h1>
+      Scorpion XING Zone 🦂
+    </h1>
+    <p>
+      Please do not feed the scorpions. Doing so could result in scorpion wounds, fines of up to $2,500 and up to 5 years of community service.
+    </p>
+    <div
+      className="modal-footer"
+    >
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="btn btn-primary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
+  <div
+    className="modal-mask"
+    onClick={[Function]}
+  />
+</div>
+`;
+
+exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    id={undefined}
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+  <div
+    className="center-modal"
+  >
+    <i
+      className="sg-icon sg-icon-x"
+      data-role="close-center-modal"
+      onClick={[Function]}
+    />
+    <p>
+      Please do not feed the scorpions. Doing so could result in scorpion wounds, fines of up to $2,500 and up to 5 years of community service.
+    </p>
+  </div>
+  <div
+    className="modal-mask"
+    onClick={[Function]}
+  />
+</div>
+`;
+
 exports[`Storyshots Checkbox Checked Checkbox 1`] = `
 <div
   className="input-checkbox-wrap"
@@ -1385,70 +1461,6 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
           className="conf-alert-text"
         >
           This will make a thing happen.
-        </p>
-      </div>
-      <div
-        className="conf-alert-actions"
-      >
-        <button
-          className="btn btn-secondary btn-small"
-          id={undefined}
-          onClick={[Function]}
-        >
-          Cancel
-        </button>
-        <button
-          className="btn btn-primary btn-small"
-          id={undefined}
-          onClick={[Function]}
-        >
-          Confirm
-        </button>
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots ConfirmationModal ConfirmationModal with rich contents 1`] = `
-<div>
-  <button
-    className="btn btn-primary"
-    id={undefined}
-    onClick={[Function]}
-  >
-    Open Modal
-  </button>
-  <div
-    className="sg-modal"
-  >
-    <div
-      className="conf-alert sg-modal-content"
-    >
-      <h2
-        className="conf-alert-header"
-      >
-        <p>
-          That's a 
-          <u>
-            spicy
-          </u>
-           meatball!
-        </p>
-      </h2>
-      <div
-        className="conf-alert-body"
-      >
-        <p
-          className="conf-alert-text"
-        >
-          <p>
-            <img
-              src="http://placebeard.it/150/100"
-            />
-            <br />
-            Grooming this beard cannot be undone.
-          </p>
         </p>
       </div>
       <div
