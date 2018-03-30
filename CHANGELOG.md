@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## 0.12.1
+## 0.12.4
 - Add fragment loader component
 
 ## 0.12.0
