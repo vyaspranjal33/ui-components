@@ -1701,6 +1701,13 @@ var Footer = function (_a) {
         children));
 };
 
+var FragmentLoader = function () {
+    return (React__default.createElement("svg", { className: "fragment-loader" },
+        React__default.createElement("rect", { className: "fragment-square left", width: "10", height: "10" }),
+        React__default.createElement("rect", { className: "fragment-square middle", width: "10", height: "10" }),
+        React__default.createElement("rect", { className: "fragment-square right", width: "10", height: "10" })));
+};
+
 var Meter = function (_a) {
     var title = _a.title, value = _a.value;
     return (React__default.createElement("div", { className: "meter-container" },
@@ -2352,6 +2359,7 @@ exports.FilterableList = FilterableList;
 exports.SmallFooter = Footer;
 exports.Icon = Icon;
 exports.Loader = Loader;
+exports.FragmentLoader = FragmentLoader;
 exports.Meter = Meter;
 exports.NumberedStep = NumberedStep;
 exports.NumberedSteps = NumberedSteps;
