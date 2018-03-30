@@ -1,3 +1,5 @@
+[![Build status](https://badge.buildkite.com/31ee26b5d97341ef0f9c82a304631b99340fd8e2d2bea38f90.svg)](https://buildkite.com/sendgrid/ui-components)
+
 # UI Components
 
 Re-useable React components based on the SendGrid's Style Guide.
