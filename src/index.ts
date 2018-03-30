@@ -18,6 +18,7 @@ export { FilterableList } from './components/FilterableList';
 export { Footer as SmallFooter } from './components/SmallFooter';
 export { Icon } from './components/Icon';
 export { Loader } from './components/Loader';
+export { FragmentLoader } from './components/FragmentLoader';
 export { Meter } from './components/Meter';
 export { NumberedStep, NumberedSteps } from './components/NumberedSteps';
 export { Progress, ProgressStage } from './components/Progress';

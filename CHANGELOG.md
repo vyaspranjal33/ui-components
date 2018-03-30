@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.12.1
+- Add fragment loader component
+
 ## 0.12.0
 - Add center modal
 - Remove incorrect confirmation modal example
