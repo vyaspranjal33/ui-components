@@ -1,5 +1,6 @@
 # Bundle
 dist
+components
 
 #Commiting our flow types because we want consistency across dev's and environments
 #flow-typed
