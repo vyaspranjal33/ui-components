@@ -7,6 +7,7 @@ export type AlertType = 'success' | 'warning' | 'danger';
 
 export interface AlertProps {
   children: any;
+  dismissable?: boolean;
   icon?: IconType;
   inline?: boolean;
   type: AlertType;
@@ -23,6 +24,7 @@ const iconFor = (type: AlertType): IconType => {
 
 export const Alert: React.SFC<AlertProps> = ({
   children,
+  dismissable,
   icon,
   inline,
   onClick: handleClick,
@@ -38,13 +40,14 @@ export const Alert: React.SFC<AlertProps> = ({
       <p>
         <Icon type={icon || iconFor(type)} />
         {children}
-        <Icon type="x" onClick={handleClick} />
+        {dismissable && <Icon type="x" onClick={handleClick} />}
       </p>
     </div>
   );
 };
 
 Alert.defaultProps = {
+  dismissable: true,
   hidden: false,
   inline: false,
 };

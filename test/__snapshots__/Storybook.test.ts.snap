@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
+<div
+  className="alert alert-warning"
+  role="alert"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-warning"
+      onClick={undefined}
+      style={null}
+    />
+    Changes you've made to this email have not been applied to your live automation.
+    <button
+      className="btn btn-primary"
+      id={undefined}
+      onClick={[Function]}
+    >
+      Save and Apply
+    </button>
+  </p>
+</div>
+`;
+
 exports[`Storyshots Alerts Danger Alert 1`] = `
 <div
   className="alert alert-danger"
@@ -3969,6 +3992,58 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         Add Condition
       </button>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Select with object items 1`] = `
+<div>
+  <div>
+    <label
+      className="input-select-label"
+      htmlFor="select-fruit"
+    >
+      Fruit
+    </label>
+    <input
+      aria-activedescendant={null}
+      aria-autocomplete="list"
+      aria-expanded={false}
+      autoComplete="off"
+      id="select-fruit"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder={undefined}
+      role="combobox"
+      value=""
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Select with simple string items 1`] = `
+<div>
+  <div>
+    <label
+      className="input-select-label"
+      htmlFor="select-fruit"
+    >
+      Fruit
+    </label>
+    <input
+      aria-activedescendant={null}
+      aria-autocomplete="list"
+      aria-expanded={false}
+      autoComplete="off"
+      id="select-fruit"
+      onBlur={[Function]}
+      onChange={[Function]}
+      onKeyDown={[Function]}
+      placeholder={undefined}
+      role="combobox"
+      value=""
+    />
   </div>
 </div>
 `;
