@@ -1,5 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
+<div
+  className="alert alert-warning"
+  role="alert"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-warning"
+      onClick={undefined}
+      style={null}
+    />
+    Changes you've made to this email have not been applied to your live automation.
+    <button
+      className="btn btn-primary"
+      id={undefined}
+      onClick={[Function]}
+    >
+      Save and Apply
+    </button>
+  </p>
+</div>
+`;
+
 exports[`Storyshots Alerts Danger Alert 1`] = `
 <div
   className="alert alert-danger"
@@ -6324,6 +6347,134 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       />
       Add Condition
     </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Segment Term Segment term with alert 1`] = `
+<div
+  className="segment-term-wrap"
+>
+  <p
+    className="segment-term-title"
+  >
+    Entry Criteria
+  </p>
+  <div
+    className="segment-term has-alert has-separator"
+    onClick={[Function]}
+  >
+    <p>
+      The first time a contact is added to 
+      <strong>
+        People in Los Angeles
+      </strong>
+    </p>
+    <i
+      className="sg-icon sg-icon-pencil segment-term-edit"
+      onClick={undefined}
+      style={null}
+    />
+    <div
+      className="alert alert-warning"
+      role="alert"
+    >
+      <p>
+        <i
+          className="sg-icon sg-icon-warning"
+          onClick={undefined}
+          style={null}
+        />
+        Changes you've made to your entry criteria have not been applied to your live automation.
+        <button
+          className="btn btn-primary"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Save and Apply
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Segment Term Segment term with radio btns and alert 1`] = `
+<div
+  className="segment-term-wrap"
+>
+  <p
+    className="segment-term-title"
+  >
+    Exit Criteria
+  </p>
+  <div
+    className="segment-term has-alert has-radios is-editable"
+    onClick={undefined}
+  >
+    <div
+      className="input-radio-wrap"
+    >
+      <input
+        checked={true}
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="radio-a"
+        name="example-grp"
+        onChange={[Function]}
+        type="radio"
+        value="a"
+      />
+      <label
+        className="input-radio-label"
+        htmlFor="radio-a"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="input-radio-wrap"
+    >
+      <input
+        checked={true}
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="radio-b"
+        name="example-grp"
+        onChange={[Function]}
+        type="radio"
+        value="b"
+      />
+      <label
+        className="input-radio-label"
+        htmlFor="radio-b"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="btn-list"
+    />
+    <div
+      className="alert alert-warning"
+      role="alert"
+    >
+      <p>
+        <i
+          className="sg-icon sg-icon-warning"
+          onClick={undefined}
+          style={null}
+        />
+        Changes you've made to your exit criteria have not been applied to your live automation.
+        <button
+          className="btn btn-primary"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Save and Apply
+        </button>
+      </p>
+    </div>
   </div>
 </div>
 `;

@@ -1,1 +1,0 @@
-export { SegmentTerm } from './SegmentTerm';
