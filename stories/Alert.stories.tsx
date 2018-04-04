@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import Alert from '../src/components/Alert';
+import Button from '../src/components/Button';
 
 const stories = storiesOf('Alerts', module);
 
@@ -45,5 +46,12 @@ stories.add('Danger Alert with Custom Icon', () => (
   <Alert type="danger" icon="clean-ui" onClick={action('Alert Dismissed')}>
     Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
     nec augue eu lacus aliquam lobortis.
+  </Alert>
+));
+
+stories.add('Alert which is not dismissable', () => (
+  <Alert type="warning" dismissable={false}>
+    Changes you've made to this email have not been applied to your live automation.
+    <Button type="primary">Save and Apply</Button>
   </Alert>
 ));

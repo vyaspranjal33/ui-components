@@ -2,6 +2,9 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
+import Alert from '../src/components/Alert';
+import Button from '../src/components/Button';
+import { Radio, RadioGroup } from '../src/components/Radio';
 import { SegmentTerm } from '../src/components/SegmentTerm';
 
 const stories = storiesOf('Segment Term', module);
@@ -101,6 +104,44 @@ stories.add('Segment term which is being edited and is filled out', () => (
           </select>
         </div>
       </>
+    )}
+  />
+));
+
+stories.add('Segment term with alert', () => (
+  <SegmentTerm
+    title="Entry Criteria"
+    hasSeparator
+    label="The first time a contact is added to"
+    queryName="People in Los Angeles"
+    isEditable
+    onEdit={onEditClick}
+    renderAlert={() => (
+      <Alert type="warning" dismissable={false}>
+        Changes you've made to your entry criteria have not been applied to your live automation.
+        <Button type="primary">Save and Apply</Button>
+      </Alert>
+    )}
+  />
+));
+
+stories.add('Segment term with radio btns and alert', () => (
+  <SegmentTerm
+    title="Exit Criteria"
+    isEditable
+    isEditing
+    radios
+    renderInputs={() => (
+      <RadioGroup name="example-grp" onChange={action('radio change')}>
+        <Radio checked value="a" label="Option 1" />
+        <Radio checked value="b" label="Option 2" />
+      </RadioGroup>
+    )}
+    renderAlert={() => (
+      <Alert type="warning" dismissable={false}>
+        Changes you've made to your exit criteria have not been applied to your live automation.
+        <Button type="primary">Save and Apply</Button>
+      </Alert>
     )}
   />
 ));
