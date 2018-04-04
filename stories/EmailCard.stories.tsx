@@ -101,6 +101,9 @@ loaderStories.add('Email Card - Multi Live', () => (
   </div>
 ));
 
+const onSaveAlertClick = () => {
+  return true;
+};
 loaderStories.add('Email Card with Alerts ', () => (
-  <EmailCard {...cardData} live hasAlert sendTimeValue="Send Instantly"/>
+  <EmailCard {...cardData} live hasSaveAlert onSaveAlertClick={onSaveAlertClick} sendTimeValue="Send Instantly"/>
 ));

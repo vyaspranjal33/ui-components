@@ -132,11 +132,12 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick
 interface EmailCardProps {
   details?: EmailCardDetail[];
   editing?: boolean;
-  hasAlert?: boolean;
+  hasSaveAlert?: boolean;
   editable?: boolean;
   live?: boolean;
   n: number;
   onContentEditClick?: (event: any) => void;
+  onSaveAlertClick?: (event: any) => void;
   paused?: boolean;
   renderSendTimeLink?: (value: string) => any;
   sendTimeValue?: string;
@@ -148,17 +149,17 @@ export class EmailCard extends React.Component<EmailCardProps> {
   public static defaultProps = {
     editable: false,
     editing: false,
-    hasAlert: false,
+    hasSaveAlert: false,
     live: false,
     paused: false,
   };
 
   public render() {
-    const saveAlert = this.props.hasAlert && this.renderAlert();
+    const saveAlert = this.props.hasSaveAlert && this.renderSaveAlert();
     return (
       <div
         className={cn('email-card-wrap', {
-          'has-alert': this.props.hasAlert,
+          'has-alert': this.props.hasSaveAlert,
           'is-editable': this.props.editable,
           'is-live': this.props.live,
           'is-paused': this.props.paused,
@@ -181,13 +182,12 @@ export class EmailCard extends React.Component<EmailCardProps> {
       </div>
     );
   }
-  // TODO: Add `dismissable` to remove X button after Chris's PR is merged
-  private renderAlert() {
+  private renderSaveAlert() {
     return (
-      <Alert type="warning" icon="info-circle">
+      <Alert dismissable={false} type="warning" icon="info-circle">
         <p>
           Changes you've made to this email have not been applied to your live automation.
-          <Button type="primary" small>
+          <Button type="primary" small onClick={this.props.onSaveAlertClick}>
             Save and Apply
           </Button>
         </p>
