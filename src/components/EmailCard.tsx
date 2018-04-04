@@ -133,7 +133,7 @@ interface EmailCardProps {
   details?: EmailCardDetail[];
   editing?: boolean;
   hasAlert?: boolean;
-  isEditable?: boolean;
+  editable?: boolean;
   live?: boolean;
   n: number;
   onContentEditClick?: (event: any) => void;
@@ -146,9 +146,9 @@ interface EmailCardProps {
 
 export class EmailCard extends React.Component<EmailCardProps> {
   public static defaultProps = {
+    editable: false,
     editing: false,
     hasAlert: false,
-    isEditable: false,
     live: false,
     paused: false,
   };
@@ -159,7 +159,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
       <div
         className={cn('email-card-wrap', {
           'has-alert': this.props.hasAlert,
-          'is-editable': this.props.isEditable,
+          'is-editable': this.props.editable,
           'is-live': this.props.live,
           'is-paused': this.props.paused,
         })}
