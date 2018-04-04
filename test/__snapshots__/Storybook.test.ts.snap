@@ -4047,11 +4047,6 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
             Save and Apply
           </button>
         </p>
-        <i
-          className="sg-icon sg-icon-x"
-          onClick={undefined}
-          style={null}
-        />
       </p>
     </div>
   </div>
@@ -4222,11 +4217,6 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
           Save and Apply
         </button>
       </p>
-      <i
-        className="sg-icon sg-icon-x"
-        onClick={undefined}
-        style={null}
-      />
     </p>
   </div>
 </div>
