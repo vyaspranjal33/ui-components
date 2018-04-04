@@ -1373,65 +1373,23 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
 </div>
 `;
 
-exports[`Storyshots Checkbox Checked Checkbox 1`] = `
-<div
-  className="input-checkbox-wrap"
->
-  <input
-    defaultChecked={true}
-    disabled={undefined}
-    id="checkbox-transactional"
-    onChange={[Function]}
-    type="checkbox"
-    value="Transactional"
-  />
-  <label
-    className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
-  >
-    Transactional
-  </label>
-</div>
-`;
-
-exports[`Storyshots Checkbox Checked and Disabled Checkbox 1`] = `
-<div
-  className="input-checkbox-wrap"
->
-  <input
-    defaultChecked={true}
-    disabled={true}
-    id="checkbox-transactional"
-    onChange={[Function]}
-    type="checkbox"
-    value="Transactional"
-  />
-  <label
-    className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
-  >
-    Transactional
-  </label>
-</div>
-`;
-
 exports[`Storyshots Checkbox Disabled Checkbox 1`] = `
 <div
   className="input-checkbox-wrap"
 >
   <input
-    defaultChecked={undefined}
+    checked={false}
     disabled={true}
-    id="checkbox-transactional"
+    id="disabled-checkbox"
     onChange={[Function]}
     type="checkbox"
-    value="Transactional"
+    value={undefined}
   />
   <label
     className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
+    htmlFor="disabled-checkbox"
   >
-    Transactional
+    Marketing
   </label>
 </div>
 `;
@@ -1441,16 +1399,16 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
   className="input-checkbox-wrap"
 >
   <input
-    defaultChecked={undefined}
+    checked={false}
     disabled={undefined}
-    id="checkbox-transactional"
+    id="standard-checkbox"
     onChange={[Function]}
     type="checkbox"
-    value="Transactional"
+    value={undefined}
   />
   <label
     className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
+    htmlFor="standard-checkbox"
   >
     Transactional
   </label>
@@ -3108,6 +3066,28 @@ exports[`Storyshots Loaders Centered Loader 1`] = `
     />
   </svg>
 </div>
+`;
+
+exports[`Storyshots Loaders Fragment Loader 1`] = `
+<svg
+  className="fragment-loader"
+>
+  <rect
+    className="fragment-square left"
+    height="10"
+    width="10"
+  />
+  <rect
+    className="fragment-square middle"
+    height="10"
+    width="10"
+  />
+  <rect
+    className="fragment-square right"
+    height="10"
+    width="10"
+  />
+</svg>
 `;
 
 exports[`Storyshots Loaders Large Loader 1`] = `

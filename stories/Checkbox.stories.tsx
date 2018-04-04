@@ -1,29 +1,47 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import React from 'react';
+import React, { Component } from 'react';
 
-import { StatefulCheckbox as Checkbox } from '../src/components/Checkbox';
+import { Checkbox } from '../src/components/Checkbox';
 
 const stories = storiesOf('Checkbox', module);
 
-stories.add('Standard Checkbox', () => (
-  <Checkbox onChange={action('Checkbox Changed')}>Transactional</Checkbox>
-));
+class Example extends Component<any, any> {
+  constructor(props: any) {
+    super(props);
 
-stories.add('Checked Checkbox', () => (
-  <Checkbox checked onChange={action('Checkbox Changed')}>
-    Transactional
-  </Checkbox>
+    this.state = { checked: false };
+  }
+
+  onChange = () => {
+    action('Checkbox changed');
+    this.setState({ checked: !this.state.checked });
+  }
+
+  render() {
+    return (
+      <Checkbox
+        checked={this.state.checked}
+        disabled={this.props.disabled}
+        id={this.props.id}
+        label={this.props.label}
+        onChange={this.onChange}
+      />
+    );
+  }
+}
+
+stories.add('Standard Checkbox', () => (
+  <Example
+    id="standard-checkbox"
+    label="Transactional"
+  />
 ));
 
 stories.add('Disabled Checkbox', () => (
-  <Checkbox disabled onChange={action('Checkbox Changed')}>
-    Transactional
-  </Checkbox>
-));
-
-stories.add('Checked and Disabled Checkbox', () => (
-  <Checkbox checked disabled onChange={action('Checkbox Changed')}>
-    Transactional
-  </Checkbox>
+  <Example
+    id="disabled-checkbox"
+    disabled
+    label="Marketing"
+  />
 ));

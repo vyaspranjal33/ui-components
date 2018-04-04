@@ -1,75 +1,37 @@
 import React from 'react';
 
 export interface CheckboxProps {
-  id?: string;
-  children: string;
+  checked: boolean;
   disabled?: boolean;
-  checked?: boolean;
+  id: string;
+  label: string;
   onChange: (event: any) => void;
+  value?: string;
 }
 
 export const Checkbox: React.SFC<CheckboxProps> = ({
   checked,
-  children: value,
   disabled,
   id,
+  label,
   onChange,
+  value,
 }) => {
-  id = id || `checkbox-${value.toLowerCase()}`;
   return (
     <div className="input-checkbox-wrap">
       <input
-        defaultChecked={checked}
+        checked={checked}
         disabled={disabled}
         id={id}
+        onChange={onChange}
         type="checkbox"
         value={value}
-        onChange={onChange}
       />
       <label className="input-checkbox-label" htmlFor={id}>
-        {value}
+        {label}
       </label>
     </div>
   );
 };
-
-export class StatefulCheckbox extends React.Component<
-  CheckboxProps,
-  { checked: boolean }
-> {
-  constructor(props: CheckboxProps) {
-    super(props);
-
-    this.state = {
-      checked: props.checked,
-    };
-
-    this.handleChange = this.handleChange.bind(this);
-  }
-
-  public handleChange(event: any) {
-    event.persist();
-    this.setState(
-      {
-        checked: !this.state.checked,
-      },
-      () => {
-        this.props.onChange(event);
-      },
-    );
-  }
-
-  public render() {
-    return (
-      <Checkbox
-        {...this.props}
-        checked={this.state.checked}
-        onChange={this.handleChange}
-      >
-        {this.props.children}
-      </Checkbox>
-    );
-  }
-}
 
 export default Checkbox;
