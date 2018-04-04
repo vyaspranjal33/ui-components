@@ -13,6 +13,7 @@ export { ConfirmationModal } from './components/ConfirmationModal';
 export { Divider } from './components/Divider';
 export { DropdownButton } from './components/DropdownButton';
 export { Dropzone } from './components/Dropzone';
+export { EmailCard, EmailCardAddButton } from './components/EmailCard';
 export { EmptyState } from './components/EmptyState';
 export { FilterableList } from './components/FilterableList';
 export { Footer as SmallFooter } from './components/SmallFooter';

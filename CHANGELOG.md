@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.12.6
+- Add EmailCard component
+
 ## 0.12.4
 - Add fragment loader component
 
