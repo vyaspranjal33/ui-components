@@ -6,10 +6,10 @@ import { ButtonList } from './ButtonList';
 import { Icon } from './Icon';
 
 export interface SegmentTermProps {
+  editable?: boolean;
+  editing?: boolean;
   hasAddButton?: boolean;
   hasSeparator?: boolean;
-  isEditable?: boolean;
-  isEditing?: boolean;
   label?: string;
   onAddButtonClick?: (e: any) => void;
   onCancel?: (e: any) => void;
@@ -25,17 +25,17 @@ export interface SegmentTermProps {
 
 export class SegmentTerm extends PureComponent<SegmentTermProps> {
   public static defaultProps = {
+    editable: false,
+    editing: false,
     hasAddButton: false,
     hasSeparator: false,
-    isEditable: false,
-    isEditing: false,
     radios: false,
   };
 
   public get termControls(): React.ReactNode {
-    const { isEditable, isEditing, onCancel, onConfirm, showConfirm } = this.props;
+    const { editable, editing, onCancel, onConfirm, showConfirm } = this.props;
 
-    if (isEditing) {
+    if (editing) {
       return (
         <ButtonList>
           {
@@ -54,7 +54,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       );
     }
 
-    if (isEditable) {
+    if (editable) {
       return <Icon type="pencil" className="segment-term-edit" />;
     }
 
@@ -65,8 +65,8 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
     const {
       hasAddButton,
       hasSeparator,
-      isEditable,
-      isEditing,
+      editable,
+      editing,
       label,
       onAddButtonClick,
       onEdit,
@@ -87,13 +87,13 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
             'has-alert': !!renderAlert,
             'has-radios': radios,
             'has-separator': hasSeparator,
-            'is-editable': isEditing,
+            'is-editable': editing,
           })}
-          onClick={(isEditable && !isEditing) ? onEdit : undefined}
+          onClick={(editable && !editing) ? onEdit : undefined}
         >
-        {isEditing && renderInputs && renderInputs()}
+        {editing && renderInputs && renderInputs()}
         {
-          !isEditing &&
+          !editing &&
             <p>
               {`${label} `}
               <strong>{queryName}</strong>
