@@ -9,4 +9,4 @@ stories.add('Divider', () => <Divider />);
 
 stories.add('Divider (Thin)', () => <Divider thin />);
 
-stories.add('Divider (with Label)', () => <Divider hasLabel label="Very Important" />);
+stories.add('Divider (with Label)', () => <Divider label="Very Important" />);
