@@ -3991,7 +3991,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
 
 exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
 <div
-  className="email-card-wrap is-live has-alert"
+  className="email-card-wrap has-alert is-live"
 >
   <div
     className="email-card-send-time has-value"
