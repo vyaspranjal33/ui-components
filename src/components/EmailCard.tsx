@@ -38,7 +38,7 @@ const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details 
         <td>{detail.renderEditDetailLink && detail.renderEditDetailLink(detail.value) || detail.value}</td>
       </tr>
     );
-  }) || [];
+  });
 
   return (
     <div className="email-card-details">
@@ -92,7 +92,6 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick
 interface EmailCardProps {
   details?: EmailCardDetail[];
   editing?: boolean;
-  hasSaveAlert?: boolean;
   editable?: boolean;
   live?: boolean;
   n: number;
@@ -100,6 +99,7 @@ interface EmailCardProps {
   onSaveAlertClick?: (event: any) => void;
   paused?: boolean;
   renderSendTimeLink?: (value: string) => any;
+  renderAlert?: () => any;
   sendTimeValue?: string;
   statistics?: Statistic[];
   thumbnailUrl?: string;
@@ -109,17 +109,17 @@ export class EmailCard extends React.Component<EmailCardProps> {
   public static defaultProps = {
     editable: false,
     editing: false,
-    hasSaveAlert: false,
     live: false,
     paused: false,
+    renderAlert: false,
   };
 
   public render() {
-    const saveAlert = this.props.hasSaveAlert && this.renderSaveAlert();
+    const alertEl = this.props.renderAlert && this.props.renderAlert();
     return (
       <div
         className={cn('email-card-wrap', {
-          'has-alert': this.props.hasSaveAlert,
+          'has-alert': !!this.props.renderAlert,
           'is-editable': this.props.editable,
           'is-live': this.props.live,
           'is-paused': this.props.paused,
@@ -128,7 +128,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
         <EmailCardSendTime
           value={this.props.sendTimeValue}
           renderSendTimeLink={this.props.renderSendTimeLink}
-          alert={saveAlert}
+          alert={alertEl}
         />
         <Statistics statsClassName="email-stats" statistics={this.props.statistics}/>
         <div className="email-card">
@@ -138,20 +138,8 @@ export class EmailCard extends React.Component<EmailCardProps> {
           <EmailCardContent thumbnailUrl={this.props.thumbnailUrl} onContentEditClick={this.props.onContentEditClick} />
           <EmailCardDetails details={this.props.details}/>
         </div>
-        {saveAlert}
+        {alertEl}
       </div>
-    );
-  }
-  private renderSaveAlert() {
-    return (
-      <Alert dismissable={false} type="warning" icon="info-circle">
-        <p>
-          Changes you've made to this email have not been applied to your live automation.
-          <Button type="primary" small onClick={this.props.onSaveAlertClick}>
-            Save and Apply
-          </Button>
-        </p>
-      </Alert>
     );
   }
 }

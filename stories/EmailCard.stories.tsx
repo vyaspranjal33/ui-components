@@ -1,11 +1,12 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
+import Alert from '../src/components/Alert';
+import Button from '../src/components/Button';
 import {
   EmailCard,
   EmailCardAddButton,
 } from '../src/components/EmailCard';
-
 const loaderStories = storiesOf('EmailCard', module);
 
 const statistics = [
@@ -15,7 +16,13 @@ const statistics = [
   { label: 'Unique Clicks', amount: .6024, format: 'percent' },
   { label: 'Unsubscribes', amount: .0204, format: 'percent' },
 ];
-
+const blankStatistics = [
+  { label: 'Emails Sent', format: 'number' },
+  { label: 'Delivered', format: 'percent' },
+  { label: 'Unique Opens', format: 'percent' },
+  { label: 'Unique Clicks', format: 'percent' },
+  { label: 'Unsubscribes', format: 'percent' },
+];
 const renderEditDetailLink = (value: string) => {
   return (
     <a href="#">
@@ -57,6 +64,14 @@ const cardDataNoStats = {
   renderSendTimeLink,
 };
 
+const cardDataBlankStats = {
+  details,
+  n: 1,
+  onContentEditClick,
+  renderSendTimeLink,
+  statistics: blankStatistics,
+};
+
 const cardDataWithImage = {
   details,
   n: 1,
@@ -70,6 +85,9 @@ loaderStories.add('Email Card', () => ( <EmailCard sendTimeValue="Send Instantly
 
 loaderStories.add('Email Card with No Statistics', () => (
   <EmailCard sendTimeValue="Send Instantly" {...cardDataNoStats} />
+));
+loaderStories.add('Email Card with Blank Statistics', () => (
+  <EmailCard sendTimeValue="Send Instantly" {...cardDataBlankStats} />
 ));
 
 loaderStories.add('Email Card with Content', () => (
@@ -101,9 +119,18 @@ loaderStories.add('Email Card - Multi Live', () => (
   </div>
 ));
 
-const onSaveAlertClick = () => {
-  return true;
+const renderAlert = () => {
+  return (
+    <Alert dismissable={false} type="warning" icon="info-circle">
+    <p>
+      Changes you've made to this email have not been applied to your live automation.
+      <Button type="primary" small>
+        Save and Apply
+      </Button>
+    </p>
+  </Alert>);
 };
+
 loaderStories.add('Email Card with Alerts ', () => (
-  <EmailCard {...cardData} live hasSaveAlert onSaveAlertClick={onSaveAlertClick} sendTimeValue="Send Instantly"/>
+  <EmailCard {...cardData} live renderAlert={renderAlert} sendTimeValue="Send Instantly"/>
 ));
