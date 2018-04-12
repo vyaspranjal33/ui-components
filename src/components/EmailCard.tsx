@@ -7,47 +7,7 @@ import {
   Buttonized,
 } from './Button';
 import Icon from './Icon';
-
-interface EmailCardStatistic {
-  label: string;
-  amount: number;
-  format: string;
-}
-
-const EmailCardStatistics: React.SFC<{ statisticData?: EmailCardStatistic[] }> = ({ statisticData }) => {
-  // This uses numbers rather than formatted strings to prepare for locale specific number formatting
-  const formatStatistic = (amount: number, format: string) => {
-    if (format === 'number') {
-      const parts = amount.toString().split('.');
-      parts[0] = parts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ',');
-      return parts.join('.');
-    } else {
-      return (amount * 100).toFixed(2) + '%';
-    }
-  };
-
-  const statisticsClassMap = ['', 'delivered', 'unique-opens', 'unique-clicks', 'unsubscribes'];
-  const statisticsElements = statisticData && statisticData.map((stat, i) => {
-    const value = formatStatistic(stat.amount, stat.format);
-    const specificClass = statisticsClassMap[i] || '';
-    return (
-      <div className="email-stat" key={stat.label}>
-        <p className={'stat ' + specificClass}>{value}</p>
-        <p className="label">{stat.label}</p>
-      </div>
-    );
-  });
-
-  return statisticsElements &&
-    (
-      <div className="email-card-stats">
-        {statisticsElements}
-      </div>
-    )
-  || null;
-
-};
-
+import { Statistic, Statistics } from './Statistics';
 interface EmailCardSendTimeProps {
   value?: string;
   renderSendTimeLink?: (value: string) => any;
@@ -141,7 +101,7 @@ interface EmailCardProps {
   paused?: boolean;
   renderSendTimeLink?: (value: string) => any;
   sendTimeValue?: string;
-  statistics?: EmailCardStatistic[];
+  statistics?: Statistic[];
   thumbnailUrl?: string;
 }
 
@@ -170,7 +130,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
           renderSendTimeLink={this.props.renderSendTimeLink}
           alert={saveAlert}
         />
-        <EmailCardStatistics statisticData={this.props.statistics}/>
+        <Statistics statsClassName="email-stats" statistics={this.props.statistics}/>
         <div className="email-card">
           <div className="email-card-count">
             <p>Email {this.props.n}</p>
