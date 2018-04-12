@@ -29,6 +29,7 @@ export { SideModal } from './components/SideModal';
 export { Slider } from './components/Slider';
 export { SegmentTerm } from './components/SegmentTerm';
 export { SortableTable } from './components/Table/SortableTable';
+export { Statistics } from './components/Statistics';
 export { Tab, Tabs } from './components/Tabs';
 export {
   Table,

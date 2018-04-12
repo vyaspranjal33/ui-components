@@ -25,7 +25,7 @@ export const Statistics: React.SFC<StatisticsProps> = ({ statistics, statsClassN
   const statisticsClassMap = ['', 'delivered', 'unique-opens', 'unique-clicks', 'unsubscribes'];
   const statisticsElements = statistics && statistics.map((stat, i) => {
     const value = formatStatistic(stat.amount, stat.format);
-    const specificClass = stat.amount > -1 ? statisticsClassMap[i] : '';
+    const specificClass = statisticsClassMap[i] || '';
     return (
       <div className={statsClassName} key={stat.label}>
         <p className={'stat ' + specificClass}>{value}</p>
