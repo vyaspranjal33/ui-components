@@ -16,7 +16,7 @@ export interface SortableTableProps {
   headerRenderer?: React.SFC<any>;
 }
 
-interface HeaderData {
+export interface HeaderData {
   name: string;
   dataKey: string;
   sort?: (rowData: object[], dataKey: string) => object[];

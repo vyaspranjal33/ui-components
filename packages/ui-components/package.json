@@ -3,6 +3,7 @@
   "version": "0.12.5",
   "description": "Resuable UI components for Sendgrid's applications.",
   "main": "index.js",
+  "types": "index.d.ts",
   "repository": "https://github.com/sendgrid/ui-components.git",
   "author": "SendGrid <careers@sendgrid.com>",
   "license": "MIT"

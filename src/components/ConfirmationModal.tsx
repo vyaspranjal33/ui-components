@@ -5,7 +5,7 @@ import {
   modalWillReceiveProps,
 } from '../utilities/modals';
 
-interface ConfirmationModalProps extends ModalProps {
+export interface ConfirmationModalProps extends ModalProps {
   renderActions: string | (() => React.ReactNode);
   renderBody: string | (() => React.ReactNode);
   renderHeader: string | (() => React.ReactNode);

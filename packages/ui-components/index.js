@@ -6,24 +6,6 @@
 
 var React__default = 'default' in React ? React['default'] : React;
 
-const __assign = Object.assign || function (target) {
-    for (var source, i = 1; i < arguments.length; i++) {
-        source = arguments[i];
-        for (var prop in source) {
-            if (Object.prototype.hasOwnProperty.call(source, prop)) {
-                target[prop] = source[prop];
-            }
-        }
-    }
-    return target;
-};
-
-function __extends(d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-
 function classNames() {
     var args = [];
     for (var _i = 0; _i < arguments.length; _i++) {
@@ -92,16 +74,17 @@ var iconFor = function (type) {
     return 'warning';
 };
 var Alert = function (_a) {
-    var children = _a.children, icon = _a.icon, inline = _a.inline, handleClick = _a.onClick, type = _a.type;
+    var children = _a.children, dismissable = _a.dismissable, icon = _a.icon, inline = _a.inline, handleClick = _a.onClick, type = _a.type;
     return (React__default.createElement("div", { className: classNames('alert', "alert-" + type, {
             'alert-inline': inline,
         }), role: "alert" },
         React__default.createElement("p", null,
             React__default.createElement(Icon, { type: icon || iconFor(type) }),
             children,
-            React__default.createElement(Icon, { type: "x", onClick: handleClick }))));
+            dismissable && React__default.createElement(Icon, { type: "x", onClick: handleClick }))));
 };
 Alert.defaultProps = {
+    dismissable: true,
     hidden: false,
     inline: false,
 };
@@ -113,6 +96,40 @@ var Badge = function (_a) {
 Badge.defaultProps = {
     children: 0,
     color: '',
+};
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = Object.setPrototypeOf ||
+    ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+    function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = Object.assign || function __assign(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
+    }
+    return t;
 };
 
 var map = React__default.Children.map;
@@ -285,36 +302,11 @@ var Column = function (_a) {
 };
 
 var Checkbox = function (_a) {
-    var checked = _a.checked, value = _a.children, disabled = _a.disabled, id = _a.id, onChange = _a.onChange;
-    id = id || "checkbox-" + value.toLowerCase();
+    var checked = _a.checked, disabled = _a.disabled, id = _a.id, label = _a.label, onChange = _a.onChange, value = _a.value;
     return (React__default.createElement("div", { className: "input-checkbox-wrap" },
-        React__default.createElement("input", { defaultChecked: checked, disabled: disabled, id: id, type: "checkbox", value: value, onChange: onChange }),
-        React__default.createElement("label", { className: "input-checkbox-label", htmlFor: id }, value)));
+        React__default.createElement("input", { checked: checked, disabled: disabled, id: id, onChange: onChange, type: "checkbox", value: value }),
+        React__default.createElement("label", { className: "input-checkbox-label", htmlFor: id }, label)));
 };
-var StatefulCheckbox = /** @class */ (function (_super) {
-    __extends(StatefulCheckbox, _super);
-    function StatefulCheckbox(props) {
-        var _this = _super.call(this, props) || this;
-        _this.state = {
-            checked: props.checked,
-        };
-        _this.handleChange = _this.handleChange.bind(_this);
-        return _this;
-    }
-    StatefulCheckbox.prototype.handleChange = function (event) {
-        var _this = this;
-        event.persist();
-        this.setState({
-            checked: !this.state.checked,
-        }, function () {
-            _this.props.onChange(event);
-        });
-    };
-    StatefulCheckbox.prototype.render = function () {
-        return (React__default.createElement(Checkbox, __assign({}, this.props, { checked: this.state.checked, onChange: this.handleChange }), this.props.children));
-    };
-    return StatefulCheckbox;
-}(React__default.Component));
 
 var Row = function (_a) {
     var children = _a.children;
@@ -459,9 +451,9 @@ var root = _freeGlobal || freeSelf || Function('return this')();
 var _root = root;
 
 /** Built-in value references. */
-var Symbol = _root.Symbol;
+var Symbol$1 = _root.Symbol;
 
-var _Symbol = Symbol;
+var _Symbol = Symbol$1;
 
 /**
  * A specialized version of `_.map` for arrays without support for iteratee
@@ -1594,10 +1586,10 @@ var FilterableList = /** @class */ (function (_super) {
             var _b;
         };
         for (var _i = 0, _a = props.filterTypes; _i < _a.length; _i++) {
-            var name = _a[_i];
-            if (name) {
-                _this.state[name] = '';
-                _this.handlers["handleFilter" + capitalize_1(name) + "Change"] = _this.handleFilterChange.bind(_this, name);
+            var name_1 = _a[_i];
+            if (name_1) {
+                _this.state[name_1] = '';
+                _this.handlers["handleFilter" + capitalize_1(name_1) + "Change"] = _this.handleFilterChange.bind(_this, name_1);
             }
             else {
                 _this.state.value = '';
@@ -1884,8 +1876,9 @@ var SegmentTerm = /** @class */ (function (_super) {
                     showConfirm &&
                         React__default.createElement(Button, { type: "secondary", small: true, onClick: onConfirm },
                             React__default.createElement(Icon, { type: "check-thin" })),
-                    React__default.createElement(Button, { type: "danger", small: true, onClick: onCancel },
-                        React__default.createElement(Icon, { type: "x" }))));
+                    onCancel &&
+                        React__default.createElement(Button, { type: "danger", small: true, onClick: onCancel },
+                            React__default.createElement(Icon, { type: "x" }))));
             }
             if (isEditable) {
                 return React__default.createElement(Icon, { type: "pencil", className: "segment-term-edit" });
@@ -1896,15 +1889,21 @@ var SegmentTerm = /** @class */ (function (_super) {
         configurable: true
     });
     SegmentTerm.prototype.render = function () {
-        var _a = this.props, hasAddButton = _a.hasAddButton, hasSeparator = _a.hasSeparator, isEditable = _a.isEditable, isEditing = _a.isEditing, label = _a.label, onAddButtonClick = _a.onAddButtonClick, onEdit = _a.onEdit, queryName = _a.queryName, renderInputs = _a.renderInputs, title = _a.title;
+        var _a = this.props, hasAddButton = _a.hasAddButton, hasSeparator = _a.hasSeparator, isEditable = _a.isEditable, isEditing = _a.isEditing, label = _a.label, onAddButtonClick = _a.onAddButtonClick, onEdit = _a.onEdit, queryName = _a.queryName, radios = _a.radios, renderAlert = _a.renderAlert, renderInputs = _a.renderInputs, title = _a.title;
         return (React__default.createElement("div", { className: "segment-term-wrap" },
             React__default.createElement("p", { className: "segment-term-title" }, title),
-            React__default.createElement("div", { className: classNames('segment-term', { 'has-separator': hasSeparator, 'is-editable': isEditing }), onClick: (isEditable && !isEditing) ? onEdit : undefined },
+            React__default.createElement("div", { className: classNames('segment-term', {
+                    'has-alert': !!renderAlert,
+                    'has-radios': radios,
+                    'has-separator': hasSeparator,
+                    'is-editable': isEditing,
+                }), onClick: (isEditable && !isEditing) ? onEdit : undefined },
                 isEditing && renderInputs && renderInputs(),
                 !isEditing &&
                     React__default.createElement("p", null, label + " ",
                         React__default.createElement("strong", null, queryName)),
-                this.termControls),
+                this.termControls,
+                renderAlert && renderAlert()),
             hasAddButton &&
                 React__default.createElement(ButtonList, null,
                     React__default.createElement(Button, { type: "secondary", icon: "plus", onClick: onAddButtonClick }, "Add Condition"))));
@@ -1914,6 +1913,7 @@ var SegmentTerm = /** @class */ (function (_super) {
         hasSeparator: false,
         isEditable: false,
         isEditing: false,
+        radios: false,
     };
     return SegmentTerm;
 }(React.PureComponent));

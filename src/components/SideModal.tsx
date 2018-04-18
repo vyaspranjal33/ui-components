@@ -5,7 +5,7 @@ import {
   modalWillReceiveProps,
 } from '../utilities/modals';
 
-interface SideModalProps extends ModalProps {
+export interface SideModalProps extends ModalProps {
   children?: React.ReactNode;
   onClose: (evt: any) => void;
 }

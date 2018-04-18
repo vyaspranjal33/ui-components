@@ -67,7 +67,7 @@
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.2",
     "rollup-plugin-postcss": "^1.4.0",
-    "rollup-plugin-typescript": "^0.8.1",
+    "rollup-plugin-typescript2": "^0.13.0",
     "sass-loader": "^6.0.6",
     "source-map": "^0.7.0",
     "source-map-loader": "^0.2.3",

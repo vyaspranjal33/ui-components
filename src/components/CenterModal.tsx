@@ -5,7 +5,7 @@ import {
   modalWillReceiveProps,
 } from '../utilities/modals';
 
-interface CenterModalProps extends ModalProps {
+export interface CenterModalProps extends ModalProps {
   hasX?: boolean;
   large?: boolean;
   onClose: (evt: any) => void;
