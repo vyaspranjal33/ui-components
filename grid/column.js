@@ -5,4 +5,4 @@ export var Column = function (_a) {
     return (React.createElement("div", { className: cn((width > 0 ? 'col-' + width.toString() : ''), (offset > 0 ? 'col-offset-' + offset.toString() : '')) }, children));
 };
 export default Column;
-//# sourceMappingURL=Column.js.map
+//# sourceMappingURL=column.js.map
