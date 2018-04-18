@@ -8,7 +8,7 @@ export { Card } from './card';
 export { CenterModal } from './center-modal';
 export { Column } from './grid/column';
 export { Checkbox } from './checkbox';
-export { Row } from './grid/Row';
+export { Row } from './grid/row';
 export { ConfirmationModal } from './confirmation-modal';
 export { Divider } from './divider';
 export { DropdownButton } from './dropdown-button';
