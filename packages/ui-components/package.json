@@ -1,6 +1,6 @@
 {
   "name": "@sendgrid/ui-components",
-  "version": "0.12.6",
+  "version": "0.12.7",
   "description": "Resuable UI components for Sendgrid's applications.",
   "main": "index.js",
   "types": "index.d.ts",
