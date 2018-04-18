@@ -88,4 +88,12 @@ const outputOptions = {
       file: `packages/ui-components/${fileName}.js`,
     });
   }
+
+  glob('packages/ui-components/components/**/*.d.ts', (error, files) => {
+    for (const file of files) {
+      const fileName = paramCase(path.parse(file).name).replace('-d', '.d');
+      fs.createReadStream(file)
+        .pipe(fs.createWriteStream(`packages/ui-components/${fileName}.ts`));
+    }
+  })
 })();
