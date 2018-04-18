@@ -2,10 +2,10 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Card } from '../src/components/Card';
-import Divider from '../src/components/Divider';
-import { Column } from '../src/components/Grid/Column';
-import { Row } from '../src/components/Grid/Row';
+import { Card } from '../src/card';
+import Divider from '../src/divider';
+import { Column } from '../src/grid/Column';
+import { Row } from '../src/grid/Row';
 
 const stories = storiesOf('Grid', module);
 

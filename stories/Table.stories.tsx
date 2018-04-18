@@ -2,8 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Action, ActionsCell } from '../src/components/Actions';
-import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from '../src/components/Table/Table';
+import { Action, ActionsCell } from '../src/actions';
+import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from '../src/table/Table';
 
 const stories = storiesOf('Table', module);
 

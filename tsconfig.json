@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
-    "outDir": "./dist",
+    "outDir": "./",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -13,8 +13,8 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "declaration": true,
-    "declarationDir": "./typings"
+    "declarationDir": "./"
   },
   "include": ["./src/**/*"],
-  "exclude": ["./src/**/*test.*"]
+  "exclude": ["./src/**/*.test.*"]
 }
