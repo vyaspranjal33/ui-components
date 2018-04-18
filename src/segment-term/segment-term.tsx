@@ -1,9 +1,9 @@
 import React, { PureComponent } from 'react';
 
-import cn from '../utilities/classnames';
 import { Button } from '../button';
 import { ButtonList } from '../button-list';
 import { Icon } from '../icon';
+import cn from '../utilities/classnames';
 
 export interface SegmentTermProps {
   hasAddButton?: boolean;
