@@ -1,16 +1,11 @@
 {
-  "name": "@sendgrid/ui-components",
+  "name": "@sendgrid/ui-components-base",
   "version": "0.13.0",
   "description": "Resuable UI components for Sendgrid's applications.",
-  "main": "index.js",
-  "typings": "index.d.ts",
-  "files": [
-    "dist",
-    "components"
-  ],
   "scripts": {
     "start": "yarn run storybook",
     "build": "tsc",
+    "lerna": "lerna publish",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",
