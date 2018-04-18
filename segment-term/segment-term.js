@@ -9,10 +9,10 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import React, { PureComponent } from 'react';
-import cn from '../utilities/classnames';
 import { Button } from '../button';
 import { ButtonList } from '../button-list';
 import { Icon } from '../icon';
+import cn from '../utilities/classnames';
 var SegmentTerm = /** @class */ (function (_super) {
     __extends(SegmentTerm, _super);
     function SegmentTerm() {

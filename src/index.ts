@@ -6,7 +6,7 @@ export { Button, Buttonized } from './button';
 export { ButtonList } from './button-list';
 export { Card } from './card';
 export { CenterModal } from './center-modal';
-export { Column } from './grid/Column';
+export { Column } from './grid/column';
 export { Checkbox } from './checkbox';
 export { Row } from './grid/Row';
 export { ConfirmationModal } from './confirmation-modal';
@@ -36,7 +36,7 @@ export {
   TableCell,
   TableHeader,
   TableBody,
-} from './table/Table';
+} from './table/table';
 export { TextInput } from './text-input';
 export { ToggleButtons } from './toggle-buttons';
 export { Tooltip, HTMLTooltip } from './tooltip';
