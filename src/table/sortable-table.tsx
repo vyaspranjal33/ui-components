@@ -1,6 +1,6 @@
 import React from 'react';
 import cn from '../utilities/classnames';
-import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from './Table';
+import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from './table';
 
 // Trust me, it's more readable this way.
 // tslint:disable: max-line-length
