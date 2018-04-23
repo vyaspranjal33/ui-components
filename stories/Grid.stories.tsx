@@ -5,7 +5,7 @@ import React from 'react';
 import { Card } from '../src/card';
 import Divider from '../src/divider';
 import { Column } from '../src/grid/column';
-import { Row } from '../src/grid/Row';
+import { Row } from '../src/grid/row';
 
 const stories = storiesOf('Grid', module);
 
@@ -62,7 +62,7 @@ stories.add('Width 12', () => (
   </Row>
 ));
 
- stories.add('Offset 5', () => (
+stories.add('Offset 5', () => (
    <Row>
      <Column offset={5}>
        <Card
