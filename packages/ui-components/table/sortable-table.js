@@ -17,7 +17,7 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     return t;
 };
 import React from 'react';
-import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from './Table';
+import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from './table';
 var SortableTable = /** @class */ (function (_super) {
     __extends(SortableTable, _super);
     function SortableTable(props) {
