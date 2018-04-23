@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import { createPortal } from 'react-dom';
 import cn from '../utilities/classnames';
 import {
   ModalProps,
@@ -18,7 +19,7 @@ export class SideModal extends React.Component<SideModalProps> {
   }
 
   public render() {
-    return (
+    return createPortal(
       <Fragment>
         <div className={cn('side-modal', { 'is-visible': this.props.isOpen })}>
           {this.props.children}
@@ -28,7 +29,7 @@ export class SideModal extends React.Component<SideModalProps> {
           onClick={this.props.onClose}
         />
       </Fragment>
-    );
+    , document.body);
   }
 }
 
