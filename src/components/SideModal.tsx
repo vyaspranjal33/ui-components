@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import { createPortal } from 'react-dom';
+import ReactDOM from 'react-dom';
 import cn from '../utilities/classnames';
 import {
   ModalProps,
@@ -19,7 +19,7 @@ export class SideModal extends React.Component<SideModalProps> {
   }
 
   public render() {
-    return createPortal(
+    return ReactDOM.createPortal(
       <Fragment>
         <div className={cn('side-modal', { 'is-visible': this.props.isOpen })}>
           {this.props.children}
