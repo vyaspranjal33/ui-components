@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.12.5
+- Use React Portals for modals. Requires mock for jest
+
 ## 0.12.4
 - Add fragment loader component
 
