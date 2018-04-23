@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
 import cn from '../utilities/classnames';
 import {
   ModalProps,
@@ -23,7 +24,7 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
   }
 
   public render() {
-    return (
+    return ReactDOM.createPortal(
       <div className={cn('sg-modal', { 'is-visible': this.props.isOpen })}>
         <div className="conf-alert sg-modal-content">
           <h2 className="conf-alert-header">
@@ -39,7 +40,7 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
           </div>
         </div>
       </div>
-    );
+    , document.body);
   }
 }
 
