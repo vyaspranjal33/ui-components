@@ -56,16 +56,17 @@ var iconFor = function (type) {
     return 'warning';
 };
 var Alert = function (_a) {
-    var children = _a.children, icon = _a.icon, inline = _a.inline, handleClick = _a.onClick, type = _a.type;
+    var children = _a.children, dismissable = _a.dismissable, icon = _a.icon, inline = _a.inline, handleClick = _a.onClick, type = _a.type;
     return (React.createElement("div", { className: classNames('alert', "alert-" + type, {
             'alert-inline': inline,
         }), role: "alert" },
         React.createElement("p", null,
             React.createElement(Icon, { type: icon || iconFor(type) }),
             children,
-            React.createElement(Icon, { type: "x", onClick: handleClick }))));
+            dismissable && React.createElement(Icon, { type: "x", onClick: handleClick }))));
 };
 Alert.defaultProps = {
+    dismissable: true,
     hidden: false,
     inline: false,
 };
