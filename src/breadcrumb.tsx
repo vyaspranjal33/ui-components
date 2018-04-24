@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './breadcrumb.scss';
 
 export interface BreadcrumbProps {
   children:
@@ -23,7 +24,7 @@ export const Breadcrumb: React.SFC<BreadcrumbProps> = ({
   children,
   withoutTrailingSlash,
 }) => (
-  <ol className="breadcrumb">
+  <ol className={Styles.breadcrumb}>
     {mapper(children)}
     {!withoutTrailingSlash && <li />}
   </ol>
