@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { StatefulTabs as Tabs, Tab } from '../src/components/Tabs';
+import { StatefulTabs as Tabs, Tab } from '../src/tabs';
 
 const stories = storiesOf('Tabs', module);
 

@@ -2,10 +2,10 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Button from '../src/components/Button';
-import ButtonList from '../src/components/ButtonList';
-import EmptyState from '../src/components/EmptyState';
-import Footer from '../src/components/SmallFooter';
+import Button from '../src/button';
+import ButtonList from '../src/button-list';
+import EmptyState from '../src/empty-state';
+import Footer from '../src/small-footer';
 
 const stories = storiesOf('Empty State', module);
 

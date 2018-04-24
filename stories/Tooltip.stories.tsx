@@ -1,9 +1,9 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import Icon from '../src/components/Icon';
-import { TextInput } from '../src/components/TextInput';
-import { HTMLTooltip, Tooltip } from '../src/components/Tooltip';
+import Icon from '../src/icon';
+import { TextInput } from '../src/text-input';
+import { HTMLTooltip, Tooltip } from '../src/tooltip';
 
 const stories = storiesOf('Tooltip', module);
 

@@ -3,7 +3,7 @@ export interface ModalProps {
   isOpen?: boolean;
 }
 
-interface ElementWithClassList extends Element {
+export interface ElementWithClassList extends Element {
   classList: DOMTokenList;
 }
 
