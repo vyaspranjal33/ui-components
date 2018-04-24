@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { Action, ActionsCell } from '../src/actions';
-import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from '../src/table/Table';
+import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from '../src/table/table';
 
 const stories = storiesOf('Table', module);
 
