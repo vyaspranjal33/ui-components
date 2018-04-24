@@ -1,11 +1,10 @@
-/* tslint:disable:one-variable-per-declaration */
 import React from 'react';
 import Badge from './badge';
-import Styles from './button.scss';
 import Icon from './icon';
 import Loader from './loader';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
+import Styles from './button.scss';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
 
@@ -89,7 +88,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
     React.cloneElement(
       children,
       {
-        className: cn(Styles['btn-test'], Styles[`btn-${type}`], {
+        className: cn(Styles.btn, Styles[`btn-${type}`], {
           [Styles['btn-on-dark']]: onDark,
           [Styles['btn-small']]: small,
           [Styles['has-badge']]: hasBadge,
