@@ -8,11 +8,15 @@ import {
 
 export interface SideModalProps extends ModalProps {
   children?: React.ReactNode;
+  modalContainer?: Element;
   onClose: (evt: any) => void;
 }
 
 export class SideModal extends React.Component<SideModalProps> {
-  public static defaultProps: Partial<SideModalProps> = { bodyNode: document.body };
+  public static defaultProps: Partial<SideModalProps> = {
+    bodyNode: document.body,
+    modalContainer: document.body,
+  };
 
   public componentWillReceiveProps(nextProps: SideModalProps) {
     modalWillReceiveProps(nextProps, this.props);
@@ -29,7 +33,7 @@ export class SideModal extends React.Component<SideModalProps> {
           onClick={this.props.onClose}
         />
       </Fragment>
-    , document.body);
+    , this.props.modalContainer);
   }
 }
 

@@ -33,9 +33,12 @@ var ConfirmationModal = /** @class */ (function (_super) {
                     evaluateRenderProp(this.props.renderHeader)),
                 React.createElement("div", { className: "conf-alert-body" },
                     React.createElement("p", { className: "conf-alert-text" }, evaluateRenderProp(this.props.renderBody))),
-                React.createElement("div", { className: "conf-alert-actions" }, evaluateRenderProp(this.props.renderActions)))), document.body);
+                React.createElement("div", { className: "conf-alert-actions" }, evaluateRenderProp(this.props.renderActions)))), this.props.modalContainer);
     };
-    ConfirmationModal.defaultProps = { bodyNode: document.body };
+    ConfirmationModal.defaultProps = {
+        bodyNode: document.body,
+        modalContainer: document.body,
+    };
     return ConfirmationModal;
 }(Component));
 export { ConfirmationModal };

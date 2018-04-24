@@ -9,6 +9,7 @@ import {
 export interface CenterModalProps extends ModalProps {
   hasX?: boolean;
   large?: boolean;
+  modalContainer?: Element;
   onClose: (evt: any) => void;
   open: boolean;
   renderBody: string | React.ReactNode | (() => React.ReactNode);
@@ -25,6 +26,7 @@ export class CenterModal extends Component<CenterModalProps> {
     bodyNode: document.body,
     hasX: false,
     large: false,
+    modalContainer: document.body,
   };
 
   public componentWillReceiveProps(nextProps: CenterModalProps) {
@@ -52,7 +54,7 @@ export class CenterModal extends Component<CenterModalProps> {
           onClick={this.props.onClose}
         />
       </Fragment>
-    , document.body);
+    , this.props.modalContainer);
   }
 }
 

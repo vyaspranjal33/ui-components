@@ -9,10 +9,11 @@ import {
 } from './utilities/modals';
 
 export interface ConfirmationModalProps extends ModalProps {
+  iconType?: IconType;
+  modalContainer?: Element;
   renderActions: string | (() => React.ReactNode);
   renderBody: string | (() => React.ReactNode);
   renderHeader: string | (() => React.ReactNode);
-  iconType?: IconType;
 }
 
 const evaluateRenderProp: (prop: string | (() => React.ReactNode)) => React.ReactNode = (prop) => {
@@ -20,7 +21,10 @@ const evaluateRenderProp: (prop: string | (() => React.ReactNode)) => React.Reac
 };
 
 export class ConfirmationModal extends Component<ConfirmationModalProps> {
-  public static defaultProps: Partial<ConfirmationModalProps> = { bodyNode: document.body };
+  public static defaultProps: Partial<ConfirmationModalProps> = {
+    bodyNode: document.body,
+    modalContainer: document.body,
+  };
 
   public componentWillReceiveProps(nextProps: ConfirmationModalProps) {
     modalWillReceiveProps(nextProps, this.props);
@@ -47,7 +51,7 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
           </div>
         </div>
       </div>
-    , document.body);
+    , this.props.modalContainer);
   }
 }
 

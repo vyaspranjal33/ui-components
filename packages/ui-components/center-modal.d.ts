@@ -4,6 +4,7 @@ import { ModalProps } from './utilities/modals';
 export interface CenterModalProps extends ModalProps {
     hasX?: boolean;
     large?: boolean;
+    modalContainer?: Element;
     onClose: (evt: any) => void;
     open: boolean;
     renderBody: string | React.ReactNode | (() => React.ReactNode);

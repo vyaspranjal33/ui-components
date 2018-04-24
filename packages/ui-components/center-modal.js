@@ -33,12 +33,13 @@ var CenterModal = /** @class */ (function (_super) {
                 evaluateRenderProp(this.props.renderBody),
                 this.props.renderFooter &&
                     (React.createElement("div", { className: "modal-footer" }, evaluateRenderProp(this.props.renderFooter)))),
-            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.open }), onClick: this.props.onClose })), document.body);
+            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.open }), onClick: this.props.onClose })), this.props.modalContainer);
     };
     CenterModal.defaultProps = {
         bodyNode: document.body,
         hasX: false,
         large: false,
+        modalContainer: document.body,
     };
     return CenterModal;
 }(Component));

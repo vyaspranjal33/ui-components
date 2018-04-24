@@ -23,9 +23,12 @@ var SideModal = /** @class */ (function (_super) {
     SideModal.prototype.render = function () {
         return ReactDOM.createPortal(React.createElement(Fragment, null,
             React.createElement("div", { className: cn('side-modal', { 'is-visible': this.props.isOpen }) }, this.props.children),
-            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.isOpen }), onClick: this.props.onClose })), document.body);
+            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.isOpen }), onClick: this.props.onClose })), this.props.modalContainer);
     };
-    SideModal.defaultProps = { bodyNode: document.body };
+    SideModal.defaultProps = {
+        bodyNode: document.body,
+        modalContainer: document.body,
+    };
     return SideModal;
 }(React.Component));
 export { SideModal };

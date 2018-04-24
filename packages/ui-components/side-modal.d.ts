@@ -3,6 +3,7 @@ import React from 'react';
 import { ModalProps } from './utilities/modals';
 export interface SideModalProps extends ModalProps {
     children?: React.ReactNode;
+    modalContainer?: Element;
     onClose: (evt: any) => void;
 }
 export declare class SideModal extends React.Component<SideModalProps> {
