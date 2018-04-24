@@ -8,6 +8,6 @@ export interface SideModalProps extends ModalProps {
 export declare class SideModal extends React.Component<SideModalProps> {
     static defaultProps: Partial<SideModalProps>;
     componentWillReceiveProps(nextProps: SideModalProps): void;
-    render(): JSX.Element;
+    render(): React.ReactPortal;
 }
 export default SideModal;

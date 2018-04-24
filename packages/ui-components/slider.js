@@ -1,30 +1,23 @@
-(function (global, factory) {
-	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react')) :
-	typeof define === 'function' && define.amd ? define(['exports', 'react'], factory) :
-	(factory((global.Slider = {}),global.React));
-}(this, (function (exports,React) { 'use strict';
-
-React = React && React.hasOwnProperty('default') ? React['default'] : React;
-
-const __assign = Object.assign || function (target) {
-    for (var source, i = 1; i < arguments.length; i++) {
-        source = arguments[i];
-        for (var prop in source) {
-            if (Object.prototype.hasOwnProperty.call(source, prop)) {
-                target[prop] = source[prop];
-            }
-        }
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = Object.setPrototypeOf ||
+        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
     }
-    return target;
+    return t;
 };
-
-function __extends(d, b) {
-    for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p];
-    function __() { this.constructor = d; }
-    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-}
-
-var Slider = function (_a) {
+import React from 'react';
+export var Slider = function (_a) {
     var value = _a.value, id = _a.id, label = _a.label, handleChange = _a.onChange;
     return (React.createElement("div", { className: "input-range-wrap" },
         React.createElement("input", { id: id, max: "100", min: "0", onChange: handleChange, type: "range", value: value }),
@@ -54,16 +47,10 @@ var StatefulSlider = /** @class */ (function (_super) {
     };
     return StatefulSlider;
 }(React.Component));
+export { StatefulSlider };
 Slider.defaultProps = {
     label: true,
     value: 0,
 };
-
-exports.Slider = Slider;
-exports.default = Slider;
-exports.StatefulSlider = StatefulSlider;
-
-Object.defineProperty(exports, '__esModule', { value: true });
-
-})));
+export default Slider;
 //# sourceMappingURL=slider.js.map
