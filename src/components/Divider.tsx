@@ -10,6 +10,7 @@ export const Divider: React.SFC<DividerProps> = ({ label, thin }) => {
   return (
     <hr
       className={cn({
+        'has-label': !!label,
         'is-thin': thin,
       })}
       data-label={label}

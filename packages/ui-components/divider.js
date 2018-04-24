@@ -39,9 +39,10 @@ function classNames() {
 }
 
 var Divider = function (_a) {
-    var label = _a.label, thin = _a.thin;
+    const {label, thin, has-label:hasLabel} = _a;
     return (React.createElement("hr", { className: classNames({
             'is-thin': thin,
+            'has-label': hasLabel,
         }), "data-label": label }));
 };
 Divider.defaultProps = {
