@@ -1,23 +1,77 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'react'], factory) :
+	(factory((global['text-input'] = {}),global.React));
+}(this, (function (exports,React) { 'use strict';
+
+React = React && React.hasOwnProperty('default') ? React['default'] : React;
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = Object.setPrototypeOf ||
+    ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+    function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = Object.assign || function __assign(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
     }
     return t;
 };
-import React from 'react';
-import cn from './utilities/classnames';
+
+function classNames() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var result = '';
+    for (var _a = 0, args_1 = args; _a < args_1.length; _a++) {
+        var arg = args_1[_a];
+        if (!arg) {
+            continue;
+        }
+        if (typeof arg === 'string' || typeof arg === 'number') {
+            result = result + " " + arg;
+            continue;
+        }
+        if (Array.isArray(arg)) {
+            result = result + " " + classNames.apply(void 0, arg);
+            continue;
+        }
+        if (typeof arg === 'object') {
+            var keys = Object.keys(arg);
+            for (var _b = 0, keys_1 = keys; _b < keys_1.length; _b++) {
+                var key = keys_1[_b];
+                if (arg[key]) {
+                    result = result + " " + key;
+                }
+            }
+        }
+    }
+    return result.trim();
+}
+
 var convertInputValue = function (value, inputType) {
     return inputType === 'number' ? parseInt(value, 10) : value;
 };
@@ -25,7 +79,7 @@ var onInputFocus = function () {
     this.setState({ isInputFocused: true });
 };
 var getRenderedTextInput = function (value) {
-    var classes = cn('input-text-wrap', {
+    var classes = classNames('input-text-wrap', {
         'has-value': !!value || value === 0,
         'is-disabled': this.props.isDisabled,
         'is-error': !this.props.isValid,
@@ -39,7 +93,7 @@ var getRenderedTextInput = function (value) {
     return (React.createElement("div", { className: classes, style: this.inputStyle },
         React.createElement("label", { className: "input-text-label", htmlFor: this.props.id }, this.props.label),
         React.createElement("input", { id: this.props.id, value: this.props.value, type: this.props.type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }),
-        this.props.info && (React.createElement("span", { className: cn('input-info', {
+        this.props.info && (React.createElement("span", { className: classNames('input-info', {
                 danger: !this.props.isValid,
             }), id: infoId }, this.props.info)),
         children));
@@ -95,7 +149,6 @@ var TextInput = /** @class */ (function (_super) {
     };
     return TextInput;
 }(React.Component));
-export { TextInput };
 var StatefulTextInput = /** @class */ (function (_super) {
     __extends(StatefulTextInput, _super);
     function StatefulTextInput(props) {
@@ -130,5 +183,11 @@ var StatefulTextInput = /** @class */ (function (_super) {
     };
     return StatefulTextInput;
 }(React.Component));
-export { StatefulTextInput };
+
+exports.TextInput = TextInput;
+exports.StatefulTextInput = StatefulTextInput;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
 //# sourceMappingURL=text-input.js.map

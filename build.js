@@ -6,13 +6,14 @@ const rollup = require('rollup');
 const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 const json = require('rollup-plugin-json');
+const postcss = require('rollup-plugin-postcss');
 const typescriptPlugin = require('rollup-plugin-typescript2');
 const typescript = require('typescript');
 const glob = require('glob');
 const { paramCase } = require('change-case');
 
 const extension = '.tsx';
-const filePath = path.join(__dirname, 'src', 'components');
+const filePath = 'src';
 const packagePath = path.join(__dirname, 'packages', 'ui-components');
 
 const cleanDirectory = directory =>
@@ -39,6 +40,9 @@ const plugins = [
   resolve({ preferBuiltins: true }),
   commonjs(),
   json(),
+  postcss({
+    modules: true
+  }),
   typescriptPlugin({
     typescript,
   }),

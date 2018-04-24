@@ -1,27 +1,1340 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
+(function (global, factory) {
+	typeof exports === 'object' && typeof module !== 'undefined' ? factory(exports, require('react')) :
+	typeof define === 'function' && define.amd ? define(['exports', 'react'], factory) :
+	(factory((global['filterable-list'] = {}),global.React));
+}(this, (function (exports,React) { 'use strict';
+
+var React__default = 'default' in React ? React['default'] : React;
+
+/*! *****************************************************************************
+Copyright (c) Microsoft Corporation. All rights reserved.
+Licensed under the Apache License, Version 2.0 (the "License"); you may not use
+this file except in compliance with the License. You may obtain a copy of the
+License at http://www.apache.org/licenses/LICENSE-2.0
+
+THIS CODE IS PROVIDED ON AN *AS IS* BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+KIND, EITHER EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION ANY IMPLIED
+WARRANTIES OR CONDITIONS OF TITLE, FITNESS FOR A PARTICULAR PURPOSE,
+MERCHANTABLITY OR NON-INFRINGEMENT.
+
+See the Apache Version 2.0 License for specific language governing permissions
+and limitations under the License.
+***************************************************************************** */
+/* global Reflect, Promise */
+
+var extendStatics = Object.setPrototypeOf ||
+    ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+    function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+
+function __extends(d, b) {
+    extendStatics(d, b);
+    function __() { this.constructor = d; }
+    d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+}
+
+var __assign = Object.assign || function __assign(t) {
     for (var s, i = 1, n = arguments.length; i < n; i++) {
         s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p)) t[p] = s[p];
     }
     return t;
 };
-import capitalize from 'lodash/capitalize';
-import identity from 'lodash/identity';
-import values from 'lodash/values';
-import React, { PureComponent } from 'react';
-import Button from './button';
-import ButtonList from './button-list';
+
+var commonjsGlobal = typeof window !== 'undefined' ? window : typeof global !== 'undefined' ? global : typeof self !== 'undefined' ? self : {};
+
+
+
+
+
+function createCommonjsModule(fn, module) {
+	return module = { exports: {} }, fn(module, module.exports), module.exports;
+}
+
+/** Detect free variable `global` from Node.js. */
+var freeGlobal = typeof commonjsGlobal == 'object' && commonjsGlobal && commonjsGlobal.Object === Object && commonjsGlobal;
+
+var _freeGlobal = freeGlobal;
+
+/** Detect free variable `self`. */
+var freeSelf = typeof self == 'object' && self && self.Object === Object && self;
+
+/** Used as a reference to the global object. */
+var root = _freeGlobal || freeSelf || Function('return this')();
+
+var _root = root;
+
+/** Built-in value references. */
+var Symbol$1 = _root.Symbol;
+
+var _Symbol = Symbol$1;
+
+/**
+ * A specialized version of `_.map` for arrays without support for iteratee
+ * shorthands.
+ *
+ * @private
+ * @param {Array} [array] The array to iterate over.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the new mapped array.
+ */
+function arrayMap(array, iteratee) {
+  var index = -1,
+      length = array == null ? 0 : array.length,
+      result = Array(length);
+
+  while (++index < length) {
+    result[index] = iteratee(array[index], index, array);
+  }
+  return result;
+}
+
+var _arrayMap = arrayMap;
+
+/**
+ * Checks if `value` is classified as an `Array` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an array, else `false`.
+ * @example
+ *
+ * _.isArray([1, 2, 3]);
+ * // => true
+ *
+ * _.isArray(document.body.children);
+ * // => false
+ *
+ * _.isArray('abc');
+ * // => false
+ *
+ * _.isArray(_.noop);
+ * // => false
+ */
+var isArray = Array.isArray;
+
+var isArray_1 = isArray;
+
+/** Used for built-in method references. */
+var objectProto = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty = objectProto.hasOwnProperty;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString = objectProto.toString;
+
+/** Built-in value references. */
+var symToStringTag = _Symbol ? _Symbol.toStringTag : undefined;
+
+/**
+ * A specialized version of `baseGetTag` which ignores `Symbol.toStringTag` values.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the raw `toStringTag`.
+ */
+function getRawTag(value) {
+  var isOwn = hasOwnProperty.call(value, symToStringTag),
+      tag = value[symToStringTag];
+
+  try {
+    value[symToStringTag] = undefined;
+    var unmasked = true;
+  } catch (e) {}
+
+  var result = nativeObjectToString.call(value);
+  if (unmasked) {
+    if (isOwn) {
+      value[symToStringTag] = tag;
+    } else {
+      delete value[symToStringTag];
+    }
+  }
+  return result;
+}
+
+var _getRawTag = getRawTag;
+
+/** Used for built-in method references. */
+var objectProto$1 = Object.prototype;
+
+/**
+ * Used to resolve the
+ * [`toStringTag`](http://ecma-international.org/ecma-262/7.0/#sec-object.prototype.tostring)
+ * of values.
+ */
+var nativeObjectToString$1 = objectProto$1.toString;
+
+/**
+ * Converts `value` to a string using `Object.prototype.toString`.
+ *
+ * @private
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ */
+function objectToString(value) {
+  return nativeObjectToString$1.call(value);
+}
+
+var _objectToString = objectToString;
+
+/** `Object#toString` result references. */
+var nullTag = '[object Null]';
+var undefinedTag = '[object Undefined]';
+
+/** Built-in value references. */
+var symToStringTag$1 = _Symbol ? _Symbol.toStringTag : undefined;
+
+/**
+ * The base implementation of `getTag` without fallbacks for buggy environments.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @returns {string} Returns the `toStringTag`.
+ */
+function baseGetTag(value) {
+  if (value == null) {
+    return value === undefined ? undefinedTag : nullTag;
+  }
+  return (symToStringTag$1 && symToStringTag$1 in Object(value))
+    ? _getRawTag(value)
+    : _objectToString(value);
+}
+
+var _baseGetTag = baseGetTag;
+
+/**
+ * Checks if `value` is object-like. A value is object-like if it's not `null`
+ * and has a `typeof` result of "object".
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is object-like, else `false`.
+ * @example
+ *
+ * _.isObjectLike({});
+ * // => true
+ *
+ * _.isObjectLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isObjectLike(_.noop);
+ * // => false
+ *
+ * _.isObjectLike(null);
+ * // => false
+ */
+function isObjectLike(value) {
+  return value != null && typeof value == 'object';
+}
+
+var isObjectLike_1 = isObjectLike;
+
+/** `Object#toString` result references. */
+var symbolTag = '[object Symbol]';
+
+/**
+ * Checks if `value` is classified as a `Symbol` primitive or object.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a symbol, else `false`.
+ * @example
+ *
+ * _.isSymbol(Symbol.iterator);
+ * // => true
+ *
+ * _.isSymbol('abc');
+ * // => false
+ */
+function isSymbol(value) {
+  return typeof value == 'symbol' ||
+    (isObjectLike_1(value) && _baseGetTag(value) == symbolTag);
+}
+
+var isSymbol_1 = isSymbol;
+
+/** Used as references for various `Number` constants. */
+var INFINITY = 1 / 0;
+
+/** Used to convert symbols to primitives and strings. */
+var symbolProto = _Symbol ? _Symbol.prototype : undefined;
+var symbolToString = symbolProto ? symbolProto.toString : undefined;
+
+/**
+ * The base implementation of `_.toString` which doesn't convert nullish
+ * values to empty strings.
+ *
+ * @private
+ * @param {*} value The value to process.
+ * @returns {string} Returns the string.
+ */
+function baseToString(value) {
+  // Exit early for strings to avoid a performance hit in some environments.
+  if (typeof value == 'string') {
+    return value;
+  }
+  if (isArray_1(value)) {
+    // Recursively convert values (susceptible to call stack limits).
+    return _arrayMap(value, baseToString) + '';
+  }
+  if (isSymbol_1(value)) {
+    return symbolToString ? symbolToString.call(value) : '';
+  }
+  var result = (value + '');
+  return (result == '0' && (1 / value) == -INFINITY) ? '-0' : result;
+}
+
+var _baseToString = baseToString;
+
+/**
+ * Converts `value` to a string. An empty string is returned for `null`
+ * and `undefined` values. The sign of `-0` is preserved.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.toString(null);
+ * // => ''
+ *
+ * _.toString(-0);
+ * // => '-0'
+ *
+ * _.toString([1, 2, 3]);
+ * // => '1,2,3'
+ */
+function toString(value) {
+  return value == null ? '' : _baseToString(value);
+}
+
+var toString_1 = toString;
+
+/**
+ * The base implementation of `_.slice` without an iteratee call guard.
+ *
+ * @private
+ * @param {Array} array The array to slice.
+ * @param {number} [start=0] The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the slice of `array`.
+ */
+function baseSlice(array, start, end) {
+  var index = -1,
+      length = array.length;
+
+  if (start < 0) {
+    start = -start > length ? 0 : (length + start);
+  }
+  end = end > length ? length : end;
+  if (end < 0) {
+    end += length;
+  }
+  length = start > end ? 0 : ((end - start) >>> 0);
+  start >>>= 0;
+
+  var result = Array(length);
+  while (++index < length) {
+    result[index] = array[index + start];
+  }
+  return result;
+}
+
+var _baseSlice = baseSlice;
+
+/**
+ * Casts `array` to a slice if it's needed.
+ *
+ * @private
+ * @param {Array} array The array to inspect.
+ * @param {number} start The start position.
+ * @param {number} [end=array.length] The end position.
+ * @returns {Array} Returns the cast slice.
+ */
+function castSlice(array, start, end) {
+  var length = array.length;
+  end = end === undefined ? length : end;
+  return (!start && end >= length) ? array : _baseSlice(array, start, end);
+}
+
+var _castSlice = castSlice;
+
+/** Used to compose unicode character classes. */
+var rsAstralRange = '\\ud800-\\udfff';
+var rsComboMarksRange = '\\u0300-\\u036f';
+var reComboHalfMarksRange = '\\ufe20-\\ufe2f';
+var rsComboSymbolsRange = '\\u20d0-\\u20ff';
+var rsComboRange = rsComboMarksRange + reComboHalfMarksRange + rsComboSymbolsRange;
+var rsVarRange = '\\ufe0e\\ufe0f';
+
+/** Used to compose unicode capture groups. */
+var rsZWJ = '\\u200d';
+
+/** Used to detect strings with [zero-width joiners or code points from the astral planes](http://eev.ee/blog/2015/09/12/dark-corners-of-unicode/). */
+var reHasUnicode = RegExp('[' + rsZWJ + rsAstralRange  + rsComboRange + rsVarRange + ']');
+
+/**
+ * Checks if `string` contains Unicode symbols.
+ *
+ * @private
+ * @param {string} string The string to inspect.
+ * @returns {boolean} Returns `true` if a symbol is found, else `false`.
+ */
+function hasUnicode(string) {
+  return reHasUnicode.test(string);
+}
+
+var _hasUnicode = hasUnicode;
+
+/**
+ * Converts an ASCII `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function asciiToArray(string) {
+  return string.split('');
+}
+
+var _asciiToArray = asciiToArray;
+
+/** Used to compose unicode character classes. */
+var rsAstralRange$1 = '\\ud800-\\udfff';
+var rsComboMarksRange$1 = '\\u0300-\\u036f';
+var reComboHalfMarksRange$1 = '\\ufe20-\\ufe2f';
+var rsComboSymbolsRange$1 = '\\u20d0-\\u20ff';
+var rsComboRange$1 = rsComboMarksRange$1 + reComboHalfMarksRange$1 + rsComboSymbolsRange$1;
+var rsVarRange$1 = '\\ufe0e\\ufe0f';
+
+/** Used to compose unicode capture groups. */
+var rsAstral = '[' + rsAstralRange$1 + ']';
+var rsCombo = '[' + rsComboRange$1 + ']';
+var rsFitz = '\\ud83c[\\udffb-\\udfff]';
+var rsModifier = '(?:' + rsCombo + '|' + rsFitz + ')';
+var rsNonAstral = '[^' + rsAstralRange$1 + ']';
+var rsRegional = '(?:\\ud83c[\\udde6-\\uddff]){2}';
+var rsSurrPair = '[\\ud800-\\udbff][\\udc00-\\udfff]';
+var rsZWJ$1 = '\\u200d';
+
+/** Used to compose unicode regexes. */
+var reOptMod = rsModifier + '?';
+var rsOptVar = '[' + rsVarRange$1 + ']?';
+var rsOptJoin = '(?:' + rsZWJ$1 + '(?:' + [rsNonAstral, rsRegional, rsSurrPair].join('|') + ')' + rsOptVar + reOptMod + ')*';
+var rsSeq = rsOptVar + reOptMod + rsOptJoin;
+var rsSymbol = '(?:' + [rsNonAstral + rsCombo + '?', rsCombo, rsRegional, rsSurrPair, rsAstral].join('|') + ')';
+
+/** Used to match [string symbols](https://mathiasbynens.be/notes/javascript-unicode). */
+var reUnicode = RegExp(rsFitz + '(?=' + rsFitz + ')|' + rsSymbol + rsSeq, 'g');
+
+/**
+ * Converts a Unicode `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function unicodeToArray(string) {
+  return string.match(reUnicode) || [];
+}
+
+var _unicodeToArray = unicodeToArray;
+
+/**
+ * Converts `string` to an array.
+ *
+ * @private
+ * @param {string} string The string to convert.
+ * @returns {Array} Returns the converted array.
+ */
+function stringToArray(string) {
+  return _hasUnicode(string)
+    ? _unicodeToArray(string)
+    : _asciiToArray(string);
+}
+
+var _stringToArray = stringToArray;
+
+/**
+ * Creates a function like `_.lowerFirst`.
+ *
+ * @private
+ * @param {string} methodName The name of the `String` case method to use.
+ * @returns {Function} Returns the new case function.
+ */
+function createCaseFirst(methodName) {
+  return function(string) {
+    string = toString_1(string);
+
+    var strSymbols = _hasUnicode(string)
+      ? _stringToArray(string)
+      : undefined;
+
+    var chr = strSymbols
+      ? strSymbols[0]
+      : string.charAt(0);
+
+    var trailing = strSymbols
+      ? _castSlice(strSymbols, 1).join('')
+      : string.slice(1);
+
+    return chr[methodName]() + trailing;
+  };
+}
+
+var _createCaseFirst = createCaseFirst;
+
+/**
+ * Converts the first character of `string` to upper case.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category String
+ * @param {string} [string=''] The string to convert.
+ * @returns {string} Returns the converted string.
+ * @example
+ *
+ * _.upperFirst('fred');
+ * // => 'Fred'
+ *
+ * _.upperFirst('FRED');
+ * // => 'FRED'
+ */
+var upperFirst = _createCaseFirst('toUpperCase');
+
+var upperFirst_1 = upperFirst;
+
+/**
+ * Converts the first character of `string` to upper case and the remaining
+ * to lower case.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category String
+ * @param {string} [string=''] The string to capitalize.
+ * @returns {string} Returns the capitalized string.
+ * @example
+ *
+ * _.capitalize('FRED');
+ * // => 'Fred'
+ */
+function capitalize(string) {
+  return upperFirst_1(toString_1(string).toLowerCase());
+}
+
+var capitalize_1 = capitalize;
+
+/**
+ * This method returns the first argument it receives.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Util
+ * @param {*} value Any value.
+ * @returns {*} Returns `value`.
+ * @example
+ *
+ * var object = { 'a': 1 };
+ *
+ * console.log(_.identity(object) === object);
+ * // => true
+ */
+function identity(value) {
+  return value;
+}
+
+var identity_1 = identity;
+
+/**
+ * The base implementation of `_.values` and `_.valuesIn` which creates an
+ * array of `object` property values corresponding to the property names
+ * of `props`.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @param {Array} props The property names to get values for.
+ * @returns {Object} Returns the array of property values.
+ */
+function baseValues(object, props) {
+  return _arrayMap(props, function(key) {
+    return object[key];
+  });
+}
+
+var _baseValues = baseValues;
+
+/**
+ * The base implementation of `_.times` without support for iteratee shorthands
+ * or max array length checks.
+ *
+ * @private
+ * @param {number} n The number of times to invoke `iteratee`.
+ * @param {Function} iteratee The function invoked per iteration.
+ * @returns {Array} Returns the array of results.
+ */
+function baseTimes(n, iteratee) {
+  var index = -1,
+      result = Array(n);
+
+  while (++index < n) {
+    result[index] = iteratee(index);
+  }
+  return result;
+}
+
+var _baseTimes = baseTimes;
+
+/** `Object#toString` result references. */
+var argsTag = '[object Arguments]';
+
+/**
+ * The base implementation of `_.isArguments`.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ */
+function baseIsArguments(value) {
+  return isObjectLike_1(value) && _baseGetTag(value) == argsTag;
+}
+
+var _baseIsArguments = baseIsArguments;
+
+/** Used for built-in method references. */
+var objectProto$2 = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty$1 = objectProto$2.hasOwnProperty;
+
+/** Built-in value references. */
+var propertyIsEnumerable = objectProto$2.propertyIsEnumerable;
+
+/**
+ * Checks if `value` is likely an `arguments` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an `arguments` object,
+ *  else `false`.
+ * @example
+ *
+ * _.isArguments(function() { return arguments; }());
+ * // => true
+ *
+ * _.isArguments([1, 2, 3]);
+ * // => false
+ */
+var isArguments = _baseIsArguments(function() { return arguments; }()) ? _baseIsArguments : function(value) {
+  return isObjectLike_1(value) && hasOwnProperty$1.call(value, 'callee') &&
+    !propertyIsEnumerable.call(value, 'callee');
+};
+
+var isArguments_1 = isArguments;
+
+/**
+ * This method returns `false`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.13.0
+ * @category Util
+ * @returns {boolean} Returns `false`.
+ * @example
+ *
+ * _.times(2, _.stubFalse);
+ * // => [false, false]
+ */
+function stubFalse() {
+  return false;
+}
+
+var stubFalse_1 = stubFalse;
+
+var isBuffer_1 = createCommonjsModule(function (module, exports) {
+/** Detect free variable `exports`. */
+var freeExports = 'object' == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Built-in value references. */
+var Buffer = moduleExports ? _root.Buffer : undefined;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeIsBuffer = Buffer ? Buffer.isBuffer : undefined;
+
+/**
+ * Checks if `value` is a buffer.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.3.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a buffer, else `false`.
+ * @example
+ *
+ * _.isBuffer(new Buffer(2));
+ * // => true
+ *
+ * _.isBuffer(new Uint8Array(2));
+ * // => false
+ */
+var isBuffer = nativeIsBuffer || stubFalse_1;
+
+module.exports = isBuffer;
+});
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER = 9007199254740991;
+
+/** Used to detect unsigned integer values. */
+var reIsUint = /^(?:0|[1-9]\d*)$/;
+
+/**
+ * Checks if `value` is a valid array-like index.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @param {number} [length=MAX_SAFE_INTEGER] The upper bounds of a valid index.
+ * @returns {boolean} Returns `true` if `value` is a valid index, else `false`.
+ */
+function isIndex(value, length) {
+  var type = typeof value;
+  length = length == null ? MAX_SAFE_INTEGER : length;
+
+  return !!length &&
+    (type == 'number' ||
+      (type != 'symbol' && reIsUint.test(value))) &&
+        (value > -1 && value % 1 == 0 && value < length);
+}
+
+var _isIndex = isIndex;
+
+/** Used as references for various `Number` constants. */
+var MAX_SAFE_INTEGER$1 = 9007199254740991;
+
+/**
+ * Checks if `value` is a valid array-like length.
+ *
+ * **Note:** This method is loosely based on
+ * [`ToLength`](http://ecma-international.org/ecma-262/7.0/#sec-tolength).
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a valid length, else `false`.
+ * @example
+ *
+ * _.isLength(3);
+ * // => true
+ *
+ * _.isLength(Number.MIN_VALUE);
+ * // => false
+ *
+ * _.isLength(Infinity);
+ * // => false
+ *
+ * _.isLength('3');
+ * // => false
+ */
+function isLength(value) {
+  return typeof value == 'number' &&
+    value > -1 && value % 1 == 0 && value <= MAX_SAFE_INTEGER$1;
+}
+
+var isLength_1 = isLength;
+
+/** `Object#toString` result references. */
+var argsTag$1 = '[object Arguments]';
+var arrayTag = '[object Array]';
+var boolTag = '[object Boolean]';
+var dateTag = '[object Date]';
+var errorTag = '[object Error]';
+var funcTag = '[object Function]';
+var mapTag = '[object Map]';
+var numberTag = '[object Number]';
+var objectTag = '[object Object]';
+var regexpTag = '[object RegExp]';
+var setTag = '[object Set]';
+var stringTag = '[object String]';
+var weakMapTag = '[object WeakMap]';
+
+var arrayBufferTag = '[object ArrayBuffer]';
+var dataViewTag = '[object DataView]';
+var float32Tag = '[object Float32Array]';
+var float64Tag = '[object Float64Array]';
+var int8Tag = '[object Int8Array]';
+var int16Tag = '[object Int16Array]';
+var int32Tag = '[object Int32Array]';
+var uint8Tag = '[object Uint8Array]';
+var uint8ClampedTag = '[object Uint8ClampedArray]';
+var uint16Tag = '[object Uint16Array]';
+var uint32Tag = '[object Uint32Array]';
+
+/** Used to identify `toStringTag` values of typed arrays. */
+var typedArrayTags = {};
+typedArrayTags[float32Tag] = typedArrayTags[float64Tag] =
+typedArrayTags[int8Tag] = typedArrayTags[int16Tag] =
+typedArrayTags[int32Tag] = typedArrayTags[uint8Tag] =
+typedArrayTags[uint8ClampedTag] = typedArrayTags[uint16Tag] =
+typedArrayTags[uint32Tag] = true;
+typedArrayTags[argsTag$1] = typedArrayTags[arrayTag] =
+typedArrayTags[arrayBufferTag] = typedArrayTags[boolTag] =
+typedArrayTags[dataViewTag] = typedArrayTags[dateTag] =
+typedArrayTags[errorTag] = typedArrayTags[funcTag] =
+typedArrayTags[mapTag] = typedArrayTags[numberTag] =
+typedArrayTags[objectTag] = typedArrayTags[regexpTag] =
+typedArrayTags[setTag] = typedArrayTags[stringTag] =
+typedArrayTags[weakMapTag] = false;
+
+/**
+ * The base implementation of `_.isTypedArray` without Node.js optimizations.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ */
+function baseIsTypedArray(value) {
+  return isObjectLike_1(value) &&
+    isLength_1(value.length) && !!typedArrayTags[_baseGetTag(value)];
+}
+
+var _baseIsTypedArray = baseIsTypedArray;
+
+/**
+ * The base implementation of `_.unary` without support for storing metadata.
+ *
+ * @private
+ * @param {Function} func The function to cap arguments for.
+ * @returns {Function} Returns the new capped function.
+ */
+function baseUnary(func) {
+  return function(value) {
+    return func(value);
+  };
+}
+
+var _baseUnary = baseUnary;
+
+var _nodeUtil = createCommonjsModule(function (module, exports) {
+/** Detect free variable `exports`. */
+var freeExports = 'object' == 'object' && exports && !exports.nodeType && exports;
+
+/** Detect free variable `module`. */
+var freeModule = freeExports && 'object' == 'object' && module && !module.nodeType && module;
+
+/** Detect the popular CommonJS extension `module.exports`. */
+var moduleExports = freeModule && freeModule.exports === freeExports;
+
+/** Detect free variable `process` from Node.js. */
+var freeProcess = moduleExports && _freeGlobal.process;
+
+/** Used to access faster Node.js helpers. */
+var nodeUtil = (function() {
+  try {
+    return freeProcess && freeProcess.binding && freeProcess.binding('util');
+  } catch (e) {}
+}());
+
+module.exports = nodeUtil;
+});
+
+/* Node.js helper references. */
+var nodeIsTypedArray = _nodeUtil && _nodeUtil.isTypedArray;
+
+/**
+ * Checks if `value` is classified as a typed array.
+ *
+ * @static
+ * @memberOf _
+ * @since 3.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a typed array, else `false`.
+ * @example
+ *
+ * _.isTypedArray(new Uint8Array);
+ * // => true
+ *
+ * _.isTypedArray([]);
+ * // => false
+ */
+var isTypedArray = nodeIsTypedArray ? _baseUnary(nodeIsTypedArray) : _baseIsTypedArray;
+
+var isTypedArray_1 = isTypedArray;
+
+/** Used for built-in method references. */
+var objectProto$3 = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty$2 = objectProto$3.hasOwnProperty;
+
+/**
+ * Creates an array of the enumerable property names of the array-like `value`.
+ *
+ * @private
+ * @param {*} value The value to query.
+ * @param {boolean} inherited Specify returning inherited property names.
+ * @returns {Array} Returns the array of property names.
+ */
+function arrayLikeKeys(value, inherited) {
+  var isArr = isArray_1(value),
+      isArg = !isArr && isArguments_1(value),
+      isBuff = !isArr && !isArg && isBuffer_1(value),
+      isType = !isArr && !isArg && !isBuff && isTypedArray_1(value),
+      skipIndexes = isArr || isArg || isBuff || isType,
+      result = skipIndexes ? _baseTimes(value.length, String) : [],
+      length = result.length;
+
+  for (var key in value) {
+    if ((inherited || hasOwnProperty$2.call(value, key)) &&
+        !(skipIndexes && (
+           // Safari 9 has enumerable `arguments.length` in strict mode.
+           key == 'length' ||
+           // Node.js 0.10 has enumerable non-index properties on buffers.
+           (isBuff && (key == 'offset' || key == 'parent')) ||
+           // PhantomJS 2 has enumerable non-index properties on typed arrays.
+           (isType && (key == 'buffer' || key == 'byteLength' || key == 'byteOffset')) ||
+           // Skip index properties.
+           _isIndex(key, length)
+        ))) {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+var _arrayLikeKeys = arrayLikeKeys;
+
+/** Used for built-in method references. */
+var objectProto$4 = Object.prototype;
+
+/**
+ * Checks if `value` is likely a prototype object.
+ *
+ * @private
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a prototype, else `false`.
+ */
+function isPrototype(value) {
+  var Ctor = value && value.constructor,
+      proto = (typeof Ctor == 'function' && Ctor.prototype) || objectProto$4;
+
+  return value === proto;
+}
+
+var _isPrototype = isPrototype;
+
+/**
+ * Creates a unary function that invokes `func` with its argument transformed.
+ *
+ * @private
+ * @param {Function} func The function to wrap.
+ * @param {Function} transform The argument transform.
+ * @returns {Function} Returns the new function.
+ */
+function overArg(func, transform) {
+  return function(arg) {
+    return func(transform(arg));
+  };
+}
+
+var _overArg = overArg;
+
+/* Built-in method references for those with the same name as other `lodash` methods. */
+var nativeKeys = _overArg(Object.keys, Object);
+
+var _nativeKeys = nativeKeys;
+
+/** Used for built-in method references. */
+var objectProto$5 = Object.prototype;
+
+/** Used to check objects for own properties. */
+var hasOwnProperty$3 = objectProto$5.hasOwnProperty;
+
+/**
+ * The base implementation of `_.keys` which doesn't treat sparse arrays as dense.
+ *
+ * @private
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ */
+function baseKeys(object) {
+  if (!_isPrototype(object)) {
+    return _nativeKeys(object);
+  }
+  var result = [];
+  for (var key in Object(object)) {
+    if (hasOwnProperty$3.call(object, key) && key != 'constructor') {
+      result.push(key);
+    }
+  }
+  return result;
+}
+
+var _baseKeys = baseKeys;
+
+/**
+ * Checks if `value` is the
+ * [language type](http://www.ecma-international.org/ecma-262/7.0/#sec-ecmascript-language-types)
+ * of `Object`. (e.g. arrays, functions, objects, regexes, `new Number(0)`, and `new String('')`)
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is an object, else `false`.
+ * @example
+ *
+ * _.isObject({});
+ * // => true
+ *
+ * _.isObject([1, 2, 3]);
+ * // => true
+ *
+ * _.isObject(_.noop);
+ * // => true
+ *
+ * _.isObject(null);
+ * // => false
+ */
+function isObject(value) {
+  var type = typeof value;
+  return value != null && (type == 'object' || type == 'function');
+}
+
+var isObject_1 = isObject;
+
+/** `Object#toString` result references. */
+var asyncTag = '[object AsyncFunction]';
+var funcTag$1 = '[object Function]';
+var genTag = '[object GeneratorFunction]';
+var proxyTag = '[object Proxy]';
+
+/**
+ * Checks if `value` is classified as a `Function` object.
+ *
+ * @static
+ * @memberOf _
+ * @since 0.1.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is a function, else `false`.
+ * @example
+ *
+ * _.isFunction(_);
+ * // => true
+ *
+ * _.isFunction(/abc/);
+ * // => false
+ */
+function isFunction(value) {
+  if (!isObject_1(value)) {
+    return false;
+  }
+  // The use of `Object#toString` avoids issues with the `typeof` operator
+  // in Safari 9 which returns 'object' for typed arrays and other constructors.
+  var tag = _baseGetTag(value);
+  return tag == funcTag$1 || tag == genTag || tag == asyncTag || tag == proxyTag;
+}
+
+var isFunction_1 = isFunction;
+
+/**
+ * Checks if `value` is array-like. A value is considered array-like if it's
+ * not a function and has a `value.length` that's an integer greater than or
+ * equal to `0` and less than or equal to `Number.MAX_SAFE_INTEGER`.
+ *
+ * @static
+ * @memberOf _
+ * @since 4.0.0
+ * @category Lang
+ * @param {*} value The value to check.
+ * @returns {boolean} Returns `true` if `value` is array-like, else `false`.
+ * @example
+ *
+ * _.isArrayLike([1, 2, 3]);
+ * // => true
+ *
+ * _.isArrayLike(document.body.children);
+ * // => true
+ *
+ * _.isArrayLike('abc');
+ * // => true
+ *
+ * _.isArrayLike(_.noop);
+ * // => false
+ */
+function isArrayLike(value) {
+  return value != null && isLength_1(value.length) && !isFunction_1(value);
+}
+
+var isArrayLike_1 = isArrayLike;
+
+/**
+ * Creates an array of the own enumerable property names of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects. See the
+ * [ES spec](http://ecma-international.org/ecma-262/7.0/#sec-object.keys)
+ * for more details.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property names.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.keys(new Foo);
+ * // => ['a', 'b'] (iteration order is not guaranteed)
+ *
+ * _.keys('hi');
+ * // => ['0', '1']
+ */
+function keys(object) {
+  return isArrayLike_1(object) ? _arrayLikeKeys(object) : _baseKeys(object);
+}
+
+var keys_1 = keys;
+
+/**
+ * Creates an array of the own enumerable string keyed property values of `object`.
+ *
+ * **Note:** Non-object values are coerced to objects.
+ *
+ * @static
+ * @since 0.1.0
+ * @memberOf _
+ * @category Object
+ * @param {Object} object The object to query.
+ * @returns {Array} Returns the array of property values.
+ * @example
+ *
+ * function Foo() {
+ *   this.a = 1;
+ *   this.b = 2;
+ * }
+ *
+ * Foo.prototype.c = 3;
+ *
+ * _.values(new Foo);
+ * // => [1, 2] (iteration order is not guaranteed)
+ *
+ * _.values('hi');
+ * // => ['h', 'i']
+ */
+function values(object) {
+  return object == null ? [] : _baseValues(object, keys_1(object));
+}
+
+var values_1 = values;
+
+function classNames() {
+    var args = [];
+    for (var _i = 0; _i < arguments.length; _i++) {
+        args[_i] = arguments[_i];
+    }
+    var result = '';
+    for (var _a = 0, args_1 = args; _a < args_1.length; _a++) {
+        var arg = args_1[_a];
+        if (!arg) {
+            continue;
+        }
+        if (typeof arg === 'string' || typeof arg === 'number') {
+            result = result + " " + arg;
+            continue;
+        }
+        if (Array.isArray(arg)) {
+            result = result + " " + classNames.apply(void 0, arg);
+            continue;
+        }
+        if (typeof arg === 'object') {
+            var keys = Object.keys(arg);
+            for (var _b = 0, keys_1 = keys; _b < keys_1.length; _b++) {
+                var key = keys_1[_b];
+                if (arg[key]) {
+                    result = result + " " + key;
+                }
+            }
+        }
+    }
+    return result.trim();
+}
+
+var Badge = function (_a) {
+    var children = _a.children, color = _a.color, content = _a.content;
+    return (React__default.createElement("span", { className: classNames('badge', color) }, children || content));
+};
+Badge.defaultProps = {
+    children: 0,
+    color: '',
+};
+
+function styleInject(css, ref) {
+  if ( ref === void 0 ) ref = {};
+  var insertAt = ref.insertAt;
+
+  if (!css || typeof document === 'undefined') { return; }
+
+  var head = document.head || document.getElementsByTagName('head')[0];
+  var style = document.createElement('style');
+  style.type = 'text/css';
+
+  if (insertAt === 'top') {
+    if (head.firstChild) {
+      head.insertBefore(style, head.firstChild);
+    } else {
+      head.appendChild(style);
+    }
+  } else {
+    head.appendChild(style);
+  }
+
+  if (style.styleSheet) {
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+}
+
+var css = "@charset \"UTF-8\";\n.button_btn-test__M9BqG {\n  position: relative;\n  display: inline-block;\n  padding: 11px 30px;\n  font-size: 13px;\n  line-height: 16px;\n  text-align: center;\n  text-decoration: none;\n  vertical-align: middle;\n  cursor: pointer;\n  border-style: solid;\n  border-width: 1px;\n  border-radius: 2px;\n  box-sizing: border-box;\n  transition: color 0.3s, background-color 0.3s, border-color 0.3s;\n  user-select: none; }\n  .button_btn-test__M9BqG.button_is-disabled__WiXru {\n    color: #fff;\n    pointer-events: none;\n    cursor: default;\n    background-color: #9e9e9e;\n    border-color: #9e9e9e; }\n    .button_btn-test__M9BqG.button_is-disabled__WiXru.button_btn-secondary__1Fno9, .button_btn-test__M9BqG.button_is-disabled__WiXru.button_btn-danger__2_ioi {\n      color: #9e9e9e;\n      background-color: #fff;\n      border-color: #9e9e9e; }\n  .button_btn-test__M9BqG.button_has-icon__2WYBp, .button_btn-test__M9BqG.button_btn-with-icon__1_3Kv, .button_btn-test__M9BqG.button_has-badge__1gtFd {\n    padding-right: 18px;\n    padding-left: 18px; }\n  .button_btn-test__M9BqG.button_is-loading__3jYvv {\n    pointer-events: none; }\n  .button_btn-test__M9BqG .button_sg-icon__uoOaW,\n  .button_btn-test__M9BqG .button_sg-loader__TcJYi,\n  .button_btn-test__M9BqG .button_badge__2OEGB {\n    display: block;\n    float: left;\n    margin-right: 6px; }\n  .button_btn-test__M9BqG .button_badge__2OEGB {\n    margin-bottom: 0; }\n\n.button_btn-primary__37XqP {\n  color: #fff;\n  background-color: #489be8;\n  border-color: #1a82e2; }\n  .button_btn-primary__37XqP:hover, .button_btn-primary__37XqP:focus {\n    color: #fff;\n    background-color: #1a82e2; }\n  .button_btn-primary__37XqP:active, .button_btn-primary__37XqP.button_is-active__2PGxA {\n    box-shadow: 0 1px 4px 0 rgba(26, 130, 226, 0.2); }\n  .button_btn-primary__37XqP.button_has-badge__1gtFd .button_badge__2OEGB {\n    color: #1a82e2;\n    background-color: #fff; }\n\n.button_btn-secondary__1Fno9 {\n  color: #1a82e2;\n  background-color: #fff;\n  border-color: #489be8; }\n  .button_btn-secondary__1Fno9:hover, .button_btn-secondary__1Fno9:focus {\n    color: #1a82e2;\n    background-color: #e8f2fc; }\n  .button_btn-secondary__1Fno9:active, .button_btn-secondary__1Fno9.button_is-active__2PGxA {\n    box-shadow: 0 1px 4px 0 rgba(26, 130, 226, 0.2); }\n  .button_btn-secondary__1Fno9.button_has-badge__1gtFd .button_badge__2OEGB {\n    color: #fff;\n    background-color: #1a82e2; }\n\n.button_btn-danger__2_ioi {\n  color: #fff;\n  background-color: rgba(183, 28, 28, 0.8);\n  border-color: #b71c1c; }\n  .button_btn-danger__2_ioi:hover, .button_btn-danger__2_ioi:focus {\n    color: #fff;\n    background-color: #b71c1c; }\n  .button_btn-danger__2_ioi:active, .button_btn-danger__2_ioi.button_is-active__2PGxA {\n    box-shadow: 0 1px 4px 0 rgba(26, 130, 226, 0.2);\n    color: #fff; }\n  .button_btn-danger__2_ioi.button_has-badge__1gtFd .button_badge__2OEGB {\n    color: #b71c1c;\n    background-color: #fff; }\n\n.button_btn-small__b5WtH {\n  padding: 6px 18px; }\n\n.button_btn-dropdown__3ytGn {\n  padding-right: 30px;\n  padding-left: 18px; }\n  .button_btn-dropdown__3ytGn::before {\n    font-family: \"styleguideicons\";\n    font-size: 16px;\n    font-style: normal;\n    font-weight: normal;\n    line-height: 1;\n    text-transform: none;\n    speak: none;\n    -webkit-font-smoothing: antialiased;\n    -moz-osx-font-smoothing: grayscale;\n    position: absolute;\n    top: 12px;\n    right: 13px;\n    color: inherit;\n    content: \"\\E900\"; }\n  .button_btn-dropdown__3ytGn.button_btn-small__b5WtH {\n    padding-right: 30px;\n    padding-left: 20px; }\n    .button_btn-dropdown__3ytGn.button_btn-small__b5WtH::before {\n      top: 7px;\n      right: 10px; }\n    .button_btn-dropdown__3ytGn.button_btn-small__b5WtH.button_btn-dropdown-gear__1QfAc {\n      padding: 0 15px 0 10px; }\n    .button_btn-dropdown__3ytGn.button_btn-small__b5WtH.button_btn-dropdown-gear__1QfAc::before {\n      top: 3px;\n      right: 1px; }\n\n.button_btn-dropdown-gear__1QfAc {\n  border: 0; }\n  .button_btn-dropdown-gear__1QfAc.button_is-active__2PGxA > .button_sg-icon__uoOaW {\n    transform: rotate(135deg); }\n  .button_btn-dropdown-gear__1QfAc::before {\n    top: 14px;\n    font-size: 16px;\n    color: #7f90a0; }\n  .button_btn-dropdown-gear__1QfAc.button_btn-primary__37XqP::before,\n  .button_btn-dropdown-gear__1QfAc.button_btn-primary__37XqP > .button_sg-icon__uoOaW {\n    color: #fff; }\n  .button_btn-dropdown-gear__1QfAc > .button_sg-icon__uoOaW {\n    display: block;\n    font-size: 18px;\n    color: #7f90a0;\n    transition: transform 0.5s; }\n\n.button_btn-on-dark__1tXzr.button_btn-secondary__1Fno9 {\n  color: #fff;\n  background-color: transparent;\n  border-color: rgba(255, 255, 255, 0.6); }\n  .button_btn-on-dark__1tXzr.button_btn-secondary__1Fno9:hover, .button_btn-on-dark__1tXzr.button_btn-secondary__1Fno9:focus {\n    background-color: rgba(255, 255, 255, 0.1);\n    border-color: #fff; }\n  .button_btn-on-dark__1tXzr.button_btn-secondary__1Fno9.button_is-disabled__WiXru {\n    color: #9e9e9e;\n    background-color: transparent;\n    border-color: #9e9e9e; }\n    .button_btn-on-dark__1tXzr.button_btn-secondary__1Fno9.button_is-disabled__WiXru:hover, .button_btn-on-dark__1tXzr.button_btn-secondary__1Fno9.button_is-disabled__WiXru:focus {\n      background-color: inherit; }\n  .button_btn-on-dark__1tXzr.button_btn-secondary__1Fno9.button_has-badge__1gtFd .button_badge__2OEGB {\n    color: #294661;\n    background-color: #fff; }\n\n.button_btn-group__1I1p8 {\n  display: inline-block; }\n  .button_btn-group__1I1p8 > .button_btn-group-item__3Gtel {\n    float: left;\n    padding-right: 18px;\n    padding-left: 18px;\n    margin: 0;\n    color: #1a82e2;\n    background-color: #fff;\n    border-color: rgba(26, 130, 226, 0.8); }\n    .button_btn-group__1I1p8 > .button_btn-group-item__3Gtel:hover, .button_btn-group__1I1p8 > .button_btn-group-item__3Gtel:focus {\n      background-color: rgba(26, 130, 226, 0.1); }\n    .button_btn-group__1I1p8 > .button_btn-group-item__3Gtel:active {\n      box-shadow: 0 1px 4px 0 rgba(26, 130, 226, 0.2); }\n    .button_btn-group__1I1p8 > .button_btn-group-item__3Gtel:first-child {\n      border-top-right-radius: 0;\n      border-bottom-right-radius: 0; }\n    .button_btn-group__1I1p8 > .button_btn-group-item__3Gtel:last-child {\n      margin-left: -1px;\n      border-bottom-right-radius: 0;\n      border-top-left-radius: 0; }\n    .button_btn-group__1I1p8 > .button_btn-group-item__3Gtel:not(:first-child):not(:last-child) {\n      margin-left: -1px;\n      border-radius: 0; }\n    .button_btn-group__1I1p8 > .button_btn-group-item__3Gtel.button_is-active__2PGxA {\n      color: #fff;\n      background-color: #489be8;\n      border-color: #1a82e2; }\n\n.button_btn-group-stacked__3AAIB .button_btn-group-item__3Gtel {\n  display: block;\n  width: 100%;\n  margin: 10px 0; }\n";
+var Styles = {"btn-test":"button_btn-test__M9BqG","is-disabled":"button_is-disabled__WiXru","btn-secondary":"button_btn-secondary__1Fno9","btn-danger":"button_btn-danger__2_ioi","has-icon":"button_has-icon__2WYBp","btn-with-icon":"button_btn-with-icon__1_3Kv","has-badge":"button_has-badge__1gtFd","is-loading":"button_is-loading__3jYvv","sg-icon":"button_sg-icon__uoOaW","sg-loader":"button_sg-loader__TcJYi","badge":"button_badge__2OEGB","btn-primary":"button_btn-primary__37XqP","is-active":"button_is-active__2PGxA","btn-small":"button_btn-small__b5WtH","btn-dropdown":"button_btn-dropdown__3ytGn","btn-dropdown-gear":"button_btn-dropdown-gear__1QfAc","btn-on-dark":"button_btn-on-dark__1tXzr","btn-group":"button_btn-group__1I1p8","btn-group-item":"button_btn-group-item__3Gtel","btn-group-stacked":"button_btn-group-stacked__3AAIB"};
+styleInject(css);
+
+var lightStyle = { color: 'white' };
+var Icon = function (_a) {
+    var type = _a.type, className = _a.className, handleClick = _a.onClick, onDark = _a.onDark;
+    return (React__default.createElement("i", { className: classNames('sg-icon', "sg-icon-" + type, (_b = {}, _b[className] = !!className, _b)), onClick: handleClick, style: onDark ? lightStyle : null }));
+    var _b;
+};
+Icon.defaultProps = {
+    className: '',
+    onDark: false,
+};
+
+var Loader = function (_a) {
+    var onDark = _a.onDark, large = _a.large, small = _a.small, centered = _a.centered;
+    var size = 10;
+    if (large) {
+        size *= 2;
+    }
+    if (small) {
+        size /= 2;
+    }
+    return (React__default.createElement("svg", { className: classNames('sg-loader', {
+            'is-centered': centered,
+            'is-large': large,
+            'is-small': small,
+            'loader-on-dark': onDark,
+        }) },
+        React__default.createElement("rect", { className: "logo-square bottom-left", width: size, height: size }),
+        React__default.createElement("rect", { className: "logo-square bottom-middle", width: size, height: size }),
+        React__default.createElement("rect", { className: "logo-square middle", width: size, height: size }),
+        React__default.createElement("rect", { className: "logo-square top-middle", width: size, height: size }),
+        React__default.createElement("rect", { className: "logo-square top-right", width: size, height: size }),
+        React__default.createElement("rect", { className: "logo-square middle-left", width: size, height: size }),
+        React__default.createElement("rect", { className: "logo-square middle-right", width: size, height: size })));
+};
+Loader.defaultProps = {
+    centered: false,
+    large: false,
+    onDark: false,
+    small: false,
+};
+
+/* tslint:disable:one-variable-per-declaration */
+var Button = function (props) {
+    return (React__default.createElement(Buttonized, __assign({}, props),
+        React__default.createElement("button", null, props.children)));
+};
+var Buttonized = function (_a) {
+    var children = _a.children, type = _a.type, badge = _a.badge, disabled = _a.disabled, loading = _a.loading, small = _a.small, onDark = _a.onDark, onClick = _a.onClick, group = _a.group, active = _a.active, icon = _a.icon, id = _a.id;
+    var hasBadge = !!badge || badge === 0;
+    var hasIcon = !!icon;
+    var content = [];
+    if (hasBadge) {
+        content.push(React__default.createElement(Badge, { key: 1 }, badge));
+    }
+    if (hasIcon) {
+        content.push(React__default.createElement(Icon, { key: 2, type: icon }));
+    }
+    if (loading) {
+        content.push(React__default.createElement(Loader, { key: 3, small: true, onDark: type === 'primary' }));
+    }
+    // the children of the element being buttonized
+    if (children.props.children) {
+        content.push(children.props.children);
+    }
+    return (React__default.cloneElement(children, {
+        className: classNames(Styles['btn-test'], Styles["btn-" + type], (_b = {}, _b[Styles['btn-on-dark']] = onDark, _b[Styles['btn-small']] = small, _b[Styles['has-badge']] = hasBadge, _b[Styles['has-icon']] = hasIcon || loading, _b[Styles['is-active']] = active, _b[Styles['is-disabled']] = disabled, _b[Styles['is-loading']] = loading, _b)),
+        id: id,
+        onClick: onClick,
+    }, content));
+    var _b;
+};
+Button.defaultProps = {
+    active: false,
+    badge: null,
+    children: '',
+    disabled: false,
+    group: false,
+    icon: null,
+    loading: false,
+    onClick: function () { },
+    onDark: false,
+    small: false,
+    type: 'primary',
+};
+
+var map = React__default.Children.map;
+var ButtonList = function (_a) {
+    var children = _a.children, onDark = _a.onDark;
+    return (React__default.createElement("div", { className: "btn-list" }, map(children, function (button) {
+        return button && React__default.cloneElement(button, { onDark: onDark });
+    })));
+};
+ButtonList.defaultProps = {
+    onDark: false,
+};
+
 var filterControlStyle = {
     display: 'flex',
     justifyContent: 'space-between',
@@ -40,9 +1353,7 @@ var FilterableList = /** @class */ (function (_super) {
         _this.handlers = {};
         _this.handleFilterChange = function (filterName, event) {
             var value = event.target.value;
-            _this.setState((_a = {},
-                _a[filterName] = value,
-                _a), _this.props.onChange);
+            _this.setState((_a = {}, _a[filterName] = value, _a), _this.props.onChange);
             var _a;
         };
         _this.handleClear = function (event) {
@@ -59,7 +1370,7 @@ var FilterableList = /** @class */ (function (_super) {
             var name_1 = _a[_i];
             if (name_1) {
                 _this.state[name_1] = '';
-                _this.handlers["handleFilter" + capitalize(name_1) + "Change"] = _this.handleFilterChange.bind(_this, name_1);
+                _this.handlers["handleFilter" + capitalize_1(name_1) + "Change"] = _this.handleFilterChange.bind(_this, name_1);
             }
             else {
                 _this.state.value = '';
@@ -75,10 +1386,10 @@ var FilterableList = /** @class */ (function (_super) {
                 return _super !== null && _super.apply(this, arguments) || this;
             }
             FilterableListContainer.prototype.render = function () {
-                return React.createElement(FilterableList, __assign({}, props, { items: this.props.items }));
+                return React__default.createElement(FilterableList, __assign({}, props, { items: this.props.items }));
             };
             return FilterableListContainer;
-        }(PureComponent));
+        }(React.PureComponent));
     };
     Object.defineProperty(FilterableList.prototype, "filteredItems", {
         get: function () {
@@ -87,7 +1398,7 @@ var FilterableList = /** @class */ (function (_super) {
             if (onFilter) {
                 return onFilter(items, this.state);
             }
-            var filters = values(this.state)
+            var filters = values_1(this.state)
                 .join()
                 .toLowerCase();
             var includesFilters = function (value) {
@@ -100,9 +1411,9 @@ var FilterableList = /** @class */ (function (_super) {
                 if (typeof item === 'string') {
                     return includesFilters(item);
                 }
-                return values(item)
+                return values_1(item)
                     .map(includesFilters)
-                    .some(identity);
+                    .some(identity_1);
             });
         },
         enumerable: true,
@@ -110,8 +1421,8 @@ var FilterableList = /** @class */ (function (_super) {
     });
     Object.defineProperty(FilterableList.prototype, "clearButton", {
         get: function () {
-            return (React.createElement(ButtonList, { style: inlineClearButtonStyle },
-                React.createElement(Button, { small: true, type: "secondary", onClick: this.handleClear }, this.props.clearButtonLabel)));
+            return (React__default.createElement(ButtonList, { style: inlineClearButtonStyle },
+                React__default.createElement(Button, { small: true, type: "secondary", onClick: this.handleClear }, this.props.clearButtonLabel)));
         },
         enumerable: true,
         configurable: true
@@ -132,15 +1443,15 @@ var FilterableList = /** @class */ (function (_super) {
     });
     FilterableList.prototype.render = function () {
         var _a = this.props, clearButtonLabel = _a.clearButtonLabel, title = _a.title, showClearButton = _a.showClearButton, renderControls = _a.renderControls, renderItems = _a.renderItems;
-        return (React.createElement("section", { className: "FilterableList" },
-            React.createElement("div", { className: "filter-wrap" },
-                React.createElement("div", { className: "filter-header" },
-                    React.createElement("p", { className: "filter-title" }, title),
+        return (React__default.createElement("section", { className: "FilterableList" },
+            React__default.createElement("div", { className: "filter-wrap" },
+                React__default.createElement("div", { className: "filter-header" },
+                    React__default.createElement("p", { className: "filter-title" }, title),
                     this.showClearButtonInHeader && this.clearButton),
-                React.createElement("div", { className: "filter-list", style: filterControlStyle },
+                React__default.createElement("div", { className: "filter-list", style: filterControlStyle },
                     renderControls(__assign({}, this.state, this.handlers), this.handleFilterChange),
                     this.showClearButtonInline && this.clearButton)),
-            React.createElement("div", { className: "FilterableListItems" }, renderItems(this.filteredItems))));
+            React__default.createElement("div", { className: "FilterableListItems" }, renderItems(this.filteredItems))));
     };
     FilterableList.defaultProps = {
         clearButtonInHeader: false,
@@ -149,7 +1460,12 @@ var FilterableList = /** @class */ (function (_super) {
         showClearButton: false,
     };
     return FilterableList;
-}(PureComponent));
-export { FilterableList };
-export default FilterableList;
+}(React.PureComponent));
+
+exports.FilterableList = FilterableList;
+exports.default = FilterableList;
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+})));
 //# sourceMappingURL=filterable-list.js.map
