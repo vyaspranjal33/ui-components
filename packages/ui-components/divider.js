@@ -3,6 +3,7 @@ import cn from './utilities/classnames';
 export var Divider = function (_a) {
     var label = _a.label, thin = _a.thin;
     return (React.createElement("hr", { className: cn({
+            'has-label': !!label,
             'is-thin': thin,
         }), "data-label": label }));
 };

@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.12.7
+- Fix divider w/ label component
+
 ## 0.12.4
 - Add fragment loader component
 
