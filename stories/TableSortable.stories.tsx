@@ -96,7 +96,7 @@ const ColumnRenderer = ({
   name: any;
   dataKey: string;
   onClick: () => void;
-  sort?: (any) => any[];
+  sort?: () => any[];
   ascending?: boolean;
   sortBy: string;
 }) => (
