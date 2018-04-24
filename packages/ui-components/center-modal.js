@@ -9,6 +9,7 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import cn from './utilities/classnames';
 import { modalWillReceiveProps, } from './utilities/modals';
 var evaluateRenderProp = function (prop) {
@@ -24,7 +25,7 @@ var CenterModal = /** @class */ (function (_super) {
     };
     CenterModal.prototype.render = function () {
         // Using <> instead of <Fragment> is breaking the linter.
-        return (React.createElement(Fragment, null,
+        return ReactDOM.createPortal(React.createElement(Fragment, null,
             React.createElement("div", { className: cn('center-modal', { 'is-visible': this.props.open, 'is-large': this.props.large }) },
                 this.props.hasX &&
                     (React.createElement("i", { className: "sg-icon sg-icon-x", "data-role": "close-center-modal", onClick: this.props.onClose })),
@@ -32,12 +33,13 @@ var CenterModal = /** @class */ (function (_super) {
                 evaluateRenderProp(this.props.renderBody),
                 this.props.renderFooter &&
                     (React.createElement("div", { className: "modal-footer" }, evaluateRenderProp(this.props.renderFooter)))),
-            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.open }), onClick: this.props.onClose })));
+            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.open }), onClick: this.props.onClose })), this.props.modalContainer);
     };
     CenterModal.defaultProps = {
         bodyNode: document.body,
         hasX: false,
         large: false,
+        modalContainer: document.body,
     };
     return CenterModal;
 }(Component));
