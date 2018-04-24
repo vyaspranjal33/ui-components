@@ -2,8 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Button from '../src/components/Button';
-import ButtonList from '../src/components/ButtonList';
+import Button from '../src/button';
+import ButtonList from '../src/button-list';
 
 const stories = storiesOf('Button List', module);
 

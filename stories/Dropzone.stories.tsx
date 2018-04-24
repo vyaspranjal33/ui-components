@@ -2,8 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Alert from '../src/components/Alert';
-import Dropzone from '../src/components/Dropzone';
+import Alert from '../src/alert';
+import Dropzone from '../src/dropzone';
 
 const stories = storiesOf('Dropzone', module);
 

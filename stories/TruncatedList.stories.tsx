@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { TruncatedList } from '../src/components/TruncatedList';
+import { TruncatedList } from '../src/truncated-list';
 
 const stories = storiesOf('Truncated List', module);
 const singleItemList = ['Boromir'];

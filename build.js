@@ -6,7 +6,7 @@ const rollup = require('rollup');
 const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 const json = require('rollup-plugin-json');
-const typescriptPlugin = require('rollup-plugin-typescript');
+const typescriptPlugin = require('rollup-plugin-typescript2');
 const typescript = require('typescript');
 const glob = require('glob');
 const { paramCase } = require('change-case');
@@ -88,4 +88,12 @@ const outputOptions = {
       file: `packages/ui-components/${fileName}.js`,
     });
   }
+
+  glob('packages/ui-components/components/**/*.d.ts', (error, files) => {
+    for (const file of files) {
+      const fileName = paramCase(path.parse(file).name).replace('-d', '.d');
+      fs.createReadStream(file)
+        .pipe(fs.createWriteStream(`packages/ui-components/${fileName}.ts`));
+    }
+  })
 })();

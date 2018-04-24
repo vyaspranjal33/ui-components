@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { NumberedStep, NumberedSteps } from '../src/components/NumberedSteps';
+import { NumberedStep, NumberedSteps } from '../src/numbered-steps';
 
 const stories = storiesOf('NumberedSteps', module);
 

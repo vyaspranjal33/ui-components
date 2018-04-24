@@ -5,8 +5,8 @@ import { storiesOf } from '@storybook/react';
 import values from 'lodash/values';
 import React from 'react';
 
-import FilterableList from '../src/components/FilterableList';
-import { TextInput } from '../src/components/TextInput';
+import FilterableList from '../src/filterable-list';
+import { TextInput } from '../src/text-input';
 
 const stories = storiesOf('FilterableList', module);
 

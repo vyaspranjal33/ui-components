@@ -2,10 +2,10 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Alert from '../src/components/Alert';
-import Button from '../src/components/Button';
-import { Radio, RadioGroup } from '../src/components/Radio';
-import { SegmentTerm } from '../src/components/SegmentTerm';
+import Alert from '../src/alert';
+import Button from '../src/button';
+import { Radio, RadioGroup } from '../src/radio';
+import { SegmentTerm } from '../src/segment-term';
 
 const stories = storiesOf('Segment Term', module);
 const onAddButtonClick = action('add button click');

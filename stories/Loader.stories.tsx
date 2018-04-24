@@ -2,8 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Loader from '../src/components/Loader';
-import FragmentLoader from '../src/components/FragmentLoader';
+import FragmentLoader from '../src/fragment-loader';
+import Loader from '../src/loader';
 
 const loaderStories = storiesOf('Loaders', module);
 

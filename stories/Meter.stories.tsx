@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Meter from '../src/components/Meter';
+import Meter from '../src/meter';
 
 const stories = storiesOf('Meter', module);
 

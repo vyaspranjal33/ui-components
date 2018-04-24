@@ -2,9 +2,9 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Action, Actions } from '../src/components/Actions';
-import Button from '../src/components/Button';
-import Card from '../src/components/Card';
+import { Action, Actions } from '../src/actions';
+import Button from '../src/button';
+import Card from '../src/card';
 
 const stories = storiesOf('Card', module);
 

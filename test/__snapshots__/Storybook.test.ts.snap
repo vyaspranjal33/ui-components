@@ -1476,7 +1476,7 @@ exports[`Storyshots Divider Divider (Thin) 1`] = `
 
 exports[`Storyshots Divider Divider (with Label) 1`] = `
 <hr
-  className=""
+  className="has-label"
   data-label="Very Important"
 />
 `;
