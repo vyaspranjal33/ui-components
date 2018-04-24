@@ -38,7 +38,7 @@ var getRenderedTextInput = function (value) {
     var children = this.props.children || '';
     return (React.createElement("div", { className: classes, style: this.inputStyle },
         React.createElement("label", { className: "input-text-label", htmlFor: this.props.id }, this.props.label),
-        React.createElement("input", { id: this.props.id, value: this.props.value, type: this.props.type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }),
+        React.createElement("input", { id: this.props.id, value: this.props.value, name: this.props.name, type: this.props.type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }),
         this.props.info && (React.createElement("span", { className: cn('input-info', {
                 danger: !this.props.isValid,
             }), id: infoId }, this.props.info)),
