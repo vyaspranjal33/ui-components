@@ -10,7 +10,7 @@ var __extends = (this && this.__extends) || (function () {
 })();
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Icon } from './Icon';
+import { Icon } from './icon';
 import cn from './utilities/classnames';
 import { modalWillReceiveProps, } from './utilities/modals';
 var evaluateRenderProp = function (prop) {

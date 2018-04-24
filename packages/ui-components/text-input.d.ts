@@ -7,6 +7,7 @@ export interface TextInputProps {
     id: string;
     onChange: (event: any, value: string | number) => void;
     value?: string | number;
+    name?: string;
     fullWidth?: boolean;
     isValid?: boolean;
     isRequired?: boolean;

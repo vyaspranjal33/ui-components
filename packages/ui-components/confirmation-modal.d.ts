@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import React, { Component } from 'react';
-import { IconType } from './types/Icons';
+import { IconType } from './types/icons';
 import { ModalProps } from './utilities/modals';
 export interface ConfirmationModalProps extends ModalProps {
     iconType?: IconType;

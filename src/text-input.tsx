@@ -33,6 +33,7 @@ const getRenderedTextInput = function(value?: string | number) {
       <input
         id={this.props.id}
         value={this.props.value}
+        name={this.props.name}
         type={this.props.type}
         onChange={this.onValueChange}
         onFocus={this.onInputFocus}
@@ -60,6 +61,7 @@ export interface TextInputProps {
   id: string;
   onChange: (event: any, value: string | number) => void;
   value?: string | number;
+  name?: string;
   fullWidth?: boolean;
   isValid?: boolean;
   isRequired?: boolean;
