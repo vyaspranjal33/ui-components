@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { IconType } from '../types/icons';
+import { IconType } from '../types/Icons';
 import cn from '../utilities/classnames';
 import {
   ModalProps,
   modalWillReceiveProps,
 } from '../utilities/modals';
-import { Icon } from './icon';
+import { Icon } from './Icon';
 
 interface ConfirmationModalProps extends ModalProps {
   renderActions: string | (() => React.ReactNode);

@@ -23,6 +23,7 @@ class ExampleContainer extends Component<any, { isOpen: boolean }> {
       <div>
         <Button type="primary" onClick={this.open}>Open Modal</Button>
         <ConfirmationModal
+          iconType={this.props.iconType}
           isOpen={this.state.isOpen}
           renderActions={() => (
             <Fragment>
@@ -40,6 +41,13 @@ class ExampleContainer extends Component<any, { isOpen: boolean }> {
 
 stories.add('ConfirmationModal with plain contents', () => (
   <ExampleContainer
+    renderHeader="Very cool! 😍"
+    renderBody="This will make a thing happen."
+  />
+));
+stories.add('ConfirmationModal with icon', () => (
+  <ExampleContainer
+    iconType="trash"
     renderHeader="Very cool! 😍"
     renderBody="This will make a thing happen."
   />
