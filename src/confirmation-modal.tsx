@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Icon } from './Icon';
-import { IconType } from './types/Icons';
+import { Icon } from './icon';
+import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 import {
   ModalProps,
