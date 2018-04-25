@@ -3,9 +3,9 @@ import Alert from './alert';
 import {
   Button,
   Buttonized,
-} from './Button';
-import Icon from './Icon';
-import { Statistic, Statistics } from './Statistics';
+} from './button';
+import Icon from './icon';
+import { Statistic, Statistics } from './statistics';
 import cn from './utilities/classnames';
 import findActiveIndex from './utilities/find-active-index';
 interface EmailCardSendTimeProps {

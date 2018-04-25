@@ -1,12 +1,12 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import Alert from '../src/components/Alert';
-import Button from '../src/components/Button';
+import Alert from '../src/alert';
+import Button from '../src/button';
 import {
   EmailCard,
   EmailCardAddButton,
-} from '../src/components/EmailCard';
+} from '../src/email-card';
 const loaderStories = storiesOf('EmailCard', module);
 
 const statistics = [
