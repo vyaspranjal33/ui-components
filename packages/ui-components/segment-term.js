@@ -20,8 +20,8 @@ var SegmentTerm = /** @class */ (function (_super) {
     }
     Object.defineProperty(SegmentTerm.prototype, "termControls", {
         get: function () {
-            var _a = this.props, isEditable = _a.isEditable, isEditing = _a.isEditing, onCancel = _a.onCancel, onConfirm = _a.onConfirm, showConfirm = _a.showConfirm;
-            if (isEditing) {
+            var _a = this.props, editable = _a.editable, editing = _a.editing, onCancel = _a.onCancel, onConfirm = _a.onConfirm, showConfirm = _a.showConfirm;
+            if (editing) {
                 return (React.createElement(ButtonList, null,
                     showConfirm &&
                         React.createElement(Button, { type: "secondary", small: true, onClick: onConfirm },
@@ -30,7 +30,7 @@ var SegmentTerm = /** @class */ (function (_super) {
                         React.createElement(Button, { type: "danger", small: true, onClick: onCancel },
                             React.createElement(Icon, { type: "x" }))));
             }
-            if (isEditable) {
+            if (editable) {
                 return React.createElement(Icon, { type: "pencil", className: "segment-term-edit" });
             }
             return null;
@@ -39,17 +39,17 @@ var SegmentTerm = /** @class */ (function (_super) {
         configurable: true
     });
     SegmentTerm.prototype.render = function () {
-        var _a = this.props, hasAddButton = _a.hasAddButton, hasSeparator = _a.hasSeparator, isEditable = _a.isEditable, isEditing = _a.isEditing, label = _a.label, onAddButtonClick = _a.onAddButtonClick, onEdit = _a.onEdit, queryName = _a.queryName, radios = _a.radios, renderAlert = _a.renderAlert, renderInputs = _a.renderInputs, title = _a.title;
+        var _a = this.props, hasAddButton = _a.hasAddButton, hasSeparator = _a.hasSeparator, editable = _a.editable, editing = _a.editing, label = _a.label, onAddButtonClick = _a.onAddButtonClick, onEdit = _a.onEdit, queryName = _a.queryName, radios = _a.radios, renderAlert = _a.renderAlert, renderInputs = _a.renderInputs, title = _a.title;
         return (React.createElement("div", { className: "segment-term-wrap" },
             React.createElement("p", { className: "segment-term-title" }, title),
             React.createElement("div", { className: cn('segment-term', {
                     'has-alert': !!renderAlert,
                     'has-radios': radios,
                     'has-separator': hasSeparator,
-                    'is-editable': isEditing,
-                }), onClick: (isEditable && !isEditing) ? onEdit : undefined },
-                isEditing && renderInputs && renderInputs(),
-                !isEditing &&
+                    'is-editable': editing,
+                }), onClick: (editable && !editing) ? onEdit : undefined },
+                editing && renderInputs && renderInputs(),
+                !editing &&
                     React.createElement("p", null, label + " ",
                         React.createElement("strong", null, queryName)),
                 this.termControls,
@@ -59,10 +59,10 @@ var SegmentTerm = /** @class */ (function (_super) {
                     React.createElement(Button, { type: "secondary", icon: "plus", onClick: onAddButtonClick }, "Add Condition"))));
     };
     SegmentTerm.defaultProps = {
+        editable: false,
+        editing: false,
         hasAddButton: false,
         hasSeparator: false,
-        isEditable: false,
-        isEditing: false,
         radios: false,
     };
     return SegmentTerm;

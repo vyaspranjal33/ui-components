@@ -1,10 +1,10 @@
 /// <reference types="react" />
 import React, { PureComponent } from 'react';
 export interface SegmentTermProps {
+    editable?: boolean;
+    editing?: boolean;
     hasAddButton?: boolean;
     hasSeparator?: boolean;
-    isEditable?: boolean;
-    isEditing?: boolean;
     label?: string;
     onAddButtonClick?: (e: any) => void;
     onCancel?: (e: any) => void;
@@ -19,10 +19,10 @@ export interface SegmentTermProps {
 }
 export declare class SegmentTerm extends PureComponent<SegmentTermProps> {
     static defaultProps: {
+        editable: boolean;
+        editing: boolean;
         hasAddButton: boolean;
         hasSeparator: boolean;
-        isEditable: boolean;
-        isEditing: boolean;
         radios: boolean;
     };
     readonly termControls: React.ReactNode;

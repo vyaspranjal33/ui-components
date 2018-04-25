@@ -20,14 +20,14 @@ stories.add('Segment terms', () => (
       hasSeparator
       label="The first time a contact is added to"
       queryName="People in Los Angeles"
-      isEditable
+      editable
       onEdit={onEditClick}
     />
     <SegmentTerm
       title="Or"
       label="Every time a contact is added to"
       queryName="People in Denver"
-      isEditable
+      editable
       hasAddButton
       onAddButtonClick={onAddButtonClick}
       onEdit={onEditClick}
@@ -40,7 +40,7 @@ stories.add('Segment term which cannot be edited', () => (
     title="Entry Criteria"
     label="The first time a contact is added to"
     queryName="People in Los Angeles"
-    isEditable={false}
+    editable={false}
   />
 ));
 
@@ -49,8 +49,8 @@ stories.add('Segment term which is being edited', () => (
     title="Entry Criteria"
     hasAddButton
     hasSeparator
-    isEditable
-    isEditing
+    editable
+    editing
     onAddButtonClick={onAddButtonClick}
     onCancel={onCancelClick}
     onConfirm={onConfirmClick}
@@ -78,8 +78,8 @@ stories.add('Segment term which is being edited and is filled out', () => (
     title="Entry Criteria"
     hasAddButton
     hasSeparator
-    isEditable
-    isEditing
+    editable
+    editing
     showConfirm
     onAddButtonClick={onAddButtonClick}
     onCancel={onCancelClick}
@@ -114,7 +114,7 @@ stories.add('Segment term with alert', () => (
     hasSeparator
     label="The first time a contact is added to"
     queryName="People in Los Angeles"
-    isEditable
+    editable
     onEdit={onEditClick}
     renderAlert={() => (
       <Alert type="warning" dismissable={false}>
@@ -128,8 +128,8 @@ stories.add('Segment term with alert', () => (
 stories.add('Segment term with radio btns and alert', () => (
   <SegmentTerm
     title="Exit Criteria"
-    isEditable
-    isEditing
+    editable
+    editing
     radios
     renderInputs={() => (
       <RadioGroup name="example-grp" onChange={action('radio change')}>
