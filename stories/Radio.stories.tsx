@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 
-import { Radio, RadioGroup, StatefulRadio } from '../src/components/Radio';
+import { Radio, RadioGroup, StatefulRadio } from '../src/radio';
 
 const stories = storiesOf('Radio', module);
 const onChange = action('Radio Changed');

@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Footer from '../src/components/SmallFooter';
+import Footer from '../src/small-footer';
 
 const stories = storiesOf('Small Footer', module);
 

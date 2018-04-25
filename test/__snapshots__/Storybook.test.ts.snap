@@ -1373,65 +1373,23 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
 </div>
 `;
 
-exports[`Storyshots Checkbox Checked Checkbox 1`] = `
-<div
-  className="input-checkbox-wrap"
->
-  <input
-    defaultChecked={true}
-    disabled={undefined}
-    id="checkbox-transactional"
-    onChange={[Function]}
-    type="checkbox"
-    value="Transactional"
-  />
-  <label
-    className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
-  >
-    Transactional
-  </label>
-</div>
-`;
-
-exports[`Storyshots Checkbox Checked and Disabled Checkbox 1`] = `
-<div
-  className="input-checkbox-wrap"
->
-  <input
-    defaultChecked={true}
-    disabled={true}
-    id="checkbox-transactional"
-    onChange={[Function]}
-    type="checkbox"
-    value="Transactional"
-  />
-  <label
-    className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
-  >
-    Transactional
-  </label>
-</div>
-`;
-
 exports[`Storyshots Checkbox Disabled Checkbox 1`] = `
 <div
   className="input-checkbox-wrap"
 >
   <input
-    defaultChecked={undefined}
+    checked={false}
     disabled={true}
-    id="checkbox-transactional"
+    id="disabled-checkbox"
     onChange={[Function]}
     type="checkbox"
-    value="Transactional"
+    value={undefined}
   />
   <label
     className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
+    htmlFor="disabled-checkbox"
   >
-    Transactional
+    Marketing
   </label>
 </div>
 `;
@@ -1441,19 +1399,76 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
   className="input-checkbox-wrap"
 >
   <input
-    defaultChecked={undefined}
+    checked={false}
     disabled={undefined}
-    id="checkbox-transactional"
+    id="standard-checkbox"
     onChange={[Function]}
     type="checkbox"
-    value="Transactional"
+    value={undefined}
   />
   <label
     className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
+    htmlFor="standard-checkbox"
   >
     Transactional
   </label>
+</div>
+`;
+
+exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    id={undefined}
+    onClick={[Function]}
+  >
+    Open Modal
+  </button>
+  <div
+    className="sg-modal"
+  >
+    <div
+      className="conf-alert sg-modal-content"
+    >
+      <h2
+        className="conf-alert-header conf-alert-header-with-icon"
+      >
+        <i
+          className="sg-icon sg-icon-trash"
+          onClick={undefined}
+          style={null}
+        />
+        Very cool! 😍
+      </h2>
+      <div
+        className="conf-alert-body"
+      >
+        <p
+          className="conf-alert-text"
+        >
+          This will make a thing happen.
+        </p>
+      </div>
+      <div
+        className="conf-alert-actions"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Cancel
+        </button>
+        <button
+          className="btn btn-primary btn-small"
+          id={undefined}
+          onClick={[Function]}
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -1518,7 +1533,7 @@ exports[`Storyshots Divider Divider (Thin) 1`] = `
 
 exports[`Storyshots Divider Divider (with Label) 1`] = `
 <hr
-  className=""
+  className="has-label"
   data-label="Very Important"
 />
 `;
@@ -4676,6 +4691,7 @@ exports[`Storyshots FilterableList FilterableList 1`] = `
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -4796,6 +4812,7 @@ exports[`Storyshots FilterableList FilterableList as a Container Component 1`] =
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -4916,6 +4933,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -5058,6 +5076,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -5178,6 +5197,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -5204,6 +5224,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
         <input
           aria-describedby=""
           id="type-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -7442,6 +7463,7 @@ exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] 
   <input
     aria-describedby=""
     id="test-input-simple"
+    name="simple"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -7467,6 +7489,7 @@ exports[`Storyshots Text Input Stateless Text Input with a Value Passed as a Pro
   <input
     aria-describedby=""
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -7492,6 +7515,7 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
   <input
     aria-describedby={undefined}
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -7516,6 +7540,7 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
   <input
     aria-describedby={undefined}
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -7540,6 +7565,7 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
   <input
     aria-describedby={undefined}
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -7564,6 +7590,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
   <input
     aria-describedby="test-input-simple-info"
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -7594,6 +7621,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
   <input
     aria-describedby="test-input-simple-info"
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -7624,6 +7652,7 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
   <input
     aria-describedby="test-input-simple-info"
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -7713,6 +7742,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
     <input
       aria-describedby=""
       id="input-text-example-ccv"
+      name={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}

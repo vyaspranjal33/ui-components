@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Badge from '../src/components/Badge';
+import Badge from '../src/badge';
 
 import colors from '../src/utilities/colors';
 

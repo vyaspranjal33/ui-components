@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Progress, ProgressStage } from '../src/components/Progress';
+import { Progress, ProgressStage } from '../src/progress';
 
 const stories = storiesOf('Progress', module);
 

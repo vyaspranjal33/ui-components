@@ -3,7 +3,7 @@
     "target": "es5",
     "module": "es2015",
     "moduleResolution": "node",
-    "outDir": "./dist",
+    "outDir": "./packages/ui-components",
     "sourceMap": true,
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -11,8 +11,10 @@
     "noImplicitAny": true,
     "suppressImplicitAnyIndexErrors": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react"
+    "jsx": "react",
+    "declaration": true,
+    "declarationDir": "./packages/ui-components"
   },
   "include": ["./src/**/*"],
-  "exclude": ["./src/**/*test\.*"]
+  "exclude": ["./src/**/*.test.*"]
 }

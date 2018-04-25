@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { DropdownButton } from '../src/components/DropdownButton';
+import { DropdownButton } from '../src/dropdown-button';
 
 const stories = storiesOf('Dropdown Button', module);
 
