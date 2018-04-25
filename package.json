@@ -5,7 +5,7 @@
   "scripts": {
     "start": "yarn run storybook",
     "build": "tsc",
-    "lerna": "lerna publish",
+    "lerna": "lerna publish --registry=https://registry.npmjs.org/",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",
