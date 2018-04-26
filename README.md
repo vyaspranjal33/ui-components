@@ -76,60 +76,72 @@ This is a list of the available Components and most of the properties. [Run stor
 - [Tooltip](https://github.com/sendgrid/ui-components/blob/master/src/components/Tooltip.tsx)
 
 # Available Commands
-* Start Storybook
+
+
+Start Storybook
+
 ```
 yarn start
 ```
-* Start Storybook on port 6006
+
+Start Storybook on port 6006
+
 ```
 yarn storybook
 ```
-* Build
+
+Build
+
 ```
 yarn build
 ```
-* Run linter
+
+Run linter
+
 ```
 yarn lint
 ```
-* Try to auto fix linter issues
+
+Try to auto fix linter issues
+
 ```
 yarn lint-fix
 ```
-* Test (with coverage)
+
+Test (with coverage)
+
 ```
 yarn test
 ```
-* Update tests (retake snapshots)
+
+Update tests (retake snapshots)
+
 ```
 yarn snapshot
 ```
-* Lint & update tests
+
+Lint & update tests
+
 ```
 yarn lint-snapshot
 ```
-* Test used for Jenkins CI build (doesn't use interactive mode)
+
+Test used for Jenkins CI build (doesn't use interactive mode)
+
 ```
 yarn ci-test
 ```
-* Build Storybook
+
+Build Storybook
+
 ```
 yarn build-storybook
 ```
-* Prepublish
+
+Prepublish
+
 ```
 yarn prepublish
 ```
 # Testing
 To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report.
-
-# Contributing
-
-## Components
-If you create a new component on a feature branch, make sure to do the following
-1. Add the component to `src/components`
-2. Make sure your changes do not break ui-components by running `npm run test`
-4. Add it to the storybook by creating a story in `stories` folder
-5. Add the component export to `src/index.ts`
-6. Update the `README.md` where appropriate
-7. Make a PR detailing your changes with a [semver](#semver-versioning) Tag and get it CR'ed
