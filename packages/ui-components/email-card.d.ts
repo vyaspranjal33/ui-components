@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import React from 'react';
-import { Statistic } from './Statistics';
+import { Statistic } from './statistics';
 export interface EmailCardDetail {
     label: string;
     value: string;

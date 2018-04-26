@@ -9,9 +9,9 @@ var __extends = (this && this.__extends) || (function () {
     };
 })();
 import React from 'react';
-import { Button, Buttonized, } from './Button';
-import Icon from './Icon';
-import { Statistics } from './Statistics';
+import { Button, Buttonized, } from './button';
+import Icon from './icon';
+import { Statistics } from './statistics';
 import cn from './utilities/classnames';
 var EmailCardSendTime = function (_a) {
     var value = _a.value, renderSendTimeLink = _a.renderSendTimeLink, _b = _a.alert, alert = _b === void 0 ? '' : _b;
