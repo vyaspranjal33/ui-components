@@ -1,10 +1,11 @@
 {
   "name": "@sendgrid/ui-components-base",
-  "version": "0.13.4",
+  "version": "0.13.6",
   "description": "Resuable UI components for Sendgrid's applications.",
   "scripts": {
     "start": "yarn run storybook",
-    "build": "node build.js",
+    "declaresass": "webpack",
+    "build": "tsc && node build.js",
     "lerna": "lerna publish",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
@@ -45,7 +46,7 @@
     "@types/react-test-renderer": "^16.0.0",
     "awesome-typescript-loader": "^3.4.1",
     "change-case": "^3.0.2",
-    "css-loader": "^0.28.7",
+    "css-loader": "^0.28.11",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "extract-text-webpack-plugin": "^3.0.2",
@@ -60,6 +61,7 @@
     "rimraf": "^2.6.2",
     "rollup": "^0.55.0",
     "rollup-plugin-commonjs": "^8.2.6",
+    "rollup-plugin-copy": "^0.2.3",
     "rollup-plugin-json": "^2.3.0",
     "rollup-plugin-node-resolve": "^3.0.2",
     "rollup-plugin-postcss": "^1.6.1",
@@ -72,7 +74,8 @@
     "tslint": "^5.8.0",
     "tslint-react": "^3.2.0",
     "typescript": "^2.6.2",
-    "webpack": "^3.10.0"
+    "typings-for-css-modules-loader": "^1.7.0",
+    "webpack": "^3.11.0"
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>jestSetup.js",

@@ -1,7 +1,7 @@
 const fs = require('fs');
 const path = require('path');
 const rimraf = require('rimraf');
-
+const copy = require('rollup-plugin-copy');
 const rollup = require('rollup');
 const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
@@ -46,6 +46,10 @@ const plugins = [
   typescriptPlugin({
     typescript,
   }),
+  copy({
+    "src/styles": "packages/ui-components/styles",
+    verbose: true
+  })
 ];
 
 const inputOptions = {
@@ -59,7 +63,7 @@ const outputOptions = {
     classnames: 'classNames',
   },
   sourcemap: true,
-  format: 'umd',
+  format: 'cjs',
   exports: 'named',
 };
 
@@ -72,32 +76,6 @@ const outputOptions = {
   mainBundle.write({
     ...outputOptions,
     name: 'UI Components',
-    file: 'packages/ui-components/index.js',
+    file: 'packages/ui-components/bundledindex.js',
   });
-
-  const files = await getFiles();
-
-  for (const file of files) {
-    const component = path.parse(file).name;
-    const fileName = paramCase(component);
-
-    const componentBundle = await rollup.rollup({
-      ...inputOptions,
-      input: file,
-    });
-
-    componentBundle.write({
-      ...outputOptions,
-      name: component,
-      file: `packages/ui-components/${fileName}.js`,
-    });
-  }
-
-  glob('packages/ui-components/components/**/*.d.ts', (error, files) => {
-    for (const file of files) {
-      const fileName = paramCase(path.parse(file).name).replace('-d', '.d');
-      fs.createReadStream(file)
-        .pipe(fs.createWriteStream(`packages/ui-components/${fileName}.ts`));
-    }
-  })
 })();
