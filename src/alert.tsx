@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './alert.scss';
 import Icon from './icon';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
@@ -32,8 +33,8 @@ export const Alert: React.SFC<AlertProps> = ({
 }) => {
   return (
     <div
-      className={cn('alert', `alert-${type}`, {
-        'alert-inline': inline,
+      className={cn(Styles.alert, Styles[`alert-${type}`], {
+        [Styles['alert-inline']]: inline,
       })}
       role="alert"
     >
