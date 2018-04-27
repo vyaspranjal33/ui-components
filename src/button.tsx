@@ -5,7 +5,6 @@ import Loader from './loader';
 import Styles from './styles/button.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
-import Styles from './button.scss';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
 

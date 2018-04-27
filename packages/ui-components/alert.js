@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './icon';
+import Styles from './styles/alert.scss';
 import cn from './utilities/classnames';
 const iconFor = (type) => {
     if (type === 'success') {
@@ -8,8 +9,8 @@ const iconFor = (type) => {
     return 'warning';
 };
 export const Alert = ({ children, dismissable, icon, inline, onClick: handleClick, type, }) => {
-    return (React.createElement("div", { className: cn('alert', `alert-${type}`, {
-            'alert-inline': inline,
+    return (React.createElement("div", { className: cn(Styles.alert, Styles[`alert-${type}`], {
+            [Styles['alert-inline']]: inline,
         }), role: "alert" },
         React.createElement("p", null,
             React.createElement(Icon, { type: icon || iconFor(type) }),

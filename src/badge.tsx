@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './badge.scss';
+import Styles from './styles/badge.scss';
 import { color as validColor } from './types/color';
 import cn from './utilities/classnames';
 

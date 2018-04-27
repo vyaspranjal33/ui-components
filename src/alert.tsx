@@ -1,6 +1,6 @@
 import React from 'react';
-import Styles from './alert.scss';
 import Icon from './icon';
+import Styles from './styles/alert.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
