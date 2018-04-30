@@ -2,7 +2,7 @@ import React from 'react';
 import Badge from './badge';
 import Icon from './icon';
 import Loader from './loader';
-import Styles from './styles/button.scss';
+import Styles from './styles/button.module.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
