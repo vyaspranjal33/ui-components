@@ -1,4 +1,5 @@
 import React, { Component, Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import cn from './utilities/classnames';
 import {
   ModalProps,
@@ -8,6 +9,7 @@ import {
 export interface CenterModalProps extends ModalProps {
   hasX?: boolean;
   large?: boolean;
+  modalContainer?: Element;
   onClose: (evt: any) => void;
   open: boolean;
   renderBody: string | React.ReactNode | (() => React.ReactNode);
@@ -24,6 +26,7 @@ export class CenterModal extends Component<CenterModalProps> {
     bodyNode: document.body,
     hasX: false,
     large: false,
+    modalContainer: document.body,
   };
 
   public componentWillReceiveProps(nextProps: CenterModalProps) {
@@ -32,7 +35,7 @@ export class CenterModal extends Component<CenterModalProps> {
 
   public render() {
     // Using <> instead of <Fragment> is breaking the linter.
-    return (
+    return ReactDOM.createPortal(
       <Fragment>
         <div className={cn('center-modal', { 'is-visible': this.props.open, 'is-large': this.props.large })}>
           {
@@ -51,7 +54,7 @@ export class CenterModal extends Component<CenterModalProps> {
           onClick={this.props.onClose}
         />
       </Fragment>
-    );
+    , this.props.modalContainer);
   }
 }
 

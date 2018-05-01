@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## 0.13.4
+- Add EmailCard component
+## 0.13.3
+- Use React Portals for modals. Requires mock for jest
 ## 0.12.7
 - Fix divider w/ label component
 

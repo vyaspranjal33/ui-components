@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import ReactDOM from 'react-dom';
+import { Icon } from './icon';
+import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 import {
   ModalProps,
@@ -6,6 +9,8 @@ import {
 } from './utilities/modals';
 
 export interface ConfirmationModalProps extends ModalProps {
+  iconType?: IconType;
+  modalContainer?: Element;
   renderActions: string | (() => React.ReactNode);
   renderBody: string | (() => React.ReactNode);
   renderHeader: string | (() => React.ReactNode);
@@ -16,17 +21,24 @@ const evaluateRenderProp: (prop: string | (() => React.ReactNode)) => React.Reac
 };
 
 export class ConfirmationModal extends Component<ConfirmationModalProps> {
-  public static defaultProps: Partial<ConfirmationModalProps> = { bodyNode: document.body };
+  public static defaultProps: Partial<ConfirmationModalProps> = {
+    bodyNode: document.body,
+    modalContainer: document.body,
+  };
 
   public componentWillReceiveProps(nextProps: ConfirmationModalProps) {
     modalWillReceiveProps(nextProps, this.props);
   }
 
   public render() {
-    return (
+    return ReactDOM.createPortal(
       <div className={cn('sg-modal', { 'is-visible': this.props.isOpen })}>
         <div className="conf-alert sg-modal-content">
-          <h2 className="conf-alert-header">
+          <h2 className={cn('conf-alert-header', {'conf-alert-header-with-icon': !!this.props.iconType})}>
+            {
+              !!this.props.iconType &&
+                <Icon type={this.props.iconType} />
+            }
             {evaluateRenderProp(this.props.renderHeader)}
           </h2>
           <div className="conf-alert-body">
@@ -39,7 +51,7 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
           </div>
         </div>
       </div>
-    );
+    , this.props.modalContainer);
   }
 }
 

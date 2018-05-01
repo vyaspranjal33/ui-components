@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 {"version":3,"file":"table-header.js","sourceRoot":"","sources":["../../../src/table/table-header.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAO1B,MAAM,CAAC,MAAM,WAAW,GAAgC,CAAC,EACvD,QAAQ,EACR,SAAS,GACV,EAAE,EAAE;IACH,MAAM,CAAC,CACL,+BAAO,SAAS,EAAE,SAAS,IACxB,QAAQ,CACH,CACT,CAAC;AACJ,CAAC,CAAC;AAEF,eAAe,WAAW,CAAC"}
+=======
+{"version":3,"file":"table-header.js","sourceRoot":"","sources":["../../../src/table/table-header.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAO1B,MAAM,CAAC,IAAM,WAAW,GAAgC,UAAC,EAGxD;QAFC,sBAAQ,EACR,wBAAS;IAET,MAAM,CAAC,CACL,+BAAO,SAAS,EAAE,SAAS,IACxB,QAAQ,CACH,CACT,CAAC;AACJ,CAAC,CAAC;AAEF,eAAe,WAAW,CAAC"}
+>>>>>>> 3847efcccf5ebca2e4dc3a3fe5bf8592837f3bf0

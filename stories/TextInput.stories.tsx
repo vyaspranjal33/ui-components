@@ -90,6 +90,7 @@ stories.add('Stateless Text Input with No Value Passed In', () => (
   <TextInput
     type="text"
     label="Stateless Input"
+    name="simple"
     id="test-input-simple"
     onChange={action('Input Changed')}
     onBlur={action('onBlur Called')}
