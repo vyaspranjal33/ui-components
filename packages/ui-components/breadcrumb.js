@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './styles/breadcrumb.scss';
+import Styles from './styles/breadcrumb.module.scss';
 const { map } = React.Children;
 const mapper = (children) => (map(children, (child, i) => (child && React.createElement("li", { key: child.props.to || child.props.href },
     React.createElement(child.type, Object.assign({}, child.props))))));

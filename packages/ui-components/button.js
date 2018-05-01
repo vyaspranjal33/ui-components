@@ -2,7 +2,7 @@ import React from 'react';
 import Badge from './badge';
 import Icon from './icon';
 import Loader from './loader';
-import Styles from './styles/button.scss';
+import Styles from './styles/button.module.scss';
 import cn from './utilities/classnames';
 export const Button = (props) => {
     return (React.createElement(Buttonized, Object.assign({}, props),

@@ -1,6 +1,6 @@
 import React from 'react';
 import Icon from './icon';
-import Styles from './styles/alert.scss';
+import Styles from './styles/alert.module.scss';
 import cn from './utilities/classnames';
 const iconFor = (type) => {
     if (type === 'success') {

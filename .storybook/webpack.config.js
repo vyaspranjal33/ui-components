@@ -48,5 +48,7 @@ module.exports = function(config, env) {
   config.resolve.extensions.push('.css');
   config.resolve.extensions.push('.scss');
 
+  config.plugins = config.plugins.filter(plugin => plugin.constructor.name !== 'UglifyJsPlugin');
+
   return config;
 };
