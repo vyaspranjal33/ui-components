@@ -1,8 +1,7 @@
 import React from 'react';
-export var Statistics = function (_a) {
-    var statistics = _a.statistics, statsClassName = _a.statsClassName;
+export const Statistics = ({ statistics, statsClassName }) => {
     // This uses numbers rather than formatted strings to prepare for locale specific number formatting
-    var formatStatistic = function (amount, format) {
+    const formatStatistic = (amount, format) => {
         if (typeof amount !== 'number') {
             return '—';
         }
@@ -13,10 +12,10 @@ export var Statistics = function (_a) {
             return (amount * 100).toFixed(2) + '%';
         }
     };
-    var statisticsClassMap = ['', 'delivered', 'unique-opens', 'unique-clicks', 'unsubscribes'];
-    var statisticsElements = statistics && statistics.map(function (stat, i) {
-        var value = formatStatistic(stat.amount, stat.format);
-        var specificClass = statisticsClassMap[i] || '';
+    const statisticsClassMap = ['', 'delivered', 'unique-opens', 'unique-clicks', 'unsubscribes'];
+    const statisticsElements = statistics && statistics.map((stat, i) => {
+        const value = formatStatistic(stat.amount, stat.format);
+        const specificClass = statisticsClassMap[i] || '';
         return (React.createElement("div", { className: statsClassName, key: stat.label },
             React.createElement("p", { className: 'stat ' + specificClass }, value),
             React.createElement("p", { className: "label" }, stat.label)));

@@ -19,27 +19,14 @@ export class CenterModal extends Component {
                 evaluateRenderProp(this.props.renderBody),
                 this.props.renderFooter &&
                     (React.createElement("div", { className: "modal-footer" }, evaluateRenderProp(this.props.renderFooter)))),
-<<<<<<< HEAD
-            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.open }), onClick: this.props.onClose })));
+            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.open }), onClick: this.props.onClose })), this.props.modalContainer);
     }
 }
 CenterModal.defaultProps = {
     bodyNode: document.body,
     hasX: false,
     large: false,
+    modalContainer: document.body,
 };
-=======
-            React.createElement("div", { className: cn('modal-mask', { 'is-visible': this.props.open }), onClick: this.props.onClose })), this.props.modalContainer);
-    };
-    CenterModal.defaultProps = {
-        bodyNode: document.body,
-        hasX: false,
-        large: false,
-        modalContainer: document.body,
-    };
-    return CenterModal;
-}(Component));
-export { CenterModal };
->>>>>>> 3847efcccf5ebca2e4dc3a3fe5bf8592837f3bf0
 export default CenterModal;
 //# sourceMappingURL=center-modal.js.map
