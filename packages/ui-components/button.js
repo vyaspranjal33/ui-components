@@ -1,14 +1,26 @@
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
+/* tslint:disable:one-variable-per-declaration */
 import React from 'react';
 import Badge from './badge';
 import Icon from './icon';
 import Loader from './loader';
 import Styles from './styles/button.module.scss';
 import cn from './utilities/classnames';
+import withNativeProps from './withNativeProps';
 export const Button = (props) => {
     return (React.createElement(Buttonized, Object.assign({}, props),
         React.createElement("button", null, props.children)));
 };
-export const Buttonized = ({ children, type, badge, disabled, loading, small, onDark, onClick, group, active, icon, id, }) => {
+export const Buttonized = (_a) => {
+    var { children, type, badge, disabled, loading, small, onDark, onClick, group, active, icon, id } = _a, primitiveProps = __rest(_a, ["children", "type", "badge", "disabled", "loading", "small", "onDark", "onClick", "group", "active", "icon", "id"]);
     const hasBadge = !!badge || badge === 0;
     const hasIcon = !!icon;
     const content = [];
@@ -25,8 +37,7 @@ export const Buttonized = ({ children, type, badge, disabled, loading, small, on
     if (children.props.children) {
         content.push(children.props.children);
     }
-    return (React.cloneElement(children, {
-        className: cn(Styles.btn, Styles[`btn-${type}`], {
+    return (React.cloneElement(children, Object.assign({ className: cn(Styles.btn, Styles[`btn-${type}`], {
             [Styles['btn-on-dark']]: onDark,
             [Styles['btn-small']]: small,
             [Styles['has-badge']]: hasBadge,
@@ -34,10 +45,8 @@ export const Buttonized = ({ children, type, badge, disabled, loading, small, on
             [Styles['is-active']]: active,
             [Styles['is-disabled']]: disabled,
             [Styles['is-loading']]: loading,
-        }),
-        id,
-        onClick,
-    }, content));
+        }), id,
+        onClick }, primitiveProps), content));
 };
 Button.defaultProps = {
     active: false,
@@ -52,5 +61,5 @@ Button.defaultProps = {
     small: false,
     type: 'primary',
 };
-export default Button;
+export default withNativeProps(Button);
 //# sourceMappingURL=button.js.map

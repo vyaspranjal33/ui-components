@@ -4,6 +4,7 @@ import values from 'lodash/values';
 import React, { PureComponent } from 'react';
 import Button from './button';
 import ButtonList from './button-list';
+import Styles from './styles/filters.module.scss';
 const filterControlStyle = {
     display: 'flex',
     justifyContent: 'space-between',
@@ -86,11 +87,11 @@ export class FilterableList extends PureComponent {
     render() {
         const { clearButtonLabel, title, showClearButton, renderControls, renderItems, } = this.props;
         return (React.createElement("section", { className: "FilterableList" },
-            React.createElement("div", { className: "filter-wrap" },
-                React.createElement("div", { className: "filter-header" },
-                    React.createElement("p", { className: "filter-title" }, title),
+            React.createElement("div", { className: Styles['filter-wrap'] },
+                React.createElement("div", { className: Styles['filter-header'] },
+                    React.createElement("p", { className: Styles['filter-title'] }, title),
                     this.showClearButtonInHeader && this.clearButton),
-                React.createElement("div", { className: "filter-list", style: filterControlStyle },
+                React.createElement("div", { className: Styles['filter-list'], style: filterControlStyle },
                     renderControls(Object.assign({}, this.state, this.handlers), this.handleFilterChange),
                     this.showClearButtonInline && this.clearButton)),
             React.createElement("div", { className: "FilterableListItems" }, renderItems(this.filteredItems))));

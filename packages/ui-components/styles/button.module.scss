@@ -52,6 +52,13 @@ $btn-selectable-border-hover:  $sg-blue-40;
 $btn-selectable-border-active: $sg-blue;
 $btn-selectable-color:         $slate-80;
 
+.btn-list {
+  font-size: 0;
+
+  > .btn + .btn {
+    margin-left: 12px;
+  }
+}
 
 .btn {
   position: relative;

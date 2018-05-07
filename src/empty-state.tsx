@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './icon';
+import Styles from './styles/tables.module.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
@@ -26,7 +27,7 @@ export const EmptyState: React.SFC<EmptyStateProps> = ({
   buttons,
   header,
 }) => (
-  <div className="table-state is-empty">
+  <div className={`${Styles['table-state']} ${Styles['is-empty']}`}>
     {icon && evaluateRenderProp(icon)}
     {header && <h2>{header}</h2>}
     {children}

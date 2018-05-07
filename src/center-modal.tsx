@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import Styles from './styles/center-modal.module.scss';
 import cn from './utilities/classnames';
 import {
   ModalProps,
@@ -37,20 +38,27 @@ export class CenterModal extends Component<CenterModalProps> {
     // Using <> instead of <Fragment> is breaking the linter.
     return ReactDOM.createPortal(
       <Fragment>
-        <div className={cn('center-modal', { 'is-visible': this.props.open, 'is-large': this.props.large })}>
+        <div
+          className={cn(Styles['center-modal'],
+          { [Styles['is-visible']]: this.props.open, [Styles['is-large']]: this.props.large })}
+        >
           {
             this.props.hasX &&
-              (<i className="sg-icon sg-icon-x" data-role="close-center-modal" onClick={this.props.onClose} />)
+              (<i
+                className={`${Styles['sg-icon']} ${Styles['sg-icon-x']}`}
+                data-role="close-center-modal"
+                onClick={this.props.onClose}
+              />)
           }
           {this.props.renderHeader && <h1>{evaluateRenderProp(this.props.renderHeader)}</h1>}
           {evaluateRenderProp(this.props.renderBody)}
           {
             this.props.renderFooter &&
-              (<div className="modal-footer">{evaluateRenderProp(this.props.renderFooter)}</div>)
+              (<div className={Styles['modal-footer']}>{evaluateRenderProp(this.props.renderFooter)}</div>)
           }
         </div>
         <div
-          className={cn('modal-mask', { 'is-visible': this.props.open })}
+          className={cn(Styles['modal-mask'], { [Styles['is-visible']]: this.props.open })}
           onClick={this.props.onClose}
         />
       </Fragment>

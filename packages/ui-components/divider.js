@@ -1,9 +1,10 @@
 import React from 'react';
+import Styles from './styles/hr.module.scss';
 import cn from './utilities/classnames';
 export const Divider = ({ label, thin }) => {
     return (React.createElement("hr", { className: cn({
-            'has-label': !!label,
-            'is-thin': thin,
+            [Styles['has-label']]: !!label,
+            [Styles['is-thin']]: thin,
         }), "data-label": label }));
 };
 Divider.defaultProps = {

@@ -6,8 +6,11 @@ import {
 } from './button';
 import Icon from './icon';
 import { Statistic, Statistics } from './statistics';
+import BtnStyles from './styles/button.module.scss';
+import Styles from './styles/email-card.module.scss';
 import cn from './utilities/classnames';
 import findActiveIndex from './utilities/find-active-index';
+
 interface EmailCardSendTimeProps {
   value?: string;
   renderSendTimeLink?: (value: string) => any;
@@ -16,7 +19,7 @@ interface EmailCardSendTimeProps {
 
 const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({ value, renderSendTimeLink, alert = '' }) => {
   return (
-    <div className={cn('email-card-send-time', { 'has-value': !!value })}>
+    <div className={cn(Styles['email-card-send-time'], { [Styles['has-value']]: !!value })}>
       <Buttonized type="secondary">
           {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
@@ -34,14 +37,14 @@ const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details 
   const rows = details && details.map((detail) => {
     return (
       <tr key={detail.label}>
-        <td className="label">{detail.label}</td>
+        <td className={Styles.label}>{detail.label}</td>
         <td>{detail.renderEditDetailLink && detail.renderEditDetailLink(detail.value) || detail.value}</td>
       </tr>
     );
   });
 
   return (
-    <div className="email-card-details">
+    <div className={Styles['email-card-details']}>
       <table>
         <tbody>
           {rows}
@@ -57,12 +60,12 @@ export interface EmailCardContentProps {
 }
 
 const EmailCardContent: React.SFC<EmailCardContentProps> = ({ thumbnailUrl, onContentEditClick }) => (
-  <div className="email-card-content">
+  <div className={Styles['email-card-content']}>
     {
       thumbnailUrl ?
         <a href="#">
           <img src={thumbnailUrl} onClick={onContentEditClick} />
-          <span className="email-card-content-edit">
+          <span className={Styles['email-card-content-edit']}>
             <Icon type="pencil" />
             Edit
           </span>
@@ -81,7 +84,7 @@ export interface EmailCardAddButtonProps {
 
 export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick }) => {
   return (
-    <div className="btn-list email-card-add">
+    <div className={`${BtnStyles['btn-list']} ${Styles['email-card-add']}`}>
       <Button type="secondary" onClick={onClick}>
         Add an Email
       </Button>
@@ -118,11 +121,11 @@ export class EmailCard extends React.Component<EmailCardProps> {
     const alertEl = this.props.renderAlert && this.props.renderAlert();
     return (
       <div
-        className={cn('email-card-wrap', {
-          'has-alert': !!this.props.renderAlert,
-          'is-editable': this.props.editable,
-          'is-live': this.props.live,
-          'is-paused': this.props.paused,
+        className={cn(Styles['email-card-wrap'], {
+          [Styles['has-alert']]: !!this.props.renderAlert,
+          [Styles['is-editable']]: this.props.editable,
+          [Styles['is-live']]: this.props.live,
+          [Styles['is-paused']]: this.props.paused,
         })}
       >
         <EmailCardSendTime
@@ -131,8 +134,8 @@ export class EmailCard extends React.Component<EmailCardProps> {
           alert={alertEl}
         />
         <Statistics statsClassName="email-stats" statistics={this.props.statistics}/>
-        <div className="email-card">
-          <div className="email-card-count">
+        <div className={Styles['email-card']}>
+          <div className={Styles['email-card-count']}>
             <p>Email {this.props.n}</p>
           </div>
           <EmailCardContent thumbnailUrl={this.props.thumbnailUrl} onContentEditClick={this.props.onContentEditClick} />

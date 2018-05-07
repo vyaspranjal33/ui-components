@@ -5,6 +5,7 @@ import values from 'lodash/values';
 import React, { PureComponent, ReactElement } from 'react';
 import Button from './button';
 import ButtonList from './button-list';
+import Styles from './styles/filters.module.scss';
 import { TextInput } from './text-input';
 
 const filterControlStyle = {
@@ -154,12 +155,12 @@ export class FilterableList extends PureComponent<
 
     return (
       <section className="FilterableList">
-        <div className="filter-wrap">
-          <div className="filter-header">
-            <p className="filter-title">{title}</p>
+        <div className={Styles['filter-wrap']}>
+          <div className={Styles['filter-header']}>
+            <p className={Styles['filter-title']}>{title}</p>
             {this.showClearButtonInHeader && this.clearButton}
           </div>
-          <div className="filter-list" style={filterControlStyle}>
+          <div className={Styles['filter-list']} style={filterControlStyle}>
             {renderControls({ ...this.state, ...this.handlers }, this.handleFilterChange)}
             {this.showClearButtonInline && this.clearButton}
           </div>

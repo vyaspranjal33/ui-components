@@ -1,0 +1,1 @@
+{"version":3,"file":"withNativeProps.js","sourceRoot":"","sources":["../../src/withNativeProps.tsx"],"names":[],"mappings":"AAAA,OAAO,KAAK,MAAM,OAAO,CAAC;AAE1B,yCAAyC;AACzC,MAAM,eAAe,GAAG,CAAC,UAAe,EAAE,EAAE;IAC1C,MAAM,CAAC,CAAC,KAAU,EAAE,EAAE;QACpB,MAAM,CAAC,CACL,oBAAC,UAAU,oBAAK,KAAK,EAAI,CAC1B,CAAC;IACJ,CAAC,CAAC;AACJ,CAAC,CAAC;AAEF,eAAe,eAAe,CAAC"}

@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/hr.module.scss';
 import cn from './utilities/classnames';
 
 export interface DividerProps {
@@ -10,8 +11,8 @@ export const Divider: React.SFC<DividerProps> = ({ label, thin }) => {
   return (
     <hr
       className={cn({
-        'has-label': !!label,
-        'is-thin': thin,
+        [Styles['has-label']]: !!label,
+        [Styles['is-thin']]: thin,
       })}
       data-label={label}
     />

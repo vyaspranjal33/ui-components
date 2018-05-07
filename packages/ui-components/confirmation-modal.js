@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Icon } from './icon';
+import Styles from './styles/confirmation-modal.module.scss';
 import cn from './utilities/classnames';
 import { modalWillReceiveProps, } from './utilities/modals';
 const evaluateRenderProp = (prop) => {
@@ -11,15 +12,15 @@ export class ConfirmationModal extends Component {
         modalWillReceiveProps(nextProps, this.props);
     }
     render() {
-        return ReactDOM.createPortal(React.createElement("div", { className: cn('sg-modal', { 'is-visible': this.props.isOpen }) },
-            React.createElement("div", { className: "conf-alert sg-modal-content" },
-                React.createElement("h2", { className: cn('conf-alert-header', { 'conf-alert-header-with-icon': !!this.props.iconType }) },
+        return ReactDOM.createPortal(React.createElement("div", { className: cn(Styles['sg-modal'], { [Styles['is-visible']]: this.props.isOpen }) },
+            React.createElement("div", { className: `${Styles['conf-alert']} ${Styles['sg-modal-content']}` },
+                React.createElement("h2", { className: cn(Styles['conf-alert-header'], { [Styles['conf-alert-header-with-icon']]: !!this.props.iconType }) },
                     !!this.props.iconType &&
                         React.createElement(Icon, { type: this.props.iconType }),
                     evaluateRenderProp(this.props.renderHeader)),
-                React.createElement("div", { className: "conf-alert-body" },
-                    React.createElement("p", { className: "conf-alert-text" }, evaluateRenderProp(this.props.renderBody))),
-                React.createElement("div", { className: "conf-alert-actions" }, evaluateRenderProp(this.props.renderActions)))), this.props.modalContainer);
+                React.createElement("div", { className: Styles['conf-alert-body'] },
+                    React.createElement("p", { className: Styles['conf-alert-text'] }, evaluateRenderProp(this.props.renderBody))),
+                React.createElement("div", { className: Styles['conf-alert-actions'] }, evaluateRenderProp(this.props.renderActions)))), this.props.modalContainer);
     }
 }
 ConfirmationModal.defaultProps = {

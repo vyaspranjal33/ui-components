@@ -1,5 +1,6 @@
 import React from 'react';
 import Badge from './badge';
+import Styles from './styles/card.module.scss';
 import { color as ValidColor } from './types/color';
 import cn from './utilities/classnames';
 
@@ -34,9 +35,9 @@ export const Card: React.SFC<CardProps> = ({
 
   return (
     <div
-      className={cn('card', {
-        'is-centered': centered,
-        'is-thin': thin,
+      className={cn(Styles.card, {
+        [Styles['is-centered']]: centered,
+        [Styles['is-thin']]: thin,
       })}
     >
       {badge && <Badge {...badge} />}

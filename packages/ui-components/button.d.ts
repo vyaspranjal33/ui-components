@@ -24,4 +24,5 @@ export interface ButtonizedProps extends AllButtonProps {
 }
 export declare const Button: React.SFC<ButtonProps>;
 export declare const Buttonized: React.SFC<ButtonizedProps>;
-export default Button;
+declare const _default: (props: any) => JSX.Element;
+export default _default;
