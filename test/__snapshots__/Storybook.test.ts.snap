@@ -7868,7 +7868,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
   className="btn-group"
 >
   <button
-    className="btn btn-group-item"
+    className="btn btn-group-item is-active"
     id={undefined}
     onClick={[Function]}
   >
@@ -7882,7 +7882,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
     Week
   </button>
   <button
-    className="btn btn-group-item is-active"
+    className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
   >
