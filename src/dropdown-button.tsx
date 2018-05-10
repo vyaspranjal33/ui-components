@@ -8,6 +8,7 @@ export interface DropdownButtonProps {
   children?: any;
   label?: string;
   gear?: boolean;
+  className?: string;
 }
 
 export interface DropdownButtonState {
@@ -46,6 +47,7 @@ export class DropdownButton extends React.Component<
       onDark,
       small,
       type,
+      className,
       ...passThroughProps,
     } = this.props;
     const isActive = this.state.active;
@@ -64,7 +66,7 @@ export class DropdownButton extends React.Component<
     return (
       <div className="btn-list">
         <div
-          className={cn('btn', 'btn-dropdown', 'dropdown', `btn-${buttonType}`, {
+          className={cn('btn', 'btn-dropdown', 'dropdown', `btn-${buttonType}`, className, {
             'btn-dropdown-gear': gear,
             'btn-on-dark': onDark,
             'btn-small': small,

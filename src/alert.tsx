@@ -12,6 +12,7 @@ export interface AlertProps {
   inline?: boolean;
   type: AlertType;
   hidden?: boolean;
+  className?: string;
   onClick?: (event: any) => void;
 }
 
@@ -30,11 +31,12 @@ export const Alert: React.SFC<AlertProps> = ({
   onClick: handleClick,
   type,
   hidden,
+  className,
   ...passThroughProps,
 }) => {
   return (
     <div
-      className={cn('alert', `alert-${type}`, {
+      className={cn('alert', `alert-${type}`, className, {
         'alert-inline': inline,
       })}
       role="alert"

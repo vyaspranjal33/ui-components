@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from './utilities/classnames';
 
 export interface Statistic {
   label: string;
@@ -9,9 +10,12 @@ export interface Statistic {
 export interface StatisticsProps {
   statistics?: Statistic[];
   statsClassName: string;
+  className?: string;
 }
 
-export const Statistics: React.SFC<StatisticsProps> = ({ statistics, statsClassName, ...passThroughProps }) => {
+export const Statistics: React.SFC<StatisticsProps> = (
+  { statistics, statsClassName, className, ...passThroughProps },
+) => {
   // This uses numbers rather than formatted strings to prepare for locale specific number formatting
   const formatStatistic = (amount: number, format: string) => {
     if (typeof amount !== 'number') { return '—'; }
@@ -36,7 +40,7 @@ export const Statistics: React.SFC<StatisticsProps> = ({ statistics, statsClassN
 
   return statisticsElements ?
     (
-      <div className="email-card-stats" {...passThroughProps}>
+      <div className={cn('email-card-stats', className)} {...passThroughProps}>
         {statisticsElements}
       </div>
     ) : null;

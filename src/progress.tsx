@@ -6,12 +6,13 @@ export interface ProgressProps {
   children:
     | React.ReactElement<ProgressStageProps>
     | Array<React.ReactElement<ProgressStageProps>>;
+  className?: string;
 }
 
-export const Progress: React.SFC<ProgressProps> = ({ children, vertical, ...passThroughProps }) => {
+export const Progress: React.SFC<ProgressProps> = ({ children, vertical, className, ...passThroughProps }) => {
   return (
     <section
-      className={cn('progress-container', {
+      className={cn('progress-container', className, {
         'is-vertical': vertical,
       })}
       {...passThroughProps}
@@ -29,17 +30,19 @@ export interface ProgressStageProps {
   done?: boolean;
   selected?: boolean;
   children: string;
+  className?: string;
 }
 
 export const ProgressStage: React.SFC<ProgressStageProps> = ({
   children: label,
   done,
   selected,
+  className,
   ...passThroughProps,
 }) => {
   return (
     <li
-      className={cn({
+      className={cn(className, {
         'is-done': done,
         'is-selected': selected,
       })}

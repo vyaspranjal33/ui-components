@@ -20,6 +20,7 @@ export interface SegmentTermProps {
   renderInputs?: () => React.ReactNode;
   showConfirm?: boolean;
   title: string;
+  className?: string;
 }
 
 export class SegmentTerm extends PureComponent<SegmentTermProps> {
@@ -77,11 +78,12 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       onCancel,
       onConfirm,
       showConfirm,
+      className,
       ...passThroughProps,
     } = this.props;
 
     return (
-      <div className="segment-term-wrap" {...passThroughProps}>
+      <div className={cn('segment-term-wrap', className)} {...passThroughProps}>
         <p className="segment-term-title">
           {title}
         </p>

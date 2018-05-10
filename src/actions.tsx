@@ -1,25 +1,27 @@
 import React from 'react';
 import Icon from './icon';
 import { IconType } from './types/icons';
+import cn from './utilities/classnames';
 
 export interface ActionsProps {
   children:
     React.ReactElement<ActionProps> |
     Array<React.ReactElement<ActionProps>>;
+  className?: string;
 }
 
-export const Actions: React.SFC<ActionsProps> = ({ children, ...passThroughProps }) => {
+export const Actions: React.SFC<ActionsProps> = ({ children, className, ...passThroughProps }) => {
   return (
-    <div className="actions" {...passThroughProps}>
+    <div className={cn('actions', className)} {...passThroughProps}>
       <Icon type="ellipsis" />
       <div className="action-icons">{children}</div>
     </div>
   );
 };
 
-export const ActionsCell: React.SFC<ActionsProps> = ({ children, ...passThroughProps }) => {
+export const ActionsCell: React.SFC<ActionsProps> = ({ children, className, ...passThroughProps }) => {
   return (
-    <td className="actions" {...passThroughProps}>
+    <td className={cn('actions', className)} {...passThroughProps}>
       <Icon type="ellipsis" />
       <div className="action-icons">{children}</div>
     </td>

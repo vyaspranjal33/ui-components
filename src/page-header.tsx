@@ -8,6 +8,7 @@ export interface PageHeaderProps {
 export interface PageHeadingProps {
   children?: React.ReactNode;
   title?: string | number;
+  className?: string;
 }
 
 const headerStyle = {
@@ -26,8 +27,8 @@ export const PageHeader: React.SFC<PageHeaderProps> = ({ children, ...passThroug
   </header>
 );
 
-export const PageHeading: React.SFC<PageHeadingProps> = ({ children, title, ...passThroughProps }) => (
-  <div className="content-header" style={headerStyle} {...passThroughProps}>
+export const PageHeading: React.SFC<PageHeadingProps> = ({ children, className, title, ...passThroughProps }) => (
+  <div className={cn('content-header', className)} style={headerStyle} {...passThroughProps}>
     <h1 style={headingStyle}>{title}</h1>
     {children && <div className="btn-list">{children}</div>}
   </div>

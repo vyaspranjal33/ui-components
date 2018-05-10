@@ -4,12 +4,13 @@ import cn from './utilities/classnames';
 export interface DividerProps {
   label?: string;
   thin?: boolean;
+  className?: string;
 }
 
-export const Divider: React.SFC<DividerProps> = ({ label, thin, ...passThroughProps }) => {
+export const Divider: React.SFC<DividerProps> = ({ label, thin, className, ...passThroughProps }) => {
   return (
     <hr
-      className={cn({
+      className={cn(className, {
         'has-label': !!label,
         'is-thin': thin,
       })}

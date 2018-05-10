@@ -11,15 +11,17 @@ export interface FooterProps {
   | string;
   icon?: IconType;
   header?: string;
+  className?: string;
 }
 
 export const Footer: React.SFC<FooterProps> = ({
   children,
   icon,
   header,
+  className,
   ...passThroughProps,
 }) => (
-  <p className="small is-center" {...passThroughProps}>
+  <p className={cn('small', 'is-center', className)} {...passThroughProps}>
     {
       icon &&
       <span>

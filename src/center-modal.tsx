@@ -12,6 +12,7 @@ export interface CenterModalProps extends ModalProps {
   modalContainer?: Element;
   onClose: (evt: any) => void;
   open: boolean;
+  className?: string;
   renderBody: string | React.ReactNode | (() => React.ReactNode);
   renderFooter?: string | React.ReactNode | (() => React.ReactNode);
   renderHeader?: string | React.ReactNode | (() => React.ReactNode);
@@ -44,13 +45,14 @@ export class CenterModal extends Component<CenterModalProps> {
       renderFooter,
       renderHeader,
       bodyNode,
+      className,
       ...passThroughProps,
     } = this.props;
     // Using <> instead of <Fragment> is breaking the linter.
     return ReactDOM.createPortal(
       <Fragment>
         <div
-          className={cn('center-modal', { 'is-visible': open, 'is-large': large })}
+          className={cn('center-modal', className, { 'is-visible': open, 'is-large': large })}
           {...passThroughProps}
         >
           {

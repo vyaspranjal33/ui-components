@@ -10,6 +10,7 @@ export interface CardProps {
   inline?: boolean;
   title?: string;
   body?: string;
+  className?: string;
   badge?:
     | {
         content: string;
@@ -26,6 +27,7 @@ export const Card: React.SFC<CardProps> = ({
   inline,
   thin,
   title,
+  className,
   ...passThroughProps,
 }) => {
 
@@ -35,7 +37,7 @@ export const Card: React.SFC<CardProps> = ({
 
   return (
     <div
-      className={cn('card', {
+      className={cn('card', className, {
         'is-centered': centered,
         'is-thin': thin,
       })}

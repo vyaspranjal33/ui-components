@@ -18,6 +18,7 @@ export interface EmptyStateProps {
   icon?: IconType | (() => React.ReactNode);
   buttons?: Array<React.ReactElement<any>>;
   header?: string;
+  className?: string;
 }
 
 export const EmptyState: React.SFC<EmptyStateProps> = ({
@@ -25,9 +26,10 @@ export const EmptyState: React.SFC<EmptyStateProps> = ({
   icon,
   buttons,
   header,
+  className,
   ...passThroughProps,
 }) => (
-  <div className="table-state is-empty" {...passThroughProps}>
+  <div className={cn('table-state', 'is-empty', className)} {...passThroughProps}>
     {icon && evaluateRenderProp(icon)}
     {header && <h2>{header}</h2>}
     {children}

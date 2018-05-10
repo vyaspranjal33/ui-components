@@ -6,9 +6,10 @@ export interface LoaderProps {
   large?: boolean;
   small?: boolean;
   centered?: boolean;
+  className?: string;
 }
 
-export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered, ...passThroughProps }) => {
+export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered, className, ...passThroughProps }) => {
   let size = 10;
   if (large) {
     size *= 2;
@@ -18,7 +19,7 @@ export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered,
   }
   return (
     <svg
-      className={cn('sg-loader', {
+      className={cn('sg-loader', className, {
         'is-centered': centered,
         'is-large': large,
         'is-small': small,

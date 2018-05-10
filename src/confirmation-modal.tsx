@@ -15,6 +15,7 @@ export interface ConfirmationModalProps extends ModalProps {
   renderActions: string | (() => React.ReactNode);
   renderBody: string | (() => React.ReactNode);
   renderHeader: string | (() => React.ReactNode);
+  className?: string;
 }
 
 const evaluateRenderProp: (prop: string | (() => React.ReactNode)) => React.ReactNode = (prop) => {
@@ -40,11 +41,12 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
       renderHeader,
       isOpen,
       bodyNode,
+      className,
       ...passThroughProps,
     } = this.props;
 
     return ReactDOM.createPortal(
-      <div className={cn('sg-modal', { 'is-visible': isOpen })} {...passThroughProps}>
+      <div className={cn('sg-modal', className, { 'is-visible': isOpen })} {...passThroughProps}>
         <div className="conf-alert sg-modal-content">
           <h2 className={cn('conf-alert-header', {'conf-alert-header-with-icon': !!iconType})}>
             {

@@ -20,6 +20,7 @@ export interface AllButtonProps {
   icon?: IconType;
   id?: string;
   isLink?: boolean;
+  className?: string;
 }
 
 export interface ButtonProps extends AllButtonProps {
@@ -61,6 +62,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   active,
   icon,
   id,
+  className,
   ...passThroughProps,
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
@@ -96,7 +98,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
     React.cloneElement(
       children,
       {
-        className: cn('btn', `btn-${type}`, {
+        className: cn('btn', `btn-${type}`, className, {
           'btn-on-dark': onDark,
           'btn-small': small,
           'has-badge': hasBadge,

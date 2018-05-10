@@ -8,6 +8,7 @@ export interface DropzoneProps {
   hovered?: boolean;
   large?: boolean;
   children?: React.ReactElement<AlertProps>;
+  className?: string;
 }
 
 export const Dropzone: React.SFC<DropzoneProps> = ({
@@ -15,11 +16,12 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
   children: alert,
   hovered,
   large,
+  className,
   ...passThroughProps,
 }) => {
   return (
     <section
-      className={cn('dropzone', {
+      className={cn('dropzone', className, {
         'has-inline-alert': !!alert,
         'is-active': active,
         'is-hovered': hovered,

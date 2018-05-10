@@ -1,9 +1,14 @@
 import React from 'react';
+import cn from './utilities/classnames';
 
-export const FragmentLoader: React.SFC = ({...passThroughProps}) => {
+export interface FragmentLoaderProps {
+  className?: string;
+}
+
+export const FragmentLoader: React.SFC<FragmentLoaderProps> = ({className, ...passThroughProps}) => {
   return (
     <svg
-      className="fragment-loader"
+      className={cn('fragment-loader', className)}
       {...passThroughProps}
     >
       <rect className="fragment-square left" width="10" height="10" />

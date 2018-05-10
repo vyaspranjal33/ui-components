@@ -1,4 +1,5 @@
 import React from 'react';
+import cn from './utilities/classnames';
 
 export interface NumberedStepProps {
   children:
@@ -22,13 +23,15 @@ export interface NumberedStepsProps {
   children:
     | React.ReactElement<NumberedStepProps>
     | Array<React.ReactElement<NumberedStepProps>>;
+  className?: string;
 }
 
 export const NumberedSteps: React.SFC<NumberedStepsProps> = ({
   children,
+  className,
   ...passThroughProps,
 }) => (
-  <ol className="numbered-steps" {...passThroughProps}>
+  <ol className={cn('numbered-steps', className)} {...passThroughProps}>
     {children}
   </ol>
 );

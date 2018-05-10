@@ -10,6 +10,7 @@ export interface TabProps {
   number?: number;
   onClick?: (event: any) => void;
   index?: number;
+  className?: string;
 }
 
 export const Tab: React.SFC<TabProps> = ({
@@ -17,11 +18,12 @@ export const Tab: React.SFC<TabProps> = ({
   children,
   onClick: handleClick,
   number,
+  className,
   ...passThroughProps,
 }) => {
   return (
     <li
-      className={cn('tab', {
+      className={cn('tab', className, {
         'is-active': active,
       })}
       onClick={handleClick}
@@ -48,11 +50,12 @@ export const Tabs: React.SFC<any> = ({
   children,
   zeroBorder,
   onChange,
+  className,
   ...passThroughProps,
 }) => {
   return (
     <ul
-      className={cn('tab-wrapper', {
+      className={cn('tab-wrapper', className, {
         'is-centered': centered,
         'zero-border': zeroBorder,
       })}

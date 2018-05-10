@@ -6,6 +6,7 @@ import React, { PureComponent, ReactElement } from 'react';
 import Button from './button';
 import ButtonList from './button-list';
 import { TextInput } from './text-input';
+import cn from './utilities/classnames';
 
 const filterControlStyle = {
   display: 'flex',
@@ -38,6 +39,7 @@ export interface FilterableListContainerProps {
 
 export interface FilterableListProps extends FilterableListContainerProps {
   items: any[];
+  className?: string;
 }
 
 export interface FilterableListState {
@@ -69,7 +71,6 @@ export class FilterableList extends PureComponent<
 
   public state: { [key: string]: string } = {};
   public handlers: { [key: string]: (filterName: string, event: any) => void } = {};
-  private passThroughProps: any;
 
   constructor(props: FilterableListProps) {
     super(props);
@@ -157,11 +158,12 @@ export class FilterableList extends PureComponent<
       renderItems,
       showClearButton,
       title,
+      className,
       ...passThroughProps,
     } = this.props;
 
     return (
-      <section className="FilterableList" {...passThroughProps}>
+      <section className={cn('FilterableList', className)} {...passThroughProps}>
         <div className="filter-wrap">
           <div className="filter-header">
             <p className="filter-title">{title}</p>
