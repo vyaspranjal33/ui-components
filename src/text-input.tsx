@@ -29,7 +29,7 @@ const getRenderedTextInput = function() {
     info,
     onBlur,
     style,
-    ...primitiveProps,
+    ...passThroughProps,
   } = this.props;
 
   const classes = cn('input-text-wrap', {
@@ -58,7 +58,7 @@ const getRenderedTextInput = function() {
         onFocus={this.onInputFocus}
         onBlur={this.onInputBlur}
         aria-describedby={infoId}
-        {...primitiveProps}
+        {...passThroughProps}
       />
       {info && (
         <span

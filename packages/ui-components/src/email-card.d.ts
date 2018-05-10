@@ -37,7 +37,7 @@ export declare class EmailCard extends React.Component<EmailCardProps> {
         paused: boolean;
         renderAlert: boolean;
     };
-    private primitiveProps;
+    private passThroughProps;
     constructor(props: EmailCardProps);
     render(): JSX.Element;
 }

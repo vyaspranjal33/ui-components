@@ -6,7 +6,7 @@ export interface DividerProps {
   thin?: boolean;
 }
 
-export const Divider: React.SFC<DividerProps> = ({ label, thin, ...primitiveProps }) => {
+export const Divider: React.SFC<DividerProps> = ({ label, thin, ...passThroughProps }) => {
   return (
     <hr
       className={cn({
@@ -14,7 +14,7 @@ export const Divider: React.SFC<DividerProps> = ({ label, thin, ...primitiveProp
         'is-thin': thin,
       })}
       data-label={label}
-      {...primitiveProps}
+      {...passThroughProps}
     />
   );
 };

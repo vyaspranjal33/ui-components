@@ -25,10 +25,13 @@ export class DropdownButton extends React.Component<
   public state = {
     active: false,
   };
-  private primitiveProps: any;
 
-  constructor(props: DropdownButtonProps) {
-    super(props);
+  public handleClick = () => {
+    const { active } = this.state;
+    this.setState({ active: !active });
+  }
+
+  public render() {
     const {
       active,
       badge,
@@ -43,32 +46,9 @@ export class DropdownButton extends React.Component<
       onDark,
       small,
       type,
-      ...primitiveProps,
+      ...passThroughProps,
     } = this.props;
-    this.primitiveProps = primitiveProps;
-  }
-
-  public handleClick = () => {
-    const { active } = this.state;
-    this.setState({ active: !active });
-  }
-
-  public render() {
-    const {
-      badge,
-      children,
-      disabled,
-      gear,
-      group,
-      icon,
-      label,
-      loading,
-      onClick,
-      onDark,
-      small,
-      type,
-    } = this.props;
-    const { active } = this.state;
+    const isActive = this.state.active;
     const hasBadge: boolean = !!badge || badge === 0;
     const hasIcon: boolean = !!icon;
 
@@ -90,12 +70,12 @@ export class DropdownButton extends React.Component<
             'btn-small': small,
             'has-badge': hasBadge,
             'has-icon': hasIcon || loading,
-            'is-active': active,
+            'is-active': isActive,
             'is-disabled': disabled,
             'is-loading': loading,
           })}
           onClick={this.handleClick}
-          {...this.primitiveProps}
+          {...passThroughProps}
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
           {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}

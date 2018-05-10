@@ -17,9 +17,9 @@ export const Footer: React.SFC<FooterProps> = ({
   children,
   icon,
   header,
-  ...primitiveProps,
+  ...passThroughProps,
 }) => (
-  <p className="small is-center" {...primitiveProps}>
+  <p className="small is-center" {...passThroughProps}>
     {
       icon &&
       <span>

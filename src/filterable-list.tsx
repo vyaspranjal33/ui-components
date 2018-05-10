@@ -69,25 +69,10 @@ export class FilterableList extends PureComponent<
 
   public state: { [key: string]: string } = {};
   public handlers: { [key: string]: (filterName: string, event: any) => void } = {};
-  private primitiveProps: any;
+  private passThroughProps: any;
 
   constructor(props: FilterableListProps) {
     super(props);
-    const {
-      clearButtonInHeader,
-      clearButtonLabel,
-      filterTypes,
-      items,
-      onClear,
-      onChange,
-      onFilter,
-      renderControls,
-      renderItems,
-      showClearButton,
-      title,
-      ...primitiveProps,
-    } = props;
-    this.primitiveProps = primitiveProps;
 
     for (const name of props.filterTypes) {
       if (name) {
@@ -161,15 +146,22 @@ export class FilterableList extends PureComponent<
 
   public render() {
     const {
+      clearButtonInHeader,
       clearButtonLabel,
-      title,
-      showClearButton,
+      filterTypes,
+      items,
+      onClear,
+      onChange,
+      onFilter,
       renderControls,
       renderItems,
+      showClearButton,
+      title,
+      ...passThroughProps,
     } = this.props;
 
     return (
-      <section className="FilterableList" {...this.primitiveProps}>
+      <section className="FilterableList" {...passThroughProps}>
         <div className="filter-wrap">
           <div className="filter-header">
             <p className="filter-title">{title}</p>

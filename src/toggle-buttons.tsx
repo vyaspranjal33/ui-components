@@ -17,10 +17,10 @@ export interface ToggleButtonsState {
 export const ToggleButtons: React.SFC<ToggleButtonsProps> = ({
   children,
   onChange,
-  ...primitiveProps,
+  ...passThroughProps,
 }) => {
   return (
-    <div className="btn-group" {...primitiveProps}>
+    <div className="btn-group" {...passThroughProps}>
       {map(children, (button: React.ReactElement<any>, index) => {
         return React.cloneElement(button, {
           onClick(event: any) {

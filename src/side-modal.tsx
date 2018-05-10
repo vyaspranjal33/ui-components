@@ -29,12 +29,12 @@ export class SideModal extends React.Component<SideModalProps> {
       children,
       modalContainer,
       bodyNode,
-      ...primitiveProps,
+      ...passThroughProps,
     } = this.props;
 
     return ReactDOM.createPortal(
       <Fragment>
-        <div className={cn('side-modal', { 'is-visible': isOpen })} {...primitiveProps}>
+        <div className={cn('side-modal', { 'is-visible': isOpen })} {...passThroughProps}>
           {children}
         </div>
         <div

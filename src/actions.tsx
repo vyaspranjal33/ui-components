@@ -8,18 +8,18 @@ export interface ActionsProps {
     Array<React.ReactElement<ActionProps>>;
 }
 
-export const Actions: React.SFC<ActionsProps> = ({ children, ...primitiveProps }) => {
+export const Actions: React.SFC<ActionsProps> = ({ children, ...passThroughProps }) => {
   return (
-    <div className="actions" {...primitiveProps}>
+    <div className="actions" {...passThroughProps}>
       <Icon type="ellipsis" />
       <div className="action-icons">{children}</div>
     </div>
   );
 };
 
-export const ActionsCell: React.SFC<ActionsProps> = ({ children, ...primitiveProps }) => {
+export const ActionsCell: React.SFC<ActionsProps> = ({ children, ...passThroughProps }) => {
   return (
-    <td className="actions" {...primitiveProps}>
+    <td className="actions" {...passThroughProps}>
       <Icon type="ellipsis" />
       <div className="action-icons">{children}</div>
     </td>
@@ -36,10 +36,10 @@ export const Action: React.SFC<ActionProps> = ({
   title,
   icon,
   onClick: handleClick,
-  ...primitiveProps,
+  ...passThroughProps,
 }) => {
   return (
-    <span data-tooltip={title} data-tooltip-pos="up" onClick={handleClick} {...primitiveProps}>
+    <span data-tooltip={title} data-tooltip-pos="up" onClick={handleClick} {...passThroughProps}>
       <Icon type={icon} />
     </span>
   );

@@ -8,8 +8,8 @@ export interface BadgeProps {
   content?: string | number;
 }
 
-export const Badge: React.SFC<BadgeProps> = ({ children, color, content, ...primitiveProps }) => (
-  <span className={cn('badge', color)} {...primitiveProps}>{children || content}</span>
+export const Badge: React.SFC<BadgeProps> = ({ children, color, content, ...passThroughProps }) => (
+  <span className={cn('badge', color)} {...passThroughProps}>{children || content}</span>
 );
 
 Badge.defaultProps = {

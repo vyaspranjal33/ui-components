@@ -15,14 +15,14 @@ export const Tooltip: React.SFC<TooltipProps> = ({
   direction,
   className,
   children,
-  ...primitiveProps,
+  ...passThroughProps,
 }) => {
   return (
     <span
       className={className}
       data-tooltip={content}
       data-tooltip-pos={direction}
-      {...primitiveProps}
+      {...passThroughProps}
     >
       {children}
     </span>
@@ -104,11 +104,11 @@ export class HTMLTooltip extends React.Component<
       children,
       hoverTarget,
       debounce,
-      ...primitiveProps,
+      ...passThroughProps,
     } = this.props;
 
     return (
-      <div {...primitiveProps}>
+      <div {...passThroughProps}>
         <div className="tooltip-js-parent" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
           {hoverTarget}
         </div>

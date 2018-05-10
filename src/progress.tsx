@@ -8,13 +8,13 @@ export interface ProgressProps {
     | Array<React.ReactElement<ProgressStageProps>>;
 }
 
-export const Progress: React.SFC<ProgressProps> = ({ children, vertical, ...primitiveProps }) => {
+export const Progress: React.SFC<ProgressProps> = ({ children, vertical, ...passThroughProps }) => {
   return (
     <section
       className={cn('progress-container', {
         'is-vertical': vertical,
       })}
-      {...primitiveProps}
+      {...passThroughProps}
     >
       <ul className="progress-stages">{children}</ul>
     </section>
@@ -35,7 +35,7 @@ export const ProgressStage: React.SFC<ProgressStageProps> = ({
   children: label,
   done,
   selected,
-  ...primitiveProps,
+  ...passThroughProps,
 }) => {
   return (
     <li
@@ -43,7 +43,7 @@ export const ProgressStage: React.SFC<ProgressStageProps> = ({
         'is-done': done,
         'is-selected': selected,
       })}
-      {...primitiveProps}
+      {...passThroughProps}
     >
       <label>{label}</label>
     </li>

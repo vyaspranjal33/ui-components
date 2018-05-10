@@ -17,7 +17,7 @@ export const TruncatedList: React.SFC<TruncatedListProps> = ({
   link,
   renderItems,
   renderMore,
-  ...primitiveProps,
+  ...passThroughProps,
 }) => {
   const shown = items.slice(0, limit);
   const shownText = shown.join(', ');
@@ -34,7 +34,7 @@ export const TruncatedList: React.SFC<TruncatedListProps> = ({
   );
 
   return (
-    <span className={className} {...primitiveProps}>
+    <span className={className} {...passThroughProps}>
       {renderItems ? renderItems(shown) : shownText}
       {renderMore && renderMore(numberOfAdditionalItems.toString(), link)}
       {!renderMore && hasAdditionalItems && additionalItemText}

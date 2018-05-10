@@ -13,7 +13,7 @@ export interface CenterModalProps extends ModalProps {
 }
 export declare class CenterModal extends Component<CenterModalProps> {
     static defaultProps: Partial<CenterModalProps>;
-    private primitiveProps;
+    private passThroughProps;
     constructor(props: CenterModalProps);
     componentWillReceiveProps(nextProps: CenterModalProps): void;
     render(): React.ReactPortal;

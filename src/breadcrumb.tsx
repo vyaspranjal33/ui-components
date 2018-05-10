@@ -22,9 +22,9 @@ const mapper = (children: Array<React.ReactElement<ChildProps>> | React.ReactEle
 export const Breadcrumb: React.SFC<BreadcrumbProps> = ({
   children,
   withoutTrailingSlash,
-  ...primitiveProps,
+  ...passThroughProps,
 }) => (
-  <ol className="breadcrumb" {...primitiveProps}>
+  <ol className="breadcrumb" {...passThroughProps}>
     {mapper(children)}
     {!withoutTrailingSlash && <li />}
   </ol>

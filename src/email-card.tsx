@@ -18,10 +18,10 @@ const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
   value,
   renderSendTimeLink,
   alert = '',
-  ...primitiveProps,
+  ...passThroughProps,
 }) => {
   return (
-    <div className={cn('email-card-send-time', { 'has-value': !!value })} {...primitiveProps}>
+    <div className={cn('email-card-send-time', { 'has-value': !!value })} {...passThroughProps}>
       <Buttonized type="secondary">
           {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
@@ -35,7 +35,7 @@ export interface EmailCardDetail {
   renderEditDetailLink?: (value: string) => any;
 }
 
-const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details, ...primitiveProps }) => {
+const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details, ...passThroughProps }) => {
   const rows = details && details.map((detail) => {
     return (
       <tr key={detail.label}>
@@ -46,7 +46,7 @@ const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details,
   });
 
   return (
-    <div className="email-card-details" {...primitiveProps}>
+    <div className="email-card-details" {...passThroughProps}>
       <table>
         <tbody>
           {rows}
@@ -64,9 +64,9 @@ export interface EmailCardContentProps {
 const EmailCardContent: React.SFC<EmailCardContentProps> = ({
   thumbnailUrl,
   onContentEditClick,
-  ...primitiveProps,
+  ...passThroughProps,
 }) => (
-  <div className="email-card-content" {...primitiveProps}>
+  <div className="email-card-content" {...passThroughProps}>
     {
       thumbnailUrl ?
         <a href="#">
@@ -88,9 +88,9 @@ export interface EmailCardAddButtonProps {
   onClick: (event: any) => void;
 }
 
-export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick, ...primitiveProps }) => {
+export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick, ...passThroughProps }) => {
   return (
-    <div className="btn-list email-card-add" {...primitiveProps}>
+    <div className="btn-list email-card-add" {...passThroughProps}>
       <Button type="secondary" onClick={onClick}>
         Add an Email
       </Button>
@@ -123,10 +123,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
     renderAlert: false,
   };
 
-  private primitiveProps: any;
-
-  constructor(props: EmailCardProps) {
-    super(props);
+  public render() {
     const {
       details,
       editing,
@@ -141,35 +138,31 @@ export class EmailCard extends React.Component<EmailCardProps> {
       statistics,
       thumbnailUrl,
       live,
-      ...primitiveProps,
-    } = props;
-    this.primitiveProps = primitiveProps;
-  }
-
-  public render() {
-    const alertEl = this.props.renderAlert && this.props.renderAlert();
+      ...passThroughProps,
+    } = this.props;
+    const alertEl = renderAlert && renderAlert();
     return (
       <div
         className={cn('email-card-wrap', {
-          'has-alert': !!this.props.renderAlert,
-          'is-editable': this.props.editable,
-          'is-live': this.props.live,
-          'is-paused': this.props.paused,
+          'has-alert': !!renderAlert,
+          'is-editable': editable,
+          'is-live': live,
+          'is-paused': paused,
         })}
-        {...this.primitiveProps}
+        {...passThroughProps}
       >
         <EmailCardSendTime
-          value={this.props.sendTimeValue}
-          renderSendTimeLink={this.props.renderSendTimeLink}
+          value={sendTimeValue}
+          renderSendTimeLink={renderSendTimeLink}
           alert={alertEl}
         />
-        <Statistics statsClassName="email-stats" statistics={this.props.statistics}/>
+        <Statistics statsClassName="email-stats" statistics={statistics}/>
         <div className="email-card">
           <div className="email-card-count">
-            <p>Email {this.props.n}</p>
+            <p>Email {n}</p>
           </div>
-          <EmailCardContent thumbnailUrl={this.props.thumbnailUrl} onContentEditClick={this.props.onContentEditClick} />
-          <EmailCardDetails details={this.props.details}/>
+          <EmailCardContent thumbnailUrl={thumbnailUrl} onContentEditClick={onContentEditClick} />
+          <EmailCardDetails details={details}/>
         </div>
         {alertEl}
       </div>
