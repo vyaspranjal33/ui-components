@@ -25,8 +25,9 @@ export const EmptyState: React.SFC<EmptyStateProps> = ({
   icon,
   buttons,
   header,
+  ...primitiveProps,
 }) => (
-  <div className="table-state is-empty">
+  <div className="table-state is-empty" {...primitiveProps}>
     {icon && evaluateRenderProp(icon)}
     {header && <h2>{header}</h2>}
     {children}

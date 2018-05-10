@@ -10,6 +10,7 @@ import {
 
 export interface ConfirmationModalProps extends ModalProps {
   iconType?: IconType;
+  isOpen?: boolean;
   modalContainer?: Element;
   renderActions: string | (() => React.ReactNode);
   renderBody: string | (() => React.ReactNode);
@@ -26,13 +27,30 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
     modalContainer: document.body,
   };
 
+  private primitiveProps: any;
+
+  constructor(props: ConfirmationModalProps) {
+    super(props);
+    const {
+      iconType,
+      modalContainer,
+      renderBody,
+      renderActions,
+      renderHeader,
+      isOpen,
+      bodyNode,
+      ...primitiveProps,
+    } = props;
+    this.primitiveProps = primitiveProps;
+  }
+
   public componentWillReceiveProps(nextProps: ConfirmationModalProps) {
     modalWillReceiveProps(nextProps, this.props);
   }
 
   public render() {
     return ReactDOM.createPortal(
-      <div className={cn('sg-modal', { 'is-visible': this.props.isOpen })}>
+      <div className={cn('sg-modal', { 'is-visible': this.props.isOpen })} {...this.primitiveProps}>
         <div className="conf-alert sg-modal-content">
           <h2 className={cn('conf-alert-header', {'conf-alert-header-with-icon': !!this.props.iconType})}>
             {

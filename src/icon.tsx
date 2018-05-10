@@ -16,11 +16,13 @@ export const Icon: React.SFC<IconProps> = ({
   className,
   onClick: handleClick,
   onDark,
+  ...primitiveProps,
 }) => (
   <i
     className={cn('sg-icon', `sg-icon-${type}`, { [className]: !!className })}
     onClick={handleClick}
     style={onDark ? lightStyle : null}
+    {...primitiveProps}
   />
 );
 

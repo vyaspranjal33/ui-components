@@ -15,6 +15,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
   children: alert,
   hovered,
   large,
+  ...primitiveProps,
 }) => {
   return (
     <section
@@ -25,6 +26,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
         'is-large': large,
       })}
       role="hidden"
+      {...primitiveProps}
     >
       {alert &&
         React.cloneElement(alert, {

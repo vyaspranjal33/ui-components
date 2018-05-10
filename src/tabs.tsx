@@ -17,6 +17,7 @@ export const Tab: React.SFC<TabProps> = ({
   children,
   onClick: handleClick,
   number,
+  ...primitiveProps,
 }) => {
   return (
     <li
@@ -24,6 +25,7 @@ export const Tab: React.SFC<TabProps> = ({
         'is-active': active,
       })}
       onClick={handleClick}
+      {...primitiveProps}
     >
       {children} {number && <span className="tab-number">{number}</span>}
     </li>
@@ -46,6 +48,7 @@ export const Tabs: React.SFC<any> = ({
   children,
   zeroBorder,
   onChange,
+  ...primitiveProps,
 }) => {
   return (
     <ul
@@ -53,6 +56,7 @@ export const Tabs: React.SFC<any> = ({
         'is-centered': centered,
         'zero-border': zeroBorder,
       })}
+      {...primitiveProps}
     >
       {map(children, (tab: React.ReactElement<any>, index) => {
         return React.cloneElement(tab, {

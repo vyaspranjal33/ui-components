@@ -20,14 +20,14 @@ const headingStyle = {
   fontWeight: 300,
 } as React.CSSProperties;
 
-export const PageHeader: React.SFC<PageHeaderProps> = ({ children }) => (
-  <header>
+export const PageHeader: React.SFC<PageHeaderProps> = ({ children, ...primitiveProps }) => (
+  <header {...primitiveProps}>
     {children}
   </header>
 );
 
-export const PageHeading: React.SFC<PageHeadingProps> = ({ children, title }) => (
-  <div className="content-header" style={headerStyle}>
+export const PageHeading: React.SFC<PageHeadingProps> = ({ children, title, ...primitiveProps }) => (
+  <div className="content-header" style={headerStyle} {...primitiveProps}>
     <h1 style={headingStyle}>{title}</h1>
     {children && <div className="btn-list">{children}</div>}
   </div>

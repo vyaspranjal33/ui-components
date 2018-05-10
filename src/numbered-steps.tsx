@@ -10,8 +10,9 @@ export interface NumberedStepProps {
 export const NumberedStep: React.SFC<NumberedStepProps> = ({
   children,
   header,
+  ...primitiveProps,
 }) => (
-  <li>
+  <li {...primitiveProps}>
     <h3>{header}</h3>
     {children}
   </li>
@@ -25,8 +26,9 @@ export interface NumberedStepsProps {
 
 export const NumberedSteps: React.SFC<NumberedStepsProps> = ({
   children,
+  ...primitiveProps,
 }) => (
-  <ol className="numbered-steps">
+  <ol className="numbered-steps" {...primitiveProps}>
     {children}
   </ol>
 );

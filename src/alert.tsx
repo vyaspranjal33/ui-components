@@ -29,6 +29,8 @@ export const Alert: React.SFC<AlertProps> = ({
   inline,
   onClick: handleClick,
   type,
+  hidden,
+  ...primitiveProps,
 }) => {
   return (
     <div
@@ -36,6 +38,7 @@ export const Alert: React.SFC<AlertProps> = ({
         'alert-inline': inline,
       })}
       role="alert"
+      {...primitiveProps}
     >
       <p>
         <Icon type={icon || iconFor(type)} />

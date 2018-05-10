@@ -24,6 +24,8 @@ export interface AllButtonProps {
 
 export interface ButtonProps extends AllButtonProps {
   children?: string | React.ReactNode;
+  isSubmit?: boolean;
+  isReset?: boolean;
 }
 
 export interface ButtonizedProps extends AllButtonProps {
@@ -31,9 +33,15 @@ export interface ButtonizedProps extends AllButtonProps {
 }
 
 export const Button: React.SFC<ButtonProps> = (props) => {
+  let btnType = 'button';
+  if (props.isSubmit) {
+    btnType = 'submit';
+  } else if (props.isReset) {
+    btnType = 'reset';
+  }
   return (
     <Buttonized {...props} >
-      <button>
+      <button type={btnType}>
         {props.children}
       </button>
     </Buttonized>
@@ -53,6 +61,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   active,
   icon,
   id,
+  ...primitiveProps,
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
@@ -98,6 +107,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
         }),
         id,
         onClick,
+        ...primitiveProps,
       },
       content,
     )

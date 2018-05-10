@@ -29,6 +29,25 @@ export class CenterModal extends Component<CenterModalProps> {
     modalContainer: document.body,
   };
 
+  private primitiveProps: any;
+
+  constructor(props: CenterModalProps) {
+    super(props);
+    const {
+      hasX,
+      large,
+      modalContainer,
+      onClose,
+      open,
+      renderBody,
+      renderFooter,
+      renderHeader,
+      bodyNode,
+      ...primitiveProps,
+    } = props;
+    this.primitiveProps = primitiveProps;
+  }
+
   public componentWillReceiveProps(nextProps: CenterModalProps) {
     modalWillReceiveProps(nextProps, this.props);
   }
@@ -37,7 +56,10 @@ export class CenterModal extends Component<CenterModalProps> {
     // Using <> instead of <Fragment> is breaking the linter.
     return ReactDOM.createPortal(
       <Fragment>
-        <div className={cn('center-modal', { 'is-visible': this.props.open, 'is-large': this.props.large })}>
+        <div
+          className={cn('center-modal', { 'is-visible': this.props.open, 'is-large': this.props.large })}
+          {...this.primitiveProps}
+        >
           {
             this.props.hasX &&
               (<i className="sg-icon sg-icon-x" data-role="close-center-modal" onClick={this.props.onClose} />)

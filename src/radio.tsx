@@ -47,6 +47,7 @@ export const Radio: React.SFC <RadioProps> = ({
   name,
   onChange,
   value,
+  ...primitiveProps,
 }) => {
   id = id || `radio-${value.toLowerCase()}`;
   return (
@@ -60,6 +61,7 @@ export const Radio: React.SFC <RadioProps> = ({
         onChange={onChange}
         type="radio"
         value={value}
+        {...primitiveProps}
       />
       <label className="input-radio-label" htmlFor={id}>
         {label}

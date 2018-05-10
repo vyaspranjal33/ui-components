@@ -8,7 +8,7 @@ export interface LoaderProps {
   centered?: boolean;
 }
 
-export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered }) => {
+export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered, ...primitiveProps }) => {
   let size = 10;
   if (large) {
     size *= 2;
@@ -24,6 +24,7 @@ export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered 
         'is-small': small,
         'loader-on-dark': onDark,
       })}
+      {...primitiveProps}
     >
       <rect className="logo-square bottom-left" width={size} height={size} />
       <rect className="logo-square bottom-middle" width={size} height={size} />

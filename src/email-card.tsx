@@ -14,9 +14,14 @@ interface EmailCardSendTimeProps {
   alert?: any;
 }
 
-const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({ value, renderSendTimeLink, alert = '' }) => {
+const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
+  value,
+  renderSendTimeLink,
+  alert = '',
+  ...primitiveProps,
+}) => {
   return (
-    <div className={cn('email-card-send-time', { 'has-value': !!value })}>
+    <div className={cn('email-card-send-time', { 'has-value': !!value })} {...primitiveProps}>
       <Buttonized type="secondary">
           {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
@@ -30,7 +35,7 @@ export interface EmailCardDetail {
   renderEditDetailLink?: (value: string) => any;
 }
 
-const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details }) => {
+const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details, ...primitiveProps }) => {
   const rows = details && details.map((detail) => {
     return (
       <tr key={detail.label}>
@@ -41,7 +46,7 @@ const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details 
   });
 
   return (
-    <div className="email-card-details">
+    <div className="email-card-details" {...primitiveProps}>
       <table>
         <tbody>
           {rows}
@@ -56,8 +61,12 @@ export interface EmailCardContentProps {
   onContentEditClick: (event: any) => void;
 }
 
-const EmailCardContent: React.SFC<EmailCardContentProps> = ({ thumbnailUrl, onContentEditClick }) => (
-  <div className="email-card-content">
+const EmailCardContent: React.SFC<EmailCardContentProps> = ({
+  thumbnailUrl,
+  onContentEditClick,
+  ...primitiveProps,
+}) => (
+  <div className="email-card-content" {...primitiveProps}>
     {
       thumbnailUrl ?
         <a href="#">
@@ -79,9 +88,9 @@ export interface EmailCardAddButtonProps {
   onClick: (event: any) => void;
 }
 
-export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick }) => {
+export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick, ...primitiveProps }) => {
   return (
-    <div className="btn-list email-card-add">
+    <div className="btn-list email-card-add" {...primitiveProps}>
       <Button type="secondary" onClick={onClick}>
         Add an Email
       </Button>
@@ -114,6 +123,29 @@ export class EmailCard extends React.Component<EmailCardProps> {
     renderAlert: false,
   };
 
+  private primitiveProps: any;
+
+  constructor(props: EmailCardProps) {
+    super(props);
+    const {
+      details,
+      editing,
+      editable,
+      n,
+      onContentEditClick,
+      onSaveAlertClick,
+      paused,
+      renderSendTimeLink,
+      renderAlert,
+      sendTimeValue,
+      statistics,
+      thumbnailUrl,
+      live,
+      ...primitiveProps,
+    } = props;
+    this.primitiveProps = primitiveProps;
+  }
+
   public render() {
     const alertEl = this.props.renderAlert && this.props.renderAlert();
     return (
@@ -124,6 +156,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
           'is-live': this.props.live,
           'is-paused': this.props.paused,
         })}
+        {...this.primitiveProps}
       >
         <EmailCardSendTime
           value={this.props.sendTimeValue}

@@ -11,46 +11,66 @@ const onInputFocus = function() {
   this.setState({ isInputFocused: true });
 };
 
-const getRenderedTextInput = function(value?: string | number) {
+const getRenderedTextInput = function() {
+  const {
+    children,
+    type,
+    id,
+    onChange,
+    value,
+    name,
+    fullWidth,
+    isValid,
+    isRequired,
+    isDisabled,
+    isLarge,
+    isSearch,
+    label,
+    info,
+    onBlur,
+    style,
+    ...primitiveProps,
+  } = this.props;
+
   const classes = cn('input-text-wrap', {
     'has-value': !!value || value === 0,
-    'is-disabled': this.props.isDisabled,
-    'is-error': !this.props.isValid,
+    'is-disabled': isDisabled,
+    'is-error': !isValid,
     'is-focused': this.state.isInputFocused,
-    'is-large': this.props.isLarge,
-    'is-required': this.props.isRequired,
-    'is-search': this.props.isSearch,
+    'is-large': isLarge,
+    'is-required': isRequired,
+    'is-search': isSearch,
   });
 
-  const infoId = this.props.info && `${this.props.id}-info`;
-  const children = this.props.children || '';
+  const infoId = info && `${id}-info`;
 
   return (
     <div className={classes} style={this.inputStyle}>
-      <label className="input-text-label" htmlFor={this.props.id}>
-        {this.props.label}
+      <label className="input-text-label" htmlFor={id}>
+        {label}
       </label>
       <input
-        id={this.props.id}
-        value={this.props.value}
-        name={this.props.name}
-        type={this.props.type}
+        id={id}
+        value={value}
+        name={name}
+        type={type}
         onChange={this.onValueChange}
         onFocus={this.onInputFocus}
         onBlur={this.onInputBlur}
         aria-describedby={infoId}
+        {...primitiveProps}
       />
-      {this.props.info && (
+      {info && (
         <span
           className={cn('input-info', {
-            danger: !this.props.isValid,
+            danger: !isValid,
           })}
           id={infoId}
         >
-          {this.props.info}
+          {info}
         </span>
       )}
-      {children}
+      {children || ''}
     </div>
   );
 };

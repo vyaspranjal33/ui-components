@@ -12,6 +12,7 @@ export const Slider: React.SFC<SliderProps> = ({
   id,
   label,
   onChange: handleChange,
+  ...primitiveProps,
 }) => {
   return (
     <div className="input-range-wrap">
@@ -22,6 +23,7 @@ export const Slider: React.SFC<SliderProps> = ({
         onChange={handleChange}
         type="range"
         value={value}
+        {...primitiveProps}
       />
       {label && <div className="input-range-percent">{value}%</div>}
     </div>

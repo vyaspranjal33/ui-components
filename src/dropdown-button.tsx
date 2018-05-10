@@ -25,6 +25,28 @@ export class DropdownButton extends React.Component<
   public state = {
     active: false,
   };
+  private primitiveProps: any;
+
+  constructor(props: DropdownButtonProps) {
+    super(props);
+    const {
+      active,
+      badge,
+      children,
+      disabled,
+      gear,
+      group,
+      icon,
+      label,
+      loading,
+      onClick,
+      onDark,
+      small,
+      type,
+      ...primitiveProps,
+    } = this.props;
+    this.primitiveProps = primitiveProps;
+  }
 
   public handleClick = () => {
     const { active } = this.state;
@@ -73,6 +95,7 @@ export class DropdownButton extends React.Component<
             'is-loading': loading,
           })}
           onClick={this.handleClick}
+          {...this.primitiveProps}
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
           {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}

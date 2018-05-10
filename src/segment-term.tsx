@@ -32,7 +32,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
   };
 
   public get termControls(): React.ReactNode {
-    const { editable, editing, onCancel, onConfirm, showConfirm } = this.props;
+    const { editable, editing, onCancel, onConfirm, showConfirm, ...primitiveProps } = this.props;
 
     if (editing) {
       return (
@@ -74,10 +74,14 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       renderAlert,
       renderInputs,
       title,
+      onCancel,
+      onConfirm,
+      showConfirm,
+      ...primitiveProps,
     } = this.props;
 
     return (
-      <div className="segment-term-wrap">
+      <div className="segment-term-wrap" {...primitiveProps}>
         <p className="segment-term-title">
           {title}
         </p>
