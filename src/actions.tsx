@@ -10,18 +10,18 @@ export interface ActionsProps {
   className?: string;
 }
 
-export const Actions: React.SFC<ActionsProps> = ({ children, className, ...passThroughProps }) => {
+export const Actions: React.SFC<ActionsProps> = ({ children, className, ...attributes }) => {
   return (
-    <div className={cn('actions', className)} {...passThroughProps}>
+    <div className={cn('actions', className)} {...attributes}>
       <Icon type="ellipsis" />
       <div className="action-icons">{children}</div>
     </div>
   );
 };
 
-export const ActionsCell: React.SFC<ActionsProps> = ({ children, className, ...passThroughProps }) => {
+export const ActionsCell: React.SFC<ActionsProps> = ({ children, className, ...attributes }) => {
   return (
-    <td className={cn('actions', className)} {...passThroughProps}>
+    <td className={cn('actions', className)} {...attributes}>
       <Icon type="ellipsis" />
       <div className="action-icons">{children}</div>
     </td>
@@ -38,10 +38,10 @@ export const Action: React.SFC<ActionProps> = ({
   title,
   icon,
   onClick: handleClick,
-  ...passThroughProps,
+  ...attributes,
 }) => {
   return (
-    <span data-tooltip={title} data-tooltip-pos="up" onClick={handleClick} {...passThroughProps}>
+    <span data-tooltip={title} data-tooltip-pos="up" onClick={handleClick} {...attributes}>
       <Icon type={icon} />
     </span>
   );

@@ -83,7 +83,7 @@ render() {
 }
 ```
 
-#### Capture Additional Props in passThroughProps
+#### Capture Additional Props in attributes
 
 If you're creating a new component, allow the consumer of that component to pass in whatever attributes they may want on the element(s).  You can accomplish this by accepting props with object deconstruction and the spread operator.  Then spread the unnamed props on the most important element.
 
@@ -91,7 +91,7 @@ If you're creating a new component, allow the consumer of that component to pass
 const {
   label,
   thin,
-  ...passThroughProps
+  ...attributes
 } = props;
 
 return (
@@ -101,7 +101,7 @@ return (
       'is-thin': thin,
     })}
     data-label={label}
-    {...passThroughProps}
+    {...attributes}
   />
 );
 ```

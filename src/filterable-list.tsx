@@ -159,11 +159,11 @@ export class FilterableList extends PureComponent<
       showClearButton,
       title,
       className,
-      ...passThroughProps,
+      ...attributes,
     } = this.props;
 
     return (
-      <section className={cn('FilterableList', className)} {...passThroughProps}>
+      <section className={cn('FilterableList', className)} {...attributes}>
         <div className="filter-wrap">
           <div className="filter-header">
             <p className="filter-title">{title}</p>

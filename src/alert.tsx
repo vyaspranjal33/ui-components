@@ -32,7 +32,7 @@ export const Alert: React.SFC<AlertProps> = ({
   type,
   hidden,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => {
   return (
     <div
@@ -40,7 +40,7 @@ export const Alert: React.SFC<AlertProps> = ({
         'alert-inline': inline,
       })}
       role="alert"
-      {...passThroughProps}
+      {...attributes}
     >
       <p>
         <Icon type={icon || iconFor(type)} />

@@ -10,9 +10,9 @@ export interface ButtonListProps extends HTMLAttributes<HTMLDivElement> {
 
 const { map } = React.Children;
 
-export const ButtonList: React.SFC<ButtonListProps> = ({ children, onDark, className, ...passThroughProps }) => {
+export const ButtonList: React.SFC<ButtonListProps> = ({ children, onDark, className, ...attributes }) => {
   return (
-    <div className={cn('btn-list', className)} {...passThroughProps}>
+    <div className={cn('btn-list', className)} {...attributes}>
       {map(children, (button?: React.ReactElement<any>) => {
         return button && React.cloneElement(button, { onDark });
       })}

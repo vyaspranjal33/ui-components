@@ -7,7 +7,7 @@ export interface DividerProps {
   className?: string;
 }
 
-export const Divider: React.SFC<DividerProps> = ({ label, thin, className, ...passThroughProps }) => {
+export const Divider: React.SFC<DividerProps> = ({ label, thin, className, ...attributes }) => {
   return (
     <hr
       className={cn(className, {
@@ -15,7 +15,7 @@ export const Divider: React.SFC<DividerProps> = ({ label, thin, className, ...pa
         'is-thin': thin,
       })}
       data-label={label}
-      {...passThroughProps}
+      {...attributes}
     />
   );
 };

@@ -46,14 +46,14 @@ export class CenterModal extends Component<CenterModalProps> {
       renderHeader,
       bodyNode,
       className,
-      ...passThroughProps,
+      ...attributes,
     } = this.props;
     // Using <> instead of <Fragment> is breaking the linter.
     return ReactDOM.createPortal(
       <Fragment>
         <div
           className={cn('center-modal', className, { 'is-visible': open, 'is-large': large })}
-          {...passThroughProps}
+          {...attributes}
         >
           {
             hasX &&

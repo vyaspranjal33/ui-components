@@ -33,7 +33,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
   };
 
   public get termControls(): React.ReactNode {
-    const { editable, editing, onCancel, onConfirm, showConfirm, ...passThroughProps } = this.props;
+    const { editable, editing, onCancel, onConfirm, showConfirm, ...attributes } = this.props;
 
     if (editing) {
       return (
@@ -79,11 +79,11 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       onConfirm,
       showConfirm,
       className,
-      ...passThroughProps,
+      ...attributes,
     } = this.props;
 
     return (
-      <div className={cn('segment-term-wrap', className)} {...passThroughProps}>
+      <div className={cn('segment-term-wrap', className)} {...attributes}>
         <p className="segment-term-title">
           {title}
         </p>

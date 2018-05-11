@@ -14,7 +14,7 @@ export interface StatisticsProps {
 }
 
 export const Statistics: React.SFC<StatisticsProps> = (
-  { statistics, statsClassName, className, ...passThroughProps },
+  { statistics, statsClassName, className, ...attributes },
 ) => {
   // This uses numbers rather than formatted strings to prepare for locale specific number formatting
   const formatStatistic = (amount: number, format: string) => {
@@ -40,7 +40,7 @@ export const Statistics: React.SFC<StatisticsProps> = (
 
   return statisticsElements ?
     (
-      <div className={cn('email-card-stats', className)} {...passThroughProps}>
+      <div className={cn('email-card-stats', className)} {...attributes}>
         {statisticsElements}
       </div>
     ) : null;

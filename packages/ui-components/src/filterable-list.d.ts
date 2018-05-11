@@ -35,7 +35,7 @@ export declare class FilterableList extends PureComponent<FilterableListProps, F
     handlers: {
         [key: string]: (filterName: string, event: any) => void;
     };
-    private passThroughProps;
+    private attributes;
     constructor(props: FilterableListProps);
     handleFilterChange: (filterName: string, event: any) => void;
     readonly filteredItems: any[];

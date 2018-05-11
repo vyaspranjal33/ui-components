@@ -9,13 +9,13 @@ export interface ProgressProps {
   className?: string;
 }
 
-export const Progress: React.SFC<ProgressProps> = ({ children, vertical, className, ...passThroughProps }) => {
+export const Progress: React.SFC<ProgressProps> = ({ children, vertical, className, ...attributes }) => {
   return (
     <section
       className={cn('progress-container', className, {
         'is-vertical': vertical,
       })}
-      {...passThroughProps}
+      {...attributes}
     >
       <ul className="progress-stages">{children}</ul>
     </section>
@@ -38,7 +38,7 @@ export const ProgressStage: React.SFC<ProgressStageProps> = ({
   done,
   selected,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => {
   return (
     <li
@@ -46,7 +46,7 @@ export const ProgressStage: React.SFC<ProgressStageProps> = ({
         'is-done': done,
         'is-selected': selected,
       })}
-      {...passThroughProps}
+      {...attributes}
     >
       <label>{label}</label>
     </li>

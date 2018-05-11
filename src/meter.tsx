@@ -7,9 +7,9 @@ export interface MeterProps {
   className?: string;
 }
 
-export const Meter: React.SFC<MeterProps> = ({ title, value, className, ...passThroughProps }) => {
+export const Meter: React.SFC<MeterProps> = ({ title, value, className, ...attributes }) => {
   return (
-    <div className={cn('meter-container', className)} {...passThroughProps}>
+    <div className={cn('meter-container', className)} {...attributes}>
       <span className="meter-title">{title}</span>{' '}
       <span className="meter-value">{value}%</span>
       <div className="meter-bar">

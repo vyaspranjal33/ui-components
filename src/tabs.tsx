@@ -19,7 +19,7 @@ export const Tab: React.SFC<TabProps> = ({
   onClick: handleClick,
   number,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => {
   return (
     <li
@@ -27,7 +27,7 @@ export const Tab: React.SFC<TabProps> = ({
         'is-active': active,
       })}
       onClick={handleClick}
-      {...passThroughProps}
+      {...attributes}
     >
       {children} {number && <span className="tab-number">{number}</span>}
     </li>
@@ -51,7 +51,7 @@ export const Tabs: React.SFC<any> = ({
   zeroBorder,
   onChange,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => {
   return (
     <ul
@@ -59,7 +59,7 @@ export const Tabs: React.SFC<any> = ({
         'is-centered': centered,
         'zero-border': zeroBorder,
       })}
-      {...passThroughProps}
+      {...attributes}
     >
       {map(children, (tab: React.ReactElement<any>, index) => {
         return React.cloneElement(tab, {

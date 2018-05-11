@@ -16,7 +16,7 @@ export const Checkbox: React.SFC<CheckboxProps> = ({
   label,
   onChange,
   value,
-  ...passThroughProps,
+  ...attributes,
 }) => {
   return (
     <div className="input-checkbox-wrap">
@@ -27,7 +27,7 @@ export const Checkbox: React.SFC<CheckboxProps> = ({
         onChange={onChange}
         type="checkbox"
         value={value}
-        {...passThroughProps}
+        {...attributes}
       />
       <label className="input-checkbox-label" htmlFor={id}>
         {label}

@@ -48,7 +48,7 @@ export class DropdownButton extends React.Component<
       small,
       type,
       className,
-      ...passThroughProps,
+      ...attributes,
     } = this.props;
     const isActive = this.state.active;
     const hasBadge: boolean = !!badge || badge === 0;
@@ -77,7 +77,7 @@ export class DropdownButton extends React.Component<
             'is-loading': loading,
           })}
           onClick={this.handleClick}
-          {...passThroughProps}
+          {...attributes}
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
           {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}

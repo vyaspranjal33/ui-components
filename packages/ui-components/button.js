@@ -32,7 +32,7 @@ export var Button = function (props) {
         React.createElement("button", { type: btnType }, props.children)));
 };
 export var Buttonized = function (_a) {
-    var children = _a.children, type = _a.type, badge = _a.badge, disabled = _a.disabled, loading = _a.loading, small = _a.small, onDark = _a.onDark, onClick = _a.onClick, group = _a.group, active = _a.active, icon = _a.icon, id = _a.id, passThroughProps = __rest(_a, ["children", "type", "badge", "disabled", "loading", "small", "onDark", "onClick", "group", "active", "icon", "id"]);
+    var children = _a.children, type = _a.type, badge = _a.badge, disabled = _a.disabled, loading = _a.loading, small = _a.small, onDark = _a.onDark, onClick = _a.onClick, group = _a.group, active = _a.active, icon = _a.icon, id = _a.id, attributes = __rest(_a, ["children", "type", "badge", "disabled", "loading", "small", "onDark", "onClick", "group", "active", "icon", "id"]);
     var hasBadge = !!badge || badge === 0;
     var hasIcon = !!icon;
     var content = [];
@@ -58,7 +58,7 @@ export var Buttonized = function (_a) {
             'is-disabled': disabled,
             'is-loading': loading,
         }), id: id,
-        onClick: onClick }, passThroughProps), content));
+        onClick: onClick }, attributes), content));
 };
 Button.defaultProps = {
     active: false,

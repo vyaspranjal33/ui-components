@@ -63,7 +63,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   icon,
   id,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
@@ -109,7 +109,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
         }),
         id,
         onClick,
-        ...passThroughProps,
+        ...attributes,
       },
       content,
     )

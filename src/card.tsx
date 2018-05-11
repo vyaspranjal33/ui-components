@@ -28,7 +28,7 @@ export const Card: React.SFC<CardProps> = ({
   thin,
   title,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => {
 
   const titleStyle = {
@@ -41,7 +41,7 @@ export const Card: React.SFC<CardProps> = ({
         'is-centered': centered,
         'is-thin': thin,
       })}
-      {...passThroughProps}
+      {...attributes}
     >
       {badge && <Badge {...badge} />}
       {title && <h2 style={titleStyle}>{title}</h2>}

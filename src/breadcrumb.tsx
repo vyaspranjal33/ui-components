@@ -25,9 +25,9 @@ export const Breadcrumb: React.SFC<BreadcrumbProps> = ({
   children,
   withoutTrailingSlash,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => (
-  <ol className={cn('breadcrumb', className)} {...passThroughProps}>
+  <ol className={cn('breadcrumb', className)} {...attributes}>
     {mapper(children)}
     {!withoutTrailingSlash && <li />}
   </ol>

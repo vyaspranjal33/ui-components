@@ -20,10 +20,10 @@ const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
   renderSendTimeLink,
   alert = '',
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => {
   return (
-    <div className={cn('email-card-send-time', className, { 'has-value': !!value })} {...passThroughProps}>
+    <div className={cn('email-card-send-time', className, { 'has-value': !!value })} {...attributes}>
       <Buttonized type="secondary">
           {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
@@ -38,7 +38,7 @@ export interface EmailCardDetail {
 }
 
 const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[], className?: string }> =
-({ details, className, ...passThroughProps }) => {
+({ details, className, ...attributes }) => {
   const rows = details && details.map((detail) => {
     return (
       <tr key={detail.label}>
@@ -49,7 +49,7 @@ const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[], className?: str
   });
 
   return (
-    <div className={cn('email-card-details', className)} {...passThroughProps}>
+    <div className={cn('email-card-details', className)} {...attributes}>
       <table>
         <tbody>
           {rows}
@@ -69,9 +69,9 @@ const EmailCardContent: React.SFC<EmailCardContentProps> = ({
   thumbnailUrl,
   onContentEditClick,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => (
-  <div className={cn('email-card-content', className)} {...passThroughProps}>
+  <div className={cn('email-card-content', className)} {...attributes}>
     {
       thumbnailUrl ?
         <a href="#">
@@ -94,9 +94,9 @@ export interface EmailCardAddButtonProps {
   className?: string;
 }
 
-export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick, className, ...passThroughProps }) => {
+export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick, className, ...attributes }) => {
   return (
-    <div className={cn('btn-list', 'email-card-add', className)} {...passThroughProps}>
+    <div className={cn('btn-list', 'email-card-add', className)} {...attributes}>
       <Button type="secondary" onClick={onClick}>
         Add an Email
       </Button>
@@ -146,7 +146,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
       thumbnailUrl,
       live,
       className,
-      ...passThroughProps,
+      ...attributes,
     } = this.props;
     const alertEl = renderAlert && renderAlert();
     return (
@@ -157,7 +157,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
           'is-live': live,
           'is-paused': paused,
         })}
-        {...passThroughProps}
+        {...attributes}
       >
         <EmailCardSendTime
           value={sendTimeValue}

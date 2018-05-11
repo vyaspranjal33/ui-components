@@ -42,11 +42,11 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
       isOpen,
       bodyNode,
       className,
-      ...passThroughProps,
+      ...attributes,
     } = this.props;
 
     return ReactDOM.createPortal(
-      <div className={cn('sg-modal', className, { 'is-visible': isOpen })} {...passThroughProps}>
+      <div className={cn('sg-modal', className, { 'is-visible': isOpen })} {...attributes}>
         <div className="conf-alert sg-modal-content">
           <h2 className={cn('conf-alert-header', {'conf-alert-header-with-icon': !!iconType})}>
             {

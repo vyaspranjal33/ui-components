@@ -9,7 +9,7 @@ export interface LoaderProps {
   className?: string;
 }
 
-export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered, className, ...passThroughProps }) => {
+export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered, className, ...attributes }) => {
   let size = 10;
   if (large) {
     size *= 2;
@@ -25,7 +25,7 @@ export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered,
         'is-small': small,
         'loader-on-dark': onDark,
       })}
-      {...passThroughProps}
+      {...attributes}
     >
       <rect className="logo-square bottom-left" width={size} height={size} />
       <rect className="logo-square bottom-middle" width={size} height={size} />

@@ -11,9 +11,9 @@ export interface NumberedStepProps {
 export const NumberedStep: React.SFC<NumberedStepProps> = ({
   children,
   header,
-  ...passThroughProps,
+  ...attributes,
 }) => (
-  <li {...passThroughProps}>
+  <li {...attributes}>
     <h3>{header}</h3>
     {children}
   </li>
@@ -29,9 +29,9 @@ export interface NumberedStepsProps {
 export const NumberedSteps: React.SFC<NumberedStepsProps> = ({
   children,
   className,
-  ...passThroughProps,
+  ...attributes,
 }) => (
-  <ol className={cn('numbered-steps', className)} {...passThroughProps}>
+  <ol className={cn('numbered-steps', className)} {...attributes}>
     {children}
   </ol>
 );
