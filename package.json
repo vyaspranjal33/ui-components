@@ -9,6 +9,7 @@
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",
+    "update-snapshot": "jest -u",
     "ci-test": "yarn lint && yarn test && yarn build-storybook",
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook",

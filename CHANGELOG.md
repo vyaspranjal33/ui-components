@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 0.14.0
+- attributes added to every component.  This allows developers to pass any attribute they'd like to any component, and it'll slap it on the element of most importance.  Usually that is the container, but in some specific cases it will be an 'input'.
 ## 0.13.4
 - Add EmailCard component
 ## 0.13.3

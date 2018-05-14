@@ -16,6 +16,7 @@ exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
       className="btn btn-primary"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Save and Apply
     </button>
@@ -401,6 +402,7 @@ exports[`Storyshots Button Danger Button (Disabled) 1`] = `
   className="btn btn-danger is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Danger (Disabled)
 </button>
@@ -411,6 +413,7 @@ exports[`Storyshots Button Danger Button 1`] = `
   className="btn btn-danger"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Danger
 </button>
@@ -421,6 +424,7 @@ exports[`Storyshots Button Danger Button with Badge 1`] = `
   className="btn btn-danger has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -431,11 +435,13 @@ exports[`Storyshots Button Danger Button with Badge 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button Danger Button with Icon 1`] = `
+exports[`Storyshots Button Danger Button with Icon and Data Attr 1`] = `
 <button
   className="btn btn-danger has-icon"
+  data-role="test-role"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-trash"
@@ -508,6 +514,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
       className="btn btn-primary btn-on-dark"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Primary
     </button>
@@ -515,6 +522,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
       className="btn btn-secondary btn-on-dark"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Secondary
     </button>
@@ -522,6 +530,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
       className="btn btn-secondary btn-on-dark is-disabled"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Disabled
     </button>
@@ -537,6 +546,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Primary
   </button>
@@ -544,6 +554,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
     className="btn btn-secondary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Secondary
   </button>
@@ -551,6 +562,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
     className="btn btn-danger"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Danger
   </button>
@@ -562,6 +574,7 @@ exports[`Storyshots Button Primary Button (Disabled) 1`] = `
   className="btn btn-primary is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Primary (Disabled)
 </button>
@@ -572,6 +585,7 @@ exports[`Storyshots Button Primary Button (Loading) 1`] = `
   className="btn btn-primary has-icon is-loading"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <svg
     className="sg-loader is-small loader-on-dark"
@@ -621,6 +635,7 @@ exports[`Storyshots Button Primary Button 1`] = `
   className="btn btn-primary"
   id="stui-test-locator-abc"
   onClick={[Function]}
+  type="button"
 >
   Primary
 </button>
@@ -631,6 +646,7 @@ exports[`Storyshots Button Primary Button with Badge 1`] = `
   className="btn btn-primary has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -646,6 +662,7 @@ exports[`Storyshots Button Primary Button with Icon 1`] = `
   className="btn btn-primary has-icon"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-create"
@@ -661,6 +678,7 @@ exports[`Storyshots Button Secondary Button (Disabled) 1`] = `
   className="btn btn-secondary is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Secondary (Disabled)
 </button>
@@ -671,6 +689,7 @@ exports[`Storyshots Button Secondary Button (Loading) 1`] = `
   className="btn btn-secondary has-icon is-loading"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <svg
     className="sg-loader is-small"
@@ -720,6 +739,7 @@ exports[`Storyshots Button Secondary Button 1`] = `
   className="btn btn-secondary"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Secondary
 </button>
@@ -730,6 +750,7 @@ exports[`Storyshots Button Secondary Button with Badge 1`] = `
   className="btn btn-secondary has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -740,11 +761,13 @@ exports[`Storyshots Button Secondary Button with Badge 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button Secondary Button with Icon 1`] = `
+exports[`Storyshots Button Secondary Submit Button with Icon 1`] = `
 <button
   className="btn btn-secondary has-icon"
   id={undefined}
+  isSubmit={true}
   onClick={[Function]}
+  type="submit"
 >
   <i
     className="sg-icon sg-icon-copy"
@@ -760,6 +783,7 @@ exports[`Storyshots Button Small Danger Button (Disabled) 1`] = `
   className="btn btn-danger btn-small is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Danger (Disabled)
 </button>
@@ -770,6 +794,7 @@ exports[`Storyshots Button Small Danger Button 1`] = `
   className="btn btn-danger btn-small"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Danger
 </button>
@@ -780,6 +805,7 @@ exports[`Storyshots Button Small Danger Button with Badge 1`] = `
   className="btn btn-danger btn-small has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -795,6 +821,7 @@ exports[`Storyshots Button Small Danger Button with Icon 1`] = `
   className="btn btn-danger btn-small has-icon"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-trash"
@@ -810,6 +837,7 @@ exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
   className="btn btn-primary btn-small is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Primary (Disabled)
 </button>
@@ -820,6 +848,7 @@ exports[`Storyshots Button Small Primary Button (Loading) 1`] = `
   className="btn btn-primary btn-small has-icon is-loading"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <svg
     className="sg-loader is-small loader-on-dark"
@@ -869,6 +898,7 @@ exports[`Storyshots Button Small Primary Button 1`] = `
   className="btn btn-primary btn-small"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Primary
 </button>
@@ -879,6 +909,7 @@ exports[`Storyshots Button Small Primary Button with Badge 1`] = `
   className="btn btn-primary btn-small has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -894,6 +925,7 @@ exports[`Storyshots Button Small Primary Button with Icon 1`] = `
   className="btn btn-primary btn-small has-icon"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-create"
@@ -909,6 +941,7 @@ exports[`Storyshots Button Small Secondary Button (Disabled) 1`] = `
   className="btn btn-secondary btn-small is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Secondary (Disabled)
 </button>
@@ -919,6 +952,7 @@ exports[`Storyshots Button Small Secondary Button (Loading) 1`] = `
   className="btn btn-secondary btn-small has-icon is-loading"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <svg
     className="sg-loader is-small"
@@ -968,6 +1002,7 @@ exports[`Storyshots Button Small Secondary Button 1`] = `
   className="btn btn-secondary btn-small"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Secondary
 </button>
@@ -978,6 +1013,7 @@ exports[`Storyshots Button Small Secondary Button with Badge 1`] = `
   className="btn btn-secondary btn-small has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -993,6 +1029,7 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
   className="btn btn-secondary btn-small has-icon"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-copy"
@@ -1218,6 +1255,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children and Cent
         className="btn btn-primary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Choose
       </button>
@@ -1257,6 +1295,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
         className="btn btn-primary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Choose
       </button>
@@ -1303,11 +1342,13 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
   <div
     className="center-modal"
+    data-role="example"
   >
     <h1>
       Scorpion XING Zone 🦂
@@ -1325,6 +1366,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Cancel
         </button>
@@ -1332,6 +1374,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
           className="btn btn-primary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Confirm
         </button>
@@ -1351,11 +1394,13 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
   <div
     className="center-modal"
+    data-role="example"
   >
     <i
       className="sg-icon sg-icon-x"
@@ -1421,6 +1466,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
@@ -1456,6 +1502,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Cancel
         </button>
@@ -1463,6 +1510,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
           className="btn btn-primary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Confirm
         </button>
@@ -1478,6 +1526,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
@@ -1508,6 +1557,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Cancel
         </button>
@@ -1515,6 +1565,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
           className="btn btn-primary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Confirm
         </button>
@@ -2146,6 +2197,7 @@ exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Add Email Content
       </button>
@@ -2312,6 +2364,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Add Email Content
       </button>
@@ -2479,6 +2532,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           className="btn btn-secondary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Add Email Content
         </button>
@@ -2642,6 +2696,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           className="btn btn-secondary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Add Email Content
         </button>
@@ -2805,6 +2860,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           className="btn btn-secondary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Add Email Content
         </button>
@@ -2968,6 +3024,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           className="btn btn-secondary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Add Email Content
         </button>
@@ -3031,6 +3088,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       className="btn btn-secondary"
       id={undefined}
       onClick={null}
+      type="button"
     >
       Add an Email
     </button>
@@ -3147,6 +3205,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           className="btn btn-secondary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Add Email Content
         </button>
@@ -3310,6 +3369,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           className="btn btn-secondary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Add Email Content
         </button>
@@ -3473,6 +3533,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           className="btn btn-secondary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Add Email Content
         </button>
@@ -3636,6 +3697,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           className="btn btn-secondary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Add Email Content
         </button>
@@ -3803,6 +3865,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Add Email Content
       </button>
@@ -3969,6 +4032,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Add Email Content
       </button>
@@ -4058,6 +4122,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
             className="btn btn-primary btn-small"
             id={undefined}
             onClick={[Function]}
+            type="button"
           >
             Save and Apply
           </button>
@@ -4157,6 +4222,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Add Email Content
       </button>
@@ -4228,6 +4294,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
           className="btn btn-primary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Save and Apply
         </button>
@@ -4345,6 +4412,7 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Add Email Content
       </button>
@@ -4614,6 +4682,7 @@ exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Add Email Content
       </button>
@@ -4689,6 +4758,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
       className="btn btn-primary"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Primary
     </button>
@@ -4696,6 +4766,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
       className="btn btn-secondary"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Secondary
     </button>
@@ -4726,6 +4797,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
         className="btn btn-primary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Primary
       </button>
@@ -4733,6 +4805,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Secondary
       </button>
@@ -5111,11 +5184,20 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
       </div>
       <div
         className="btn-list"
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "paddingLeft": "20px",
+          }
+        }
       >
         <button
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Clear
         </button>
@@ -5206,11 +5288,20 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
       </p>
       <div
         className="btn-list"
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "paddingLeft": "20px",
+          }
+        }
       >
         <button
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Clear
         </button>
@@ -5402,11 +5493,20 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
       </div>
       <div
         className="btn-list"
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "paddingLeft": "20px",
+          }
+        }
       >
         <button
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Clear
         </button>
@@ -6110,6 +6210,7 @@ exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page He
         className="btn btn-primary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Create Campaign
       </button>
@@ -6396,6 +6497,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
         className="btn btn-danger btn-small"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         <i
           className="sg-icon sg-icon-x"
@@ -6412,6 +6514,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
       className="btn btn-secondary has-icon"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       <i
         className="sg-icon sg-icon-plus"
@@ -6489,6 +6592,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
         className="btn btn-secondary btn-small"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         <i
           className="sg-icon sg-icon-check-thin"
@@ -6500,6 +6604,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
         className="btn btn-danger btn-small"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         <i
           className="sg-icon sg-icon-x"
@@ -6516,6 +6621,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       className="btn btn-secondary has-icon"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       <i
         className="sg-icon sg-icon-plus"
@@ -6567,6 +6673,7 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
           className="btn btn-primary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Save and Apply
         </button>
@@ -6647,6 +6754,7 @@ exports[`Storyshots Segment Term Segment term with radio btns and alert 1`] = `
           className="btn btn-primary"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Save and Apply
         </button>
@@ -6714,6 +6822,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         className="btn btn-secondary has-icon"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         <i
           className="sg-icon sg-icon-plus"
@@ -6733,6 +6842,7 @@ Array [
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>,
@@ -6746,6 +6856,7 @@ Array [
       className="btn btn-secondary"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Alright then
     </button>
@@ -7843,6 +7954,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
     className="btn btn-group-item is-active"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Day
   </button>
@@ -7850,6 +7962,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
     className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Week
   </button>
@@ -7857,6 +7970,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
     className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Month
   </button>
@@ -7871,6 +7985,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
     className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Day
   </button>
@@ -7878,6 +7993,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
     className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Week
   </button>
@@ -7885,6 +8001,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
     className="btn btn-group-item is-active"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Month
   </button>

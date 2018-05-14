@@ -10,10 +10,12 @@ import {
 
 export interface ConfirmationModalProps extends ModalProps {
   iconType?: IconType;
+  isOpen?: boolean;
   modalContainer?: Element;
   renderActions: string | (() => React.ReactNode);
   renderBody: string | (() => React.ReactNode);
   renderHeader: string | (() => React.ReactNode);
+  className?: string;
 }
 
 const evaluateRenderProp: (prop: string | (() => React.ReactNode)) => React.ReactNode = (prop) => {
@@ -31,27 +33,39 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
   }
 
   public render() {
+    const {
+      iconType,
+      modalContainer,
+      renderBody,
+      renderActions,
+      renderHeader,
+      isOpen,
+      bodyNode,
+      className,
+      ...attributes,
+    } = this.props;
+
     return ReactDOM.createPortal(
-      <div className={cn('sg-modal', { 'is-visible': this.props.isOpen })}>
+      <div className={cn('sg-modal', className, { 'is-visible': isOpen })} {...attributes}>
         <div className="conf-alert sg-modal-content">
-          <h2 className={cn('conf-alert-header', {'conf-alert-header-with-icon': !!this.props.iconType})}>
+          <h2 className={cn('conf-alert-header', {'conf-alert-header-with-icon': !!iconType})}>
             {
-              !!this.props.iconType &&
-                <Icon type={this.props.iconType} />
+              !!iconType &&
+                <Icon type={iconType} />
             }
-            {evaluateRenderProp(this.props.renderHeader)}
+            {evaluateRenderProp(renderHeader)}
           </h2>
           <div className="conf-alert-body">
             <p className="conf-alert-text">
-              {evaluateRenderProp(this.props.renderBody)}
+              {evaluateRenderProp(renderBody)}
             </p>
           </div>
           <div className="conf-alert-actions">
-            {evaluateRenderProp(this.props.renderActions)}
+            {evaluateRenderProp(renderActions)}
           </div>
         </div>
       </div>
-    , this.props.modalContainer);
+    , modalContainer);
   }
 }
 

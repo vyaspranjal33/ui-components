@@ -7,6 +7,7 @@ const { map } = React.Children;
 
 export interface ToggleButtonsProps {
   children?: any[];
+  className?: string;
   onChange?: (children: React.ReactNode, label?: string, index?: number) => any;
 }
 
@@ -17,9 +18,11 @@ export interface ToggleButtonsState {
 export const ToggleButtons: React.SFC<ToggleButtonsProps> = ({
   children,
   onChange,
+  className,
+  ...attributes,
 }) => {
   return (
-    <div className="btn-group">
+    <div className={cn('btn-group', className)} {...attributes}>
       {map(children, (button: React.ReactElement<any>, index) => {
         return React.cloneElement(button, {
           onClick(event: any) {

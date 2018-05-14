@@ -120,6 +120,10 @@ yarn build-storybook
 ```
 yarn prepublish
 ```
+* Update Snapshots
+```
+yarn update-snapshot
+```
 # Testing
 To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report.
 

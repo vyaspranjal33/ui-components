@@ -30,14 +30,14 @@ stories.add('Primary Button with Icon', () => (
   </Button>
 ));
 
-stories.add('Secondary Button with Icon', () => (
-  <Button type="secondary" icon="copy" onClick={action('Button Clicked')}>
+stories.add('Secondary Submit Button with Icon', () => (
+  <Button isSubmit={true} type="secondary" icon="copy" onClick={action('Button Clicked')}>
     Secondary
   </Button>
 ));
 
-stories.add('Danger Button with Icon', () => (
-  <Button type="danger" icon="trash" onClick={action('Button Clicked')}>
+stories.add('Danger Button with Icon and Data Attr', () => (
+  <Button type="danger" icon="trash" onClick={action('Button Clicked')} data-role="test-role">
     Danger
   </Button>
 ));
