@@ -104,3 +104,43 @@ stories.add('Option groups', () => (
     ]}
   />
 ));
+
+// This is just to illustrate 2 diff ways to add custom styles.
+// the styles={customStyles} way is strongly preferred.
+stories.add('Custom classnames and styles', () => {
+  const Control = (props: any) => (
+    <div className="my-control-wrapper">
+      <p>My amazing select!</p>
+      <components.Control {...props} />
+    </div>
+  );
+
+  // this is the preferred way to style react-select
+  const customStyles = {
+    option: (base: any) => ({
+      ...base,
+      borderBottom: '1px dotted pink',
+      cursor: 'pointer',
+    })
+  };
+
+  return (
+    <div>
+      { /* i know this looks weird, but this is just to illustrate styling by classnames */ }
+      <style>
+      {`
+        .my-control-wrapper {
+          background: #927;
+          color: #eee;
+          padding: 1em;
+        }
+      `}
+      </style>
+      <Select
+        components={{ Control }}
+        options={powerups}
+        styles={customStyles}
+      />
+    </div>
+  );
+});
