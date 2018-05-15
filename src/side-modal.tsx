@@ -10,6 +10,7 @@ export interface SideModalProps extends ModalProps {
   children?: React.ReactNode;
   modalContainer?: Element;
   onClose: (evt: any) => void;
+  className?: string;
 }
 
 export class SideModal extends React.Component<SideModalProps> {
@@ -23,17 +24,27 @@ export class SideModal extends React.Component<SideModalProps> {
   }
 
   public render() {
+    const {
+      isOpen,
+      onClose,
+      children,
+      modalContainer,
+      bodyNode,
+      className,
+      ...attributes,
+    } = this.props;
+
     return ReactDOM.createPortal(
       <Fragment>
-        <div className={cn('side-modal', { 'is-visible': this.props.isOpen })}>
-          {this.props.children}
+        <div className={cn('side-modal', className, { 'is-visible': isOpen })} {...attributes}>
+          {children}
         </div>
         <div
-          className={cn('modal-mask', { 'is-visible': this.props.isOpen })}
-          onClick={this.props.onClose}
+          className={cn('modal-mask', { 'is-visible': isOpen })}
+          onClick={onClose}
         />
       </Fragment>
-    , this.props.modalContainer);
+    , modalContainer);
   }
 }
 

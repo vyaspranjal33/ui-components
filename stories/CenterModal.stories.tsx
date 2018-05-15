@@ -30,6 +30,7 @@ class ExampleContainer extends Component<any, { isOpen: boolean }> {
           renderBody={this.props.renderBody}
           renderFooter={this.props.renderFooter ? () => this.props.renderFooter(this.close) : null}
           renderHeader={this.props.renderHeader}
+          data-role="example"
         />
       </div>
     );

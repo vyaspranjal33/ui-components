@@ -18,6 +18,8 @@ export interface AllButtonProps {
 }
 export interface ButtonProps extends AllButtonProps {
     children?: string | React.ReactNode;
+    isSubmit?: boolean;
+    isReset?: boolean;
 }
 export interface ButtonizedProps extends AllButtonProps {
     children?: React.ReactElement<ButtonProps>;

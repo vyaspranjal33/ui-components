@@ -12,11 +12,18 @@ interface EmailCardSendTimeProps {
   value?: string;
   renderSendTimeLink?: (value: string) => any;
   alert?: any;
+  className?: string;
 }
 
-const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({ value, renderSendTimeLink, alert = '' }) => {
+const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
+  value,
+  renderSendTimeLink,
+  alert = '',
+  className,
+  ...attributes,
+}) => {
   return (
-    <div className={cn('email-card-send-time', { 'has-value': !!value })}>
+    <div className={cn('email-card-send-time', className, { 'has-value': !!value })} {...attributes}>
       <Buttonized type="secondary">
           {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
@@ -30,7 +37,8 @@ export interface EmailCardDetail {
   renderEditDetailLink?: (value: string) => any;
 }
 
-const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details }) => {
+const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[], className?: string }> =
+({ details, className, ...attributes }) => {
   const rows = details && details.map((detail) => {
     return (
       <tr key={detail.label}>
@@ -41,7 +49,7 @@ const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details 
   });
 
   return (
-    <div className="email-card-details">
+    <div className={cn('email-card-details', className)} {...attributes}>
       <table>
         <tbody>
           {rows}
@@ -54,10 +62,16 @@ const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[] }> = ({ details 
 export interface EmailCardContentProps {
   thumbnailUrl: string;
   onContentEditClick: (event: any) => void;
+  className?: string;
 }
 
-const EmailCardContent: React.SFC<EmailCardContentProps> = ({ thumbnailUrl, onContentEditClick }) => (
-  <div className="email-card-content">
+const EmailCardContent: React.SFC<EmailCardContentProps> = ({
+  thumbnailUrl,
+  onContentEditClick,
+  className,
+  ...attributes,
+}) => (
+  <div className={cn('email-card-content', className)} {...attributes}>
     {
       thumbnailUrl ?
         <a href="#">
@@ -77,11 +91,12 @@ const EmailCardContent: React.SFC<EmailCardContentProps> = ({ thumbnailUrl, onCo
 
 export interface EmailCardAddButtonProps {
   onClick: (event: any) => void;
+  className?: string;
 }
 
-export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick }) => {
+export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick, className, ...attributes }) => {
   return (
-    <div className="btn-list email-card-add">
+    <div className={cn('btn-list', 'email-card-add', className)} {...attributes}>
       <Button type="secondary" onClick={onClick}>
         Add an Email
       </Button>
@@ -103,6 +118,7 @@ export interface EmailCardProps {
   sendTimeValue?: string;
   statistics?: Statistic[];
   thumbnailUrl?: string;
+  className?: string;
 }
 
 export class EmailCard extends React.Component<EmailCardProps> {
@@ -115,28 +131,46 @@ export class EmailCard extends React.Component<EmailCardProps> {
   };
 
   public render() {
-    const alertEl = this.props.renderAlert && this.props.renderAlert();
+    const {
+      details,
+      editing,
+      editable,
+      n,
+      onContentEditClick,
+      onSaveAlertClick,
+      paused,
+      renderSendTimeLink,
+      renderAlert,
+      sendTimeValue,
+      statistics,
+      thumbnailUrl,
+      live,
+      className,
+      ...attributes,
+    } = this.props;
+    const alertEl = renderAlert && renderAlert();
     return (
       <div
-        className={cn('email-card-wrap', {
-          'has-alert': !!this.props.renderAlert,
-          'is-editable': this.props.editable,
-          'is-live': this.props.live,
-          'is-paused': this.props.paused,
+        className={cn('email-card-wrap', className, {
+          'has-alert': !!renderAlert,
+          'is-editable': editable,
+          'is-live': live,
+          'is-paused': paused,
         })}
+        {...attributes}
       >
         <EmailCardSendTime
-          value={this.props.sendTimeValue}
-          renderSendTimeLink={this.props.renderSendTimeLink}
+          value={sendTimeValue}
+          renderSendTimeLink={renderSendTimeLink}
           alert={alertEl}
         />
-        <Statistics statsClassName="email-stats" statistics={this.props.statistics}/>
+        <Statistics statsClassName="email-stats" statistics={statistics}/>
         <div className="email-card">
           <div className="email-card-count">
-            <p>Email {this.props.n}</p>
+            <p>Email {n}</p>
           </div>
-          <EmailCardContent thumbnailUrl={this.props.thumbnailUrl} onContentEditClick={this.props.onContentEditClick} />
-          <EmailCardDetails details={this.props.details}/>
+          <EmailCardContent thumbnailUrl={thumbnailUrl} onContentEditClick={onContentEditClick} />
+          <EmailCardDetails details={details}/>
         </div>
         {alertEl}
       </div>
