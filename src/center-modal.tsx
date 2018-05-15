@@ -12,6 +12,7 @@ export interface CenterModalProps extends ModalProps {
   modalContainer?: Element;
   onClose: (evt: any) => void;
   open: boolean;
+  className?: string;
   renderBody: string | React.ReactNode | (() => React.ReactNode);
   renderFooter?: string | React.ReactNode | (() => React.ReactNode);
   renderHeader?: string | React.ReactNode | (() => React.ReactNode);
@@ -34,27 +35,43 @@ export class CenterModal extends Component<CenterModalProps> {
   }
 
   public render() {
+    const {
+      hasX,
+      large,
+      modalContainer,
+      onClose,
+      open,
+      renderBody,
+      renderFooter,
+      renderHeader,
+      bodyNode,
+      className,
+      ...attributes,
+    } = this.props;
     // Using <> instead of <Fragment> is breaking the linter.
     return ReactDOM.createPortal(
       <Fragment>
-        <div className={cn('center-modal', { 'is-visible': this.props.open, 'is-large': this.props.large })}>
+        <div
+          className={cn('center-modal', className, { 'is-visible': open, 'is-large': large })}
+          {...attributes}
+        >
           {
-            this.props.hasX &&
-              (<i className="sg-icon sg-icon-x" data-role="close-center-modal" onClick={this.props.onClose} />)
+            hasX &&
+              (<i className="sg-icon sg-icon-x" data-role="close-center-modal" onClick={onClose} />)
           }
-          {this.props.renderHeader && <h1>{evaluateRenderProp(this.props.renderHeader)}</h1>}
-          {evaluateRenderProp(this.props.renderBody)}
+          {renderHeader && <h1>{evaluateRenderProp(renderHeader)}</h1>}
+          {evaluateRenderProp(renderBody)}
           {
-            this.props.renderFooter &&
-              (<div className="modal-footer">{evaluateRenderProp(this.props.renderFooter)}</div>)
+            renderFooter &&
+              (<div className="modal-footer">{evaluateRenderProp(renderFooter)}</div>)
           }
         </div>
         <div
-          className={cn('modal-mask', { 'is-visible': this.props.open })}
-          onClick={this.props.onClose}
+          className={cn('modal-mask', { 'is-visible': open })}
+          onClick={onClose}
         />
       </Fragment>
-    , this.props.modalContainer);
+    , modalContainer);
   }
 }
 

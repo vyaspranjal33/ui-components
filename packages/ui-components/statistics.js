@@ -25,4 +25,4 @@ export var Statistics = function (_a) {
         (React.createElement("div", { className: "email-card-stats" }, statisticsElements)) : null;
 };
 export default Statistics;
-//# sourceMappingURL=Statistics.js.map
+//# sourceMappingURL=statistics.js.map

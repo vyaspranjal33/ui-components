@@ -14,6 +14,8 @@ export declare class DropdownButton extends React.Component<DropdownButtonProps 
     state: {
         active: boolean;
     };
+    private attributes;
+    constructor(props: DropdownButtonProps);
     handleClick: () => void;
     render(): JSX.Element;
 }

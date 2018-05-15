@@ -92,6 +92,29 @@ render() {
 }
 ```
 
+#### Capture Additional Props in attributes
+
+If you're creating a new component, allow the consumer of that component to pass in whatever attributes they may want on the element(s).  You can accomplish this by accepting props with object deconstruction and the spread operator.  Then spread the unnamed props on the most important element.
+
+```js
+const {
+  label,
+  thin,
+  ...attributes
+} = props;
+
+return (
+  <hr
+    className={cn({
+      'has-label': !!label,
+      'is-thin': thin,
+    })}
+    data-label={label}
+    {...attributes}
+  />
+);
+```
+
 [fragments]: https://reactjs.org/blog/2017/11/28/react-v16.2.0-fragment-support.html
 
 ## Submitting a Component

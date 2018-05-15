@@ -4,11 +4,12 @@ import cn from './utilities/classnames';
 export interface MeterProps {
   title: string;
   value: number;
+  className?: string;
 }
 
-export const Meter: React.SFC<MeterProps> = ({ title, value }) => {
+export const Meter: React.SFC<MeterProps> = ({ title, value, className, ...attributes }) => {
   return (
-    <div className="meter-container">
+    <div className={cn('meter-container', className)} {...attributes}>
       <span className="meter-title">{title}</span>{' '}
       <span className="meter-value">{value}%</span>
       <div className="meter-bar">

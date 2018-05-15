@@ -6,14 +6,16 @@ export interface BadgeProps {
   children?: string | number;
   color?: string;
   content?: string | number;
+  className?: string;
 }
 
-export const Badge: React.SFC<BadgeProps> = ({ children, color, content }) => (
-  <span className={cn('badge', color)}>{children || content}</span>
+export const Badge: React.SFC<BadgeProps> = ({ children, color, content, className, ...attributes }) => (
+  <span className={cn('badge', className, color)} {...attributes}>{children || content}</span>
 );
 
 Badge.defaultProps = {
   children: 0,
+  className: '',
   color: '',
 };
 

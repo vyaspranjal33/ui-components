@@ -8,6 +8,7 @@ export interface DropdownButtonProps {
   children?: any;
   label?: string;
   gear?: boolean;
+  className?: string;
 }
 
 export interface DropdownButtonState {
@@ -33,6 +34,7 @@ export class DropdownButton extends React.Component<
 
   public render() {
     const {
+      active,
       badge,
       children,
       disabled,
@@ -45,8 +47,10 @@ export class DropdownButton extends React.Component<
       onDark,
       small,
       type,
+      className,
+      ...attributes,
     } = this.props;
-    const { active } = this.state;
+    const isActive = this.state.active;
     const hasBadge: boolean = !!badge || badge === 0;
     const hasIcon: boolean = !!icon;
 
@@ -62,17 +66,18 @@ export class DropdownButton extends React.Component<
     return (
       <div className="btn-list">
         <div
-          className={cn('btn', 'btn-dropdown', 'dropdown', `btn-${buttonType}`, {
+          className={cn('btn', 'btn-dropdown', 'dropdown', `btn-${buttonType}`, className, {
             'btn-dropdown-gear': gear,
             'btn-on-dark': onDark,
             'btn-small': small,
             'has-badge': hasBadge,
             'has-icon': hasIcon || loading,
-            'is-active': active,
+            'is-active': isActive,
             'is-disabled': disabled,
             'is-loading': loading,
           })}
           onClick={this.handleClick}
+          {...attributes}
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
           {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}

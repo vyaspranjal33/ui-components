@@ -20,10 +20,13 @@ export interface AllButtonProps {
   icon?: IconType;
   id?: string;
   isLink?: boolean;
+  className?: string;
 }
 
 export interface ButtonProps extends AllButtonProps {
   children?: string | React.ReactNode;
+  isSubmit?: boolean;
+  isReset?: boolean;
 }
 
 export interface ButtonizedProps extends AllButtonProps {
@@ -31,9 +34,15 @@ export interface ButtonizedProps extends AllButtonProps {
 }
 
 export const Button: React.SFC<ButtonProps> = (props) => {
+  let btnType = 'button';
+  if (props.isSubmit) {
+    btnType = 'submit';
+  } else if (props.isReset) {
+    btnType = 'reset';
+  }
   return (
     <Buttonized {...props} >
-      <button>
+      <button type={btnType}>
         {props.children}
       </button>
     </Buttonized>
@@ -53,6 +62,8 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   active,
   icon,
   id,
+  className,
+  ...attributes,
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
@@ -87,7 +98,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
     React.cloneElement(
       children,
       {
-        className: cn('btn', `btn-${type}`, {
+        className: cn('btn', `btn-${type}`, className, {
           'btn-on-dark': onDark,
           'btn-small': small,
           'has-badge': hasBadge,
@@ -98,6 +109,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
         }),
         id,
         onClick,
+        ...attributes,
       },
       content,
     )

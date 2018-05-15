@@ -6,6 +6,7 @@ import React, { PureComponent, ReactElement } from 'react';
 import Button from './button';
 import ButtonList from './button-list';
 import { TextInput } from './text-input';
+import cn from './utilities/classnames';
 
 const filterControlStyle = {
   display: 'flex',
@@ -38,6 +39,7 @@ export interface FilterableListContainerProps {
 
 export interface FilterableListProps extends FilterableListContainerProps {
   items: any[];
+  className?: string;
 }
 
 export interface FilterableListState {
@@ -145,15 +147,23 @@ export class FilterableList extends PureComponent<
 
   public render() {
     const {
+      clearButtonInHeader,
       clearButtonLabel,
-      title,
-      showClearButton,
+      filterTypes,
+      items,
+      onClear,
+      onChange,
+      onFilter,
       renderControls,
       renderItems,
+      showClearButton,
+      title,
+      className,
+      ...attributes,
     } = this.props;
 
     return (
-      <section className="FilterableList">
+      <section className={cn('FilterableList', className)} {...attributes}>
         <div className="filter-wrap">
           <div className="filter-header">
             <p className="filter-title">{title}</p>

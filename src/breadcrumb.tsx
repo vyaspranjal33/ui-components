@@ -1,10 +1,12 @@
 import React from 'react';
+import cn from './utilities/classnames';
 
 export interface BreadcrumbProps {
   children:
     | Array<React.ReactElement<ChildProps>>
     | React.ReactElement<ChildProps>;
   withoutTrailingSlash?: boolean;
+  className?: string;
 }
 
 export interface ChildProps {
@@ -22,8 +24,10 @@ const mapper = (children: Array<React.ReactElement<ChildProps>> | React.ReactEle
 export const Breadcrumb: React.SFC<BreadcrumbProps> = ({
   children,
   withoutTrailingSlash,
+  className,
+  ...attributes,
 }) => (
-  <ol className="breadcrumb">
+  <ol className={cn('breadcrumb', className)} {...attributes}>
     {mapper(children)}
     {!withoutTrailingSlash && <li />}
   </ol>
