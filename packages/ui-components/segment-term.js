@@ -8,6 +8,23 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 import React, { PureComponent } from 'react';
 import { Button } from './button';
 import { ButtonList } from './button-list';
@@ -20,7 +37,7 @@ var SegmentTerm = /** @class */ (function (_super) {
     }
     Object.defineProperty(SegmentTerm.prototype, "termControls", {
         get: function () {
-            var _a = this.props, editable = _a.editable, editing = _a.editing, onCancel = _a.onCancel, onConfirm = _a.onConfirm, showConfirm = _a.showConfirm;
+            var _a = this.props, editable = _a.editable, editing = _a.editing, onCancel = _a.onCancel, onConfirm = _a.onConfirm, showConfirm = _a.showConfirm, attributes = __rest(_a, ["editable", "editing", "onCancel", "onConfirm", "showConfirm"]);
             if (editing) {
                 return (React.createElement(ButtonList, null,
                     showConfirm &&
@@ -39,8 +56,8 @@ var SegmentTerm = /** @class */ (function (_super) {
         configurable: true
     });
     SegmentTerm.prototype.render = function () {
-        var _a = this.props, hasAddButton = _a.hasAddButton, hasSeparator = _a.hasSeparator, editable = _a.editable, editing = _a.editing, label = _a.label, onAddButtonClick = _a.onAddButtonClick, onEdit = _a.onEdit, queryName = _a.queryName, radios = _a.radios, renderAlert = _a.renderAlert, renderInputs = _a.renderInputs, title = _a.title;
-        return (React.createElement("div", { className: "segment-term-wrap" },
+        var _a = this.props, hasAddButton = _a.hasAddButton, hasSeparator = _a.hasSeparator, editable = _a.editable, editing = _a.editing, label = _a.label, onAddButtonClick = _a.onAddButtonClick, onEdit = _a.onEdit, queryName = _a.queryName, radios = _a.radios, renderAlert = _a.renderAlert, renderInputs = _a.renderInputs, title = _a.title, onCancel = _a.onCancel, onConfirm = _a.onConfirm, showConfirm = _a.showConfirm, className = _a.className, attributes = __rest(_a, ["hasAddButton", "hasSeparator", "editable", "editing", "label", "onAddButtonClick", "onEdit", "queryName", "radios", "renderAlert", "renderInputs", "title", "onCancel", "onConfirm", "showConfirm", "className"]);
+        return (React.createElement("div", __assign({ className: cn('segment-term-wrap', className) }, attributes),
             React.createElement("p", { className: "segment-term-title" }, title),
             React.createElement("div", { className: cn('segment-term', {
                     'has-alert': !!renderAlert,

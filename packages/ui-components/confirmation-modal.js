@@ -8,6 +8,23 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Icon } from './icon';
@@ -25,15 +42,16 @@ var ConfirmationModal = /** @class */ (function (_super) {
         modalWillReceiveProps(nextProps, this.props);
     };
     ConfirmationModal.prototype.render = function () {
-        return ReactDOM.createPortal(React.createElement("div", { className: cn('sg-modal', { 'is-visible': this.props.isOpen }) },
+        var _a = this.props, iconType = _a.iconType, modalContainer = _a.modalContainer, renderBody = _a.renderBody, renderActions = _a.renderActions, renderHeader = _a.renderHeader, isOpen = _a.isOpen, bodyNode = _a.bodyNode, className = _a.className, attributes = __rest(_a, ["iconType", "modalContainer", "renderBody", "renderActions", "renderHeader", "isOpen", "bodyNode", "className"]);
+        return ReactDOM.createPortal(React.createElement("div", __assign({ className: cn('sg-modal', className, { 'is-visible': isOpen }) }, attributes),
             React.createElement("div", { className: "conf-alert sg-modal-content" },
-                React.createElement("h2", { className: cn('conf-alert-header', { 'conf-alert-header-with-icon': !!this.props.iconType }) },
-                    !!this.props.iconType &&
-                        React.createElement(Icon, { type: this.props.iconType }),
-                    evaluateRenderProp(this.props.renderHeader)),
+                React.createElement("h2", { className: cn('conf-alert-header', { 'conf-alert-header-with-icon': !!iconType }) },
+                    !!iconType &&
+                        React.createElement(Icon, { type: iconType }),
+                    evaluateRenderProp(renderHeader)),
                 React.createElement("div", { className: "conf-alert-body" },
-                    React.createElement("p", { className: "conf-alert-text" }, evaluateRenderProp(this.props.renderBody))),
-                React.createElement("div", { className: "conf-alert-actions" }, evaluateRenderProp(this.props.renderActions)))), this.props.modalContainer);
+                    React.createElement("p", { className: "conf-alert-text" }, evaluateRenderProp(renderBody))),
+                React.createElement("div", { className: "conf-alert-actions" }, evaluateRenderProp(renderActions)))), modalContainer);
     };
     ConfirmationModal.defaultProps = {
         bodyNode: document.body,

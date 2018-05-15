@@ -1,4 +1,7 @@
 /// <reference types="react" />
 import React from 'react';
-export declare const FragmentLoader: React.SFC;
+export interface FragmentLoaderProps {
+    className?: string;
+}
+export declare const FragmentLoader: React.SFC<FragmentLoaderProps>;
 export default FragmentLoader;

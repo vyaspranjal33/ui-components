@@ -16,12 +16,22 @@ var __assign = (this && this.__assign) || Object.assign || function(t) {
     }
     return t;
 };
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 import capitalize from 'lodash/capitalize';
 import identity from 'lodash/identity';
 import values from 'lodash/values';
 import React, { PureComponent } from 'react';
 import Button from './button';
 import ButtonList from './button-list';
+import cn from './utilities/classnames';
 var filterControlStyle = {
     display: 'flex',
     justifyContent: 'space-between',
@@ -131,8 +141,8 @@ var FilterableList = /** @class */ (function (_super) {
         configurable: true
     });
     FilterableList.prototype.render = function () {
-        var _a = this.props, clearButtonLabel = _a.clearButtonLabel, title = _a.title, showClearButton = _a.showClearButton, renderControls = _a.renderControls, renderItems = _a.renderItems;
-        return (React.createElement("section", { className: "FilterableList" },
+        var _a = this.props, clearButtonInHeader = _a.clearButtonInHeader, clearButtonLabel = _a.clearButtonLabel, filterTypes = _a.filterTypes, items = _a.items, onClear = _a.onClear, onChange = _a.onChange, onFilter = _a.onFilter, renderControls = _a.renderControls, renderItems = _a.renderItems, showClearButton = _a.showClearButton, title = _a.title, className = _a.className, attributes = __rest(_a, ["clearButtonInHeader", "clearButtonLabel", "filterTypes", "items", "onClear", "onChange", "onFilter", "renderControls", "renderItems", "showClearButton", "title", "className"]);
+        return (React.createElement("section", __assign({ className: cn('FilterableList', className) }, attributes),
             React.createElement("div", { className: "filter-wrap" },
                 React.createElement("div", { className: "filter-header" },
                     React.createElement("p", { className: "filter-title" }, title),

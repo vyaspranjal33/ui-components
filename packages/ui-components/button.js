@@ -32,7 +32,7 @@ export var Button = function (props) {
         React.createElement("button", { type: btnType }, props.children)));
 };
 export var Buttonized = function (_a) {
-    var children = _a.children, type = _a.type, badge = _a.badge, disabled = _a.disabled, loading = _a.loading, small = _a.small, onDark = _a.onDark, onClick = _a.onClick, group = _a.group, active = _a.active, icon = _a.icon, id = _a.id, attributes = __rest(_a, ["children", "type", "badge", "disabled", "loading", "small", "onDark", "onClick", "group", "active", "icon", "id"]);
+    var children = _a.children, type = _a.type, badge = _a.badge, disabled = _a.disabled, loading = _a.loading, small = _a.small, onDark = _a.onDark, onClick = _a.onClick, group = _a.group, active = _a.active, icon = _a.icon, id = _a.id, className = _a.className, attributes = __rest(_a, ["children", "type", "badge", "disabled", "loading", "small", "onDark", "onClick", "group", "active", "icon", "id", "className"]);
     var hasBadge = !!badge || badge === 0;
     var hasIcon = !!icon;
     var content = [];
@@ -49,7 +49,7 @@ export var Buttonized = function (_a) {
     if (children.props.children) {
         content.push(children.props.children);
     }
-    return (React.cloneElement(children, __assign({ className: cn('btn', "btn-" + type, {
+    return (React.cloneElement(children, __assign({ className: cn('btn', "btn-" + type, className, {
             'btn-on-dark': onDark,
             'btn-small': small,
             'has-badge': hasBadge,

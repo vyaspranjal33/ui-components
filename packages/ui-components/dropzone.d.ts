@@ -6,6 +6,7 @@ export interface DropzoneProps {
     hovered?: boolean;
     large?: boolean;
     children?: React.ReactElement<AlertProps>;
+    className?: string;
 }
 export declare const Dropzone: React.SFC<DropzoneProps>;
 export default Dropzone;

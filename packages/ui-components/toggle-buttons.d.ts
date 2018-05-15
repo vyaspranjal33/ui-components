@@ -2,6 +2,7 @@
 import React from 'react';
 export interface ToggleButtonsProps {
     children?: any[];
+    className?: string;
     onChange?: (children: React.ReactNode, label?: string, index?: number) => any;
 }
 export interface ToggleButtonsState {
