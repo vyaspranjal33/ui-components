@@ -15,6 +15,7 @@ export interface AllButtonProps {
     icon?: IconType;
     id?: string;
     isLink?: boolean;
+    className?: string;
 }
 export interface ButtonProps extends AllButtonProps {
     children?: string | React.ReactNode;

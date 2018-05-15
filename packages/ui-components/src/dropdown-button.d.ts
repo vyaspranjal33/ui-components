@@ -5,6 +5,7 @@ export interface DropdownButtonProps {
     children?: any;
     label?: string;
     gear?: boolean;
+    className?: string;
 }
 export interface DropdownButtonState {
     active: boolean;
@@ -14,8 +15,6 @@ export declare class DropdownButton extends React.Component<DropdownButtonProps 
     state: {
         active: boolean;
     };
-    private attributes;
-    constructor(props: DropdownButtonProps);
     handleClick: () => void;
     render(): JSX.Element;
 }
