@@ -90,5 +90,4 @@ var HTMLTooltip = /** @class */ (function (_super) {
 }(React.Component));
 export { HTMLTooltip };
 export default Tooltip;
-;
 //# sourceMappingURL=tooltip.js.map
