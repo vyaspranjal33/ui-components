@@ -10,18 +10,18 @@ import {
 const loaderStories = storiesOf('EmailCard', module);
 
 const statistics = [
-  { label: 'Emails Sent', amount: 12230, format: 'number' },
-  { label: 'Delivered', amount: .966, format: 'percent' },
-  { label: 'Unique Opens', amount: .802, format: 'percent' },
-  { label: 'Unique Clicks', amount: .6024, format: 'percent' },
-  { label: 'Unsubscribes', amount: .0204, format: 'percent' },
+  { label: 'Emails Sent', amount: 12230 },
+  { label: 'Delivered', amount: 966 },
+  { label: 'Unique Opens', amount: '80.2%' },
+  { label: 'Unique Clicks', amount: 6024 },
+  { label: 'Unsubscribes', amount: 0 },
 ];
 const blankStatistics = [
-  { label: 'Emails Sent', format: 'number' },
-  { label: 'Delivered', format: 'percent' },
-  { label: 'Unique Opens', format: 'percent' },
-  { label: 'Unique Clicks', format: 'percent' },
-  { label: 'Unsubscribes', format: 'percent' },
+  { label: 'Emails Sent' },
+  { label: 'Delivered' },
+  { label: 'Unique Opens' },
+  { label: 'Unique Clicks' },
+  { label: 'Unsubscribes' },
 ];
 const renderEditDetailLink = (value: string) => {
   return (

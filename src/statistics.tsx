@@ -1,10 +1,9 @@
 import React from 'react';
 import cn from './utilities/classnames';
-
+export const NO_STATS_CHAR = '—';
 export interface Statistic {
   label: string;
-  amount?: number;
-  format: string;
+  amount?: number | string;
 }
 
 export interface StatisticsProps {
@@ -16,23 +15,15 @@ export interface StatisticsProps {
 export const Statistics: React.SFC<StatisticsProps> = (
   { statistics, statsClassName, className, ...attributes },
 ) => {
-  // This uses numbers rather than formatted strings to prepare for locale specific number formatting
-  const formatStatistic = (amount: number, format: string) => {
-    if (typeof amount !== 'number') { return '—'; }
-    if (format === 'number') {
-      return amount.toLocaleString();
-    } else {
-      return (amount * 100).toFixed(2) + '%';
-    }
-  };
 
   const statisticsClassMap = ['', 'delivered', 'unique-opens', 'unique-clicks', 'unsubscribes'];
   const statisticsElements = statistics && statistics.map((stat, i) => {
-    const value = formatStatistic(stat.amount, stat.format);
     const specificClass = statisticsClassMap[i] || '';
     return (
       <div className={statsClassName} key={stat.label}>
-        <p className={'stat ' + specificClass}>{value}</p>
+        <p className={'stat ' + specificClass}>
+          {(stat.amount || parseInt(stat.amount as string, 10) === 0) ? stat.amount : NO_STATS_CHAR}
+        </p>
         <p className="label">{stat.label}</p>
       </div>
     );

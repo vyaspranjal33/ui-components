@@ -2281,7 +2281,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       <p
         className="stat "
       >
-        12,230
+        12230
       </p>
       <p
         className="label"
@@ -2295,7 +2295,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       <p
         className="stat delivered"
       >
-        96.60%
+        966
       </p>
       <p
         className="label"
@@ -2309,7 +2309,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       <p
         className="stat unique-opens"
       >
-        80.20%
+        80.2%
       </p>
       <p
         className="label"
@@ -2323,7 +2323,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       <p
         className="stat unique-clicks"
       >
-        60.24%
+        6024
       </p>
       <p
         className="label"
@@ -2337,7 +2337,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       <p
         className="stat unsubscribes"
       >
-        2.04%
+        0
       </p>
       <p
         className="label"
@@ -2449,7 +2449,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat "
         >
-          12,230
+          12230
         </p>
         <p
           className="label"
@@ -2463,7 +2463,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat delivered"
         >
-          96.60%
+          966
         </p>
         <p
           className="label"
@@ -2477,7 +2477,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unique-opens"
         >
-          80.20%
+          80.2%
         </p>
         <p
           className="label"
@@ -2491,7 +2491,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unique-clicks"
         >
-          60.24%
+          6024
         </p>
         <p
           className="label"
@@ -2505,7 +2505,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unsubscribes"
         >
-          2.04%
+          0
         </p>
         <p
           className="label"
@@ -2613,7 +2613,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat "
         >
-          12,230
+          12230
         </p>
         <p
           className="label"
@@ -2627,7 +2627,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat delivered"
         >
-          96.60%
+          966
         </p>
         <p
           className="label"
@@ -2641,7 +2641,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unique-opens"
         >
-          80.20%
+          80.2%
         </p>
         <p
           className="label"
@@ -2655,7 +2655,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unique-clicks"
         >
-          60.24%
+          6024
         </p>
         <p
           className="label"
@@ -2669,7 +2669,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unsubscribes"
         >
-          2.04%
+          0
         </p>
         <p
           className="label"
@@ -2777,7 +2777,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat "
         >
-          12,230
+          12230
         </p>
         <p
           className="label"
@@ -2791,7 +2791,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat delivered"
         >
-          96.60%
+          966
         </p>
         <p
           className="label"
@@ -2805,7 +2805,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unique-opens"
         >
-          80.20%
+          80.2%
         </p>
         <p
           className="label"
@@ -2819,7 +2819,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unique-clicks"
         >
-          60.24%
+          6024
         </p>
         <p
           className="label"
@@ -2833,7 +2833,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unsubscribes"
         >
-          2.04%
+          0
         </p>
         <p
           className="label"
@@ -2941,7 +2941,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat "
         >
-          12,230
+          12230
         </p>
         <p
           className="label"
@@ -2955,7 +2955,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat delivered"
         >
-          96.60%
+          966
         </p>
         <p
           className="label"
@@ -2969,7 +2969,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unique-opens"
         >
-          80.20%
+          80.2%
         </p>
         <p
           className="label"
@@ -2983,7 +2983,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unique-clicks"
         >
-          60.24%
+          6024
         </p>
         <p
           className="label"
@@ -2997,7 +2997,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         <p
           className="stat unsubscribes"
         >
-          2.04%
+          0
         </p>
         <p
           className="label"
@@ -3122,7 +3122,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat "
         >
-          12,230
+          12230
         </p>
         <p
           className="label"
@@ -3136,7 +3136,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat delivered"
         >
-          96.60%
+          966
         </p>
         <p
           className="label"
@@ -3150,7 +3150,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unique-opens"
         >
-          80.20%
+          80.2%
         </p>
         <p
           className="label"
@@ -3164,7 +3164,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unique-clicks"
         >
-          60.24%
+          6024
         </p>
         <p
           className="label"
@@ -3178,7 +3178,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unsubscribes"
         >
-          2.04%
+          0
         </p>
         <p
           className="label"
@@ -3286,7 +3286,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat "
         >
-          12,230
+          12230
         </p>
         <p
           className="label"
@@ -3300,7 +3300,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat delivered"
         >
-          96.60%
+          966
         </p>
         <p
           className="label"
@@ -3314,7 +3314,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unique-opens"
         >
-          80.20%
+          80.2%
         </p>
         <p
           className="label"
@@ -3328,7 +3328,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unique-clicks"
         >
-          60.24%
+          6024
         </p>
         <p
           className="label"
@@ -3342,7 +3342,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unsubscribes"
         >
-          2.04%
+          0
         </p>
         <p
           className="label"
@@ -3450,7 +3450,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat "
         >
-          12,230
+          12230
         </p>
         <p
           className="label"
@@ -3464,7 +3464,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat delivered"
         >
-          96.60%
+          966
         </p>
         <p
           className="label"
@@ -3478,7 +3478,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unique-opens"
         >
-          80.20%
+          80.2%
         </p>
         <p
           className="label"
@@ -3492,7 +3492,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unique-clicks"
         >
-          60.24%
+          6024
         </p>
         <p
           className="label"
@@ -3506,7 +3506,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unsubscribes"
         >
-          2.04%
+          0
         </p>
         <p
           className="label"
@@ -3614,7 +3614,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat "
         >
-          12,230
+          12230
         </p>
         <p
           className="label"
@@ -3628,7 +3628,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat delivered"
         >
-          96.60%
+          966
         </p>
         <p
           className="label"
@@ -3642,7 +3642,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unique-opens"
         >
-          80.20%
+          80.2%
         </p>
         <p
           className="label"
@@ -3656,7 +3656,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unique-clicks"
         >
-          60.24%
+          6024
         </p>
         <p
           className="label"
@@ -3670,7 +3670,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         <p
           className="stat unsubscribes"
         >
-          2.04%
+          0
         </p>
         <p
           className="label"
@@ -3782,7 +3782,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       <p
         className="stat "
       >
-        12,230
+        12230
       </p>
       <p
         className="label"
@@ -3796,7 +3796,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       <p
         className="stat delivered"
       >
-        96.60%
+        966
       </p>
       <p
         className="label"
@@ -3810,7 +3810,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       <p
         className="stat unique-opens"
       >
-        80.20%
+        80.2%
       </p>
       <p
         className="label"
@@ -3824,7 +3824,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       <p
         className="stat unique-clicks"
       >
-        60.24%
+        6024
       </p>
       <p
         className="label"
@@ -3838,7 +3838,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       <p
         className="stat unsubscribes"
       >
-        2.04%
+        0
       </p>
       <p
         className="label"
@@ -3949,7 +3949,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       <p
         className="stat "
       >
-        12,230
+        12230
       </p>
       <p
         className="label"
@@ -3963,7 +3963,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       <p
         className="stat delivered"
       >
-        96.60%
+        966
       </p>
       <p
         className="label"
@@ -3977,7 +3977,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       <p
         className="stat unique-opens"
       >
-        80.20%
+        80.2%
       </p>
       <p
         className="label"
@@ -3991,7 +3991,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       <p
         className="stat unique-clicks"
       >
-        60.24%
+        6024
       </p>
       <p
         className="label"
@@ -4005,7 +4005,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       <p
         className="stat unsubscribes"
       >
-        2.04%
+        0
       </p>
       <p
         className="label"
@@ -4139,7 +4139,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       <p
         className="stat "
       >
-        12,230
+        12230
       </p>
       <p
         className="label"
@@ -4153,7 +4153,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       <p
         className="stat delivered"
       >
-        96.60%
+        966
       </p>
       <p
         className="label"
@@ -4167,7 +4167,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       <p
         className="stat unique-opens"
       >
-        80.20%
+        80.2%
       </p>
       <p
         className="label"
@@ -4181,7 +4181,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       <p
         className="stat unique-clicks"
       >
-        60.24%
+        6024
       </p>
       <p
         className="label"
@@ -4195,7 +4195,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       <p
         className="stat unsubscribes"
       >
-        2.04%
+        0
       </p>
       <p
         className="label"
@@ -4496,7 +4496,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
       <p
         className="stat "
       >
-        12,230
+        12230
       </p>
       <p
         className="label"
@@ -4510,7 +4510,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
       <p
         className="stat delivered"
       >
-        96.60%
+        966
       </p>
       <p
         className="label"
@@ -4524,7 +4524,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
       <p
         className="stat unique-opens"
       >
-        80.20%
+        80.2%
       </p>
       <p
         className="label"
@@ -4538,7 +4538,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
       <p
         className="stat unique-clicks"
       >
-        60.24%
+        6024
       </p>
       <p
         className="label"
@@ -4552,7 +4552,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
       <p
         className="stat unsubscribes"
       >
-        2.04%
+        0
       </p>
       <p
         className="label"
