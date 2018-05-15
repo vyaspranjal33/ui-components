@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { StatefulSlider as Slider } from '../src/components/Slider';
+import { StatefulSlider as Slider } from '../src/slider';
 
 const stories = storiesOf('Slider', module);
 

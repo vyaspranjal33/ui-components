@@ -1,5 +1,7 @@
 # Bundle
 dist
+components
+.rpt2_cache
 
 #Commiting our flow types because we want consistency across dev's and environments
 #flow-typed

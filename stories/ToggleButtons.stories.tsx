@@ -2,8 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Button from '../src/components/Button';
-import { StatefulToggleButtons as ToggleButtons } from '../src/components/ToggleButtons';
+import Button from '../src/button';
+import { StatefulToggleButtons as ToggleButtons } from '../src/toggle-buttons';
 
 const stories = storiesOf('ToggleButtons', module);
 

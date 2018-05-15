@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { StatefulTextInput, TextInput } from '../src/components/TextInput';
+import { StatefulTextInput, TextInput } from '../src/text-input';
 
 const stories = storiesOf('Text Input', module);
 
@@ -90,6 +90,7 @@ stories.add('Stateless Text Input with No Value Passed In', () => (
   <TextInput
     type="text"
     label="Stateless Input"
+    name="simple"
     id="test-input-simple"
     onChange={action('Input Changed')}
     onBlur={action('onBlur Called')}

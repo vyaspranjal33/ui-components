@@ -2,7 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Loader from '../src/components/Loader';
+import FragmentLoader from '../src/fragment-loader';
+import Loader from '../src/loader';
 
 const loaderStories = storiesOf('Loaders', module);
 
@@ -23,3 +24,5 @@ loaderStories.add('Loader on Dark', () => (
     <Loader onDark centered large />
   </div>
 ));
+
+loaderStories.add('Fragment Loader', () => <FragmentLoader/>);

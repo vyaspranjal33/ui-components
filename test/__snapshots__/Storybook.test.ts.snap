@@ -1,5 +1,29 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
+<div
+  className="alert alert-warning"
+  role="alert"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-warning"
+      onClick={undefined}
+      style={null}
+    />
+    Changes you've made to this email have not been applied to your live automation.
+    <button
+      className="btn btn-primary"
+      id={undefined}
+      onClick={[Function]}
+      type="button"
+    >
+      Save and Apply
+    </button>
+  </p>
+</div>
+`;
+
 exports[`Storyshots Alerts Danger Alert 1`] = `
 <div
   className="alert alert-danger"
@@ -378,6 +402,7 @@ exports[`Storyshots Button Danger Button (Disabled) 1`] = `
   className="btn btn-danger is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Danger (Disabled)
 </button>
@@ -388,6 +413,7 @@ exports[`Storyshots Button Danger Button 1`] = `
   className="btn btn-danger"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Danger
 </button>
@@ -398,6 +424,7 @@ exports[`Storyshots Button Danger Button with Badge 1`] = `
   className="btn btn-danger has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -408,11 +435,13 @@ exports[`Storyshots Button Danger Button with Badge 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button Danger Button with Icon 1`] = `
+exports[`Storyshots Button Danger Button with Icon and Data Attr 1`] = `
 <button
   className="btn btn-danger has-icon"
+  data-role="test-role"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-trash"
@@ -485,6 +514,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
       className="btn btn-primary btn-on-dark"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Primary
     </button>
@@ -492,6 +522,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
       className="btn btn-secondary btn-on-dark"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Secondary
     </button>
@@ -499,6 +530,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
       className="btn btn-secondary btn-on-dark is-disabled"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Disabled
     </button>
@@ -514,6 +546,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Primary
   </button>
@@ -521,6 +554,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
     className="btn btn-secondary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Secondary
   </button>
@@ -528,6 +562,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
     className="btn btn-danger"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Danger
   </button>
@@ -539,6 +574,7 @@ exports[`Storyshots Button Primary Button (Disabled) 1`] = `
   className="btn btn-primary is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Primary (Disabled)
 </button>
@@ -549,6 +585,7 @@ exports[`Storyshots Button Primary Button (Loading) 1`] = `
   className="btn btn-primary has-icon is-loading"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <svg
     className="sg-loader is-small loader-on-dark"
@@ -598,6 +635,7 @@ exports[`Storyshots Button Primary Button 1`] = `
   className="btn btn-primary"
   id="stui-test-locator-abc"
   onClick={[Function]}
+  type="button"
 >
   Primary
 </button>
@@ -608,6 +646,7 @@ exports[`Storyshots Button Primary Button with Badge 1`] = `
   className="btn btn-primary has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -623,6 +662,7 @@ exports[`Storyshots Button Primary Button with Icon 1`] = `
   className="btn btn-primary has-icon"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-create"
@@ -638,6 +678,7 @@ exports[`Storyshots Button Secondary Button (Disabled) 1`] = `
   className="btn btn-secondary is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Secondary (Disabled)
 </button>
@@ -648,6 +689,7 @@ exports[`Storyshots Button Secondary Button (Loading) 1`] = `
   className="btn btn-secondary has-icon is-loading"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <svg
     className="sg-loader is-small"
@@ -697,6 +739,7 @@ exports[`Storyshots Button Secondary Button 1`] = `
   className="btn btn-secondary"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Secondary
 </button>
@@ -707,6 +750,7 @@ exports[`Storyshots Button Secondary Button with Badge 1`] = `
   className="btn btn-secondary has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -717,11 +761,13 @@ exports[`Storyshots Button Secondary Button with Badge 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button Secondary Button with Icon 1`] = `
+exports[`Storyshots Button Secondary Submit Button with Icon 1`] = `
 <button
   className="btn btn-secondary has-icon"
   id={undefined}
+  isSubmit={true}
   onClick={[Function]}
+  type="submit"
 >
   <i
     className="sg-icon sg-icon-copy"
@@ -737,6 +783,7 @@ exports[`Storyshots Button Small Danger Button (Disabled) 1`] = `
   className="btn btn-danger btn-small is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Danger (Disabled)
 </button>
@@ -747,6 +794,7 @@ exports[`Storyshots Button Small Danger Button 1`] = `
   className="btn btn-danger btn-small"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Danger
 </button>
@@ -757,6 +805,7 @@ exports[`Storyshots Button Small Danger Button with Badge 1`] = `
   className="btn btn-danger btn-small has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -772,6 +821,7 @@ exports[`Storyshots Button Small Danger Button with Icon 1`] = `
   className="btn btn-danger btn-small has-icon"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-trash"
@@ -787,6 +837,7 @@ exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
   className="btn btn-primary btn-small is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Primary (Disabled)
 </button>
@@ -797,6 +848,7 @@ exports[`Storyshots Button Small Primary Button (Loading) 1`] = `
   className="btn btn-primary btn-small has-icon is-loading"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <svg
     className="sg-loader is-small loader-on-dark"
@@ -846,6 +898,7 @@ exports[`Storyshots Button Small Primary Button 1`] = `
   className="btn btn-primary btn-small"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Primary
 </button>
@@ -856,6 +909,7 @@ exports[`Storyshots Button Small Primary Button with Badge 1`] = `
   className="btn btn-primary btn-small has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -871,6 +925,7 @@ exports[`Storyshots Button Small Primary Button with Icon 1`] = `
   className="btn btn-primary btn-small has-icon"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-create"
@@ -886,6 +941,7 @@ exports[`Storyshots Button Small Secondary Button (Disabled) 1`] = `
   className="btn btn-secondary btn-small is-disabled"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Secondary (Disabled)
 </button>
@@ -896,6 +952,7 @@ exports[`Storyshots Button Small Secondary Button (Loading) 1`] = `
   className="btn btn-secondary btn-small has-icon is-loading"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <svg
     className="sg-loader is-small"
@@ -945,6 +1002,7 @@ exports[`Storyshots Button Small Secondary Button 1`] = `
   className="btn btn-secondary btn-small"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   Secondary
 </button>
@@ -955,6 +1013,7 @@ exports[`Storyshots Button Small Secondary Button with Badge 1`] = `
   className="btn btn-secondary btn-small has-badge"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <span
     className="badge"
@@ -970,6 +1029,7 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
   className="btn btn-secondary btn-small has-icon"
   id={undefined}
   onClick={[Function]}
+  type="button"
 >
   <i
     className="sg-icon sg-icon-copy"
@@ -1195,6 +1255,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children and Cent
         className="btn btn-primary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Choose
       </button>
@@ -1234,6 +1295,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
         className="btn btn-primary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Choose
       </button>
@@ -1280,11 +1342,13 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
   <div
     className="center-modal"
+    data-role="example"
   >
     <h1>
       Scorpion XING Zone 🦂
@@ -1302,6 +1366,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Cancel
         </button>
@@ -1309,6 +1374,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
           className="btn btn-primary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Confirm
         </button>
@@ -1328,11 +1394,13 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
   <div
     className="center-modal"
+    data-role="example"
   >
     <i
       className="sg-icon sg-icon-x"
@@ -1350,65 +1418,23 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
 </div>
 `;
 
-exports[`Storyshots Checkbox Checked Checkbox 1`] = `
-<div
-  className="input-checkbox-wrap"
->
-  <input
-    defaultChecked={true}
-    disabled={undefined}
-    id="checkbox-transactional"
-    onChange={[Function]}
-    type="checkbox"
-    value="Transactional"
-  />
-  <label
-    className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
-  >
-    Transactional
-  </label>
-</div>
-`;
-
-exports[`Storyshots Checkbox Checked and Disabled Checkbox 1`] = `
-<div
-  className="input-checkbox-wrap"
->
-  <input
-    defaultChecked={true}
-    disabled={true}
-    id="checkbox-transactional"
-    onChange={[Function]}
-    type="checkbox"
-    value="Transactional"
-  />
-  <label
-    className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
-  >
-    Transactional
-  </label>
-</div>
-`;
-
 exports[`Storyshots Checkbox Disabled Checkbox 1`] = `
 <div
   className="input-checkbox-wrap"
 >
   <input
-    defaultChecked={undefined}
+    checked={false}
     disabled={true}
-    id="checkbox-transactional"
+    id="disabled-checkbox"
     onChange={[Function]}
     type="checkbox"
-    value="Transactional"
+    value={undefined}
   />
   <label
     className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
+    htmlFor="disabled-checkbox"
   >
-    Transactional
+    Marketing
   </label>
 </div>
 `;
@@ -1418,19 +1444,79 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
   className="input-checkbox-wrap"
 >
   <input
-    defaultChecked={undefined}
+    checked={false}
     disabled={undefined}
-    id="checkbox-transactional"
+    id="standard-checkbox"
     onChange={[Function]}
     type="checkbox"
-    value="Transactional"
+    value={undefined}
   />
   <label
     className="input-checkbox-label"
-    htmlFor="checkbox-transactional"
+    htmlFor="standard-checkbox"
   >
     Transactional
   </label>
+</div>
+`;
+
+exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    id={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Open Modal
+  </button>
+  <div
+    className="sg-modal"
+  >
+    <div
+      className="conf-alert sg-modal-content"
+    >
+      <h2
+        className="conf-alert-header conf-alert-header-with-icon"
+      >
+        <i
+          className="sg-icon sg-icon-trash"
+          onClick={undefined}
+          style={null}
+        />
+        Very cool! 😍
+      </h2>
+      <div
+        className="conf-alert-body"
+      >
+        <p
+          className="conf-alert-text"
+        >
+          This will make a thing happen.
+        </p>
+      </div>
+      <div
+        className="conf-alert-actions"
+      >
+        <button
+          className="btn btn-secondary btn-small"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Cancel
+        </button>
+        <button
+          className="btn btn-primary btn-small"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Confirm
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
 `;
 
@@ -1440,6 +1526,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>
@@ -1470,6 +1557,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Cancel
         </button>
@@ -1477,6 +1565,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
           className="btn btn-primary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Confirm
         </button>
@@ -1495,7 +1584,7 @@ exports[`Storyshots Divider Divider (Thin) 1`] = `
 
 exports[`Storyshots Divider Divider (with Label) 1`] = `
 <hr
-  className=""
+  className="has-label"
   data-label="Very Important"
 />
 `;
@@ -2074,6 +2163,2584 @@ exports[`Storyshots Dropzone Dropzone 1`] = `
 />
 `;
 
+exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
+<div
+  className="email-card-wrap"
+>
+  <div
+    className="email-card-send-time"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Select Send Time
+    </a>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card - Live 1`] = `
+<div
+  className="email-card-wrap is-live"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat "
+      >
+        12,230
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat delivered"
+      >
+        96.60%
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-opens"
+      >
+        80.20%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-clicks"
+      >
+        60.24%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unsubscribes"
+      >
+        2.04%
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
+<div>
+  <div
+    className="email-card-wrap is-editable"
+  >
+    <div
+      className="email-card-send-time"
+    >
+      <a
+        className="btn btn-secondary"
+        href="#"
+        id={undefined}
+        onClick={undefined}
+      >
+        Select Send Time
+      </a>
+    </div>
+    <div
+      className="email-card-stats"
+    >
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat "
+        >
+          12,230
+        </p>
+        <p
+          className="label"
+        >
+          Emails Sent
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat delivered"
+        >
+          96.60%
+        </p>
+        <p
+          className="label"
+        >
+          Delivered
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-opens"
+        >
+          80.20%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Opens
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-clicks"
+        >
+          60.24%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Clicks
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unsubscribes"
+        >
+          2.04%
+        </p>
+        <p
+          className="label"
+        >
+          Unsubscribes
+        </p>
+      </div>
+    </div>
+    <div
+      className="email-card"
+    >
+      <div
+        className="email-card-count"
+      >
+        <p>
+          Email 
+          1
+        </p>
+      </div>
+      <div
+        className="email-card-content"
+      >
+        <button
+          className="btn btn-secondary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Add Email Content
+        </button>
+      </div>
+      <div
+        className="email-card-details"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="label"
+              >
+                Subject
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Welcome to SendGrid
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                Preheader
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Get starting sending up to 12,000 emails Today
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                From Sender
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    className="email-card-wrap is-editable"
+  >
+    <div
+      className="email-card-send-time"
+    >
+      <a
+        className="btn btn-secondary"
+        href="#"
+        id={undefined}
+        onClick={undefined}
+      >
+        Select Send Time
+      </a>
+    </div>
+    <div
+      className="email-card-stats"
+    >
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat "
+        >
+          12,230
+        </p>
+        <p
+          className="label"
+        >
+          Emails Sent
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat delivered"
+        >
+          96.60%
+        </p>
+        <p
+          className="label"
+        >
+          Delivered
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-opens"
+        >
+          80.20%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Opens
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-clicks"
+        >
+          60.24%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Clicks
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unsubscribes"
+        >
+          2.04%
+        </p>
+        <p
+          className="label"
+        >
+          Unsubscribes
+        </p>
+      </div>
+    </div>
+    <div
+      className="email-card"
+    >
+      <div
+        className="email-card-count"
+      >
+        <p>
+          Email 
+          2
+        </p>
+      </div>
+      <div
+        className="email-card-content"
+      >
+        <button
+          className="btn btn-secondary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Add Email Content
+        </button>
+      </div>
+      <div
+        className="email-card-details"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="label"
+              >
+                Subject
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Welcome to SendGrid
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                Preheader
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Get starting sending up to 12,000 emails Today
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                From Sender
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    className="email-card-wrap is-editable"
+  >
+    <div
+      className="email-card-send-time"
+    >
+      <a
+        className="btn btn-secondary"
+        href="#"
+        id={undefined}
+        onClick={undefined}
+      >
+        Select Send Time
+      </a>
+    </div>
+    <div
+      className="email-card-stats"
+    >
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat "
+        >
+          12,230
+        </p>
+        <p
+          className="label"
+        >
+          Emails Sent
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat delivered"
+        >
+          96.60%
+        </p>
+        <p
+          className="label"
+        >
+          Delivered
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-opens"
+        >
+          80.20%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Opens
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-clicks"
+        >
+          60.24%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Clicks
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unsubscribes"
+        >
+          2.04%
+        </p>
+        <p
+          className="label"
+        >
+          Unsubscribes
+        </p>
+      </div>
+    </div>
+    <div
+      className="email-card"
+    >
+      <div
+        className="email-card-count"
+      >
+        <p>
+          Email 
+          3
+        </p>
+      </div>
+      <div
+        className="email-card-content"
+      >
+        <button
+          className="btn btn-secondary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Add Email Content
+        </button>
+      </div>
+      <div
+        className="email-card-details"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="label"
+              >
+                Subject
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Welcome to SendGrid
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                Preheader
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Get starting sending up to 12,000 emails Today
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                From Sender
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    className="email-card-wrap is-editable"
+  >
+    <div
+      className="email-card-send-time"
+    >
+      <a
+        className="btn btn-secondary"
+        href="#"
+        id={undefined}
+        onClick={undefined}
+      >
+        Select Send Time
+      </a>
+    </div>
+    <div
+      className="email-card-stats"
+    >
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat "
+        >
+          12,230
+        </p>
+        <p
+          className="label"
+        >
+          Emails Sent
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat delivered"
+        >
+          96.60%
+        </p>
+        <p
+          className="label"
+        >
+          Delivered
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-opens"
+        >
+          80.20%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Opens
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-clicks"
+        >
+          60.24%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Clicks
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unsubscribes"
+        >
+          2.04%
+        </p>
+        <p
+          className="label"
+        >
+          Unsubscribes
+        </p>
+      </div>
+    </div>
+    <div
+      className="email-card"
+    >
+      <div
+        className="email-card-count"
+      >
+        <p>
+          Email 
+          4
+        </p>
+      </div>
+      <div
+        className="email-card-content"
+      >
+        <button
+          className="btn btn-secondary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Add Email Content
+        </button>
+      </div>
+      <div
+        className="email-card-details"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="label"
+              >
+                Subject
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Welcome to SendGrid
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                Preheader
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Get starting sending up to 12,000 emails Today
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                From Sender
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    className="btn-list email-card-add"
+  >
+    <button
+      className="btn btn-secondary"
+      id={undefined}
+      onClick={null}
+      type="button"
+    >
+      Add an Email
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
+<div>
+  <div
+    className="email-card-wrap is-live"
+  >
+    <div
+      className="email-card-send-time has-value"
+    >
+      <a
+        className="btn btn-secondary"
+        href="#"
+        id={undefined}
+        onClick={undefined}
+      >
+        Send Instantly
+      </a>
+    </div>
+    <div
+      className="email-card-stats"
+    >
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat "
+        >
+          12,230
+        </p>
+        <p
+          className="label"
+        >
+          Emails Sent
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat delivered"
+        >
+          96.60%
+        </p>
+        <p
+          className="label"
+        >
+          Delivered
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-opens"
+        >
+          80.20%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Opens
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-clicks"
+        >
+          60.24%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Clicks
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unsubscribes"
+        >
+          2.04%
+        </p>
+        <p
+          className="label"
+        >
+          Unsubscribes
+        </p>
+      </div>
+    </div>
+    <div
+      className="email-card"
+    >
+      <div
+        className="email-card-count"
+      >
+        <p>
+          Email 
+          1
+        </p>
+      </div>
+      <div
+        className="email-card-content"
+      >
+        <button
+          className="btn btn-secondary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Add Email Content
+        </button>
+      </div>
+      <div
+        className="email-card-details"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="label"
+              >
+                Subject
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Welcome to SendGrid
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                Preheader
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Get starting sending up to 12,000 emails Today
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                From Sender
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    className="email-card-wrap is-live"
+  >
+    <div
+      className="email-card-send-time has-value"
+    >
+      <a
+        className="btn btn-secondary"
+        href="#"
+        id={undefined}
+        onClick={undefined}
+      >
+        Send 3 Days After Email 1
+      </a>
+    </div>
+    <div
+      className="email-card-stats"
+    >
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat "
+        >
+          12,230
+        </p>
+        <p
+          className="label"
+        >
+          Emails Sent
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat delivered"
+        >
+          96.60%
+        </p>
+        <p
+          className="label"
+        >
+          Delivered
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-opens"
+        >
+          80.20%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Opens
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-clicks"
+        >
+          60.24%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Clicks
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unsubscribes"
+        >
+          2.04%
+        </p>
+        <p
+          className="label"
+        >
+          Unsubscribes
+        </p>
+      </div>
+    </div>
+    <div
+      className="email-card"
+    >
+      <div
+        className="email-card-count"
+      >
+        <p>
+          Email 
+          2
+        </p>
+      </div>
+      <div
+        className="email-card-content"
+      >
+        <button
+          className="btn btn-secondary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Add Email Content
+        </button>
+      </div>
+      <div
+        className="email-card-details"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="label"
+              >
+                Subject
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Welcome to SendGrid
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                Preheader
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Get starting sending up to 12,000 emails Today
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                From Sender
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    className="email-card-wrap is-live"
+  >
+    <div
+      className="email-card-send-time has-value"
+    >
+      <a
+        className="btn btn-secondary"
+        href="#"
+        id={undefined}
+        onClick={undefined}
+      >
+        Send 3 Days After Email 2
+      </a>
+    </div>
+    <div
+      className="email-card-stats"
+    >
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat "
+        >
+          12,230
+        </p>
+        <p
+          className="label"
+        >
+          Emails Sent
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat delivered"
+        >
+          96.60%
+        </p>
+        <p
+          className="label"
+        >
+          Delivered
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-opens"
+        >
+          80.20%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Opens
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-clicks"
+        >
+          60.24%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Clicks
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unsubscribes"
+        >
+          2.04%
+        </p>
+        <p
+          className="label"
+        >
+          Unsubscribes
+        </p>
+      </div>
+    </div>
+    <div
+      className="email-card"
+    >
+      <div
+        className="email-card-count"
+      >
+        <p>
+          Email 
+          3
+        </p>
+      </div>
+      <div
+        className="email-card-content"
+      >
+        <button
+          className="btn btn-secondary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Add Email Content
+        </button>
+      </div>
+      <div
+        className="email-card-details"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="label"
+              >
+                Subject
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Welcome to SendGrid
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                Preheader
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Get starting sending up to 12,000 emails Today
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                From Sender
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+  <div
+    className="email-card-wrap is-live"
+  >
+    <div
+      className="email-card-send-time has-value"
+    >
+      <a
+        className="btn btn-secondary"
+        href="#"
+        id={undefined}
+        onClick={undefined}
+      >
+        Send 3 Days After Email 3
+      </a>
+    </div>
+    <div
+      className="email-card-stats"
+    >
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat "
+        >
+          12,230
+        </p>
+        <p
+          className="label"
+        >
+          Emails Sent
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat delivered"
+        >
+          96.60%
+        </p>
+        <p
+          className="label"
+        >
+          Delivered
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-opens"
+        >
+          80.20%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Opens
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unique-clicks"
+        >
+          60.24%
+        </p>
+        <p
+          className="label"
+        >
+          Unique Clicks
+        </p>
+      </div>
+      <div
+        className="email-stats"
+      >
+        <p
+          className="stat unsubscribes"
+        >
+          2.04%
+        </p>
+        <p
+          className="label"
+        >
+          Unsubscribes
+        </p>
+      </div>
+    </div>
+    <div
+      className="email-card"
+    >
+      <div
+        className="email-card-count"
+      >
+        <p>
+          Email 
+          4
+        </p>
+      </div>
+      <div
+        className="email-card-content"
+      >
+        <button
+          className="btn btn-secondary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Add Email Content
+        </button>
+      </div>
+      <div
+        className="email-card-details"
+      >
+        <table>
+          <tbody>
+            <tr>
+              <td
+                className="label"
+              >
+                Subject
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Welcome to SendGrid
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                Preheader
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Get starting sending up to 12,000 emails Today
+                </a>
+              </td>
+            </tr>
+            <tr>
+              <td
+                className="label"
+              >
+                From Sender
+              </td>
+              <td>
+                <a
+                  href="#"
+                >
+                  Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+                </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card - Paused 1`] = `
+<div
+  className="email-card-wrap is-paused"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat "
+      >
+        12,230
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat delivered"
+      >
+        96.60%
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-opens"
+      >
+        80.20%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-clicks"
+      >
+        60.24%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unsubscribes"
+      >
+        2.04%
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card 1`] = `
+<div
+  className="email-card-wrap"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat "
+      >
+        12,230
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat delivered"
+      >
+        96.60%
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-opens"
+      >
+        80.20%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-clicks"
+      >
+        60.24%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unsubscribes"
+      >
+        2.04%
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
+<div
+  className="email-card-wrap has-alert is-live"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+    <div
+      className="alert alert-warning"
+      role="alert"
+    >
+      <p>
+        <i
+          className="sg-icon sg-icon-info-circle"
+          onClick={undefined}
+          style={null}
+        />
+        <p>
+          Changes you've made to this email have not been applied to your live automation.
+          <button
+            className="btn btn-primary btn-small"
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            Save and Apply
+          </button>
+        </p>
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat "
+      >
+        12,230
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat delivered"
+      >
+        96.60%
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-opens"
+      >
+        80.20%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-clicks"
+      >
+        60.24%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unsubscribes"
+      >
+        2.04%
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    className="alert alert-warning"
+    role="alert"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-info-circle"
+        onClick={undefined}
+        style={null}
+      />
+      <p>
+        Changes you've made to this email have not been applied to your live automation.
+        <button
+          className="btn btn-primary btn-small"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Save and Apply
+        </button>
+      </p>
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
+<div
+  className="email-card-wrap"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat "
+      >
+        —
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat delivered"
+      >
+        —
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-opens"
+      >
+        —
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-clicks"
+      >
+        —
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unsubscribes"
+      >
+        —
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card with Content 1`] = `
+<div
+  className="email-card-wrap"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat "
+      >
+        12,230
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat delivered"
+      >
+        96.60%
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-opens"
+      >
+        80.20%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-clicks"
+      >
+        60.24%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unsubscribes"
+      >
+        2.04%
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <a
+        href="#"
+      >
+        <img
+          onClick={[Function]}
+          src="http://via.placeholder.com/128x88"
+        />
+        <span
+          className="email-card-content-edit"
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+          Edit
+        </span>
+      </a>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
+<div
+  className="email-card-wrap"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Empty State Empty State With Buttons 1`] = `
 <div
   className="table-state is-empty"
@@ -2091,6 +4758,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
       className="btn btn-primary"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Primary
     </button>
@@ -2098,6 +4766,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
       className="btn btn-secondary"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Secondary
     </button>
@@ -2128,6 +4797,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
         className="btn btn-primary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Primary
       </button>
@@ -2135,6 +4805,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
         className="btn btn-secondary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Secondary
       </button>
@@ -2259,6 +4930,7 @@ exports[`Storyshots FilterableList FilterableList 1`] = `
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -2379,6 +5051,7 @@ exports[`Storyshots FilterableList FilterableList as a Container Component 1`] =
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -2499,6 +5172,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -2510,11 +5184,20 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
       </div>
       <div
         className="btn-list"
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "paddingLeft": "20px",
+          }
+        }
       >
         <button
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Clear
         </button>
@@ -2605,11 +5288,20 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
       </p>
       <div
         className="btn-list"
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "paddingLeft": "20px",
+          }
+        }
       >
         <button
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Clear
         </button>
@@ -2641,6 +5333,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -2761,6 +5454,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
         <input
           aria-describedby=""
           id="name-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -2787,6 +5481,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
         <input
           aria-describedby=""
           id="type-filter"
+          name={undefined}
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
@@ -2798,11 +5493,20 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
       </div>
       <div
         className="btn-list"
+        style={
+          Object {
+            "display": "flex",
+            "flexDirection": "column",
+            "justifyContent": "center",
+            "paddingLeft": "20px",
+          }
+        }
       >
         <button
           className="btn btn-secondary btn-small"
           id={undefined}
           onClick={[Function]}
+          type="button"
         >
           Clear
         </button>
@@ -3085,6 +5789,28 @@ exports[`Storyshots Loaders Centered Loader 1`] = `
     />
   </svg>
 </div>
+`;
+
+exports[`Storyshots Loaders Fragment Loader 1`] = `
+<svg
+  className="fragment-loader"
+>
+  <rect
+    className="fragment-square left"
+    height="10"
+    width="10"
+  />
+  <rect
+    className="fragment-square middle"
+    height="10"
+    width="10"
+  />
+  <rect
+    className="fragment-square right"
+    height="10"
+    width="10"
+  />
+</svg>
 `;
 
 exports[`Storyshots Loaders Large Loader 1`] = `
@@ -3484,6 +6210,7 @@ exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page He
         className="btn btn-primary"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         Create Campaign
       </button>
@@ -3770,6 +6497,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
         className="btn btn-danger btn-small"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         <i
           className="sg-icon sg-icon-x"
@@ -3786,6 +6514,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
       className="btn btn-secondary has-icon"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       <i
         className="sg-icon sg-icon-plus"
@@ -3863,6 +6592,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
         className="btn btn-secondary btn-small"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         <i
           className="sg-icon sg-icon-check-thin"
@@ -3874,6 +6604,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
         className="btn btn-danger btn-small"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         <i
           className="sg-icon sg-icon-x"
@@ -3890,6 +6621,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       className="btn btn-secondary has-icon"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       <i
         className="sg-icon sg-icon-plus"
@@ -3898,6 +6630,136 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       />
       Add Condition
     </button>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Segment Term Segment term with alert 1`] = `
+<div
+  className="segment-term-wrap"
+>
+  <p
+    className="segment-term-title"
+  >
+    Entry Criteria
+  </p>
+  <div
+    className="segment-term has-alert has-separator"
+    onClick={[Function]}
+  >
+    <p>
+      The first time a contact is added to 
+      <strong>
+        People in Los Angeles
+      </strong>
+    </p>
+    <i
+      className="sg-icon sg-icon-pencil segment-term-edit"
+      onClick={undefined}
+      style={null}
+    />
+    <div
+      className="alert alert-warning"
+      role="alert"
+    >
+      <p>
+        <i
+          className="sg-icon sg-icon-warning"
+          onClick={undefined}
+          style={null}
+        />
+        Changes you've made to your entry criteria have not been applied to your live automation.
+        <button
+          className="btn btn-primary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Save and Apply
+        </button>
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Segment Term Segment term with radio btns and alert 1`] = `
+<div
+  className="segment-term-wrap"
+>
+  <p
+    className="segment-term-title"
+  >
+    Exit Criteria
+  </p>
+  <div
+    className="segment-term has-alert has-radios is-editable"
+    onClick={undefined}
+  >
+    <div
+      className="input-radio-wrap"
+    >
+      <input
+        checked={true}
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="radio-a"
+        name="example-grp"
+        onChange={[Function]}
+        type="radio"
+        value="a"
+      />
+      <label
+        className="input-radio-label"
+        htmlFor="radio-a"
+      >
+        Option 1
+      </label>
+    </div>
+    <div
+      className="input-radio-wrap"
+    >
+      <input
+        checked={true}
+        defaultChecked={undefined}
+        disabled={undefined}
+        id="radio-b"
+        name="example-grp"
+        onChange={[Function]}
+        type="radio"
+        value="b"
+      />
+      <label
+        className="input-radio-label"
+        htmlFor="radio-b"
+      >
+        Option 2
+      </label>
+    </div>
+    <div
+      className="btn-list"
+    />
+    <div
+      className="alert alert-warning"
+      role="alert"
+    >
+      <p>
+        <i
+          className="sg-icon sg-icon-warning"
+          onClick={undefined}
+          style={null}
+        />
+        Changes you've made to your exit criteria have not been applied to your live automation.
+        <button
+          className="btn btn-primary"
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Save and Apply
+        </button>
+      </p>
+    </div>
   </div>
 </div>
 `;
@@ -3960,6 +6822,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         className="btn btn-secondary has-icon"
         id={undefined}
         onClick={[Function]}
+        type="button"
       >
         <i
           className="sg-icon sg-icon-plus"
@@ -3979,6 +6842,7 @@ Array [
     className="btn btn-primary"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Open Modal
   </button>,
@@ -3992,6 +6856,7 @@ Array [
       className="btn btn-secondary"
       id={undefined}
       onClick={[Function]}
+      type="button"
     >
       Alright then
     </button>
@@ -4875,6 +7740,7 @@ exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] 
   <input
     aria-describedby=""
     id="test-input-simple"
+    name="simple"
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -4900,6 +7766,7 @@ exports[`Storyshots Text Input Stateless Text Input with a Value Passed as a Pro
   <input
     aria-describedby=""
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -4925,6 +7792,7 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
   <input
     aria-describedby={undefined}
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -4949,6 +7817,7 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
   <input
     aria-describedby={undefined}
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -4973,6 +7842,7 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
   <input
     aria-describedby={undefined}
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -4997,6 +7867,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
   <input
     aria-describedby="test-input-simple-info"
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -5027,6 +7898,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
   <input
     aria-describedby="test-input-simple-info"
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -5057,6 +7929,7 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
   <input
     aria-describedby="test-input-simple-info"
     id="test-input-simple"
+    name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
@@ -5081,6 +7954,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
     className="btn btn-group-item is-active"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Day
   </button>
@@ -5088,6 +7962,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
     className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Week
   </button>
@@ -5095,6 +7970,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
     className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Month
   </button>
@@ -5109,6 +7985,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
     className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Day
   </button>
@@ -5116,6 +7993,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
     className="btn btn-group-item"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Week
   </button>
@@ -5123,6 +8001,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
     className="btn btn-group-item is-active"
     id={undefined}
     onClick={[Function]}
+    type="button"
   >
     Month
   </button>
@@ -5146,6 +8025,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
     <input
       aria-describedby=""
       id="input-text-example-ccv"
+      name={undefined}
       onBlur={[Function]}
       onChange={[Function]}
       onFocus={[Function]}

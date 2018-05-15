@@ -2,7 +2,10 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { SegmentTerm } from '../src/components/SegmentTerm';
+import Alert from '../src/alert';
+import Button from '../src/button';
+import { Radio, RadioGroup } from '../src/radio';
+import { SegmentTerm } from '../src/segment-term';
 
 const stories = storiesOf('Segment Term', module);
 const onAddButtonClick = action('add button click');
@@ -17,14 +20,14 @@ stories.add('Segment terms', () => (
       hasSeparator
       label="The first time a contact is added to"
       queryName="People in Los Angeles"
-      isEditable
+      editable
       onEdit={onEditClick}
     />
     <SegmentTerm
       title="Or"
       label="Every time a contact is added to"
       queryName="People in Denver"
-      isEditable
+      editable
       hasAddButton
       onAddButtonClick={onAddButtonClick}
       onEdit={onEditClick}
@@ -37,7 +40,7 @@ stories.add('Segment term which cannot be edited', () => (
     title="Entry Criteria"
     label="The first time a contact is added to"
     queryName="People in Los Angeles"
-    isEditable={false}
+    editable={false}
   />
 ));
 
@@ -46,8 +49,8 @@ stories.add('Segment term which is being edited', () => (
     title="Entry Criteria"
     hasAddButton
     hasSeparator
-    isEditable
-    isEditing
+    editable
+    editing
     onAddButtonClick={onAddButtonClick}
     onCancel={onCancelClick}
     onConfirm={onConfirmClick}
@@ -75,8 +78,8 @@ stories.add('Segment term which is being edited and is filled out', () => (
     title="Entry Criteria"
     hasAddButton
     hasSeparator
-    isEditable
-    isEditing
+    editable
+    editing
     showConfirm
     onAddButtonClick={onAddButtonClick}
     onCancel={onCancelClick}
@@ -101,6 +104,44 @@ stories.add('Segment term which is being edited and is filled out', () => (
           </select>
         </div>
       </>
+    )}
+  />
+));
+
+stories.add('Segment term with alert', () => (
+  <SegmentTerm
+    title="Entry Criteria"
+    hasSeparator
+    label="The first time a contact is added to"
+    queryName="People in Los Angeles"
+    editable
+    onEdit={onEditClick}
+    renderAlert={() => (
+      <Alert type="warning" dismissable={false}>
+        Changes you've made to your entry criteria have not been applied to your live automation.
+        <Button type="primary">Save and Apply</Button>
+      </Alert>
+    )}
+  />
+));
+
+stories.add('Segment term with radio btns and alert', () => (
+  <SegmentTerm
+    title="Exit Criteria"
+    editable
+    editing
+    radios
+    renderInputs={() => (
+      <RadioGroup name="example-grp" onChange={action('radio change')}>
+        <Radio checked value="a" label="Option 1" />
+        <Radio checked value="b" label="Option 2" />
+      </RadioGroup>
+    )}
+    renderAlert={() => (
+      <Alert type="warning" dismissable={false}>
+        Changes you've made to your exit criteria have not been applied to your live automation.
+        <Button type="primary">Save and Apply</Button>
+      </Alert>
     )}
   />
 ));
