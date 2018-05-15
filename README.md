@@ -54,31 +54,40 @@ More information: https://semver.org/
 
 This is a list of the available Components and most of the properties. [Run storybook](#starting-storybook) for more information on the styling, properties, and functionalities.
 
-- [Actions](https://github.com/sendgrid/ui-components/blob/master/src/components/Actions.tsx)
-- [Alert](https://github.com/sendgrid/ui-components/blob/master/src/components/Alert.tsx)
-- [Badge](https://github.com/sendgrid/ui-components/blob/master/src/components/Badge.tsx)
-- [Breadcrumb](https://github.com/sendgrid/ui-components/blob/master/src/components/Breadcrumb.tsx)
-- [Button](https://github.com/sendgrid/ui-components/blob/master/src/components/Button.tsx)
-- [Button List](https://github.com/sendgrid/ui-components/blob/master/src/components/ButtonList.tsx)
-- [Card](https://github.com/sendgrid/ui-components/blob/master/src/components/Card.tsx)
-- [Checkbox](https://github.com/sendgrid/ui-components/blob/master/src/components/Checkbox.tsx)
-- [Divider](https://github.com/sendgrid/ui-components/blob/master/src/components/Divider.tsx)
-- [Dropdown Button](https://github.com/sendgrid/ui-components/blob/master/src/components/DropdownButton.tsx)
-- [Dropzone](https://github.com/sendgrid/ui-components/blob/master/src/components/Dropzone.tsx)
-- [Empty State](https://github.com/sendgrid/ui-components/blob/master/src/components/EmptyState.tsx)
-- [Icon](https://github.com/sendgrid/ui-components/blob/master/src/components/Icon.tsx)
-- [Loader](https://github.com/sendgrid/ui-components/blob/master/src/components/Loader.tsx)
-- [Meter](https://github.com/sendgrid/ui-components/blob/master/src/components/Meter.tsx)
-- [Numbered Steps](https://github.com/sendgrid/ui-components/blob/master/src/components/NumberedSteps.tsx)
-- [Progress Bar](https://github.com/sendgrid/ui-components/blob/master/src/components/Progress.tsx)
-- [Radio Button](https://github.com/sendgrid/ui-components/blob/master/src/components/Radio.tsx)
-- [Slider](https://github.com/sendgrid/ui-components/blob/master/src/components/Slider.tsx)
-- [Small Footer](https://github.com/sendgrid/ui-components/blob/master/src/components/SmallFooter.tsx)
-- [Table](https://github.com/sendgrid/ui-components/blob/master/src/components/Table.tsx)
-- [Tabs](https://github.com/sendgrid/ui-components/blob/master/src/components/Tabs.tsx)
-- [TextInput](https://github.com/sendgrid/ui-components/blob/master/src/components/TextInput.tsx)
-- [Toggle Buttons](https://github.com/sendgrid/ui-components/blob/master/src/components/ToggleButtons.tsx)
-- [Tooltip](https://github.com/sendgrid/ui-components/blob/master/src/components/Tooltip.tsx)
+- [Actions](https://github.com/sendgrid/ui-components/blob/master/src/actions.tsx)
+- [Alert](https://github.com/sendgrid/ui-components/blob/master/src/alert.tsx)
+- [Badge](https://github.com/sendgrid/ui-components/blob/master/src/badge.tsx)
+- [Breadcrumb](https://github.com/sendgrid/ui-components/blob/master/src/breadcrumb.tsx)
+- [Button](https://github.com/sendgrid/ui-components/blob/master/src/button.tsx)
+- [Button List](https://github.com/sendgrid/ui-components/blob/master/src/button-list.tsx)
+- [Card](https://github.com/sendgrid/ui-components/blob/master/src/card.tsx)
+- [Center Modal](https://github.com/sendgrid/ui-components/blob/master/src/center-modal.tsx)
+- [Checkbox](https://github.com/sendgrid/ui-components/blob/master/src/checkbox.tsx)
+- [Confirmation Modal](https://github.com/sendgrid/ui-components/blob/master/src/confirmation-modal.tsx)
+- [Divider](https://github.com/sendgrid/ui-components/blob/master/src/divider.tsx)
+- [Dropdown Button](https://github.com/sendgrid/ui-components/blob/master/src/dropdown-button.tsx)
+- [Dropzone](https://github.com/sendgrid/ui-components/blob/master/src/dropzone.tsx)
+- [Email Card](https://github.com/sendgrid/ui-components/blob/master/src/email-card.tsx)
+- [Empty State](https://github.com/sendgrid/ui-components/blob/master/src/empty-state.tsx)
+- [Filterable List](https://github.com/sendgrid/ui-components/blob/master/src/filterable-list.tsx)
+- [Fragment Loader](https://github.com/sendgrid/ui-components/blob/master/src/fragment-loader.tsx)
+- [Icon](https://github.com/sendgrid/ui-components/blob/master/src/icon.tsx)
+- [Loader](https://github.com/sendgrid/ui-components/blob/master/src/loader.tsx)
+- [Meter](https://github.com/sendgrid/ui-components/blob/master/src/meter.tsx)
+- [Numbered Steps](https://github.com/sendgrid/ui-components/blob/master/src/numbered-steps.tsx)
+- [Page Header](https://github.com/sendgrid/ui-components/blob/master/src/page-header.tsx)
+- [Progress Bar](https://github.com/sendgrid/ui-components/blob/master/src/progress.tsx)
+- [Radio Button](https://github.com/sendgrid/ui-components/blob/master/src/radio.tsx)
+- [Segment Term](https://github.com/sendgrid/ui-components/blob/master/src/segment-term.tsx)
+- [Side Modal](https://github.com/sendgrid/ui-components/blob/master/src/side-modal.tsx)
+- [Slider](https://github.com/sendgrid/ui-components/blob/master/src/slider.tsx)
+- [Small Footer](https://github.com/sendgrid/ui-components/blob/master/src/smal-footer.tsx)
+- [Statistics](https://github.com/sendgrid/ui-components/blob/master/src/statistics.tsx)
+- [Tabs](https://github.com/sendgrid/ui-components/blob/master/src/tabs.tsx)
+- [TextInput](https://github.com/sendgrid/ui-components/blob/master/src/text-input.tsx)
+- [Toggle Buttons](https://github.com/sendgrid/ui-components/blob/master/src/toggle-buttons.tsx)
+- [Tooltip](https://github.com/sendgrid/ui-components/blob/master/src/tooltip.tsx)
+- [Truncated List](https://github.com/sendgrid/ui-components/blob/master/src/truncated-list.tsx)
 
 # Available Commands
 
@@ -98,6 +107,10 @@ This is a list of the available Components and most of the properties. [Run stor
 
 To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report.
 
+# Contributing
+See [CONTRIBUTING.md](https://github.com/sendgrid/ui-components/blob/master/CONTRIBUTING.md)
+
 ## Deploying
+
 
 Deploying to npm is as simple as `npm run lerna`. Lerna will prompt you for a new version and you'll be able to pick the appropriate version bump. If you're not in the npm group, reach out to Steve.
