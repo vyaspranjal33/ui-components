@@ -17,10 +17,10 @@ const statistics = {
   unsubscribes: { label: 'Unsubscribes', amount: 0 },
 };
 const blankStatistics = {
-  clicks: { label: 'Emails Sent' },
+  clicks: { label: 'Unique Clicks' },
   delivered: { label: 'Delivered' },
   opens: { label: 'Unique Opens' },
-  sent: { label: 'Unique Clicks' },
+  sent: { label: 'Emails Sent' },
   unsubscribes: { label: 'Unsubscribes' },
 };
 const renderEditDetailLink = (value: string) => {
