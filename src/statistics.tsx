@@ -21,7 +21,7 @@ export const Statistics: React.SFC<StatisticsProps> = (
     const specificClass = statisticsClassMap[i] || '';
     return (
       <div className={statsClassName} key={stat.label}>
-        <p className={'stat ' + specificClass}>
+        <p className={`stat ${specificClass}`}>
           {(stat.amount || parseInt(stat.amount as string, 10) === 0) ? stat.amount : NO_STATS_CHAR}
         </p>
         <p className="label">{stat.label}</p>
