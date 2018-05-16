@@ -2279,7 +2279,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
       className="email-stats"
     >
       <p
-        className="stat "
+        className="stat"
       >
         12230
       </p>
@@ -2447,7 +2447,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat "
+          className="stat"
         >
           12230
         </p>
@@ -2611,7 +2611,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat "
+          className="stat"
         >
           12230
         </p>
@@ -2775,7 +2775,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat "
+          className="stat"
         >
           12230
         </p>
@@ -2939,7 +2939,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
         className="email-stats"
       >
         <p
-          className="stat "
+          className="stat"
         >
           12230
         </p>
@@ -3120,7 +3120,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat "
+          className="stat"
         >
           12230
         </p>
@@ -3284,7 +3284,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat "
+          className="stat"
         >
           12230
         </p>
@@ -3448,7 +3448,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat "
+          className="stat"
         >
           12230
         </p>
@@ -3612,7 +3612,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
         className="email-stats"
       >
         <p
-          className="stat "
+          className="stat"
         >
           12230
         </p>
@@ -3780,7 +3780,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
       className="email-stats"
     >
       <p
-        className="stat "
+        className="stat"
       >
         12230
       </p>
@@ -3947,7 +3947,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
       className="email-stats"
     >
       <p
-        className="stat "
+        className="stat"
       >
         12230
       </p>
@@ -4137,7 +4137,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
       className="email-stats"
     >
       <p
-        className="stat "
+        className="stat"
       >
         12230
       </p>
@@ -4327,7 +4327,7 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
       className="email-stats"
     >
       <p
-        className="stat "
+        className="stat"
       >
         —
       </p>
@@ -4494,7 +4494,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
       className="email-stats"
     >
       <p
-        className="stat "
+        className="stat"
       >
         12230
       </p>
