@@ -9,6 +9,7 @@ export interface AlertProps {
     inline?: boolean;
     type: AlertType;
     hidden?: boolean;
+    className?: string;
     onClick?: (event: any) => void;
 }
 export declare const Alert: React.SFC<AlertProps>;

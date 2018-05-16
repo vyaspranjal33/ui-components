@@ -5,6 +5,7 @@ export interface DropdownButtonProps {
     children?: any;
     label?: string;
     gear?: boolean;
+    className?: string;
 }
 export interface DropdownButtonState {
     active: boolean;

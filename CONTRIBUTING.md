@@ -22,8 +22,17 @@ Eventually, we aim to move this into pull requests and engage in [documentation-
 The build and test structure is fairly primitive at the moment. There are various npm scripts that can be run:
 
 - `start`: runs the storybook development server. Navigate to `http://localhost:6006/`. The app will automatically reload if you change any of the source files. The storybook allows you to interact with your component.
-- `test`: runs tests with `jasmine`, must have built prior to running.
+- `test`: runs tests with `npm run test`, must have built prior to running.
 - `build`: build artifacts will be stored in the `dist/` directory.
+
+1. Make sure your changes do not break ui-components by running `npm run test`
+1. Add it to the storybook by creating a story in `stories` folder
+1. Add the component export to `src/index.ts`
+1. Update the `README.md` where appropriate
+1. Make a PR detailing your changes with a [semver](#semver-versioning) Tag and get it code reviewed.
+
+You do not need to bump versions. Whoever does the deploy will handle bumping the version.
+
 
 ### Best Practices: A Living List
 
@@ -117,13 +126,13 @@ return (
 
 ## [RAPID Decision Making Framework][rapid]
 
-| Role          | Person or People                                           |
-|---------------|------------------------------------------------------------|
-| R (Recommend) | Jason Walker                                               |
-| A (Agree)     | Chris Chalstrom, James Gary, Alex Wicks                    |
-| P (Perform)   | All FE Engineers across EI, CL, and MCJason Walker (UI/UX) |
-| I (Input)     | Alex Abreu, Alex Thomsen, Eric Tjossem                     |
-| D (Decide)    | Steve Kinney                                               |
+| Role          | Person or People                                             |
+|---------------|--------------------------------------------------------------|
+| R (Recommend) | Jason Walker                                                 |
+| A (Agree)     | Chris Chalstrom, Alex Wicks                                  |
+| P (Perform)   | All FE Engineers across EI, CL, and MC, Jason Walker (UI/UX) |
+| I (Input)     | Alex Abreu, Alex Thomsen, Eric Tjossem                       |
+| D (Decide)    | Steve Kinney                                                 |
 
 [rapid]: https://www.bridgespan.org/insights/library/organizational-effectiveness/rapid-decision-making
 
