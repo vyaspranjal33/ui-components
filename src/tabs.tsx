@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/tabs.module.scss';
 import cn from './utilities/classnames';
 import findActiveIndex from './utilities/find-active-index';
 
@@ -20,12 +21,12 @@ export const Tab: React.SFC<TabProps> = ({
 }) => {
   return (
     <li
-      className={cn('tab', {
-        'is-active': active,
+      className={cn(Styles.tab, {
+        [Styles['is-active']]: active,
       })}
       onClick={handleClick}
     >
-      {children} {number && <span className="tab-number">{number}</span>}
+      {children} {number && <span className={Styles['tab-number']}>{number}</span>}
     </li>
   );
 };
@@ -49,9 +50,9 @@ export const Tabs: React.SFC<any> = ({
 }) => {
   return (
     <ul
-      className={cn('tab-wrapper', {
-        'is-centered': centered,
-        'zero-border': zeroBorder,
+      className={cn(Styles['tab-wrapper'], {
+        [Styles['is-centered']]: centered,
+        [Styles['zero-border']]: zeroBorder,
       })}
     >
       {map(children, (tab: React.ReactElement<any>, index) => {

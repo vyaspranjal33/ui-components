@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/progress.module.scss';
 import cn from './utilities/classnames';
 
 export interface ProgressProps {
@@ -11,11 +12,11 @@ export interface ProgressProps {
 export const Progress: React.SFC<ProgressProps> = ({ children, vertical }) => {
   return (
     <section
-      className={cn('progress-container', {
-        'is-vertical': vertical,
+      className={cn(Styles['progress-container'], {
+        [Styles['is-vertical']]: vertical,
       })}
     >
-      <ul className="progress-stages">{children}</ul>
+      <ul className={Styles['progress-stages']}>{children}</ul>
     </section>
   );
 };
@@ -38,8 +39,8 @@ export const ProgressStage: React.SFC<ProgressStageProps> = ({
   return (
     <li
       className={cn({
-        'is-done': done,
-        'is-selected': selected,
+        [Styles['is-done']]: done,
+        [Styles['is-selected']]: selected,
       })}
     >
       <label>{label}</label>

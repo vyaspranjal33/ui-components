@@ -2,6 +2,7 @@ import React, { PureComponent } from 'react';
 import { Button } from './button';
 import { ButtonList } from './button-list';
 import { Icon } from './icon';
+import Styles from './styles/segment-term.module.scss';
 import cn from './utilities/classnames';
 
 export interface SegmentTermProps {
@@ -54,7 +55,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
     }
 
     if (editable) {
-      return <Icon type="pencil" className="segment-term-edit" />;
+      return <Icon type="pencil" className={Styles['segment-term-edit']} />;
     }
 
     return null;
@@ -77,16 +78,16 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
     } = this.props;
 
     return (
-      <div className="segment-term-wrap">
-        <p className="segment-term-title">
+      <div className={Styles['segment-term-wrap']}>
+        <p className={Styles['segment-term-title']}>
           {title}
         </p>
         <div
-          className={cn('segment-term', {
-            'has-alert': !!renderAlert,
-            'has-radios': radios,
-            'has-separator': hasSeparator,
-            'is-editable': editing,
+          className={cn(Styles['segment-term'], {
+            [Styles['has-alert']]: !!renderAlert,
+            [Styles['has-radios']]: radios,
+            [Styles['has-separator']]: hasSeparator,
+            [Styles['is-editable']]: editing,
           })}
           onClick={(editable && !editing) ? onEdit : undefined}
         >

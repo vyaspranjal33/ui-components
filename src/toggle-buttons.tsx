@@ -1,5 +1,6 @@
 import React from 'react';
 import { ButtonProps } from './button';
+import Styles from './styles/button.module.scss';
 import cn from './utilities/classnames';
 import findActiveIndex from './utilities/find-active-index';
 
@@ -19,7 +20,7 @@ export const ToggleButtons: React.SFC<ToggleButtonsProps> = ({
   onChange,
 }) => {
   return (
-    <div className="btn-group">
+    <div className={Styles['btn-group']}>
       {map(children, (button: React.ReactElement<any>, index) => {
         return React.cloneElement(button, {
           onClick(event: any) {

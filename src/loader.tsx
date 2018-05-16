@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/loader.module.scss';
 import cn from './utilities/classnames';
 
 export interface LoaderProps {
@@ -18,20 +19,20 @@ export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered 
   }
   return (
     <svg
-      className={cn('sg-loader', {
-        'is-centered': centered,
-        'is-large': large,
-        'is-small': small,
-        'loader-on-dark': onDark,
+      className={cn(Styles['sg-loader'], {
+        [Styles['is-centered']]: centered,
+        [Styles['is-large']]: large,
+        [Styles['is-small']]: small,
+        [Styles['loader-on-dark']]: onDark,
       })}
     >
-      <rect className="logo-square bottom-left" width={size} height={size} />
-      <rect className="logo-square bottom-middle" width={size} height={size} />
-      <rect className="logo-square middle" width={size} height={size} />
-      <rect className="logo-square top-middle" width={size} height={size} />
-      <rect className="logo-square top-right" width={size} height={size} />
-      <rect className="logo-square middle-left" width={size} height={size} />
-      <rect className="logo-square middle-right" width={size} height={size} />
+      <rect className={cn(Styles['logo-square'], ['bottom-left'])} width={size} height={size} />
+      <rect className={cn(Styles['logo-square'], ['bottom-middle'])} width={size} height={size} />
+      <rect className={cn(Styles['logo-square'], ['middle'])} width={size} height={size} />
+      <rect className={cn(Styles['logo-square'], ['top-middle'])} width={size} height={size} />
+      <rect className={cn(Styles['logo-square'], ['top-right'])} width={size} height={size} />
+      <rect className={cn(Styles['logo-square'], ['middle-left'])} width={size} height={size} />
+      <rect className={cn(Styles['logo-square'], ['middle-right'])} width={size} height={size} />
     </svg>
   );
 };

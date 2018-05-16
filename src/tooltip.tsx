@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/tooltip.module.scss';
 import cn from './utilities/classnames';
 
 export type TooltipDirection = 'up' | 'down' | 'left' | 'right';
@@ -98,7 +99,11 @@ export class HTMLTooltip extends React.Component<
   public render() {
     return (
       <div>
-        <div className="tooltip-js-parent" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
+        <div 
+          className={Styles['tooltip-js-parent']} 
+          onMouseEnter={this.handleHoverIn} 
+          onMouseLeave={this.handleHoverOut}
+        >
           {this.props.hoverTarget}
         </div>
         <div

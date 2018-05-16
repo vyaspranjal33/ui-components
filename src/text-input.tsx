@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
-import cn from './utilities/classnames';
-
+import Styles from './styles/text-input.module.scss';
 import { InputType } from './types/inputs';
+import cn from './utilities/classnames';
 
 const convertInputValue = (value: string, inputType: InputType) => {
   return inputType === 'number' ? parseInt(value, 10) : value;
@@ -12,14 +12,14 @@ const onInputFocus = function() {
 };
 
 const getRenderedTextInput = function(value?: string | number) {
-  const classes = cn('input-text-wrap', {
-    'has-value': !!value || value === 0,
-    'is-disabled': this.props.isDisabled,
-    'is-error': !this.props.isValid,
-    'is-focused': this.state.isInputFocused,
-    'is-large': this.props.isLarge,
-    'is-required': this.props.isRequired,
-    'is-search': this.props.isSearch,
+  const classes = cn(Styles['input-text-wrap'], {
+    [Styles['has-value']]: !!value || value === 0,
+    [Styles['is-disabled']]: this.props.isDisabled,
+    [Styles['is-error']]: !this.props.isValid,
+    [Styles['is-focused']]: this.state.isInputFocused,
+    [Styles['is-large']]: this.props.isLarge,
+    [Styles['is-required']]: this.props.isRequired,
+    [Styles['is-search']]: this.props.isSearch,
   });
 
   const infoId = this.props.info && `${this.props.id}-info`;
@@ -27,7 +27,7 @@ const getRenderedTextInput = function(value?: string | number) {
 
   return (
     <div className={classes} style={this.inputStyle}>
-      <label className="input-text-label" htmlFor={this.props.id}>
+      <label className={Styles['input-text-label']} htmlFor={this.props.id}>
         {this.props.label}
       </label>
       <input
@@ -42,7 +42,7 @@ const getRenderedTextInput = function(value?: string | number) {
       />
       {this.props.info && (
         <span
-          className={cn('input-info', {
+          className={cn(Styles['input-info'], {
             danger: !this.props.isValid,
           })}
           id={infoId}

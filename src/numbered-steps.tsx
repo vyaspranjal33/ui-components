@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/numbered-steps.module.scss';
 
 export interface NumberedStepProps {
   children:
@@ -26,7 +27,7 @@ export interface NumberedStepsProps {
 export const NumberedSteps: React.SFC<NumberedStepsProps> = ({
   children,
 }) => (
-  <ol className="numbered-steps">
+  <ol className={Styles['numbered-steps']}>
     {children}
   </ol>
 );
