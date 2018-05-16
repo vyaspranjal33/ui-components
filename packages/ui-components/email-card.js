@@ -28,7 +28,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import { Button, Buttonized, } from './button';
 import Icon from './icon';
-import { Statistics } from './statistics';
+import { EmailCardStat, Statistics } from './statistics';
 import cn from './utilities/classnames';
 var EmailCardSendTime = function (_a) {
     var value = _a.value, renderSendTimeLink = _a.renderSendTimeLink, _b = _a.alert, alert = _b === void 0 ? '' : _b, className = _a.className, attributes = __rest(_a, ["value", "renderSendTimeLink", "alert", "className"]);
@@ -78,7 +78,13 @@ var EmailCard = /** @class */ (function (_super) {
                 'is-paused': paused,
             }) }, attributes),
             React.createElement(EmailCardSendTime, { value: sendTimeValue, renderSendTimeLink: renderSendTimeLink, alert: alertEl }),
-            React.createElement(Statistics, { statsClassName: "email-stats", statistics: statistics }),
+            statistics &&
+                React.createElement(Statistics, { commonClass: "email-stats" },
+                    React.createElement(EmailCardStat, { specificClass: "", statistic: statistics.sent }),
+                    React.createElement(EmailCardStat, { specificClass: "delivered", statistic: statistics.delivered }),
+                    React.createElement(EmailCardStat, { specificClass: "unique-opens", statistic: statistics.opens }),
+                    React.createElement(EmailCardStat, { specificClass: "unique-clicks", statistic: statistics.clicks }),
+                    React.createElement(EmailCardStat, { specificClass: "unsubscribes", statistic: statistics.unsubscribes })),
             React.createElement("div", { className: "email-card" },
                 React.createElement("div", { className: "email-card-count" },
                     React.createElement("p", null,

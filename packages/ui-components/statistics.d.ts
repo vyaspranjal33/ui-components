@@ -1,14 +1,18 @@
 /// <reference types="react" />
 import React from 'react';
-export interface Statistic {
+export declare const NO_STATS_CHAR = "—";
+export interface StatisticType {
     label: string;
-    amount?: number;
-    format: string;
+    amount?: number | string;
 }
 export interface StatisticsProps {
-    statistics?: Statistic[];
-    statsClassName: string;
+    commonClass: string;
     className?: string;
 }
+export declare const EmailCardStat: React.SFC<{
+    statistic: StatisticType;
+    specificClass: string;
+    commonClass?: string;
+}>;
 export declare const Statistics: React.SFC<StatisticsProps>;
 export default Statistics;

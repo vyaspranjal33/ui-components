@@ -5,7 +5,7 @@ import {
   Buttonized,
 } from './button';
 import Icon from './icon';
-import { Statistic, Statistics } from './statistics';
+import { EmailCardStat, Statistics, StatisticType } from './statistics';
 import cn from './utilities/classnames';
 import findActiveIndex from './utilities/find-active-index';
 interface EmailCardSendTimeProps {
@@ -116,7 +116,13 @@ export interface EmailCardProps {
   renderSendTimeLink?: (value: string) => any;
   renderAlert?: () => any;
   sendTimeValue?: string;
-  statistics?: Statistic[];
+  statistics?: {
+    sent: StatisticType;
+    delivered: StatisticType;
+    opens: StatisticType;
+    clicks: StatisticType;
+    unsubscribes: StatisticType;
+  };
   thumbnailUrl?: string;
   className?: string;
 }
@@ -164,7 +170,16 @@ export class EmailCard extends React.Component<EmailCardProps> {
           renderSendTimeLink={renderSendTimeLink}
           alert={alertEl}
         />
-        <Statistics statsClassName="email-stats" statistics={statistics}/>
+        {
+          statistics &&
+          <Statistics commonClass="email-stats">
+            <EmailCardStat specificClass="" statistic={statistics.sent} />
+            <EmailCardStat specificClass="delivered" statistic={statistics.delivered} />
+            <EmailCardStat specificClass="unique-opens" statistic={statistics.opens} />
+            <EmailCardStat specificClass="unique-clicks" statistic={statistics.clicks} />
+            <EmailCardStat specificClass="unsubscribes" statistic={statistics.unsubscribes} />
+          </Statistics>
+        }
         <div className="email-card">
           <div className="email-card-count">
             <p>Email {n}</p>

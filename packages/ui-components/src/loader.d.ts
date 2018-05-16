@@ -5,6 +5,7 @@ export interface LoaderProps {
     large?: boolean;
     small?: boolean;
     centered?: boolean;
+    className?: string;
 }
 export declare const Loader: React.SFC<LoaderProps>;
 export default Loader;

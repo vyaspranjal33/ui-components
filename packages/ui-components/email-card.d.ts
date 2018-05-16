@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import React from 'react';
-import { Statistic } from './statistics';
+import { StatisticType } from './statistics';
 export interface EmailCardDetail {
     label: string;
     value: string;
@@ -28,7 +28,13 @@ export interface EmailCardProps {
     renderSendTimeLink?: (value: string) => any;
     renderAlert?: () => any;
     sendTimeValue?: string;
-    statistics?: Statistic[];
+    statistics?: {
+        sent: StatisticType;
+        delivered: StatisticType;
+        opens: StatisticType;
+        clicks: StatisticType;
+        unsubscribes: StatisticType;
+    };
     thumbnailUrl?: string;
     className?: string;
 }

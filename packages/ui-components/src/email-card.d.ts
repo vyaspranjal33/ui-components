@@ -1,6 +1,6 @@
 /// <reference types="react" />
 import React from 'react';
-import { Statistic } from './statistics';
+import { StatisticType } from './statistics';
 export interface EmailCardDetail {
     label: string;
     value: string;
@@ -9,9 +9,11 @@ export interface EmailCardDetail {
 export interface EmailCardContentProps {
     thumbnailUrl: string;
     onContentEditClick: (event: any) => void;
+    className?: string;
 }
 export interface EmailCardAddButtonProps {
     onClick: (event: any) => void;
+    className?: string;
 }
 export declare const EmailCardAddButton: React.SFC<EmailCardAddButtonProps>;
 export interface EmailCardProps {
@@ -26,8 +28,15 @@ export interface EmailCardProps {
     renderSendTimeLink?: (value: string) => any;
     renderAlert?: () => any;
     sendTimeValue?: string;
-    statistics?: Statistic[];
+    statistics?: {
+        sent: StatisticType;
+        delivered: StatisticType;
+        opens: StatisticType;
+        clicks: StatisticType;
+        unsubscribes: StatisticType;
+    };
     thumbnailUrl?: string;
+    className?: string;
 }
 export declare class EmailCard extends React.Component<EmailCardProps> {
     static defaultProps: {
@@ -37,8 +46,6 @@ export declare class EmailCard extends React.Component<EmailCardProps> {
         paused: boolean;
         renderAlert: boolean;
     };
-    private attributes;
-    constructor(props: EmailCardProps);
     render(): JSX.Element;
 }
 export default EmailCard;
