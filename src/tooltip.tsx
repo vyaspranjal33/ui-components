@@ -99,9 +99,9 @@ export class HTMLTooltip extends React.Component<
   public render() {
     return (
       <div>
-        <div 
-          className={Styles['tooltip-js-parent']} 
-          onMouseEnter={this.handleHoverIn} 
+        <div
+          className={Styles['tooltip-js-parent']}
+          onMouseEnter={this.handleHoverIn}
           onMouseLeave={this.handleHoverOut}
         >
           {this.props.hoverTarget}
