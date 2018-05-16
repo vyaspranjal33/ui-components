@@ -9,20 +9,20 @@ import {
 } from '../src/email-card';
 const loaderStories = storiesOf('EmailCard', module);
 
-const statistics = [
-  { label: 'Emails Sent', amount: 12230 },
-  { label: 'Delivered', amount: 966 },
-  { label: 'Unique Opens', amount: '80.2%' },
-  { label: 'Unique Clicks', amount: 6024 },
-  { label: 'Unsubscribes', amount: 0 },
-];
-const blankStatistics = [
-  { label: 'Emails Sent' },
-  { label: 'Delivered' },
-  { label: 'Unique Opens' },
-  { label: 'Unique Clicks' },
-  { label: 'Unsubscribes' },
-];
+const statistics = {
+  clicks: { label: 'Unique Clicks', amount: 6024 },
+  delivered: { label: 'Delivered', amount: 966 },
+  opens: { label: 'Unique Opens', amount: '80.2%' },
+  sent: { label: 'Emails Sent', amount: 12230 },
+  unsubscribes: { label: 'Unsubscribes', amount: 0 },
+};
+const blankStatistics = {
+  clicks: { label: 'Emails Sent' },
+  delivered: { label: 'Delivered' },
+  opens: { label: 'Unique Opens' },
+  sent: { label: 'Unique Clicks' },
+  unsubscribes: { label: 'Unsubscribes' },
+};
 const renderEditDetailLink = (value: string) => {
   return (
     <a href="#">
