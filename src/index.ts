@@ -5,6 +5,7 @@ export { Breadcrumb } from './breadcrumb';
 export { Button, Buttonized } from './button';
 export { ButtonList } from './button-list';
 export { Card } from './card';
+export { ModuleCard } from './module-card';
 export { CenterModal } from './center-modal';
 export { Column } from './grid/column';
 export { Checkbox } from './checkbox';
