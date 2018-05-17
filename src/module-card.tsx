@@ -6,7 +6,7 @@ import Icon from './icon';
 import cn from './utilities/classnames';
 
 import { IconType } from './types/icons';
-import { ModuleType } from './types/modules';
+import { ModuleCardType } from './types/module-cards';
 
 const iconTypes: {[k: string]: IconType} = {
   'button': 'button',
@@ -34,12 +34,12 @@ const titles = {
   'unsubscribe': 'Unsubscribe',
 };
 
-export interface ModuleProps {
-  type: ModuleType;
+export interface ModuleCardProps {
+  type: ModuleCardType;
   className?: string;
 }
 
-export const Module: React.SFC<ModuleProps> = ({
+export const ModuleCard: React.SFC<ModuleCardProps> = ({
   type,
   className,
 }) => {
@@ -58,4 +58,4 @@ export const Module: React.SFC<ModuleProps> = ({
   );
 };
 
-export default Module;
+export default ModuleCard;
