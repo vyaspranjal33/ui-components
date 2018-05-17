@@ -1,5 +1,4 @@
 export type ModuleType =
-  | ''
   | 'button'
   | 'code'
   | 'columns'
