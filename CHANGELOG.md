@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 0.14.2
+- Support for drag and drop module cards
 ## 0.14.1
 - Statistics component is now format agnostic. expects {label: string, amount: number | string}. Formatting should be handled by consumer,
 ## 0.14.0
