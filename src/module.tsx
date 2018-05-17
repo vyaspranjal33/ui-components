@@ -1,10 +1,38 @@
 import React from 'react';
 
 import Card from './card';
+import Icon from './icon';
 
 import cn from './utilities/classnames';
 
+import { IconType } from './types/icons';
 import { ModuleType } from './types/modules';
+
+const iconTypes: {[k: string]: IconType} = {
+  'button': 'button',
+  'code': 'code',
+  'columns': 'columns',
+  'divider': 'divider',
+  'image': 'images',
+  'image-text': 'image-text',
+  'social': 'social',
+  'spacer': 'spacer',
+  'text': 'text',
+  'unsubscribe': 'unsubscribe',
+};
+
+const titles = {
+  'button': 'Button',
+  'code': 'Code',
+  'columns': 'Columns',
+  'divider': 'Divider',
+  'image': 'Image',
+  'image-text': 'Image & Text',
+  'social': 'Social',
+  'spacer': 'Spacer',
+  'text': 'Text',
+  'unsubscribe': 'Unsubscribe',
+};
 
 export interface ModuleProps {
   type: ModuleType;
@@ -16,60 +44,6 @@ export const Module: React.SFC<ModuleProps> = ({
   className,
 }) => {
 
-  const getIconClass =  (): string => {
-    switch (type) {
-      case 'button':
-        return 'sg-icon-button';
-      case 'code':
-        return 'sg-icon-code';
-      case 'columns':
-        return 'sg-icon-columns';
-      case 'divider':
-        return 'sg-icon-divider';
-      case 'image':
-        return 'sg-icon-images';
-      case 'image-text':
-        return 'sg-icon-image-text';
-      case 'social':
-        return 'sg-icon-social';
-      case 'spacer':
-        return 'sg-icon-spacer';
-      case 'text':
-        return 'sg-icon-text';
-      case 'unsubscribe':
-        return 'sg-icon-unsubscribe';
-      default:
-        return '';
-    }
-  };
-
-  const getTitle =  (): string => {
-    switch (type) {
-      case 'button':
-        return 'Button';
-      case 'code':
-        return 'Code';
-      case 'columns':
-        return 'Columns';
-      case 'divider':
-        return 'Divider';
-      case 'image':
-        return 'Image';
-      case 'image-text':
-        return 'Image & Text';
-      case 'social':
-        return 'Social';
-      case 'spacer':
-        return 'Spacer';
-      case 'text':
-        return 'Text';
-      case 'unsubscribe':
-        return 'Unsubscribe';
-      default:
-        return '';
-    }
-  };
-
   return (
     <Card
       centered
@@ -77,8 +51,8 @@ export const Module: React.SFC<ModuleProps> = ({
       className={cn('card', 'is-module', className)}
     >
       <p>
-        <i className={cn('sg-icon', getIconClass())}/>
-        {getTitle()}
+        <Icon type={iconTypes[type]} />
+        {titles[type]}
       </p>
     </Card>
   );
