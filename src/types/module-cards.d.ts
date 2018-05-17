@@ -1,4 +1,4 @@
-export type ModuleCardType =
+type ModuleCardType =
   | 'button'
   | 'code'
   | 'columns'

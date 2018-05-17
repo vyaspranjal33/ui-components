@@ -1596,6 +1596,295 @@ exports[`Storyshots Divider Divider 1`] = `
 />
 `;
 
+exports[`Storyshots Drag & Drop Module Cards All 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <style>
+    
+        .is-module { 
+          margin: 0 10px 10px 0;
+          display: inline-flex;
+        }
+      
+  </style>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-button"
+        onClick={undefined}
+        style={null}
+      />
+      Button
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-code"
+        onClick={undefined}
+        style={null}
+      />
+      Code
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-columns"
+        onClick={undefined}
+        style={null}
+      />
+      Columns
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-divider"
+        onClick={undefined}
+        style={null}
+      />
+      Divider
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-images"
+        onClick={undefined}
+        style={null}
+      />
+      Image
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-image-text"
+        onClick={undefined}
+        style={null}
+      />
+      Image & Text
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-social"
+        onClick={undefined}
+        style={null}
+      />
+      Social
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-spacer"
+        onClick={undefined}
+        style={null}
+      />
+      Spacer
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-text"
+        onClick={undefined}
+        style={null}
+      />
+      Text
+    </p>
+  </div>
+  <div
+    className="card card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-unsubscribe"
+        onClick={undefined}
+        style={null}
+      />
+      Unsubscribe
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Button Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-button"
+      onClick={undefined}
+      style={null}
+    />
+    Button
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Code Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-code"
+      onClick={undefined}
+      style={null}
+    />
+    Code
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Columns Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-columns"
+      onClick={undefined}
+      style={null}
+    />
+    Columns
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Divider Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-divider"
+      onClick={undefined}
+      style={null}
+    />
+    Divider
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Image & Text Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-image-text"
+      onClick={undefined}
+      style={null}
+    />
+    Image & Text
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Image Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-images"
+      onClick={undefined}
+      style={null}
+    />
+    Image
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Social Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-social"
+      onClick={undefined}
+      style={null}
+    />
+    Social
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Spacer Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-spacer"
+      onClick={undefined}
+      style={null}
+    />
+    Spacer
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Text Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-text"
+      onClick={undefined}
+      style={null}
+    />
+    Text
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Unsubscribe Module 1`] = `
+<div
+  className="card card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-unsubscribe"
+      onClick={undefined}
+      style={null}
+    />
+    Unsubscribe
+  </p>
+</div>
+`;
+
 exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
 <div
   className="btn-list"

@@ -16,6 +16,7 @@ export interface SegmentTermProps {
     renderInputs?: () => React.ReactNode;
     showConfirm?: boolean;
     title: string;
+    className?: string;
 }
 export declare class SegmentTerm extends PureComponent<SegmentTermProps> {
     static defaultProps: {

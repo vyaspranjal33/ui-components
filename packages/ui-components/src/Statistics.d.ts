@@ -8,6 +8,7 @@ export interface Statistic {
 export interface StatisticsProps {
     statistics?: Statistic[];
     statsClassName: string;
+    className?: string;
 }
 export declare const Statistics: React.SFC<StatisticsProps>;
 export default Statistics;

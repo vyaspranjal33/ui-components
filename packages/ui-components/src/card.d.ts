@@ -8,6 +8,7 @@ export interface CardProps {
     inline?: boolean;
     title?: string;
     body?: string;
+    className?: string;
     badge?: {
         content: string;
         color: ValidColor;
