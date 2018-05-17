@@ -6,9 +6,8 @@ import Icon from './icon';
 import cn from './utilities/classnames';
 
 import { IconType } from './types/icons';
-import { ModuleCardType } from './types/module-cards';
 
-const iconTypes: {[k: string]: IconType} = {
+const iconTypes: {[k in ModuleCardType]: IconType} = {
   'button': 'button',
   'code': 'code',
   'columns': 'columns',
@@ -21,7 +20,7 @@ const iconTypes: {[k: string]: IconType} = {
   'unsubscribe': 'unsubscribe',
 };
 
-const titles = {
+const titles: {[k in ModuleCardType]: string} = {
   'button': 'Button',
   'code': 'Code',
   'columns': 'Columns',
