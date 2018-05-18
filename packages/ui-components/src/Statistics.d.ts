@@ -7,8 +7,6 @@ export interface StatisticType {
 }
 export interface StatisticsProps {
     commonClass: string;
-    statistics?: Statistic[];
-    statsClassName: string;
     className?: string;
 }
 export declare const EmailCardStat: React.SFC<{

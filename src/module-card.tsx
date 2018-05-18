@@ -41,6 +41,7 @@ export interface ModuleCardProps {
 export const ModuleCard: React.SFC<ModuleCardProps> = ({
   type,
   className,
+  ...attributes,
 }) => {
 
   return (
@@ -48,6 +49,7 @@ export const ModuleCard: React.SFC<ModuleCardProps> = ({
       centered
       thin
       className={cn('card', 'is-module', className)}
+      {...attributes}
     >
       <p>
         <Icon type={iconTypes[type]} />

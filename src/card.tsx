@@ -31,20 +31,17 @@ export const Card: React.SFC<CardProps> = ({
   ...attributes,
 }) => {
 
-  const titleStyle = {
-    width: '100%',
-  } as React.CSSProperties;
-
   return (
     <div
       className={cn('card', className, {
         'is-centered': centered,
+        'is-inline': inline,
         'is-thin': thin,
       })}
       {...attributes}
     >
       {badge && <Badge {...badge} />}
-      {title && <h2 style={titleStyle}>{title}</h2>}
+      {title && <h2 className={cn({ 'card-title': inline })}>{title}</h2>}
       {body && <p>{body}</p>}
       {children}
     </div>

@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## 0.14.3
+- Support inline cards.
+- Removed hard-coded 100% width style from card module. https://github.com/sendgrid/ui-components/issues/100
 ## 0.14.2
 - Support for drag and drop module cards
 ## 0.14.1
