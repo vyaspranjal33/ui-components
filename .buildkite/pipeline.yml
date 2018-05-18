@@ -22,24 +22,23 @@ steps:
       image-repository: docker.sendgrid.net/sendgrid
       cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
 - wait
+- name: ":jest: Lint and Test"
+  command: yarn ci-test
+  plugins:
+    docker-compose#v2.2.1:
+      run: app
 
-  - name: ":jest: Lint and Test"
-    command: yarn ci-test
-    plugins:
-      docker-compose#v2.2.1:
-        run: app
+- name: ":storybook: Build Storybook"
+  command: yarn build-storybook
+  plugins:
+    docker-compose#v2.2.1:
+      run: app
 
-  - name: ":storybook: Build Storybook"
-    command: yarn build-storybook
-    plugins:
-      docker-compose#v2.2.1:
-        run: app
-  
-  - name: ":typescript: Build UI-Components"
-    command: yarn ci-test
-    plugins:
-      docker-compose#v2.2.1:
-        run: app
+- name: ":typescript: Build UI-Components"
+  command: yarn ci-test
+  plugins:
+    docker-compose#v2.2.1:
+      run: app
 
 # The purpose of this script is to build your script in a standard manner.
   # - label: 'build_jenkins_docker_file'
