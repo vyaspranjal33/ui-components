@@ -60,7 +60,7 @@ steps:
   #     - 'make package'
   #   artifact_paths: 'ci-repo/*'
 
-  - wait
+  # - wait
 
 
   ##############################
