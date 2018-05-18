@@ -12,66 +12,32 @@
 steps:
 
   ##############################
-  # Pre-build Environment Checks
-  ##############################
-
-  # Pipeline revision is our gate that lets you into the new logic.
-  # You need to make chef-data consul changes, and chef changes
-  # in order to use this new flow. You will probably want to
-  # pair with the autobots in order to get this converted.
-  #
-  # UNCOMMENTING THIS WITHOUT FULLY RUNNING STEPS IN WIKI WILL BREAK YOUR VERSIONING
-  # https://wiki.sendgrid.net/x/QSfLAg
-  # - label: 'set pipeline revision'
-  #   command:
-  #     - 'buildkite-agent meta-data set PIPELINE_REVISION `echo 0.0.1`'
-
-  # Changes to this variable will change whether or not your branch is
-  # promoted and uploaded.
-  # true = all commits will be packaged and uploaded to repository
-  # servers (without merging to master), but not deployed.
-  #
-  # false = master commits only will be packed and uploaded to repository
-  # servers, but not deployed
-  - label: 'set promote for stage'
-    command:
-      - 'buildkite-agent meta-data set PROMOTEFORSTAGE `echo true`'
-    branches: '!master'
-
-  - wait
-
-
-  # The purpose of the status check script is to add a comment to your
-  # pull requests that indicates whether or not this PR is ready to merge.
-  # If your repo is part of the SOX or SOC2 audit, do not remove this!
-  - label: 'status_check'
-    command: 'workflow status_checks'
-    branches: '!master'
-
-  - wait
-
-
-  ##############################
   # Build it & Package it
   ##############################
 
-  # The purpose of this script is to build your script in a standard manner.
-  - label: 'build_jenkins_docker_file'
-    command: 'workflow build_jenkins_docker_file'
-    artifact_paths: 'ci-repo/*'
-    env:
-      PACKAGE: true
-      PUBLISH: true
-    branches: 'master'
+- name: ":docker Build an image"
+  plugins:
+    docker-compose#v2.2.1:
+      build: app
+      image-repository: docker.sendgrid.net/sendgrid
+      cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+# The purpose of this script is to build your script in a standard manner.
+  # - label: 'build_jenkins_docker_file'
+  #   command: 'workflow build_jenkins_docker_file'
+  #   artifact_paths: 'ci-repo/*'
+  #   env:
+  #     PACKAGE: true
+  #     PUBLISH: true
+  #   branches: 'master'
 
   # If we're not on the default; package, but don't publish
-  - label: 'build_jenkins_docker_file'
-    command: 'workflow build_jenkins_docker_file'
-    artifact_paths: 'ci-repo/*'
-    env:
-      PACKAGE: true
-      PUBLISH: false
-    branches: '!master'
+  # - label: 'build_jenkins_docker_file'
+  #   command: 'workflow build_jenkins_docker_file'
+  #   artifact_paths: 'ci-repo/*'
+  #   env:
+  #     PACKAGE: true
+  #     PUBLISH: false
+  #   branches: '!master'
 
   # Note: You should consider converting your .jenkins-docker file into a
   # traditional Makefile! You can check out the ussr repo to see what

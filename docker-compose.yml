@@ -4,6 +4,10 @@ services:
   test:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     command: yarn ci-test
+  app:
+    image: docker.sendgrid.net/sendgrid/ui-components:latest
+    build:
+     context: .  
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:

@@ -10,6 +10,9 @@ module.exports = function(config, env) {
     exclude: /node_modules/,
     include: [/stories/, /components/],
     loader: 'awesome-typescript-loader',
+    options: {
+      useTranspileModule: true,
+    },
   });
 
   config.module.rules.push({
@@ -48,7 +51,9 @@ module.exports = function(config, env) {
   config.resolve.extensions.push('.css');
   config.resolve.extensions.push('.scss');
 
-  config.plugins = config.plugins.filter(plugin => plugin.constructor.name !== 'UglifyJsPlugin');
+  config.plugins = config.plugins.filter(
+    plugin => plugin.constructor.name !== 'UglifyJsPlugin',
+  );
 
   return config;
 };
