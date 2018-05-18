@@ -1651,7 +1651,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
       
   </style>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1663,7 +1663,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1675,7 +1675,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1687,7 +1687,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1699,7 +1699,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1711,7 +1711,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1723,7 +1723,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1735,7 +1735,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1747,7 +1747,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1759,7 +1759,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
     </p>
   </div>
   <div
-    className="card card is-module is-centered is-thin"
+    className="card is-module is-centered is-thin"
   >
     <p>
       <i
@@ -1775,7 +1775,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Button Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1790,7 +1790,7 @@ exports[`Storyshots Drag & Drop Module Cards Button Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Code Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1805,7 +1805,7 @@ exports[`Storyshots Drag & Drop Module Cards Code Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Columns Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1820,7 +1820,7 @@ exports[`Storyshots Drag & Drop Module Cards Columns Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Divider Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1835,7 +1835,7 @@ exports[`Storyshots Drag & Drop Module Cards Divider Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Image & Text Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1850,7 +1850,7 @@ exports[`Storyshots Drag & Drop Module Cards Image & Text Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Image Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1865,7 +1865,7 @@ exports[`Storyshots Drag & Drop Module Cards Image Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Social Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1880,7 +1880,7 @@ exports[`Storyshots Drag & Drop Module Cards Social Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Spacer Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1895,7 +1895,7 @@ exports[`Storyshots Drag & Drop Module Cards Spacer Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Text Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -1910,7 +1910,7 @@ exports[`Storyshots Drag & Drop Module Cards Text Module 1`] = `
 
 exports[`Storyshots Drag & Drop Module Cards Unsubscribe Module 1`] = `
 <div
-  className="card card is-module is-centered is-thin"
+  className="card is-module is-centered is-thin"
 >
   <p>
     <i
@@ -7268,6 +7268,48 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
    
   on adding and updating contacts.
 </p>
+`;
+
+exports[`Storyshots Split Card Split Card 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-split is-thin"
+    >
+      <h2
+        className=""
+      >
+        Split Card
+      </h2>
+      <p>
+        Line of copy.
+      </p>
+      <div
+        className="split-content"
+      >
+        <p>
+          Section 1
+        </p>
+        <hr
+          className="has-label"
+          data-label="or"
+        />
+        <p>
+          Section 2
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Table Sortable (Custom Render) 1`] = `

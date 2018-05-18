@@ -48,7 +48,7 @@ export const ModuleCard: React.SFC<ModuleCardProps> = ({
     <Card
       centered
       thin
-      className={cn('card', 'is-module', className)}
+      className={cn('is-module', className)}
       {...attributes}
     >
       <p>

@@ -2,7 +2,7 @@
 import React from 'react';
 import { color as ValidColor } from './types/color';
 export interface CardProps {
-    children?: React.ReactElement<any>;
+    children?: Array<React.ReactElement<any>> | React.ReactElement<any>;
     centered?: boolean;
     thin?: boolean;
     inline?: boolean;
