@@ -35,7 +35,7 @@ steps:
       run: app
 
 - name: ":typescript: Build UI-Components"
-  command: yarn ci-test
+  command: yarn build
   plugins:
     docker-compose#v2.2.1:
       run: app
