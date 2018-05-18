@@ -1040,6 +1040,72 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
 </button>
 `;
 
+exports[`Storyshots Card Card (inline) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-inline"
+    >
+      <h2
+        className="card-title"
+      >
+        Node.js
+      </h2>
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card (inline, thin) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-inline is-thin"
+    >
+      <h2
+        className="card-title"
+      >
+        Node.js
+      </h2>
+      <button
+        className="btn btn-secondary btn-small"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Card Card with Actions 1`] = `
 <div
   className="row"
@@ -1056,11 +1122,7 @@ exports[`Storyshots Card Card with Actions 1`] = `
       className="card is-centered"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         Event Annoucements
       </h2>
@@ -1139,11 +1201,7 @@ exports[`Storyshots Card Card with Badge (Centered) 1`] = `
         Recommended
       </span>
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1176,11 +1234,7 @@ exports[`Storyshots Card Card with Badge 1`] = `
         Recommended
       </span>
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1208,11 +1262,7 @@ exports[`Storyshots Card Card with Title and Body (Centered) 1`] = `
       className="card is-centered"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1240,11 +1290,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children and Cent
       className="card is-centered"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1280,11 +1326,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1320,11 +1362,7 @@ exports[`Storyshots Card Card with Title and Body 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -5881,11 +5919,7 @@ exports[`Storyshots Grid 4/8 Column Config 1`] = `
         className="card"
       >
         <h2
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
+          className=""
         >
           A Four-Wide Column
         </h2>
@@ -5901,11 +5935,7 @@ exports[`Storyshots Grid 4/8 Column Config 1`] = `
         className="card"
       >
         <h2
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
+          className=""
         >
           An Eight-Wide Column
         </h2>
@@ -5933,11 +5963,7 @@ exports[`Storyshots Grid Default (No Width or Offset) 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         A Default Column
       </h2>
@@ -5960,11 +5986,7 @@ exports[`Storyshots Grid Offset 5 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         An Offset Only Column
       </h2>
@@ -5987,11 +6009,7 @@ exports[`Storyshots Grid Using Width & Offset 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         A Six-Wide Column
       </h2>
@@ -6014,11 +6032,7 @@ exports[`Storyshots Grid Width 12 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         A Width Only Column
       </h2>
