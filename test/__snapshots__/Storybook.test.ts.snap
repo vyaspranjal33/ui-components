@@ -7270,7 +7270,7 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
 </p>
 `;
 
-exports[`Storyshots Split Card Split Card 1`] = `
+exports[`Storyshots Split Card Split Card (w/ labeled separator) 1`] = `
 <div
   className="row"
 >
@@ -7301,7 +7301,49 @@ exports[`Storyshots Split Card Split Card 1`] = `
         </p>
         <hr
           className="has-label"
-          data-label="or"
+          data-label="separator"
+        />
+        <p>
+          Section 2
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Split Card Split Card (w/ unlabeled separator) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-split is-thin"
+    >
+      <h2
+        className=""
+      >
+        Split Card
+      </h2>
+      <p>
+        Line of copy.
+      </p>
+      <div
+        className="split-content"
+      >
+        <p>
+          Section 1
+        </p>
+        <hr
+          className=""
+          data-label={undefined}
         />
         <p>
           Section 2

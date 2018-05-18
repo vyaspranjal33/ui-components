@@ -4,7 +4,7 @@ import Card, { CardProps } from './card';
 
 import cn from './utilities/classnames';
 
-export interface SplitCardSeparatorProps{
+export interface SplitCardSeparatorProps {
   label?: string;
   className?: string;
 }
@@ -14,9 +14,8 @@ export const SplitCardSeparator: React.SFC<SplitCardSeparatorProps> = ({
   className,
   ...attributes,
 }) => {
-  return <hr className={cn(className, { 'has-label': label })} data-label={label} />
+  return <hr className={cn(className, { 'has-label': label })} data-label={label} />;
 };
-
 
 export const SplitCard: React.SFC<CardProps> = ({
   children,
