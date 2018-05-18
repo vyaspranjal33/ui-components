@@ -121,3 +121,30 @@ stories.add('Card with Actions', () => (
     </div>
   </div>
 ));
+
+stories.add('Card (inline)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="Node.js"
+        inline
+      >
+        <Button type="secondary">Choose</Button>
+      </Card>
+    </div>
+  </div>
+));
+
+stories.add('Card (inline, thin)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="Node.js"
+        inline
+        thin
+      >
+        <Button small type="secondary">Choose</Button>
+      </Card>
+    </div>
+  </div>
+));
