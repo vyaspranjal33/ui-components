@@ -10,7 +10,7 @@
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",
-    "ci-test": "yarn lint && yarn test && yarn build-storybook",
+    "ci-test": "yarn lint && yarn test",
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook",
     "prepublishOnly": "yarn build",
