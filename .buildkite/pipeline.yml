@@ -39,7 +39,7 @@ steps:
 - name: ":typescript: Build UI-Components"
   command: yarn build
   artifact_paths: 
-    - "dist/**/*"
+    - "packages/**/*"
   plugins:
     docker-compose#v2.2.1:
       run: app
