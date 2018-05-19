@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 0.14.6
+- Unsubscribe group cards (group and create new)
 ## 0.14.5
 - Fixed card actions. Actions now use dropdown button with vertical ellipsis icon
 - Large card example. Cards now support icons with user-specified sizes

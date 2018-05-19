@@ -9800,3 +9800,293 @@ exports[`Storyshots Truncated List Standard - Only 1 Item 1`] = `
   Boromir
 </span>
 `;
+
+exports[`Storyshots UnsubscribeGroupCard Create New Group Card 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Create New Group
+      </h2>
+      <p>
+        Create a new group that represents a common type of email you send.
+      </p>
+      <button
+        className="btn btn-primary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Create New Group
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UnsubscribeGroupCard Unsubscribe Group Card (isDisplayedOnPreferencesPage) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Special Offers
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <p
+        className="card-unsub-prefs"
+      >
+        <i
+          className="sg-icon sg-icon-check-circle"
+          onClick={undefined}
+          style={null}
+        />
+        Included in opt out preferences
+      </p>
+      <p
+        className="card-unsubs"
+      >
+        <strong>
+          Unsubscribes
+        </strong>
+        0
+      </p>
+      <p
+        className="card-id"
+      >
+        <strong>
+          ID
+        </strong>
+         
+        5678
+      </p>
+      <div
+        className="actions"
+      >
+        <div
+          className="btn-list"
+        >
+          <div
+            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-ellipsis-vertical"
+              onClick={undefined}
+              style={null}
+            />
+            <ul
+              className="dropdown-menu"
+            >
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-pencil"
+                  onClick={undefined}
+                  style={null}
+                />
+                Edit
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-view"
+                  onClick={undefined}
+                  style={null}
+                />
+                Preview
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-export"
+                  onClick={undefined}
+                  style={null}
+                />
+                Upload a CSV
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-download"
+                  onClick={undefined}
+                  style={null}
+                />
+                Export
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-contacts-alt"
+                  onClick={undefined}
+                  style={null}
+                />
+                Manually Add
+              </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UnsubscribeGroupCard Unsubscribe Group Card 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Special Offers
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <p
+        className="card-unsubs"
+      >
+        <strong>
+          Unsubscribes
+        </strong>
+        1000
+      </p>
+      <p
+        className="card-id"
+      >
+        <strong>
+          ID
+        </strong>
+         
+        1234
+      </p>
+      <div
+        className="actions"
+      >
+        <div
+          className="btn-list"
+        >
+          <div
+            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-ellipsis-vertical"
+              onClick={undefined}
+              style={null}
+            />
+            <ul
+              className="dropdown-menu"
+            >
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-pencil"
+                  onClick={undefined}
+                  style={null}
+                />
+                Edit
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-view"
+                  onClick={undefined}
+                  style={null}
+                />
+                Preview
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-export"
+                  onClick={undefined}
+                  style={null}
+                />
+                Upload a CSV
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-download"
+                  onClick={undefined}
+                  style={null}
+                />
+                Export
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-contacts-alt"
+                  onClick={undefined}
+                  style={null}
+                />
+                Manually Add
+              </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
