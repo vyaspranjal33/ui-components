@@ -29,7 +29,7 @@ steps:
       run: app
 
 - name: ":storybook: Build Storybook"
-  command: yarn build-storybook
+  command: yarn build-storybook -o ./storybookDist
   plugins:
     docker-compose#v2.2.1:
       run: app
