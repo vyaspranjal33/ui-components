@@ -1040,7 +1040,7 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
 </button>
 `;
 
-exports[`Storyshots Card Card (inline) 1`] = `
+exports[`Storyshots Card Card (Inline) 1`] = `
 <div
   className="row"
 >
@@ -1073,7 +1073,7 @@ exports[`Storyshots Card Card (inline) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Card Card (inline, thin) 1`] = `
+exports[`Storyshots Card Card (Inline, Thin) 1`] = `
 <div
   className="row"
 >
@@ -1106,7 +1106,52 @@ exports[`Storyshots Card Card (inline, thin) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Card Card with Actions (vertical) 1`] = `
+exports[`Storyshots Card Card (Large) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-8"
+    style={
+      Object {
+        "width": "800px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <div
+        className="card-icon"
+      >
+        <i
+          className="sg-icon sg-icon-airplane is-size-40"
+          onClick={undefined}
+          style={null}
+        />
+      </div>
+      <h2
+        className=""
+      >
+        Large & In-Charge
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
 <div
   className="row"
 >
@@ -1255,6 +1300,43 @@ exports[`Storyshots Card Card with Badge 1`] = `
 </div>
 `;
 
+exports[`Storyshots Card Card with Icon (Centered) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <div
+        className="card-icon"
+      >
+        <i
+          className="sg-icon sg-icon-locked is-size-30"
+          onClick={undefined}
+          style={null}
+        />
+      </div>
+      <h2
+        className=""
+      >
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Card Card with Title and Body (Centered) 1`] = `
 <div
   className="row"
@@ -1283,7 +1365,7 @@ exports[`Storyshots Card Card with Title and Body (Centered) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Card Card with Title and Body (with Custom Children and Centered) 1`] = `
+exports[`Storyshots Card Card with Title and Body (Selected) 1`] = `
 <div
   className="row"
 >
@@ -1296,7 +1378,35 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children and Cent
     }
   >
     <div
-      className="card is-centered"
+      className="card is-selected"
+    >
+      <h2
+        className=""
+      >
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card"
     >
       <h2
         className=""
@@ -1319,7 +1429,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children and Cent
 </div>
 `;
 
-exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
+exports[`Storyshots Card Card with Title and Body (with Custom Children, Centered, Selected) 1`] = `
 <div
   className="row"
 >
@@ -1332,7 +1442,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
     }
   >
     <div
-      className="card"
+      className="card is-centered is-selected"
     >
       <h2
         className=""
