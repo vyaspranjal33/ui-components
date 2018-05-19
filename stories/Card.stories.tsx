@@ -92,7 +92,7 @@ stories.add('Card with Badge (Centered)', () => (
   </div>
 ));
 
-stories.add('Card with Actions', () => (
+stories.add('Card with Actions (vertical)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
       <Card
@@ -100,7 +100,7 @@ stories.add('Card with Actions', () => (
         body="Hear about our latest events and when we're coming to a city near you."
         centered
       >
-        <Actions>
+        <Actions vertical>
           <Action
             title="Edit"
             icon="pencil"

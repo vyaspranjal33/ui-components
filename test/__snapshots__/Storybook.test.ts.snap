@@ -1106,7 +1106,7 @@ exports[`Storyshots Card Card (inline, thin) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Card Card with Actions 1`] = `
+exports[`Storyshots Card Card with Actions (vertical) 1`] = `
 <div
   className="row"
 >
@@ -1132,47 +1132,56 @@ exports[`Storyshots Card Card with Actions 1`] = `
       <div
         className="actions"
       >
-        <i
-          className="sg-icon sg-icon-ellipsis"
-          onClick={undefined}
-          style={null}
-        />
         <div
-          className="action-icons"
+          className="btn-list"
         >
-          <span
-            data-tooltip="Edit"
-            data-tooltip-pos="up"
+          <div
+            className="btn btn-dropdown dropdown btn-group-item has-icon"
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-pencil"
+              className="sg-icon sg-icon-ellipsis-vertical"
               onClick={undefined}
               style={null}
             />
-          </span>
-          <span
-            data-tooltip="Preview"
-            data-tooltip-pos="up"
-            onClick={[Function]}
-          >
-            <i
-              className="sg-icon sg-icon-view"
-              onClick={undefined}
-              style={null}
-            />
-          </span>
-          <span
-            data-tooltip="Export"
-            data-tooltip-pos="up"
-            onClick={[Function]}
-          >
-            <i
-              className="sg-icon sg-icon-export"
-              onClick={undefined}
-              style={null}
-            />
-          </span>
+            <ul
+              className="dropdown-menu"
+            >
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-pencil"
+                  onClick={undefined}
+                  style={null}
+                />
+                Edit
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-view"
+                  onClick={undefined}
+                  style={null}
+                />
+                Preview
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-export"
+                  onClick={undefined}
+                  style={null}
+                />
+                Export
+              </span>
+            </ul>
+          </div>
         </div>
       </div>
     </div>

@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 0.14.5
+- Fixed card actions. Actions now use dropdown button with vertical ellipsis icon
 ## 0.14.4
 - Support for split cards
 ## 0.14.3

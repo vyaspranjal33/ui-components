@@ -56,6 +56,7 @@ export class DropdownButton extends React.Component<
 
     let buttonType: ButtonType = type;
     if (gear) { buttonType = 'secondary'; }
+    if (gear && icon) { buttonType = 'group-item'; }
 
     const links = map(children, (link: React.ReactElement<any>) => {
       return React.cloneElement(link, {
@@ -67,7 +68,7 @@ export class DropdownButton extends React.Component<
       <div className="btn-list">
         <div
           className={cn('btn', 'btn-dropdown', 'dropdown', `btn-${buttonType}`, className, {
-            'btn-dropdown-gear': gear,
+            'btn-dropdown-gear': gear && !icon,
             'btn-on-dark': onDark,
             'btn-small': small,
             'has-badge': hasBadge,
@@ -81,7 +82,7 @@ export class DropdownButton extends React.Component<
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
           {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}
-          {gear ? <Icon type="gear" /> : label}
+          {gear ? <Icon type={icon || 'gear'} /> : label}
           <ul className="dropdown-menu">{links}</ul>
         </div>
       </div>
