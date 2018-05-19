@@ -5,6 +5,9 @@ services:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:
      context: .  
+    volumes:
+      - ./dist:/opt/sendgrid/ui-components/dist
+      - ./storybookDist:/opt/sendgrid/ui-components/storybookDist
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:

@@ -30,6 +30,9 @@ steps:
 
 - name: ":storybook: Build Storybook"
   command: yarn build-storybook -o ./storybookDist
+  artifact_paths: 
+    - "dist/*"
+    - "storybookDist/*"
   plugins:
     docker-compose#v2.2.1:
       run: app
