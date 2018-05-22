@@ -5,11 +5,23 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = function(config, env) {
   config = storybookBaseConfig(config, env);
 
+
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: /node_modules/,
     include: [/stories/, /components/],
     loader: 'awesome-typescript-loader',
+    enforce: 'pre',
+  });
+
+  config.module.rules.push({
+    test: /.tsx?$/,
+    loaders: [{
+      loader: require.resolve('@storybook/addon-storysource/loader'),
+      options: { parser: 'typescript' }
+    }],
+    include: /stories/,
+    exclude: /node_modules/,
   });
 
   config.module.rules.push({
