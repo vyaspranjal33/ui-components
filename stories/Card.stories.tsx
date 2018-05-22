@@ -5,6 +5,7 @@ import React from 'react';
 import { Action, Actions } from '../src/actions';
 import Button from '../src/button';
 import Card from '../src/card';
+import Icon from '../src/icon';
 
 const stories = storiesOf('Card', module);
 
@@ -14,6 +15,18 @@ stories.add('Card with Title and Body', () => (
       <Card
         title="SMTP Relay"
         body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+      />
+    </div>
+  </div>
+));
+
+stories.add('Card with Title and Body (Selected)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="SMTP Relay"
+        body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+        selected
       />
     </div>
   </div>
@@ -45,7 +58,7 @@ stories.add('Card with Title and Body (with Custom Children)', () => (
 ));
 
 stories.add(
-  'Card with Title and Body (with Custom Children and Centered)',
+  'Card with Title and Body (with Custom Children, Centered, Selected)',
   () => (
     <div className="row">
       <div className="col-4" style={{ width: '300px' }}>
@@ -53,6 +66,7 @@ stories.add(
           title="SMTP Relay"
           body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
           centered
+          selected
         >
           <Button type="primary">Choose</Button>
         </Card>
@@ -92,7 +106,21 @@ stories.add('Card with Badge (Centered)', () => (
   </div>
 ));
 
-stories.add('Card with Actions', () => (
+stories.add('Card with Icon (Centered)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        icon="locked"
+        iconSize={30}
+        title="SMTP Relay"
+        body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+        centered
+      />
+    </div>
+  </div>
+));
+
+stories.add('Card w/Actions (Vertical)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
       <Card
@@ -100,7 +128,7 @@ stories.add('Card with Actions', () => (
         body="Hear about our latest events and when we're coming to a city near you."
         centered
       >
-        <Actions>
+        <Actions vertical>
           <Action
             title="Edit"
             icon="pencil"
@@ -117,6 +145,50 @@ stories.add('Card with Actions', () => (
             onClick={action('Export Action Clicked')}
           />
         </Actions>
+      </Card>
+    </div>
+  </div>
+));
+
+stories.add('Card (Large)', () => (
+  <div className="row">
+    <div className="col-8" style={{ width: '800px' }}>
+      <Card
+        icon="airplane"
+        iconSize={40}
+        title="Large &amp; In-Charge"
+        body="The easiest way to send email. It only requires modifying your application’s SMTP configuration."
+        centered
+      >
+        <Button type="secondary">Choose</Button>
+      </Card>
+    </div>
+  </div>
+));
+
+
+stories.add('Card (Inline)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="Node.js"
+        inline
+      >
+        <Button type="secondary">Choose</Button>
+      </Card>
+    </div>
+  </div>
+));
+
+stories.add('Card (Inline, Thin)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="Node.js"
+        inline
+        thin
+      >
+        <Button small type="secondary">Choose</Button>
       </Card>
     </div>
   </div>

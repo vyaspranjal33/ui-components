@@ -1,20 +1,41 @@
-import React from 'react';
-import Icon from './icon';
-import { IconType } from './types/icons';
+import React, { Fragment } from 'react';
+
 import cn from './utilities/classnames';
+
+import DropdownButton from './dropdown-button';
+import Icon from './icon';
+
+import { IconType } from './types/icons';
 
 export interface ActionsProps {
   children:
     React.ReactElement<ActionProps> |
     Array<React.ReactElement<ActionProps>>;
   className?: string;
+  vertical?: boolean;
 }
 
-export const Actions: React.SFC<ActionsProps> = ({ children, className, ...attributes }) => {
+export const Actions: React.SFC<ActionsProps> = ({ children, className, vertical, ...attributes }) => {
+  const actions = React.Children.map(children, (action: React.ReactElement<any>) => {
+    return React.cloneElement(action, {
+      showTitle: vertical,
+    });
+  });
+
   return (
+
     <div className={cn('actions', className)} {...attributes}>
-      <Icon type="ellipsis" />
-      <div className="action-icons">{children}</div>
+      {
+        vertical ?
+        <DropdownButton gear icon="ellipsis-vertical">
+          {actions}
+        </DropdownButton>
+        :
+        <Fragment>
+          <Icon type="ellipsis" />
+          <div className="action-icons">{children}</div>
+        </Fragment>
+      }
     </div>
   );
 };
@@ -32,17 +53,27 @@ export interface ActionProps {
   title: string;
   icon: IconType;
   onClick: (event: any) => void;
+  showTitle?: boolean;
 }
 
 export const Action: React.SFC<ActionProps> = ({
   title,
   icon,
   onClick: handleClick,
+  showTitle,
   ...attributes,
 }) => {
+
+  const tooltipAttributes = showTitle ?
+    {} : {
+      'data-tooltip': title,
+      'data-tooltip-pos': 'up',
+    };
+
   return (
-    <span data-tooltip={title} data-tooltip-pos="up" onClick={handleClick} {...attributes}>
+    <span {...tooltipAttributes} onClick={handleClick} {...attributes}>
       <Icon type={icon} />
+      {showTitle && title}
     </span>
   );
 };

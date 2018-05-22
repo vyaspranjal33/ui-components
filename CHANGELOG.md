@@ -1,5 +1,17 @@
 # CHANGELOG
 
+## 0.14.6
+- Unsubscribe group cards (group and create new)
+## 0.14.5
+- Fixed card actions. Actions now use dropdown button with vertical ellipsis icon
+- Large card example. Cards now support icons with user-specified sizes
+## 0.14.4
+- Support for split cards
+## 0.14.3
+- Support for inline cards
+- Removed hard-coded 100% width style from card module. https://github.com/sendgrid/ui-components/issues/100
+## 0.14.2
+- Support for drag and drop module cards
 ## 0.14.1
 - Statistics component is now format agnostic. expects {label: string, amount: number | string}. Formatting should be handled by consumer,
 ## 0.14.0

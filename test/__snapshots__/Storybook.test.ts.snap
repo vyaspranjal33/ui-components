@@ -1040,7 +1040,118 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
 </button>
 `;
 
-exports[`Storyshots Card Card with Actions 1`] = `
+exports[`Storyshots Card Card (Inline) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-inline"
+    >
+      <h2
+        className="card-title"
+      >
+        Node.js
+      </h2>
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card (Inline, Thin) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-inline is-thin"
+    >
+      <h2
+        className="card-title"
+      >
+        Node.js
+      </h2>
+      <button
+        className="btn btn-secondary btn-small"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card (Large) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-8"
+    style={
+      Object {
+        "width": "800px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <div
+        className="card-icon"
+      >
+        <i
+          className="sg-icon sg-icon-airplane is-size-40"
+          onClick={undefined}
+          style={null}
+        />
+      </div>
+      <h2
+        className=""
+      >
+        Large & In-Charge
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <button
+        className="btn btn-secondary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
 <div
   className="row"
 >
@@ -1056,11 +1167,7 @@ exports[`Storyshots Card Card with Actions 1`] = `
       className="card is-centered"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         Event Annoucements
       </h2>
@@ -1070,47 +1177,56 @@ exports[`Storyshots Card Card with Actions 1`] = `
       <div
         className="actions"
       >
-        <i
-          className="sg-icon sg-icon-ellipsis"
-          onClick={undefined}
-          style={null}
-        />
         <div
-          className="action-icons"
+          className="btn-list"
         >
-          <span
-            data-tooltip="Edit"
-            data-tooltip-pos="up"
+          <div
+            className="btn btn-dropdown dropdown btn-group-item has-icon"
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-pencil"
+              className="sg-icon sg-icon-ellipsis-vertical"
               onClick={undefined}
               style={null}
             />
-          </span>
-          <span
-            data-tooltip="Preview"
-            data-tooltip-pos="up"
-            onClick={[Function]}
-          >
-            <i
-              className="sg-icon sg-icon-view"
-              onClick={undefined}
-              style={null}
-            />
-          </span>
-          <span
-            data-tooltip="Export"
-            data-tooltip-pos="up"
-            onClick={[Function]}
-          >
-            <i
-              className="sg-icon sg-icon-export"
-              onClick={undefined}
-              style={null}
-            />
-          </span>
+            <ul
+              className="dropdown-menu"
+            >
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-pencil"
+                  onClick={undefined}
+                  style={null}
+                />
+                Edit
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-view"
+                  onClick={undefined}
+                  style={null}
+                />
+                Preview
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-export"
+                  onClick={undefined}
+                  style={null}
+                />
+                Export
+              </span>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
@@ -1139,11 +1255,7 @@ exports[`Storyshots Card Card with Badge (Centered) 1`] = `
         Recommended
       </span>
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1176,11 +1288,44 @@ exports[`Storyshots Card Card with Badge 1`] = `
         Recommended
       </span>
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
+      >
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Icon (Centered) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <div
+        className="card-icon"
+      >
+        <i
+          className="sg-icon sg-icon-locked is-size-30"
+          onClick={undefined}
+          style={null}
+        />
+      </div>
+      <h2
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1208,11 +1353,7 @@ exports[`Storyshots Card Card with Title and Body (Centered) 1`] = `
       className="card is-centered"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1224,7 +1365,7 @@ exports[`Storyshots Card Card with Title and Body (Centered) 1`] = `
 </div>
 `;
 
-exports[`Storyshots Card Card with Title and Body (with Custom Children and Centered) 1`] = `
+exports[`Storyshots Card Card with Title and Body (Selected) 1`] = `
 <div
   className="row"
 >
@@ -1237,28 +1378,16 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children and Cent
     }
   >
     <div
-      className="card is-centered"
+      className="card is-selected"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
       <p>
         The easiest way to send email. It only requires modifying your application’s SMTP configuration.
       </p>
-      <button
-        className="btn btn-primary"
-        id={undefined}
-        onClick={[Function]}
-        type="button"
-      >
-        Choose
-      </button>
     </div>
   </div>
 </div>
@@ -1280,11 +1409,43 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
+      >
+        SMTP Relay
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <button
+        className="btn btn-primary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Choose
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with Title and Body (with Custom Children, Centered, Selected) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered is-selected"
+    >
+      <h2
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1320,11 +1481,7 @@ exports[`Storyshots Card Card with Title and Body 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         SMTP Relay
       </h2>
@@ -1594,6 +1751,295 @@ exports[`Storyshots Divider Divider 1`] = `
   className=""
   data-label={null}
 />
+`;
+
+exports[`Storyshots Drag & Drop Module Cards All 1`] = `
+<div
+  style={
+    Object {
+      "width": "400px",
+    }
+  }
+>
+  <style>
+    
+        .is-module { 
+          margin: 0 10px 10px 0;
+          display: inline-flex;
+        }
+      
+  </style>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-button"
+        onClick={undefined}
+        style={null}
+      />
+      Button
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-code"
+        onClick={undefined}
+        style={null}
+      />
+      Code
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-columns"
+        onClick={undefined}
+        style={null}
+      />
+      Columns
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-divider"
+        onClick={undefined}
+        style={null}
+      />
+      Divider
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-images"
+        onClick={undefined}
+        style={null}
+      />
+      Image
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-image-text"
+        onClick={undefined}
+        style={null}
+      />
+      Image & Text
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-social"
+        onClick={undefined}
+        style={null}
+      />
+      Social
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-spacer"
+        onClick={undefined}
+        style={null}
+      />
+      Spacer
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-text"
+        onClick={undefined}
+        style={null}
+      />
+      Text
+    </p>
+  </div>
+  <div
+    className="card is-module is-centered is-thin"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-unsubscribe"
+        onClick={undefined}
+        style={null}
+      />
+      Unsubscribe
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Button Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-button"
+      onClick={undefined}
+      style={null}
+    />
+    Button
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Code Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-code"
+      onClick={undefined}
+      style={null}
+    />
+    Code
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Columns Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-columns"
+      onClick={undefined}
+      style={null}
+    />
+    Columns
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Divider Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-divider"
+      onClick={undefined}
+      style={null}
+    />
+    Divider
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Image & Text Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-image-text"
+      onClick={undefined}
+      style={null}
+    />
+    Image & Text
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Image Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-images"
+      onClick={undefined}
+      style={null}
+    />
+    Image
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Social Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-social"
+      onClick={undefined}
+      style={null}
+    />
+    Social
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Spacer Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-spacer"
+      onClick={undefined}
+      style={null}
+    />
+    Spacer
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Text Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-text"
+      onClick={undefined}
+      style={null}
+    />
+    Text
+  </p>
+</div>
+`;
+
+exports[`Storyshots Drag & Drop Module Cards Unsubscribe Module 1`] = `
+<div
+  className="card is-module is-centered is-thin"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-unsubscribe"
+      onClick={undefined}
+      style={null}
+    />
+    Unsubscribe
+  </p>
+</div>
 `;
 
 exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
@@ -5592,11 +6038,7 @@ exports[`Storyshots Grid 4/8 Column Config 1`] = `
         className="card"
       >
         <h2
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
+          className=""
         >
           A Four-Wide Column
         </h2>
@@ -5612,11 +6054,7 @@ exports[`Storyshots Grid 4/8 Column Config 1`] = `
         className="card"
       >
         <h2
-          style={
-            Object {
-              "width": "100%",
-            }
-          }
+          className=""
         >
           An Eight-Wide Column
         </h2>
@@ -5644,11 +6082,7 @@ exports[`Storyshots Grid Default (No Width or Offset) 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         A Default Column
       </h2>
@@ -5671,11 +6105,7 @@ exports[`Storyshots Grid Offset 5 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         An Offset Only Column
       </h2>
@@ -5698,11 +6128,7 @@ exports[`Storyshots Grid Using Width & Offset 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         A Six-Wide Column
       </h2>
@@ -5725,11 +6151,7 @@ exports[`Storyshots Grid Width 12 1`] = `
       className="card"
     >
       <h2
-        style={
-          Object {
-            "width": "100%",
-          }
-        }
+        className=""
       >
         A Width Only Column
       </h2>
@@ -6965,6 +7387,90 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
    
   on adding and updating contacts.
 </p>
+`;
+
+exports[`Storyshots Split Card Split Card (w/ labeled separator) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-split is-thin"
+    >
+      <h2
+        className=""
+      >
+        Split Card
+      </h2>
+      <p>
+        Line of copy.
+      </p>
+      <div
+        className="split-content"
+      >
+        <p>
+          Section 1
+        </p>
+        <hr
+          className="has-label"
+          data-label="separator"
+        />
+        <p>
+          Section 2
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Split Card Split Card (w/ unlabeled separator) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-split is-thin"
+    >
+      <h2
+        className=""
+      >
+        Split Card
+      </h2>
+      <p>
+        Line of copy.
+      </p>
+      <div
+        className="split-content"
+      >
+        <p>
+          Section 1
+        </p>
+        <hr
+          className=""
+          data-label={undefined}
+        />
+        <p>
+          Section 2
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Table Sortable (Custom Render) 1`] = `
@@ -9293,4 +9799,294 @@ exports[`Storyshots Truncated List Standard - Only 1 Item 1`] = `
 >
   Boromir
 </span>
+`;
+
+exports[`Storyshots UnsubscribeGroupCard Create New Group Card 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Create New Group
+      </h2>
+      <p>
+        Create a new group that represents a common type of email you send.
+      </p>
+      <button
+        className="btn btn-primary"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Create New Group
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UnsubscribeGroupCard Unsubscribe Group Card (isDisplayedOnPreferencesPage) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Special Offers
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <p
+        className="card-unsub-prefs"
+      >
+        <i
+          className="sg-icon sg-icon-check-circle"
+          onClick={undefined}
+          style={null}
+        />
+        Included in opt out preferences
+      </p>
+      <p
+        className="card-unsubs"
+      >
+        <strong>
+          Unsubscribes
+        </strong>
+        0
+      </p>
+      <p
+        className="card-id"
+      >
+        <strong>
+          ID
+        </strong>
+         
+        5678
+      </p>
+      <div
+        className="actions"
+      >
+        <div
+          className="btn-list"
+        >
+          <div
+            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-ellipsis-vertical"
+              onClick={undefined}
+              style={null}
+            />
+            <ul
+              className="dropdown-menu"
+            >
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-pencil"
+                  onClick={undefined}
+                  style={null}
+                />
+                Edit
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-view"
+                  onClick={undefined}
+                  style={null}
+                />
+                Preview
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-export"
+                  onClick={undefined}
+                  style={null}
+                />
+                Upload a CSV
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-download"
+                  onClick={undefined}
+                  style={null}
+                />
+                Export
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-contacts-alt"
+                  onClick={undefined}
+                  style={null}
+                />
+                Manually Add
+              </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots UnsubscribeGroupCard Unsubscribe Group Card 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Special Offers
+      </h2>
+      <p>
+        The easiest way to send email. It only requires modifying your application’s SMTP configuration.
+      </p>
+      <p
+        className="card-unsubs"
+      >
+        <strong>
+          Unsubscribes
+        </strong>
+        1000
+      </p>
+      <p
+        className="card-id"
+      >
+        <strong>
+          ID
+        </strong>
+         
+        1234
+      </p>
+      <div
+        className="actions"
+      >
+        <div
+          className="btn-list"
+        >
+          <div
+            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-ellipsis-vertical"
+              onClick={undefined}
+              style={null}
+            />
+            <ul
+              className="dropdown-menu"
+            >
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-pencil"
+                  onClick={undefined}
+                  style={null}
+                />
+                Edit
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-view"
+                  onClick={undefined}
+                  style={null}
+                />
+                Preview
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-export"
+                  onClick={undefined}
+                  style={null}
+                />
+                Upload a CSV
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-download"
+                  onClick={undefined}
+                  style={null}
+                />
+                Export
+              </span>
+              <span
+                className="undefined dropdown-link"
+                onClick={[Function]}
+              >
+                <i
+                  className="sg-icon sg-icon-contacts-alt"
+                  onClick={undefined}
+                  style={null}
+                />
+                Manually Add
+              </span>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 `;

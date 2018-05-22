@@ -7,6 +7,7 @@ export interface IconProps {
   className?: string;
   onClick?: (event: any) => void;
   onDark?: boolean;
+  size?: IconSizeType;
 }
 
 const lightStyle = { color: 'white' };
@@ -16,10 +17,11 @@ export const Icon: React.SFC<IconProps> = ({
   className,
   onClick: handleClick,
   onDark,
+  size,
   ...attributes,
 }) => (
   <i
-    className={cn('sg-icon', `sg-icon-${type}`, { [className]: !!className })}
+    className={cn('sg-icon', `sg-icon-${type}`, { [className]: !!className, [`is-size-${size}`]: size })}
     onClick={handleClick}
     style={onDark ? lightStyle : null}
     {...attributes}
