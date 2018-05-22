@@ -6,7 +6,7 @@ import Icon from './icon';
 import cn from './utilities/classnames';
 
 import { IconType } from './types/icons';
-
+import { ModuleCardType } from './types/module-cards';
 const iconTypes: {[k in ModuleCardType]: IconType} = {
   'button': 'button',
   'code': 'code',

@@ -1,4 +1,5 @@
 import React from 'react';
+import { IconSizeType } from './types/icon-sizes';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 

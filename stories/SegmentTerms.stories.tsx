@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Alert from '../src/alert';
 import Button from '../src/button';
@@ -55,7 +55,7 @@ stories.add('Segment term which is being edited', () => (
     onCancel={onCancelClick}
     onConfirm={onConfirmClick}
     renderInputs={() => (
-      <>
+      <Fragment>
         <div className="input-select-wrap">
           <label className="input-select-label" htmlFor="select-a">Select send conditions</label>
           <select id="select-a">
@@ -68,7 +68,7 @@ stories.add('Segment term which is being edited', () => (
             <option>Abandons a cart</option>
           </select>
         </div>
-      </>
+      </Fragment>
     )}
   />
 ));
@@ -85,7 +85,7 @@ stories.add('Segment term which is being edited and is filled out', () => (
     onCancel={onCancelClick}
     onConfirm={onConfirmClick}
     renderInputs={() => (
-      <>
+      <Fragment>
         <div className="input-select-wrap">
           <label className="input-select-label" htmlFor="select-a">Select send conditions</label>
           <select id="select-a">
@@ -103,7 +103,7 @@ stories.add('Segment term which is being edited and is filled out', () => (
             <option>People in Los Angeles</option>
           </select>
         </div>
-      </>
+      </ Fragment>
     )}
   />
 ));
