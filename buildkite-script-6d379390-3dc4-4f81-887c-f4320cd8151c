@@ -1,0 +1,4 @@
+#!/bin/bash
+set -e
+echo '[90m$[0m workflow build_jenkins_docker_file'
+workflow build_jenkins_docker_file

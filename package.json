@@ -1,6 +1,6 @@
 {
   "name": "@sendgrid/ui-components-base",
-  "version": "0.14.5",
+  "version": "0.14.6",
   "description": "Resuable UI components for Sendgrid's applications.",
   "scripts": {
     "start": "yarn run storybook",
