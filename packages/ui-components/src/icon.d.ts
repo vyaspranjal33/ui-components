@@ -6,6 +6,7 @@ export interface IconProps {
     className?: string;
     onClick?: (event: any) => void;
     onDark?: boolean;
+    size?: IconSizeType;
 }
 export declare const Icon: React.SFC<IconProps>;
 export default Icon;
