@@ -21,7 +21,6 @@ steps:
       build: app
       image-repository: docker.sendgrid.net/sendgrid
       cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
-      push: app:docker.sendgrid.net/sendgrid/ui-components:latest
 - wait
 - name: ":jest: Lint and Test"
   command: yarn ci-test
