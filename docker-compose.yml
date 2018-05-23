@@ -1,9 +1,13 @@
-version: '2'
+version: '3.3'
 
 services:
-  test:
+  app:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
-    command: yarn ci-test
+    build:
+     context: .  
+    volumes:
+      - ./packages:/opt/sendgrid/ui-components/packages
+      - ./docs:/opt/sendgrid/ui-components/docs
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:
