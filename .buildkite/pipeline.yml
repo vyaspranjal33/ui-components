@@ -53,9 +53,6 @@ steps:
     - buildkite-agent artifact download /packages/**/* ./packages/
     - git add docs && git add packages"
     - git status
-  plugins:
-    docker-compose#v2.2.1:
-      run: app
 # yarn build && rm -rf docs/ && yarn build-storybook && git add docs && git add packages
 
 # The purpose of this script is to build your script in a standard manner.
