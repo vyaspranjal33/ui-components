@@ -21,12 +21,14 @@ steps:
       build: app
       image-repository: docker.sendgrid.net/sendgrid
       cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+      push: app:docker.sendgrid.net/sendgrid/ui-components:latest
 - wait
 - name: ":jest: Lint and Test"
   command: yarn ci-test
   plugins:
     docker-compose#v2.2.1:
       run: app
+      
 
 - name: ":storybook: Build Storybook"
   command: yarn build-storybook -o ./docs
@@ -49,8 +51,8 @@ steps:
 - name: "🦖 Hold on to your butts 🦖"
   command: 
     - rm -rf docs/ 
-    - buildkite-agent artifact download /docs/**/* ./docs/
-    - buildkite-agent artifact download /packages/**/* ./packages/
+    - buildkite-agent artifact download /docs/**/* ./docs
+    - buildkite-agent artifact download /packages/**/* ./packages
     - git add docs && git add packages"
     - git status
 # yarn build && rm -rf docs/ && yarn build-storybook && git add docs && git add packages
