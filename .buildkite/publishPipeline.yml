@@ -1,0 +1,8 @@
+steps:
+
+  - name: ":yarn: :docker: Build UI-component base image"
+    plugins:
+      docker-compose#v2.2.1:
+        build: app
+        image-repository: docker.sendgrid.net/sendgrid
+        cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
