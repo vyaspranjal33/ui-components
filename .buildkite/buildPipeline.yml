@@ -55,4 +55,4 @@ steps:
       - git add docs && git add packages
       - git status
       - git commit -m "[Prepublish Built]"
-      
+      - git push origin
