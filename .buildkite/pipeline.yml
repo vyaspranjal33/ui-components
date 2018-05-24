@@ -17,4 +17,4 @@ steps:
 
 - name: "Decide Which Pipeline To Run"
   command:
-    - ./buildkite/theDecider.sh
+    - ./.buildkite/theDecider.sh
