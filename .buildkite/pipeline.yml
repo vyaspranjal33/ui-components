@@ -58,8 +58,8 @@ steps:
   command: 
     - rm -rf docs/ 
     - mkdir ./docs
-    - buildkite-agent artifact download /docs/**/* ./docs
-    - buildkite-agent artifact download /packages/**/* ./packages
+    - buildkite-agent artifact download /docs/* ./docs
+    - buildkite-agent artifact download /packages/* ./packages
     - git add docs && git add packages"
     - git status
 # yarn build && rm -rf docs/ && yarn build-storybook && git add docs && git add packages
