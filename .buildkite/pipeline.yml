@@ -37,17 +37,21 @@ steps:
       
 
 - name: ":storybook: Build Storybook"
-  command: yarn build-storybook -o ./docs
+  command: 
+    - yarn build-storybook -o ./docs
+    - "tar -zcvf docs.tar.gz ./docs"
   artifact_paths: 
-    - "docs/**/*"
+    - "./docs.tar.gz"
   plugins:
     docker-compose#v2.2.1:
       run: app
 
 - name: ":typescript: Build UI-Components"
-  command: yarn build
+  command: 
+    - yarn build
+    - "tar -zcvf builtPackages.tar.gz ./packages"
   artifact_paths: 
-    - "packages/**/*"
+    - "./builtPackages.tar.gz"
   plugins:
     docker-compose#v2.2.1:
       run: app
@@ -58,9 +62,11 @@ steps:
   command: 
     - rm -rf docs/ 
     - mkdir ./docs
-    - buildkite-agent artifact download /docs/* ./docs
-    - buildkite-agent artifact download /packages/* ./packages
-    - git add docs && git add packages"
+    - buildkite-agent artifact download builtPackages.tar.gz ./
+    - buildkite-agent artifact download docs.tar.gz ./
+    - tar -zxvf artefact.builtPackages.tar.gz
+    - tar -zxvf artefact.docs.tar.gz
+    - git add docs && git add packages
     - git status
 # yarn build && rm -rf docs/ && yarn build-storybook && git add docs && git add packages
 
