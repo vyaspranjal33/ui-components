@@ -64,8 +64,8 @@ steps:
     - mkdir ./docs
     - buildkite-agent artifact download builtPackages.tar.gz ./
     - buildkite-agent artifact download docs.tar.gz ./
-    - tar -zxvf artefact.builtPackages.tar.gz
-    - tar -zxvf artefact.docs.tar.gz
+    - tar -zxvf builtPackages.tar.gz
+    - tar -zxvf docs.tar.gz
     - git add docs && git add packages
     - git status
 # yarn build && rm -rf docs/ && yarn build-storybook && git add docs && git add packages
