@@ -21,10 +21,7 @@ steps:
   # - name: "stuff" 
   #   command: JUSTSOMESTUFF=$(buildkite-agent meta-data get "publish-version")
   - name: "Lerna Publish"
-    command: 
-      - pwd
-      - ls ./.git
-      - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
+    command: npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
     plugins:
       docker-compose#v2.2.1:
         run: app
