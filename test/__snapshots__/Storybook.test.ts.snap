@@ -51,6 +51,33 @@ exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
 </div>
 `;
 
+exports[`Storyshots Alerts Alert which is visible 1`] = `
+<div
+  className="alert alert-success is-visible"
+  role="alert"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-check-circle"
+      onClick={undefined}
+      style={null}
+    />
+    Lorem ipsum dolor sit amet, 
+    <a
+      href="#"
+    >
+      consectetur adipiscing elit
+    </a>
+    . In nec augue eu lacus aliquam lobortis.
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={undefined}
+      style={null}
+    />
+  </p>
+</div>
+`;
+
 exports[`Storyshots Alerts Danger Alert 1`] = `
 <div
   className="alert alert-danger"
