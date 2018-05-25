@@ -2,7 +2,7 @@ steps:
   - block: "Request Publish"
     fields:
       - select: "Release Type"
-        key: "publish_version"
+        key: "publish-version"
         options:
           - label: "major"
             value: "major"
@@ -19,10 +19,12 @@ steps:
           - label: "prerelease"
             value: "prerelease"
   - name: "stuff"
-    command: echo ${BUILDKITE_AGENT_META_DATA_PUBLISH_VERSION}
+    command: npx lerna publish --skip-git --skip-npm --yes --cd-version `buildkite-agent meta-data get "release-version"`
+    plugins:
+      docker-compose#v2.2.1:
+        run: app
+        image-repository: docker.sendgrid.net/sendgrid
+        cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+
   # - name: ":yarn: :docker: Build UI-component base image"
-  #   plugins:
-  #     docker-compose#v2.2.1:
-  #       build: app
-  #       image-repository: docker.sendgrid.net/sendgrid
-  #       cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+        
