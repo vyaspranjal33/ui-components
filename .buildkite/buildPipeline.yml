@@ -56,5 +56,5 @@ steps:
       - tar -zxvf docs.tar.gz
       - git add docs && git add packages
       - git status
-      - ./.buildkite/determineGitcommitType.sh
+      - ./.buildkite/determineGitCommitType.sh
       - git push origin ${BUILDKITE_BRANCH}
