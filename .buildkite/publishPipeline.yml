@@ -1,8 +1,26 @@
 steps:
-  - block: "Request Release"
+  - block: "Request Publish"
     fields:
-      - text: "Code Name"
-        key: "release-name"
+      - select: "Release Type"
+        key: "publish_version"
+        options:
+          major | minor | patch | premajor | preminor | prepatch | prerelease
+          - label: "major"
+            value: "major"
+          - label: "minor"
+            value: "minor"
+          - label: "patch"
+            value: "patch"
+          - label: "premajor"
+            value: "premajor"
+          - label: "preminor"
+            value: "preminor"
+          - label: "prepatch"
+            value: "prepatch"
+          - label: "prerelease"
+            value: "prerelease"
+  - name: "stuff"
+    command: echo ${BUILDKITE_AGENT_META_DATA_PUBLISH_VERSION}
   # - name: ":yarn: :docker: Build UI-component base image"
   #   plugins:
   #     docker-compose#v2.2.1:
