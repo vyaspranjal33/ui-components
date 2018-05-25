@@ -19,7 +19,7 @@ steps:
           - label: "prerelease"
             value: "prerelease"
   - name: "stuff"
-    command: echo ${buildkite-agent meta-data get "release-version"}
+    command: JUSTSOMESTUFF=buildkite-agent meta-data get "release-version"
   - name: "stuff"
     command: npx lerna publish --skip-git --skip-npm --yes --cd-version ${buildkite-agent meta-data get "release-version"}
     plugins:
