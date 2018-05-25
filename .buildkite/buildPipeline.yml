@@ -44,7 +44,7 @@ steps:
 
   - wait
 
-  # - name: "🦖 Hold on to your butts 🦖"
+  - name: "🦖 Hold on to your butts 🦖"
     command: 
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
