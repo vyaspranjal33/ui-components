@@ -2,7 +2,12 @@ steps:
 
   - name: "🦖 Evil gitasaurous 🦖"
     command: 
-      - git branch
+      - git checkout ${BUILDKITE_BRANCH}
+      - cat "oh shit we stalled the plane" > testcommit.txt
+      - git status
+      - git add .
+      - git commit -m "[Prepublish Built]"
+      - git push origin
   #     - buildkite-agent artifact download builtPackages.tar.gz ./
   #     - buildkite-agent artifact download docs.tar.gz ./
   #     - tar -zxvf builtPackages.tar.gz
@@ -10,7 +15,7 @@ steps:
   #     - git add docs && git add packages
   #     - git status
   #     - git commit -m "[Prepublish Built]"
-  #     - git push ${BUILDKITE_BRANCH} origin
+  #     - git push  origin
 
   # - name: ":yarn: :docker: Build UI-component base image"
   #   plugins:
