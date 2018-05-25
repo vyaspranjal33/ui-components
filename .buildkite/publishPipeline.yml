@@ -22,6 +22,7 @@ steps:
   #   command: JUSTSOMESTUFF=$(buildkite-agent meta-data get "publish-version")
   - name: "Lerna Publish"
     command: 
+      - pwd
       - ls ./.git
       - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
     plugins:
@@ -30,7 +31,7 @@ steps:
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
         mounts:
-          - ./:/opt/sendgrid/ui-components/
+          - ./.git:/opt/sendgrid/ui-components/.git
 
   # - name: ":yarn: :docker: Build UI-component base image"
         
