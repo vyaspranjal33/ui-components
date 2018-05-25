@@ -55,3 +55,17 @@ stories.add('Alert which is not dismissable', () => (
     <Button type="primary">Save and Apply</Button>
   </Alert>
 ));
+
+stories.add('Alert which is hidden', () => (
+  <Alert type="success" dismissable={true} hidden={true}>
+    Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
+    nec augue eu lacus aliquam lobortis.
+  </Alert>
+));
+
+stories.add('Alert which is visible', () => (
+  <Alert type="success" dismissable={true} hidden={false}>
+    Lorem ipsum dolor sit amet, <a href="#">consectetur adipiscing elit</a>. In
+    nec augue eu lacus aliquam lobortis.
+  </Alert>
+));

@@ -38,6 +38,8 @@ export const Alert: React.SFC<AlertProps> = ({
     <div
       className={cn('alert', `alert-${type}`, className, {
         'alert-inline': inline,
+        'is-hidden': hidden,
+        'is-visible': hidden === false,
       })}
       role="alert"
       {...attributes}
@@ -53,7 +55,7 @@ export const Alert: React.SFC<AlertProps> = ({
 
 Alert.defaultProps = {
   dismissable: true,
-  hidden: false,
+  hidden: null,
   inline: false,
 };
 

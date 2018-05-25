@@ -1,5 +1,32 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Alerts Alert which is hidden 1`] = `
+<div
+  className="alert alert-success is-hidden"
+  role="alert"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-check-circle"
+      onClick={undefined}
+      style={null}
+    />
+    Lorem ipsum dolor sit amet, 
+    <a
+      href="#"
+    >
+      consectetur adipiscing elit
+    </a>
+    . In nec augue eu lacus aliquam lobortis.
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={undefined}
+      style={null}
+    />
+  </p>
+</div>
+`;
+
 exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
 <div
   className="alert alert-warning"
