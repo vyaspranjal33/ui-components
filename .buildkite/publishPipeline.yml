@@ -4,7 +4,6 @@ steps:
       - select: "Release Type"
         key: "publish_version"
         options:
-          major | minor | patch | premajor | preminor | prepatch | prerelease
           - label: "major"
             value: "major"
           - label: "minor"
