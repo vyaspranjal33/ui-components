@@ -47,6 +47,16 @@ stories.add('Trial Notification', () => (
   </Notification>
 ));
 
+stories.add('Trial Notification with custom Icon', () => (
+  <Notification
+    type="trial"
+    icon="clean-ui"
+  >
+    <strong>23 days</strong> left in your free trial.
+    <Button type="primary" small>View Plans &amp; Pricing</Button>
+  </Notification>
+));
+
 stories.add('Danger Notification', () => (
   <Notification
     type="danger"

@@ -6586,6 +6586,33 @@ exports[`Storyshots Notifications Trial Notification 1`] = `
 </div>
 `;
 
+exports[`Storyshots Notifications Trial Notification with custom Icon 1`] = `
+<div
+  className="alert alert-trial"
+  role="notification"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-clean-ui"
+      onClick={undefined}
+      style={null}
+    />
+    <strong>
+      23 days
+    </strong>
+     left in your free trial.
+    <button
+      className="btn btn-primary btn-small"
+      id={undefined}
+      onClick={[Function]}
+      type="button"
+    >
+      View Plans & Pricing
+    </button>
+  </p>
+</div>
+`;
+
 exports[`Storyshots Notifications Verification Notification 1`] = `
 <div
   className="alert alert-verification"

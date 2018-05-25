@@ -16,8 +16,8 @@ export interface NotificationProps {
   onClick?: (event: any) => void;
 }
 
-const hasIcon = (type: NotificationType): boolean => (
-  type === 'trial' || type === 'danger'
+const hasIcon = (type: NotificationType, icon: IconType): any => (
+  type === 'trial' || type === 'danger' || icon
 );
 
 const iconFor = (type: NotificationType): IconType => {
@@ -50,7 +50,7 @@ export const Notification: React.SFC<NotificationProps> = ({
       { hasSteps ?
         children :
         <p>
-          {hasIcon(type) && <Icon type={icon || iconFor(type)} />}
+          {hasIcon(type, icon) && <Icon type={icon || iconFor(type)} />}
           {children}
           {dismissable && <Icon type="x" onClick={handleClick} />}
         </p>
