@@ -1,76 +1,60 @@
 steps: 
 
-  - name: "🦖 Evil gitasaurous 🦖"
+  - name: ":yarn: :docker: Build UI-component base image"
+    plugins:
+      docker-compose#v2.2.1:
+        build: app
+        image-repository: docker.sendgrid.net/sendgrid
+        cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+
+  - wait
+
+  - name: ":docker: Push to final repository"
+    plugins:
+      docker-compose#v2.2.1:
+        push:
+        - app:docker.sendgrid.net/sendgrid/ui-components
+        - app:docker.sendgrid.net/sendgrid/ui-components:latest
+
+  - name: ":jest: Lint and Test"
+    command: yarn ci-test
+    plugins:
+      docker-compose#v2.2.1:
+        run: app
+        
+  - name: ":storybook: Build Storybook"
+    command: 
+      - yarn build-storybook -o ./docs
+      - "tar -zcvf docs.tar.gz ./docs"
+    artifact_paths: 
+      - "./docs.tar.gz"
+    plugins:
+      docker-compose#v2.2.1:
+        run: app
+
+  - name: ":typescript: Build UI-Components"
+    command: 
+      - yarn build
+      - "tar -zcvf builtPackages.tar.gz ./packages"
+    artifact_paths: 
+      - "./builtPackages.tar.gz"
+    plugins:
+      docker-compose#v2.2.1:
+        run: app
+
+  - wait
+
+  # - name: "🦖 Hold on to your butts 🦖"
     command: 
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
-      - cat "oh shit we stalled the plane" > testcommit.txt
+      - rm -rf docs/ 
+      - mkdir ./docs
+      - buildkite-agent artifact download builtPackages.tar.gz ./
+      - buildkite-agent artifact download docs.tar.gz ./
+      - tar -zxvf builtPackages.tar.gz
+      - tar -zxvf docs.tar.gz
+      - git add docs && git add packages
       - git status
-      - git add .
       - git commit -m "[Prepublish Built]"
-      - git push origin
-  #     - buildkite-agent artifact download builtPackages.tar.gz ./
-  #     - buildkite-agent artifact download docs.tar.gz ./
-  #     - tar -zxvf builtPackages.tar.gz
-  #     - tar -zxvf docs.tar.gz
-  #     - git add docs && git add packages
-  #     - git status
-  #     - git commit -m "[Prepublish Built]"
-  #     - git push  origin
-
-  # - name: ":yarn: :docker: Build UI-component base image"
-  #   plugins:
-  #     docker-compose#v2.2.1:
-  #       build: app
-  #       image-repository: docker.sendgrid.net/sendgrid
-  #       cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
-
-  # - wait
-
-  # - name: ":docker: Push to final repository"
-  #   plugins:
-  #     docker-compose#v2.2.1:
-  #       push:
-  #       - app:docker.sendgrid.net/sendgrid/ui-components
-  #       - app:docker.sendgrid.net/sendgrid/ui-components:latest
-
-  # - name: ":jest: Lint and Test"
-  #   command: yarn ci-test
-  #   plugins:
-  #     docker-compose#v2.2.1:
-  #       run: app
-        
-  # - name: ":storybook: Build Storybook"
-  #   command: 
-  #     - yarn build-storybook -o ./docs
-  #     - "tar -zcvf docs.tar.gz ./docs"
-  #   artifact_paths: 
-  #     - "./docs.tar.gz"
-  #   plugins:
-  #     docker-compose#v2.2.1:
-  #       run: app
-
-  # - name: ":typescript: Build UI-Components"
-  #   command: 
-  #     - yarn build
-  #     - "tar -zcvf builtPackages.tar.gz ./packages"
-  #   artifact_paths: 
-  #     - "./builtPackages.tar.gz"
-  #   plugins:
-  #     docker-compose#v2.2.1:
-  #       run: app
-
-  # - wait
-
-  # - name: "🦖 Hold on to your butts 🦖"
-  #   command: 
-  #     - rm -rf docs/ 
-  #     - mkdir ./docs
-  #     - buildkite-agent artifact download builtPackages.tar.gz ./
-  #     - buildkite-agent artifact download docs.tar.gz ./
-  #     - tar -zxvf builtPackages.tar.gz
-  #     - tar -zxvf docs.tar.gz
-  #     - git add docs && git add packages
-  #     - git status
-  #     - git commit -m "[Prepublish Built]"
-  #     - git push ${BUILDKITE_BRANCH} origin
+      - git push ${BUILDKITE_BRANCH} origin
