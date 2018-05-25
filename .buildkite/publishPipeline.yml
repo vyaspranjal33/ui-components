@@ -19,7 +19,9 @@ steps:
           - label: "prerelease"
             value: "prerelease"
   - name: "stuff"
-    command: npx lerna publish --skip-git --skip-npm --yes --cd-version `buildkite-agent meta-data get "release-version"`
+    command: npx lerna publish --skip-git --skip-npm --yes --cd-version ${buildkite-agent meta-data get "release-version"}
+  - name: "stuff"
+    command: npx lerna publish --skip-git --skip-npm --yes --cd-version ${buildkite-agent meta-data get "release-version"}
     plugins:
       docker-compose#v2.2.1:
         run: app
