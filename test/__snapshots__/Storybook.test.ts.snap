@@ -6505,6 +6505,137 @@ exports[`Storyshots Meter Meter Below 50 1`] = `
 </div>
 `;
 
+exports[`Storyshots Notifications Danger Notification 1`] = `
+<div
+  className="alert alert-danger"
+  role="notification"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-warning"
+      onClick={undefined}
+      style={null}
+    />
+    <strong>
+      Your trial expired.
+    </strong>
+     You may still send up to 100 emails per day for testing purposes.
+    <button
+      className="btn btn-primary btn-small"
+      id={undefined}
+      onClick={[Function]}
+      type="button"
+    >
+      Upgrade
+    </button>
+  </p>
+</div>
+`;
+
+exports[`Storyshots Notifications Promo Notification 1`] = `
+<div
+  className="alert alert-promo"
+  role="notification"
+>
+  <p>
+    <strong>
+      What happened to that email?
+    </strong>
+     Putting out fires 🔥 is fast with our new email activity feed!
+    <button
+      className="btn btn-primary btn-small"
+      id={undefined}
+      onClick={[Function]}
+      type="button"
+    >
+      Check it Out
+    </button>
+    <i
+      className="sg-icon sg-icon-x"
+      onClick={[Function]}
+      style={null}
+    />
+  </p>
+</div>
+`;
+
+exports[`Storyshots Notifications Trial Notification 1`] = `
+<div
+  className="alert alert-trial"
+  role="notification"
+>
+  <p>
+    <i
+      className="sg-icon sg-icon-clock"
+      onClick={undefined}
+      style={null}
+    />
+    <strong>
+      23 days
+    </strong>
+     left in your free trial.
+    <button
+      className="btn btn-primary btn-small"
+      id={undefined}
+      onClick={[Function]}
+      type="button"
+    >
+      View Plans & Pricing
+    </button>
+  </p>
+</div>
+`;
+
+exports[`Storyshots Notifications Verification Notification 1`] = `
+<div
+  className="alert alert-verification"
+  role="notification"
+>
+  <p>
+    <strong>
+      Unverified accounts are limited to 100 emails per day. Verify your account to send more.
+    </strong>
+    <button
+      className="btn btn-primary btn-small"
+      id={undefined}
+      onClick={[Function]}
+      type="button"
+    >
+      Verify My Account
+    </button>
+  </p>
+</div>
+`;
+
+exports[`Storyshots Notifications Verification Step Notification 1`] = `
+<div
+  className="alert alert-verification"
+  role="notification"
+>
+  <p
+    className="step"
+  >
+    Verify your account
+  </p>
+  <p>
+    <a
+      href="#"
+    >
+      Next: Add Two-Factor Authentication
+    </a>
+  </p>
+  <p
+    className="all-steps"
+  >
+    <a
+      href="#"
+    >
+      View all steps
+    </a>
+  </p>
+</div>
+`;
+
 exports[`Storyshots NumberedSteps Numbered Steps with longer content 1`] = `
 <div
   className="row"

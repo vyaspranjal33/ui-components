@@ -74,6 +74,7 @@ This is a list of the available Components and most of the properties. [Run stor
 - [Icon](https://github.com/sendgrid/ui-components/blob/master/src/icon.tsx)
 - [Loader](https://github.com/sendgrid/ui-components/blob/master/src/loader.tsx)
 - [Meter](https://github.com/sendgrid/ui-components/blob/master/src/meter.tsx)
+- [Notification](https://github.com/sendgrid/ui-components/blob/master/src/notification.tsx)
 - [Numbered Steps](https://github.com/sendgrid/ui-components/blob/master/src/numbered-steps.tsx)
 - [Page Header](https://github.com/sendgrid/ui-components/blob/master/src/page-header.tsx)
 - [Progress Bar](https://github.com/sendgrid/ui-components/blob/master/src/progress.tsx)

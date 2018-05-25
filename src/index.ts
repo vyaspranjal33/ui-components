@@ -24,6 +24,7 @@ export { Loader } from './loader';
 export { FragmentLoader } from './fragment-loader';
 export { Meter } from './meter';
 export { NumberedStep, NumberedSteps } from './numbered-steps';
+export { Notification } from './notification';
 export { Progress, ProgressStage } from './progress';
 export { PageHeader, PageHeading } from './page-header';
 export { Radio, RadioGroup } from './radio';
