@@ -22,7 +22,8 @@ steps:
   #   command: JUSTSOMESTUFF=$(buildkite-agent meta-data get "publish-version")
   - name: "Lerna Publish"
     command: 
-      - ls .git
+      - pwd
+      - ls ./.git
       - git status
       - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
     plugins:
@@ -35,3 +36,4 @@ steps:
 
   # - name: ":yarn: :docker: Build UI-component base image"
         
+Just 
