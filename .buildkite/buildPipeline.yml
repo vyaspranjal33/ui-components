@@ -13,7 +13,6 @@ steps:
     plugins:
       docker-compose#v2.2.1:
         push:
-        - app:docker.sendgrid.net/sendgrid/ui-components
         - app:docker.sendgrid.net/sendgrid/ui-components:latest
 
   - name: ":jest: Lint and Test"

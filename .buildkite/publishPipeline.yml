@@ -27,6 +27,8 @@ steps:
         run: app
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+        mounts:
+          - ./:/opt/sendgrid/ui-components/
 
   # - name: ":yarn: :docker: Build UI-component base image"
         
