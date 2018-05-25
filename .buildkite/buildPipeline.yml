@@ -48,6 +48,7 @@ steps:
     command: 
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
+      - git pull
       - rm -rf docs/ 
       - mkdir ./docs
       - buildkite-agent artifact download builtPackages.tar.gz ./
