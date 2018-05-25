@@ -2,6 +2,7 @@ steps:
 
   - name: "🦖 Evil gitasaurous 🦖"
     command: 
+      - git fetch
       - git checkout ${BUILDKITE_BRANCH}
       - cat "oh shit we stalled the plane" > testcommit.txt
       - git status
