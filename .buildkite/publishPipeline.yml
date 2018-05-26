@@ -29,6 +29,7 @@ steps:
     command: 
       - ls -lah ~/.ssh
       - echo ~
+      - echo $PATH
       - id
       - node --version
       # - cp -r /root/sshmagic/ /root/mysshmagic/
