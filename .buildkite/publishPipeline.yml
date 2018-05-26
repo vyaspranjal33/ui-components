@@ -27,11 +27,12 @@ steps:
 
   - name: ":dragon: Lerna Publish"
     command: 
-      - ls -lah ~/.ssh
-      - echo ~
-      - echo $PATH
-      - id
-      - node --version
+      # - export PATH=$PATH:/sbin:/bin
+      # - ls -lah ~/.ssh
+      # - echo ~
+      # - echo $PATH
+      # - id
+      # - node --version
       # - cp -r /root/sshmagic/ /root/mysshmagic/
       # - chown -R root /root/mysshmagic/
       # - chmod -R 777 /root/mysshmagic/
@@ -42,8 +43,8 @@ steps:
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
       - git pull
-      - npx --help
-      - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
+      - /usr/local/bin/npx --help
+      - /usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
       # - tar --exclude='./node_modules' --exclude='./.git' -zcvf ./buildartifact.tgz ./**/{package.json,lerna.json}
     plugins:
       docker-compose#v2.2.1:
