@@ -29,6 +29,7 @@ steps:
     command: 
       - ls -lah ~/.ssh
       - echo ~
+      - id
       # - cp -r /root/sshmagic/ /root/mysshmagic/
       # - chown -R root /root/mysshmagic/
       # - chmod -R 777 /root/mysshmagic/
@@ -39,7 +40,8 @@ steps:
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
       - git pull
-      # - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
+      - npx --help
+      - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
       # - tar --exclude='./node_modules' --exclude='./.git' -zcvf ./buildartifact.tgz ./**/{package.json,lerna.json}
     plugins:
       docker-compose#v2.2.1:
