@@ -30,6 +30,7 @@ steps:
       - ls -lah ~/.ssh
       - echo ~
       - id
+      - node --version
       # - cp -r /root/sshmagic/ /root/mysshmagic/
       # - chown -R root /root/mysshmagic/
       # - chmod -R 777 /root/mysshmagic/
