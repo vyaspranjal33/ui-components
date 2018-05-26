@@ -21,11 +21,7 @@ steps:
   # - name: "stuff" 
   #   command: JUSTSOMESTUFF=$(buildkite-agent meta-data get "publish-version")
   - name: ":exploding_death_star: Lerna :exploding_death_star: Publish :exploding_death_star:"
-    command: 
-      - pwd
-      - ls ./.git
-      - git status
-      - yarn lernaCi
+    command: yarn lernaCi
     plugins:
       docker-compose#v2.2.1:
         run: app
