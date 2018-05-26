@@ -21,7 +21,7 @@ steps:
   # - name: "stuff" 
   #   command: JUSTSOMESTUFF=$(buildkite-agent meta-data get "publish-version")
   - name: ":exploding_death_star: Lerna :exploding_death_star: Publish :exploding_death_star:"
-    command: yarn lernaCi
+    command: npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
     plugins:
       docker-compose#v2.2.1:
         run: app
