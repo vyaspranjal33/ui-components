@@ -28,6 +28,11 @@ steps:
   - name: ":exploding_death_star: Lerna :exploding_death_star: Publish :exploding_death_star:"
     command: 
       - ls -lah /root/.ssh
+      - ls -lah /root/.ssh/known_hosts
+      - ls -lah /root/.ssh/config
+      - git fetch
+      - git checkout ${BUILDKITE_BRANCH}
+      - git pull
       - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
       # - tar --exclude='./node_modules' --exclude='./.git' -zcvf ./buildartifact.tgz ./**/{package.json,lerna.json}
     plugins:
