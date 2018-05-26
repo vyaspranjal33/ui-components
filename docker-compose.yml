@@ -8,6 +8,7 @@ services:
     volumes:
       - ./packages:/opt/sendgrid/ui-components/packages
       - ./docs:/opt/sendgrid/ui-components/docs
+      - ./.git:/opt/sendgrid/ui-components/.git
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:
