@@ -40,6 +40,7 @@ steps:
       # - ls -lah /root/.ssh/known_hosts
       # - ls -lah /root/.ssh/config
       - echo "garbage"
+      - ls -lah /opt/
       - ls -lah /opt/sendgrid/
       - ls -lah /opt/sendgrid/ssh
       - cp -r /opt/sendgrid/ssh/ ~/.ssh/
