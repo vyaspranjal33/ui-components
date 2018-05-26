@@ -1,2 +1,2 @@
-declare const ;
+declare const colors: string[];
 export default colors;
