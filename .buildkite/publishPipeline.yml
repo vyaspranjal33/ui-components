@@ -39,7 +39,7 @@ steps:
       # - ls -lah /root/.ssh
       # - ls -lah /root/.ssh/known_hosts
       # - ls -lah /root/.ssh/config
-      - cp -r /opt/sendgrid/ssh/* /root/.ssh/
+      - cp -r /opt/sendgrid/ssh/ ~/.ssh/
       - echo ~
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}

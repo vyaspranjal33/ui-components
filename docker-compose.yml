@@ -10,8 +10,8 @@ services:
       - ./packages:/opt/sendgrid/ui-components/packages
       - ./docs:/opt/sendgrid/ui-components/docs
       - ./.git:/opt/sendgrid/ui-components/.git
-      # - ~/.ssh:/root/.ssh
-      - /var/lib/buildkite-agent/.ssh:/opt/sendgrid/ssh
+      - ~/.ssh:/opt/sendgrid/ssh/
+      # - /var/lib/buildkite-agent/.ssh:/opt/sendgrid/ssh/
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:
