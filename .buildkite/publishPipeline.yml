@@ -27,9 +27,9 @@ steps:
 
   - name: ":dragon: Lerna Publish"
     command: 
-      - cp /root/sshmagic /root/mysshmagic
-      - chown -R root /root/mysshmagic
-      - chmod -R 777 /root/mysshmagic
+      - cp /root/sshmagic/ /root/mysshmagic/
+      - chown -R root /root/mysshmagic/
+      - chmod -R 777 /root/mysshmagic/
       - cp /root/mysshmagic /root/.ssh
       - ls -lah /root/.ssh
       - ls -lah /root/.ssh/known_hosts
