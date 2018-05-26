@@ -1,5 +1,5 @@
 steps:
-  - name: "":docker: Build Container"
+  - name: ":docker: Build Container"
     plugins:
       docker-compose#v2.2.1:
         build: app
