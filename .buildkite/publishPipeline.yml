@@ -27,14 +27,17 @@ steps:
 
   - name: ":exploding_death_star: Lerna :exploding_death_star: Publish :exploding_death_star:"
     command: 
-      - npx lerna publish --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
+      - ls -lah /root/.ssh
+      - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
+      # - tar --exclude='./node_modules' --exclude='./.git' -zcvf ./buildartifact.tgz ./**/{package.json,lerna.json}
     plugins:
       docker-compose#v2.2.1:
         run: app
+        # artifact_paths: 
+        #   - "./builtPackages.tar.gz"
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
-        # mounts:
-        #   - ./.git:/opt/sendgrid/ui-components/.git
+        
 
   # - name: ":yarn: :docker: Build UI-component base image"
         
