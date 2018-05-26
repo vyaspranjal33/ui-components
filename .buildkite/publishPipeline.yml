@@ -33,13 +33,13 @@ steps:
       # - echo $PATH
       # - id
       # - node --version
-       - cp -r /opt/sendgrid/ssh/* /root/.ssh/
       # - chown -R root /root/mysshmagic/
       # - chmod -R 777 /root/mysshmagic/
       # - cp /root/mysshmagic /root/.ssh
       # - ls -lah /root/.ssh
       # - ls -lah /root/.ssh/known_hosts
       # - ls -lah /root/.ssh/config
+      - cp -r /opt/sendgrid/ssh/* /root/.ssh/
       - echo ~
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
