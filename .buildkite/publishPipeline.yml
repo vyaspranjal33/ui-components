@@ -25,14 +25,14 @@ steps:
           # - label: "prerelease"
           #   value: "prerelease"
 
-    - name: ":exploding_death_star: Lerna :exploding_death_star: Publish :exploding_death_star:"
-      command: 
-        - npx lerna publish --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
-      plugins:
-        docker-compose#v2.2.1:
-          run: app
-          image-repository: docker.sendgrid.net/sendgrid
-          cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+  - name: ":exploding_death_star: Lerna :exploding_death_star: Publish :exploding_death_star:"
+    command: 
+      - npx lerna publish --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
+    plugins:
+      docker-compose#v2.2.1:
+        run: app
+        image-repository: docker.sendgrid.net/sendgrid
+        cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
         # mounts:
         #   - ./.git:/opt/sendgrid/ui-components/.git
 
