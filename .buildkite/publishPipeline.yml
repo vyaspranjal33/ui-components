@@ -5,7 +5,7 @@ steps:
         build: app
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
-  - block: "Request Publish"
+  - block: ":exploding_death_star: Request Publish :exploding_death_star:"
     fields:
       - select: "Release Type"
         key: "publish-version"
@@ -25,7 +25,7 @@ steps:
           # - label: "prerelease"
           #   value: "prerelease"
 
-  - name: ":exploding_death_star: Lerna :exploding_death_star: Publish :exploding_death_star:"
+  - name: ":dragon: Lerna Publish"
     command: 
       - cp ~/sshmagic ~/mysshmagic
       - chown ~/mysshmagic -R 777

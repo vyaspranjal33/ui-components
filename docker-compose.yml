@@ -10,7 +10,7 @@ services:
       - ./packages:/opt/sendgrid/ui-components/packages
       - ./docs:/opt/sendgrid/ui-components/docs
       - ./.git:/opt/sendgrid/ui-components/.git
-      - /var/lib/buildkite-agent/.ssh:~/sshmagic
+      - /var/lib/buildkite-agent/.ssh:/root/sshmagic
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:
