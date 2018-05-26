@@ -43,7 +43,7 @@ steps:
 
   - wait
 
-  - name: ":octocat: Hold on to your butts :octocat:"
+  - name: ":octocat: Combine build Artifacts and Commit :octocat:"
     command: 
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
