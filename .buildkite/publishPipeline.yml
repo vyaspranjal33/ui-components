@@ -42,6 +42,7 @@ steps:
       - echo "garbage"
       - ls -lah /opt/
       - ls -lah /opt/sendgrid/
+      - ls -lah /opt/sendgrid/ui-components
       - ls -lah /opt/sendgrid/ssh
       - cp -r /opt/sendgrid/ssh/ ~/.ssh/
       - echo ~
