@@ -7,7 +7,7 @@
 # variables that we need are exported correctly. If you need to export
 # any environment variables; you might do something like this:
 $(buildkite-agent meta-data set PIPELINE_REVISION '0.0.1')
-export UID=$(id -u)
+export MYUID=$(id -u)
 # If you're changing an environment variable inside of your build steps
 # and need to make sure that the current value is always accessible, you
 # might do something like this:
