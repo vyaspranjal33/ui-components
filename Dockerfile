@@ -1,6 +1,8 @@
 FROM node:8
 
 RUN mkdir -p /opt/sendgrid/ui-components/
+RUN mkdir -p /opt/sendgrid/ssh/
+
 WORKDIR /opt/sendgrid/ui-components/
 
 COPY package.json /opt/sendgrid/ui-components/
