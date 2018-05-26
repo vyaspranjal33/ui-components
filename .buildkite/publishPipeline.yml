@@ -27,7 +27,7 @@ steps:
 
   - name: ":dragon: Lerna Publish"
     command: 
-      - ls -lah /opt/sendgrid/sshmagic
+      - ls -lah ~/.ssh
       - echo ~
       # - cp -r /root/sshmagic/ /root/mysshmagic/
       # - chown -R root /root/mysshmagic/
@@ -39,7 +39,7 @@ steps:
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
       - git pull
-      - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
+      # - npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
       # - tar --exclude='./node_modules' --exclude='./.git' -zcvf ./buildartifact.tgz ./**/{package.json,lerna.json}
     plugins:
       docker-compose#v2.2.1:
