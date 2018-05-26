@@ -39,6 +39,7 @@ steps:
       # - ls -lah /root/.ssh
       # - ls -lah /root/.ssh/known_hosts
       # - ls -lah /root/.ssh/config
+      - pwd
       - echo "garbage"
       - ls -lah /opt/
       - ls -lah /opt/sendgrid/
