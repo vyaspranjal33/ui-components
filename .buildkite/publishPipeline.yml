@@ -27,7 +27,9 @@ steps:
 
   - name: ":exploding_death_star: Lerna :exploding_death_star: Publish :exploding_death_star:"
     command: 
-      - sudo setfacl -R -m u:root:rwx /root/.ssh/ 
+      - cp ~/sshmagic ~/mysshmagic
+      - chown ~/mysshmagic -R 777
+      - cp ~/mysshmagic ~/.ssh
       - ls -lah /root/.ssh
       - ls -lah /root/.ssh/known_hosts
       - ls -lah /root/.ssh/config

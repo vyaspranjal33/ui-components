@@ -15,6 +15,6 @@ steps:
   # Build it & Package it
   ##############################
 
-- name: "Decide Which Pipeline To Run"
+- name: ":bash: Decide Which Pipeline To Run"
   command:
     - ./.buildkite/theDecider.sh
