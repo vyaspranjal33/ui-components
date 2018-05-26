@@ -43,7 +43,7 @@ steps:
 
   - wait
 
-  - name: "🦖 Hold on to your butts 🦖"
+  - name: ":octocat: Hold on to your butts :octocat:"
     command: 
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
