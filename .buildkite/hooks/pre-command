@@ -13,12 +13,12 @@ export MAGICALVERSION=$(buildkite-agent meta-data get docker-compose-plugin-buil
 # and need to make sure that the current value is always accessible, you
 # might do something like this:
 
-# bk_array=(
-#   MY_VARIABLE
-# )
-# for a in "${bk_array[@]}"; do
-#   if res=$(buildkite-agent meta-data get $a); then
-#     export $a=$res
-#   fi
-# done
+bk_array=(
+  publish-version
+)
+for a in "${bk_array[@]}"; do
+  if res=$(buildkite-agent meta-data get $a); then
+    export $a=$res
+  fi
+done
 

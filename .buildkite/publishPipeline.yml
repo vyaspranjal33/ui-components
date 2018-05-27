@@ -27,18 +27,18 @@ steps:
 
   - name: ":dragon: Lerna Publish"
     command: 
-      - ls -lahn /var/lib/buildkite-agent
       - git fetch 
       - git checkout ${BUILDKITE_BRANCH} 
       - git pull 
-      - /usr/local/bin/npx lerna publish --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
+      - docker-compose run app bash -c "/usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version ${PUBLISH-VERSION}"
       - git status
+      
       # - tar --exclude='./node_modules' --exclude='./.git' -zcvf ./buildartifact.tgz ./**/{package.json,lerna.json}
-    plugins:
-      docker-compose#v2.2.1:
-        run: app
-        image-repository: docker.sendgrid.net/sendgrid
-        cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+    # plugins:
+      # docker-compose#v2.2.1:
+      #   run: app
+      #   image-repository: docker.sendgrid.net/sendgrid
+      #   cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
         
 
 # git fetch && git checkout ${BUILDKITE_BRANCH} && git pull && /usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version ${version}
