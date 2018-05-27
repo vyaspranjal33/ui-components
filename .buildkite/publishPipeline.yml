@@ -43,7 +43,8 @@ steps:
       - git fetch 
       - git checkout ${BUILDKITE_BRANCH} 
       - git pull 
-      - docker-compose run app bash -c "/usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version patch"
+      - docker-compose run app bash -c "ls -lahn ./ && ls -lahn ~/.ssh && /usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version patch"
+      - git status
       # - pwd
       # - echo "garbage"
       # - ls -lah /opt/
