@@ -28,48 +28,18 @@ steps:
 
   - name: ":dragon: Lerna Publish"
     command: 
-      # - export PATH=$PATH:/sbin:/bin
-      # - ls -lah ~/.ssh
-      # - echo ~
-      # - echo $PATH
-      # - id
-      # - node --version
-      # - chown -R root /root/mysshmagic/
-      # - chmod -R 777 /root/mysshmagic/
-      # - cp /root/mysshmagic /root/.ssh
-      # - ls -lah /root/.ssh
-      # - ls -lah /root/.ssh/known_hosts
-      # - ls -lah /root/.ssh/config
-      - git --version
-      # - git config --list --show-origin
       - ls -lahn /var/lib/buildkite-agent
       - git fetch 
       - git checkout ${BUILDKITE_BRANCH} 
       - git pull 
-      - docker-compose run app bash -c "git --version && echo ~ && ls -lahn /var/lib/buildkite-agent && /usr/local/bin/npx lerna publish --skip-npm --yes --cd-version patch"
+      - /usr/local/bin/npx lerna publish --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
       - git status
-      # - pwd
-      # - echo "garbage"
-      # - ls -lah /opt/
-      # - ls -lah /opt/sendgrid/
-      # - ls -lah /opt/sendgrid/ui-components
-      # - ls -lah /opt/sendgrid/ssh
-      # - cp -r /opt/sendgrid/ssh/ ~/.ssh/
-      # - echo ~
-      # sh -c ""
-      # - git fetch
-      # - git checkout ${BUILDKITE_BRANCH}
-      # - git pull
-      # - /usr/local/bin/npx --help
-      # - /usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get "publish-version")
       # - tar --exclude='./node_modules' --exclude='./.git' -zcvf ./buildartifact.tgz ./**/{package.json,lerna.json}
-    # plugins:
-    #   docker-compose#v2.2.1:
-    #     run: app
-    #     # artifact_paths: 
-    #     #   - "./builtPackages.tar.gz"
-    #     image-repository: docker.sendgrid.net/sendgrid
-    #     cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+    plugins:
+      docker-compose#v2.2.1:
+        run: app
+        image-repository: docker.sendgrid.net/sendgrid
+        cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
         
 
 # git fetch && git checkout ${BUILDKITE_BRANCH} && git pull && /usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version ${version}

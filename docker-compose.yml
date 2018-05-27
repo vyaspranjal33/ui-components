@@ -7,16 +7,18 @@ services:
     build:
      context: .  
     volumes:
-      # - ./packages:/opt/sendgrid/ui-components/packages
-      # - ./docs:/opt/sendgrid/ui-components/docs
-      - ./.git:/opt/sendgrid/ui-components/.git
+      # Bootstrap the buildkite users into the docker container for permissions
       - /etc/group:/etc/group:ro
       - /etc/passwd:/etc/passwd:ro
-      - ~/.ssh:/root/.ssh
-      - ./:/opt/sendgrid/ui-components/
-      - /opt/sendgrid/ui-components/node_modules
+      # Add the buildkite-agent user info in for .ssh keys and known_hosts for git
+      # [WARNING] This will break if they change the buildkite-agent user configuration 
       - /var/lib/buildkite-agent:/var/lib/buildkite-agent
-      # - /var/lib/buildkite-agent/.ssh:/root/.ssh
+      # Mount the working directory so docker and the host can communicate for 
+      # git magic (need that .git folder)
+      - ./:/opt/sendgrid/ui-components/
+      # Preserve the node_modules folder in the docker container because we mounted ./
+      - /opt/sendgrid/ui-components/node_modules
+
   # publish:
   #   image: docker.sendgrid.net/sendgrid/ui-components:${MAGICALVERSION-latest}
   #   # user: ${MYUID:-0}
