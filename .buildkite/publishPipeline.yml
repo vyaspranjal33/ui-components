@@ -41,12 +41,12 @@ steps:
       # - ls -lah /root/.ssh/known_hosts
       # - ls -lah /root/.ssh/config
       - git --version
-      - git config --list --show-origin
+      # - git config --list --show-origin
       - ls -lahn /var/lib/buildkite-agent
       - git fetch 
       - git checkout ${BUILDKITE_BRANCH} 
       - git pull 
-      - docker-compose run app bash -c "echo ~ && ls -lahn /var/lib/buildkite-agent && /usr/local/bin/npx lerna publish --skip-npm --yes --cd-version patch"
+      - docker-compose run app bash -c "git --version && echo ~ && ls -lahn /var/lib/buildkite-agent && /usr/local/bin/npx lerna publish --skip-npm --yes --cd-version patch"
       - git status
       # - pwd
       # - echo "garbage"
