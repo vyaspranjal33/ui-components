@@ -5,17 +5,17 @@ steps:
         build: app
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
-  - block: ":exploding_death_star: Request Publish :exploding_death_star:"
-    fields:
-      - select: "Release Type"
-        key: "publish-version"
-        options:
-          - label: "patch"
-            value: "patch"
-          - label: "minor"
-            value: "minor"
-          - label: "major"
-            value: "major"
+  # - block: ":exploding_death_star: Request Publish :exploding_death_star:"
+  #   fields:
+  #     - select: "Release Type"
+  #       key: "publish-version"
+  #       options:
+  #         - label: "patch"
+  #           value: "patch"
+  #         - label: "minor"
+  #           value: "minor"
+  #         - label: "major"
+  #           value: "major"
           # - label: "premajor"
           #   value: "premajor"
           # - label: "preminor"
@@ -24,7 +24,8 @@ steps:
           #   value: "prepatch"
           # - label: "prerelease"
           #   value: "prerelease"
-
+  - wait
+  
   - name: ":dragon: Lerna Publish"
     command: 
       # - export PATH=$PATH:/sbin:/bin

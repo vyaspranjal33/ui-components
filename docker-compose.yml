@@ -3,7 +3,7 @@ version: '3.3'
 services:
   app:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
-    # user: ${MYUID:-0}
+    user: ${MYUID:-0}
     build:
      context: .  
     volumes:
@@ -12,14 +12,14 @@ services:
       - ./.git:/opt/sendgrid/ui-components/.git
       # - ~/.ssh:/root/.ssh
       - /var/lib/buildkite-agent/.ssh:/root/.ssh
-  publish:
-    image: docker.sendgrid.net/sendgrid/ui-components:${MAGICALVERSION-latest}
-    # user: ${MYUID:-0}
-    build:
-     context: .  
-    volumes:
-      - ./.git:/opt/sendgrid/ui-components/.git
-      - /var/lib/buildkite-agent/.ssh:/root/.ssh
+  # publish:
+  #   image: docker.sendgrid.net/sendgrid/ui-components:${MAGICALVERSION-latest}
+  #   # user: ${MYUID:-0}
+  #   build:
+  #    context: .  
+  #   volumes:
+  #     - ./.git:/opt/sendgrid/ui-components/.git
+  #     - /var/lib/buildkite-agent/.ssh:/root/.ssh
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:
