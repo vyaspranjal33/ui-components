@@ -40,6 +40,7 @@ steps:
       # - ls -lah /root/.ssh
       # - ls -lah /root/.ssh/known_hosts
       # - ls -lah /root/.ssh/config
+      - git --version
       - git config --list --show-origin
       - ls -lahn /var/lib/buildkite-agent
       - git fetch 
