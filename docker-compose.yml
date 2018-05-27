@@ -14,6 +14,7 @@ services:
       - /etc/passwd:/etc/passwd:ro
       - ~/.ssh:/root/.ssh
       - ./:/opt/sendgrid/ui-components/
+      - /opt/sendgrid/ui-components/node_modules
       # - /var/lib/buildkite-agent/.ssh:/root/.ssh
   # publish:
   #   image: docker.sendgrid.net/sendgrid/ui-components:${MAGICALVERSION-latest}
