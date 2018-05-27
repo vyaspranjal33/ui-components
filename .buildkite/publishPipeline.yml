@@ -25,7 +25,7 @@ steps:
           # - label: "prerelease"
           #   value: "prerelease"
   - wait
-  
+
   - name: ":dragon: Lerna Publish"
     command: 
       # - export PATH=$PATH:/sbin:/bin
@@ -40,7 +40,10 @@ steps:
       # - ls -lah /root/.ssh
       # - ls -lah /root/.ssh/known_hosts
       # - ls -lah /root/.ssh/config
-      - docker-compose run app bash -c "git fetch && git checkout ${BUILDKITE_BRANCH} && git pull && /usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version patch"
+      - git fetch 
+      - git checkout ${BUILDKITE_BRANCH} 
+      - git pull 
+      - docker-compose run app bash -c "/usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version patch"
       # - pwd
       # - echo "garbage"
       # - ls -lah /opt/
