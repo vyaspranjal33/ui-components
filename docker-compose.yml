@@ -3,7 +3,7 @@ version: '3.3'
 services:
   app:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
-    # user: ${MYUID:-0}
+    user: ${MYUID:-0}
     build:
      context: .  
     volumes:
