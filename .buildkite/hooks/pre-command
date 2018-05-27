@@ -8,6 +8,7 @@
 # any environment variables; you might do something like this:
 $(buildkite-agent meta-data set PIPELINE_REVISION '0.0.1')
 export MYUID=$(id -u)
+export MAGICALVERSION=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
 # If you're changing an environment variable inside of your build steps
 # and need to make sure that the current value is always accessible, you
 # might do something like this:
