@@ -27,6 +27,7 @@ steps:
 
   - name: ":dragon: Lerna Publish"
     command: 
+      - env
       - git fetch 
       - git checkout ${BUILDKITE_BRANCH} 
       - git pull 
