@@ -6,6 +6,8 @@ services:
     user: ${MYUID:-0}
     build:
      context: .  
+    environment:
+      - PUBLISH_VERSION
     volumes:
       # Bootstrap the buildkite users into the docker container for permissions
       - /etc/group:/etc/group:ro
