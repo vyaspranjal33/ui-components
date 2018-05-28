@@ -17,8 +17,7 @@
     "prepublishOnly": "yarn build",
     "precommit": "yarn lint-fix",
     "snapshot": "yarn test -u",
-    "lint-snapshot": "yarn lint-fix && yarn snapshot",
-    "lernaCi": "npx lerna publish --skip-git --skip-npm --yes --cd-version $(buildkite-agent meta-data get \"publish-version\")"
+    "lint-snapshot": "yarn lint-fix && yarn snapshot"
   },
   "repository": "https://github.com/sendgrid/ui-components.git",
   "author": "SendGrid <careers@sendgrid.com>",
