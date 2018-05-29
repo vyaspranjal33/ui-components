@@ -32,9 +32,9 @@ steps:
       - git pull 
       - cp ./.npmrcCI ./.npmrc
       - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
-      - docker-compose run app bash -c "/usr/local/bin/npx lerna publish --skip-git --cd-version $(buildkite-agent meta-data get "publish-version")"
+      - docker-compose run app bash -c "/usr/local/bin/npx lerna publish --yes --cd-version $(buildkite-agent meta-data get "publish-version")"
       - git status
-      # - git push
+      - git push
       
 
 
