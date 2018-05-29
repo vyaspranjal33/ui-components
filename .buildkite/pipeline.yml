@@ -22,5 +22,5 @@ steps:
 
 - name: ":bash: Upload Build Pipeline"
   command:
-    - buildkite-agent pipeline upload ./buildkite/buildPipeline.yml
+    - buildkite-agent pipeline upload ./.buildkite/buildPipeline.yml
   branches: "!master"
