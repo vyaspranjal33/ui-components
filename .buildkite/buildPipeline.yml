@@ -9,7 +9,8 @@ steps:
 
   - wait
 
-  - name: ":docker: Push to final repository"
+  - name: ":docker: Push image to latest tag"
+  # We want to push the image to the latest tag to keep the cache up to date to keep things fast
     plugins:
       docker-compose#v2.2.1:
         push:
