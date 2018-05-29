@@ -44,7 +44,7 @@ steps:
   - wait
 
   - name: ":octocat: Combine build Artifacts and Commit :octocat:"
-    # branches: "master"
+    branches: "master"
     command: 
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}

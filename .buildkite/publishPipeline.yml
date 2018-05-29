@@ -27,23 +27,12 @@ steps:
 
   - name: ":dragon: Lerna Publish"
     command: 
-      - env
       - git fetch 
       - git checkout ${BUILDKITE_BRANCH} 
       - git pull 
       - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
-      - docker-compose run app bash -c "/usr/local/bin/npx lerna publish --skip-git --cd-version $(buildkite-agent meta-data get "publish-version")"
+      - docker-compose run app bash -c "/usr/local/bin/npx lerna publish --skip-git --yes --cd-version $(buildkite-agent meta-data get "publish-version")"
       - git status
       
-      # - tar --exclude='./node_modules' --exclude='./.git' -zcvf ./buildartifact.tgz ./**/{package.json,lerna.json}
-    # plugins:
-      # docker-compose#v2.2.1:
-      #   run: app
-      #   image-repository: docker.sendgrid.net/sendgrid
-      #   cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
-        
 
-# git fetch && git checkout ${BUILDKITE_BRANCH} && git pull && /usr/local/bin/npx lerna publish --skip-git --skip-npm --yes --cd-version ${version}
-  # - name: ":yarn: :docker: Build UI-component base image"
-        
 

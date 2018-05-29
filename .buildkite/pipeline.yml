@@ -18,9 +18,9 @@ steps:
 - name: ":bash: Decide Which Pipeline To Run"
   command:
     - ./.buildkite/theDecider.sh
-  # branches: "master"
+  branches: "master"
 
-# - name: ":bash: Upload Build Pipeline"
-#   command:
-#     - buildkite-agent pipeline upload ./buildkite/buildPipeline.yml
-#   branches: "!master"
+- name: ":bash: Upload Build Pipeline"
+  command:
+    - buildkite-agent pipeline upload ./buildkite/buildPipeline.yml
+  branches: "!master"
