@@ -16,19 +16,22 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import Badge from './badge';
 import cn from './utilities/classnames';
+import Badge from './badge';
+import Icon from './icon';
 export var Card = function (_a) {
-    var badge = _a.badge, body = _a.body, centered = _a.centered, children = _a.children, inline = _a.inline, thin = _a.thin, title = _a.title, className = _a.className, attributes = __rest(_a, ["badge", "body", "centered", "children", "inline", "thin", "title", "className"]);
-    var titleStyle = {
-        width: '100%',
-    };
+    var badge = _a.badge, body = _a.body, centered = _a.centered, children = _a.children, icon = _a.icon, iconSize = _a.iconSize, inline = _a.inline, thin = _a.thin, title = _a.title, className = _a.className, selected = _a.selected, attributes = __rest(_a, ["badge", "body", "centered", "children", "icon", "iconSize", "inline", "thin", "title", "className", "selected"]);
     return (React.createElement("div", __assign({ className: cn('card', className, {
             'is-centered': centered,
+            'is-inline': inline,
+            'is-selected': selected,
             'is-thin': thin,
         }) }, attributes),
         badge && React.createElement(Badge, __assign({}, badge)),
-        title && React.createElement("h2", { style: titleStyle }, title),
+        icon &&
+            React.createElement("div", { className: "card-icon" },
+                React.createElement(Icon, { size: iconSize, type: icon })),
+        title && React.createElement("h2", { className: cn({ 'card-title': inline }) }, title),
         body && React.createElement("p", null, body),
         children));
 };

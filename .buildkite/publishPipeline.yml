@@ -1,0 +1,40 @@
+steps:
+  - name: ":docker: Build Container"
+    plugins:
+      docker-compose#v2.2.1:
+        build: app
+        image-repository: docker.sendgrid.net/sendgrid
+        cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+  - block: ":exploding_death_star: Request Publish :exploding_death_star:"
+    fields:
+      - select: "Release Type"
+        key: "publish-version"
+        options:
+          - label: "patch"
+            value: "patch"
+          - label: "minor"
+            value: "minor"
+          - label: "major"
+            value: "major"
+          # - label: "premajor"
+          #   value: "premajor"
+          # - label: "preminor"
+          #   value: "preminor"
+          # - label: "prepatch"
+          #   value: "prepatch"
+          # - label: "prerelease"
+          #   value: "prerelease"
+
+  - name: ":dragon: Lerna Publish"
+    command: 
+      - git fetch 
+      - git checkout ${BUILDKITE_BRANCH} 
+      - git pull 
+      - cp ./.npmrcCI ./.npmrc
+      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
+      - docker-compose run app bash -c "/usr/local/bin/npx lerna publish --yes --cd-version $(buildkite-agent meta-data get "publish-version")"
+      - git status
+      - git push
+      
+
+

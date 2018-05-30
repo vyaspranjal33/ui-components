@@ -12,128 +12,15 @@
 steps:
 
   ##############################
-  # Pre-build Environment Checks
-  ##############################
-
-  # Pipeline revision is our gate that lets you into the new logic.
-  # You need to make chef-data consul changes, and chef changes
-  # in order to use this new flow. You will probably want to
-  # pair with the autobots in order to get this converted.
-  #
-  # UNCOMMENTING THIS WITHOUT FULLY RUNNING STEPS IN WIKI WILL BREAK YOUR VERSIONING
-  # https://wiki.sendgrid.net/x/QSfLAg
-  # - label: 'set pipeline revision'
-  #   command:
-  #     - 'buildkite-agent meta-data set PIPELINE_REVISION `echo 0.0.1`'
-
-  # Changes to this variable will change whether or not your branch is
-  # promoted and uploaded.
-  # true = all commits will be packaged and uploaded to repository
-  # servers (without merging to master), but not deployed.
-  #
-  # false = master commits only will be packed and uploaded to repository
-  # servers, but not deployed
-  - label: 'set promote for stage'
-    command:
-      - 'buildkite-agent meta-data set PROMOTEFORSTAGE `echo true`'
-    branches: '!master'
-
-  - wait
-
-
-  # The purpose of the status check script is to add a comment to your
-  # pull requests that indicates whether or not this PR is ready to merge.
-  # If your repo is part of the SOX or SOC2 audit, do not remove this!
-  - label: 'status_check'
-    command: 'workflow status_checks'
-    branches: '!master'
-
-  - wait
-
-
-  ##############################
   # Build it & Package it
   ##############################
 
-  # The purpose of this script is to build your script in a standard manner.
-  - label: 'build_jenkins_docker_file'
-    command: 'workflow build_jenkins_docker_file'
-    artifact_paths: 'ci-repo/*'
-    env:
-      PACKAGE: true
-      PUBLISH: true
-    branches: 'master'
+- name: ":bash: Decide Which Pipeline To Run"
+  command:
+    - ./.buildkite/theDecider.sh
+  branches: "master"
 
-  # If we're not on the default; package, but don't publish
-  - label: 'build_jenkins_docker_file'
-    command: 'workflow build_jenkins_docker_file'
-    artifact_paths: 'ci-repo/*'
-    env:
-      PACKAGE: true
-      PUBLISH: false
-    branches: '!master'
-
-  # Note: You should consider converting your .jenkins-docker file into a
-  # traditional Makefile! You can check out the ussr repo to see what
-  # their Makefile looks like.
-  #
-  # https://github.com/sendgrid/ussr/blob/master/Makefile
-  #
-  # When replacing your .jenkins-docker with a Makefile, you should comment
-  # out the above steps and replace uncomment the make steps below.
-  # - label: 'make unit'
-  #   command:
-  #     - 'make unit'
-
-  # - label: 'make acceptance'
-  #   command:
-  #     - 'make acceptance'
-
-  # - label: 'make package'
-  #   command:
-  #     - 'make package'
-  #   artifact_paths: 'ci-repo/*'
-
-  - wait
-
-
-  ##############################
-  # Post-Publish
-  ##############################
-
-  # This block of steps is only going to work once you migrate to the
-  # new pipeline revision logic.
-  #
-  # UNCOMMENTING THIS WITHOUT FULLY RUNNING STEPS IN WIKI WILL BREAK YOUR BUILD
-  # https://wiki.sendgrid.net/x/QSfLAg
-  #
-  # - wait
-  #
-  # # Automatically approve and merge any chef-data prs that were created
-  # # against the testing environment.
-  # - label: 'approve and merge testing chef-data PRs'
-  #   command:
-  #     - 'buildkite-agent artifact download pipeline_chef_data_pull_request .'
-  #     - 'workflow bk_approve_chef-data_pr'
-  #   branches: 'master'
-  #
-  # - wait
-  # # Automatically run the consul upload for chef-data.
-  # - label: 'upload chef-data PRs'
-  #   command:
-  #     - 'buildkite-agent artifact download pipeline_chef_data_pull_request .'
-  #     - 'workflow bk_upload_chef-data'
-  #   branches: 'master'
-  #   agents:
-  #     queue: 'chef'
-
-  # - wait
-  # # You will want to write your own verification script to make sure that
-  # # your app has been successfully uploaded to the end to end environment.
-  # # please see ussr for an example of what they wrote:
-  # # https://github.com/sendgrid/ussr/blob/master/bin/bk_verify_e2e.sh
-  # - label: 'verify chef-data PRs'
-  #   command:
-  #     - 'buildkite-agent artifact download pipeline_chef_data_pull_request .'
-  #     - './bin/bk_verify_e2e.sh'
-  #   branches: 'master'
+- name: ":bash: Upload Build Pipeline"
+  command:
+    - buildkite-agent pipeline upload ./.buildkite/buildPipeline.yml
+  branches: "!master"
