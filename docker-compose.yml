@@ -20,6 +20,18 @@ services:
       - ./:/opt/sendgrid/ui-components/
       # Preserve the node_modules folder in the docker container because we mounted ./
       - /opt/sendgrid/ui-components/node_modules
+  build:
+    image: docker.sendgrid.net/sendgrid/ui-components:latest
+    # user: ${MYUID:-0}
+    build:
+      context: .  
+    volumes:
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+      # Only mount the directories we expect to write into our host 
+      # (No permissions issues with node_modules this way)
+      - ./docs:/opt/sendgrid/ui-components/docs
+      - ./packages:/opt/sendgrid/ui-components/packages
 
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest

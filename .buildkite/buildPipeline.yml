@@ -20,7 +20,7 @@ steps:
     command: yarn ci-test
     plugins:
       docker-compose#v2.2.1:
-        run: app
+        run: build
         
   - name: ":storybook: Build Storybook"
     command: 
@@ -30,7 +30,7 @@ steps:
       - "./docs.tar.gz"
     plugins:
       docker-compose#v2.2.1:
-        run: app
+        run: build
 
   - name: ":typescript: Build UI-Components"
     command: 
@@ -40,7 +40,7 @@ steps:
       - "./builtPackages.tar.gz"
     plugins:
       docker-compose#v2.2.1:
-        run: app
+        run: build
 
   - wait
 
@@ -56,7 +56,7 @@ steps:
       - buildkite-agent artifact download docs.tar.gz ./
       - tar -zxvf builtPackages.tar.gz
       - tar -zxvf docs.tar.gz
-      - git add docs && git add packages
+      - git add --all docs && git add --all packages
       - git status
       - ./.buildkite/determineGitCommitType.sh
       - git push origin ${BUILDKITE_BRANCH}
