@@ -3,9 +3,9 @@ steps:
   - name: ":yarn: :docker: Build UI-component base image"
     plugins:
       docker-compose#v2.2.1:
-        build: app
+        build: build
         image-repository: docker.sendgrid.net/sendgrid
-        cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+        cache-from: build:docker.sendgrid.net/sendgrid/ui-components:latest
 
   - wait
 
@@ -14,7 +14,7 @@ steps:
     plugins:
       docker-compose#v2.2.1:
         push:
-        - app:docker.sendgrid.net/sendgrid/ui-components:latest
+        - build:docker.sendgrid.net/sendgrid/ui-components:latest
 
   - name: ":jest: Lint and Test"
     command: yarn ci-test

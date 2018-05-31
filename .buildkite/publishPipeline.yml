@@ -5,6 +5,7 @@ steps:
         build: app
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest
+        
   - block: ":exploding_death_star: Request Publish :exploding_death_star:"
     fields:
       - select: "Release Type"
@@ -30,9 +31,9 @@ steps:
       - git fetch 
       - git checkout ${BUILDKITE_BRANCH} 
       - git pull 
-      - cp ./.npmrcCI ./.npmrc
+      - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
       - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
-      - docker-compose run app bash -c "/usr/local/bin/npm set init.author.name CI && /usr/local/bin/npm init.author.email "uicomponents@sendgrid.com" && /usr/local/bin/npx lerna publish --yes --cd-version $(buildkite-agent meta-data get "publish-version")"
+      - docker-compose run app bash -c "/usr/local/bin/npm config set init.author.name CI && /usr/local/bin/npm config set init.author.email "uicomponents@sendgrid.com" && /usr/local/bin/npx lerna publish --yes --cd-version $(buildkite-agent meta-data get "publish-version")"
       - git status
       - git push
       
