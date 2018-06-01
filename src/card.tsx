@@ -6,8 +6,8 @@ import Badge from './badge';
 import Icon from './icon';
 
 import { color as ValidColor } from './types/color';
-import { IconType } from './types/icons';
 import IconSizeType from './types/icon-sizes';
+import { IconType } from './types/icons';
 
 export interface CardProps {
   children?: React.ReactNode;
