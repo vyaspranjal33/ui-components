@@ -325,37 +325,36 @@ var Card = function (_a) {
             'is-thin': thin,
         }) }, attributes),
         badge && React__default.createElement(Badge, __assign({}, badge)),
-        icon &&
-            React__default.createElement("div", { className: "card-icon" },
-                React__default.createElement(Icon, { size: iconSize, type: icon })),
+        icon && (React__default.createElement("div", { className: "card-icon" },
+            React__default.createElement(Icon, { size: iconSize, type: icon }))),
         title && React__default.createElement("h2", { className: classNames({ 'card-title': inline }) }, title),
         body && React__default.createElement("p", null, body),
         children));
 };
 
 var iconTypes = {
-    'button': 'button',
-    'code': 'code',
-    'columns': 'columns',
-    'divider': 'divider',
-    'image': 'images',
+    button: 'button',
+    code: 'code',
+    columns: 'columns',
+    divider: 'divider',
+    image: 'images',
     'image-text': 'image-text',
-    'social': 'social',
-    'spacer': 'spacer',
-    'text': 'text',
-    'unsubscribe': 'unsubscribe',
+    social: 'social',
+    spacer: 'spacer',
+    text: 'text',
+    unsubscribe: 'unsubscribe',
 };
 var titles = {
-    'button': 'Button',
-    'code': 'Code',
-    'columns': 'Columns',
-    'divider': 'Divider',
-    'image': 'Image',
+    button: 'Button',
+    code: 'Code',
+    columns: 'Columns',
+    divider: 'Divider',
+    image: 'Image',
     'image-text': 'Image & Text',
-    'social': 'Social',
-    'spacer': 'Spacer',
-    'text': 'Text',
-    'unsubscribe': 'Unsubscribe',
+    social: 'Social',
+    spacer: 'Spacer',
+    text: 'Text',
+    unsubscribe: 'Unsubscribe',
 };
 var ModuleCard = function (_a) {
     var type = _a.type, className = _a.className, attributes = __rest(_a, ["type", "className"]);

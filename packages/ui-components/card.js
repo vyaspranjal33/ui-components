@@ -28,9 +28,8 @@ export var Card = function (_a) {
             'is-thin': thin,
         }) }, attributes),
         badge && React.createElement(Badge, __assign({}, badge)),
-        icon &&
-            React.createElement("div", { className: "card-icon" },
-                React.createElement(Icon, { size: iconSize, type: icon })),
+        icon && (React.createElement("div", { className: "card-icon" },
+            React.createElement(Icon, { size: iconSize, type: icon }))),
         title && React.createElement("h2", { className: cn({ 'card-title': inline }) }, title),
         body && React.createElement("p", null, body),
         children));
