@@ -1,11 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
 import UnsubscribeGroupCard from '../src/unsubscribe-groups/unsubscribe-group-card';
 import CreateNewGroupCard from '../src/unsubscribe-groups/create-new-group-card';
+import UnsubscribeGroupAddEdit from '../src/unsubscribe-groups/add-edit';
 
-const stories = storiesOf('UnsubscribeGroupCard', module);
+const stories = storiesOf('Unsubscribe Groups', module);
 
 stories.add('Unsubscribe Group Card', () => (
   <div className="row">
@@ -60,3 +61,46 @@ stories.add('Create New Group Card (disabled)', () => (
   </div>
 ));
 
+stories.add('Add Unsubscribe Group', () => (
+  <UnsubscribeGroupAddEdit
+    breadcrumbHref="#"
+    onGroupDescInputChanged={action('change group description')}
+    onGroupDisplayedOnIndexChanged={action('toggle group displayed on index')}
+    onGroupNameInputChanged={action('change group name')}
+    onSaveUnsubscribeGroup={action('save unsubscribe group')}
+  />
+));
+
+class UnsubscribeGroupEditContainer extends Component<any, any> {
+  constructor(props: any) {
+    super(props);
+
+    this.state = { isDeleteGroupModalOpen: false };
+  }
+
+  public open = (e: any) => { this.setState({ isDeleteGroupModalOpen: true }); };
+  public close = (e: any) => { this.setState({ isDeleteGroupModalOpen: false }); };
+
+  public render() {
+    return (
+      <UnsubscribeGroupAddEdit
+        breadcrumbHref="#"
+        id={1234}
+        isEdit
+        onGroupDescInputChanged={action('change group description')}
+        onGroupDisplayedOnIndexChanged={action('toggle group displayed on index')}
+        onGroupNameInputChanged={action('change group name')}
+        onDeleteUnsubscribeGroup={action('delete unsubscribe group')}
+        onSaveUnsubscribeGroup={action('save unsubscribe group')}
+        isDeleteGroupModalOpen={this.state.isDeleteGroupModalOpen}
+        onDeleteGroupModalClosed={this.close}
+        onDeleteGroupModalOpened={this.open}
+        unsubscribes={1000}
+      />
+    );
+  }
+}
+
+stories.add('Edit Unsubscribe Group', () => (
+  <UnsubscribeGroupEditContainer/>
+));
