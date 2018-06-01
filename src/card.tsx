@@ -6,6 +6,7 @@ import Badge from './badge';
 import Icon from './icon';
 
 import { color as ValidColor } from './types/color';
+import IconSizeType from './types/icon-sizes';
 import { IconType } from './types/icons';
 
 export interface CardProps {
@@ -39,9 +40,8 @@ export const Card: React.SFC<CardProps> = ({
   title,
   className,
   selected,
-  ...attributes,
+  ...attributes
 }) => {
-
   return (
     <div
       className={cn('card', className, {
@@ -53,11 +53,11 @@ export const Card: React.SFC<CardProps> = ({
       {...attributes}
     >
       {badge && <Badge {...badge} />}
-      {icon &&
+      {icon && (
         <div className="card-icon">
           <Icon size={iconSize} type={icon} />
         </div>
-      }
+      )}
       {title && <h2 className={cn({ 'card-title': inline })}>{title}</h2>}
       {body && <p>{body}</p>}
       {children}

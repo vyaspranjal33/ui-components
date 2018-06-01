@@ -28,9 +28,7 @@ const getFiles = () =>
     glob(path.join(filePath, '**/*.tsx'), (error, files) => {
       if (error) return reject(error);
       resolve(
-        files.filter(
-          file => !file.includes('test') && !file.includes('index'),
-        ),
+        files.filter(file => !file.includes('test') && !file.includes('index')),
       );
     });
   });
@@ -41,6 +39,7 @@ const plugins = [
   json(),
   typescriptPlugin({
     typescript,
+    useTsconfigDeclarationDir: true,
   }),
 ];
 
@@ -92,8 +91,9 @@ const outputOptions = {
   glob('packages/ui-components/components/**/*.d.ts', (error, files) => {
     for (const file of files) {
       const fileName = paramCase(path.parse(file).name).replace('-d', '.d');
-      fs.createReadStream(file)
+      fs
+        .createReadStream(file)
         .pipe(fs.createWriteStream(`packages/ui-components/${fileName}.ts`));
     }
-  })
+  });
 })();

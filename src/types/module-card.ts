@@ -9,3 +9,4 @@ type ModuleCardType =
   | 'spacer'
   | 'text'
   | 'unsubscribe';
+export default ModuleCardType;
