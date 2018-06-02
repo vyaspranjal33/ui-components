@@ -8287,7 +8287,7 @@ exports[`Storyshots Text Input Stateless Text Input with a Value Passed as a Pro
 exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
 <div
   className="input-text-wrap is-disabled"
-  style={undefined}
+  style={Object {}}
 >
   <label
     className="input-text-label"
@@ -8296,15 +8296,16 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
     An Input
   </label>
   <input
-    aria-describedby={undefined}
+    aria-describedby=""
     id="test-input-simple"
     name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value={undefined}
+    value=""
   />
+  
   
 </div>
 `;
@@ -8312,7 +8313,7 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
 exports[`Storyshots Text Input Text Input Large 1`] = `
 <div
   className="input-text-wrap is-large"
-  style={undefined}
+  style={Object {}}
 >
   <label
     className="input-text-label"
@@ -8321,15 +8322,16 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
     Large Input
   </label>
   <input
-    aria-describedby={undefined}
+    aria-describedby=""
     id="test-input-simple"
     name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value={undefined}
+    value=""
   />
+  
   
 </div>
 `;
@@ -8337,7 +8339,7 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
 exports[`Storyshots Text Input Text Input Simple 1`] = `
 <div
   className="input-text-wrap is-required"
-  style={undefined}
+  style={Object {}}
 >
   <label
     className="input-text-label"
@@ -8346,15 +8348,42 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
     Test Input
   </label>
   <input
-    aria-describedby={undefined}
+    aria-describedby=""
     id="test-input-simple"
     name={undefined}
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value={undefined}
+    value=""
   />
+  
+  
+</div>
+`;
+
+exports[`Storyshots Text Input Text Input Simple with a value 1`] = `
+<div
+  className="input-text-wrap has-value is-required"
+  style={Object {}}
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    Test Input
+  </label>
+  <input
+    aria-describedby=""
+    id="test-input-simple"
+    name={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="text"
+    value="omg wuuuut"
+  />
+  
   
 </div>
 `;
@@ -8362,7 +8391,7 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
 exports[`Storyshots Text Input Text Input With Error 1`] = `
 <div
   className="input-text-wrap is-error"
-  style={undefined}
+  style={Object {}}
 >
   <label
     className="input-text-label"
@@ -8378,7 +8407,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value={undefined}
+    value=""
   />
   <span
     className="input-info danger"
@@ -8393,7 +8422,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
 exports[`Storyshots Text Input Text Input With Info 1`] = `
 <div
   className="input-text-wrap"
-  style={undefined}
+  style={Object {}}
 >
   <label
     className="input-text-label"
@@ -8409,7 +8438,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
     onChange={[Function]}
     onFocus={[Function]}
     type="text"
-    value={undefined}
+    value=""
   />
   <span
     className="input-info"
@@ -8424,7 +8453,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
 exports[`Storyshots Text Input Text Input With Numbers 1`] = `
 <div
   className="input-text-wrap"
-  style={undefined}
+  style={Object {}}
 >
   <label
     className="input-text-label"
@@ -8440,7 +8469,7 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
     onChange={[Function]}
     onFocus={[Function]}
     type="number"
-    value={undefined}
+    value=""
   />
   <span
     className="input-info"
