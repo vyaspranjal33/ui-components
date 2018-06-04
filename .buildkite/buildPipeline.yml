@@ -17,30 +17,23 @@ steps:
         - build:docker.sendgrid.net/sendgrid/ui-components:latest
 
   - name: ":jest: Lint and Test"
-    command: yarn ci-test
-    plugins:
-      docker-compose#v2.3.0:
-        run: build
+    command: 
+      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
+      - docker-compose run build bash -c "/usr/local/bin/npx ci-test"
         
   - name: ":storybook: Build Storybook"
     command: 
-      - yarn build-storybook -o ./docs
+      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
+      - docker-compose run build bash -c "/usr/local/bin/npx build-storybook -o ./docs"
       - "tar -zcvf docs.tar.gz ./docs"
-    artifact_paths: 
-      - "./docs.tar.gz"
-    plugins:
-      docker-compose#v2.3.0:
-        run: build
+      - buildkite-agent artifact upload ./docs.tar.gz
 
   - name: ":typescript: Build UI-Components"
     command: 
-      - yarn build
+      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
+      - docker-compose run build bash -c "/usr/local/bin/npx build"
       - "tar -zcvf builtPackages.tar.gz ./packages"
-    artifact_paths: 
-      - "./builtPackages.tar.gz"
-    plugins:
-      docker-compose#v2.3.0:
-        run: build
+      - buildkite-agent artifact upload ./builtPackages.tar.gz
 
   - wait 
 
