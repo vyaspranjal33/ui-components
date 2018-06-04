@@ -12,7 +12,7 @@ exports[`Storyshots Accordion Accordion - Caret Left 1`] = `
       onClick={[Function]}
     >
       <h2>
-        Accordion title
+        Accordion Title
       </h2>
     </div>
     <div
@@ -39,8 +39,7 @@ exports[`Storyshots Accordion Accordion - Caret Left 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -58,7 +57,7 @@ exports[`Storyshots Accordion Accordion - Caret Left 1`] = `
       onClick={[Function]}
     >
       <h2>
-        Accordion title
+        Accordion Title
       </h2>
     </div>
     <div
@@ -85,8 +84,7 @@ exports[`Storyshots Accordion Accordion - Caret Left 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -104,7 +102,7 @@ exports[`Storyshots Accordion Accordion - Caret Left 1`] = `
       onClick={[Function]}
     >
       <h2>
-        Accordion title
+        Accordion Title
       </h2>
     </div>
     <div
@@ -131,8 +129,7 @@ exports[`Storyshots Accordion Accordion - Caret Left 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -150,7 +147,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
   className="accordion-wrapper is-editor"
 >
   <div
-    className="accordion-panel"
+    className="accordion-panel is-visible"
   >
     <div
       className="accordion-title"
@@ -161,12 +158,12 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
       </h4>
     </div>
     <div
-      aria-hidden={true}
-      className="rah-static rah-static--height-zero"
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
       style={
         Object {
-          "height": 0,
-          "overflow": "hidden",
+          "height": "auto",
+          "overflow": "visible",
         }
       }
     >
@@ -346,8 +343,7 @@ exports[`Storyshots Accordion Accordion - Large 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -392,8 +388,7 @@ exports[`Storyshots Accordion Accordion - Large 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -411,23 +406,23 @@ exports[`Storyshots Accordion Accordion - Nested 1`] = `
   className="accordion-wrapper"
 >
   <div
-    className="accordion-panel has-child"
+    className="accordion-panel has-child is-visible"
   >
     <div
       className="accordion-title"
       onClick={[Function]}
     >
       <h2>
-        Primary Accordion title 1
+        Primary Accordion Title 1
       </h2>
     </div>
     <div
-      aria-hidden={true}
-      className="rah-static rah-static--height-zero"
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
       style={
         Object {
-          "height": 0,
-          "overflow": "hidden",
+          "height": "auto",
+          "overflow": "visible",
         }
       }
     >
@@ -454,7 +449,7 @@ exports[`Storyshots Accordion Accordion - Nested 1`] = `
                 onClick={[Function]}
               >
                 <h3>
-                  Secondary Accordion title 1
+                  Secondary Accordion Title 1
                 </h3>
               </div>
               <div
@@ -481,8 +476,7 @@ exports[`Storyshots Accordion Accordion - Nested 1`] = `
                   >
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -500,7 +494,7 @@ exports[`Storyshots Accordion Accordion - Nested 1`] = `
                 onClick={[Function]}
               >
                 <h3>
-                  Secondary Accordion title 2
+                  Secondary Accordion Title 2
                 </h3>
               </div>
               <div
@@ -527,8 +521,7 @@ exports[`Storyshots Accordion Accordion - Nested 1`] = `
                   >
                     <p>
                       Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -551,7 +544,7 @@ exports[`Storyshots Accordion Accordion - Nested 1`] = `
       onClick={[Function]}
     >
       <h2>
-        Primary Accordion title 2
+        Primary Accordion Title 1
       </h2>
     </div>
     <div
@@ -578,8 +571,7 @@ exports[`Storyshots Accordion Accordion - Nested 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -597,23 +589,23 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
   className="accordion-wrapper"
 >
   <div
-    className="accordion-panel"
+    className="accordion-panel is-visible"
   >
     <div
       className="accordion-title"
       onClick={[Function]}
     >
       <h2>
-        Accordion title
+        Accordion Title
       </h2>
     </div>
     <div
-      aria-hidden={true}
-      className="rah-static rah-static--height-zero"
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
       style={
         Object {
-          "height": 0,
-          "overflow": "hidden",
+          "height": "auto",
+          "overflow": "visible",
         }
       }
     >
@@ -631,8 +623,7 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -650,7 +641,7 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
       onClick={[Function]}
     >
       <h2>
-        Accordion title
+        Accordion Title
       </h2>
     </div>
     <div
@@ -677,8 +668,7 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
@@ -696,7 +686,7 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
       onClick={[Function]}
     >
       <h2>
-        Accordion title
+        Accordion Title
       </h2>
     </div>
     <div
@@ -723,8 +713,7 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
         >
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-  Vestibulum vehicula semper eleifend.
-  Morbi tincidunt, magna non hendrerit malesuada,
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
   ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
   dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
