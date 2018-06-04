@@ -15,6 +15,7 @@ export interface AccordionProps {
 }
 
 export interface AccordionPanelProps {
+  children: any;
   className?: string;
   contentRender?: () => any;
   icon?: IconType;
@@ -27,6 +28,7 @@ export interface AccordionPanelProps {
 }
 
 export const AccordionPanel: React.SFC<AccordionPanelProps> = ({
+  children,
   className,
   contentRender,
   icon,
@@ -51,7 +53,7 @@ export const AccordionPanel: React.SFC<AccordionPanelProps> = ({
       </div>
       <AnimateHeight duration={500} height={isOpen ? 'auto' : 0}>
         <div className="accordion-content" style={{ display: 'block' }}>
-          {contentRender()}
+          {children}
         </div>
       </AnimateHeight>
     </div>

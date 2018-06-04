@@ -45,17 +45,20 @@ stories.add('Accordion - Standard', () => (
   <Accordion>
     <AccordionPanelContainer
       title="Accordion Title"
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
       isOpen
-    />
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
     <AccordionPanelContainer
       title="Accordion Title"
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
-    />
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
     <AccordionPanelContainer
       title="Accordion Title"
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
-    />
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
   </Accordion>
 ));
 
@@ -63,16 +66,19 @@ stories.add('Accordion - Caret Left', () => (
   <Accordion caretLeft>
     <AccordionPanelContainer
       title="Accordion Title"
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
-    />
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
     <AccordionPanelContainer
       title="Accordion Title"
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
-    />
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
     <AccordionPanelContainer
       title="Accordion Title"
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
-    />
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
   </Accordion>
 ));
 
@@ -83,26 +89,28 @@ stories.add('Accordion - Nested', () => {
     <AccordionPanelContainer
       title="Primary Accordion Title 1"
       noPadding
-      contentRender={ () => (
-        <Accordion>
-          <AccordionPanelContainer
-            title="Secondary Accordion Title 1"
-            contentRender={ () => <p>{LOREM_IPSUM}</p> }
-            titleRender={ secondaryTitle }
-          />
-          <AccordionPanelContainer
-            title="Secondary Accordion Title 2"
-            contentRender={ () => <p>{LOREM_IPSUM}</p> }
-            titleRender={ secondaryTitle }
-          />
-        </Accordion>
-      )}
       isOpen
-    />
+    >
+      <Accordion>
+        <AccordionPanelContainer
+          title="Secondary Accordion Title 1"
+          titleRender={ secondaryTitle }
+        >
+          <p>{LOREM_IPSUM}</p>
+        </AccordionPanelContainer>
+        <AccordionPanelContainer
+          title="Primary Accordion Title 2"
+          titleRender={ secondaryTitle }
+        >
+          <p>{LOREM_IPSUM}</p>
+        </AccordionPanelContainer>
+      </Accordion>
+    </AccordionPanelContainer>
     <AccordionPanelContainer
-      title="Primary Accordion Title 1"
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
-    />
+      title="Primary Accordion Title 2"
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
   </Accordion>
   )
 });
@@ -110,15 +118,17 @@ stories.add('Accordion - Nested', () => {
 stories.add('Accordion - Large', () => (
   <Accordion isLarge>
     <AccordionPanelContainer
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
       icon={"teammate"}
       title="Accordion title with icon and intro text"
       titleDescription="Accordion title description."
-    />
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
     <AccordionPanelContainer
       title="Accordion with no icon/text"
-      contentRender={ () => <p>{LOREM_IPSUM}</p> }
-    />
+    >
+      <p>{LOREM_IPSUM}</p>
+    </AccordionPanelContainer>
   </Accordion>
 ));
 
@@ -134,8 +144,8 @@ stories.add('Accordion - Editor', () => (
     <AccordionPanelContainer
       isOpen
       titleRender={ () => <h4>Add Modules</h4> }
-      contentRender={ () => (
-        <div>
+    >
+      <div>
           <Card className="is-module" centered>
             <CardContent title="Image" iconType="images" />
           </Card>
@@ -164,7 +174,6 @@ stories.add('Accordion - Editor', () => (
             <CardContent title="Social" iconType="social" />
           </Card>
         </div>
-      ) }
-    />
+      </AccordionPanelContainer>
   </Accordion>
 ));
