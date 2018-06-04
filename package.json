@@ -67,6 +67,7 @@
     "node-sass": "^4.8.3",
     "postcss-loader": "^2.1.4",
     "prettier": "1.13.4",
+    "react-animate-height": "^2.0.1",
     "react-test-renderer": "^16.2.0",
     "regenerator-runtime": "^0.11.1",
     "rimraf": "^2.6.2",
