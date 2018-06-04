@@ -12,29 +12,67 @@ export interface AccordionProps {
   isEditor?: boolean;
   isLarge?: boolean;
   isList?: boolean;
-  onClick: (e: any, index: number) => void;
-  panels: AccordionPanel[];
 }
 
-export interface AccordionPanel {
-  hasChildren?: boolean;
+export interface AccordionPanelProps {
+  className?: string;
+  contentRender?: () => any;
   icon?: IconType;
   isOpen?: boolean;
-  contentRender?: () => any;
+  noPadding?: boolean;
+  onClick?: (e: any) => void;
   title?: string;
   titleDescription?: string;
   titleRender?: (title?: string) => any;
 }
 
+export const AccordionPanel: React.SFC<AccordionPanelProps> =
+  ({
+    className,
+    contentRender,
+    icon,
+    isOpen,
+    noPadding,
+    onClick,
+    title,
+    titleDescription,
+    titleRender,
+  }) => {
+    return (
+      <div
+        className={cn('accordion-panel', className, {
+          'has-child': noPadding,
+          'is-visible': isOpen,
+        })}
+      >
+        <div
+          className="accordion-title"
+          onClick={onClick}
+        >
+          {icon && <Icon className="accordion-icon" type={icon} />}
+          {(titleRender && titleRender(title)) || (title && <h2>{title}</h2>)}
+          {titleDescription && <p>{titleDescription}</p>}
+        </div>
+        <AnimateHeight
+          duration={500}
+          height={isOpen ? 'auto' : 0}
+        >
+          <div className="accordion-content" style={{display: 'block'}}>
+            {contentRender()}
+          </div>
+        </AnimateHeight>
+      </div>
+    );
+}
+
 export const Accordion: React.SFC<AccordionProps> =
   ({
     caretLeft,
+    children,
     className,
     isEditor,
     isLarge,
     isList,
-    onClick,
-    panels,
   }) => {
   return (
     <div
@@ -45,45 +83,7 @@ export const Accordion: React.SFC<AccordionProps> =
         'is-editor': isEditor,
       })}
     >
-      {
-        panels.map((panel: AccordionPanel, index) => {
-          const {
-            hasChildren,
-            isOpen,
-            icon,
-            contentRender,
-            title,
-            titleDescription,
-            titleRender,
-          } = panel;
-          return (
-            <div
-              key={index}
-              className={cn('accordion-panel', className, {
-                'has-child': hasChildren,
-                'is-visible': isOpen,
-              })}
-            >
-              <div
-                className="accordion-title"
-                onClick={(e) => onClick(e, index)}
-              >
-                {isLarge && icon && <Icon className="accordion-icon" type={icon} />}
-                {(titleRender && titleRender(title)) || (title && <h2>{title}</h2>)}
-                {isLarge && titleDescription && <p>{titleDescription}</p>}
-              </div>
-              <AnimateHeight
-                duration={500}
-                height={isOpen ? 'auto' : 0}
-              >
-                <div className="accordion-content" style={{display: 'block'}}>
-                  {contentRender()}
-                </div>
-              </AnimateHeight>
-            </div>
-          );
-        },
-      )}
+      { children }
     </div>
   );
 };

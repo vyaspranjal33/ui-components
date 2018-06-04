@@ -7,17 +7,18 @@ export interface AccordionProps {
     isEditor?: boolean;
     isLarge?: boolean;
     isList?: boolean;
-    onClick: (e: any, index: number) => void;
-    panels: AccordionPanel[];
 }
-export interface AccordionPanel {
-    hasChildren?: boolean;
+export interface AccordionPanelProps {
+    className?: string;
+    contentRender?: () => any;
     icon?: IconType;
     isOpen?: boolean;
-    contentRender?: () => any;
+    noPadding?: boolean;
+    onClick?: (e: any) => void;
     title?: string;
     titleDescription?: string;
     titleRender?: (title?: string) => any;
 }
+export declare const AccordionPanel: React.SFC<AccordionPanelProps>;
 export declare const Accordion: React.SFC<AccordionProps>;
 export default Accordion;
