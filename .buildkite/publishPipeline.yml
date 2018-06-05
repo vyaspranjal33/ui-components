@@ -1,7 +1,7 @@
 steps:
   - name: ":docker: Build Container"
     plugins:
-      docker-compose#v2.2.1:
+      docker-compose#v2.3.0:
         build: app
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: app:docker.sendgrid.net/sendgrid/ui-components:latest

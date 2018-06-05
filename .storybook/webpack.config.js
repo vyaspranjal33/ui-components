@@ -23,6 +23,7 @@ module.exports = function(config, env) {
     include: path.resolve(__dirname, '../'),
   });
 
+  config.resolve.mainFiles = ['index'];
   config.resolve.extensions.push('.tsx');
   config.resolve.extensions.push('.ts');
   config.resolve.extensions.push('.js');
