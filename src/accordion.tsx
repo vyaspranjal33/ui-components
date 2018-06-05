@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import AnimateHeight from 'react-animate-height';
 import Badge from './badge';
 import Icon from './icon';
@@ -22,10 +22,30 @@ export interface AccordionPanelProps {
   isOpen?: boolean;
   noPadding?: boolean;
   onClick?: (e: any) => void;
-  title?: string;
-  titleDescription?: string;
-  titleRender?: (title?: string) => any;
+  title?: any;
 }
+
+export interface AccordionPanelTitleTextProps {
+  text: string | JSX.Element;
+}
+
+export interface AccordionPanelIconProps {
+  iconType: IconType;
+}
+
+export const AccordionPanelTitle: React.SFC<AccordionPanelTitleTextProps> = ({
+  text,
+}) =>
+  typeof text === 'string' ? <h2>{text}</h2> : <Fragment>{text}</Fragment>;
+
+export const AccordionPanelDescription: React.SFC<
+  AccordionPanelTitleTextProps
+> = ({ text }) =>
+  typeof text === 'string' ? <p>{text}</p> : <Fragment>{text}</Fragment>;
+
+export const AccordionPanelIcon: React.SFC<AccordionPanelIconProps> = ({
+  iconType,
+}) => <Icon className="accordion-icon" type={iconType} />;
 
 export const AccordionPanel: React.SFC<AccordionPanelProps> = ({
   children,
@@ -36,8 +56,6 @@ export const AccordionPanel: React.SFC<AccordionPanelProps> = ({
   noPadding,
   onClick,
   title,
-  titleDescription,
-  titleRender,
 }) => {
   return (
     <div
@@ -47,9 +65,7 @@ export const AccordionPanel: React.SFC<AccordionPanelProps> = ({
       })}
     >
       <div className="accordion-title" onClick={onClick}>
-        {icon && <Icon className="accordion-icon" type={icon} />}
-        {(titleRender && titleRender(title)) || (title && <h2>{title}</h2>)}
-        {titleDescription && <p>{titleDescription}</p>}
+        {title}
       </div>
       <AnimateHeight duration={500} height={isOpen ? 'auto' : 0}>
         <div className="accordion-content" style={{ display: 'block' }}>

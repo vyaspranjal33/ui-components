@@ -544,7 +544,7 @@ exports[`Storyshots Accordion Accordion - Nested 1`] = `
       onClick={[Function]}
     >
       <h2>
-        Primary Accordion Title 1
+        Primary Accordion Title 2
       </h2>
     </div>
     <div

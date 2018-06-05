@@ -1,9 +1,16 @@
 import { storiesOf } from '@storybook/react';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import Card from '../src/card';
 import Icon from '../src/icon';
-import Accordion, { AccordionPanel } from '../src/accordion';
+import 
+  Accordion,
+  { 
+    AccordionPanel,
+    AccordionPanelTitle,
+    AccordionPanelDescription,
+    AccordionPanelIcon,
+  } from '../src/accordion';
 import { Breadcrumb } from '../src/breadcrumb';
 
 const stories = storiesOf('Accordion', module);
@@ -44,18 +51,24 @@ class AccordionPanelContainer extends React.Component<any, any> {
 stories.add('Accordion - Standard', () => (
   <Accordion>
     <AccordionPanelContainer
-      title="Accordion Title"
+      title={
+        <AccordionPanelTitle text="Accordion Title"/>
+      }
       isOpen
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
     <AccordionPanelContainer
-      title="Accordion Title"
+      title={
+        <AccordionPanelTitle text="Accordion Title"/>
+      }
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
     <AccordionPanelContainer
-      title="Accordion Title"
+      title={
+        <AccordionPanelTitle text="Accordion Title"/>
+      }
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
@@ -65,17 +78,23 @@ stories.add('Accordion - Standard', () => (
 stories.add('Accordion - Caret Left', () => (
   <Accordion caretLeft>
     <AccordionPanelContainer
-      title="Accordion Title"
+      title={
+        <AccordionPanelTitle text="Accordion Title"/>
+      }
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
     <AccordionPanelContainer
-      title="Accordion Title"
+      title={
+        <AccordionPanelTitle text="Accordion Title"/>
+      }
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
     <AccordionPanelContainer
-      title="Accordion Title"
+      title={
+        <AccordionPanelTitle text="Accordion Title"/>
+      }
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
@@ -83,31 +102,36 @@ stories.add('Accordion - Caret Left', () => (
 ));
 
 stories.add('Accordion - Nested', () => {
-  const secondaryTitle = (title?: string) => <h3>{title}</h3>;
   return (
   <Accordion>
     <AccordionPanelContainer
-      title="Primary Accordion Title 1"
+      title={
+        <AccordionPanelTitle text="Primary Accordion Title 1"/>
+      }
       noPadding
       isOpen
     >
       <Accordion>
         <AccordionPanelContainer
-          title="Secondary Accordion Title 1"
-          titleRender={ secondaryTitle }
+          title={
+            <AccordionPanelTitle text={<h3>Secondary Accordion Title 1</h3>}/>
+          }
         >
           <p>{LOREM_IPSUM}</p>
         </AccordionPanelContainer>
         <AccordionPanelContainer
-          title="Primary Accordion Title 2"
-          titleRender={ secondaryTitle }
+          title={
+            <AccordionPanelTitle text={<h3>Secondary Accordion Title 2</h3>}/>
+          }
         >
           <p>{LOREM_IPSUM}</p>
         </AccordionPanelContainer>
       </Accordion>
     </AccordionPanelContainer>
     <AccordionPanelContainer
-      title="Primary Accordion Title 2"
+      title={
+        <AccordionPanelTitle text="Primary Accordion Title 2"/>
+      }
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
@@ -118,14 +142,20 @@ stories.add('Accordion - Nested', () => {
 stories.add('Accordion - Large', () => (
   <Accordion isLarge>
     <AccordionPanelContainer
-      icon={"teammate"}
-      title="Accordion title with icon and intro text"
-      titleDescription="Accordion title description."
+      title={
+        <Fragment>
+          <AccordionPanelIcon iconType="teammate"/>
+          <AccordionPanelTitle text="Accordion title with icon and intro text"/>
+          <AccordionPanelDescription text="Accordion title description."/>
+        </Fragment>
+      }
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
     <AccordionPanelContainer
-      title="Accordion with no icon/text"
+      title={
+        <AccordionPanelTitle text="Accordion with no icon/text"/>
+      }
     >
       <p>{LOREM_IPSUM}</p>
     </AccordionPanelContainer>
@@ -143,37 +173,39 @@ stories.add('Accordion - Editor', () => (
   <Accordion isEditor>
     <AccordionPanelContainer
       isOpen
-      titleRender={ () => <h4>Add Modules</h4> }
+      title={
+        <AccordionPanelTitle text={<h4>Add Modules</h4>}/>
+      }
     >
       <div>
-          <Card className="is-module" centered>
-            <CardContent title="Image" iconType="images" />
-          </Card>
-          <Card className="is-module" centered>
-            <CardContent title={"Image & Text"} iconType="image-text" />
-          </Card>
-          <Card className="is-module" centered>
-            <CardContent title="Text" iconType="text" />
-          </Card>
-          <Card className="is-module" centered>
-            <CardContent title="Code" iconType="code" />
-          </Card>
-          <Card className="is-module" centered>
-            <CardContent title="Columns" iconType="columns" />
-          </Card>
-          <Card className="is-module" centered>
-            <CardContent title="Button" iconType="button" />
-          </Card>
-          <Card className="is-module" centered>
-            <CardContent title="Divider" iconType="divider" />
-          </Card>
-          <Card className="is-module" centered>
-            <CardContent title="Spacer" iconType="spacer" />
-          </Card>
-          <Card className="is-module" centered>
-            <CardContent title="Social" iconType="social" />
-          </Card>
-        </div>
-      </AccordionPanelContainer>
+        <Card className="is-module" centered>
+          <CardContent title="Image" iconType="images" />
+        </Card>
+        <Card className="is-module" centered>
+          <CardContent title={"Image & Text"} iconType="image-text" />
+        </Card>
+        <Card className="is-module" centered>
+          <CardContent title="Text" iconType="text" />
+        </Card>
+        <Card className="is-module" centered>
+          <CardContent title="Code" iconType="code" />
+        </Card>
+        <Card className="is-module" centered>
+          <CardContent title="Columns" iconType="columns" />
+        </Card>
+        <Card className="is-module" centered>
+          <CardContent title="Button" iconType="button" />
+        </Card>
+        <Card className="is-module" centered>
+          <CardContent title="Divider" iconType="divider" />
+        </Card>
+        <Card className="is-module" centered>
+          <CardContent title="Spacer" iconType="spacer" />
+        </Card>
+        <Card className="is-module" centered>
+          <CardContent title="Social" iconType="social" />
+        </Card>
+      </div>
+    </AccordionPanelContainer>
   </Accordion>
 ));
