@@ -54,7 +54,7 @@ export class AccordionPanel extends React.Component<AccordionPanelProps, any> {
     super(props);
 
     this.state = {
-      isOpen: props.isOpen,
+      open: props.open,
     };
   }
 
@@ -62,7 +62,7 @@ export class AccordionPanel extends React.Component<AccordionPanelProps, any> {
     return (
       <AccordionPanelSFC
         {...this.props}
-        open={this.state.isOpen}
+        open={this.state.open}
         onClick={this.onAccordionPanelClick}
       >
         {this.props.children}
@@ -70,7 +70,7 @@ export class AccordionPanel extends React.Component<AccordionPanelProps, any> {
     );
   }
   private onAccordionPanelClick = (e: any) => {
-    this.setState({ isOpen: !this.state.isOpen });
+    this.setState({ open: !this.state.open });
   };
 }
 
