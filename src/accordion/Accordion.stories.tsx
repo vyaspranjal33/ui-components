@@ -60,22 +60,10 @@ stories.add('Accordion - Nested', () => {
         isOpen
       >
         <Accordion>
-          <AccordionPanel
-            title={
-              <AccordionPanelTitle
-                text={<h3>Secondary Accordion Title 1</h3>}
-              />
-            }
-          >
+          <AccordionPanel title={<h3>Secondary Accordion Title 1</h3>}>
             <p>{LOREM_IPSUM}</p>
           </AccordionPanel>
-          <AccordionPanel
-            title={
-              <AccordionPanelTitle
-                text={<h3>Secondary Accordion Title 2</h3>}
-              />
-            }
-          >
+          <AccordionPanel title={<h3>Secondary Accordion Title 2</h3>}>
             <p>{LOREM_IPSUM}</p>
           </AccordionPanel>
         </Accordion>
@@ -119,10 +107,7 @@ const CardContent: React.SFC<any> = ({ title, iconType }) => (
 
 stories.add('Accordion - Editor', () => (
   <Accordion isEditor>
-    <AccordionPanel
-      isOpen
-      title={<AccordionPanelTitle text={<h4>Add Modules</h4>} />}
-    >
+    <AccordionPanel isOpen title={<h4>Add Modules</h4>}>
       <div>
         <Card className="is-module" centered>
           <CardContent title="Image" iconType="images" />

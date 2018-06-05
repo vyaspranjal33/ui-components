@@ -1,11 +1,19 @@
 import React, { Fragment } from 'react';
 
 export interface AccordionPanelTitleTextProps {
-  text: string | JSX.Element;
+  text: string;
+  style?: React.CSSProperties;
+  className?: string;
 }
 const AccordionPanelTitle: React.SFC<AccordionPanelTitleTextProps> = ({
   text,
-}) =>
-  typeof text === 'string' ? <h2>{text}</h2> : <Fragment>{text}</Fragment>;
+  style,
+  className,
+  ...attributes
+}) => (
+  <h2 className={className} style={style} {...attributes}>
+    {text}
+  </h2>
+);
 
 export default AccordionPanelTitle;

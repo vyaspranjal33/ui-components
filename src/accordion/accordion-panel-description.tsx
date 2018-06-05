@@ -1,11 +1,20 @@
 import React, { Fragment } from 'react';
 
 export interface AccordionPanelDescriptionProps {
-  text: string | JSX.Element;
+  text: string;
+  style?: React.CSSProperties;
+  className?: string;
 }
 
 const AccordionPanelDescription: React.SFC<AccordionPanelDescriptionProps> = ({
   text,
-}) => (typeof text === 'string' ? <p>{text}</p> : <Fragment>{text}</Fragment>);
+  style,
+  className,
+  ...attributes
+}) => (
+  <p style={style} className={className} {...attributes}>
+    {text}
+  </p>
+);
 
 export default AccordionPanelDescription;
