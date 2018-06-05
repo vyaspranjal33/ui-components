@@ -53,6 +53,7 @@
     "@types/lodash": "^4.14.92",
     "@types/react-test-renderer": "^16.0.0",
     "awesome-typescript-loader": "^3.4.1",
+    "babel-plugin-dynamic-import-node": "^1.2.0",
     "babel-plugin-root-import": "^5.1.0",
     "babel-plugin-syntax-dynamic-import": "^6.18.0",
     "babel-plugin-transform-class-properties": "^6.24.1",
@@ -98,13 +99,20 @@
   },
   "jest": {
     "setupTestFrameworkScriptFile": "<rootDir>jestSetup.js",
-    "moduleFileExtensions": ["ts", "tsx", "js", "json"],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js",
+      "json"
+    ],
     "moduleNameMapper": {
       "^.+\\.(css|less|scss)$": "identity-obj-proxy"
     },
     "transform": {
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testMatch": ["**/*.test.(ts|tsx|js)"]
+    "testMatch": [
+      "**/*.test.(ts|tsx|js)"
+    ]
   }
 }

@@ -5,7 +5,6 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin');
 module.exports = function(config, env) {
   config = storybookBaseConfig(config, env);
 
-
   // To show JSX in storybook:
   // Transpile TSX to JSX with "preserve"
   // Use babel to transpile JSX to ES5 JS
@@ -14,19 +13,26 @@ module.exports = function(config, env) {
     exclude: /node_modules/,
     include: [/stories/, /components/],
     loaders: [
-      { // JSX -> JS. uses .babelrc
+      {
+        // JSX -> JS. uses .babelrc
         loader: 'babel-loader',
       },
-      { // Loaders run bottom to top. JSX on story
-        loader: require.resolve('@storybook/addon-storysource/loader')
+      {
+        // Loaders run bottom to top. JSX on story
+        loader: require.resolve('@storybook/addon-storysource/loader'),
+        options: {
+          prettierConfig: {
+            parser: 'babylon', //The default prettier parser (we might want 'flow' in future)
+          },
+        },
       },
       {
         loader: 'awesome-typescript-loader',
         options: {
           // config has jsx: preserve. TSX->JSX
-          configFileName: path.resolve(__dirname, 'tsconfig.json')
+          configFileName: path.resolve(__dirname, 'tsconfig.json'),
         },
-      }
+      },
     ],
     enforce: 'pre',
   });
