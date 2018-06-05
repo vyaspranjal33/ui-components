@@ -1,9 +1,6 @@
 import React from 'react';
 import Alert from './alert';
-import {
-  Button,
-  Buttonized,
-} from './button';
+import { Button, Buttonized } from './button';
 import Icon from './icon';
 import { EmailCardStat, Statistics, StatisticType } from './statistics';
 import cn from './utilities/classnames';
@@ -20,15 +17,21 @@ const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
   renderSendTimeLink,
   alert = '',
   className,
-  ...attributes,
+  ...attributes
 }) => {
   return (
-    <div className={cn('email-card-send-time', className, { 'has-value': !!value })} {...attributes}>
+    <div
+      className={cn('email-card-send-time', className, {
+        'has-value': !!value,
+      })}
+      {...attributes}
+    >
       <Buttonized type="secondary">
-          {renderSendTimeLink && renderSendTimeLink(value)}
+        {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
       {alert}
-    </div>);
+    </div>
+  );
 };
 
 export interface EmailCardDetail {
@@ -37,23 +40,29 @@ export interface EmailCardDetail {
   renderEditDetailLink?: (value: string) => any;
 }
 
-const EmailCardDetails: React.SFC<{ details?: EmailCardDetail[], className?: string }> =
-({ details, className, ...attributes }) => {
-  const rows = details && details.map((detail) => {
-    return (
-      <tr key={detail.label}>
-        <td className="label">{detail.label}</td>
-        <td>{detail.renderEditDetailLink && detail.renderEditDetailLink(detail.value) || detail.value}</td>
-      </tr>
-    );
-  });
+const EmailCardDetails: React.SFC<{
+  details?: EmailCardDetail[];
+  className?: string;
+}> = ({ details, className, ...attributes }) => {
+  const rows =
+    details &&
+    details.map(detail => {
+      return (
+        <tr key={detail.label}>
+          <td className="label">{detail.label}</td>
+          <td>
+            {(detail.renderEditDetailLink &&
+              detail.renderEditDetailLink(detail.value)) ||
+              detail.value}
+          </td>
+        </tr>
+      );
+    });
 
   return (
     <div className={cn('email-card-details', className)} {...attributes}>
       <table>
-        <tbody>
-          {rows}
-        </tbody>
+        <tbody>{rows}</tbody>
       </table>
     </div>
   );
@@ -69,23 +78,22 @@ const EmailCardContent: React.SFC<EmailCardContentProps> = ({
   thumbnailUrl,
   onContentEditClick,
   className,
-  ...attributes,
+  ...attributes
 }) => (
   <div className={cn('email-card-content', className)} {...attributes}>
-    {
-      thumbnailUrl ?
-        <a href="#">
-          <img src={thumbnailUrl} onClick={onContentEditClick} />
-          <span className="email-card-content-edit">
-            <Icon type="pencil" />
-            Edit
-          </span>
-        </a>
-      :
-        <Button type="secondary" onClick={onContentEditClick}>
-          Add Email Content
-        </Button>
-    }
+    {thumbnailUrl ? (
+      <a href="#">
+        <img src={thumbnailUrl} onClick={onContentEditClick} />
+        <span className="email-card-content-edit">
+          <Icon type="pencil" />
+          Edit
+        </span>
+      </a>
+    ) : (
+      <Button type="secondary" onClick={onContentEditClick}>
+        Add Email Content
+      </Button>
+    )}
   </div>
 );
 
@@ -94,9 +102,16 @@ export interface EmailCardAddButtonProps {
   className?: string;
 }
 
-export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({ onClick, className, ...attributes }) => {
+export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
+  onClick,
+  className,
+  ...attributes
+}) => {
   return (
-    <div className={cn('btn-list', 'email-card-add', className)} {...attributes}>
+    <div
+      className={cn('btn-list', 'email-card-add', className)}
+      {...attributes}
+    >
       <Button type="secondary" onClick={onClick}>
         Add an Email
       </Button>
@@ -152,7 +167,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
       thumbnailUrl,
       live,
       className,
-      ...attributes,
+      ...attributes
     } = this.props;
     const alertEl = renderAlert && renderAlert();
     return (
@@ -170,22 +185,36 @@ export class EmailCard extends React.Component<EmailCardProps> {
           renderSendTimeLink={renderSendTimeLink}
           alert={alertEl}
         />
-        {
-          statistics &&
+        {statistics && (
           <Statistics commonClass="email-stats">
             <EmailCardStat specificClass="" statistic={statistics.sent} />
-            <EmailCardStat specificClass="delivered" statistic={statistics.delivered} />
-            <EmailCardStat specificClass="unique-opens" statistic={statistics.opens} />
-            <EmailCardStat specificClass="unique-clicks" statistic={statistics.clicks} />
-            <EmailCardStat specificClass="unsubscribes" statistic={statistics.unsubscribes} />
+            <EmailCardStat
+              specificClass="delivered"
+              statistic={statistics.delivered}
+            />
+            <EmailCardStat
+              specificClass="unique-opens"
+              statistic={statistics.opens}
+            />
+            <EmailCardStat
+              specificClass="unique-clicks"
+              statistic={statistics.clicks}
+            />
+            <EmailCardStat
+              specificClass="unsubscribes"
+              statistic={statistics.unsubscribes}
+            />
           </Statistics>
-        }
+        )}
         <div className="email-card">
           <div className="email-card-count">
             <p>Email {n}</p>
           </div>
-          <EmailCardContent thumbnailUrl={thumbnailUrl} onContentEditClick={onContentEditClick} />
-          <EmailCardDetails details={details}/>
+          <EmailCardContent
+            thumbnailUrl={thumbnailUrl}
+            onContentEditClick={onContentEditClick}
+          />
+          <EmailCardDetails details={details} />
         </div>
         {alertEl}
       </div>

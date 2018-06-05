@@ -7,7 +7,12 @@ export interface DividerProps {
   className?: string;
 }
 
-export const Divider: React.SFC<DividerProps> = ({ label, thin, className, ...attributes }) => {
+export const Divider: React.SFC<DividerProps> = ({
+  label,
+  thin,
+  className,
+  ...attributes
+}) => {
   return (
     <hr
       className={cn(className, {

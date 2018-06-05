@@ -16,7 +16,7 @@ export const Checkbox: React.SFC<CheckboxProps> = ({
   label,
   onChange,
   value,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <div className="input-checkbox-wrap">

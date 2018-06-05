@@ -19,7 +19,7 @@ export const Tab: React.SFC<TabProps> = ({
   onClick: handleClick,
   number,
   className,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <li
@@ -51,7 +51,7 @@ export const Tabs: React.SFC<any> = ({
   zeroBorder,
   onChange,
   className,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <ul
@@ -87,9 +87,9 @@ export class StatefulTabs extends React.Component<TabsProps, any> {
       },
       () => {
         handleChange(event, label, index);
-      },
+      }
     );
-  }
+  };
 
   public render() {
     const { activeIndex } = this.state;
@@ -99,7 +99,7 @@ export class StatefulTabs extends React.Component<TabsProps, any> {
         return React.cloneElement(tab, {
           active: index === activeIndex,
         });
-      },
+      }
     );
     return (
       <Tabs {...this.props} onChange={this.handleChange}>

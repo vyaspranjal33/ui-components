@@ -12,7 +12,7 @@ export interface SplitCardSeparatorProps {
 export const SplitCardSeparator: React.SFC<SplitCardSeparatorProps> = ({
   label,
   className,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <hr
@@ -26,18 +26,11 @@ export const SplitCardSeparator: React.SFC<SplitCardSeparatorProps> = ({
 export const SplitCard: React.SFC<CardProps> = ({
   children,
   className,
-  ...attributes,
+  ...attributes
 }) => {
-
   return (
-    <Card
-      thin
-      className={cn('is-split', className)}
-      {...attributes}
-    >
-      <div className="split-content">
-        {children}
-      </div>
+    <Card thin className={cn('is-split', className)} {...attributes}>
+      <div className="split-content">{children}</div>
     </Card>
   );
 };

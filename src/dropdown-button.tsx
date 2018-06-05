@@ -30,7 +30,7 @@ export class DropdownButton extends React.Component<
   public handleClick = () => {
     const { active } = this.state;
     this.setState({ active: !active });
-  }
+  };
 
   public render() {
     const {
@@ -48,15 +48,19 @@ export class DropdownButton extends React.Component<
       small,
       type,
       className,
-      ...attributes,
+      ...attributes
     } = this.props;
     const isActive = this.state.active;
     const hasBadge: boolean = !!badge || badge === 0;
     const hasIcon: boolean = !!icon;
 
     let buttonType: ButtonType = type;
-    if (gear) { buttonType = 'secondary'; }
-    if (gear && icon) { buttonType = 'group-item'; }
+    if (gear) {
+      buttonType = 'secondary';
+    }
+    if (gear && icon) {
+      buttonType = 'group-item';
+    }
 
     const links = map(children, (link: React.ReactElement<any>) => {
       return React.cloneElement(link, {
@@ -67,16 +71,23 @@ export class DropdownButton extends React.Component<
     return (
       <div className="btn-list">
         <div
-          className={cn('btn', 'btn-dropdown', 'dropdown', `btn-${buttonType}`, className, {
-            'btn-dropdown-gear': gear && !icon,
-            'btn-on-dark': onDark,
-            'btn-small': small,
-            'has-badge': hasBadge,
-            'has-icon': hasIcon || loading,
-            'is-active': isActive,
-            'is-disabled': disabled,
-            'is-loading': loading,
-          })}
+          className={cn(
+            'btn',
+            'btn-dropdown',
+            'dropdown',
+            `btn-${buttonType}`,
+            className,
+            {
+              'btn-dropdown-gear': gear && !icon,
+              'btn-on-dark': onDark,
+              'btn-small': small,
+              'has-badge': hasBadge,
+              'has-icon': hasIcon || loading,
+              'is-active': isActive,
+              'is-disabled': disabled,
+              'is-loading': loading,
+            }
+          )}
           onClick={this.handleClick}
           {...attributes}
         >

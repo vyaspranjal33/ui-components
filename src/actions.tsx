@@ -9,38 +9,48 @@ import { IconType } from './types/icons';
 
 export interface ActionsProps {
   children:
-    React.ReactElement<ActionProps> |
-    Array<React.ReactElement<ActionProps>>;
+    | React.ReactElement<ActionProps>
+    | Array<React.ReactElement<ActionProps>>;
   className?: string;
   vertical?: boolean;
 }
 
-export const Actions: React.SFC<ActionsProps> = ({ children, className, vertical, ...attributes }) => {
-  const actions = React.Children.map(children, (action: React.ReactElement<any>) => {
-    return React.cloneElement(action, {
-      showTitle: vertical,
-    });
-  });
+export const Actions: React.SFC<ActionsProps> = ({
+  children,
+  className,
+  vertical,
+  ...attributes
+}) => {
+  const actions = React.Children.map(
+    children,
+    (action: React.ReactElement<any>) => {
+      return React.cloneElement(action, {
+        showTitle: vertical,
+      });
+    }
+  );
 
   return (
-
     <div className={cn('actions', className)} {...attributes}>
-      {
-        vertical ?
+      {vertical ? (
         <DropdownButton gear icon="ellipsis-vertical">
           {actions}
         </DropdownButton>
-        :
+      ) : (
         <Fragment>
           <Icon type="ellipsis" />
           <div className="action-icons">{children}</div>
         </Fragment>
-      }
+      )}
     </div>
   );
 };
 
-export const ActionsCell: React.SFC<ActionsProps> = ({ children, className, ...attributes }) => {
+export const ActionsCell: React.SFC<ActionsProps> = ({
+  children,
+  className,
+  ...attributes
+}) => {
   return (
     <td className={cn('actions', className)} {...attributes}>
       <Icon type="ellipsis" />
@@ -61,14 +71,14 @@ export const Action: React.SFC<ActionProps> = ({
   icon,
   onClick: handleClick,
   showTitle,
-  ...attributes,
+  ...attributes
 }) => {
-
-  const tooltipAttributes = showTitle ?
-    {} : {
-      'data-tooltip': title,
-      'data-tooltip-pos': 'up',
-    };
+  const tooltipAttributes = showTitle
+    ? {}
+    : {
+        'data-tooltip': title,
+        'data-tooltip-pos': 'up',
+      };
 
   return (
     <span {...tooltipAttributes} onClick={handleClick} {...attributes}>

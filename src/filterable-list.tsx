@@ -30,7 +30,7 @@ export interface FilterableListContainerProps {
   onFilter?: (items: any[], filters: {}) => any[];
   renderControls: (
     filterOptions: { [key: string]: any },
-    handleFilterChange?: any,
+    handleFilterChange?: any
   ) => ReactElement<any>;
   renderItems: (items: any[]) => ReactElement<any>;
   showClearButton?: boolean;
@@ -58,7 +58,7 @@ export class FilterableList extends PureComponent<
   };
 
   public static createClass(
-    props: FilterableListContainerProps,
+    props: FilterableListContainerProps
   ): React.ComponentClass<any> {
     return class FilterableListContainer extends PureComponent<
       FilterableListContainerProps
@@ -70,7 +70,9 @@ export class FilterableList extends PureComponent<
   }
 
   public state: { [key: string]: string } = {};
-  public handlers: { [key: string]: (filterName: string, event: any) => void } = {};
+  public handlers: {
+    [key: string]: (filterName: string, event: any) => void;
+  } = {};
 
   constructor(props: FilterableListProps) {
     super(props);
@@ -85,7 +87,7 @@ export class FilterableList extends PureComponent<
         this.state.value = '';
         this.handlers[`handleFilterChange`] = this.handleFilterChange.bind(
           this,
-          'value',
+          'value'
         );
       }
     }
@@ -97,9 +99,9 @@ export class FilterableList extends PureComponent<
       {
         [filterName]: value,
       },
-      this.props.onChange,
+      this.props.onChange
     );
-  }
+  };
 
   public get filteredItems(): any[] {
     // If a function to filter items is passed in, then use that.
@@ -117,14 +119,16 @@ export class FilterableList extends PureComponent<
         .toLowerCase()
         .includes(filters);
 
-    return items.filter((item: string | {}): boolean => {
-      if (typeof item === 'string') {
-        return includesFilters(item);
+    return items.filter(
+      (item: string | {}): boolean => {
+        if (typeof item === 'string') {
+          return includesFilters(item);
+        }
+        return values(item)
+          .map(includesFilters)
+          .some(identity);
       }
-      return values(item)
-        .map(includesFilters)
-        .some(identity);
-    });
+    );
   }
 
   public get clearButton() {
@@ -159,7 +163,7 @@ export class FilterableList extends PureComponent<
       showClearButton,
       title,
       className,
-      ...attributes,
+      ...attributes
     } = this.props;
 
     return (
@@ -170,7 +174,10 @@ export class FilterableList extends PureComponent<
             {this.showClearButtonInHeader && this.clearButton}
           </div>
           <div className="filter-list" style={filterControlStyle}>
-            {renderControls({ ...this.state, ...this.handlers }, this.handleFilterChange)}
+            {renderControls(
+              { ...this.state, ...this.handlers },
+              this.handleFilterChange
+            )}
             {this.showClearButtonInline && this.clearButton}
           </div>
         </div>
@@ -188,7 +195,7 @@ export class FilterableList extends PureComponent<
     for (const key of Object.keys(this.state)) {
       this.setState({ [key]: '' });
     }
-  }
+  };
 }
 
 export default FilterableList;

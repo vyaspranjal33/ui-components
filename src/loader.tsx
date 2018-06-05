@@ -9,7 +9,14 @@ export interface LoaderProps {
   className?: string;
 }
 
-export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered, className, ...attributes }) => {
+export const Loader: React.SFC<LoaderProps> = ({
+  onDark,
+  large,
+  small,
+  centered,
+  className,
+  ...attributes
+}) => {
   let size = 10;
   if (large) {
     size *= 2;

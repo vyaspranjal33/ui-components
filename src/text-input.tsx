@@ -29,7 +29,7 @@ const getRenderedTextInput = function() {
     info,
     onBlur,
     style,
-    ...attributes,
+    ...attributes
   } = this.props;
 
   const classes = cn('input-text-wrap', {
@@ -98,7 +98,6 @@ export class TextInput extends React.Component<
   TextInputProps,
   { isInputFocused: boolean }
 > {
-
   public static defaultProps = {
     fullWidth: false,
     info: '',
@@ -127,7 +126,9 @@ export class TextInput extends React.Component<
 
   get inputStyle() {
     const { fullWidth, style } = this.props;
-    if (fullWidth) { return {...style, width: '100%'}; }
+    if (fullWidth) {
+      return { ...style, width: '100%' };
+    }
     return style;
   }
 

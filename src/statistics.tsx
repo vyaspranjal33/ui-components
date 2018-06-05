@@ -11,30 +11,32 @@ export interface StatisticsProps {
   className?: string;
 }
 
-export const EmailCardStat: React.SFC<
-{
+export const EmailCardStat: React.SFC<{
   statistic: StatisticType;
   specificClass: string;
-  commonClass?: string
-}> = ({statistic, specificClass, commonClass }) => (
+  commonClass?: string;
+}> = ({ statistic, specificClass, commonClass }) => (
   <div className={commonClass} key={statistic.label}>
     <p className={cn('stat', specificClass)}>
-      {(statistic.amount || parseInt(statistic.amount as string, 10) === 0) ? statistic.amount : NO_STATS_CHAR}
+      {statistic.amount || parseInt(statistic.amount as string, 10) === 0
+        ? statistic.amount
+        : NO_STATS_CHAR}
     </p>
     <p className="label">{statistic.label}</p>
   </div>
 );
 
-export const Statistics: React.SFC<StatisticsProps> = (
-  { commonClass, className, children, ...attributes },
-) => {
+export const Statistics: React.SFC<StatisticsProps> = ({
+  commonClass,
+  className,
+  children,
+  ...attributes
+}) => {
   return (
     <div className={cn('email-card-stats', className)} {...attributes}>
-      {
-        React.Children.map(children, (child: React.ReactElement<any>) => {
-          return React.cloneElement(child, { commonClass });
-        })
-      }
+      {React.Children.map(children, (child: React.ReactElement<any>) => {
+        return React.cloneElement(child, { commonClass });
+      })}
     </div>
   );
 };
