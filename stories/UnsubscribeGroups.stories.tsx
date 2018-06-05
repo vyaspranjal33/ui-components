@@ -52,3 +52,11 @@ stories.add('Create New Group Card', () => (
   </div>
 ));
 
+stories.add('Create New Group Card (disabled)', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <CreateNewGroupCard onClickCreate={action('create new group')} disabled/>
+    </div>
+  </div>
+));
+

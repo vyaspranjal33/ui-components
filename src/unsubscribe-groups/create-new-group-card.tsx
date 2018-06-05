@@ -6,15 +6,16 @@ import Card, { CardProps } from '../card';
 import cn from '../utilities/classnames';
 
 export interface CreateNewGroupCardProps extends CardProps {
+  disabled?: boolean;
   onClickCreate: (event: any) => void;
 }
 
 export const CreateNewGroupCard: React.SFC<CreateNewGroupCardProps> = ({
   className,
+  disabled,
   onClickCreate: handleCreate,
-  ...attributes,
+  ...attributes
 }) => {
-
   return (
     <Card
       centered
@@ -23,7 +24,7 @@ export const CreateNewGroupCard: React.SFC<CreateNewGroupCardProps> = ({
       className={className}
       {...attributes}
     >
-      <Button type="primary" onClick={handleCreate}>
+      <Button type="primary" onClick={handleCreate} disabled={disabled}>
         Create New Group
       </Button>
     </Card>
