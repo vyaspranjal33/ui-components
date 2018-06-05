@@ -22,7 +22,7 @@ module.exports = function(config, env) {
     loaders: ['style-loader', 'css-loader', 'sass-loader'],
     include: path.resolve(__dirname, '../'),
   });
-
+  config.resolve.mainFiles = ['index'];
   config.resolve.extensions.push('.tsx');
   config.resolve.extensions.push('.ts');
   config.resolve.extensions.push('.js');

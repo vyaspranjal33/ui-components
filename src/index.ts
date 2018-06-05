@@ -4,7 +4,7 @@ export { Badge } from './badge';
 export { Breadcrumb } from './breadcrumb';
 export { Button, Buttonized } from './button';
 export { ButtonList } from './button-list';
-export { Card } from './card';
+export { Card, CardBody, CardIcon, CardTitle } from './card/';
 export { ModuleCard } from './module-card';
 export { SplitCard, SplitCardSeparator } from './split-card';
 export { CenterModal } from './center-modal';

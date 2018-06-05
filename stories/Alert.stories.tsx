@@ -51,7 +51,8 @@ stories.add('Danger Alert with Custom Icon', () => (
 
 stories.add('Alert which is not dismissable', () => (
   <Alert type="warning" dismissable={false}>
-    Changes you've made to this email have not been applied to your live automation.
+    Changes you've made to this email have not been applied to your live
+    automation.
     <Button type="primary">Save and Apply</Button>
   </Alert>
 ));

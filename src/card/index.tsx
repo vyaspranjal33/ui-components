@@ -1,13 +1,17 @@
 import React from 'react';
 
-import cn from './utilities/classnames';
+import cn from '../utilities/classnames';
 
-import Badge from './badge';
-import Icon from './icon';
+import Badge from '../badge';
+import Icon from '../icon';
 
-import { color as ValidColor } from './types/color';
-import IconSizeType from './types/icon-sizes';
-import { IconType } from './types/icons';
+import { color as ValidColor } from '../types/color';
+import IconSizeType from '../types/icon-sizes';
+import { IconType } from '../types/icons';
+
+import CardBody from './card-body';
+import CardIcon from './card-icon';
+import CardTitle from './card-title';
 
 export interface CardProps {
   children?: React.ReactNode;
@@ -23,8 +27,7 @@ export interface CardProps {
         color: ValidColor;
       }
     | React.ReactElement<any>;
-  icon?: IconType;
-  iconSize?: IconSizeType;
+
   selected?: boolean;
 }
 
@@ -33,8 +36,6 @@ export const Card: React.SFC<CardProps> = ({
   body,
   centered,
   children,
-  icon,
-  iconSize,
   inline,
   thin,
   title,
@@ -52,17 +53,10 @@ export const Card: React.SFC<CardProps> = ({
       })}
       {...attributes}
     >
-      {badge && <Badge {...badge} />}
-      {icon && (
-        <div className="card-icon">
-          <Icon size={iconSize} type={icon} />
-        </div>
-      )}
-      {title && <h2 className={cn({ 'card-title': inline })}>{title}</h2>}
-      {body && <p>{body}</p>}
       {children}
     </div>
   );
 };
 
 export default Card;
+export { CardTitle, CardBody, CardIcon };
