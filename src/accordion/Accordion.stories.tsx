@@ -1,15 +1,15 @@
 import { storiesOf } from '@storybook/react';
 import React, { Fragment } from 'react';
 
+import { Breadcrumb } from '../breadcrumb';
+import Card from '../card';
+import Icon from '../icon';
 import Accordion, {
   AccordionPanel,
   AccordionPanelDescription,
   AccordionPanelIcon,
   AccordionPanelTitle,
-} from '../src/accordion';
-import { Breadcrumb } from '../src/breadcrumb';
-import Card from '../src/card';
-import Icon from '../src/icon';
+} from './index';
 
 const stories = storiesOf('Accordion', module);
 
@@ -20,82 +20,47 @@ const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
   aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.`;
 
-class AccordionPanelContainer extends React.Component<any, any> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      isOpen: props.isOpen,
-    };
-  }
-
-  public render() {
-    return (
-      <AccordionPanel
-        {...this.props}
-        isOpen={this.state.isOpen}
-        onClick={this.onAccordionPanelClick}
-      >
-        {this.props.children}
-      </AccordionPanel>
-    );
-  }
-  private onAccordionPanelClick = (e: any) => {
-    this.setState({ isOpen: !this.state.isOpen });
-  };
-}
-
 stories.add('Accordion - Standard', () => (
   <Accordion>
-    <AccordionPanelContainer
+    <AccordionPanel
       title={<AccordionPanelTitle text="Accordion Title" />}
       isOpen
     >
       <p>{LOREM_IPSUM}</p>
-    </AccordionPanelContainer>
-    <AccordionPanelContainer
-      title={<AccordionPanelTitle text="Accordion Title" />}
-    >
+    </AccordionPanel>
+    <AccordionPanel title={<AccordionPanelTitle text="Accordion Title" />}>
       <p>{LOREM_IPSUM}</p>
-    </AccordionPanelContainer>
-    <AccordionPanelContainer
-      title={<AccordionPanelTitle text="Accordion Title" />}
-    >
+    </AccordionPanel>
+    <AccordionPanel title={<AccordionPanelTitle text="Accordion Title" />}>
       <p>{LOREM_IPSUM}</p>
-    </AccordionPanelContainer>
+    </AccordionPanel>
   </Accordion>
 ));
 
 stories.add('Accordion - Caret Left', () => (
   <Accordion caretLeft>
-    <AccordionPanelContainer
-      title={<AccordionPanelTitle text="Accordion Title" />}
-    >
+    <AccordionPanel title={<AccordionPanelTitle text="Accordion Title" />}>
       <p>{LOREM_IPSUM}</p>
-    </AccordionPanelContainer>
-    <AccordionPanelContainer
-      title={<AccordionPanelTitle text="Accordion Title" />}
-    >
+    </AccordionPanel>
+    <AccordionPanel title={<AccordionPanelTitle text="Accordion Title" />}>
       <p>{LOREM_IPSUM}</p>
-    </AccordionPanelContainer>
-    <AccordionPanelContainer
-      title={<AccordionPanelTitle text="Accordion Title" />}
-    >
+    </AccordionPanel>
+    <AccordionPanel title={<AccordionPanelTitle text="Accordion Title" />}>
       <p>{LOREM_IPSUM}</p>
-    </AccordionPanelContainer>
+    </AccordionPanel>
   </Accordion>
 ));
 
 stories.add('Accordion - Nested', () => {
   return (
     <Accordion>
-      <AccordionPanelContainer
+      <AccordionPanel
         title={<AccordionPanelTitle text="Primary Accordion Title 1" />}
         noPadding
         isOpen
       >
         <Accordion>
-          <AccordionPanelContainer
+          <AccordionPanel
             title={
               <AccordionPanelTitle
                 text={<h3>Secondary Accordion Title 1</h3>}
@@ -103,8 +68,8 @@ stories.add('Accordion - Nested', () => {
             }
           >
             <p>{LOREM_IPSUM}</p>
-          </AccordionPanelContainer>
-          <AccordionPanelContainer
+          </AccordionPanel>
+          <AccordionPanel
             title={
               <AccordionPanelTitle
                 text={<h3>Secondary Accordion Title 2</h3>}
@@ -112,21 +77,21 @@ stories.add('Accordion - Nested', () => {
             }
           >
             <p>{LOREM_IPSUM}</p>
-          </AccordionPanelContainer>
+          </AccordionPanel>
         </Accordion>
-      </AccordionPanelContainer>
-      <AccordionPanelContainer
+      </AccordionPanel>
+      <AccordionPanel
         title={<AccordionPanelTitle text="Primary Accordion Title 2" />}
       >
         <p>{LOREM_IPSUM}</p>
-      </AccordionPanelContainer>
+      </AccordionPanel>
     </Accordion>
   );
 });
 
 stories.add('Accordion - Large', () => (
   <Accordion isLarge>
-    <AccordionPanelContainer
+    <AccordionPanel
       title={
         <Fragment>
           <AccordionPanelIcon iconType="teammate" />
@@ -136,12 +101,12 @@ stories.add('Accordion - Large', () => (
       }
     >
       <p>{LOREM_IPSUM}</p>
-    </AccordionPanelContainer>
-    <AccordionPanelContainer
+    </AccordionPanel>
+    <AccordionPanel
       title={<AccordionPanelTitle text="Accordion with no icon/text" />}
     >
       <p>{LOREM_IPSUM}</p>
-    </AccordionPanelContainer>
+    </AccordionPanel>
   </Accordion>
 ));
 
@@ -154,7 +119,7 @@ const CardContent: React.SFC<any> = ({ title, iconType }) => (
 
 stories.add('Accordion - Editor', () => (
   <Accordion isEditor>
-    <AccordionPanelContainer
+    <AccordionPanel
       isOpen
       title={<AccordionPanelTitle text={<h4>Add Modules</h4>} />}
     >
@@ -187,6 +152,6 @@ stories.add('Accordion - Editor', () => (
           <CardContent title="Social" iconType="social" />
         </Card>
       </div>
-    </AccordionPanelContainer>
+    </AccordionPanel>
   </Accordion>
 ));
