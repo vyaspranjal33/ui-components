@@ -22,10 +22,7 @@ const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
 
 stories.add('Accordion - Standard', () => (
   <Accordion>
-    <AccordionPanel
-      title={<AccordionPanelTitle text="Accordion Title" />}
-      isOpen
-    >
+    <AccordionPanel title={<AccordionPanelTitle text="Accordion Title" />} open>
       <p>{LOREM_IPSUM}</p>
     </AccordionPanel>
     <AccordionPanel title={<AccordionPanelTitle text="Accordion Title" />}>
@@ -57,7 +54,7 @@ stories.add('Accordion - Nested', () => {
       <AccordionPanel
         title={<AccordionPanelTitle text="Primary Accordion Title 1" />}
         noPadding
-        isOpen
+        open
       >
         <Accordion>
           <AccordionPanel title={<h3>Secondary Accordion Title 1</h3>}>
@@ -78,7 +75,7 @@ stories.add('Accordion - Nested', () => {
 });
 
 stories.add('Accordion - Large', () => (
-  <Accordion isLarge>
+  <Accordion large>
     <AccordionPanel
       title={
         <Fragment>
@@ -106,8 +103,8 @@ const CardContent: React.SFC<any> = ({ title, iconType }) => (
 );
 
 stories.add('Accordion - Editor', () => (
-  <Accordion isEditor>
-    <AccordionPanel isOpen title={<h4>Add Modules</h4>}>
+  <Accordion editor>
+    <AccordionPanel open title={<h4>Add Modules</h4>}>
       <div>
         <Card className="is-module" centered>
           <CardContent title="Image" iconType="images" />

@@ -13,7 +13,7 @@ export interface AccordionPanelProps {
   children: React.ReactNode;
   className?: string;
   icon?: IconType;
-  isOpen?: boolean;
+  open?: boolean;
   noPadding?: boolean;
   onClick?: (e: any) => void;
   title?: React.ReactNode;
@@ -23,7 +23,7 @@ const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
   children,
   className,
   icon,
-  isOpen,
+  open,
   noPadding,
   onClick,
   title,
@@ -33,14 +33,14 @@ const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
     <div
       className={cn('accordion-panel', className, {
         'has-child': noPadding,
-        'is-visible': isOpen,
+        'is-visible': open,
       })}
       {...attributes}
     >
       <div className="accordion-title" onClick={onClick}>
         {title}
       </div>
-      <AnimateHeight duration={500} height={isOpen ? 'auto' : 0}>
+      <AnimateHeight duration={500} height={open ? 'auto' : 0}>
         <div className="accordion-content" style={{ display: 'block' }}>
           {children}
         </div>
@@ -62,7 +62,7 @@ export class AccordionPanel extends React.Component<AccordionPanelProps, any> {
     return (
       <AccordionPanelSFC
         {...this.props}
-        isOpen={this.state.isOpen}
+        open={this.state.isOpen}
         onClick={this.onAccordionPanelClick}
       >
         {this.props.children}

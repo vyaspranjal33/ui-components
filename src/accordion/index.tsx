@@ -16,26 +16,26 @@ import {
 export interface AccordionProps {
   caretLeft?: boolean;
   className?: string;
-  isEditor?: boolean;
-  isLarge?: boolean;
-  isList?: boolean;
+  editor?: boolean;
+  large?: boolean;
+  list?: boolean;
 }
 
 export const Accordion: React.SFC<AccordionProps> = ({
   caretLeft,
   children,
   className,
-  isEditor,
-  isLarge,
-  isList,
+  editor,
+  large,
+  list,
 }) => {
   return (
     <div
       className={cn('accordion-wrapper', className, {
         'accordion-caret-left': caretLeft,
-        'accordion-large': isLarge,
-        'accordion-list': isList,
-        'is-editor': isEditor,
+        'accordion-large': large,
+        'accordion-list': list,
+        'is-editor': editor,
       })}
     >
       {children}
