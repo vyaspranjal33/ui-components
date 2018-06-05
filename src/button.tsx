@@ -33,7 +33,7 @@ export interface ButtonizedProps extends AllButtonProps {
   children?: React.ReactElement<ButtonProps>;
 }
 
-export const Button: React.SFC<ButtonProps> = (props) => {
+export const Button: React.SFC<ButtonProps> = props => {
   let btnType = 'button';
   if (props.isSubmit) {
     btnType = 'submit';
@@ -41,10 +41,8 @@ export const Button: React.SFC<ButtonProps> = (props) => {
     btnType = 'reset';
   }
   return (
-    <Buttonized {...props} >
-      <button type={btnType}>
-        {props.children}
-      </button>
+    <Buttonized {...props}>
+      <button type={btnType}>{props.children}</button>
     </Buttonized>
   );
 };
@@ -63,56 +61,46 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   icon,
   id,
   className,
-  ...attributes,
+  ...attributes
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
   const content: any[] = [];
 
   if (hasBadge) {
-    content.push(
-      <Badge key={1}>{badge}</Badge>,
-    );
+    content.push(<Badge key={1}>{badge}</Badge>);
   }
 
   if (hasIcon) {
-    content.push(
-      <Icon key={2} type={icon} />,
-    );
+    content.push(<Icon key={2} type={icon} />);
   }
 
   if (loading) {
-    content.push(
-      <Loader key={3} small onDark={type === 'primary'} />,
-    );
+    content.push(<Loader key={3} small onDark={type === 'primary'} />);
   }
 
   // the children of the element being buttonized
   if (children.props.children) {
-    content.push(
-      children.props.children,
-    );
+    content.push(children.props.children);
   }
 
-  return (
-    React.cloneElement(
-      children,
-      {
-        className: cn('btn', `btn-${type}`, className, {
-          'btn-on-dark': onDark,
-          'btn-small': small,
-          'has-badge': hasBadge,
-          'has-icon': hasIcon || loading,
-          'is-active': active,
-          'is-disabled': disabled,
-          'is-loading': loading,
-        }),
-        id,
-        onClick,
-        ...attributes,
-      },
-      content,
-    )
+  return React.cloneElement(
+    children,
+    {
+      className: cn('btn', `btn-${type}`, className, {
+        'btn-on-dark': onDark,
+        'btn-small': small,
+        'has-badge': hasBadge,
+        'has-icon': hasIcon || loading,
+        'is-active': active,
+        'is-disabled': disabled,
+        'is-loading': loading,
+      }),
+      id,
+      onClick,
+      ...attributes,
+    },
+    content
   );
 };
 

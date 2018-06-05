@@ -1,8 +1,10 @@
 /// <reference types="react" />
 import React from 'react';
 import { color as ValidColor } from './types/color';
+import IconSizeType from './types/icon-sizes';
+import { IconType } from './types/icons';
 export interface CardProps {
-    children?: React.ReactElement<any>;
+    children?: React.ReactNode;
     centered?: boolean;
     thin?: boolean;
     inline?: boolean;
@@ -13,6 +15,9 @@ export interface CardProps {
         content: string;
         color: ValidColor;
     } | React.ReactElement<any>;
+    icon?: IconType;
+    iconSize?: IconSizeType;
+    selected?: boolean;
 }
 export declare const Card: React.SFC<CardProps>;
 export default Card;

@@ -15,17 +15,26 @@ export interface ChildProps {
 }
 
 const { map } = React.Children;
-const mapper = (children: Array<React.ReactElement<ChildProps>> | React.ReactElement<ChildProps>) => (
-  map(children, (child: React.ReactElement<ChildProps>, i: number) => (
-    child && <li key={child.props.to || child.props.href}><child.type {...child.props} /></li>
-  ))
-);
+const mapper = (
+  children:
+    | Array<React.ReactElement<ChildProps>>
+    | React.ReactElement<ChildProps>
+) =>
+  map(
+    children,
+    (child: React.ReactElement<ChildProps>, i: number) =>
+      child && (
+        <li key={child.props.to || child.props.href}>
+          <child.type {...child.props} />
+        </li>
+      )
+  );
 
 export const Breadcrumb: React.SFC<BreadcrumbProps> = ({
   children,
   withoutTrailingSlash,
   className,
-  ...attributes,
+  ...attributes
 }) => (
   <ol className={cn('breadcrumb', className)} {...attributes}>
     {mapper(children)}

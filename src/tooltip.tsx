@@ -19,7 +19,7 @@ export const Tooltip: React.SFC<TooltipProps> = ({
   length,
   className,
   children,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <span
@@ -61,8 +61,7 @@ export interface HTMLTooltipState {
 export class HTMLTooltip extends React.Component<
   HTMLTooltipProps,
   HTMLTooltipState
-  > {
-
+> {
   public static defaultProps = {
     className: '',
     debounce: 1000,
@@ -98,8 +97,12 @@ export class HTMLTooltip extends React.Component<
   }
 
   public handleHoverIn = () => {
-    this.setState({ hovered: true, opened: true, tooltipHeight: this.tooltipRef.offsetHeight });
-  }
+    this.setState({
+      hovered: true,
+      opened: true,
+      tooltipHeight: this.tooltipRef.offsetHeight,
+    });
+  };
 
   public handleHoverOut = () => {
     this.setState({ hovered: false });
@@ -108,7 +111,7 @@ export class HTMLTooltip extends React.Component<
         this.setState({ opened: false });
       }
     }, this.props.debounce);
-  }
+  };
 
   public render() {
     const {
@@ -118,12 +121,16 @@ export class HTMLTooltip extends React.Component<
       hoverTarget,
       debounce,
       style,
-      ...attributes,
+      ...attributes
     } = this.props;
 
     return (
       <div style={{ position: 'relative', ...style }} {...attributes}>
-        <div className="tooltip-js-parent" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
+        <div
+          className="tooltip-js-parent"
+          onMouseEnter={this.handleHoverIn}
+          onMouseLeave={this.handleHoverOut}
+        >
           {hoverTarget}
         </div>
         <div
@@ -133,7 +140,7 @@ export class HTMLTooltip extends React.Component<
           })}
           style={{ top: -(this.state.tooltipHeight / 2) - 3 }}
           data-tooltip-length={this.props.length}
-          ref={(input) => {
+          ref={input => {
             this.tooltipRef = input;
           }}
           onMouseEnter={this.handleHoverIn}

@@ -17,7 +17,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
   hovered,
   large,
   className,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <section

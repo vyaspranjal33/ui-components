@@ -32,7 +32,7 @@ export const Alert: React.SFC<AlertProps> = ({
   type,
   hidden,
   className,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <div

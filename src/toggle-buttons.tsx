@@ -19,7 +19,7 @@ export const ToggleButtons: React.SFC<ToggleButtonsProps> = ({
   children,
   onChange,
   className,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <div className={cn('btn-group', className)} {...attributes}>
@@ -53,7 +53,7 @@ export class StatefulToggleButtons extends React.Component<
         return React.cloneElement(button, {
           active: index === activeIndex,
         });
-      },
+      }
     );
     return (
       <ToggleButtons {...this.props} onChange={this.handleChange}>
@@ -70,7 +70,7 @@ export class StatefulToggleButtons extends React.Component<
       },
       () => {
         handleChange(event, label, index);
-      },
+      }
     );
   }
 }

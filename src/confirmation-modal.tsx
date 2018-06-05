@@ -3,10 +3,7 @@ import ReactDOM from 'react-dom';
 import { Icon } from './icon';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
-import {
-  ModalProps,
-  modalWillReceiveProps,
-} from './utilities/modals';
+import { ModalProps, modalWillReceiveProps } from './utilities/modals';
 
 export interface ConfirmationModalProps extends ModalProps {
   iconType?: IconType;
@@ -18,7 +15,9 @@ export interface ConfirmationModalProps extends ModalProps {
   className?: string;
 }
 
-const evaluateRenderProp: (prop: string | (() => React.ReactNode)) => React.ReactNode = (prop) => {
+const evaluateRenderProp: (
+  prop: string | (() => React.ReactNode)
+) => React.ReactNode = prop => {
   return typeof prop === 'string' ? prop : prop();
 };
 
@@ -42,30 +41,33 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
       isOpen,
       bodyNode,
       className,
-      ...attributes,
+      ...attributes
     } = this.props;
 
     return ReactDOM.createPortal(
-      <div className={cn('sg-modal', className, { 'is-visible': isOpen })} {...attributes}>
+      <div
+        className={cn('sg-modal', className, { 'is-visible': isOpen })}
+        {...attributes}
+      >
         <div className="conf-alert sg-modal-content">
-          <h2 className={cn('conf-alert-header', {'conf-alert-header-with-icon': !!iconType})}>
-            {
-              !!iconType &&
-                <Icon type={iconType} />
-            }
+          <h2
+            className={cn('conf-alert-header', {
+              'conf-alert-header-with-icon': !!iconType,
+            })}
+          >
+            {!!iconType && <Icon type={iconType} />}
             {evaluateRenderProp(renderHeader)}
           </h2>
           <div className="conf-alert-body">
-            <p className="conf-alert-text">
-              {evaluateRenderProp(renderBody)}
-            </p>
+            <p className="conf-alert-text">{evaluateRenderProp(renderBody)}</p>
           </div>
           <div className="conf-alert-actions">
             {evaluateRenderProp(renderActions)}
           </div>
         </div>
-      </div>
-    , modalContainer);
+      </div>,
+      modalContainer
+    );
   }
 }
 

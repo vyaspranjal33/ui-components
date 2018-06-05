@@ -33,23 +33,28 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
   };
 
   public get termControls(): React.ReactNode {
-    const { editable, editing, onCancel, onConfirm, showConfirm, ...attributes } = this.props;
+    const {
+      editable,
+      editing,
+      onCancel,
+      onConfirm,
+      showConfirm,
+      ...attributes
+    } = this.props;
 
     if (editing) {
       return (
         <ButtonList>
-          {
-            showConfirm &&
-              <Button type="secondary" small onClick={onConfirm}>
-                <Icon type="check-thin" />
-              </Button>
-          }
-          {
-            onCancel &&
-              <Button type="danger" small onClick={onCancel}>
-                <Icon type="x" />
-              </Button>
-          }
+          {showConfirm && (
+            <Button type="secondary" small onClick={onConfirm}>
+              <Icon type="check-thin" />
+            </Button>
+          )}
+          {onCancel && (
+            <Button type="danger" small onClick={onCancel}>
+              <Icon type="x" />
+            </Button>
+          )}
         </ButtonList>
       );
     }
@@ -79,14 +84,12 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       onConfirm,
       showConfirm,
       className,
-      ...attributes,
+      ...attributes
     } = this.props;
 
     return (
       <div className={cn('segment-term-wrap', className)} {...attributes}>
-        <p className="segment-term-title">
-          {title}
-        </p>
+        <p className="segment-term-title">{title}</p>
         <div
           className={cn('segment-term', {
             'has-alert': !!renderAlert,
@@ -94,27 +97,25 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
             'has-separator': hasSeparator,
             'is-editable': editing,
           })}
-          onClick={(editable && !editing) ? onEdit : undefined}
+          onClick={editable && !editing ? onEdit : undefined}
         >
-        {editing && renderInputs && renderInputs()}
-        {
-          !editing &&
+          {editing && renderInputs && renderInputs()}
+          {!editing && (
             <p>
               {`${label} `}
               <strong>{queryName}</strong>
             </p>
-        }
-        {this.termControls}
-        {renderAlert && renderAlert()}
+          )}
+          {this.termControls}
+          {renderAlert && renderAlert()}
         </div>
-        {
-          hasAddButton &&
-            <ButtonList>
-              <Button type="secondary" icon="plus" onClick={onAddButtonClick}>
-                Add Condition
-              </Button>
-            </ButtonList>
-        }
+        {hasAddButton && (
+          <ButtonList>
+            <Button type="secondary" icon="plus" onClick={onAddButtonClick}>
+              Add Condition
+            </Button>
+          </ButtonList>
+        )}
       </div>
     );
   }

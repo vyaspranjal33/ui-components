@@ -15,14 +15,23 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
-import React from 'react';
-import Icon from './icon';
+import React, { Fragment } from 'react';
 import cn from './utilities/classnames';
+import DropdownButton from './dropdown-button';
+import Icon from './icon';
 export var Actions = function (_a) {
-    var children = _a.children, className = _a.className, attributes = __rest(_a, ["children", "className"]);
-    return (React.createElement("div", __assign({ className: cn('actions', className) }, attributes),
-        React.createElement(Icon, { type: "ellipsis" }),
-        React.createElement("div", { className: "action-icons" }, children)));
+    var children = _a.children, className = _a.className, vertical = _a.vertical, attributes = __rest(_a, ["children", "className", "vertical"]);
+    var actions = React.Children.map(children, function (action) {
+        return React.cloneElement(action, {
+            showTitle: vertical,
+        });
+    });
+    return (React.createElement("div", __assign({ className: cn('actions', className) }, attributes), vertical ?
+        React.createElement(DropdownButton, { gear: true, icon: "ellipsis-vertical" }, actions)
+        :
+            React.createElement(Fragment, null,
+                React.createElement(Icon, { type: "ellipsis" }),
+                React.createElement("div", { className: "action-icons" }, children))));
 };
 export var ActionsCell = function (_a) {
     var children = _a.children, className = _a.className, attributes = __rest(_a, ["children", "className"]);
@@ -31,9 +40,15 @@ export var ActionsCell = function (_a) {
         React.createElement("div", { className: "action-icons" }, children)));
 };
 export var Action = function (_a) {
-    var title = _a.title, icon = _a.icon, handleClick = _a.onClick, attributes = __rest(_a, ["title", "icon", "onClick"]);
-    return (React.createElement("span", __assign({ "data-tooltip": title, "data-tooltip-pos": "up", onClick: handleClick }, attributes),
-        React.createElement(Icon, { type: icon })));
+    var title = _a.title, icon = _a.icon, handleClick = _a.onClick, showTitle = _a.showTitle, attributes = __rest(_a, ["title", "icon", "onClick", "showTitle"]);
+    var tooltipAttributes = showTitle ?
+        {} : {
+        'data-tooltip': title,
+        'data-tooltip-pos': 'up',
+    };
+    return (React.createElement("span", __assign({}, tooltipAttributes, { onClick: handleClick }, attributes),
+        React.createElement(Icon, { type: icon }),
+        showTitle && title));
 };
 export default Actions;
 //# sourceMappingURL=actions.js.map

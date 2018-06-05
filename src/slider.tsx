@@ -12,7 +12,7 @@ export const Slider: React.SFC<SliderProps> = ({
   id,
   label,
   onChange: handleChange,
-  ...attributes,
+  ...attributes
 }) => {
   return (
     <div className="input-range-wrap">
@@ -43,7 +43,7 @@ export class StatefulSlider extends React.Component<
     this.setState({ value }, () => {
       this.props.onChange(event, value);
     });
-  }
+  };
 
   public render() {
     const { onChange } = this.props;

@@ -19,8 +19,11 @@ import React from 'react';
 import cn from './utilities/classnames';
 var lightStyle = { color: 'white' };
 export var Icon = function (_a) {
-    var type = _a.type, className = _a.className, handleClick = _a.onClick, onDark = _a.onDark, attributes = __rest(_a, ["type", "className", "onClick", "onDark"]);
-    return (React.createElement("i", __assign({ className: cn('sg-icon', "sg-icon-" + type, (_b = {}, _b[className] = !!className, _b)), onClick: handleClick, style: onDark ? lightStyle : null }, attributes)));
+    var type = _a.type, className = _a.className, handleClick = _a.onClick, onDark = _a.onDark, size = _a.size, attributes = __rest(_a, ["type", "className", "onClick", "onDark", "size"]);
+    return (React.createElement("i", __assign({ className: cn('sg-icon', "sg-icon-" + type, (_b = {},
+            _b[className] = !!className,
+            _b["is-size-" + size] = size,
+            _b)), onClick: handleClick, style: onDark ? lightStyle : null }, attributes)));
     var _b;
 };
 Icon.defaultProps = {

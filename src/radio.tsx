@@ -7,24 +7,23 @@ export interface RadioGroupProps {
 }
 
 const { map } = React.Children;
-const radioGroupMapper = (props: RadioGroupProps) => (
-  map(props.children, (child: React.ReactElement<RadioProps> | null) => (
-    child && (
-      <child.type
-        key={child.props.value}
-        name={props.name}
-        onChange={props.onChange}
-        {...child.props}
-      />
-    )
-  ))
-);
+const radioGroupMapper = (props: RadioGroupProps) =>
+  map(
+    props.children,
+    (child: React.ReactElement<RadioProps> | null) =>
+      child && (
+        <child.type
+          key={child.props.value}
+          name={props.name}
+          onChange={props.onChange}
+          {...child.props}
+        />
+      )
+  );
 
-export const RadioGroup: React.SFC <RadioGroupProps> = (props: RadioGroupProps) => (
-  <Fragment>
-    {radioGroupMapper(props)}
-  </Fragment>
-);
+export const RadioGroup: React.SFC<RadioGroupProps> = (
+  props: RadioGroupProps
+) => <Fragment>{radioGroupMapper(props)}</Fragment>;
 
 export interface RadioProps {
   checked: boolean;
@@ -37,7 +36,7 @@ export interface RadioProps {
   value: string;
 }
 
-export const Radio: React.SFC <RadioProps> = ({
+export const Radio: React.SFC<RadioProps> = ({
   checked,
   children,
   defaultChecked,
@@ -47,7 +46,7 @@ export const Radio: React.SFC <RadioProps> = ({
   name,
   onChange,
   value,
-  ...attributes,
+  ...attributes
 }) => {
   id = id || `radio-${value.toLowerCase()}`;
   return (
@@ -70,9 +69,12 @@ export const Radio: React.SFC <RadioProps> = ({
   );
 };
 
-export class StatefulRadio extends React.Component < RadioProps, {
-  checked: boolean,
-} > {
+export class StatefulRadio extends React.Component<
+  RadioProps,
+  {
+    checked: boolean;
+  }
+> {
   constructor(props: RadioProps) {
     super(props);
 
@@ -80,20 +82,19 @@ export class StatefulRadio extends React.Component < RadioProps, {
       checked: props.checked,
     };
 
-    this.handleChange = this
-      .handleChange
-      .bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   public handleChange(event: any) {
     event.persist();
-    this.setState({
-      checked: !this.state.checked,
-    }, () => {
-      this
-        .props
-        .onChange(event);
-    });
+    this.setState(
+      {
+        checked: !this.state.checked,
+      },
+      () => {
+        this.props.onChange(event);
+      }
+    );
   }
 
   public render() {

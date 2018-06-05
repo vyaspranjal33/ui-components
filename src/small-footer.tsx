@@ -6,9 +6,9 @@ import { IconType } from './types/icons';
 
 export interface FooterProps {
   children?:
-  | Array<React.ReactElement<any>|string>
-  | React.ReactElement<any>
-  | string;
+    | Array<React.ReactElement<any> | string>
+    | React.ReactElement<any>
+    | string;
   icon?: IconType;
   header?: string;
   className?: string;
@@ -19,22 +19,15 @@ export const Footer: React.SFC<FooterProps> = ({
   icon,
   header,
   className,
-  ...attributes,
+  ...attributes
 }) => (
   <p className={cn('small', 'is-center', className)} {...attributes}>
-    {
-      icon &&
+    {icon && (
       <span>
-        <Icon type={icon} />
-        {' '}
+        <Icon type={icon} />{' '}
       </span>
-    }
-    {
-      header &&
-      <strong>
-        {`${header} `}
-      </strong>
-    }
+    )}
+    {header && <strong>{`${header} `}</strong>}
     {children}
   </p>
 );

@@ -53,6 +53,9 @@ var DropdownButton = /** @class */ (function (_super) {
         if (gear) {
             buttonType = 'secondary';
         }
+        if (gear && icon) {
+            buttonType = 'group-item';
+        }
         var links = map(children, function (link) {
             return React.cloneElement(link, {
                 className: link.props.className + " dropdown-link",
@@ -60,7 +63,7 @@ var DropdownButton = /** @class */ (function (_super) {
         });
         return (React.createElement("div", { className: "btn-list" },
             React.createElement("div", __assign({ className: cn('btn', 'btn-dropdown', 'dropdown', "btn-" + buttonType, className, {
-                    'btn-dropdown-gear': gear,
+                    'btn-dropdown-gear': gear && !icon,
                     'btn-on-dark': onDark,
                     'btn-small': small,
                     'has-badge': hasBadge,
@@ -71,7 +74,7 @@ var DropdownButton = /** @class */ (function (_super) {
                 }), onClick: this.handleClick }, attributes),
                 !gear && hasBadge && React.createElement(Badge, null, badge),
                 !gear && hasIcon && React.createElement(Icon, { type: icon, onDark: type === 'primary' }),
-                gear ? React.createElement(Icon, { type: "gear" }) : label,
+                gear ? React.createElement(Icon, { type: icon || 'gear' }) : label,
                 React.createElement("ul", { className: "dropdown-menu" }, links))));
     };
     DropdownButton.defaultProps = Button.defaultProps;

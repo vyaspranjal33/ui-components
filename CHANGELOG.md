@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## 0.14.8
+- Support disabling the add new unsub group card
+## 0.14.7
+- Added prettier precommit command to lint-staged
+- Removed the old segment-term component
 ## 0.14.6
 - Unsubscribe group cards (group and create new)
 ## 0.14.5

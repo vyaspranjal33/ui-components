@@ -1,5 +1,5 @@
 import React from 'react';
-import { IconSizeType } from './types/icon-sizes';
+import IconSizeType from './types/icon-sizes';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
@@ -19,10 +19,13 @@ export const Icon: React.SFC<IconProps> = ({
   onClick: handleClick,
   onDark,
   size,
-  ...attributes,
+  ...attributes
 }) => (
   <i
-    className={cn('sg-icon', `sg-icon-${type}`, { [className]: !!className, [`is-size-${size}`]: size })}
+    className={cn('sg-icon', `sg-icon-${type}`, {
+      [className]: !!className,
+      [`is-size-${size}`]: size,
+    })}
     onClick={handleClick}
     style={onDark ? lightStyle : null}
     {...attributes}
