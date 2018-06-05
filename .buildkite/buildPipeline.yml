@@ -2,7 +2,7 @@ steps:
 
   - name: ":yarn: :docker: Build UI-component base image"
     plugins:
-      docker-compose#v2.2.1:
+      docker-compose#v2.3.0:
         build: build
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: build:docker.sendgrid.net/sendgrid/ui-components:latest
@@ -12,37 +12,30 @@ steps:
   - name: ":docker: Push image to latest tag"
   # We want to push the image to the latest tag to keep the cache up to date to keep things fast
     plugins:
-      docker-compose#v2.2.1:
+      docker-compose#v2.3.0:
         push:
         - build:docker.sendgrid.net/sendgrid/ui-components:latest
 
   - name: ":jest: Lint and Test"
-    command: yarn ci-test
-    plugins:
-      docker-compose#v2.2.1:
-        run: build
+    command: 
+      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker-compose run build bash -c "yarn ci-test"
         
   - name: ":storybook: Build Storybook"
     command: 
-      - yarn build-storybook -o ./docs
+      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker-compose run build bash -c "yarn build-storybook -o ./docs"
       - "tar -zcvf docs.tar.gz ./docs"
-    artifact_paths: 
-      - "./docs.tar.gz"
-    plugins:
-      docker-compose#v2.2.1:
-        run: build
+      - buildkite-agent artifact upload ./docs.tar.gz
 
   - name: ":typescript: Build UI-Components"
     command: 
-      - yarn build
+      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker-compose run build bash -c "yarn build"
       - "tar -zcvf builtPackages.tar.gz ./packages"
-    artifact_paths: 
-      - "./builtPackages.tar.gz"
-    plugins:
-      docker-compose#v2.2.1:
-        run: build
+      - buildkite-agent artifact upload ./builtPackages.tar.gz
 
-  - wait
+  - wait 
 
   - name: ":octocat: Combine build Artifacts and Commit :octocat:"
     branches: "master"

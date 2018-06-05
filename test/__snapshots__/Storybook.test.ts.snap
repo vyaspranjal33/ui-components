@@ -1,5 +1,764 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`Storyshots Accordion Accordion - Caret Left 1`] = `
+<div
+  className="accordion-wrapper accordion-caret-left"
+>
+  <div
+    className="accordion-panel"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Accordion Title
+      </h2>
+    </div>
+    <div
+      aria-hidden={true}
+      className="rah-static rah-static--height-zero"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion-panel"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Accordion Title
+      </h2>
+    </div>
+    <div
+      aria-hidden={true}
+      className="rah-static rah-static--height-zero"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion-panel"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Accordion Title
+      </h2>
+    </div>
+    <div
+      aria-hidden={true}
+      className="rah-static rah-static--height-zero"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Accordion Accordion - Editor 1`] = `
+<div
+  className="accordion-wrapper is-editor"
+>
+  <div
+    className="accordion-panel is-visible"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h4>
+        Add Modules
+      </h4>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-images"
+                  onClick={undefined}
+                  style={null}
+                />
+                Image
+              </p>
+            </div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-image-text"
+                  onClick={undefined}
+                  style={null}
+                />
+                Image & Text
+              </p>
+            </div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-text"
+                  onClick={undefined}
+                  style={null}
+                />
+                Text
+              </p>
+            </div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-code"
+                  onClick={undefined}
+                  style={null}
+                />
+                Code
+              </p>
+            </div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-columns"
+                  onClick={undefined}
+                  style={null}
+                />
+                Columns
+              </p>
+            </div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-button"
+                  onClick={undefined}
+                  style={null}
+                />
+                Button
+              </p>
+            </div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-divider"
+                  onClick={undefined}
+                  style={null}
+                />
+                Divider
+              </p>
+            </div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-spacer"
+                  onClick={undefined}
+                  style={null}
+                />
+                Spacer
+              </p>
+            </div>
+            <div
+              className="card is-module is-centered"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-social"
+                  onClick={undefined}
+                  style={null}
+                />
+                Social
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Accordion Accordion - Large 1`] = `
+<div
+  className="accordion-wrapper accordion-large"
+>
+  <div
+    className="accordion-panel"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-teammate accordion-icon"
+        onClick={undefined}
+        style={null}
+      />
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Accordion title with icon and intro text
+      </h2>
+      <p
+        className={undefined}
+        style={undefined}
+      >
+        Accordion title description.
+      </p>
+    </div>
+    <div
+      aria-hidden={true}
+      className="rah-static rah-static--height-zero"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion-panel"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Accordion with no icon/text
+      </h2>
+    </div>
+    <div
+      aria-hidden={true}
+      className="rah-static rah-static--height-zero"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Accordion Accordion - Nested 1`] = `
+<div
+  className="accordion-wrapper"
+>
+  <div
+    className="accordion-panel has-child is-visible"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Primary Accordion Title 1
+      </h2>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <div
+            className="accordion-wrapper"
+          >
+            <div
+              className="accordion-panel"
+            >
+              <div
+                className="accordion-title"
+                onClick={[Function]}
+              >
+                <h3>
+                  Secondary Accordion Title 1
+                </h3>
+              </div>
+              <div
+                aria-hidden={true}
+                className="rah-static rah-static--height-zero"
+                style={
+                  Object {
+                    "height": 0,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <div
+                  className={undefined}
+                  style={Object {}}
+                >
+                  <div
+                    className="accordion-content"
+                    style={
+                      Object {
+                        "display": "block",
+                      }
+                    }
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              className="accordion-panel"
+            >
+              <div
+                className="accordion-title"
+                onClick={[Function]}
+              >
+                <h3>
+                  Secondary Accordion Title 2
+                </h3>
+              </div>
+              <div
+                aria-hidden={true}
+                className="rah-static rah-static--height-zero"
+                style={
+                  Object {
+                    "height": 0,
+                    "overflow": "hidden",
+                  }
+                }
+              >
+                <div
+                  className={undefined}
+                  style={Object {}}
+                >
+                  <div
+                    className="accordion-content"
+                    style={
+                      Object {
+                        "display": "block",
+                      }
+                    }
+                  >
+                    <p>
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion-panel"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Primary Accordion Title 2
+      </h2>
+    </div>
+    <div
+      aria-hidden={true}
+      className="rah-static rah-static--height-zero"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Accordion Accordion - Standard 1`] = `
+<div
+  className="accordion-wrapper"
+>
+  <div
+    className="accordion-panel is-visible"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Accordion Title
+      </h2>
+    </div>
+    <div
+      aria-hidden={false}
+      className="rah-static rah-static--height-auto"
+      style={
+        Object {
+          "height": "auto",
+          "overflow": "visible",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion-panel"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Accordion Title
+      </h2>
+    </div>
+    <div
+      aria-hidden={true}
+      className="rah-static rah-static--height-zero"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    className="accordion-panel"
+  >
+    <div
+      className="accordion-title"
+      onClick={[Function]}
+    >
+      <h2
+        className={undefined}
+        style={undefined}
+      >
+        Accordion Title
+      </h2>
+    </div>
+    <div
+      aria-hidden={true}
+      className="rah-static rah-static--height-zero"
+      style={
+        Object {
+          "height": 0,
+          "overflow": "hidden",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={Object {}}
+      >
+        <div
+          className="accordion-content"
+          style={
+            Object {
+              "display": "block",
+            }
+          }
+        >
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+  Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
+  ex est pulvinar nisi, ac luctus lorem quam vel nibh. Integer at tortor luctus
+  dui egestas consequat. Donec ut nibh lorem. Phasellus sed sapien lobortis,
+  egestas lacus nec, vehicula lorem. Donec hendrerit nibh sed velit placerat
+  aliquet. Morbi tristique pretium lorem, nec pretium turpis mattis vel.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
 <div
   className="alert alert-warning"
