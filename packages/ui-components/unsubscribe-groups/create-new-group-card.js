@@ -19,9 +19,9 @@ import React from 'react';
 import Button from '../button';
 import Card from '../card';
 export var CreateNewGroupCard = function (_a) {
-    var className = _a.className, handleCreate = _a.onClickCreate, attributes = __rest(_a, ["className", "onClickCreate"]);
+    var className = _a.className, disabled = _a.disabled, handleCreate = _a.onClickCreate, attributes = __rest(_a, ["className", "disabled", "onClickCreate"]);
     return (React.createElement(Card, __assign({ centered: true, title: "Create New Group", body: "Create a new group that represents a common type of email you send.", className: className }, attributes),
-        React.createElement(Button, { type: "primary", onClick: handleCreate }, "Create New Group")));
+        React.createElement(Button, { type: "primary", onClick: handleCreate, disabled: disabled }, "Create New Group")));
 };
 export default CreateNewGroupCard;
 //# sourceMappingURL=create-new-group-card.js.map

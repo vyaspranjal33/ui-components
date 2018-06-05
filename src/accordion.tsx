@@ -17,7 +17,6 @@ export interface AccordionProps {
 export interface AccordionPanelProps {
   children: any;
   className?: string;
-  contentRender?: () => any;
   icon?: IconType;
   isOpen?: boolean;
   noPadding?: boolean;
@@ -50,7 +49,6 @@ export const AccordionPanelIcon: React.SFC<AccordionPanelIconProps> = ({
 export const AccordionPanel: React.SFC<AccordionPanelProps> = ({
   children,
   className,
-  contentRender,
   icon,
   isOpen,
   noPadding,

@@ -10527,6 +10527,42 @@ exports[`Storyshots Truncated List Standard - Only 1 Item 1`] = `
 </span>
 `;
 
+exports[`Storyshots UnsubscribeGroupCard Create New Group Card (disabled) 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Create New Group
+      </h2>
+      <p>
+        Create a new group that represents a common type of email you send.
+      </p>
+      <button
+        className="btn btn-primary is-disabled"
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Create New Group
+      </button>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots UnsubscribeGroupCard Create New Group Card 1`] = `
 <div
   className="row"
