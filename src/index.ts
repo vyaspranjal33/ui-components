@@ -1,4 +1,10 @@
-export { Accordion, AccordionPanel } from './accordion';
+export {
+  Accordion,
+  AccordionPanel,
+  AccordionPanelTitle,
+  AccordionPanelDescription,
+  AccordionPanelIcon,
+} from './accordion';
 export { Action, Actions, ActionsCell } from './actions';
 export { Alert } from './alert';
 export { Badge } from './badge';
