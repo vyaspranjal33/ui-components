@@ -31,7 +31,7 @@ export const EmptyState: React.SFC<EmptyStateProps> = ({
   ...attributes
 }) => (
   <div
-    className={`${Styles['table-state']} ${Styles['is-empty']} ${className}`}
+    className={cn(Styles['table-state'], Styles['is-empty'], className)}
     {...attributes}
   >
     {icon && evaluateRenderProp(icon)}

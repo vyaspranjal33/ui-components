@@ -114,12 +114,9 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
 }) => {
   return (
     <div
-      className={`${BtnStyles['btn-list']} ${
-        Styles['email-card-add']
-      } ${className}`}
+      className={cn(BtnStyles['btn-list'], Styles['email-card-add'], className)}
+      {...attributes}
     >
-      {attributes}
-      >
       <Button type="secondary" onClick={onClick}>
         Add an Email
       </Button>

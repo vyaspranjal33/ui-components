@@ -15,7 +15,7 @@ export const Meter: React.SFC<MeterProps> = ({
   ...attributes
 }) => {
   return (
-    <div className={`Styles['meter-container'] ${className}`} {...attributes}>
+    <div className={cn(Styles['meter-container'], className)} {...attributes}>
       <span className={Styles['meter-title']}>{title}</span>{' '}
       <span className={Styles['meter-value']}>{value}%</span>
       <div className={Styles['meter-bar']}>

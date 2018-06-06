@@ -40,7 +40,6 @@ export class SideModal extends React.Component<SideModalProps> {
           })}
           {...attributes}
         >
-          >
           {children}
         </div>
         <div

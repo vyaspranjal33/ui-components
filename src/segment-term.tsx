@@ -90,7 +90,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
 
     return (
       <div
-        className={`${Styles['segment-term-wrap']} ${className}`}
+        className={cn(Styles['segment-term-wrap'], className)}
         {...attributes}
       >
         <p className={Styles['segment-term-title']}>{title}</p>

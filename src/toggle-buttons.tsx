@@ -23,7 +23,7 @@ export const ToggleButtons: React.SFC<ToggleButtonsProps> = ({
   ...attributes
 }) => {
   return (
-    <div className={`${Styles['btn-group']} ${className}`} {...attributes}>
+    <div className={cn(Styles['btn-group'], className)} {...attributes}>
       {map(children, (button: React.ReactElement<any>, index) => {
         return React.cloneElement(button, {
           onClick(event: any) {

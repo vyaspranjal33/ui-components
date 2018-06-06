@@ -79,7 +79,7 @@ export class DropdownButton extends React.Component<
             Styles.dropdown,
             Styles[`btn-${buttonType}`],
             {
-              [Styles['btn-dropdown-gear']]: gear,
+              [Styles['btn-dropdown-gear']]: gear && !icon,
               [Styles['btn-on-dark']]: onDark,
               [Styles['btn-small']]: small,
               [Styles['has-badge']]: hasBadge,
