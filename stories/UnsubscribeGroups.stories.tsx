@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
-import UnsubscribeGroupCard from '../src/unsubscribe-groups/unsubscribe-group-card';
-import CreateNewGroupCard from '../src/unsubscribe-groups/create-new-group-card';
-import UnsubscribeGroupAddEdit from '../src/unsubscribe-groups/add-edit';
+import
+  UnsubscribeGroupCard,
+  {
+    CreateNewGroupCard,
+    UnsubscribeGroupAddEdit 
+  } from '../src/unsubscribe-groups/';
 
 const stories = storiesOf('Unsubscribe Groups', module);
 
@@ -64,7 +67,9 @@ stories.add('Create New Group Card (disabled)', () => (
 stories.add('Add Unsubscribe Group', () => (
   <UnsubscribeGroupAddEdit
     breadcrumbHref="#"
-    onGroupDescInputChanged={action('change group description')}
+    groupDescription="Learn when we're coming to a city near you"
+    groupName="Event Announcements"
+    onGroupDescriptionInputChanged={action('change group description')}
     onGroupDisplayedOnIndexChanged={action('toggle group displayed on index')}
     onGroupNameInputChanged={action('change group name')}
     onSaveUnsubscribeGroup={action('save unsubscribe group')}
@@ -85,9 +90,11 @@ class UnsubscribeGroupEditContainer extends Component<any, any> {
     return (
       <UnsubscribeGroupAddEdit
         breadcrumbHref="#"
+        groupDescription="Learn when we're coming to a city near you"
+        groupName="Event Announcements"
         id={1234}
         isEdit
-        onGroupDescInputChanged={action('change group description')}
+        onGroupDescriptionInputChanged={action('change group description')}
         onGroupDisplayedOnIndexChanged={action('toggle group displayed on index')}
         onGroupNameInputChanged={action('change group name')}
         onDeleteUnsubscribeGroup={action('delete unsubscribe group')}

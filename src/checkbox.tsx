@@ -4,7 +4,7 @@ export interface CheckboxProps {
   checked: boolean;
   disabled?: boolean;
   id: string;
-  label: string | JSX.Element;
+  label: string;
   onChange: (event: any) => void;
   value?: string;
 }

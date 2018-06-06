@@ -10562,11 +10562,10 @@ exports[`Storyshots Truncated List Standard - Only 1 Item 1`] = `
 
 exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
 <div
-  className="row"
-  id="unsub-groups"
+  id="unsubcribe-groups"
 >
   <div
-    className="col-5 unsub-group-add-panel"
+    className="unsubcribe-group-add-edit-panel"
   >
     <header
       className="content-header"
@@ -10576,7 +10575,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
       >
         <li>
           <a
-            href="#{breadcrumbHref}"
+            href="#"
           >
             Unsubscribe Groups
           </a>
@@ -10595,68 +10594,60 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
       </strong>
     </p>
     <div
-      className="input-text-wrap is-required has-value"
+      className="input-text-wrap has-value is-required"
+      style={Object {}}
     >
-      <div
-        className="input-text-wrap"
-        style={undefined}
+      <label
+        className="input-text-label"
+        htmlFor="input-text-group-name"
       >
-        <label
-          className="input-text-label"
-          htmlFor="input-text-group-name"
-        >
-          Group Name
-        </label>
-        <input
-          aria-describedby="input-text-group-name-info"
-          id="input-text-group-name"
-          name={undefined}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          type="text"
-          value={undefined}
-        />
-        <span
-          className="input-info"
-          id="input-text-group-name-info"
-        >
-          This will be displayed to your recipients when opting out.
-        </span>
-        
-      </div>
+        Group Name
+      </label>
+      <input
+        aria-describedby="input-text-group-name-info"
+        id="input-text-group-name"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Event Announcements"
+      />
+      <span
+        className="input-info"
+        id="input-text-group-name-info"
+      >
+        This will be displayed to your recipients when opting out.
+      </span>
+      
     </div>
     <div
-      className="input-text-wrap is-required has-value"
+      className="input-text-wrap has-value is-required"
+      style={Object {}}
     >
-      <div
-        className="input-text-wrap"
-        style={undefined}
+      <label
+        className="input-text-label"
+        htmlFor="input-text-group-desc"
       >
-        <label
-          className="input-text-label"
-          htmlFor="input-text-group-desc"
-        >
-          Group Description
-        </label>
-        <input
-          aria-describedby="input-text-group-desc-info"
-          id="input-text-group-desc"
-          name={undefined}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          type="text"
-          value={undefined}
-        />
-        <span
-          className="input-info"
-          id="input-text-group-desc-info"
-        >
-          This will be displayed to your recipients when opting out.
-        </span>
-        
-      </div>
+        Group Description
+      </label>
+      <input
+        aria-describedby="input-text-group-desc-info"
+        id="input-text-group-desc"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Learn when we're coming to a city near you"
+      />
+      <span
+        className="input-info"
+        id="input-text-group-desc-info"
+      >
+        This will be displayed to your recipients when opting out.
+      </span>
+      
     </div>
     <div
       className="input-checkbox-wrap"
@@ -10677,23 +10668,23 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
           htmlFor="checkbox-display-unsubscribe-group"
         >
           Display this group on your unsubscribe preferences page.
-          <span
-            className={undefined}
-            data-tooltip="Clicking the Unsubscribe Preferences link will take
-                    recipients to a page that displays all unsubscribe groups
-                    you've chosen to include. You can preview this page at right
-                    by clicking the \\"Unsubscribe Preferences\\" tab"
-            data-tooltip-length="large"
-            data-tooltip-pos="up"
-          >
-            <i
-              className="sg-icon sg-icon-info-circle"
-              onClick={undefined}
-              style={null}
-            />
-          </span>
         </label>
       </div>
+      <span
+        className="unsubscribe-group-index-display-tooltip"
+        data-tooltip="Clicking the Unsubscribe Preferences link will take
+              recipients to a page that displays all unsubscribe groups
+              you've chosen to include. You can preview this page at right
+              by clicking the \\"Unsubscribe Preferences\\" tab"
+        data-tooltip-length="large"
+        data-tooltip-pos="up"
+      >
+        <i
+          className="sg-icon sg-icon-info-circle"
+          onClick={undefined}
+          style={null}
+        />
+      </span>
     </div>
     <div
       className="btn-list"
@@ -10820,11 +10811,10 @@ exports[`Storyshots Unsubscribe Groups Create New Group Card 1`] = `
 
 exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
 <div
-  className="row"
-  id="unsub-groups"
+  id="unsubcribe-groups"
 >
   <div
-    className="col-5 unsub-group-add-panel"
+    className="unsubcribe-group-add-edit-panel"
   >
     <header
       className="content-header"
@@ -10834,7 +10824,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
       >
         <li>
           <a
-            href="#{breadcrumbHref}"
+            href="#"
           >
             Unsubscribe Groups
           </a>
@@ -10859,7 +10849,8 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         className="small"
       >
         <strong>
-          Unsubscribes 
+          Unsubscribes
+           
         </strong>
         1000
       </span>
@@ -10867,74 +10858,67 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         className="small"
       >
         <strong>
-          ID 
+          ID
+           
         </strong>
         1234
       </span>
     </div>
     <div
-      className="input-text-wrap is-required has-value"
+      className="input-text-wrap has-value is-required"
+      style={Object {}}
     >
-      <div
-        className="input-text-wrap"
-        style={undefined}
+      <label
+        className="input-text-label"
+        htmlFor="input-text-group-name"
       >
-        <label
-          className="input-text-label"
-          htmlFor="input-text-group-name"
-        >
-          Group Name
-        </label>
-        <input
-          aria-describedby="input-text-group-name-info"
-          id="input-text-group-name"
-          name={undefined}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          type="text"
-          value={undefined}
-        />
-        <span
-          className="input-info"
-          id="input-text-group-name-info"
-        >
-          This will be displayed to your recipients when opting out.
-        </span>
-        
-      </div>
+        Group Name
+      </label>
+      <input
+        aria-describedby="input-text-group-name-info"
+        id="input-text-group-name"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Event Announcements"
+      />
+      <span
+        className="input-info"
+        id="input-text-group-name-info"
+      >
+        This will be displayed to your recipients when opting out.
+      </span>
+      
     </div>
     <div
-      className="input-text-wrap is-required has-value"
+      className="input-text-wrap has-value is-required"
+      style={Object {}}
     >
-      <div
-        className="input-text-wrap"
-        style={undefined}
+      <label
+        className="input-text-label"
+        htmlFor="input-text-group-desc"
       >
-        <label
-          className="input-text-label"
-          htmlFor="input-text-group-desc"
-        >
-          Group Description
-        </label>
-        <input
-          aria-describedby="input-text-group-desc-info"
-          id="input-text-group-desc"
-          name={undefined}
-          onBlur={[Function]}
-          onChange={[Function]}
-          onFocus={[Function]}
-          type="text"
-          value={undefined}
-        />
-        <span
-          className="input-info"
-          id="input-text-group-desc-info"
-        >
-          This will be displayed to your recipients when opting out.
-        </span>
-        
-      </div>
+        Group Description
+      </label>
+      <input
+        aria-describedby="input-text-group-desc-info"
+        id="input-text-group-desc"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="text"
+        value="Learn when we're coming to a city near you"
+      />
+      <span
+        className="input-info"
+        id="input-text-group-desc-info"
+      >
+        This will be displayed to your recipients when opting out.
+      </span>
+      
     </div>
     <div
       className="input-checkbox-wrap"
@@ -10955,23 +10939,23 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
           htmlFor="checkbox-display-unsubscribe-group"
         >
           Display this group on your unsubscribe preferences page.
-          <span
-            className={undefined}
-            data-tooltip="Clicking the Unsubscribe Preferences link will take
-                    recipients to a page that displays all unsubscribe groups
-                    you've chosen to include. You can preview this page at right
-                    by clicking the \\"Unsubscribe Preferences\\" tab"
-            data-tooltip-length="large"
-            data-tooltip-pos="up"
-          >
-            <i
-              className="sg-icon sg-icon-info-circle"
-              onClick={undefined}
-              style={null}
-            />
-          </span>
         </label>
       </div>
+      <span
+        className="unsubscribe-group-index-display-tooltip"
+        data-tooltip="Clicking the Unsubscribe Preferences link will take
+              recipients to a page that displays all unsubscribe groups
+              you've chosen to include. You can preview this page at right
+              by clicking the \\"Unsubscribe Preferences\\" tab"
+        data-tooltip-length="large"
+        data-tooltip-pos="up"
+      >
+        <i
+          className="sg-icon sg-icon-info-circle"
+          onClick={undefined}
+          style={null}
+        />
+      </span>
     </div>
     <div
       className="btn-list"
