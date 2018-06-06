@@ -1,6 +1,52 @@
 @import './variables.scss';
 @import './mixins.scss';
 
+@import './variables.scss';
+
+// colfax - http://goo.gl/U2k5AW
+@font-face {
+  font-family: 'Colfax';
+  font-style: normal;
+  font-weight: 300;
+  src: url('#{$font-path}/colfax/colfax-light.woff2') format('woff2'),
+    url('#{$font-path}/colfax/colfax-light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Colfax';
+  font-style: normal;
+  font-weight: 400;
+  src: url('#{$font-path}/colfax/colfax-regular.woff2') format('woff2'),
+    url('#{$font-path}/colfax/colfax-regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'Colfax';
+  font-style: normal;
+  font-weight: 600;
+  src: url('#{$font-path}/colfax/colfax-medium.woff2') format('woff2'),
+    url('#{$font-path}/colfax/colfax-medium.woff') format('woff');
+}
+
+// icon font - http://icomoon.com
+@font-face {
+  font-family: 'styleguideicons';
+  font-style: normal;
+  font-weight: normal;
+  src: url('#{$font-path}/icons/style-guide-icons.eot');
+  src: url('#{$font-path}/icons/style-guide-icons.eot#iefix')
+      format('embedded-opentype'),
+    url('#{$font-path}/icons/style-guide-icons.ttf') format('truetype'),
+    url('#{$font-path}/icons/style-guide-icons.woff') format('woff'),
+    url('#{$font-path}/icons/style-guide-icons.svg#style-guide-icons')
+      format('svg');
+}
+
+body {
+  @include colfax();
+  color: $slate-80;
+}
+
 h1,
 h2,
 h3,
