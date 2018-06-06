@@ -7,6 +7,7 @@ import Button from './button';
 import ButtonList from './button-list';
 import Styles from './styles/filters.module.scss';
 import { TextInput } from './text-input';
+import cn from './utilities/classnames';
 
 const filterControlStyle = {
   display: 'flex',
@@ -30,7 +31,7 @@ export interface FilterableListContainerProps {
   onFilter?: (items: any[], filters: {}) => any[];
   renderControls: (
     filterOptions: { [key: string]: any },
-    handleFilterChange?: any,
+    handleFilterChange?: any
   ) => ReactElement<any>;
   renderItems: (items: any[]) => ReactElement<any>;
   showClearButton?: boolean;
@@ -39,6 +40,7 @@ export interface FilterableListContainerProps {
 
 export interface FilterableListProps extends FilterableListContainerProps {
   items: any[];
+  className?: string;
 }
 
 export interface FilterableListState {
@@ -57,7 +59,7 @@ export class FilterableList extends PureComponent<
   };
 
   public static createClass(
-    props: FilterableListContainerProps,
+    props: FilterableListContainerProps
   ): React.ComponentClass<any> {
     return class FilterableListContainer extends PureComponent<
       FilterableListContainerProps
@@ -69,7 +71,9 @@ export class FilterableList extends PureComponent<
   }
 
   public state: { [key: string]: string } = {};
-  public handlers: { [key: string]: (filterName: string, event: any) => void } = {};
+  public handlers: {
+    [key: string]: (filterName: string, event: any) => void;
+  } = {};
 
   constructor(props: FilterableListProps) {
     super(props);
@@ -84,7 +88,7 @@ export class FilterableList extends PureComponent<
         this.state.value = '';
         this.handlers[`handleFilterChange`] = this.handleFilterChange.bind(
           this,
-          'value',
+          'value'
         );
       }
     }
@@ -96,9 +100,9 @@ export class FilterableList extends PureComponent<
       {
         [filterName]: value,
       },
-      this.props.onChange,
+      this.props.onChange
     );
-  }
+  };
 
   public get filteredItems(): any[] {
     // If a function to filter items is passed in, then use that.
@@ -116,14 +120,16 @@ export class FilterableList extends PureComponent<
         .toLowerCase()
         .includes(filters);
 
-    return items.filter((item: string | {}): boolean => {
-      if (typeof item === 'string') {
-        return includesFilters(item);
+    return items.filter(
+      (item: string | {}): boolean => {
+        if (typeof item === 'string') {
+          return includesFilters(item);
+        }
+        return values(item)
+          .map(includesFilters)
+          .some(identity);
       }
-      return values(item)
-        .map(includesFilters)
-        .some(identity);
-    });
+    );
   }
 
   public get clearButton() {
@@ -146,22 +152,33 @@ export class FilterableList extends PureComponent<
 
   public render() {
     const {
+      clearButtonInHeader,
       clearButtonLabel,
-      title,
-      showClearButton,
+      filterTypes,
+      items,
+      onClear,
+      onChange,
+      onFilter,
       renderControls,
       renderItems,
+      showClearButton,
+      title,
+      className,
+      ...attributes
     } = this.props;
 
     return (
-      <section className="FilterableList">
+      <section className="FilterableList" {...attributes}>
         <div className={Styles['filter-wrap']}>
           <div className={Styles['filter-header']}>
             <p className={Styles['filter-title']}>{title}</p>
             {this.showClearButtonInHeader && this.clearButton}
           </div>
           <div className={Styles['filter-list']} style={filterControlStyle}>
-            {renderControls({ ...this.state, ...this.handlers }, this.handleFilterChange)}
+            {renderControls(
+              { ...this.state, ...this.handlers },
+              this.handleFilterChange
+            )}
             {this.showClearButtonInline && this.clearButton}
           </div>
         </div>
@@ -179,7 +196,7 @@ export class FilterableList extends PureComponent<
     for (const key of Object.keys(this.state)) {
       this.setState({ [key]: '' });
     }
-  }
+  };
 }
 
 export default FilterableList;

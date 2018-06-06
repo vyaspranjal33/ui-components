@@ -7,6 +7,7 @@ export interface CenterModalProps extends ModalProps {
     modalContainer?: Element;
     onClose: (evt: any) => void;
     open: boolean;
+    className?: string;
     renderBody: string | React.ReactNode | (() => React.ReactNode);
     renderFooter?: string | React.ReactNode | (() => React.ReactNode);
     renderHeader?: string | React.ReactNode | (() => React.ReactNode);

@@ -7,9 +7,17 @@ export interface LoaderProps {
   large?: boolean;
   small?: boolean;
   centered?: boolean;
+  className?: string;
 }
 
-export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered }) => {
+export const Loader: React.SFC<LoaderProps> = ({
+  onDark,
+  large,
+  small,
+  centered,
+  className,
+  ...attributes
+}) => {
   let size = 10;
   if (large) {
     size *= 2;
@@ -19,20 +27,49 @@ export const Loader: React.SFC<LoaderProps> = ({ onDark, large, small, centered 
   }
   return (
     <svg
-      className={cn(Styles['sg-loader'], {
+      className={cn(Styles['sg-loader'], className, {
         [Styles['is-centered']]: centered,
         [Styles['is-large']]: large,
         [Styles['is-small']]: small,
         [Styles['loader-on-dark']]: onDark,
       })}
+      {...attributes}
     >
-      <rect className={cn(Styles['logo-square'], ['bottom-left'])} width={size} height={size} />
-      <rect className={cn(Styles['logo-square'], ['bottom-middle'])} width={size} height={size} />
-      <rect className={cn(Styles['logo-square'], ['middle'])} width={size} height={size} />
-      <rect className={cn(Styles['logo-square'], ['top-middle'])} width={size} height={size} />
-      <rect className={cn(Styles['logo-square'], ['top-right'])} width={size} height={size} />
-      <rect className={cn(Styles['logo-square'], ['middle-left'])} width={size} height={size} />
-      <rect className={cn(Styles['logo-square'], ['middle-right'])} width={size} height={size} />
+      <rect
+        className={cn(Styles['logo-square'], ['bottom-left'])}
+        width={size}
+        height={size}
+      />
+      <rect
+        className={cn(Styles['logo-square'], ['bottom-middle'])}
+        width={size}
+        height={size}
+      />
+      <rect
+        className={cn(Styles['logo-square'], ['middle'])}
+        width={size}
+        height={size}
+      />
+      <rect
+        className={cn(Styles['logo-square'], ['top-middle'])}
+        width={size}
+        height={size}
+      />
+      <rect
+        className={cn(Styles['logo-square'], ['top-right'])}
+        width={size}
+        height={size}
+      />
+      <rect
+        className={cn(Styles['logo-square'], ['middle-left'])}
+        width={size}
+        height={size}
+      />
+      <rect
+        className={cn(Styles['logo-square'], ['middle-right'])}
+        width={size}
+        height={size}
+      />
     </svg>
   );
 };

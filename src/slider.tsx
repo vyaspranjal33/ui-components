@@ -13,6 +13,7 @@ export const Slider: React.SFC<SliderProps> = ({
   id,
   label,
   onChange: handleChange,
+  ...attributes
 }) => {
   return (
     <div className={Styles['input-range-wrap']}>
@@ -23,6 +24,7 @@ export const Slider: React.SFC<SliderProps> = ({
         onChange={handleChange}
         type="range"
         value={value}
+        {...attributes}
       />
       {label && <div className={Styles['input-range-percent']}>{value}%</div>}
     </div>
@@ -42,7 +44,7 @@ export class StatefulSlider extends React.Component<
     this.setState({ value }, () => {
       this.props.onChange(event, value);
     });
-  }
+  };
 
   public render() {
     const { onChange } = this.props;

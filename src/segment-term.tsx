@@ -21,6 +21,7 @@ export interface SegmentTermProps {
   renderInputs?: () => React.ReactNode;
   showConfirm?: boolean;
   title: string;
+  className?: string;
 }
 
 export class SegmentTerm extends PureComponent<SegmentTermProps> {
@@ -33,23 +34,28 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
   };
 
   public get termControls(): React.ReactNode {
-    const { editable, editing, onCancel, onConfirm, showConfirm } = this.props;
+    const {
+      editable,
+      editing,
+      onCancel,
+      onConfirm,
+      showConfirm,
+      ...attributes
+    } = this.props;
 
     if (editing) {
       return (
         <ButtonList>
-          {
-            showConfirm &&
-              <Button type="secondary" small onClick={onConfirm}>
-                <Icon type="check-thin" />
-              </Button>
-          }
-          {
-            onCancel &&
-              <Button type="danger" small onClick={onCancel}>
-                <Icon type="x" />
-              </Button>
-          }
+          {showConfirm && (
+            <Button type="secondary" small onClick={onConfirm}>
+              <Icon type="check-thin" />
+            </Button>
+          )}
+          {onCancel && (
+            <Button type="danger" small onClick={onCancel}>
+              <Icon type="x" />
+            </Button>
+          )}
         </ButtonList>
       );
     }
@@ -75,13 +81,19 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       renderAlert,
       renderInputs,
       title,
+      onCancel,
+      onConfirm,
+      showConfirm,
+      className,
+      ...attributes
     } = this.props;
 
     return (
-      <div className={Styles['segment-term-wrap']}>
-        <p className={Styles['segment-term-title']}>
-          {title}
-        </p>
+      <div
+        className={`${Styles['segment-term-wrap']} ${className}`}
+        {...attributes}
+      >
+        <p className={Styles['segment-term-title']}>{title}</p>
         <div
           className={cn(Styles['segment-term'], {
             [Styles['has-alert']]: !!renderAlert,
@@ -89,27 +101,25 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
             [Styles['has-separator']]: hasSeparator,
             [Styles['is-editable']]: editing,
           })}
-          onClick={(editable && !editing) ? onEdit : undefined}
+          onClick={editable && !editing ? onEdit : undefined}
         >
-        {editing && renderInputs && renderInputs()}
-        {
-          !editing &&
+          {editing && renderInputs && renderInputs()}
+          {!editing && (
             <p>
               {`${label} `}
               <strong>{queryName}</strong>
             </p>
-        }
-        {this.termControls}
-        {renderAlert && renderAlert()}
+          )}
+          {this.termControls}
+          {renderAlert && renderAlert()}
         </div>
-        {
-          hasAddButton &&
-            <ButtonList>
-              <Button type="secondary" icon="plus" onClick={onAddButtonClick}>
-                Add Condition
-              </Button>
-            </ButtonList>
-        }
+        {hasAddButton && (
+          <ButtonList>
+            <Button type="secondary" icon="plus" onClick={onAddButtonClick}>
+              Add Condition
+            </Button>
+          </ButtonList>
+        )}
       </div>
     );
   }

@@ -6,32 +6,28 @@ import { IconType } from './types/icons';
 
 export interface FooterProps {
   children?:
-  | Array<React.ReactElement<any>|string>
-  | React.ReactElement<any>
-  | string;
+    | Array<React.ReactElement<any> | string>
+    | React.ReactElement<any>
+    | string;
   icon?: IconType;
   header?: string;
+  className?: string;
 }
 
 export const Footer: React.SFC<FooterProps> = ({
   children,
   icon,
   header,
+  className,
+  ...attributes
 }) => (
-  <p className="small is-center">
-    {
-      icon &&
+  <p className={cn('small', 'is-center', className)} {...attributes}>
+    {icon && (
       <span>
-        <Icon type={icon} />
-        {' '}
+        <Icon type={icon} />{' '}
       </span>
-    }
-    {
-      header &&
-      <strong>
-        {`${header} `}
-      </strong>
-    }
+    )}
+    {header && <strong>{`${header} `}</strong>}
     {children}
   </p>
 );

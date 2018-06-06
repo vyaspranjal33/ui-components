@@ -1,3 +1,11 @@
+export {
+  Accordion,
+  AccordionPanel,
+  AccordionPanelSFC,
+  AccordionPanelTitle,
+  AccordionPanelDescription,
+  AccordionPanelIcon,
+} from './accordion/';
 export { Action, Actions, ActionsCell } from './actions';
 export { Alert } from './alert';
 export { Badge } from './badge';
@@ -5,6 +13,8 @@ export { Breadcrumb } from './breadcrumb';
 export { Button, Buttonized } from './button';
 export { ButtonList } from './button-list';
 export { Card } from './card';
+export { ModuleCard } from './module-card';
+export { SplitCard, SplitCardSeparator } from './split-card';
 export { CenterModal } from './center-modal';
 export { Column } from './grid/column';
 export { Checkbox } from './checkbox';

@@ -5,8 +5,8 @@ import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
 const evaluateRenderProp: (
-  prop: IconType | (() => React.ReactNode),
-) => React.ReactNode = (prop) => {
+  prop: IconType | (() => React.ReactNode)
+) => React.ReactNode = prop => {
   if (typeof prop === 'function') {
     return prop();
   } else {
@@ -19,6 +19,7 @@ export interface EmptyStateProps {
   icon?: IconType | (() => React.ReactNode);
   buttons?: Array<React.ReactElement<any>>;
   header?: string;
+  className?: string;
 }
 
 export const EmptyState: React.SFC<EmptyStateProps> = ({
@@ -26,8 +27,13 @@ export const EmptyState: React.SFC<EmptyStateProps> = ({
   icon,
   buttons,
   header,
+  className,
+  ...attributes
 }) => (
-  <div className={`${Styles['table-state']} ${Styles['is-empty']}`}>
+  <div
+    className={`${Styles['table-state']} ${Styles['is-empty']} ${className}`}
+    {...attributes}
+  >
     {icon && evaluateRenderProp(icon)}
     {header && <h2>{header}</h2>}
     {children}

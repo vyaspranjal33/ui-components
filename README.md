@@ -4,25 +4,30 @@
 
 Re-useable React components based on the SendGrid's Style Guide.
 
-## @sendgrid/ui-components npm package
-
-These components are available as npm package [`@sendgrid/ui-components`](https://www.npmjs.com/package/@sendgrid/ui-components).
-
-### Getting Started
+## Getting Started
 ```
 npm install @sendgrid/ui-components
 ```
 
-### Importing ui-components into Your Project
+### Importing UI Components into Your Project
 
 To import the component on your desired page:
-```
+
+```ts
 import { Badge } from '@sendgrid/ui-components
 ```
 
 List of available components in [Available Components](#available-components) section.
 
-## Starting Storybook
+### Importing a Particular COmponent
+
+Maybe you don't want to import all of UI Components. You can import just the components that you need.
+
+```js
+import Badge from '@sendgrid/ui-components/badge
+```
+
+### Starting Storybook
 
 After running `npm install` and ensuring that style-guide is pulled properly just run `npm run storybook` and you should be good to go!
 
@@ -32,7 +37,7 @@ For many components, it's useful for testing to have attributes that make them e
 
 For this, use `data-test="some-test-id"` as an attribute that describes the component. If it's possible, you can and should the props passed in to create a unique identifier.
 
-## What are these Stateful Components?
+### What are these Stateful Components?
 
 State is hard and all of the UI components should be purely presentational. But, that makes them hard to test out in Storybook. The stateful components (e.g. `StatefulTextInput`) are solely for working with Storybook and are not supported or endorsed in anyway. Think of them as a private API. They can be removed at any time. You've been warned.
 
@@ -45,91 +50,67 @@ Patch and minor changes will be updated automatically, but major changes will up
 
 More information: https://semver.org/
 
-# Available Components
+## Available Components
 
 This is a list of the available Components and most of the properties. [Run storybook](#starting-storybook) for more information on the styling, properties, and functionalities.
 
-- [Actions](https://github.com/sendgrid/ui-components/blob/master/src/components/Actions.tsx)
-- [Alert](https://github.com/sendgrid/ui-components/blob/master/src/components/Alert.tsx)
-- [Badge](https://github.com/sendgrid/ui-components/blob/master/src/components/Badge.tsx)
-- [Breadcrumb](https://github.com/sendgrid/ui-components/blob/master/src/components/Breadcrumb.tsx)
-- [Button](https://github.com/sendgrid/ui-components/blob/master/src/components/Button.tsx)
-- [Button List](https://github.com/sendgrid/ui-components/blob/master/src/components/ButtonList.tsx)
-- [Card](https://github.com/sendgrid/ui-components/blob/master/src/components/Card.tsx)
-- [Checkbox](https://github.com/sendgrid/ui-components/blob/master/src/components/Checkbox.tsx)
-- [Divider](https://github.com/sendgrid/ui-components/blob/master/src/components/Divider.tsx)
-- [Dropdown Button](https://github.com/sendgrid/ui-components/blob/master/src/components/DropdownButton.tsx)
-- [Dropzone](https://github.com/sendgrid/ui-components/blob/master/src/components/Dropzone.tsx)
-- [Empty State](https://github.com/sendgrid/ui-components/blob/master/src/components/EmptyState.tsx)
-- [Icon](https://github.com/sendgrid/ui-components/blob/master/src/components/Icon.tsx)
-- [Loader](https://github.com/sendgrid/ui-components/blob/master/src/components/Loader.tsx)
-- [Meter](https://github.com/sendgrid/ui-components/blob/master/src/components/Meter.tsx)
-- [Numbered Steps](https://github.com/sendgrid/ui-components/blob/master/src/components/NumberedSteps.tsx)
-- [Progress Bar](https://github.com/sendgrid/ui-components/blob/master/src/components/Progress.tsx)
-- [Radio Button](https://github.com/sendgrid/ui-components/blob/master/src/components/Radio.tsx)
-- [Slider](https://github.com/sendgrid/ui-components/blob/master/src/components/Slider.tsx)
-- [Small Footer](https://github.com/sendgrid/ui-components/blob/master/src/components/SmallFooter.tsx)
-- [Table](https://github.com/sendgrid/ui-components/blob/master/src/components/Table.tsx)
-- [Tabs](https://github.com/sendgrid/ui-components/blob/master/src/components/Tabs.tsx)
-- [TextInput](https://github.com/sendgrid/ui-components/blob/master/src/components/TextInput.tsx)
-- [Toggle Buttons](https://github.com/sendgrid/ui-components/blob/master/src/components/ToggleButtons.tsx)
-- [Tooltip](https://github.com/sendgrid/ui-components/blob/master/src/components/Tooltip.tsx)
+- [Actions](https://github.com/sendgrid/ui-components/blob/master/src/actions.tsx)
+- [Alert](https://github.com/sendgrid/ui-components/blob/master/src/alert.tsx)
+- [Badge](https://github.com/sendgrid/ui-components/blob/master/src/badge.tsx)
+- [Breadcrumb](https://github.com/sendgrid/ui-components/blob/master/src/breadcrumb.tsx)
+- [Button](https://github.com/sendgrid/ui-components/blob/master/src/button.tsx)
+- [Button List](https://github.com/sendgrid/ui-components/blob/master/src/button-list.tsx)
+- [Card](https://github.com/sendgrid/ui-components/blob/master/src/card.tsx)
+- [Center Modal](https://github.com/sendgrid/ui-components/blob/master/src/center-modal.tsx)
+- [Checkbox](https://github.com/sendgrid/ui-components/blob/master/src/checkbox.tsx)
+- [Confirmation Modal](https://github.com/sendgrid/ui-components/blob/master/src/confirmation-modal.tsx)
+- [Divider](https://github.com/sendgrid/ui-components/blob/master/src/divider.tsx)
+- [Dropdown Button](https://github.com/sendgrid/ui-components/blob/master/src/dropdown-button.tsx)
+- [Dropzone](https://github.com/sendgrid/ui-components/blob/master/src/dropzone.tsx)
+- [Email Card](https://github.com/sendgrid/ui-components/blob/master/src/email-card.tsx)
+- [Empty State](https://github.com/sendgrid/ui-components/blob/master/src/empty-state.tsx)
+- [Filterable List](https://github.com/sendgrid/ui-components/blob/master/src/filterable-list.tsx)
+- [Fragment Loader](https://github.com/sendgrid/ui-components/blob/master/src/fragment-loader.tsx)
+- [Icon](https://github.com/sendgrid/ui-components/blob/master/src/icon.tsx)
+- [Loader](https://github.com/sendgrid/ui-components/blob/master/src/loader.tsx)
+- [Meter](https://github.com/sendgrid/ui-components/blob/master/src/meter.tsx)
+- [Numbered Steps](https://github.com/sendgrid/ui-components/blob/master/src/numbered-steps.tsx)
+- [Page Header](https://github.com/sendgrid/ui-components/blob/master/src/page-header.tsx)
+- [Progress Bar](https://github.com/sendgrid/ui-components/blob/master/src/progress.tsx)
+- [Radio Button](https://github.com/sendgrid/ui-components/blob/master/src/radio.tsx)
+- [Segment Term](https://github.com/sendgrid/ui-components/blob/master/src/segment-term.tsx)
+- [Side Modal](https://github.com/sendgrid/ui-components/blob/master/src/side-modal.tsx)
+- [Slider](https://github.com/sendgrid/ui-components/blob/master/src/slider.tsx)
+- [Small Footer](https://github.com/sendgrid/ui-components/blob/master/src/smal-footer.tsx)
+- [Statistics](https://github.com/sendgrid/ui-components/blob/master/src/statistics.tsx)
+- [Tabs](https://github.com/sendgrid/ui-components/blob/master/src/tabs.tsx)
+- [TextInput](https://github.com/sendgrid/ui-components/blob/master/src/text-input.tsx)
+- [Toggle Buttons](https://github.com/sendgrid/ui-components/blob/master/src/toggle-buttons.tsx)
+- [Tooltip](https://github.com/sendgrid/ui-components/blob/master/src/tooltip.tsx)
+- [Truncated List](https://github.com/sendgrid/ui-components/blob/master/src/truncated-list.tsx)
 
 # Available Commands
-* Start Storybook
-```
-yarn start
-```
-* Start Storybook on port 6006
-```
-yarn storybook
-```
-* Build
-```
-yarn build
-```
-* Run linter
-```
-yarn lint
-```
-* Try to auto fix linter issues
-```
-yarn lint-fix
-```
-* Test (with coverage)
-```
-yarn test
-```
-* Update tests (retake snapshots)
-```
-yarn snapshot
-```
-* Lint & update tests
-```
-yarn lint-snapshot
-```
-* Test used for Jenkins CI build (doesn't use interactive mode)
-```
-yarn ci-test
-```
-* Build Storybook
-```
-yarn build-storybook
-```
-* Prepublish
-```
-yarn prepublish
-```
-# Testing
+
+- `yarn start`: This is an alias for `yarn run storybook`
+- `yarn storybook`: Start Storybook on port 6006.
+- `yarn build`: Builds the assets for deployment.
+- `yarn lint`: Runs the linter.
+- `yarn lint-fix`: Runs the linter and auto-fixes the errors it can auto-fix.
+- `yarn test`: Run the unit tests.
+- `yarn snapshot`: Update snapshot tests. Make sure you run the tests first and you're not overwriting snapshots by accident.
+- `yarn lint-snapshot`: A combination of `yarn run lint` and `yarn run snapshot`.
+- `yarn ci-test`: Test used for the CI build (doesn't use interactive mode).
+- `yarn build-storybook`: Build a deployable version of the Storybook.
+- `yarn prepare`: Used by npm to build the assets before publishing.
+
+## Testing
+
 To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report.
 
 # Contributing
+See [CONTRIBUTING.md](https://github.com/sendgrid/ui-components/blob/master/CONTRIBUTING.md)
 
-## Components
-If you create a new component on a feature branch, make sure to do the following
-1. Add the component to `src/components`
-2. Make sure your changes do not break ui-components by running `npm run test`
-4. Add it to the storybook by creating a story in `stories` folder
-5. Add the component export to `src/index.ts`
-6. Update the `README.md` where appropriate
-7. Make a PR detailing your changes with a [semver](#semver-versioning) Tag and get it CR'ed
+## Deploying
+
+
+Deploying to npm is as simple as `npm run lerna`. Lerna will prompt you for a new version and you'll be able to pick the appropriate version bump. If you're not in the npm group, reach out to Steve.

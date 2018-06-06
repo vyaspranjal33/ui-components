@@ -15,14 +15,16 @@ export interface AllButtonProps {
     icon?: IconType;
     id?: string;
     isLink?: boolean;
+    className?: string;
 }
 export interface ButtonProps extends AllButtonProps {
     children?: string | React.ReactNode;
+    isSubmit?: boolean;
+    isReset?: boolean;
 }
 export interface ButtonizedProps extends AllButtonProps {
     children?: React.ReactElement<ButtonProps>;
 }
 export declare const Button: React.SFC<ButtonProps>;
 export declare const Buttonized: React.SFC<ButtonizedProps>;
-declare const _default: (props: any) => JSX.Element;
-export default _default;
+export default Button;

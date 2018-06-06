@@ -10,6 +10,7 @@ export interface DropdownButtonProps {
   children?: any;
   label?: string;
   gear?: boolean;
+  className?: string;
 }
 
 export interface DropdownButtonState {
@@ -31,10 +32,11 @@ export class DropdownButton extends React.Component<
   public handleClick = () => {
     const { active } = this.state;
     this.setState({ active: !active });
-  }
+  };
 
   public render() {
     const {
+      active,
       badge,
       children,
       disabled,
@@ -47,13 +49,20 @@ export class DropdownButton extends React.Component<
       onDark,
       small,
       type,
+      className,
+      ...attributes
     } = this.props;
-    const { active } = this.state;
+    const isActive = this.state.active;
     const hasBadge: boolean = !!badge || badge === 0;
     const hasIcon: boolean = !!icon;
 
     let buttonType: ButtonType = type;
-    if (gear) { buttonType = 'secondary'; }
+    if (gear) {
+      buttonType = 'secondary';
+    }
+    if (gear && icon) {
+      buttonType = 'group-item';
+    }
 
     const links = map(children, (link: React.ReactElement<any>) => {
       return React.cloneElement(link, {
@@ -64,21 +73,29 @@ export class DropdownButton extends React.Component<
     return (
       <div className={Styles['btn-list']}>
         <div
-          className={cn(btnStyles.btn, Styles['btn-dropdown'], Styles.dropdown, Styles[`btn-${buttonType}`], {
-            [Styles['btn-dropdown-gear']]: gear,
-            [Styles['btn-on-dark']]: onDark,
-            [Styles['btn-small']]: small,
-            [Styles['has-badge']]: hasBadge,
-            [Styles['has-icon']]: hasIcon || loading,
-            [Styles['is-active']]: active,
-            [Styles['is-disabled']]: disabled,
-            [Styles['is-loading']]: loading,
-          })}
+          className={cn(
+            btnStyles.btn,
+            Styles['btn-dropdown'],
+            Styles.dropdown,
+            Styles[`btn-${buttonType}`],
+            {
+              [Styles['btn-dropdown-gear']]: gear,
+              [Styles['btn-on-dark']]: onDark,
+              [Styles['btn-small']]: small,
+              [Styles['has-badge']]: hasBadge,
+              [Styles['has-icon']]: hasIcon || loading,
+              [Styles['is-active']]: active,
+              [Styles['is-disabled']]: disabled,
+              [Styles['is-loading']]: loading,
+            },
+            className
+          )}
           onClick={this.handleClick}
+          {...attributes}
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
           {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}
-          {gear ? <Icon type="gear" /> : label}
+          {gear ? <Icon type={icon || 'gear'} /> : label}
           <ul className={Styles['dropdown-menu']}>{links}</ul>
         </div>
       </div>

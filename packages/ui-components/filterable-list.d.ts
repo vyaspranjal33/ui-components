@@ -17,6 +17,7 @@ export interface FilterableListContainerProps {
 }
 export interface FilterableListProps extends FilterableListContainerProps {
     items: any[];
+    className?: string;
 }
 export interface FilterableListState {
     [key: string]: string;

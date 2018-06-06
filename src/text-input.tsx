@@ -11,7 +11,27 @@ const onInputFocus = function() {
   this.setState({ isInputFocused: true });
 };
 
-const getRenderedTextInput = function(value?: string | number) {
+const getRenderedTextInput = function() {
+  const {
+    children,
+    type,
+    id,
+    onChange,
+    value,
+    name,
+    fullWidth,
+    isValid,
+    isRequired,
+    isDisabled,
+    isLarge,
+    isSearch,
+    label,
+    info,
+    onBlur,
+    style,
+    ...attributes
+  } = this.props;
+
   const classes = cn(Styles['input-text-wrap'], {
     [Styles['has-value']]: !!value || value === 0,
     [Styles['is-disabled']]: this.props.isDisabled,
@@ -22,35 +42,35 @@ const getRenderedTextInput = function(value?: string | number) {
     [Styles['is-search']]: this.props.isSearch,
   });
 
-  const infoId = this.props.info && `${this.props.id}-info`;
-  const children = this.props.children || '';
+  const infoId = info && `${id}-info`;
 
   return (
     <div className={classes} style={this.inputStyle}>
       <label className={Styles['input-text-label']} htmlFor={this.props.id}>
-        {this.props.label}
+        {label}
       </label>
       <input
-        id={this.props.id}
-        value={this.props.value}
-        name={this.props.name}
-        type={this.props.type}
+        id={id}
+        value={value}
+        name={name}
+        type={type}
         onChange={this.onValueChange}
         onFocus={this.onInputFocus}
         onBlur={this.onInputBlur}
         aria-describedby={infoId}
+        {...attributes}
       />
-      {this.props.info && (
+      {info && (
         <span
           className={cn(Styles['input-info'], {
-            danger: !this.props.isValid,
+            danger: !isValid,
           })}
           id={infoId}
         >
-          {this.props.info}
+          {info}
         </span>
       )}
-      {children}
+      {children || ''}
     </div>
   );
 };
@@ -78,7 +98,6 @@ export class TextInput extends React.Component<
   TextInputProps,
   { isInputFocused: boolean }
 > {
-
   public static defaultProps = {
     fullWidth: false,
     info: '',
@@ -107,7 +126,9 @@ export class TextInput extends React.Component<
 
   get inputStyle() {
     const { fullWidth, style } = this.props;
-    if (fullWidth) { return {...style, width: '100%'}; }
+    if (fullWidth) {
+      return { ...style, width: '100%' };
+    }
     return style;
   }
 

@@ -29,9 +29,7 @@ const getFiles = () =>
     glob(path.join(filePath, '**/*.tsx'), (error, files) => {
       if (error) return reject(error);
       resolve(
-        files.filter(
-          file => !file.includes('test') && !file.includes('index'),
-        ),
+        files.filter(file => !file.includes('test') && !file.includes('index')),
       );
     });
   });
@@ -45,6 +43,7 @@ const plugins = [
   }),
   typescriptPlugin({
     typescript,
+    useTsconfigDeclarationDir: true,
   }),
   copy({
     "src/styles": "packages/ui-components/styles",
@@ -78,4 +77,31 @@ const outputOptions = {
     name: 'UI Components',
     file: 'packages/ui-components/bundledindex.js',
   });
+// Maybe we delete this
+  // const files = await getFiles();
+
+  // for (const file of files) {
+  //   const component = path.parse(file).name;
+  //   const fileName = paramCase(component);
+
+  //   const componentBundle = await rollup.rollup({
+  //     ...inputOptions,
+  //     input: file,
+  //   });
+
+  //   componentBundle.write({
+  //     ...outputOptions,
+  //     name: component,
+  //     file: `packages/ui-components/${fileName}.js`,
+  //   });
+  // }
+
+  // glob('packages/ui-components/components/**/*.d.ts', (error, files) => {
+  //   for (const file of files) {
+  //     const fileName = paramCase(path.parse(file).name).replace('-d', '.d');
+  //     fs
+  //     fs.createReadStream(file)
+  //       .pipe(fs.createWriteStream(`packages/ui-components/${fileName}.ts`));
+  //   }
+  // })
 })();

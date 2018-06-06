@@ -13,6 +13,7 @@ export interface AlertProps {
   inline?: boolean;
   type: AlertType;
   hidden?: boolean;
+  className?: string;
   onClick?: (event: any) => void;
 }
 
@@ -30,6 +31,9 @@ export const Alert: React.SFC<AlertProps> = ({
   inline,
   onClick: handleClick,
   type,
+  hidden,
+  className,
+  ...attributes
 }) => {
   return (
     <div
@@ -37,6 +41,7 @@ export const Alert: React.SFC<AlertProps> = ({
         [Styles['alert-inline']]: inline,
       })}
       role="alert"
+      {...attributes}
     >
       <p>
         <Icon type={icon || iconFor(type)} />

@@ -96,6 +96,10 @@
     }
   }
 
+  &.is-selected {
+    border-color: $slate-40;
+  }
+
   h2,
   p,
   .card-icon {
