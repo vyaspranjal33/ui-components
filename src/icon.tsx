@@ -24,7 +24,7 @@ export const Icon: React.SFC<IconProps> = ({
   ...attributes
 }) => (
   <i
-    className={cn(Styles['sg-icon'], Styles[`sg-icon-${type}`], {
+    className={cn('sg-icon', Styles['sg-icon'], Styles[`sg-icon-${type}`], {
       [className]: !!className,
       [`is-size-${size}`]: size,
     })}
