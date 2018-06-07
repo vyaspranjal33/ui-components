@@ -14,6 +14,7 @@ export interface CenterModalProps extends ModalProps {
   renderBody: string | React.ReactNode | (() => React.ReactNode);
   renderFooter?: string | React.ReactNode | (() => React.ReactNode);
   renderHeader?: string | React.ReactNode | (() => React.ReactNode);
+  padding?: boolean;
 }
 
 const evaluateRenderProp: (
@@ -28,6 +29,7 @@ export class CenterModal extends Component<CenterModalProps> {
     hasX: false,
     large: false,
     modalContainer: document.body,
+    padding: true,
   };
 
   public componentWillReceiveProps(nextProps: CenterModalProps) {
@@ -38,6 +40,7 @@ export class CenterModal extends Component<CenterModalProps> {
     const {
       hasX,
       large,
+      padding,
       modalContainer,
       onClose,
       open,
@@ -55,6 +58,7 @@ export class CenterModal extends Component<CenterModalProps> {
           className={cn(Styles['center-modal'], className, {
             [Styles['is-large']]: large,
             [Styles['is-visible']]: open,
+            [Styles['has-padding']]: padding,
           })}
           {...attributes}
         >
