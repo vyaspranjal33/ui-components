@@ -3,7 +3,7 @@ import IconSizeType from './types/icon-sizes';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
-import Styles from './styles/typography.module.scss';
+import Styles from './styles/icon.module.scss';
 
 export interface IconProps {
   type: IconType;

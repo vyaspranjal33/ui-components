@@ -36,37 +36,37 @@ export const Loader: React.SFC<LoaderProps> = ({
       {...attributes}
     >
       <rect
-        className={cn(Styles['logo-square'], ['bottom-left'])}
+        className={cn(Styles['logo-square'], Styles['bottom-left'])}
         width={size}
         height={size}
       />
       <rect
-        className={cn(Styles['logo-square'], ['bottom-middle'])}
+        className={cn(Styles['logo-square'], Styles['bottom-middle'])}
         width={size}
         height={size}
       />
       <rect
-        className={cn(Styles['logo-square'], ['middle'])}
+        className={cn(Styles['logo-square'], Styles.middle)}
         width={size}
         height={size}
       />
       <rect
-        className={cn(Styles['logo-square'], ['top-middle'])}
+        className={cn(Styles['logo-square'], Styles['top-middle'])}
         width={size}
         height={size}
       />
       <rect
-        className={cn(Styles['logo-square'], ['top-right'])}
+        className={cn(Styles['logo-square'], Styles['top-right'])}
         width={size}
         height={size}
       />
       <rect
-        className={cn(Styles['logo-square'], ['middle-left'])}
+        className={cn(Styles['logo-square'], Styles['middle-left'])}
         width={size}
         height={size}
       />
       <rect
-        className={cn(Styles['logo-square'], ['middle-right'])}
+        className={cn(Styles['logo-square'], Styles['middle-right'])}
         width={size}
         height={size}
       />

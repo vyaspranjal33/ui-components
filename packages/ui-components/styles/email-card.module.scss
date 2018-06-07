@@ -1,5 +1,5 @@
-@import './mixins';
-@import './variables';
+@import './global/mixins';
+@import './global/variables.scss';
 
 .email-card-wrap {
   position: relative;

@@ -1,7 +1,7 @@
-@import './typography.module.scss';
+@import './global/typography.scss';
 @import './button.module.scss';
-@import './variables.scss';
-@import './mixins.scss';
+@import './global/variables.scss';
+@import './global/mixins.scss';
 
 .dropdown {
   position: relative;

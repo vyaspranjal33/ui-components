@@ -1,5 +1,5 @@
-@import './variables';
-@import './mixins';
+@import './global/variables.scss';
+@import './global/mixins';
 
 $btn-primary-bg:                $sg-blue-80;
 $btn-primary-bg-hover:          $sg-blue;

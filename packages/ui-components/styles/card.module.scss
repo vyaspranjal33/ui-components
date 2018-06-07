@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './global/variables.scss';
 
 .card {
   position: relative;
@@ -94,6 +94,10 @@
       font-size: 20px;
       color: $slate-60;
     }
+  }
+
+  &.is-selected {
+    border-color: $slate-40;
   }
 
   h2,

@@ -1,4 +1,4 @@
-@import './variables.scss';
+@import './global/variables.scss';
 
 .numbered-steps {
   // using child selector so nested <li> within this component do not inherit its styles
