@@ -4,8 +4,8 @@ import Breadcrumb from '../breadcrumb';
 import { Button } from '../button';
 import { ButtonList } from '../button-list';
 import { Card } from '../card';
-import { CenterModal } from '../center-modal';
 import { Checkbox } from '../checkbox';
+import { ConfirmationModal } from '../confirmation-modal';
 import { Icon } from '../icon';
 import { TextInput } from '../text-input';
 import { Tooltip } from '../tooltip';
@@ -126,22 +126,26 @@ export const UnsubscribeGroupAddEdit: React.SFC<
           </Button>
         </ButtonList>
       </div>
-      <CenterModal
-        onClose={onDeleteGroupModalClosed}
-        open={isDeleteGroupModalOpen}
-        renderBody={
-          <p>Are you sure you want to delete this unsubscribe group?</p>
-        }
-        renderFooter={(close: (e: React.MouseEvent<HTMLElement>) => void) => (
-          <ButtonList>
+      <ConfirmationModal
+        isOpen={isDeleteGroupModalOpen}
+        renderActions={() => (
+          <Fragment>
             <Button small type="secondary" onClick={onDeleteGroupModalClosed}>
               Cancel
             </Button>
             <Button small type="danger" onClick={onDeleteUnsubscribeGroup}>
               Delete
             </Button>
-          </ButtonList>
+          </Fragment>
         )}
+        renderBody={() => (
+          <p className="small">
+            Warning: After deleting this group, recipients that unsubscribe from
+            emails previously associated with this group will be globally
+            unsubscribed because the group no longer exists.
+          </p>
+        )}
+        renderHeader={'Are you sure you want to delete this unsubscribe group?'}
       />
     </div>
   );
