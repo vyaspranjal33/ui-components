@@ -103,16 +103,18 @@ $btn-selectable-color:         $slate-80;
     pointer-events: none;
   }
 
-  .sg-icon,
-  .sg-loader,
-  .badge {
-    display: block;
-    float: left;
-    margin-right: 6px;
-  }
+  :global {
+    .sg-icon,
+    .sg-loader,
+    .badge {
+      display: block;
+      float: left;
+      margin-right: 6px;
+    }
 
-  .badge {
-    margin-bottom: 0;
+    .badge {
+      margin-bottom: 0;
+    }
   }
 }
 

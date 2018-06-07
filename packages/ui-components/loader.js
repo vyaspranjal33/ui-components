@@ -19,7 +19,7 @@ export const Loader = (_a) => {
     if (small) {
         size /= 2;
     }
-    return (React.createElement("svg", Object.assign({ className: cn(Styles['sg-loader'], className, {
+    return (React.createElement("svg", Object.assign({ className: cn('sg-loader', Styles['sg-loader'], className, {
             [Styles['is-centered']]: centered,
             [Styles['is-large']]: large,
             [Styles['is-small']]: small,

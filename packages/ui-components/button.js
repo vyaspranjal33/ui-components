@@ -43,7 +43,7 @@ export const Buttonized = (_a) => {
     if (children.props.children) {
         content.push(children.props.children);
     }
-    return React.cloneElement(children, Object.assign({ className: cn(Styles.btn, Styles[`btn-${type}`], className, {
+    return React.cloneElement(children, Object.assign({ className: cn('btn', Styles.btn, Styles[`btn-${type}`], className, {
             [Styles['btn-on-dark']]: onDark,
             [Styles['btn-small']]: small,
             [Styles['has-badge']]: hasBadge,
