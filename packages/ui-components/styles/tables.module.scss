@@ -32,8 +32,12 @@
     }
 
     // hide the ellipsis on hover
-    &:hover .sg-icon-ellipsis {
-      opacity: 0;
+    &:hover {
+      :global {
+        .sg-icon-ellipsis {
+          opacity: 0;
+        }
+      }
     }
 
     // show the action icons on hover
@@ -117,9 +121,13 @@
       position: relative;
     }
 
-    &.campaign-name .sg-icon {
-      margin: 0;
-      cursor: help;
+    &.campaign-name {
+      :global {
+        .sg-icon {
+          margin: 0;
+          cursor: help;
+        }
+      }
     }
 
     .editor-type {
@@ -129,12 +137,20 @@
       line-height: 1;
     }
 
-    &.is-verified .sg-icon {
-      color: $mantis;
+    &.is-verified {
+      :global {
+        .sg-icon {
+          color: $mantis;
+        }
+      }
     }
 
-    &.is-not-verified .sg-icon {
-      color: $ron-burgundy;
+    &.is-not-verified {
+      :global {
+        .sg-icon {
+          color: $ron-burgundy;
+        }
+      }
     }
 
     // set relative positioning for tooltips and inline-flex to keep width dynamic
@@ -193,8 +209,10 @@
     }
 
     // stop gear from jumping up a few pixels on rotate
-    .sg-icon-gear {
-      letter-spacing: 0;
+    :global {
+      .sg-icon-gear {
+        letter-spacing: 0;
+      }
     }
 
     // adjust the position of the gear's caret
@@ -342,14 +360,16 @@
     height: 2px;
   }
 
-  .sg-icon {
-    vertical-align: middle;
-    transition: opacity 0.3s, transform 0.5s;
-  }
+  :global {
+    .sg-icon {
+      vertical-align: middle;
+      transition: opacity 0.3s, transform 0.5s;
+    }
 
-  .sg-icon-ellipsis {
-    font-size: 20px;
-    opacity: 1;
+    .sg-icon-ellipsis {
+      font-size: 20px;
+      opacity: 1;
+    }
   }
 
   .actions {
@@ -393,10 +413,14 @@
     border-radius: $border-radius;
   }
 
-  &.is-empty .sg-icon {
-    display: block;
-    margin-bottom: 20px;
-    font-size: 40px;
+  &.is-empty {
+    :global {
+      .sg-icon {
+        display: block;
+        margin-bottom: 20px;
+        font-size: 40px;
+      }
+    }
   }
 
   p {
@@ -410,12 +434,14 @@
     }
   }
 
-  .btn-list {
-    margin-top: 20px;
+  :global {
+    .btn-list {
+      margin-top: 20px;
 
-    .sg-icon {
-      margin-bottom: 0;
-      font-size: 16px;
+      .sg-icon {
+        margin-bottom: 0;
+        font-size: 16px;
+      }
     }
   }
 }

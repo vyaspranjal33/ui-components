@@ -8,13 +8,12 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import Styles from './styles/hr.module.scss';
 import cn from './utilities/classnames';
 export const Divider = (_a) => {
     var { label, thin, className } = _a, attributes = __rest(_a, ["label", "thin", "className"]);
     return (React.createElement("hr", Object.assign({ className: cn(className, {
-            [Styles['has-label']]: !!label,
-            [Styles['is-thin']]: thin,
+            'has-label': !!label,
+            'is-thin': thin,
         }), "data-label": label }, attributes)));
 };
 Divider.defaultProps = {

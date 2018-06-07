@@ -13,7 +13,7 @@ import cn from './utilities/classnames';
 const { map } = React.Children;
 export const ButtonList = (_a) => {
     var { children, onDark, className } = _a, attributes = __rest(_a, ["children", "onDark", "className"]);
-    return (React.createElement("div", Object.assign({ className: cn(Styles['btn-list'], className) }, attributes), map(children, (button) => {
+    return (React.createElement("div", Object.assign({ className: cn('btn-list', Styles['btn-list'], className) }, attributes), map(children, (button) => {
         return button && React.cloneElement(button, { onDark });
     })));
 };

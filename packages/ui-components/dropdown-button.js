@@ -40,7 +40,7 @@ export class DropdownButton extends React.Component {
         }
         const links = map(children, (link) => {
             return React.cloneElement(link, {
-                className: `${link.props.className} dropdown-link`,
+                className: cn(link.props.className, Styles['dropdown-link']),
             });
         });
         return (React.createElement("div", { className: Styles['btn-list'] },
@@ -50,7 +50,7 @@ export class DropdownButton extends React.Component {
                     [Styles['btn-small']]: small,
                     [Styles['has-badge']]: hasBadge,
                     [Styles['has-icon']]: hasIcon || loading,
-                    [Styles['is-active']]: active,
+                    [Styles['is-active']]: isActive,
                     [Styles['is-disabled']]: disabled,
                     [Styles['is-loading']]: loading,
                 }, className), onClick: this.handleClick }, attributes),

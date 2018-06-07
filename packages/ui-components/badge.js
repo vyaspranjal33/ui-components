@@ -12,7 +12,7 @@ import Styles from './styles/badge.module.scss';
 import cn from './utilities/classnames';
 export const Badge = (_a) => {
     var { children, color, content, className } = _a, attributes = __rest(_a, ["children", "color", "content", "className"]);
-    return (React.createElement("span", Object.assign({ className: cn('badge', Styles.badge, color) }, attributes), children || content));
+    return (React.createElement("span", Object.assign({ className: cn('badge', Styles.badge, Styles[color]) }, attributes), children || content));
 };
 Badge.defaultProps = {
     children: 0,
