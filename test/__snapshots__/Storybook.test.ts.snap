@@ -10700,16 +10700,31 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
     </div>
   </div>
   <div
-    className="center-modal"
+    className="sg-modal"
   >
-    <p>
-      Are you sure you want to delete this unsubscribe group?
-    </p>
     <div
-      className="modal-footer"
+      className="conf-alert sg-modal-content"
     >
+      <h2
+        className="conf-alert-header"
+      >
+        Are you sure you want to delete this unsubscribe group?
+      </h2>
       <div
-        className="btn-list"
+        className="conf-alert-body"
+      >
+        <p
+          className="conf-alert-text"
+        >
+          <p
+            className="small"
+          >
+            Warning: After deleting this group, recipients that unsubscribe from emails previously associated with this group will be globally unsubscribed because the group no longer exists.
+          </p>
+        </p>
+      </div>
+      <div
+        className="conf-alert-actions"
       >
         <button
           className="btn btn-secondary btn-small"
@@ -10730,10 +10745,6 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="modal-mask"
-    onClick={undefined}
-  />
 </div>
 `;
 
@@ -10849,8 +10860,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         className="small"
       >
         <strong>
-          Unsubscribes
-           
+          Unsubscribes 
         </strong>
         1000
       </span>
@@ -10858,8 +10868,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         className="small"
       >
         <strong>
-          ID
-           
+          ID 
         </strong>
         1234
       </span>
@@ -10979,16 +10988,31 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
     </div>
   </div>
   <div
-    className="center-modal"
+    className="sg-modal"
   >
-    <p>
-      Are you sure you want to delete this unsubscribe group?
-    </p>
     <div
-      className="modal-footer"
+      className="conf-alert sg-modal-content"
     >
+      <h2
+        className="conf-alert-header"
+      >
+        Are you sure you want to delete this unsubscribe group?
+      </h2>
       <div
-        className="btn-list"
+        className="conf-alert-body"
+      >
+        <p
+          className="conf-alert-text"
+        >
+          <p
+            className="small"
+          >
+            Warning: After deleting this group, recipients that unsubscribe from emails previously associated with this group will be globally unsubscribed because the group no longer exists.
+          </p>
+        </p>
+      </div>
+      <div
+        className="conf-alert-actions"
       >
         <button
           className="btn btn-secondary btn-small"
@@ -11009,10 +11033,6 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
       </div>
     </div>
   </div>
-  <div
-    className="modal-mask"
-    onClick={[Function]}
-  />
 </div>
 `;
 
