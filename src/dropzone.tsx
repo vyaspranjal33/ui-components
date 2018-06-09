@@ -5,18 +5,35 @@ import cn from './utilities/classnames';
 
 export interface DropzoneProps {
   active?: boolean;
+  alert?: React.ReactElement<AlertProps>;
+  children?: string | React.ReactElement<any>;
+  className?: string;
   hovered?: boolean;
   large?: boolean;
-  children?: React.ReactElement<AlertProps>;
-  className?: string;
+  onDragEnd?: (event: any) => void;
+  onDragLeave?: (event: any) => void;
+  onDragOver?: (event: any) => void;
+  onDrop?: (event: any) => void;
 }
+
+const dropzoneStyle = {
+  alignItems: 'center',
+  display: 'flex',
+  fontSize: '14px',
+  justifyContent: 'center',
+};
 
 export const Dropzone: React.SFC<DropzoneProps> = ({
   active,
-  children: alert,
+  alert,
   hovered,
   large,
+  children,
   className,
+  onDragOver,
+  onDragLeave,
+  onDragEnd,
+  onDrop,
   ...attributes
 }) => {
   return (
@@ -28,8 +45,14 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
         'is-large': large,
       })}
       role="hidden"
+      style={dropzoneStyle}
       {...attributes}
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      onDragEnd={onDragEnd}
+      onDrop={onDrop}
     >
+      {children}
       {alert &&
         React.cloneElement(alert, {
           ...alert.props,

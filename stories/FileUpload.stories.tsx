@@ -1,0 +1,33 @@
+import { action } from '@storybook/addon-actions';
+import { storiesOf } from '@storybook/react';
+import React, { Fragment } from 'react';
+import Dropzone from '../src/dropzone';
+
+import FileUpload, { DroppedFile, FileSelect } from '../src/file-upload';
+
+const stories = storiesOf('File Upload', module);
+
+stories.add('Basic File Upload with JSX Content', () => (
+  <FileUpload
+    render={({
+      active,
+      hovered,
+      file,
+      handleRemove,
+      FileSelectLink,
+    }) => (
+      <Dropzone active={active} hovered={hovered}>
+        {file ? (
+          <DroppedFile file={file} onRemove={handleRemove} />
+        ) : (
+          <FileSelect>
+            <Fragment>
+              I am a <FileSelectLink>banana</FileSelectLink>.
+            </Fragment>
+          </FileSelect>
+        )}
+      </Dropzone>
+    )}
+    supportedType={'text/csv'}
+  />
+));
