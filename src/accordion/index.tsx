@@ -1,10 +1,6 @@
-import React, { Fragment } from 'react';
-import AnimateHeight from 'react-animate-height';
-import Badge from '../badge';
-import Icon from '../icon';
-import Loader from '../loader';
-import { IconType } from '../types/icons';
+import React from 'react';
 import cn from '../utilities/classnames';
+
 import {
   AccordionPanel,
   AccordionPanelDescription,
