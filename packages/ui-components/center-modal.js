@@ -1,21 +1,3 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = Object.setPrototypeOf ||
-        ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-        function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -27,40 +9,38 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import Styles from './styles/center-modal.module.scss';
 import cn from './utilities/classnames';
-import { modalWillReceiveProps, } from './utilities/modals';
-var evaluateRenderProp = function (prop) {
+import { modalWillReceiveProps } from './utilities/modals';
+const evaluateRenderProp = prop => {
     return prop instanceof Function ? prop() : prop;
 };
-var CenterModal = /** @class */ (function (_super) {
-    __extends(CenterModal, _super);
-    function CenterModal() {
-        return _super !== null && _super.apply(this, arguments) || this;
-    }
-    CenterModal.prototype.componentWillReceiveProps = function (nextProps) {
+export class CenterModal extends Component {
+    componentWillReceiveProps(nextProps) {
         modalWillReceiveProps(nextProps, this.props);
-    };
-    CenterModal.prototype.render = function () {
-        var _a = this.props, hasX = _a.hasX, large = _a.large, modalContainer = _a.modalContainer, onClose = _a.onClose, open = _a.open, renderBody = _a.renderBody, renderFooter = _a.renderFooter, renderHeader = _a.renderHeader, bodyNode = _a.bodyNode, className = _a.className, attributes = __rest(_a, ["hasX", "large", "modalContainer", "onClose", "open", "renderBody", "renderFooter", "renderHeader", "bodyNode", "className"]);
+    }
+    render() {
+        const _a = this.props, { hasX, large, padding, modalContainer, onClose, open, renderBody, renderFooter, renderHeader, bodyNode, className } = _a, attributes = __rest(_a, ["hasX", "large", "padding", "modalContainer", "onClose", "open", "renderBody", "renderFooter", "renderHeader", "bodyNode", "className"]);
         // Using <> instead of <Fragment> is breaking the linter.
         return ReactDOM.createPortal(React.createElement(Fragment, null,
-            React.createElement("div", __assign({ className: cn('center-modal', className, { 'is-visible': open, 'is-large': large }) }, attributes),
-                hasX &&
-                    (React.createElement("i", { className: "sg-icon sg-icon-x", "data-role": "close-center-modal", onClick: onClose })),
+            React.createElement("div", Object.assign({ className: cn(Styles['center-modal'], className, {
+                    [Styles['is-large']]: large,
+                    [Styles['is-visible']]: open,
+                    [Styles['has-padding']]: padding,
+                }) }, attributes),
+                hasX && (React.createElement("i", { className: `${Styles['sg-icon']} ${Styles['sg-icon-x']}`, "data-role": "close-center-modal", onClick: onClose })),
                 renderHeader && React.createElement("h1", null, evaluateRenderProp(renderHeader)),
                 evaluateRenderProp(renderBody),
-                renderFooter &&
-                    (React.createElement("div", { className: "modal-footer" }, evaluateRenderProp(renderFooter)))),
-            React.createElement("div", { className: cn('modal-mask', { 'is-visible': open }), onClick: onClose })), modalContainer);
-    };
-    CenterModal.defaultProps = {
-        bodyNode: document.body,
-        hasX: false,
-        large: false,
-        modalContainer: document.body,
-    };
-    return CenterModal;
-}(Component));
-export { CenterModal };
+                renderFooter && (React.createElement("div", { className: Styles['modal-footer'] }, evaluateRenderProp(this.props.renderFooter)))),
+            React.createElement("div", { className: cn(Styles['modal-mask'], { [Styles['is-visible']]: open }), onClick: onClose })), modalContainer);
+    }
+}
+CenterModal.defaultProps = {
+    bodyNode: document.body,
+    hasX: false,
+    large: false,
+    modalContainer: document.body,
+    padding: true,
+};
 export default CenterModal;
 //# sourceMappingURL=center-modal.js.map

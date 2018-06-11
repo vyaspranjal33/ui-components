@@ -1,4 +1,4 @@
-var colors = [
+const colors = [
     'sg-blue',
     'slate',
     'ron-burgundy',
