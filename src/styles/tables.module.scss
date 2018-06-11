@@ -1,19 +1,18 @@
 @import './global/variables.scss';
 @import './global/mixins';
+:global {
+  .table-wrap {
+    width: 100%;
+    // override app max-width that causes some issues w/ checkbox tables
+    max-width: none;
+    margin-bottom: 20px;
 
-.table-wrap {
-  width: 100%;
-  // override app max-width that causes some issues w/ checkbox tables
-  max-width: none;
-  margin-bottom: 20px;
-
-  // pull checkbox cells into grid gutters
-  &.has-checkboxes {
-    width: calc(100% + 30px);
-    margin-left: -30px;
-  }
-  // Alex Thomse: I did a bad thing here but dont understand css modules well enough to make this work without being global (Sorry homies)
-  :global {
+    // pull checkbox cells into grid gutters
+    &.has-checkboxes {
+      width: calc(100% + 30px);
+      margin-left: -30px;
+    }
+    // Alex Thomse: I did a bad thing here but dont understand css modules well enough to make this work without being global (Sorry homies)
     tr {
       font-size: 13px;
       line-height: 20px;
