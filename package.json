@@ -5,7 +5,7 @@
   "scripts": {
     "start": "yarn run storybook",
     "declaresass": "webpack",
-    "build": "tsc --newline lf && node build.js",
+    "build": "webpack && tsc --newline lf && bash copyStyles.sh",
     "lerna": "lerna publish",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
@@ -112,6 +112,8 @@
     "transform": {
       "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
     },
-    "testMatch": ["**/*.test.(ts|tsx|js)"]
+    "testMatch": [
+      "**/*.test.(ts|tsx|js)"
+    ]
   }
 }

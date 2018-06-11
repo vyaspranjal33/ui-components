@@ -2,7 +2,7 @@
 set -e
 
 cd $(dirname ${0})
-mkdir packages/
+mkdir -p packages/
 cd src
 
 rsync --relative ./**/*.scss* ../packages/ui-components/
