@@ -63,4 +63,6 @@ export const UnsubscribeGroupCard: React.SFC<UnsubscribeGroupCardProps> = ({
   );
 };
 
+export { UnsubscribeGroupAddEdit } from './add-edit';
+export { CreateNewGroupCard } from './create-new-group-card';
 export default UnsubscribeGroupCard;

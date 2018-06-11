@@ -6,8 +6,7 @@ import TableHeader from './table-header';
 import HeaderCell from './table-header-cell';
 import TableRow from './table-row';
 export { TableCell, TableRow, TableHeader, TableBody, HeaderCell };
-export var Table = function (_a) {
-    var children = _a.children, className = _a.className;
+export const Table = ({ children, className, }) => {
     return (React.createElement("table", { className: cn('table-wrap', className) }, children));
 };
 export default Table;
