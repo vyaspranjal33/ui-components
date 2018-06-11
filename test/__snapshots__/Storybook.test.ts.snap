@@ -8232,6 +8232,108 @@ exports[`Storyshots Split Card Split Card (w/ unlabeled separator) 1`] = `
 </div>
 `;
 
+exports[`Storyshots Switch Switch - Disabled 1`] = `
+<div
+  className="switch is-disabled"
+>
+  <input
+    checked={true}
+    className="switch-checkbox"
+    disabled={true}
+    id="switch-example-disabled"
+    onChange={[Function]}
+    type="checkbox"
+    value=""
+  />
+  <label
+    className="switch-label"
+    htmlFor="switch-example-disabled"
+  >
+    <div
+      className="switch-option switch-option-off"
+    >
+      off
+    </div>
+    <div
+      className="switch-option switch-option-on"
+    >
+      on
+    </div>
+  </label>
+  <div
+    className="switch-selector"
+  />
+</div>
+`;
+
+exports[`Storyshots Switch Switch - Off 1`] = `
+<div
+  className="switch"
+>
+  <input
+    checked={undefined}
+    className="switch-checkbox"
+    disabled={undefined}
+    id="switch-example-off"
+    onChange={[Function]}
+    type="checkbox"
+    value=""
+  />
+  <label
+    className="switch-label"
+    htmlFor="switch-example-off"
+  >
+    <div
+      className="switch-option switch-option-off"
+    >
+      off
+    </div>
+    <div
+      className="switch-option switch-option-on"
+    >
+      on
+    </div>
+  </label>
+  <div
+    className="switch-selector"
+  />
+</div>
+`;
+
+exports[`Storyshots Switch Switch - On 1`] = `
+<div
+  className="switch"
+>
+  <input
+    checked={true}
+    className="switch-checkbox"
+    disabled={undefined}
+    id="switch-example-on"
+    onChange={[Function]}
+    type="checkbox"
+    value=""
+  />
+  <label
+    className="switch-label"
+    htmlFor="switch-example-on"
+  >
+    <div
+      className="switch-option switch-option-off"
+    >
+      off
+    </div>
+    <div
+      className="switch-option switch-option-on"
+    >
+      on
+    </div>
+  </label>
+  <div
+    className="switch-selector"
+  />
+</div>
+`;
+
 exports[`Storyshots Table Sortable (Custom Render) 1`] = `
 <table
   className="table-wrap"
