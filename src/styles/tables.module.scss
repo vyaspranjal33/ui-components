@@ -12,7 +12,7 @@
     width: calc(100% + 30px);
     margin-left: -30px;
   }
-  // Alex Thomse: I did a bad thing here but don't understand css modules well enough to make this work without being global (Sorry homies)
+  // Alex Thomse: I did a bad thing here but dont understand css modules well enough to make this work without being global (Sorry homies)
   :global {
     tr {
       font-size: 13px;
@@ -21,7 +21,7 @@
       border-bottom: 0;
       transition: background-color 0.3s;
 
-      // don't color checkbox cells when rows are selected
+      // dont color checkbox cells when rows are selected
       &.is-selected td:not(.table-checkbox) {
         background-color: $slate-02;
       }
@@ -206,7 +206,7 @@
         letter-spacing: 0;
       }
 
-      // adjust the position of the gear's caret
+      // adjust the position of the gears caret
       .btn-dropdown-gear::before {
         top: 0;
       }
