@@ -1,4 +1,4 @@
-steps: 
+steps:
 
   - name: ":yarn: :docker: Build UI-component base image"
     plugins:
@@ -6,6 +6,8 @@ steps:
         build: build
         image-repository: docker.sendgrid.net/sendgrid
         cache-from: build:docker.sendgrid.net/sendgrid/ui-components:latest
+    agents:
+      queue: dockerbuild
 
   - wait
 
@@ -15,35 +17,43 @@ steps:
       docker-compose#v2.3.0:
         push:
         - build:docker.sendgrid.net/sendgrid/ui-components:latest
+    agents:
+      queue: dockerbuild
 
   - name: ":jest: Lint and Test"
-    command: 
+    command:
       - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
       - docker-compose run build bash -c "yarn ci-test"
-        
+    agents:
+      queue: dockerbuild
+
   - name: ":storybook: Build Storybook"
-    command: 
+    command:
       - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
       - docker-compose run build bash -c "yarn build-storybook -o ./docs"
       - "tar -zcvf docs.tar.gz ./docs"
       - buildkite-agent artifact upload ./docs.tar.gz
+    agents:
+      queue: dockerbuild
 
   - name: ":typescript: Build UI-Components"
-    command: 
+    command:
       - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
       - docker-compose run build bash -c "yarn build"
       - "tar -zcvf builtPackages.tar.gz ./packages"
       - buildkite-agent artifact upload ./builtPackages.tar.gz
+    agents:
+      queue: dockerbuild
 
-  - wait 
+  - wait
 
   - name: ":octocat: Combine build Artifacts and Commit :octocat:"
     branches: "master"
-    command: 
+    command:
       - git fetch
       - git checkout ${BUILDKITE_BRANCH}
       - git pull
-      - rm -rf docs/ 
+      - rm -rf docs/
       - mkdir ./docs
       - buildkite-agent artifact download builtPackages.tar.gz ./
       - buildkite-agent artifact download docs.tar.gz ./
@@ -53,3 +63,5 @@ steps:
       - git status
       - ./.buildkite/determineGitCommitType.sh
       - git push origin ${BUILDKITE_BRANCH}
+    agents:
+      queue: dockerbuild

@@ -19,8 +19,12 @@ steps:
   command:
     - ./.buildkite/theDecider.sh
   branches: "master"
+  agents:
+      queue: dockerbuild
 
 - name: ":bash: Upload Build Pipeline"
   command:
     - buildkite-agent pipeline upload ./.buildkite/buildPipeline.yml
   branches: "!master"
+  agents:
+      queue: dockerbuild
