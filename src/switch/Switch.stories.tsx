@@ -9,11 +9,11 @@ class SwitchContainer extends Component<any, any> {
   constructor(props: any) {
     super(props);
 
-    this.state = { isOn: this.props.isOn };
+    this.state = { on: this.props.on };
   }
 
   public onChange = (e: any) => {
-    this.setState({ isOn: !this.state.isOn });
+    this.setState({ on: !this.state.on });
   };
 
   public render() {
@@ -21,19 +21,17 @@ class SwitchContainer extends Component<any, any> {
       <Switch
         {...this.props}
         id={this.props.id}
-        isOn={this.state.isOn}
+        on={this.state.on}
         onChange={this.onChange}
       />
     );
   }
 }
 
-stories.add('Switch - On', () => (
-  <SwitchContainer id="switch-example-on" isOn />
-));
+stories.add('Switch - On', () => <SwitchContainer id="switch-example-on" on />);
 
 stories.add('Switch - Off', () => <SwitchContainer id="switch-example-off" />);
 
 stories.add('Switch - Disabled', () => (
-  <SwitchContainer id="switch-example-disabled" isDisabled isOn />
+  <SwitchContainer id="switch-example-disabled" disabled on />
 ));

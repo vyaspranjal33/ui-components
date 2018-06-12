@@ -4,10 +4,10 @@ import cn from '../utilities/classnames';
 
 export interface SwitchProps {
   className?: string;
+  disabled?: boolean;
   id: string;
-  isDisabled?: boolean;
-  isOn: boolean;
   offText?: string;
+  on: boolean;
   onText?: string;
   onChange: (event: any) => void;
   value?: string;
@@ -15,10 +15,10 @@ export interface SwitchProps {
 
 export const Switch: React.SFC<SwitchProps> = ({
   className,
+  disabled,
   id,
-  isDisabled,
-  isOn,
   offText,
+  on,
   onText,
   onChange,
   value,
@@ -26,13 +26,13 @@ export const Switch: React.SFC<SwitchProps> = ({
   return (
     <div
       className={cn('switch', className, {
-        'is-disabled': isDisabled,
+        'is-disabled': disabled,
       })}
     >
       <input
-        checked={isOn}
+        checked={on}
         className="switch-checkbox"
-        disabled={isDisabled}
+        disabled={disabled}
         id={id}
         onChange={onChange}
         type="checkbox"
