@@ -25,4 +25,4 @@ loaderStories.add('Loader on Dark', () => (
   </div>
 ));
 
-loaderStories.add('Fragment Loader', () => <FragmentLoader/>);
+loaderStories.add('Fragment Loader', () => <FragmentLoader />);

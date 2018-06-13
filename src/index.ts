@@ -39,6 +39,7 @@ export { SideModal } from './side-modal';
 export { Slider } from './slider';
 export { SegmentTerm } from './segment-term';
 export { SortableTable } from './table/sortable-table';
+export { Switch } from './switch/';
 export { Tab, Tabs } from './tabs';
 export {
   Table,

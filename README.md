@@ -102,10 +102,19 @@ This is a list of the available Components and most of the properties. [Run stor
 - `yarn ci-test`: Test used for the CI build (doesn't use interactive mode).
 - `yarn build-storybook`: Build a deployable version of the Storybook.
 - `yarn prepare`: Used by npm to build the assets before publishing.
+- `yarn run image-snapshots`: Builds a static index.html file and runs image snapshot tests.
 
 ## Testing
 
 To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report.
+
+**Image Snapshots & Animations**:
+
+- To skip a test, include `[DontTest]` in the name of the story.
+- To increase the threshold of a test (for example if you need to test a component but there is also an animation that is being troublesome), add `[animation]` in the name of the story.
+
+These configurations are implemented in Storyshots.test.ts.
+
 
 # Contributing
 See [CONTRIBUTING.md](https://github.com/sendgrid/ui-components/blob/master/CONTRIBUTING.md)

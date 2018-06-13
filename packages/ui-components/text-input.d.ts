@@ -39,16 +39,11 @@ export declare class TextInput extends React.Component<TextInputProps, {
     readonly inputStyle: React.CSSProperties;
     onValueChange(event: any): void;
     onInputBlur(event: any): void;
-    render(): any;
+    render(): JSX.Element;
 }
-export declare class StatefulTextInput extends React.Component<TextInputProps, {
-    isInputFocused: boolean;
-    value: string | number;
-}> {
+export declare class StatefulTextInput extends React.Component<TextInputProps> {
     static defaultProps: Partial<TextInputProps>;
-    onInputFocus: (event: any) => void;
     constructor(props: TextInputProps);
     onValueChange(event: any): void;
-    onInputBlur(event: any): void;
-    render(): any;
+    render(): JSX.Element;
 }

@@ -7,7 +7,6 @@
   left: 50%;
   z-index: 999;
   width: $center-modal-width;
-  padding: 60px;
   margin-bottom: 45px;
   margin-left: $center-modal-position;
   pointer-events: none;
@@ -21,6 +20,10 @@
     top: 100px;
     pointer-events: all;
     opacity: 1;
+  }
+
+  &.has-padding {
+    padding: 60px;
   }
 
   &.is-large {
@@ -55,7 +58,6 @@
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 100%;
     padding: 20px;
     text-align: right;
     background-color: $center-modal-bg;
