@@ -1,6 +1,6 @@
 import { Children } from 'react';
-const findActiveIndex = (components) => {
-    const activeIndex = Children.map(components, (component) => component.props.active).indexOf(true);
+var findActiveIndex = function (components) {
+    var activeIndex = Children.map(components, function (component) { return component.props.active; }).indexOf(true);
     if (activeIndex === -1) {
         return 0;
     }

@@ -1,5 +1,6 @@
 import React from 'react';
-export const TableRow = ({ children, className, }) => {
+export var TableRow = function (_a) {
+    var children = _a.children, className = _a.className;
     return (React.createElement("tr", { className: className }, children));
 };
 export default TableRow;

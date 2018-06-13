@@ -1,3 +1,11 @@
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -8,9 +16,9 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-const AccordionPanelTitle = (_a) => {
-    var { text, style, className } = _a, attributes = __rest(_a, ["text", "style", "className"]);
-    return (React.createElement("h2", Object.assign({ className: className, style: style }, attributes), text));
+var AccordionPanelTitle = function (_a) {
+    var text = _a.text, style = _a.style, className = _a.className, attributes = __rest(_a, ["text", "style", "className"]);
+    return (React.createElement("h2", __assign({ className: className, style: style }, attributes), text));
 };
 export default AccordionPanelTitle;
 //# sourceMappingURL=accordion-panel-title.js.map

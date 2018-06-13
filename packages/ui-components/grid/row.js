@@ -1,5 +1,6 @@
 import React from 'react';
-export const Row = ({ children, }) => {
+export var Row = function (_a) {
+    var children = _a.children;
     return (React.createElement("div", { className: "row" }, children));
 };
 export default Row;

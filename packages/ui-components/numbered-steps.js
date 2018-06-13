@@ -1,3 +1,11 @@
+var __assign = (this && this.__assign) || Object.assign || function(t) {
+    for (var s, i = 1, n = arguments.length; i < n; i++) {
+        s = arguments[i];
+        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
+            t[p] = s[p];
+    }
+    return t;
+};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -8,16 +16,15 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React from 'react';
-import Styles from './styles/numbered-steps.module.scss';
 import cn from './utilities/classnames';
-export const NumberedStep = (_a) => {
-    var { children, header } = _a, attributes = __rest(_a, ["children", "header"]);
-    return (React.createElement("li", Object.assign({}, attributes),
+export var NumberedStep = function (_a) {
+    var children = _a.children, header = _a.header, attributes = __rest(_a, ["children", "header"]);
+    return (React.createElement("li", __assign({}, attributes),
         React.createElement("h3", null, header),
         children));
 };
-export const NumberedSteps = (_a) => {
-    var { children, className } = _a, attributes = __rest(_a, ["children", "className"]);
-    return React.createElement("ol", { className: cn(Styles['numbered-steps'], className) }, children);
+export var NumberedSteps = function (_a) {
+    var children = _a.children, className = _a.className, attributes = __rest(_a, ["children", "className"]);
+    return (React.createElement("ol", __assign({ className: cn('numbered-steps', className) }, attributes), children));
 };
 //# sourceMappingURL=numbered-steps.js.map

@@ -1,5 +1,6 @@
 import React from 'react';
-export const TableHeader = ({ children, className, }) => {
+export var TableHeader = function (_a) {
+    var children = _a.children, className = _a.className;
     return (React.createElement("thead", { className: className }, children));
 };
 export default TableHeader;
