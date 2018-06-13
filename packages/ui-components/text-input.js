@@ -33,26 +33,6 @@ var convertInputValue = function (value, inputType) {
 var onInputFocus = function () {
     this.setState({ isInputFocused: true });
 };
-var getRenderedTextInput = function () {
-    var _a = this.props, children = _a.children, type = _a.type, id = _a.id, onChange = _a.onChange, value = _a.value, name = _a.name, fullWidth = _a.fullWidth, isValid = _a.isValid, isRequired = _a.isRequired, isDisabled = _a.isDisabled, isLarge = _a.isLarge, isSearch = _a.isSearch, label = _a.label, info = _a.info, onBlur = _a.onBlur, style = _a.style, attributes = __rest(_a, ["children", "type", "id", "onChange", "value", "name", "fullWidth", "isValid", "isRequired", "isDisabled", "isLarge", "isSearch", "label", "info", "onBlur", "style"]);
-    var classes = cn('input-text-wrap', {
-        'has-value': !!value || value === 0,
-        'is-disabled': isDisabled,
-        'is-error': !isValid,
-        'is-focused': this.state.isInputFocused,
-        'is-large': isLarge,
-        'is-required': isRequired,
-        'is-search': isSearch,
-    });
-    var infoId = info && id + "-info";
-    return (React.createElement("div", { className: classes, style: this.inputStyle },
-        React.createElement("label", { className: "input-text-label", htmlFor: id }, label),
-        React.createElement("input", __assign({ id: id, value: value, name: name, type: type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }, attributes)),
-        info && (React.createElement("span", { className: cn('input-info', {
-                danger: !isValid,
-            }), id: infoId }, info)),
-        children || ''));
-};
 var TextInput = /** @class */ (function (_super) {
     __extends(TextInput, _super);
     function TextInput(props) {
@@ -88,7 +68,24 @@ var TextInput = /** @class */ (function (_super) {
         }
     };
     TextInput.prototype.render = function () {
-        return getRenderedTextInput.call(this, this.props.value);
+        var _a = this.props, children = _a.children, type = _a.type, id = _a.id, onChange = _a.onChange, value = _a.value, name = _a.name, fullWidth = _a.fullWidth, isValid = _a.isValid, isRequired = _a.isRequired, isDisabled = _a.isDisabled, isLarge = _a.isLarge, isSearch = _a.isSearch, label = _a.label, info = _a.info, onBlur = _a.onBlur, style = _a.style, attributes = __rest(_a, ["children", "type", "id", "onChange", "value", "name", "fullWidth", "isValid", "isRequired", "isDisabled", "isLarge", "isSearch", "label", "info", "onBlur", "style"]);
+        var classes = cn('input-text-wrap', {
+            'has-value': !!value || value === 0,
+            'is-disabled': isDisabled,
+            'is-error': !isValid,
+            'is-focused': this.state.isInputFocused,
+            'is-large': isLarge,
+            'is-required': isRequired,
+            'is-search': isSearch,
+        });
+        var infoId = info && id + "-info";
+        return (React.createElement("div", { className: classes, style: this.inputStyle },
+            React.createElement("label", { className: "input-text-label", htmlFor: id }, label),
+            React.createElement("input", __assign({ id: id, value: value, name: name, type: type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }, attributes)),
+            info && (React.createElement("span", { className: cn('input-info', {
+                    danger: !isValid,
+                }), id: infoId }, info)),
+            children || ''));
     };
     TextInput.defaultProps = {
         fullWidth: false,
@@ -110,11 +107,8 @@ var StatefulTextInput = /** @class */ (function (_super) {
     function StatefulTextInput(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            isInputFocused: false,
-            value: '',
+            value: _this.props.value,
         };
-        _this.onInputFocus = onInputFocus.bind(_this);
-        _this.onInputBlur = _this.onInputBlur.bind(_this);
         _this.onValueChange = _this.onValueChange.bind(_this);
         return _this;
     }
@@ -123,19 +117,11 @@ var StatefulTextInput = /** @class */ (function (_super) {
         this.setState({ value: value });
         this.props.onChange(event, value);
     };
-    StatefulTextInput.prototype.onInputBlur = function (event) {
-        this.setState({ isInputFocused: false });
-        if (event && this.props.onBlur) {
-            var value = convertInputValue(event.target.value, this.props.type);
-            this.setState({ value: value });
-            this.props.onBlur(event, value);
-        }
-    };
     StatefulTextInput.prototype.render = function () {
-        return getRenderedTextInput.call(this, this.state.value);
+        return (React.createElement(TextInput, __assign({}, this.props, this.state, { onChange: this.onValueChange })));
     };
     StatefulTextInput.defaultProps = {
-        isValid: true,
+        value: '',
     };
     return StatefulTextInput;
 }(React.Component));

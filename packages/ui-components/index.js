@@ -21577,6 +21577,23 @@ var SortableTable = /** @class */ (function (_super) {
     return SortableTable;
 }(React__default.Component));
 
+var Switch = function (_a) {
+    var className = _a.className, disabled = _a.disabled, id = _a.id, offText = _a.offText, on = _a.on, onText = _a.onText, onChange = _a.onChange, value = _a.value;
+    return (React__default.createElement("div", { className: classNames('switch', className, {
+            'is-disabled': disabled,
+        }) },
+        React__default.createElement("input", { checked: on, className: "switch-checkbox", disabled: disabled, id: id, onChange: onChange, type: "checkbox", value: value }),
+        React__default.createElement("label", { className: "switch-label", htmlFor: id },
+            React__default.createElement("div", { className: "switch-option switch-option-off" }, offText),
+            React__default.createElement("div", { className: "switch-option switch-option-on" }, onText)),
+        React__default.createElement("div", { className: "switch-selector" })));
+};
+Switch.defaultProps = {
+    offText: 'off',
+    onText: 'on',
+    value: '',
+};
+
 var findActiveIndex = function (components) {
     var activeIndex = React.Children.map(components, function (component) { return component.props.active; }).indexOf(true);
     if (activeIndex === -1) {
@@ -21648,26 +21665,6 @@ var convertInputValue = function (value, inputType) {
 var onInputFocus = function () {
     this.setState({ isInputFocused: true });
 };
-var getRenderedTextInput = function () {
-    var _a = this.props, children = _a.children, type = _a.type, id = _a.id, onChange = _a.onChange, value = _a.value, name = _a.name, fullWidth = _a.fullWidth, isValid = _a.isValid, isRequired = _a.isRequired, isDisabled = _a.isDisabled, isLarge = _a.isLarge, isSearch = _a.isSearch, label = _a.label, info = _a.info, onBlur = _a.onBlur, style = _a.style, attributes = __rest(_a, ["children", "type", "id", "onChange", "value", "name", "fullWidth", "isValid", "isRequired", "isDisabled", "isLarge", "isSearch", "label", "info", "onBlur", "style"]);
-    var classes = classNames('input-text-wrap', {
-        'has-value': !!value || value === 0,
-        'is-disabled': isDisabled,
-        'is-error': !isValid,
-        'is-focused': this.state.isInputFocused,
-        'is-large': isLarge,
-        'is-required': isRequired,
-        'is-search': isSearch,
-    });
-    var infoId = info && id + "-info";
-    return (React__default.createElement("div", { className: classes, style: this.inputStyle },
-        React__default.createElement("label", { className: "input-text-label", htmlFor: id }, label),
-        React__default.createElement("input", __assign({ id: id, value: value, name: name, type: type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }, attributes)),
-        info && (React__default.createElement("span", { className: classNames('input-info', {
-                danger: !isValid,
-            }), id: infoId }, info)),
-        children || ''));
-};
 var TextInput = /** @class */ (function (_super) {
     __extends(TextInput, _super);
     function TextInput(props) {
@@ -21703,7 +21700,24 @@ var TextInput = /** @class */ (function (_super) {
         }
     };
     TextInput.prototype.render = function () {
-        return getRenderedTextInput.call(this, this.props.value);
+        var _a = this.props, children = _a.children, type = _a.type, id = _a.id, onChange = _a.onChange, value = _a.value, name = _a.name, fullWidth = _a.fullWidth, isValid = _a.isValid, isRequired = _a.isRequired, isDisabled = _a.isDisabled, isLarge = _a.isLarge, isSearch = _a.isSearch, label = _a.label, info = _a.info, onBlur = _a.onBlur, style = _a.style, attributes = __rest(_a, ["children", "type", "id", "onChange", "value", "name", "fullWidth", "isValid", "isRequired", "isDisabled", "isLarge", "isSearch", "label", "info", "onBlur", "style"]);
+        var classes = classNames('input-text-wrap', {
+            'has-value': !!value || value === 0,
+            'is-disabled': isDisabled,
+            'is-error': !isValid,
+            'is-focused': this.state.isInputFocused,
+            'is-large': isLarge,
+            'is-required': isRequired,
+            'is-search': isSearch,
+        });
+        var infoId = info && id + "-info";
+        return (React__default.createElement("div", { className: classes, style: this.inputStyle },
+            React__default.createElement("label", { className: "input-text-label", htmlFor: id }, label),
+            React__default.createElement("input", __assign({ id: id, value: value, name: name, type: type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }, attributes)),
+            info && (React__default.createElement("span", { className: classNames('input-info', {
+                    danger: !isValid,
+                }), id: infoId }, info)),
+            children || ''));
     };
     TextInput.defaultProps = {
         fullWidth: false,
@@ -21724,11 +21738,8 @@ var StatefulTextInput = /** @class */ (function (_super) {
     function StatefulTextInput(props) {
         var _this = _super.call(this, props) || this;
         _this.state = {
-            isInputFocused: false,
-            value: '',
+            value: _this.props.value,
         };
-        _this.onInputFocus = onInputFocus.bind(_this);
-        _this.onInputBlur = _this.onInputBlur.bind(_this);
         _this.onValueChange = _this.onValueChange.bind(_this);
         return _this;
     }
@@ -21737,19 +21748,11 @@ var StatefulTextInput = /** @class */ (function (_super) {
         this.setState({ value: value });
         this.props.onChange(event, value);
     };
-    StatefulTextInput.prototype.onInputBlur = function (event) {
-        this.setState({ isInputFocused: false });
-        if (event && this.props.onBlur) {
-            var value = convertInputValue(event.target.value, this.props.type);
-            this.setState({ value: value });
-            this.props.onBlur(event, value);
-        }
-    };
     StatefulTextInput.prototype.render = function () {
-        return getRenderedTextInput.call(this, this.state.value);
+        return (React__default.createElement(TextInput, __assign({}, this.props, this.state, { onChange: this.onValueChange })));
     };
     StatefulTextInput.defaultProps = {
-        isValid: true,
+        value: '',
     };
     return StatefulTextInput;
 }(React__default.Component));
@@ -21932,6 +21935,7 @@ exports.SideModal = SideModal;
 exports.Slider = Slider;
 exports.SegmentTerm = SegmentTerm;
 exports.SortableTable = SortableTable;
+exports.Switch = Switch;
 exports.Tab = Tab;
 exports.Tabs = Tabs;
 exports.Table = Table;
