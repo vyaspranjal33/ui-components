@@ -1339,7 +1339,7 @@ exports[`Storyshots Button Primary Button (Disabled) 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button Primary Button (Loading) 1`] = `
+exports[`Storyshots Button Primary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-primary has-icon is-loading"
   id={undefined}
@@ -1443,7 +1443,7 @@ exports[`Storyshots Button Secondary Button (Disabled) 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button Secondary Button (Loading) 1`] = `
+exports[`Storyshots Button Secondary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-secondary has-icon is-loading"
   id={undefined}
@@ -1591,18 +1591,7 @@ exports[`Storyshots Button Small Danger Button with Icon 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
-<button
-  className="btn btn-primary btn-small is-disabled"
-  id={undefined}
-  onClick={[Function]}
-  type="button"
->
-  Primary (Disabled)
-</button>
-`;
-
-exports[`Storyshots Button Small Primary Button (Loading) 1`] = `
+exports[`Storyshots Button Small Primary Button  [animation] 1`] = `
 <button
   className="btn btn-primary btn-small has-icon is-loading"
   id={undefined}
@@ -1649,6 +1638,17 @@ exports[`Storyshots Button Small Primary Button (Loading) 1`] = `
     />
   </svg>
   Primary (Loading)
+</button>
+`;
+
+exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
+<button
+  className="btn btn-primary btn-small is-disabled"
+  id={undefined}
+  onClick={[Function]}
+  type="button"
+>
+  Primary (Disabled)
 </button>
 `;
 
@@ -1706,7 +1706,7 @@ exports[`Storyshots Button Small Secondary Button (Disabled) 1`] = `
 </button>
 `;
 
-exports[`Storyshots Button Small Secondary Button (Loading) 1`] = `
+exports[`Storyshots Button Small Secondary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-secondary btn-small has-icon is-loading"
   id={undefined}
