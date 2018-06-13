@@ -18,19 +18,22 @@ steps:
 
   - name: ":jest: Lint and Test"
     command: 
-      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker pull \$IMAGETAG
       - docker-compose run build bash -c "yarn ci-test"
         
   - name: ":storybook: Build Storybook"
     command: 
-      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker pull \$IMAGETAG
       - docker-compose run build bash -c "yarn build-storybook -o ./docs"
       - "tar -zcvf docs.tar.gz ./docs"
       - buildkite-agent artifact upload ./docs.tar.gz
 
   - name: ":typescript: Build UI-Components"
     command: 
-      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker pull \$IMAGETAG
       - docker-compose run build bash -c "yarn build"
       - "tar -zcvf builtPackages.tar.gz ./packages"
       - buildkite-agent artifact upload ./builtPackages.tar.gz
