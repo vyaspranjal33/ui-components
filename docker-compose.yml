@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   app:
-    image: docker.sendgrid.net/sendgrid/ui-components:${IMAGETAG-latest}
+    image: ${IMAGETAG-docker.sendgrid.net/sendgrid/ui-components:latest}
     user: ${MYUID:-0}
     build:
      context: .  
@@ -21,7 +21,7 @@ services:
       # Preserve the node_modules folder in the docker container because we mounted ./
       - /opt/sendgrid/ui-components/node_modules
   build:
-    image: docker.sendgrid.net/sendgrid/ui-components:${IMAGETAG-latest}
+    image: ${IMAGETAG-docker.sendgrid.net/sendgrid/ui-components:latest}
     # user: ${MYUID:-0}
     build:
       context: .  
