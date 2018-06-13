@@ -19,8 +19,8 @@ steps:
   - name: ":bash: Test environment vars "
     command: 
       - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
-      - echo "${IMAGETAG}"
-      - echo "$($IMAGETAG)"
+      - echo "\${IMAGETAG}"
+      - echo "$(\$IMAGETAG)"
       - env
 
   - name: ":jest: Lint and Test"
