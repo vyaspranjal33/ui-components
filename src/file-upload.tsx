@@ -6,7 +6,7 @@ import Icon from './icon';
 import { IconType } from './types/icons';
 
 const toArray = slice;
-const margin = '0.5em';
+const margin = '12px';
 
 export interface FileUploadProps {
   onDragEnd?: (event: any) => void;
