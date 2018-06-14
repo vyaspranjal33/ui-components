@@ -7,6 +7,8 @@ import { IconType } from './types/icons';
 import ModuleCardType from './types/module-card';
 import cn from './utilities/classnames';
 
+import Styles from './styles/card.module.scss';
+
 const iconTypes: { [k in ModuleCardType]: IconType } = {
   button: 'button',
   code: 'code',
@@ -44,7 +46,12 @@ export const ModuleCard: React.SFC<ModuleCardProps> = ({
   ...attributes
 }) => {
   return (
-    <Card centered thin className={cn('is-module', className)} {...attributes}>
+    <Card
+      centered
+      thin
+      className={cn('is-module', Styles['is-module'], className)}
+      {...attributes}
+    >
       <p>
         <Icon type={iconTypes[type]} />
         {titles[type]}

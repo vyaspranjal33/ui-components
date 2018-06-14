@@ -10,8 +10,12 @@
   border-radius: $border-radius;
 
   &:hover {
-    .actions .sg-icon-ellipsis {
-      opacity: 0;
+    .actions {
+      :global {
+        .sg-icon-ellipsis {
+          opacity: 0;
+        }
+      }
     }
 
     .action-icons {
@@ -87,12 +91,14 @@
       font-weight: 400;
     }
 
-    .sg-icon {
-      display: block;
-      padding-bottom: 9px;
-      margin-right: 0;
-      font-size: 20px;
-      color: $slate-60;
+    :global {
+      .sg-icon {
+        display: block;
+        padding-bottom: 9px;
+        margin-right: 0;
+        font-size: 20px;
+        color: $slate-60;
+      }
     }
   }
 
@@ -107,10 +113,12 @@
   }
 
   // bump icon font-size if placed inline w/ title
-  h2 .sg-icon {
-    margin-right: 6px;
-    font-size: 27px;
-    vertical-align: text-bottom;
+  h2 {
+    :global .sg-icon {
+      margin-right: 6px;
+      font-size: 27px;
+      vertical-align: text-bottom;
+    }
   }
 
   p {
@@ -130,9 +138,11 @@
     line-height: 30px;
   }
 
-  .badge {
-    position: absolute;
-    top: 27px;
+  :global {
+    .badge {
+      position: absolute;
+      top: 27px;
+    }
   }
 
   .card-unsub-prefs {
@@ -144,9 +154,11 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    .sg-icon-check-circle {
-      color: $mantis;
-      vertical-align: sub;
+    :global {
+      .sg-icon-check-circle {
+        color: $mantis;
+        vertical-align: sub;
+      }
     }
   }
 
@@ -179,8 +191,13 @@
     opacity: 0;
   }
 
-  .action-icons,
-  .sg-icon-ellipsis {
+  .action-icons {
     transition: opacity 0.3s;
+  }
+
+  :global {
+    .sg-icon-ellipsis {
+      transition: opacity 0.3s;
+    }
   }
 }
