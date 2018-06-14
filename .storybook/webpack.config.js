@@ -43,6 +43,32 @@ module.exports = function(config, env) {
   });
 
   config.module.rules.push({
+    test: /\.scss$/,
+    exclude: [
+      /\.module.scss$/
+    ],
+    use: [
+      require.resolve('style-loader'),
+      {
+        loader: require.resolve('css-loader'),
+        options: {
+          sourceMap: true,
+          importLoaders: 1,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+      {
+        loader: require.resolve('sass-loader'),
+        options: {
+          sourceMap: true,
+          importLoaders: 1,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    ],
+  });
+
+  config.module.rules.push({
     test: /\.module.scss$/,
     use: [
       require.resolve('style-loader'),
