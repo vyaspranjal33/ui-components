@@ -24,16 +24,10 @@ export const Icon: React.SFC<IconProps> = ({
   ...attributes
 }) => (
   <i
-    className={cn(
-      'sg-icon',
-      `sg-icon-${type}`,
-      Styles['sg-icon'],
-      Styles[`sg-icon-${type}`],
-      {
-        [className]: !!className,
-        [`is-size-${size}`]: size,
-      }
-    )}
+    className={cn(Styles['sg-icon'], Styles[`sg-icon-${type}`], {
+      [className]: !!className,
+      [`is-size-${size}`]: size,
+    })}
     onClick={handleClick}
     style={onDark ? lightStyle : null}
     {...attributes}
