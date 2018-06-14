@@ -134,9 +134,13 @@ $btn-selectable-color:         $slate-80;
     @include btn-shadow;
   }
 
-  &.has-badge .badge {
-    color: $btn-primary-badge-color;
-    background-color: $btn-primary-badge-bg;
+  &.has-badge {
+    :global {
+      .badge {
+        color: $btn-primary-badge-color;
+        background-color: $btn-primary-badge-bg;
+      }
+    }
   }
 }
 
@@ -156,9 +160,13 @@ $btn-selectable-color:         $slate-80;
     @include btn-shadow;
   }
 
-  &.has-badge .badge {
-    color: $btn-secondary-badge-color;
-    background-color: $btn-secondary-badge-bg;
+  &.has-badge {
+    :global {
+      .badge {
+        color: $btn-secondary-badge-color;
+        background-color: $btn-secondary-badge-bg;
+      }
+    }
   }
 }
 
@@ -179,9 +187,13 @@ $btn-selectable-color:         $slate-80;
     color: $btn-danger-color;
   }
 
-  &.has-badge .badge {
-    color: $btn-danger-badge-color;
-    background-color: $btn-danger-badge-bg;
+  &.has-badge{
+    :global {
+      .badge {
+        color: $btn-danger-badge-color;
+        background-color: $btn-danger-badge-bg;
+      }
+    }
   }
 }
 
@@ -270,9 +282,13 @@ $btn-selectable-color:         $slate-80;
     }
   }
 
-  &.has-badge .badge {
-    color: $btn-dark-badge-color;
-    background-color: $btn-dark-badge-bg;
+  &.has-badge {
+    :global {
+      .badge {
+        color: $btn-dark-badge-color;
+        background-color: $btn-dark-badge-bg;
+      }
+    }
   }
 }
 
