@@ -22,7 +22,7 @@ services:
       - /opt/sendgrid/ui-components/node_modules
   build:
     image: ${IMAGETAG:-docker.sendgrid.net/sendgrid/ui-components:latest}
-    shm_size: '1gb'
+    shm_size: '3gb'
     # user: ${MYUID:-0}
     build:
       context: .  
