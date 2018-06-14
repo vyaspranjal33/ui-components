@@ -194,7 +194,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-images"
+                  className="sg-icon sg-icon-images sg-icon sg-icon-images"
                   onClick={undefined}
                   style={null}
                 />
@@ -206,7 +206,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-image-text"
+                  className="sg-icon sg-icon-image-text sg-icon sg-icon-image-text"
                   onClick={undefined}
                   style={null}
                 />
@@ -218,7 +218,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-text"
+                  className="sg-icon sg-icon-text sg-icon sg-icon-text"
                   onClick={undefined}
                   style={null}
                 />
@@ -230,7 +230,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-code"
+                  className="sg-icon sg-icon-code sg-icon sg-icon-code"
                   onClick={undefined}
                   style={null}
                 />
@@ -242,7 +242,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-columns"
+                  className="sg-icon sg-icon-columns sg-icon sg-icon-columns"
                   onClick={undefined}
                   style={null}
                 />
@@ -254,7 +254,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-button"
+                  className="sg-icon sg-icon-button sg-icon sg-icon-button"
                   onClick={undefined}
                   style={null}
                 />
@@ -266,7 +266,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-divider"
+                  className="sg-icon sg-icon-divider sg-icon sg-icon-divider"
                   onClick={undefined}
                   style={null}
                 />
@@ -278,7 +278,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-spacer"
+                  className="sg-icon sg-icon-spacer sg-icon sg-icon-spacer"
                   onClick={undefined}
                   style={null}
                 />
@@ -290,7 +290,7 @@ exports[`Storyshots Accordion Accordion - Editor 1`] = `
             >
               <p>
                 <i
-                  className="sg-icon sg-icon-social"
+                  className="sg-icon sg-icon-social sg-icon sg-icon-social"
                   onClick={undefined}
                   style={null}
                 />
@@ -317,7 +317,7 @@ exports[`Storyshots Accordion Accordion - Large 1`] = `
       onClick={[Function]}
     >
       <i
-        className="sg-icon sg-icon-teammate accordion-icon"
+        className="sg-icon sg-icon-teammate sg-icon sg-icon-teammate accordion-icon"
         onClick={undefined}
         style={null}
       />
@@ -766,7 +766,7 @@ exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-warning"
+      className="sg-icon sg-icon-warning sg-icon sg-icon-warning"
       onClick={undefined}
       style={null}
     />
@@ -790,7 +790,7 @@ exports[`Storyshots Alerts Danger Alert 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-warning"
+      className="sg-icon sg-icon-warning sg-icon sg-icon-warning"
       onClick={undefined}
       style={null}
     />
@@ -802,7 +802,7 @@ exports[`Storyshots Alerts Danger Alert 1`] = `
     </a>
     . In nec augue eu lacus aliquam lobortis.
     <i
-      className="sg-icon sg-icon-x"
+      className="sg-icon sg-icon-x sg-icon sg-icon-x"
       onClick={[Function]}
       style={null}
     />
@@ -817,7 +817,7 @@ exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-clean-ui"
+      className="sg-icon sg-icon-clean-ui sg-icon sg-icon-clean-ui"
       onClick={undefined}
       style={null}
     />
@@ -829,7 +829,7 @@ exports[`Storyshots Alerts Danger Alert with Custom Icon 1`] = `
     </a>
     . In nec augue eu lacus aliquam lobortis.
     <i
-      className="sg-icon sg-icon-x"
+      className="sg-icon sg-icon-x sg-icon sg-icon-x"
       onClick={[Function]}
       style={null}
     />
@@ -844,7 +844,7 @@ exports[`Storyshots Alerts Success Alert 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-check-circle"
+      className="sg-icon sg-icon-check-circle sg-icon sg-icon-check-circle"
       onClick={undefined}
       style={null}
     />
@@ -856,7 +856,7 @@ exports[`Storyshots Alerts Success Alert 1`] = `
     </a>
     . In nec augue eu lacus aliquam lobortis.
     <i
-      className="sg-icon sg-icon-x"
+      className="sg-icon sg-icon-x sg-icon sg-icon-x"
       onClick={[Function]}
       style={null}
     />
@@ -871,7 +871,7 @@ exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-clean-ui"
+      className="sg-icon sg-icon-clean-ui sg-icon sg-icon-clean-ui"
       onClick={undefined}
       style={null}
     />
@@ -883,7 +883,7 @@ exports[`Storyshots Alerts Success Alert with Custom Icon 1`] = `
     </a>
     . In nec augue eu lacus aliquam lobortis.
     <i
-      className="sg-icon sg-icon-x"
+      className="sg-icon sg-icon-x sg-icon sg-icon-x"
       onClick={[Function]}
       style={null}
     />
@@ -898,7 +898,7 @@ exports[`Storyshots Alerts Warning Alert 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-warning"
+      className="sg-icon sg-icon-warning sg-icon sg-icon-warning"
       onClick={undefined}
       style={null}
     />
@@ -910,7 +910,7 @@ exports[`Storyshots Alerts Warning Alert 1`] = `
     </a>
     . In nec augue eu lacus aliquam lobortis.
     <i
-      className="sg-icon sg-icon-x"
+      className="sg-icon sg-icon-x sg-icon sg-icon-x"
       onClick={[Function]}
       style={null}
     />
@@ -925,7 +925,7 @@ exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-clean-ui"
+      className="sg-icon sg-icon-clean-ui sg-icon sg-icon-clean-ui"
       onClick={undefined}
       style={null}
     />
@@ -937,7 +937,7 @@ exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
     </a>
     . In nec augue eu lacus aliquam lobortis.
     <i
-      className="sg-icon sg-icon-x"
+      className="sg-icon sg-icon-x sg-icon sg-icon-x"
       onClick={[Function]}
       style={null}
     />
@@ -947,7 +947,7 @@ exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
 
 exports[`Storyshots Badge bluebird 1`] = `
 <span
-  className="badge bluebird"
+  className="badge badge bluebird"
 >
   bluebird
 </span>
@@ -955,7 +955,7 @@ exports[`Storyshots Badge bluebird 1`] = `
 
 exports[`Storyshots Badge burnt-orange 1`] = `
 <span
-  className="badge burnt-orange"
+  className="badge badge burnt-orange"
 >
   burnt-orange
 </span>
@@ -963,7 +963,7 @@ exports[`Storyshots Badge burnt-orange 1`] = `
 
 exports[`Storyshots Badge caribbean 1`] = `
 <span
-  className="badge caribbean"
+  className="badge badge caribbean"
 >
   caribbean
 </span>
@@ -971,7 +971,7 @@ exports[`Storyshots Badge caribbean 1`] = `
 
 exports[`Storyshots Badge carrot 1`] = `
 <span
-  className="badge carrot"
+  className="badge badge carrot"
 >
   carrot
 </span>
@@ -979,7 +979,7 @@ exports[`Storyshots Badge carrot 1`] = `
 
 exports[`Storyshots Badge cobalt 1`] = `
 <span
-  className="badge cobalt"
+  className="badge badge cobalt"
 >
   cobalt
 </span>
@@ -987,7 +987,7 @@ exports[`Storyshots Badge cobalt 1`] = `
 
 exports[`Storyshots Badge crown 1`] = `
 <span
-  className="badge crown"
+  className="badge badge crown"
 >
   crown
 </span>
@@ -995,7 +995,7 @@ exports[`Storyshots Badge crown 1`] = `
 
 exports[`Storyshots Badge grass-stain 1`] = `
 <span
-  className="badge grass-stain"
+  className="badge badge grass-stain"
 >
   grass-stain
 </span>
@@ -1003,7 +1003,7 @@ exports[`Storyshots Badge grass-stain 1`] = `
 
 exports[`Storyshots Badge lavender 1`] = `
 <span
-  className="badge lavender"
+  className="badge badge lavender"
 >
   lavender
 </span>
@@ -1011,7 +1011,7 @@ exports[`Storyshots Badge lavender 1`] = `
 
 exports[`Storyshots Badge lime 1`] = `
 <span
-  className="badge lime"
+  className="badge badge lime"
 >
   lime
 </span>
@@ -1019,7 +1019,7 @@ exports[`Storyshots Badge lime 1`] = `
 
 exports[`Storyshots Badge mango 1`] = `
 <span
-  className="badge mango"
+  className="badge badge mango"
 >
   mango
 </span>
@@ -1027,7 +1027,7 @@ exports[`Storyshots Badge mango 1`] = `
 
 exports[`Storyshots Badge mantis 1`] = `
 <span
-  className="badge mantis"
+  className="badge badge mantis"
 >
   mantis
 </span>
@@ -1035,7 +1035,7 @@ exports[`Storyshots Badge mantis 1`] = `
 
 exports[`Storyshots Badge ron-burgundy 1`] = `
 <span
-  className="badge ron-burgundy"
+  className="badge badge ron-burgundy"
 >
   ron-burgundy
 </span>
@@ -1043,7 +1043,7 @@ exports[`Storyshots Badge ron-burgundy 1`] = `
 
 exports[`Storyshots Badge sangria 1`] = `
 <span
-  className="badge sangria"
+  className="badge badge sangria"
 >
   sangria
 </span>
@@ -1051,7 +1051,7 @@ exports[`Storyshots Badge sangria 1`] = `
 
 exports[`Storyshots Badge screample 1`] = `
 <span
-  className="badge screample"
+  className="badge badge screample"
 >
   screample
 </span>
@@ -1059,7 +1059,7 @@ exports[`Storyshots Badge screample 1`] = `
 
 exports[`Storyshots Badge seafoam 1`] = `
 <span
-  className="badge seafoam"
+  className="badge badge seafoam"
 >
   seafoam
 </span>
@@ -1067,7 +1067,7 @@ exports[`Storyshots Badge seafoam 1`] = `
 
 exports[`Storyshots Badge sg-blue 1`] = `
 <span
-  className="badge sg-blue"
+  className="badge badge sg-blue"
 >
   sg-blue
 </span>
@@ -1075,7 +1075,7 @@ exports[`Storyshots Badge sg-blue 1`] = `
 
 exports[`Storyshots Badge slate 1`] = `
 <span
-  className="badge slate"
+  className="badge badge slate"
 >
   slate
 </span>
@@ -1083,7 +1083,7 @@ exports[`Storyshots Badge slate 1`] = `
 
 exports[`Storyshots Badge spruce 1`] = `
 <span
-  className="badge spruce"
+  className="badge badge spruce"
 >
   spruce
 </span>
@@ -1091,7 +1091,7 @@ exports[`Storyshots Badge spruce 1`] = `
 
 exports[`Storyshots Badge steel 1`] = `
 <span
-  className="badge steel"
+  className="badge badge steel"
 >
   steel
 </span>
@@ -1099,7 +1099,7 @@ exports[`Storyshots Badge steel 1`] = `
 
 exports[`Storyshots Badge wild-strawberry 1`] = `
 <span
-  className="badge wild-strawberry"
+  className="badge badge wild-strawberry"
 >
   wild-strawberry
 </span>
@@ -1186,7 +1186,7 @@ exports[`Storyshots Button Danger Button with Badge 1`] = `
   type="button"
 >
   <span
-    className="badge"
+    className="badge badge"
   >
     1
   </span>
@@ -1203,7 +1203,7 @@ exports[`Storyshots Button Danger Button with Icon and Data Attr 1`] = `
   type="button"
 >
   <i
-    className="sg-icon sg-icon-trash"
+    className="sg-icon sg-icon-trash sg-icon sg-icon-trash"
     onClick={undefined}
     style={null}
   />
@@ -1239,7 +1239,7 @@ exports[`Storyshots Button Link Div Danger Button Link 1`] = `
   onClick={[Function]}
 >
   <i
-    className="sg-icon sg-icon-trash"
+    className="sg-icon sg-icon-trash sg-icon sg-icon-trash"
     onClick={undefined}
     style={null}
   />
@@ -1408,7 +1408,7 @@ exports[`Storyshots Button Primary Button with Badge 1`] = `
   type="button"
 >
   <span
-    className="badge"
+    className="badge badge"
   >
     1
   </span>
@@ -1424,7 +1424,7 @@ exports[`Storyshots Button Primary Button with Icon 1`] = `
   type="button"
 >
   <i
-    className="sg-icon sg-icon-create"
+    className="sg-icon sg-icon-create sg-icon sg-icon-create"
     onClick={undefined}
     style={null}
   />
@@ -1512,7 +1512,7 @@ exports[`Storyshots Button Secondary Button with Badge 1`] = `
   type="button"
 >
   <span
-    className="badge"
+    className="badge badge"
   >
     1
   </span>
@@ -1529,7 +1529,7 @@ exports[`Storyshots Button Secondary Submit Button with Icon 1`] = `
   type="submit"
 >
   <i
-    className="sg-icon sg-icon-copy"
+    className="sg-icon sg-icon-copy sg-icon sg-icon-copy"
     onClick={undefined}
     style={null}
   />
@@ -1567,7 +1567,7 @@ exports[`Storyshots Button Small Danger Button with Badge 1`] = `
   type="button"
 >
   <span
-    className="badge"
+    className="badge badge"
   >
     1
   </span>
@@ -1583,7 +1583,7 @@ exports[`Storyshots Button Small Danger Button with Icon 1`] = `
   type="button"
 >
   <i
-    className="sg-icon sg-icon-trash"
+    className="sg-icon sg-icon-trash sg-icon sg-icon-trash"
     onClick={undefined}
     style={null}
   />
@@ -1671,7 +1671,7 @@ exports[`Storyshots Button Small Primary Button with Badge 1`] = `
   type="button"
 >
   <span
-    className="badge"
+    className="badge badge"
   >
     1
   </span>
@@ -1687,7 +1687,7 @@ exports[`Storyshots Button Small Primary Button with Icon 1`] = `
   type="button"
 >
   <i
-    className="sg-icon sg-icon-create"
+    className="sg-icon sg-icon-create sg-icon sg-icon-create"
     onClick={undefined}
     style={null}
   />
@@ -1775,7 +1775,7 @@ exports[`Storyshots Button Small Secondary Button with Badge 1`] = `
   type="button"
 >
   <span
-    className="badge"
+    className="badge badge"
   >
     1
   </span>
@@ -1791,7 +1791,7 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
   type="button"
 >
   <i
-    className="sg-icon sg-icon-copy"
+    className="sg-icon sg-icon-copy sg-icon sg-icon-copy"
     onClick={undefined}
     style={null}
   />
@@ -1884,7 +1884,7 @@ exports[`Storyshots Card Card (Large) 1`] = `
         className="card-icon"
       >
         <i
-          className="sg-icon sg-icon-airplane is-size-40"
+          className="sg-icon sg-icon-airplane sg-icon sg-icon-airplane is-size-40"
           onClick={undefined}
           style={null}
         />
@@ -1944,7 +1944,7 @@ exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-ellipsis-vertical"
+              className="sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical"
               onClick={undefined}
               style={null}
             />
@@ -1956,7 +1956,7 @@ exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-pencil"
+                  className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
                   onClick={undefined}
                   style={null}
                 />
@@ -1967,7 +1967,7 @@ exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-view"
+                  className="sg-icon sg-icon-view sg-icon sg-icon-view"
                   onClick={undefined}
                   style={null}
                 />
@@ -1978,7 +1978,7 @@ exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-export"
+                  className="sg-icon sg-icon-export sg-icon sg-icon-export"
                   onClick={undefined}
                   style={null}
                 />
@@ -2009,7 +2009,7 @@ exports[`Storyshots Card Card with Badge (Centered) 1`] = `
       className="card is-centered"
     >
       <span
-        className="badge mantis"
+        className="badge badge mantis"
       >
         Recommended
       </span>
@@ -2042,7 +2042,7 @@ exports[`Storyshots Card Card with Badge 1`] = `
       className="card"
     >
       <span
-        className="badge mantis"
+        className="badge badge mantis"
       >
         Recommended
       </span>
@@ -2078,7 +2078,7 @@ exports[`Storyshots Card Card with Icon (Centered) 1`] = `
         className="card-icon"
       >
         <i
-          className="sg-icon sg-icon-locked is-size-30"
+          className="sg-icon sg-icon-locked sg-icon sg-icon-locked is-size-30"
           onClick={undefined}
           style={null}
         />
@@ -2448,7 +2448,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
         className="conf-alert-header conf-alert-header-with-icon"
       >
         <i
-          className="sg-icon sg-icon-trash"
+          className="sg-icon sg-icon-trash sg-icon sg-icon-trash"
           onClick={undefined}
           style={null}
         />
@@ -2585,7 +2585,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-button"
+        className="sg-icon sg-icon-button sg-icon sg-icon-button"
         onClick={undefined}
         style={null}
       />
@@ -2597,7 +2597,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-code"
+        className="sg-icon sg-icon-code sg-icon sg-icon-code"
         onClick={undefined}
         style={null}
       />
@@ -2609,7 +2609,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-columns"
+        className="sg-icon sg-icon-columns sg-icon sg-icon-columns"
         onClick={undefined}
         style={null}
       />
@@ -2621,7 +2621,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-divider"
+        className="sg-icon sg-icon-divider sg-icon sg-icon-divider"
         onClick={undefined}
         style={null}
       />
@@ -2633,7 +2633,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-images"
+        className="sg-icon sg-icon-images sg-icon sg-icon-images"
         onClick={undefined}
         style={null}
       />
@@ -2645,7 +2645,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-image-text"
+        className="sg-icon sg-icon-image-text sg-icon sg-icon-image-text"
         onClick={undefined}
         style={null}
       />
@@ -2657,7 +2657,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-social"
+        className="sg-icon sg-icon-social sg-icon sg-icon-social"
         onClick={undefined}
         style={null}
       />
@@ -2669,7 +2669,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-spacer"
+        className="sg-icon sg-icon-spacer sg-icon sg-icon-spacer"
         onClick={undefined}
         style={null}
       />
@@ -2681,7 +2681,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-text"
+        className="sg-icon sg-icon-text sg-icon sg-icon-text"
         onClick={undefined}
         style={null}
       />
@@ -2693,7 +2693,7 @@ exports[`Storyshots Drag & Drop Module Cards All 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-unsubscribe"
+        className="sg-icon sg-icon-unsubscribe sg-icon sg-icon-unsubscribe"
         onClick={undefined}
         style={null}
       />
@@ -2709,7 +2709,7 @@ exports[`Storyshots Drag & Drop Module Cards Button Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-button"
+      className="sg-icon sg-icon-button sg-icon sg-icon-button"
       onClick={undefined}
       style={null}
     />
@@ -2724,7 +2724,7 @@ exports[`Storyshots Drag & Drop Module Cards Code Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-code"
+      className="sg-icon sg-icon-code sg-icon sg-icon-code"
       onClick={undefined}
       style={null}
     />
@@ -2739,7 +2739,7 @@ exports[`Storyshots Drag & Drop Module Cards Columns Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-columns"
+      className="sg-icon sg-icon-columns sg-icon sg-icon-columns"
       onClick={undefined}
       style={null}
     />
@@ -2754,7 +2754,7 @@ exports[`Storyshots Drag & Drop Module Cards Divider Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-divider"
+      className="sg-icon sg-icon-divider sg-icon sg-icon-divider"
       onClick={undefined}
       style={null}
     />
@@ -2769,7 +2769,7 @@ exports[`Storyshots Drag & Drop Module Cards Image & Text Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-image-text"
+      className="sg-icon sg-icon-image-text sg-icon sg-icon-image-text"
       onClick={undefined}
       style={null}
     />
@@ -2784,7 +2784,7 @@ exports[`Storyshots Drag & Drop Module Cards Image Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-images"
+      className="sg-icon sg-icon-images sg-icon sg-icon-images"
       onClick={undefined}
       style={null}
     />
@@ -2799,7 +2799,7 @@ exports[`Storyshots Drag & Drop Module Cards Social Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-social"
+      className="sg-icon sg-icon-social sg-icon sg-icon-social"
       onClick={undefined}
       style={null}
     />
@@ -2814,7 +2814,7 @@ exports[`Storyshots Drag & Drop Module Cards Spacer Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-spacer"
+      className="sg-icon sg-icon-spacer sg-icon sg-icon-spacer"
       onClick={undefined}
       style={null}
     />
@@ -2829,7 +2829,7 @@ exports[`Storyshots Drag & Drop Module Cards Text Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-text"
+      className="sg-icon sg-icon-text sg-icon sg-icon-text"
       onClick={undefined}
       style={null}
     />
@@ -2844,7 +2844,7 @@ exports[`Storyshots Drag & Drop Module Cards Unsubscribe Module 1`] = `
 >
   <p>
     <i
-      className="sg-icon sg-icon-unsubscribe"
+      className="sg-icon sg-icon-unsubscribe sg-icon sg-icon-unsubscribe"
       onClick={undefined}
       style={null}
     />
@@ -2862,7 +2862,7 @@ exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
     onClick={[Function]}
   >
     <i
-      className="sg-icon sg-icon-gear"
+      className="sg-icon sg-icon-gear sg-icon sg-icon-gear"
       onClick={undefined}
       style={null}
     />
@@ -2971,7 +2971,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Badge (Small) 1`] = `
     onClick={[Function]}
   >
     <span
-      className="badge"
+      className="badge badge"
     >
       1
     </span>
@@ -3011,7 +3011,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Badge 1`] = `
     onClick={[Function]}
   >
     <span
-      className="badge"
+      className="badge badge"
     >
       1
     </span>
@@ -3051,7 +3051,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Icon (Small) 1`] = `
     onClick={[Function]}
   >
     <i
-      className="sg-icon sg-icon-create"
+      className="sg-icon sg-icon-create sg-icon sg-icon-create"
       onClick={undefined}
       style={
         Object {
@@ -3095,7 +3095,7 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Icon 1`] = `
     onClick={[Function]}
   >
     <i
-      className="sg-icon sg-icon-create"
+      className="sg-icon sg-icon-create sg-icon sg-icon-create"
       onClick={undefined}
       style={
         Object {
@@ -3209,7 +3209,7 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Badge (Small) 1`] = 
     onClick={[Function]}
   >
     <span
-      className="badge"
+      className="badge badge"
     >
       2
     </span>
@@ -3249,7 +3249,7 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Badge 1`] = `
     onClick={[Function]}
   >
     <span
-      className="badge"
+      className="badge badge"
     >
       2
     </span>
@@ -3289,7 +3289,7 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon (Small) 1`] = `
     onClick={[Function]}
   >
     <i
-      className="sg-icon sg-icon-create"
+      className="sg-icon sg-icon-create sg-icon sg-icon-create"
       onClick={undefined}
       style={null}
     />
@@ -3329,7 +3329,7 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
     onClick={[Function]}
   >
     <i
-      className="sg-icon sg-icon-create"
+      className="sg-icon sg-icon-create sg-icon sg-icon-create"
       onClick={undefined}
       style={null}
     />
@@ -3392,7 +3392,7 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-warning"
+        className="sg-icon sg-icon-warning sg-icon sg-icon-warning"
         onClick={undefined}
         style={null}
       />
@@ -3404,7 +3404,7 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
       </a>
       . In nec augue eu lacus aliquam lobortis.
       <i
-        className="sg-icon sg-icon-x"
+        className="sg-icon sg-icon-x sg-icon sg-icon-x"
         onClick={[Function]}
         style={null}
       />
@@ -5369,7 +5369,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
     >
       <p>
         <i
-          className="sg-icon sg-icon-info-circle"
+          className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
           onClick={undefined}
           style={null}
         />
@@ -5541,7 +5541,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
   >
     <p>
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -5843,7 +5843,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
           className="email-card-content-edit"
         >
           <i
-            className="sg-icon sg-icon-pencil"
+            className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
             onClick={undefined}
             style={null}
           />
@@ -6037,7 +6037,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
     className="table-state is-empty"
   >
     <i
-      className="sg-icon sg-icon-contacts"
+      className="sg-icon sg-icon-contacts sg-icon sg-icon-contacts"
       onClick={undefined}
       style={null}
     />
@@ -6073,7 +6073,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
   >
     <span>
       <i
-        className="sg-icon sg-icon-help"
+        className="sg-icon sg-icon-help sg-icon sg-icon-help"
         onClick={undefined}
         style={null}
       />
@@ -6098,7 +6098,7 @@ exports[`Storyshots Empty State Empty State With Icon 1`] = `
   className="table-state is-empty"
 >
   <i
-    className="sg-icon sg-icon-contacts"
+    className="sg-icon sg-icon-contacts sg-icon sg-icon-contacts"
     onClick={undefined}
     style={null}
   />
@@ -7733,7 +7733,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
         type="button"
       >
         <i
-          className="sg-icon sg-icon-x"
+          className="sg-icon sg-icon-x sg-icon sg-icon-x"
           onClick={undefined}
           style={null}
         />
@@ -7750,7 +7750,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
       type="button"
     >
       <i
-        className="sg-icon sg-icon-plus"
+        className="sg-icon sg-icon-plus sg-icon sg-icon-plus"
         onClick={undefined}
         style={null}
       />
@@ -7828,7 +7828,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
         type="button"
       >
         <i
-          className="sg-icon sg-icon-check-thin"
+          className="sg-icon sg-icon-check-thin sg-icon sg-icon-check-thin"
           onClick={undefined}
           style={null}
         />
@@ -7840,7 +7840,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
         type="button"
       >
         <i
-          className="sg-icon sg-icon-x"
+          className="sg-icon sg-icon-x sg-icon sg-icon-x"
           onClick={undefined}
           style={null}
         />
@@ -7857,7 +7857,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       type="button"
     >
       <i
-        className="sg-icon sg-icon-plus"
+        className="sg-icon sg-icon-plus sg-icon sg-icon-plus"
         onClick={undefined}
         style={null}
       />
@@ -7887,7 +7887,7 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
       </strong>
     </p>
     <i
-      className="sg-icon sg-icon-pencil segment-term-edit"
+      className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil segment-term-edit"
       onClick={undefined}
       style={null}
     />
@@ -7897,7 +7897,7 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
     >
       <p>
         <i
-          className="sg-icon sg-icon-warning"
+          className="sg-icon sg-icon-warning sg-icon sg-icon-warning"
           onClick={undefined}
           style={null}
         />
@@ -7978,7 +7978,7 @@ exports[`Storyshots Segment Term Segment term with radio btns and alert 1`] = `
     >
       <p>
         <i
-          className="sg-icon sg-icon-warning"
+          className="sg-icon sg-icon-warning sg-icon sg-icon-warning"
           onClick={undefined}
           style={null}
         />
@@ -8018,7 +8018,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         </strong>
       </p>
       <i
-        className="sg-icon sg-icon-pencil segment-term-edit"
+        className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil segment-term-edit"
         onClick={undefined}
         style={null}
       />
@@ -8043,7 +8043,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         </strong>
       </p>
       <i
-        className="sg-icon sg-icon-pencil segment-term-edit"
+        className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil segment-term-edit"
         onClick={undefined}
         style={null}
       />
@@ -8058,7 +8058,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         type="button"
       >
         <i
-          className="sg-icon sg-icon-plus"
+          className="sg-icon sg-icon-plus sg-icon sg-icon-plus"
           onClick={undefined}
           style={null}
         />
@@ -8143,7 +8143,7 @@ exports[`Storyshots Small Footer Footer Simple 1`] = `
 >
   <span>
     <i
-      className="sg-icon sg-icon-help"
+      className="sg-icon sg-icon-help sg-icon sg-icon-help"
       onClick={undefined}
       style={null}
     />
@@ -8162,7 +8162,7 @@ exports[`Storyshots Small Footer Need Help Footer Simple 1`] = `
 >
   <span>
     <i
-      className="sg-icon sg-icon-help"
+      className="sg-icon sg-icon-help sg-icon sg-icon-help"
       onClick={undefined}
       style={null}
     />
@@ -8181,7 +8181,7 @@ exports[`Storyshots Small Footer Need Help Footer with Link 1`] = `
 >
   <span>
     <i
-      className="sg-icon sg-icon-help"
+      className="sg-icon sg-icon-help sg-icon sg-icon-help"
       onClick={undefined}
       style={null}
     />
@@ -8803,7 +8803,7 @@ exports[`Storyshots Table Standard 1`] = `
         className="actions"
       >
         <i
-          className="sg-icon sg-icon-ellipsis"
+          className="sg-icon sg-icon-ellipsis sg-icon sg-icon-ellipsis"
           onClick={undefined}
           style={null}
         />
@@ -8816,7 +8816,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-view"
+              className="sg-icon sg-icon-view sg-icon sg-icon-view"
               onClick={undefined}
               style={null}
             />
@@ -8827,7 +8827,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-pencil"
+              className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
               onClick={undefined}
               style={null}
             />
@@ -8838,7 +8838,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-copy"
+              className="sg-icon sg-icon-copy sg-icon sg-icon-copy"
               onClick={undefined}
               style={null}
             />
@@ -8849,7 +8849,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-trash"
+              className="sg-icon sg-icon-trash sg-icon sg-icon-trash"
               onClick={undefined}
               style={null}
             />
@@ -8888,7 +8888,7 @@ exports[`Storyshots Table Standard 1`] = `
         className="actions"
       >
         <i
-          className="sg-icon sg-icon-ellipsis"
+          className="sg-icon sg-icon-ellipsis sg-icon sg-icon-ellipsis"
           onClick={undefined}
           style={null}
         />
@@ -8901,7 +8901,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-view"
+              className="sg-icon sg-icon-view sg-icon sg-icon-view"
               onClick={undefined}
               style={null}
             />
@@ -8912,7 +8912,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-pencil"
+              className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
               onClick={undefined}
               style={null}
             />
@@ -8923,7 +8923,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-copy"
+              className="sg-icon sg-icon-copy sg-icon sg-icon-copy"
               onClick={undefined}
               style={null}
             />
@@ -8934,7 +8934,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-trash"
+              className="sg-icon sg-icon-trash sg-icon sg-icon-trash"
               onClick={undefined}
               style={null}
             />
@@ -8973,7 +8973,7 @@ exports[`Storyshots Table Standard 1`] = `
         className="actions"
       >
         <i
-          className="sg-icon sg-icon-ellipsis"
+          className="sg-icon sg-icon-ellipsis sg-icon sg-icon-ellipsis"
           onClick={undefined}
           style={null}
         />
@@ -8986,7 +8986,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-view"
+              className="sg-icon sg-icon-view sg-icon sg-icon-view"
               onClick={undefined}
               style={null}
             />
@@ -8997,7 +8997,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-pencil"
+              className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
               onClick={undefined}
               style={null}
             />
@@ -9008,7 +9008,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-copy"
+              className="sg-icon sg-icon-copy sg-icon sg-icon-copy"
               onClick={undefined}
               style={null}
             />
@@ -9019,7 +9019,7 @@ exports[`Storyshots Table Standard 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-trash"
+              className="sg-icon sg-icon-trash sg-icon sg-icon-trash"
               onClick={undefined}
               style={null}
             />
@@ -9509,7 +9509,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
           >
             <i
-              className="sg-icon sg-icon-info-circle"
+              className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
               onClick={undefined}
               style={null}
             />
@@ -9583,7 +9583,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
           >
             <i
-              className="sg-icon sg-icon-info-circle"
+              className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
               onClick={undefined}
               style={null}
             />
@@ -9658,7 +9658,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
           >
             <i
-              className="sg-icon sg-icon-info-circle"
+              className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
               onClick={undefined}
               style={null}
             />
@@ -9728,7 +9728,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
           >
             <i
-              className="sg-icon sg-icon-info-circle"
+              className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
               onClick={undefined}
               style={null}
             />
@@ -9802,7 +9802,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
           >
             <i
-              className="sg-icon sg-icon-info-circle"
+              className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
               onClick={undefined}
               style={null}
             />
@@ -9873,7 +9873,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
           >
             <i
-              className="sg-icon sg-icon-info-circle"
+              className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
               onClick={undefined}
               style={null}
             />
@@ -9948,7 +9948,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
           >
             <i
-              className="sg-icon sg-icon-info-circle"
+              className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
               onClick={undefined}
               style={null}
             />
@@ -10019,7 +10019,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
             onMouseLeave={[Function]}
           >
             <i
-              className="sg-icon sg-icon-info-circle"
+              className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
               onClick={undefined}
               style={null}
             />
@@ -10074,7 +10074,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="up"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10093,7 +10093,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="up"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10108,7 +10108,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="right"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10123,7 +10123,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="down"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10138,7 +10138,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="left"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10157,7 +10157,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="up"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10172,7 +10172,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="right"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10187,7 +10187,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="down"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10202,7 +10202,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="left"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10221,7 +10221,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="up"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10236,7 +10236,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="right"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10251,7 +10251,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="down"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10266,7 +10266,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="left"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10285,7 +10285,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="up"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10300,7 +10300,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="right"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10315,7 +10315,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="down"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10330,7 +10330,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="left"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10349,7 +10349,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="up"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10364,7 +10364,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="right"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10379,7 +10379,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="down"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10394,7 +10394,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="left"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10423,7 +10423,7 @@ exports[`Storyshots Tooltip Standard 1`] = `
       data-tooltip-pos="right"
     >
       <i
-        className="sg-icon sg-icon-info-circle"
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
         onClick={undefined}
         style={null}
       />
@@ -10863,7 +10863,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
         data-tooltip-pos="up"
       >
         <i
-          className="sg-icon sg-icon-info-circle"
+          className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
           onClick={undefined}
           style={null}
         />
@@ -11143,7 +11143,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         data-tooltip-pos="up"
       >
         <i
-          className="sg-icon sg-icon-info-circle"
+          className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
           onClick={undefined}
           style={null}
         />
@@ -11246,7 +11246,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
         className="card-unsub-prefs"
       >
         <i
-          className="sg-icon sg-icon-check-circle"
+          className="sg-icon sg-icon-check-circle sg-icon sg-icon-check-circle"
           onClick={undefined}
           style={null}
         />
@@ -11280,7 +11280,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-ellipsis-vertical"
+              className="sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical"
               onClick={undefined}
               style={null}
             />
@@ -11292,7 +11292,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-pencil"
+                  className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
                   onClick={undefined}
                   style={null}
                 />
@@ -11303,7 +11303,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-view"
+                  className="sg-icon sg-icon-view sg-icon sg-icon-view"
                   onClick={undefined}
                   style={null}
                 />
@@ -11314,7 +11314,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-export"
+                  className="sg-icon sg-icon-export sg-icon sg-icon-export"
                   onClick={undefined}
                   style={null}
                 />
@@ -11325,7 +11325,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-download"
+                  className="sg-icon sg-icon-download sg-icon sg-icon-download"
                   onClick={undefined}
                   style={null}
                 />
@@ -11336,7 +11336,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-contacts-alt"
+                  className="sg-icon sg-icon-contacts-alt sg-icon sg-icon-contacts-alt"
                   onClick={undefined}
                   style={null}
                 />
@@ -11402,7 +11402,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-ellipsis-vertical"
+              className="sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical"
               onClick={undefined}
               style={null}
             />
@@ -11414,7 +11414,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-pencil"
+                  className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
                   onClick={undefined}
                   style={null}
                 />
@@ -11425,7 +11425,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-view"
+                  className="sg-icon sg-icon-view sg-icon sg-icon-view"
                   onClick={undefined}
                   style={null}
                 />
@@ -11436,7 +11436,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-export"
+                  className="sg-icon sg-icon-export sg-icon sg-icon-export"
                   onClick={undefined}
                   style={null}
                 />
@@ -11447,7 +11447,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-download"
+                  className="sg-icon sg-icon-download sg-icon sg-icon-download"
                   onClick={undefined}
                   style={null}
                 />
@@ -11458,7 +11458,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
                 onClick={[Function]}
               >
                 <i
-                  className="sg-icon sg-icon-contacts-alt"
+                  className="sg-icon sg-icon-contacts-alt sg-icon sg-icon-contacts-alt"
                   onClick={undefined}
                   style={null}
                 />
