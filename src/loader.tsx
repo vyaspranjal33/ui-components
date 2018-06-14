@@ -27,7 +27,7 @@ export const Loader: React.SFC<LoaderProps> = ({
   }
   return (
     <svg
-      className={cn(Styles['sg-loader'], className, {
+      className={cn('sg-loader', Styles['sg-loader'], className, {
         [Styles['is-centered']]: centered,
         [Styles['is-large']]: large,
         [Styles['is-small']]: small,
