@@ -19,7 +19,7 @@
     "snapshot": "yarn test -u",
     "lint-snapshot": "yarn lint-fix && yarn snapshot",
     "image-snapshots": "./imageSnapshot.sh",
-    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image --detectOpenHandles --forceExit"
+    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image --forceExit -i"
   },
   "lint-staged": {
     "./src/**/*.{ts,tsx}": [
@@ -91,7 +91,7 @@
     "source-map": "^0.7.0",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.19.0",
-    "ts-jest": "^21.2.4",
+    "ts-jest": "^22.4.6",
     "ts-loader": "^4.3.0",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.13.0",
