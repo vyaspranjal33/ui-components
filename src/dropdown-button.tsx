@@ -71,22 +71,22 @@ export class DropdownButton extends React.Component<
     });
 
     return (
-      <div className={Styles['btn-list']}>
+      <div className={btnStyles['btn-list']}>
         <div
           className={cn(
             btnStyles.btn,
             Styles['btn-dropdown'],
             Styles.dropdown,
-            Styles[`btn-${buttonType}`],
+            btnStyles[`btn-${buttonType}`],
             {
-              [Styles['btn-dropdown-gear']]: gear && !icon,
-              [Styles['btn-on-dark']]: onDark,
-              [Styles['btn-small']]: small,
+              [btnStyles['btn-dropdown-gear']]: gear && !icon,
+              [btnStyles['btn-on-dark']]: onDark,
+              [btnStyles['btn-small']]: small,
               [Styles['has-badge']]: hasBadge,
               [Styles['has-icon']]: hasIcon || loading,
-              [Styles['is-active']]: isActive,
-              [Styles['is-disabled']]: disabled,
-              [Styles['is-loading']]: loading,
+              [btnStyles['is-active']]: isActive,
+              [btnStyles['is-disabled']]: disabled,
+              [btnStyles['is-loading']]: loading,
             },
             className
           )}
