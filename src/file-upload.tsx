@@ -86,6 +86,7 @@ export class DroppedFile extends Component<DroppedFileProps> {
 
   public handleRemove = (event: any) => {
     event.preventDefault();
+
     const { onRemove } = this.props;
     onRemove(event);
   };
