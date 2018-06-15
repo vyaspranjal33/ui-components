@@ -54,7 +54,7 @@ export const Card: React.SFC<CardProps> = ({
     >
       {badge && <Badge {...badge} />}
       {icon && (
-        <div className="card-icon">
+        <div className={Styles['card-icon']}>
           <Icon size={iconSize} type={icon} />
         </div>
       )}

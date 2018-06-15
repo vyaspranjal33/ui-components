@@ -313,6 +313,7 @@
 
   .stats {
     position: relative;
+    width: 130px;
 
     &.delivered .stats-line {
       background-color: $stats-delivered;

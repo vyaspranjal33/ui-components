@@ -31,7 +31,7 @@ export const Icon: React.SFC<IconProps> = ({
       Styles[`sg-icon-${type}`],
       {
         [className]: !!className,
-        [`is-size-${size}`]: size,
+        [Styles[`is-size-${size}`]]: size,
       }
     )}
     onClick={handleClick}

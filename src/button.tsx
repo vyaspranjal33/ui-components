@@ -89,15 +89,22 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   return React.cloneElement(
     children,
     {
-      className: cn('btn', Styles.btn, Styles[`btn-${type}`], className, {
-        [Styles['btn-on-dark']]: onDark,
-        [Styles['btn-small']]: small,
-        [Styles['has-badge']]: hasBadge,
-        [Styles['has-icon']]: hasIcon || loading,
-        [Styles['is-active']]: active,
-        [Styles['is-disabled']]: disabled,
-        [Styles['is-loading']]: loading,
-      }),
+      className: cn(
+        'btn',
+        `btn-${type}`,
+        Styles.btn,
+        Styles[`btn-${type}`],
+        className,
+        {
+          [Styles['btn-on-dark']]: onDark,
+          [Styles['btn-small']]: small,
+          [Styles['has-badge']]: hasBadge,
+          [Styles['has-icon']]: hasIcon || loading,
+          [Styles['is-active']]: active,
+          [Styles['is-disabled']]: disabled,
+          [Styles['is-loading']]: loading,
+        }
+      ),
       id,
       onClick,
       ...attributes,

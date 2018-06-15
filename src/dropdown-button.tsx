@@ -75,7 +75,7 @@ export class DropdownButton extends React.Component<
         <div
           className={cn(
             btnStyles.btn,
-            Styles['btn-dropdown'],
+            btnStyles['btn-dropdown'],
             Styles.dropdown,
             btnStyles[`btn-${buttonType}`],
             {
@@ -84,6 +84,8 @@ export class DropdownButton extends React.Component<
               [btnStyles['btn-small']]: small,
               [Styles['has-badge']]: hasBadge,
               [Styles['has-icon']]: hasIcon || loading,
+              [btnStyles['has-badge']]: hasBadge,
+              [btnStyles['has-icon']]: hasIcon || loading,
               [btnStyles['is-active']]: isActive,
               [btnStyles['is-disabled']]: disabled,
               [btnStyles['is-loading']]: loading,

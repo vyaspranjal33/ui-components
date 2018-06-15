@@ -50,19 +50,21 @@
     border-radius: 0;
   }
 
-  .email-card + .alert {
-    border: 1px solid $slate-20;
-    border-radius: 0 0 $border-radius $border-radius;
-  }
+  :global {
+    .email-card + .alert {
+      border: 1px solid $slate-20;
+      border-radius: 0 0 $border-radius $border-radius;
+    }
 
-  .alert {
-    width: 100%;
-    border-top: 1px solid $slate-20;
-  }
+    .alert {
+      width: 100%;
+      border-top: 1px solid $slate-20;
+    }
 
-  .alert p {
-    max-width: 100%;
-    margin: 0 20px 0 60px;
+    .alert p {
+      max-width: 100%;
+      margin: 0 20px 0 60px;
+    }
   }
 }
 
@@ -85,25 +87,23 @@
   border: 1px solid $slate-20;
   border-radius: $border-radius;
 
-  :global {
-    .btn {
-      width: 100%;
-      padding: 20px 60px;
-      font-weight: 600;
-      color: $slate;
-      background-color: $white;
-      border: transparent;
+  > .btn {
+    width: 100%;
+    padding: 20px 60px;
+    font-weight: 600;
+    color: $slate;
+    background-color: $white;
+    border: transparent;
 
-      &:hover::after {
-        @include icon-font-base;
-        position: absolute;
-        top: 50%;
-        right: 20px;
-        margin-top: -8px;
-        color: $sg-blue;
-        pointer-events: none;
-        content: $icon-pencil;
-      }
+    &:hover::after {
+      @include icon-font-base;
+      position: absolute;
+      top: 50%;
+      right: 20px;
+      margin-top: -8px;
+      color: $sg-blue;
+      pointer-events: none;
+      content: $icon-pencil;
     }
   }
 }
@@ -121,16 +121,18 @@
 
   // hide ellipsis and show action icons on hover
   &:hover {
-    .sg-icon-ellipsis {
-      opacity: 0;
-    }
+    :global {
+      .sg-icon-ellipsis {
+        opacity: 0;
+      }
 
-    .action-icons {
-      opacity: 1;
+      .action-icons {
+        opacity: 1;
+      }
     }
   }
 
-  .alert {
+  :global .alert {
     flex-grow: 1;
     width: 100%;
     border-top: 1px solid $slate-20;
@@ -305,28 +307,30 @@
   margin-left: auto;
   text-align: right;
 
-  .sg-icon {
-    vertical-align: middle;
-    transition: all 0.3s;
-  }
+  :global {
+    .sg-icon {
+      vertical-align: middle;
+      transition: all 0.3s;
+    }
 
-  .sg-icon-ellipsis {
-    font-size: 20px;
-    opacity: 1;
-  }
+    .sg-icon-ellipsis {
+      font-size: 20px;
+      opacity: 1;
+    }
 
-  .action-icons {
-    position: absolute;
-    top: 50%;
-    right: 12px;
-    display: inline-flex;
-    margin-top: -10px;
-    opacity: 0;
-    transition: opacity 0.3s;
+    .action-icons {
+      position: absolute;
+      top: 50%;
+      right: 12px;
+      display: inline-flex;
+      margin-top: -10px;
+      opacity: 0;
+      transition: opacity 0.3s;
 
-    span {
-      display: inline-block;
-      margin: 0 3px;
+      span {
+        display: inline-block;
+        margin: 0 3px;
+      }
     }
   }
 }

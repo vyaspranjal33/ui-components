@@ -37,7 +37,7 @@ export const Alert: React.SFC<AlertProps> = ({
 }) => {
   return (
     <div
-      className={cn(Styles.alert, Styles[`alert-${type}`], {
+      className={cn('alert', Styles.alert, Styles[`alert-${type}`], {
         [Styles['alert-inline']]: inline,
       })}
       role="alert"

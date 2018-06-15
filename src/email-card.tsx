@@ -31,7 +31,7 @@ const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
       )}
       {...attributes}
     >
-      <Buttonized type="secondary">
+      <Buttonized type="secondary" className={Styles.btn}>
         {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
       {alert}
@@ -211,7 +211,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
             />
           </Statistics>
         )}
-        <div className={Styles['email-card']}>
+        <div className={cn(Styles['email-card'], 'email-card')}>
           <div className={Styles['email-card-count']}>
             <p>Email {n}</p>
           </div>

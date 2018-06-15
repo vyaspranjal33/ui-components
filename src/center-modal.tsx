@@ -1,5 +1,6 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import Icon from './icon';
 import Styles from './styles/center-modal.module.scss';
 import cn from './utilities/classnames';
 import { ModalProps, modalWillReceiveProps } from './utilities/modals';
@@ -63,11 +64,7 @@ export class CenterModal extends Component<CenterModalProps> {
           {...attributes}
         >
           {hasX && (
-            <i
-              className={`${Styles['sg-icon']} ${Styles['sg-icon-x']}`}
-              data-role="close-center-modal"
-              onClick={onClose}
-            />
+            <Icon type="x" data-role="close-center-modal" onClick={onClose} />
           )}
           {renderHeader && <h1>{evaluateRenderProp(renderHeader)}</h1>}
           {evaluateRenderProp(renderBody)}

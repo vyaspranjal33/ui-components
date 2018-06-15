@@ -10,16 +10,18 @@
   border-radius: $border-radius;
 
   &:hover {
-    .actions {
-      :global {
-        .sg-icon-ellipsis {
-          opacity: 0;
+    :global {
+      .actions {
+        :global {
+          .sg-icon-ellipsis {
+            opacity: 0;
+          }
         }
       }
-    }
 
-    .action-icons {
-      opacity: 1;
+      .action-icons {
+        opacity: 1;
+      }
     }
   }
 

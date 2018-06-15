@@ -103,7 +103,7 @@ export class TextInput extends React.Component<
       ...attributes
     } = this.props;
 
-    const classes = cn(Styles['input-text-wrap'], {
+    const classes = cn('input-text-wrap', Styles['input-text-wrap'], {
       [Styles['has-value']]: !!value || value === 0,
       [Styles['is-disabled']]: this.props.isDisabled,
       [Styles['is-error']]: !this.props.isValid,

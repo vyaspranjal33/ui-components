@@ -95,7 +95,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       >
         <p className={Styles['segment-term-title']}>{title}</p>
         <div
-          className={cn(Styles['segment-term'], {
+          className={cn('segment-term', Styles['segment-term'], {
             [Styles['has-alert']]: !!renderAlert,
             [Styles['has-radios']]: radios,
             [Styles['has-separator']]: hasSeparator,
