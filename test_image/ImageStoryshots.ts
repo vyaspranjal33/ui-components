@@ -6,6 +6,7 @@ const targetPath = `file://${target}`;
 let counter = 0;
 
 const getMatchOptions = ({ context: { kind, story }, url }) => {
+  console.log(`--- ${story}`);
   console.log(story);
   // console.log(counter);
   counter++;
