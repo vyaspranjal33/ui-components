@@ -19,7 +19,7 @@
     "snapshot": "yarn test -u",
     "lint-snapshot": "yarn lint-fix && yarn snapshot",
     "image-snapshots": "./imageSnapshot.sh",
-    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image"
+    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image -i"
   },
   "lint-staged": {
     "./src/**/*.{ts,tsx}": [
