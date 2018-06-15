@@ -200,7 +200,7 @@
     }
   }
 
-  &.has-underline {
+  :global &.has-underline {
     cursor: help;
     border-bottom: 1px dotted $slate-40;
   }

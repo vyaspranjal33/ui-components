@@ -129,16 +129,16 @@
     .input-select-wrap {
       text-align: left;
     }
+  }
 
-    .segment-term-edit {
-      position: absolute;
-      top: 50%;
-      right: 20px;
-      margin-top: -8px;
-      color: $sg-blue;
-      cursor: pointer;
-      opacity: 0;
-    }
+  .segment-term-edit {
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    margin-top: -8px;
+    color: $sg-blue;
+    cursor: pointer;
+    opacity: 0;
   }
 }
 

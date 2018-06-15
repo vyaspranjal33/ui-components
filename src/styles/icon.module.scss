@@ -189,6 +189,13 @@
   }
 }
 
+.sg-icon-download,
+.sg-icon-export {
+  &::before {
+    content: $icon-download;
+  }
+}
+
 .sg-icon-drag {
   &::before {
     content: $icon-drag;

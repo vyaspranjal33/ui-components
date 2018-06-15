@@ -85,6 +85,7 @@ export class DropdownButton extends React.Component<
               [btnStyles['btn-small']]: small,
               [Styles['has-badge']]: hasBadge,
               [Styles['has-icon']]: hasIcon || loading,
+              [Styles['is-active']]: isActive,
               [btnStyles['has-badge']]: hasBadge,
               [btnStyles['has-icon']]: hasIcon || loading,
               [btnStyles['is-active']]: isActive,
@@ -98,7 +99,11 @@ export class DropdownButton extends React.Component<
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
           {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}
-          {gear ? <Icon type={icon || 'gear'} /> : label}
+          {gear ? (
+            <Icon className={btnStyles['sg-icon']} type={icon || 'gear'} />
+          ) : (
+            label
+          )}
           <ul className={Styles['dropdown-menu']}>{links}</ul>
         </div>
       </div>
