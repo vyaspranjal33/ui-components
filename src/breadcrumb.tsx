@@ -37,7 +37,10 @@ export const Breadcrumb: React.SFC<BreadcrumbProps> = ({
   className,
   ...attributes
 }) => (
-  <ol className={cn(Styles.breadcrumb, className)} {...attributes}>
+  <ol
+    className={cn('breadcrumb', Styles.breadcrumb, className)}
+    {...attributes}
+  >
     {mapper(children)}
     {!withoutTrailingSlash && <li />}
   </ol>

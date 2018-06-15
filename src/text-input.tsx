@@ -134,7 +134,7 @@ export class TextInput extends React.Component<
         {info && (
           <span
             className={cn(Styles['input-info'], {
-              danger: !isValid,
+              [Styles.danger]: !isValid,
             })}
             id={infoId}
           >

@@ -76,6 +76,7 @@ export class DropdownButton extends React.Component<
           className={cn(
             btnStyles.btn,
             btnStyles['btn-dropdown'],
+            'btn-dropdown',
             Styles.dropdown,
             btnStyles[`btn-${buttonType}`],
             {

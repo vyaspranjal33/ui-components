@@ -168,9 +168,7 @@
     margin-right: 6px;
   }
 
-  .card-id,
-  .actions,
-  .action-icons {
+  .card-id {
     position: absolute;
   }
 
@@ -180,24 +178,40 @@
     margin-bottom: 0;
   }
 
-  .actions {
-    right: 20px;
-    bottom: 20px;
-    text-align: right;
-  }
-
-  .action-icons {
-    top: 0;
-    right: 0;
-    width: 170px;
-    opacity: 0;
-  }
-
-  .action-icons {
-    transition: opacity 0.3s;
-  }
-
   :global {
+    .actions,
+    .action-icons {
+      position: absolute;
+    }
+
+    .actions {
+      right: 20px;
+      bottom: 20px;
+      text-align: right;
+    }
+
+    .actions .btn-dropdown {
+      padding: 6px 9px;
+      border: 0;
+    }
+
+    .actions .btn-dropdown:hover {
+      background-color: $slate-05;
+    }
+
+    // remove caret from button
+    .actions .btn-dropdown::before {
+      content: none;
+    }
+
+    .actions .btn-dropdown.is-active {
+      background-color: $slate-10;
+    }
+
+    .actions .sg-icon-ellipsis-vertical {
+      margin-right: 0;
+    }
+
     .sg-icon-ellipsis {
       transition: opacity 0.3s;
     }

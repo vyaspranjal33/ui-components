@@ -135,9 +135,9 @@ export class HTMLTooltip extends React.Component<
           {hoverTarget}
         </div>
         <div
-          className={cn(`tooltip-js-content ${className}`, {
-            'is-left': direction === 'left',
-            'is-visible': this.state.opened,
+          className={cn(Styles[`tooltip-js-content`], className, {
+            [Styles['is-left']]: direction === 'left',
+            [Styles['is-visible']]: this.state.opened,
           })}
           style={{ top: -(this.state.tooltipHeight / 2) - 3 }}
           data-tooltip-length={this.props.length}
