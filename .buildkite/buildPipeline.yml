@@ -20,28 +20,28 @@ steps:
   
   - name: ":jest: Lint and Test"
     command: 
-      - echo "--- 🐳 Pulling the docker image"
+      - echo -e "--- :docker: Pulling the docker image"
       - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
       - docker pull \$IMAGETAG
-      - echo '+++ 🃏 Running Snapshot Testing'
+      - echo -e '+++ :jest: Running Snapshot Testing'
       - docker-compose run build bash -c "yarn ci-test"
   
   - name: ":jest: 📸 :storybook: Image Snapshot Testing"
     command: 
-      - echo "--- 🐳 Pulling the docker image"
+      - echo -e "--- :docker: Pulling the docker image"
       - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
       - docker pull \$IMAGETAG
-      - echo "+++ 📸 Running Image Snapshots"
+      - echo -e "+++ :storybook: 📸 Running Image Snapshots"
       - ./imageSnapshot.sh
     artifact_paths:
       - "test_image/__image_snapshots__/__diff_output__/**/*"
       
   - name: ":storybook: Build Storybook"
     command: 
-      - echo "--- 🐳 Pulling the docker image"
+      - echo -e "--- :docker: Pulling the docker image"
       - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
       - docker pull \$IMAGETAG
-      - echo '+++ 📚 Building Storybook'
+      - echo -e '+++ :storybook: Building Storybook'
       - docker-compose run build bash -c "yarn build-storybook -o ./docs"
       - "tar -zcvf docs.tar.gz ./docs"
       - buildkite-agent artifact upload ./docs.tar.gz
@@ -51,7 +51,7 @@ steps:
       - echo "--- 🐳 Pulling the docker image"
       - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
       - docker pull \$IMAGETAG
-      - echo '+++ 🔨 Building Typescript and UI-components'
+      - echo -e '+++ :typescript: Building Typescript and UI-components'
       - docker-compose run build bash -c "yarn build"
       - "tar -zcvf builtPackages.tar.gz ./packages"
       - buildkite-agent artifact upload ./builtPackages.tar.gz

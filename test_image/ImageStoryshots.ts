@@ -6,10 +6,9 @@ const targetPath = `file://${target}`;
 let counter = 0;
 
 const getMatchOptions = ({ context: { kind, story }, url }) => {
-  console.log(`--- ${story}`);
-  console.log(story);
-  // console.log(counter);
   counter++;
+  console.log(`${counter} ${story}`);
+
   // if (story.includes('[animation]')) {
   //   return {
   //     failureThreshold: 0.2,
