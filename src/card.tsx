@@ -26,6 +26,7 @@ export interface CardProps {
   icon?: IconType;
   iconSize?: IconSizeType;
   selected?: boolean;
+  module?: boolean;
 }
 
 export const Card: React.SFC<CardProps> = ({
@@ -40,6 +41,7 @@ export const Card: React.SFC<CardProps> = ({
   title,
   className,
   selected,
+  module = false,
   ...attributes
 }) => {
   return (
@@ -49,6 +51,7 @@ export const Card: React.SFC<CardProps> = ({
         [Styles['is-inline']]: inline,
         [Styles['is-selected']]: selected,
         [Styles['is-thin']]: thin,
+        [Styles['is-module']]: module,
       })}
       {...attributes}
     >

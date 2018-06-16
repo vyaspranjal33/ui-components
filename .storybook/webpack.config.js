@@ -10,7 +10,7 @@ module.exports = function(config, env) {
   // Use babel to transpile JSX to ES5 JS
   config.module.rules.push({
     test: /\.tsx?$/,
-    exclude: /node_modules/,
+    exclude: [/node_modules/, /test_image/],
     include: [/stories/, /components/],
     loaders: [
       {
@@ -44,9 +44,7 @@ module.exports = function(config, env) {
 
   config.module.rules.push({
     test: /\.scss$/,
-    exclude: [
-      /\.module.scss$/
-    ],
+    exclude: [/\.module.scss$/],
     use: [
       require.resolve('style-loader'),
       {
