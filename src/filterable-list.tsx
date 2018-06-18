@@ -24,22 +24,22 @@ const inlineClearButtonStyle = {
 export interface FilterableListContainerProps {
   clearButtonInHeader?: boolean;
   clearButtonLabel?: string;
-  filterTypes?: string[];
-  items?: any[];
+  filterTypes?: Array<string>;
+  items?: Array<any>;
   onClear?: (event?: any) => void;
   onChange?: (event?: any, value?: string | number) => void;
-  onFilter?: (items: any[], filters: {}) => any[];
+  onFilter?: (items: Array<any>, filters: {}) => Array<any>;
   renderControls: (
     filterOptions: { [key: string]: any },
     handleFilterChange?: any
   ) => ReactElement<any>;
-  renderItems: (items: any[]) => ReactElement<any>;
+  renderItems: (items: Array<any>) => ReactElement<any>;
   showClearButton?: boolean;
   title: string;
 }
 
 export interface FilterableListProps extends FilterableListContainerProps {
-  items: any[];
+  items: Array<any>;
   className?: string;
 }
 
@@ -104,7 +104,7 @@ export class FilterableList extends PureComponent<
     );
   };
 
-  public get filteredItems(): any[] {
+  public get filteredItems(): Array<any> {
     // If a function to filter items is passed in, then use that.
     const { onFilter, items } = this.props;
     if (onFilter) {

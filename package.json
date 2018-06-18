@@ -11,7 +11,7 @@
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",
     "update-snapshot": "jest -u",
-    "ci-test": "yarn lint && yarn test",
+    "ci-test": "yarn lint && yarn test --ci",
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook -o ./docs",
     "prepublishOnly": "yarn build",

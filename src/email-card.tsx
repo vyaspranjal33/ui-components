@@ -46,7 +46,7 @@ export interface EmailCardDetail {
 }
 
 const EmailCardDetails: React.SFC<{
-  details?: EmailCardDetail[];
+  details?: Array<EmailCardDetail>;
   className?: string;
 }> = ({ details, className, ...attributes }) => {
   const rows =
@@ -125,7 +125,7 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
 };
 
 export interface EmailCardProps {
-  details?: EmailCardDetail[];
+  details?: Array<EmailCardDetail>;
   editing?: boolean;
   editable?: boolean;
   live?: boolean;

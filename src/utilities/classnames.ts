@@ -1,8 +1,10 @@
-export default function classNames(...args: any[]): string {
+export default function classNames(...args: Array<any>): string {
   let result = '';
 
   for (const arg of args) {
-    if (!arg) { continue; }
+    if (!arg) {
+      continue;
+    }
 
     if (typeof arg === 'string' || typeof arg === 'number') {
       result = `${result} ${arg}`;
@@ -17,7 +19,9 @@ export default function classNames(...args: any[]): string {
     if (typeof arg === 'object') {
       const keys = Object.keys(arg);
       for (const key of keys) {
-        if (arg[key]) { result = `${result} ${key}`; }
+        if (arg[key]) {
+          result = `${result} ${key}`;
+        }
       }
     }
   }

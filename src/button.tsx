@@ -67,7 +67,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
-  const content: any[] = [];
+  const content: Array<any> = [];
 
   if (hasBadge) {
     content.push(<Badge key={1}>{badge}</Badge>);
