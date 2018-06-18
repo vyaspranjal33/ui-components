@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import Styles from './styles/modal.module.scss';
 import cn from './utilities/classnames';
 import { ModalProps, modalWillReceiveProps } from './utilities/modals';
 
@@ -34,13 +35,17 @@ export class SideModal extends React.Component<SideModalProps> {
     return ReactDOM.createPortal(
       <Fragment>
         <div
-          className={cn('side-modal', className, { 'is-visible': isOpen })}
+          className={cn(Styles['side-modal'], className, {
+            [Styles['is-visible']]: this.props.isOpen,
+          })}
           {...attributes}
         >
           {children}
         </div>
         <div
-          className={cn('modal-mask', { 'is-visible': isOpen })}
+          className={cn(Styles['modal-mask'], {
+            [Styles['is-visible']]: this.props.isOpen,
+          })}
           onClick={onClose}
         />
       </Fragment>,

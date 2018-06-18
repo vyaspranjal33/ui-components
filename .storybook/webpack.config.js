@@ -10,7 +10,7 @@ module.exports = function(config, env) {
   // Use babel to transpile JSX to ES5 JS
   config.module.rules.push({
     test: /\.tsx?$/,
-    exclude: /node_modules/,
+    exclude: [/node_modules/, /test_image/],
     include: [/stories/, /components/],
     loaders: [
       {
@@ -29,7 +29,7 @@ module.exports = function(config, env) {
       {
         loader: 'awesome-typescript-loader',
         options: {
-          // config has jsx: preserve. TSX->JSX
+          useTranspileModule: true,
           configFileName: path.resolve(__dirname, 'tsconfig.json'),
         },
       },
@@ -44,8 +44,51 @@ module.exports = function(config, env) {
 
   config.module.rules.push({
     test: /\.scss$/,
-    loaders: ['style-loader', 'css-loader', 'sass-loader'],
-    include: path.resolve(__dirname, '../'),
+    exclude: [/\.module.scss$/],
+    use: [
+      require.resolve('style-loader'),
+      {
+        loader: require.resolve('css-loader'),
+        options: {
+          sourceMap: true,
+          importLoaders: 1,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+      {
+        loader: require.resolve('sass-loader'),
+        options: {
+          sourceMap: true,
+          importLoaders: 1,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    ],
+  });
+
+  config.module.rules.push({
+    test: /\.module.scss$/,
+    use: [
+      require.resolve('style-loader'),
+      {
+        loader: require.resolve('css-loader'),
+        options: {
+          sourceMap: true,
+          importLoaders: 1,
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+      {
+        loader: require.resolve('sass-loader'),
+        options: {
+          sourceMap: true,
+          modules: true,
+          importLoaders: 1,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    ],
   });
 
   config.resolve.mainFiles = ['index'];
@@ -55,6 +98,10 @@ module.exports = function(config, env) {
   config.resolve.extensions.push('.jsx');
   config.resolve.extensions.push('.css');
   config.resolve.extensions.push('.scss');
+
+  config.plugins = config.plugins.filter(
+    plugin => plugin.constructor.name !== 'UglifyJsPlugin'
+  );
 
   return config;
 };

@@ -29,9 +29,10 @@ steps:
   - name: ":jest: 📸 :storybook: Image Snapshot Testing"
     command: 
       - echo "--- 🐳 Pulling the docker image"
-      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker pull \$IMAGETAG
       - echo "+++ 📸 Running Image Snapshots"
-      - ./imageSnapshot.sh
+      - ./imageSnapshot.sh --ci
     artifact_paths:
       - "test_image/__image_snapshots__/__diff_output__/**/*"
       

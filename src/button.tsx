@@ -2,8 +2,10 @@ import React from 'react';
 import Badge from './badge';
 import Icon from './icon';
 import Loader from './loader';
+import Styles from './styles/button.module.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
+import withNativeProps from './withNativeProps';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
 
@@ -65,7 +67,7 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
-  const content: any[] = [];
+  const content: Array<any> = [];
 
   if (hasBadge) {
     content.push(<Badge key={1}>{badge}</Badge>);
@@ -87,15 +89,22 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   return React.cloneElement(
     children,
     {
-      className: cn('btn', `btn-${type}`, className, {
-        'btn-on-dark': onDark,
-        'btn-small': small,
-        'has-badge': hasBadge,
-        'has-icon': hasIcon || loading,
-        'is-active': active,
-        'is-disabled': disabled,
-        'is-loading': loading,
-      }),
+      className: cn(
+        'btn',
+        `btn-${type}`,
+        Styles.btn,
+        Styles[`btn-${type}`],
+        className,
+        {
+          [Styles['btn-on-dark']]: onDark,
+          [Styles['btn-small']]: small,
+          [Styles['has-badge']]: hasBadge,
+          [Styles['has-icon']]: hasIcon || loading,
+          [Styles['is-active']]: active,
+          [Styles['is-disabled']]: disabled,
+          [Styles['is-loading']]: loading,
+        }
+      ),
       id,
       onClick,
       ...attributes,
@@ -118,4 +127,4 @@ Button.defaultProps = {
   type: 'primary',
 };
 
-export default Button;
+export default withNativeProps(Button);

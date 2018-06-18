@@ -5,6 +5,8 @@ import React from 'react';
 import Alert from '../src/alert';
 import Button from '../src/button';
 
+import '../src/styles/global/main.scss';
+
 const stories = storiesOf('Alerts', module);
 
 stories.add('Success Alert', () => (

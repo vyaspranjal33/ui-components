@@ -1,0 +1,84 @@
+@import './reset.scss';
+@import './variables.scss';
+@import './mixins.scss';
+@import './typography.scss';
+@import './tables.scss';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a,
+a:hover,
+a:active,
+a:focus,
+button,
+button:hover,
+button:active,
+button:focus {
+  outline: none;
+}
+
+a,
+.link {
+  color: $sg-blue-80;
+  text-decoration: none;
+  transition: color 0.3s;
+
+  &:hover {
+    color: $sg-blue;
+  }
+}
+
+.main,
+.content-main {
+  margin: 60px 0 120px;
+}
+
+.content-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+
+  .breadcrumb {
+    flex-grow: 1;
+    width: 100%;
+  }
+}
+
+.content-block {
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+hr {
+  margin: $scale-base-up-06 0;
+  border: 1px solid $slate-20;
+  border-bottom: 0;
+
+  &.is-thin {
+    margin: $scale-base 0;
+  }
+
+  &.has-label {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 1px;
+    overflow: visible;
+
+    &::after {
+      padding: 0 12px;
+      font-size: 13px;
+      line-height: 20px;
+      text-align: center;
+      background-color: $white;
+      content: attr(data-label);
+    }
+  }
+}

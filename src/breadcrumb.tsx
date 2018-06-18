@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/breadcrumb.module.scss';
 import cn from './utilities/classnames';
 
 export interface BreadcrumbProps {
@@ -36,7 +37,10 @@ export const Breadcrumb: React.SFC<BreadcrumbProps> = ({
   className,
   ...attributes
 }) => (
-  <ol className={cn('breadcrumb', className)} {...attributes}>
+  <ol
+    className={cn('breadcrumb', Styles.breadcrumb, className)}
+    {...attributes}
+  >
     {mapper(children)}
     {!withoutTrailingSlash && <li />}
   </ol>

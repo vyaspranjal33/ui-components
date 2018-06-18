@@ -1,9 +1,9 @@
-var modalOpenClass = 'modal-open';
-export var modalWillReceiveProps = function (nextProps, currentProps) {
+const modalOpenClass = 'modal-open';
+export const modalWillReceiveProps = (nextProps, currentProps) => {
     if (nextProps.isOpen === currentProps.isOpen) {
         return;
     }
-    var bodyNode = currentProps.bodyNode;
+    const { bodyNode } = currentProps;
     if (nextProps.isOpen) {
         bodyNode.classList.add(modalOpenClass);
     }

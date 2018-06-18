@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
-import cn from './utilities/classnames';
-
+import Styles from './styles/text-input.module.scss';
 import { InputType } from './types/inputs';
+import cn from './utilities/classnames';
 
 const convertInputValue = (value: string, inputType: InputType) => {
   return inputType === 'number' ? parseInt(value, 10) : value;
@@ -103,21 +103,21 @@ export class TextInput extends React.Component<
       ...attributes
     } = this.props;
 
-    const classes = cn('input-text-wrap', {
-      'has-value': !!value || value === 0,
-      'is-disabled': isDisabled,
-      'is-error': !isValid,
-      'is-focused': this.state.isInputFocused,
-      'is-large': isLarge,
-      'is-required': isRequired,
-      'is-search': isSearch,
+    const classes = cn('input-text-wrap', Styles['input-text-wrap'], {
+      [Styles['has-value']]: !!value || value === 0,
+      [Styles['is-disabled']]: this.props.isDisabled,
+      [Styles['is-error']]: !this.props.isValid,
+      [Styles['is-focused']]: this.state.isInputFocused,
+      [Styles['is-large']]: this.props.isLarge,
+      [Styles['is-required']]: this.props.isRequired,
+      [Styles['is-search']]: this.props.isSearch,
     });
 
     const infoId = info && `${id}-info`;
 
     return (
       <div className={classes} style={this.inputStyle}>
-        <label className="input-text-label" htmlFor={id}>
+        <label className={Styles['input-text-label']} htmlFor={this.props.id}>
           {label}
         </label>
         <input
@@ -133,8 +133,8 @@ export class TextInput extends React.Component<
         />
         {info && (
           <span
-            className={cn('input-info', {
-              danger: !isValid,
+            className={cn(Styles['input-info'], {
+              [Styles.danger]: !isValid,
             })}
             id={infoId}
           >

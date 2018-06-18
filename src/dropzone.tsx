@@ -1,6 +1,7 @@
 import React from 'react';
 import Alert from './alert';
 import { AlertProps } from './alert';
+import Styles from './styles/dropzone.module.scss';
 import cn from './utilities/classnames';
 
 export interface DropzoneProps {
@@ -21,11 +22,11 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
 }) => {
   return (
     <section
-      className={cn('dropzone', className, {
-        'has-inline-alert': !!alert,
-        'is-active': active,
-        'is-hovered': hovered,
-        'is-large': large,
+      className={cn(Styles.dropzone, className, {
+        [Styles['has-inline-alert']]: !!alert,
+        [Styles['is-active']]: active,
+        [Styles['is-hovered']]: hovered,
+        [Styles['is-large']]: large,
       })}
       role="hidden"
       {...attributes}

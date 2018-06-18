@@ -1,5 +1,6 @@
 import React from 'react';
 import Checkbox from '../checkbox';
+import Styles from '../styles/switches.module.scss';
 import cn from '../utilities/classnames';
 
 export interface SwitchProps {
@@ -25,24 +26,32 @@ export const Switch: React.SFC<SwitchProps> = ({
 }) => {
   return (
     <div
-      className={cn('switch', className, {
-        'is-disabled': disabled,
+      className={cn(Styles['switch-toggle'], className, {
+        [Styles['is-disabled']]: disabled,
       })}
     >
       <input
         checked={on}
-        className="switch-checkbox"
+        className={Styles['switch-checkbox']}
         disabled={disabled}
         id={id}
         onChange={onChange}
         type="checkbox"
         value={value}
       />
-      <label className="switch-label" htmlFor={id}>
-        <div className="switch-option switch-option-off">{offText}</div>
-        <div className="switch-option switch-option-on">{onText}</div>
+      <label className={Styles['switch-label']} htmlFor={id}>
+        <div
+          className={cn(Styles['switch-option'], Styles['switch-option-off'])}
+        >
+          {offText}
+        </div>
+        <div
+          className={cn(Styles['switch-option'], Styles['switch-option-on'])}
+        >
+          {onText}
+        </div>
       </label>
-      <div className="switch-selector" />
+      <div className={Styles['switch-selector']} />
     </div>
   );
 };

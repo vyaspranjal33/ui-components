@@ -4,7 +4,7 @@ import cn from './utilities/classnames';
 
 import Badge from './badge';
 import Icon from './icon';
-
+import Styles from './styles/card.module.scss';
 import { color as ValidColor } from './types/color';
 import IconSizeType from './types/icon-sizes';
 import { IconType } from './types/icons';
@@ -26,6 +26,7 @@ export interface CardProps {
   icon?: IconType;
   iconSize?: IconSizeType;
   selected?: boolean;
+  module?: boolean;
 }
 
 export const Card: React.SFC<CardProps> = ({
@@ -40,25 +41,29 @@ export const Card: React.SFC<CardProps> = ({
   title,
   className,
   selected,
+  module = false,
   ...attributes
 }) => {
   return (
     <div
-      className={cn('card', className, {
-        'is-centered': centered,
-        'is-inline': inline,
-        'is-selected': selected,
-        'is-thin': thin,
+      className={cn(Styles.card, className, {
+        [Styles['is-centered']]: centered,
+        [Styles['is-inline']]: inline,
+        [Styles['is-selected']]: selected,
+        [Styles['is-thin']]: thin,
+        [Styles['is-module']]: module,
       })}
       {...attributes}
     >
       {badge && <Badge {...badge} />}
       {icon && (
-        <div className="card-icon">
+        <div className={Styles['card-icon']}>
           <Icon size={iconSize} type={icon} />
         </div>
       )}
-      {title && <h2 className={cn({ 'card-title': inline })}>{title}</h2>}
+      {title && (
+        <h2 className={cn({ [Styles['card-title']]: inline })}>{title}</h2>
+      )}
       {body && <p>{body}</p>}
       {children}
     </div>

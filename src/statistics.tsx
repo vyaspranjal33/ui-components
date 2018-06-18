@@ -1,5 +1,7 @@
 import React from 'react';
+import Styles from './styles/email-card.module.scss';
 import cn from './utilities/classnames';
+
 export const NO_STATS_CHAR = '—';
 export interface StatisticType {
   label: string;
@@ -17,12 +19,12 @@ export const EmailCardStat: React.SFC<{
   commonClass?: string;
 }> = ({ statistic, specificClass, commonClass }) => (
   <div className={commonClass} key={statistic.label}>
-    <p className={cn('stat', specificClass)}>
+    <p className={cn(Styles.stat, Styles[specificClass])}>
       {statistic.amount || parseInt(statistic.amount as string, 10) === 0
         ? statistic.amount
         : NO_STATS_CHAR}
     </p>
-    <p className="label">{statistic.label}</p>
+    <p className={Styles.label}>{statistic.label}</p>
   </div>
 );
 
@@ -33,7 +35,7 @@ export const Statistics: React.SFC<StatisticsProps> = ({
   ...attributes
 }) => {
   return (
-    <div className={cn('email-card-stats', className)} {...attributes}>
+    <div className={cn(Styles['email-card-stats'], className)} {...attributes}>
       {React.Children.map(children, (child: React.ReactElement<any>) => {
         return React.cloneElement(child, { commonClass });
       })}

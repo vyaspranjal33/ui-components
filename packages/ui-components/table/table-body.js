@@ -1,6 +1,5 @@
 import React from 'react';
-export var TableBody = function (_a) {
-    var children = _a.children, className = _a.className;
+export const TableBody = ({ children, className, }) => {
     return (React.createElement("tbody", { className: className }, children));
 };
 export default TableBody;

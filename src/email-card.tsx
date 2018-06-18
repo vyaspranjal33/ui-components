@@ -3,8 +3,11 @@ import Alert from './alert';
 import { Button, Buttonized } from './button';
 import Icon from './icon';
 import { EmailCardStat, Statistics, StatisticType } from './statistics';
+import BtnStyles from './styles/button.module.scss';
+import Styles from './styles/email-card.module.scss';
 import cn from './utilities/classnames';
 import findActiveIndex from './utilities/find-active-index';
+
 interface EmailCardSendTimeProps {
   value?: string;
   renderSendTimeLink?: (value: string) => any;
@@ -21,12 +24,14 @@ const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
 }) => {
   return (
     <div
-      className={cn('email-card-send-time', className, {
-        'has-value': !!value,
-      })}
+      className={cn(
+        Styles['email-card-send-time'],
+        { [Styles['has-value']]: !!value },
+        className
+      )}
       {...attributes}
     >
-      <Buttonized type="secondary">
+      <Buttonized type="secondary" className={Styles.btn}>
         {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
       {alert}
@@ -41,7 +46,7 @@ export interface EmailCardDetail {
 }
 
 const EmailCardDetails: React.SFC<{
-  details?: EmailCardDetail[];
+  details?: Array<EmailCardDetail>;
   className?: string;
 }> = ({ details, className, ...attributes }) => {
   const rows =
@@ -49,7 +54,7 @@ const EmailCardDetails: React.SFC<{
     details.map(detail => {
       return (
         <tr key={detail.label}>
-          <td className="label">{detail.label}</td>
+          <td className={Styles.label}>{detail.label}</td>
           <td>
             {(detail.renderEditDetailLink &&
               detail.renderEditDetailLink(detail.value)) ||
@@ -60,7 +65,7 @@ const EmailCardDetails: React.SFC<{
     });
 
   return (
-    <div className={cn('email-card-details', className)} {...attributes}>
+    <div className={Styles['email-card-details']}>
       <table>
         <tbody>{rows}</tbody>
       </table>
@@ -80,11 +85,11 @@ const EmailCardContent: React.SFC<EmailCardContentProps> = ({
   className,
   ...attributes
 }) => (
-  <div className={cn('email-card-content', className)} {...attributes}>
+  <div className={cn(Styles['email-card-content'], className)} {...attributes}>
     {thumbnailUrl ? (
       <a href="#">
         <img src={thumbnailUrl} onClick={onContentEditClick} />
-        <span className="email-card-content-edit">
+        <span className={Styles['email-card-content-edit']}>
           <Icon type="pencil" />
           Edit
         </span>
@@ -109,7 +114,7 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
 }) => {
   return (
     <div
-      className={cn('btn-list', 'email-card-add', className)}
+      className={cn(BtnStyles['btn-list'], Styles['email-card-add'], className)}
       {...attributes}
     >
       <Button type="secondary" onClick={onClick}>
@@ -120,7 +125,7 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
 };
 
 export interface EmailCardProps {
-  details?: EmailCardDetail[];
+  details?: Array<EmailCardDetail>;
   editing?: boolean;
   editable?: boolean;
   live?: boolean;
@@ -172,11 +177,11 @@ export class EmailCard extends React.Component<EmailCardProps> {
     const alertEl = renderAlert && renderAlert();
     return (
       <div
-        className={cn('email-card-wrap', className, {
-          'has-alert': !!renderAlert,
-          'is-editable': editable,
-          'is-live': live,
-          'is-paused': paused,
+        className={cn(Styles['email-card-wrap'], className, {
+          [Styles['has-alert']]: !!this.props.renderAlert,
+          [Styles['is-editable']]: this.props.editable,
+          [Styles['is-live']]: this.props.live,
+          [Styles['is-paused']]: this.props.paused,
         })}
         {...attributes}
       >
@@ -206,8 +211,8 @@ export class EmailCard extends React.Component<EmailCardProps> {
             />
           </Statistics>
         )}
-        <div className="email-card">
-          <div className="email-card-count">
+        <div className={cn(Styles['email-card'], 'email-card')}>
+          <div className={Styles['email-card-count']}>
             <p>Email {n}</p>
           </div>
           <EmailCardContent
