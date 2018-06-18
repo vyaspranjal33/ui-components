@@ -13,7 +13,7 @@ class ExampleContainer extends Component<any, { isOpen: boolean }> {
   constructor(props: any) {
     super(props);
 
-    this.state = { isOpen: false };
+    this.state = { isOpen: true };
   }
 
   public open = (e: any) => {
