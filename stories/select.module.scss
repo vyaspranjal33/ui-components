@@ -1,0 +1,239 @@
+// react-select style overrides
+// import from _variables.scss once it's moved over
+$border-radius: 2px;
+
+$sg-blue:      #1a82e2;
+$slate:        #294661;
+$slate-80:     #546b81;
+$slate-60:     #7f90a0;
+$slate-40:     #a9b5c0;
+$slate-20:     #d4dadf;
+$slate-10:     #e9ecef;
+$slate-02:     #fbfbfc;
+$ron-burgundy: #b71c1c;
+$steel:        #9e9e9e;
+$white:        #fff;
+
+$select-disabled-color: rgba($steel, 0.4);
+
+$icon-caret: "\e900";
+
+// import from _mixins.scss once it's moved over
+@mixin icon-font-base {
+  font-family: "styleguideicons";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@mixin dropdown-shadow {
+  box-shadow: 0 2px 6px 0 rgba($slate, 0.2);
+}
+
+.input-select-wrap {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+
+  .input-select-label {
+    display: block;
+    font-size: 12px;
+    line-height: 15px;
+    cursor: pointer;
+  }
+
+  &.is-required {
+    label::after {
+      position: absolute;
+      top: 4px;
+      width: 4px;
+      height: 4px;
+      margin-left: 5px;
+      background: $ron-burgundy;
+      border-radius: 4px;
+      content: "";
+    }
+  }
+
+  &.is-disabled {
+    .input-select-label {
+      cursor: default;
+    }
+
+    .input-select-label,
+    .input-select::after {
+      color: $select-disabled-color;
+    }
+  }
+
+  &.is-error {
+    .input-select-label {
+      color: $slate-60;
+    }
+
+    .input-select {
+      border-bottom-color: $ron-burgundy;
+      box-shadow: $ron-burgundy 0 1px 0;
+    }
+  }
+}
+
+.input-select {
+  font-size: 13px;
+  line-height: 24px;
+  border-bottom: 0;
+
+  &.input-select--isDisabled {
+    .input-select__single-value,
+    .input-select__dropdown-indicator::after {
+      color: $select-disabled-color;
+    }
+  }
+
+  &::after {
+    content: none;
+  }
+
+  .input-select__control {
+    min-height: auto;
+    background-color: transparent;
+    border: 0;
+    border-bottom: 1px solid $slate-20;
+    border-radius: 0;
+
+    &:hover {
+      border: 0;
+      border-bottom: 1px solid $slate-20;
+    }
+  }
+
+  .input-select__control--isFocused {
+    border-bottom-color: $sg-blue;
+    box-shadow: $sg-blue 0 1px 0;
+
+    &:hover {
+      border-bottom-color: $sg-blue;
+    }
+  }
+
+  .input-select__control--isDisabled {
+    border-bottom-color: $select-disabled-color;
+  }
+
+  .input-select__value-container {
+    padding: 0;
+  }
+
+  .input-select__value-container--hasValue > div {
+    padding: 0;
+    margin: 0;
+  }
+
+  .input-select__placeholder {
+    margin: 0;
+    color: $slate-40;
+  }
+
+  .input-select__single-value {
+    margin: 0;
+    color: $slate;
+  }
+
+  // these divs don't get any classes assigned to them
+  // could be problematic in the future, might need to add css-in-js
+  .input-select__placeholder + div,
+  .input-select__single-value + div {
+    padding: 0;
+    margin: 0;
+  }
+
+  .input-select__indicator-separator {
+    display: none;
+  }
+
+  .input-select__dropdown-indicator {
+    padding: 0;
+
+    &::after {
+      @include icon-font-base;
+      position: absolute;
+      top: 5px;
+      right: 0;
+      color: $slate-60;
+      content: $icon-caret;
+    }
+
+    svg {
+      display: none;
+    }
+  }
+
+  .input-select__clear-indicator {
+    display: none;
+  }
+
+  .input-select__value-container--isMulti .input-select__multi-value {
+    margin-right: 3px;
+    background-color: $sg-blue;
+  }
+
+  .input-select__multi-value__label {
+    padding: 0;
+    padding-left: 6px;
+    font-size: 12px;
+    line-height: 18px;
+  }
+
+  .input-select__multi-value__label,
+  .input-select__multi-value__remove {
+    color: $white;
+  }
+
+  .input-select__multi-value__remove:hover {
+    color: $white;
+    background-color: $sg-blue;
+  }
+
+  .input-select__group-heading {
+    padding: 9px 30px;
+    margin-bottom: 0;
+    color: $slate;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 18px;
+    text-transform: capitalize;
+  }
+
+  .input-select__menu {
+    @include dropdown-shadow;
+    margin: 0;
+    background-color: $slate-02;
+    border-color: $slate-10;
+    border-radius: $border-radius;
+  }
+
+  .input-select__menu-list {
+    padding: 0;
+  }
+
+  .input-select__option {
+    padding: 9px 30px;
+    color: $slate-80;
+    line-height: 18px;
+    outline: none;
+  }
+
+  .input-select__option--isFocused {
+    background-color: $slate-10;
+  }
+
+  .input-select__option--isSelected {
+    color: $slate;
+    background-color: $slate-20;
+  }
+}

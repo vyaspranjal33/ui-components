@@ -3,6 +3,7 @@ import Select, { components } from 'react-select';
 import CreatableSelect from 'react-select/lib/Creatable'
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
+import './select.module.scss';
 
 const stories = storiesOf('Select', module);
 
@@ -28,81 +29,101 @@ const powerups = [
 ];
 
 stories.add('Standard', () => (
-  <Select
-    defaultValue={feels[1]}
-    isClearable
-    name="single"
-    options={feels}
-  />
+  <div className="input-select-wrap">
+    <Select
+      className="input-select"
+      defaultValue={feels[1]}
+      name="single"
+      options={feels}
+    />
+  </div>
 ));
 
 stories.add('With placeholder', () => (
-  <Select
-    isClearable
-    placeholder="Goobers"
-    options={feels}
-  />
+  <div className="input-select-wrap">
+    <Select
+      className="input-select"
+      options={feels}
+      placeholder="Goobers"
+    />
+  </div>
 ));
 
 stories.add('With label', () => (
-  <div>
-    <small>Powerups</small>
-    <Select options={powerups} />
+  <div className="input-select-wrap">
+    <label className="input-select-label">Powerups</label>
+    <Select
+      className="input-select"
+      options={powerups} 
+    />
   </div>
 ));
 
 stories.add('With info', () => (
-  <div>
-    <Select options={powerups} />
-    <small>Read this to better understand the dropdown.</small>
+  <div className="input-select-wrap">
+    <Select
+      className="input-select"
+      options={powerups}
+    />
+    <span className="input-info">Read this to better understand the dropdown.</span>
   </div>
 ));
 
 stories.add('Disabled', () => (
-  <Select
-    defaultValue={feels[7]}
-    isClearable
-    isDisabled
-    options={feels}
-  />
+  <div className="input-select-wrap is-disabled">
+    <Select
+      className="input-select"
+      defaultValue={feels[7]}
+      isDisabled
+      options={feels}
+    />
+  </div>
 ));
 
 stories.add('Searchable', () => (
-  <Select
-    defaultValue={feels[1]}
-    isClearable
-    isSearchable
-    options={feels}
-  />
+  <div className="input-select-wrap">
+    <Select
+      className="input-select"
+      defaultValue={feels[1]}
+      isSearchable
+      options={feels}
+    />
+  </div>
 ));
 
 stories.add('Multi select', () => (
-  <Select
-    defaultValue={[powerups[0], powerups[1]]}
-    isClearable
-    isSearchable
-    className="whatever"
-    id="qa-hook"
-    options={powerups}
-  />
+  <div className="input-select-wrap">
+    <Select
+      className="input-select"
+      defaultValue={[powerups[0], powerups[1]]}
+      isSearchable
+      options={powerups}
+    />
+  </div>
 ));
 
 stories.add('Tagging', () => (
-  <CreatableSelect
-    isMulti
-    options={powerups}
-  />
+  <div className="input-select-wrap">
+    <CreatableSelect
+      className="input-select"
+      isMulti
+      options={powerups}
+    />
+  </div>
 ));
 
 stories.add('Option groups', () => (
-  <Select
-    name="groups"
-    placeholder="Feels vs. Powerups"
-    options={[
-      { label: 'Feels', options: feels },
-      { label: 'Powerups', options: powerups },
-    ]}
-  />
+  <div className="input-select-wrap">
+    <Select
+      className="input-select"
+      name="groups"
+      placeholder="Feels vs. Powerups"
+      options={[
+        { label: 'Feels', options: feels },
+        { label: 'Powerups', options: powerups },
+      ]}
+    />
+  </div>
 ));
 
 // This is just to illustrate 2 diff ways to add custom styles.

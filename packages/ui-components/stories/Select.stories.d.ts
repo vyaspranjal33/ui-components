@@ -1,1 +1,1 @@
-export {};
+import './select.module.scss';
