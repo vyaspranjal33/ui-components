@@ -1,5 +1,6 @@
 import React, { HTMLAttributes } from 'react';
 import { ButtonProps } from './button';
+import Styles from './styles/button.module.scss';
 import cn from './utilities/classnames';
 
 export interface ButtonListProps extends HTMLAttributes<HTMLDivElement> {
@@ -19,7 +20,10 @@ export const ButtonList: React.SFC<ButtonListProps> = ({
   ...attributes
 }) => {
   return (
-    <div className={cn('btn-list', className)} {...attributes}>
+    <div
+      className={cn('btn-list', Styles['btn-list'], className)}
+      {...attributes}
+    >
       {map(children, (button?: React.ReactElement<any>) => {
         return button && React.cloneElement(button, { onDark });
       })}

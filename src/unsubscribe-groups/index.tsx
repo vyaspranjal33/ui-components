@@ -4,6 +4,7 @@ import Actions, { Action } from '../actions';
 import Card from '../card';
 import Icon from '../icon';
 
+import Styles from '../styles/card.module.scss';
 import cn from '../utilities/classnames';
 
 export interface UnsubscribeGroupCardProps {
@@ -35,16 +36,16 @@ export const UnsubscribeGroupCard: React.SFC<UnsubscribeGroupCardProps> = ({
   return (
     <Card centered title={name} body={description} {...attributes}>
       {isDisplayedOnPreferencesPage && (
-        <p className="card-unsub-prefs">
+        <p className={Styles['card-unsub-prefs']}>
           <Icon type="check-circle" />
           Included in opt out preferences
         </p>
       )}
-      <p className="card-unsubs">
+      <p className={Styles['card-unsubs']}>
         <strong>Unsubscribes</strong>
         {unsubscribes}
       </p>
-      <p className="card-id">
+      <p className={Styles['card-id']}>
         <strong>ID</strong>
         &nbsp;{id}
       </p>

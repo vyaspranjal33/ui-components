@@ -2,6 +2,8 @@ import React from 'react';
 import Badge from './badge';
 import { Button, ButtonProps, ButtonType } from './button';
 import Icon from './icon';
+import btnStyles from './styles/button.module.scss';
+import Styles from './styles/dropdown.module.scss';
 import cn from './utilities/classnames';
 
 export interface DropdownButtonProps {
@@ -64,37 +66,45 @@ export class DropdownButton extends React.Component<
 
     const links = map(children, (link: React.ReactElement<any>) => {
       return React.cloneElement(link, {
-        className: `${link.props.className} dropdown-link`,
+        className: cn(link.props.className, Styles['dropdown-link']),
       });
     });
 
     return (
-      <div className="btn-list">
+      <div className={btnStyles['btn-list']}>
         <div
           className={cn(
-            'btn',
+            btnStyles.btn,
+            btnStyles['btn-dropdown'],
             'btn-dropdown',
-            'dropdown',
-            `btn-${buttonType}`,
-            className,
+            Styles.dropdown,
+            btnStyles[`btn-${buttonType}`],
             {
-              'btn-dropdown-gear': gear && !icon,
-              'btn-on-dark': onDark,
-              'btn-small': small,
-              'has-badge': hasBadge,
-              'has-icon': hasIcon || loading,
-              'is-active': isActive,
-              'is-disabled': disabled,
-              'is-loading': loading,
-            }
+              [btnStyles['btn-dropdown-gear']]: gear && !icon,
+              [btnStyles['btn-on-dark']]: onDark,
+              [btnStyles['btn-small']]: small,
+              [Styles['has-badge']]: hasBadge,
+              [Styles['has-icon']]: hasIcon || loading,
+              [Styles['is-active']]: isActive,
+              [btnStyles['has-badge']]: hasBadge,
+              [btnStyles['has-icon']]: hasIcon || loading,
+              [btnStyles['is-active']]: isActive,
+              [btnStyles['is-disabled']]: disabled,
+              [btnStyles['is-loading']]: loading,
+            },
+            className
           )}
           onClick={this.handleClick}
           {...attributes}
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
           {!gear && hasIcon && <Icon type={icon} onDark={type === 'primary'} />}
-          {gear ? <Icon type={icon || 'gear'} /> : label}
-          <ul className="dropdown-menu">{links}</ul>
+          {gear ? (
+            <Icon className={btnStyles['sg-icon']} type={icon || 'gear'} />
+          ) : (
+            label
+          )}
+          <ul className={Styles['dropdown-menu']}>{links}</ul>
         </div>
       </div>
     );

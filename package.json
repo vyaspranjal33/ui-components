@@ -5,13 +5,13 @@
   "scripts": {
     "start": "yarn run storybook",
     "declaresass": "webpack",
-    "build": "tsc --newline lf && node build.js",
+    "build": "webpack && tsc --newline lf && bash copyStyles.sh",
     "lerna": "lerna publish",
     "lint": "tslint --project ./tsconfig.json",
     "lint-fix": "tslint --project ./tsconfig.json --fix",
     "test": "jest --coverage",
     "update-snapshot": "jest -u",
-    "ci-test": "yarn lint && yarn test",
+    "ci-test": "yarn lint && yarn test --ci",
     "storybook": "start-storybook -s ./ -p 6006",
     "build-storybook": "build-storybook -o ./docs",
     "prepublishOnly": "yarn build",
@@ -19,7 +19,7 @@
     "snapshot": "yarn test -u",
     "lint-snapshot": "yarn lint-fix && yarn snapshot",
     "image-snapshots": "./imageSnapshot.sh",
-    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image -i"
+    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image --forceExit -i"
   },
   "lint-staged": {
     "./src/**/*.{ts,tsx}": [
@@ -91,7 +91,7 @@
     "source-map": "^0.7.0",
     "source-map-loader": "^0.2.3",
     "style-loader": "^0.19.0",
-    "ts-jest": "^21.2.4",
+    "ts-jest": "^22.4.6",
     "ts-loader": "^4.3.0",
     "tslint": "^5.8.0",
     "tslint-config-prettier": "^1.13.0",

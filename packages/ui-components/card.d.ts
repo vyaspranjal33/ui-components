@@ -18,6 +18,7 @@ export interface CardProps {
     icon?: IconType;
     iconSize?: IconSizeType;
     selected?: boolean;
+    module?: boolean;
 }
 export declare const Card: React.SFC<CardProps>;
 export default Card;

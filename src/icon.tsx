@@ -3,6 +3,8 @@ import IconSizeType from './types/icon-sizes';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
+import Styles from './styles/icon.module.scss';
+
 export interface IconProps {
   type: IconType;
   className?: string;
@@ -32,10 +34,16 @@ export const Icon: React.SFC<IconProps> = ({
 
   return (
     <i
-      className={cn('sg-icon', `sg-icon-${type}`, {
-        [className]: !!className,
-        [`is-size-${size}`]: size,
-      })}
+      className={cn(
+        className,
+        'sg-icon',
+        `sg-icon-${type}`,
+        Styles['sg-icon'],
+        Styles[`sg-icon-${type}`],
+        {
+          [Styles[`is-size-${size}`]]: size,
+        }
+      )}
       onClick={handleClick}
       style={iconStyle}
       {...attributes}

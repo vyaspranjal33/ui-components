@@ -2,11 +2,11 @@ import React from 'react';
 import cn from './utilities/classnames';
 
 export interface TruncatedListProps {
-  items: string[] | object[];
+  items: Array<string> | Array<object>;
   limit?: number;
   className?: string;
   link?: string;
-  renderItems?: (item: any[]) => JSX.Element;
+  renderItems?: (item: Array<any>) => JSX.Element;
   renderMore?: (truncatedCount: string, link: string) => JSX.Element;
 }
 

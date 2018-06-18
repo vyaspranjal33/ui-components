@@ -106,31 +106,31 @@ stories.add('Accordion - Editor', () => (
   <Accordion editor>
     <AccordionPanel open title={<h4>Add Modules</h4>}>
       <div>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title="Image" iconType="images" />
         </Card>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title={'Image & Text'} iconType="image-text" />
         </Card>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title="Text" iconType="text" />
         </Card>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title="Code" iconType="code" />
         </Card>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title="Columns" iconType="columns" />
         </Card>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title="Button" iconType="button" />
         </Card>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title="Divider" iconType="divider" />
         </Card>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title="Spacer" iconType="spacer" />
         </Card>
-        <Card className="is-module" centered>
+        <Card module centered>
           <CardContent title="Social" iconType="social" />
         </Card>
       </div>

@@ -3,18 +3,18 @@ import React from 'react';
 export interface SortableTableProps {
     children?: React.ReactNode;
     className?: string;
-    rowData?: object[];
+    rowData?: Array<object>;
     rowRenderer?: React.SFC<any>;
-    headerData?: HeaderData[];
+    headerData?: Array<HeaderData>;
     headerRenderer?: React.SFC<any>;
 }
 export interface HeaderData {
     name: string;
     dataKey: string;
-    sort?: (rowData: object[], dataKey: string) => object[];
+    sort?: (rowData: Array<object>, dataKey: string) => Array<object>;
 }
 export interface SortableTableState {
-    data?: object[];
+    data?: Array<object>;
     sortBy?: string;
     ascending?: boolean;
 }
