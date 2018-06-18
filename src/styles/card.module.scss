@@ -82,6 +82,8 @@
     padding: 0;
     cursor: move;
     transition: border-color 0.3s;
+    margin: 0 10px 10px 0;
+    display: inline-flex;
 
     &:hover {
       border-color: $slate-20;
