@@ -3324,7 +3324,9 @@ exports[`Storyshots Dropzone Dropzone (Active) 1`] = `
       "justifyContent": "center",
     }
   }
-/>
+>
+  <div />
+</section>
 `;
 
 exports[`Storyshots Dropzone Dropzone (Hovered) 1`] = `
@@ -3343,7 +3345,30 @@ exports[`Storyshots Dropzone Dropzone (Hovered) 1`] = `
       "justifyContent": "center",
     }
   }
-/>
+>
+  <div />
+</section>
+`;
+
+exports[`Storyshots Dropzone Dropzone (Invalid) 1`] = `
+<section
+  className="dropzone is-invalid"
+  onDragEnd={undefined}
+  onDragLeave={undefined}
+  onDragOver={undefined}
+  onDrop={undefined}
+  role="hidden"
+  style={
+    Object {
+      "alignItems": "center",
+      "display": "flex",
+      "fontSize": "14px",
+      "justifyContent": "center",
+    }
+  }
+>
+  <div />
+</section>
 `;
 
 exports[`Storyshots Dropzone Dropzone (Large) 1`] = `
@@ -3362,7 +3387,9 @@ exports[`Storyshots Dropzone Dropzone (Large) 1`] = `
       "justifyContent": "center",
     }
   }
-/>
+>
+  <div />
+</section>
 `;
 
 exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
@@ -3382,6 +3409,7 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
     }
   }
 >
+  <div />
   <div
     className="alert alert-warning alert-inline"
     role="alert"
@@ -3426,14 +3454,16 @@ exports[`Storyshots Dropzone Dropzone (with JSX Content and Alert) 1`] = `
     }
   }
 >
-  <span>
-    <a
-      href="https://github.com/sendgrid/style-guide/issues/198"
-    >
-      Here is the Style Guide issue
-    </a>
-     where we're going to fix this.
-  </span>
+  <div>
+    <span>
+      <a
+        href="https://github.com/sendgrid/style-guide/issues/198"
+      >
+        Here is the Style Guide issue
+      </a>
+       where we're going to fix this.
+    </span>
+  </div>
   <div
     className="alert alert-warning alert-inline"
     role="alert"
@@ -3478,15 +3508,17 @@ exports[`Storyshots Dropzone Dropzone (with JSX Content) 1`] = `
     }
   }
 >
-  <span>
-    Drag and drop your file or 
-    <a
-      href="#"
-    >
-      click here to select a file
-    </a>
-    .
-  </span>
+  <div>
+    <span>
+      Drag and drop your file or 
+      <a
+        href="#"
+      >
+        click here to select a file
+      </a>
+      .
+    </span>
+  </div>
 </section>
 `;
 
@@ -3507,7 +3539,9 @@ exports[`Storyshots Dropzone Dropzone (with String Content and Alert) 1`] = `
     }
   }
 >
-  This currently doesn't look great and I am well aware of that.
+  <div>
+    This currently doesn't look great and I am well aware of that.
+  </div>
   <div
     className="alert alert-warning alert-inline"
     role="alert"
@@ -3552,7 +3586,9 @@ exports[`Storyshots Dropzone Dropzone (with String Content) 1`] = `
     }
   }
 >
-  Drag and drop your file here.
+  <div>
+    Drag and drop your file here.
+  </div>
 </section>
 `;
 
@@ -3572,7 +3608,9 @@ exports[`Storyshots Dropzone Dropzone 1`] = `
       "justifyContent": "center",
     }
   }
-/>
+>
+  <div />
+</section>
 `;
 
 exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
@@ -6323,34 +6361,36 @@ exports[`Storyshots File Upload Basic File Upload with JSX Content 1`] = `
       }
     }
   >
-    <div
-      className={undefined}
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-        }
-      }
-    >
-      <i
-        className="sg-icon sg-icon-csv is-size-30"
-        onClick={undefined}
+    <div>
+      <div
+        className={undefined}
         style={
           Object {
-            "marginRight": "0.5em",
+            "alignItems": "center",
+            "display": "flex",
           }
         }
-      />
-      <span>
-        I am a 
-        <a
-          href="#"
-          onClick={[Function]}
-        >
-          banana
-        </a>
-        .
-      </span>
+      >
+        <i
+          className="sg-icon sg-icon-csv is-size-30"
+          onClick={undefined}
+          style={
+            Object {
+              "marginRight": "12px",
+            }
+          }
+        />
+        <span>
+          Drag and drop your CSV file here or 
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            select a CSV file to upload
+          </a>
+          .
+        </span>
+      </div>
     </div>
   </section>
   <input
