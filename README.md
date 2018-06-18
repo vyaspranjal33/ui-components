@@ -27,6 +27,43 @@ Maybe you don't want to import all of UI Components. You can import just the com
 import Badge from '@sendgrid/ui-components/badge
 ```
 
+### Getting Styles to Work
+
+UI-Components uses a mix of module styles and global styles to insert style guide.  To use module styles for each individual component, you'll need to update your webpack config to parse module styles from files with the naming convention ".module.scss".
+
+```js
+config.module.rules.push({
+    test: /\.module.scss$/,
+    use: [
+      require.resolve('style-loader'),
+      {
+        loader: require.resolve('css-loader'),
+        options: {
+          sourceMap: true,
+          importLoaders: 1,
+          modules: true,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+      {
+        loader: require.resolve('sass-loader'),
+        options: {
+          sourceMap: true,
+          modules: true,
+          importLoaders: 1,
+          localIdentName: '[name]__[local]___[hash:base64:5]',
+        },
+      },
+    ],
+  });
+```
+
+To use the global application styles included with styleguide (such as typography, reset, tables, and more), you'll need to include the following in your root component:
+
+```js
+import '../path_to_uicomponents/packages/styles/global/main.scss';
+```
+
 ### Starting Storybook
 
 After running `npm install` and ensuring that style-guide is pulled properly just run `npm run storybook` and you should be good to go!
