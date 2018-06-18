@@ -20,11 +20,12 @@ export interface FileUploadProps {
 }
 
 export interface FileUploadRenderCallbackArguments {
-  active: boolean;
+  hasFile: boolean;
   file?: File;
   handleRemove: (event: any) => void;
   handleSelect: (event: any) => void;
   hovered: boolean;
+  invalid: boolean;
   FileSelectLink: (args: { children: string }) => JSX.Element;
 }
 
@@ -35,6 +36,7 @@ export type FileUploadRenderCallback = (
 export interface FileUploadState {
   files?: FileList;
   hovered: boolean;
+  invalid: boolean;
 }
 
 export interface FileSelectProps {
@@ -118,6 +120,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
   public state: FileUploadState = {
     files: null,
     hovered: false,
+    invalid: false,
   };
 
   public fileInput: HTMLInputElement = null;
@@ -128,14 +131,14 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     const files = getDraggedFiles(event);
     const isSupported = this.fileTypeIsSupported(files);
 
-    this.setState({ hovered: isSupported });
+    this.setState({ hovered: isSupported, invalid: !isSupported });
     this.props.onDragOver(event, files);
   };
 
   public handleDragLeave = (event: any): void => {
     event.preventDefault();
 
-    this.setState({ hovered: false });
+    this.setState({ hovered: false, invalid: false });
     this.props.onDragLeave(event);
   };
 
@@ -143,6 +146,8 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     event.preventDefault();
 
     const files = getDroppedFiles(event);
+
+    this.setState({ hovered: false, invalid: false });
     this.updateCurrentFile(files);
   };
 
@@ -183,11 +188,11 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
 
   public render() {
     const { FileSelectLink, handleRemove, handleSelect } = this;
-    const { hovered, files } = this.state;
+    const { hovered, files, invalid } = this.state;
     const { render, supportedType } = this.props;
 
     const [file] = toArray(files);
-    const active = !!file;
+    const hasFile = !!file;
 
     return (
       <section
@@ -198,11 +203,12 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
       >
         {render({
           FileSelectLink,
-          active,
           file,
           handleRemove,
           handleSelect,
+          hasFile,
           hovered,
+          invalid,
         })}
         <input
           type="file"

@@ -22,6 +22,8 @@ stories.add('Dropzone (Hovered)', () => <Dropzone hovered />);
 
 stories.add('Dropzone (Large)', () => <Dropzone large />);
 
+stories.add('Dropzone (Invalid)', () => <Dropzone invalid />);
+
 stories.add('Dropzone (with Alert)', () => <Dropzone alert={alert} />);
 
 stories.add('Dropzone (with String Content)', () => (

@@ -1,13 +1,9 @@
-import { action } from '@storybook/addon-actions';
-import { storiesOf } from '@storybook/react';
 import React, { Fragment } from 'react';
-import Dropzone from '../src/dropzone';
 
-import FileUpload, { DroppedFile, FileSelect } from '../src/file-upload';
+import Dropzone from './dropzone';
+import FileUpload, { DroppedFile, FileSelect } from './file-upload';
 
-const stories = storiesOf('File Upload', module);
-
-stories.add('Basic File Upload with JSX Content', () => (
+const CSVUpload = () => (
   <FileUpload
     render={({
       hasFile,
@@ -23,7 +19,8 @@ stories.add('Basic File Upload with JSX Content', () => (
         ) : (
           <FileSelect>
             <Fragment>
-              Drag and drop your CSV file here or <FileSelectLink>select a CSV file to upload</FileSelectLink>.
+              Drag and drop your CSV file here or{' '}
+              <FileSelectLink>select a CSV file to upload</FileSelectLink>.
             </Fragment>
           </FileSelect>
         )}
@@ -31,4 +28,6 @@ stories.add('Basic File Upload with JSX Content', () => (
     )}
     supportedType={'text/csv'}
   />
-));
+);
+
+export default CSVUpload;

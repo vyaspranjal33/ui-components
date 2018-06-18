@@ -9,6 +9,7 @@ export interface DropzoneProps {
   children?: string | React.ReactElement<any>;
   className?: string;
   hovered?: boolean;
+  invalid?: boolean;
   large?: boolean;
   onDragEnd?: (event: any) => void;
   onDragLeave?: (event: any) => void;
@@ -27,6 +28,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
   active,
   alert,
   hovered,
+  invalid,
   large,
   children,
   className,
@@ -42,6 +44,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
         'has-inline-alert': !!alert,
         'is-active': active,
         'is-hovered': hovered,
+        'is-invalid': invalid,
         'is-large': large,
       })}
       role="hidden"
@@ -52,7 +55,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
       onDragEnd={onDragEnd}
       onDrop={onDrop}
     >
-      {children}
+      <div>{children}</div>
       {alert &&
         React.cloneElement(alert, {
           ...alert.props,
@@ -65,6 +68,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
 Dropzone.defaultProps = {
   active: false,
   hovered: false,
+  invalid: false,
   large: false,
 };
 
