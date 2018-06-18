@@ -317,7 +317,7 @@ exports[`Storyshots Accordion Accordion - Large 1`] = `
       onClick={[Function]}
     >
       <i
-        className="sg-icon sg-icon-teammate sg-icon sg-icon-teammate accordion-icon"
+        className="accordion-icon sg-icon sg-icon-teammate sg-icon sg-icon-teammate"
         onClick={undefined}
         style={Object {}}
       />
@@ -1944,7 +1944,7 @@ exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical sg-icon"
+              className="sg-icon sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical"
               onClick={undefined}
               style={Object {}}
             />
@@ -2374,7 +2374,7 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
       className="sg-icon sg-icon-x sg-icon sg-icon-x"
       data-role="close-center-modal"
       onClick={[Function]}
-      style={null}
+      style={Object {}}
     />
     <p>
       Please do not feed the scorpions. Doing so could result in scorpion wounds, fines of up to $2,500 and up to 5 years of community service.
@@ -2863,7 +2863,7 @@ exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
     onClick={[Function]}
   >
     <i
-      className="sg-icon sg-icon-gear sg-icon sg-icon-gear sg-icon"
+      className="sg-icon sg-icon sg-icon-gear sg-icon sg-icon-gear"
       onClick={undefined}
       style={Object {}}
     />
@@ -3464,12 +3464,12 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
 >
   <div />
   <div
-    className="alert alert-warning alert-inline"
+    className="alert alert alert-warning alert-inline"
     role="alert"
   >
     <p>
       <i
-        className="sg-icon sg-icon-warning"
+        className="sg-icon sg-icon-warning sg-icon sg-icon-warning"
         onClick={undefined}
         style={Object {}}
       />
@@ -3481,7 +3481,7 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
       </a>
       . In nec augue eu lacus aliquam lobortis.
       <i
-        className="sg-icon sg-icon-x"
+        className="sg-icon sg-icon-x sg-icon sg-icon-x"
         onClick={[Function]}
         style={Object {}}
       />
@@ -3518,12 +3518,12 @@ exports[`Storyshots Dropzone Dropzone (with JSX Content and Alert) 1`] = `
     </span>
   </div>
   <div
-    className="alert alert-warning alert-inline"
+    className="alert alert alert-warning alert-inline"
     role="alert"
   >
     <p>
       <i
-        className="sg-icon sg-icon-warning"
+        className="sg-icon sg-icon-warning sg-icon sg-icon-warning"
         onClick={undefined}
         style={Object {}}
       />
@@ -3535,7 +3535,7 @@ exports[`Storyshots Dropzone Dropzone (with JSX Content and Alert) 1`] = `
       </a>
       . In nec augue eu lacus aliquam lobortis.
       <i
-        className="sg-icon sg-icon-x"
+        className="sg-icon sg-icon-x sg-icon sg-icon-x"
         onClick={[Function]}
         style={Object {}}
       />
@@ -6425,7 +6425,7 @@ exports[`Storyshots File Upload Basic File Upload with JSX Content 1`] = `
         }
       >
         <i
-          className="sg-icon sg-icon-csv is-size-30"
+          className="sg-icon sg-icon-csv sg-icon sg-icon-csv is-size-30"
           onClick={undefined}
           style={
             Object {
@@ -8201,7 +8201,7 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
       </strong>
     </p>
     <i
-      className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil segment-term-edit"
+      className="segment-term-edit sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
       onClick={undefined}
       style={Object {}}
     />
@@ -8332,7 +8332,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         </strong>
       </p>
       <i
-        className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil segment-term-edit"
+        className="segment-term-edit sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
         onClick={undefined}
         style={Object {}}
       />
@@ -8357,7 +8357,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
         </strong>
       </p>
       <i
-        className="sg-icon sg-icon-pencil sg-icon sg-icon-pencil segment-term-edit"
+        className="segment-term-edit sg-icon sg-icon-pencil sg-icon sg-icon-pencil"
         onClick={undefined}
         style={Object {}}
       />
@@ -8717,7 +8717,7 @@ exports[`Storyshots Table Sortable (Custom Render) 1`] = `
         <i
           className="sg-icon sg-icon-button sg-icon sg-icon-button"
           onClick={undefined}
-          style={null}
+          style={Object {}}
         />
          
         Name
@@ -8729,7 +8729,7 @@ exports[`Storyshots Table Sortable (Custom Render) 1`] = `
         <i
           className="sg-icon sg-icon-button sg-icon sg-icon-button"
           onClick={undefined}
-          style={null}
+          style={Object {}}
         />
          
         Date
@@ -11600,7 +11600,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical sg-icon"
+              className="sg-icon sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical"
               onClick={undefined}
               style={Object {}}
             />
@@ -11722,7 +11722,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
             onClick={[Function]}
           >
             <i
-              className="sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical sg-icon"
+              className="sg-icon sg-icon sg-icon-ellipsis-vertical sg-icon sg-icon-ellipsis-vertical"
               onClick={undefined}
               style={Object {}}
             />
