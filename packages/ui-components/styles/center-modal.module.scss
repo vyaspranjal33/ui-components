@@ -41,7 +41,7 @@
       padding: 20px;
     }
 
-    .sg-icon-x {
+    :global .sg-icon-x {
       top: 20px;
     }
   }
@@ -95,19 +95,21 @@
     max-width: 100%;
   }
 
-  .alert {
-    margin-bottom: 15px;
-  }
+  :global {
+    .alert {
+      margin-bottom: 15px;
+    }
 
-  .alert .sg-icon-x {
-    top: 50%;
-  }
+    .alert .sg-icon-x {
+      top: 50%;
+    }
 
-  .sg-icon-x {
-    position: absolute;
-    top: 30px;
-    right: 30px;
-    font-size: 20px;
-    cursor: pointer;
+    .sg-icon-x {
+      position: absolute;
+      top: 30px;
+      right: 30px;
+      font-size: 20px;
+      cursor: pointer;
+    }
   }
 }

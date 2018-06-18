@@ -10,12 +10,18 @@
   border-radius: $border-radius;
 
   &:hover {
-    .actions .sg-icon-ellipsis {
-      opacity: 0;
-    }
+    :global {
+      .actions {
+        :global {
+          .sg-icon-ellipsis {
+            opacity: 0;
+          }
+        }
+      }
 
-    .action-icons {
-      opacity: 1;
+      .action-icons {
+        opacity: 1;
+      }
     }
   }
 
@@ -76,6 +82,8 @@
     padding: 0;
     cursor: move;
     transition: border-color 0.3s;
+    margin: 0 15px 15px 0;
+    display: inline-flex;
 
     &:hover {
       border-color: $slate-20;
@@ -87,12 +95,14 @@
       font-weight: 400;
     }
 
-    .sg-icon {
-      display: block;
-      padding-bottom: 9px;
-      margin-right: 0;
-      font-size: 20px;
-      color: $slate-60;
+    :global {
+      .sg-icon {
+        display: block;
+        padding-bottom: 9px;
+        margin-right: 0;
+        font-size: 20px;
+        color: $slate-60;
+      }
     }
   }
 
@@ -107,10 +117,12 @@
   }
 
   // bump icon font-size if placed inline w/ title
-  h2 .sg-icon {
-    margin-right: 6px;
-    font-size: 27px;
-    vertical-align: text-bottom;
+  h2 {
+    :global .sg-icon {
+      margin-right: 6px;
+      font-size: 27px;
+      vertical-align: text-bottom;
+    }
   }
 
   p {
@@ -130,9 +142,11 @@
     line-height: 30px;
   }
 
-  .badge {
-    position: absolute;
-    top: 27px;
+  :global {
+    .badge {
+      position: absolute;
+      top: 27px;
+    }
   }
 
   .card-unsub-prefs {
@@ -144,9 +158,11 @@
     letter-spacing: 1px;
     text-transform: uppercase;
 
-    .sg-icon-check-circle {
-      color: $mantis;
-      vertical-align: sub;
+    :global {
+      .sg-icon-check-circle {
+        color: $mantis;
+        vertical-align: sub;
+      }
     }
   }
 
@@ -154,9 +170,7 @@
     margin-right: 6px;
   }
 
-  .card-id,
-  .actions,
-  .action-icons {
+  .card-id {
     position: absolute;
   }
 
@@ -166,21 +180,42 @@
     margin-bottom: 0;
   }
 
-  .actions {
-    right: 20px;
-    bottom: 20px;
-    text-align: right;
-  }
+  :global {
+    .actions,
+    .action-icons {
+      position: absolute;
+    }
 
-  .action-icons {
-    top: 0;
-    right: 0;
-    width: 170px;
-    opacity: 0;
-  }
+    .actions {
+      right: 20px;
+      bottom: 20px;
+      text-align: right;
+    }
 
-  .action-icons,
-  .sg-icon-ellipsis {
-    transition: opacity 0.3s;
+    .actions .btn-dropdown {
+      padding: 6px 9px;
+      border: 0;
+    }
+
+    .actions .btn-dropdown:hover {
+      background-color: $slate-05;
+    }
+
+    // remove caret from button
+    .actions .btn-dropdown::before {
+      content: none;
+    }
+
+    .actions .btn-dropdown.is-active {
+      background-color: $slate-10;
+    }
+
+    .actions .sg-icon-ellipsis-vertical {
+      margin-right: 0;
+    }
+
+    .sg-icon-ellipsis {
+      transition: opacity 0.3s;
+    }
   }
 }

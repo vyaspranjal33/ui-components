@@ -43,20 +43,23 @@ export class DropdownButton extends React.Component {
                 className: cn(link.props.className, Styles['dropdown-link']),
             });
         });
-        return (React.createElement("div", { className: Styles['btn-list'] },
-            React.createElement("div", Object.assign({ className: cn(btnStyles.btn, Styles['btn-dropdown'], Styles.dropdown, Styles[`btn-${buttonType}`], {
-                    [Styles['btn-dropdown-gear']]: gear && !icon,
-                    [Styles['btn-on-dark']]: onDark,
-                    [Styles['btn-small']]: small,
+        return (React.createElement("div", { className: btnStyles['btn-list'] },
+            React.createElement("div", Object.assign({ className: cn(btnStyles.btn, btnStyles['btn-dropdown'], 'btn-dropdown', Styles.dropdown, btnStyles[`btn-${buttonType}`], {
+                    [btnStyles['btn-dropdown-gear']]: gear && !icon,
+                    [btnStyles['btn-on-dark']]: onDark,
+                    [btnStyles['btn-small']]: small,
                     [Styles['has-badge']]: hasBadge,
                     [Styles['has-icon']]: hasIcon || loading,
                     [Styles['is-active']]: isActive,
-                    [Styles['is-disabled']]: disabled,
-                    [Styles['is-loading']]: loading,
+                    [btnStyles['has-badge']]: hasBadge,
+                    [btnStyles['has-icon']]: hasIcon || loading,
+                    [btnStyles['is-active']]: isActive,
+                    [btnStyles['is-disabled']]: disabled,
+                    [btnStyles['is-loading']]: loading,
                 }, className), onClick: this.handleClick }, attributes),
                 !gear && hasBadge && React.createElement(Badge, null, badge),
                 !gear && hasIcon && React.createElement(Icon, { type: icon, onDark: type === 'primary' }),
-                gear ? React.createElement(Icon, { type: icon || 'gear' }) : label,
+                gear ? (React.createElement(Icon, { className: btnStyles['sg-icon'], type: icon || 'gear' })) : (label),
                 React.createElement("ul", { className: Styles['dropdown-menu'] }, links))));
     }
 }

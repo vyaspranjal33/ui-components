@@ -1,5 +1,5 @@
 import React from 'react';
-import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow } from './table';
+import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow, } from './table';
 export class SortableTable extends React.Component {
     constructor(props) {
         super(props);
@@ -7,7 +7,7 @@ export class SortableTable extends React.Component {
             return array.sort(function (a, b) {
                 const x = a[dataKey];
                 const y = b[dataKey];
-                return ((x < y) ? -1 : ((x > y) ? 1 : 0));
+                return x < y ? -1 : x > y ? 1 : 0;
             });
         };
         this.state = {
@@ -36,17 +36,17 @@ export class SortableTable extends React.Component {
     render() {
         const ascendingState = this.state.ascending;
         const sortByKey = this.state.sortBy;
-        const defaultHeaderRenderer = ({ name, dataKey, onClick, sort, ascending, sortBy }) => (React.createElement(HeaderCell, { sortKey: dataKey, onClick: onClick, ascending: ascendingState, sorted: dataKey === sortByKey }, name));
-        const defaultRowRenderer = ({ columns }) => (React.createElement(TableRow, null, this.props.headerData.map((header) => React.createElement(TableCell, { key: 'header-' + header.dataKey }, columns[header.dataKey]))));
+        const defaultHeaderRenderer = ({ name, dataKey, onClick, sort, ascending, sortBy, }) => (React.createElement(HeaderCell, { sortKey: dataKey, onClick: onClick, ascending: ascendingState, sorted: dataKey === sortByKey }, name));
+        const defaultRowRenderer = ({ columns }) => (React.createElement(TableRow, null, this.props.headerData.map((header) => (React.createElement(TableCell, { key: 'header-' + header.dataKey }, columns[header.dataKey])))));
         const HeaderRenderer = this.props.headerRenderer || defaultHeaderRenderer;
         const RowRenderer = this.props.rowRenderer || defaultRowRenderer;
         return (React.createElement(Table, null,
             React.createElement(TableHeader, null,
-                React.createElement(TableRow, null, this.props.headerData.map((ele, index) => React.createElement(HeaderRenderer, Object.assign({}, ele, { onClick: this.handleHeaderClick, sortBy: sortByKey, ascending: ascendingState, key: 'header-' + ele.dataKey }))))),
-            React.createElement(TableBody, null, this.state.data.map((ele, index) => React.createElement(RowRenderer, { key: 'row-' + index, columns: ele })))));
+                React.createElement(TableRow, null, this.props.headerData.map((ele, index) => (React.createElement(HeaderRenderer, Object.assign({}, ele, { onClick: this.handleHeaderClick, sortBy: sortByKey, ascending: ascendingState, key: 'header-' + ele.dataKey })))))),
+            React.createElement(TableBody, null, this.state.data.map((ele, index) => (React.createElement(RowRenderer, { key: 'row-' + index, columns: ele }))))));
     }
     performSort(rowData, headerData, sortBy) {
-        const sortIndex = headerData.findIndex((ele) => ele.dataKey === sortBy);
+        const sortIndex = headerData.findIndex(ele => ele.dataKey === sortBy);
         let data = [];
         if (typeof headerData[sortIndex].sort === 'function') {
             data = headerData[sortIndex].sort(rowData, headerData[sortIndex].dataKey);

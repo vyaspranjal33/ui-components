@@ -15,7 +15,7 @@ export const Icon = (_a) => {
     var { type, className, onClick: handleClick, onDark, size } = _a, attributes = __rest(_a, ["type", "className", "onClick", "onDark", "size"]);
     return (React.createElement("i", Object.assign({ className: cn('sg-icon', `sg-icon-${type}`, Styles['sg-icon'], Styles[`sg-icon-${type}`], {
             [className]: !!className,
-            [`is-size-${size}`]: size,
+            [Styles[`is-size-${size}`]]: size,
         }), onClick: handleClick, style: onDark ? lightStyle : null }, attributes)));
 };
 Icon.defaultProps = {

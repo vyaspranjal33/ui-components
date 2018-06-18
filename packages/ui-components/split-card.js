@@ -9,6 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import Card from './card';
+import Styles from './styles/card.module.scss';
 import cn from './utilities/classnames';
 export const SplitCardSeparator = (_a) => {
     var { label, className } = _a, attributes = __rest(_a, ["label", "className"]);
@@ -16,8 +17,8 @@ export const SplitCardSeparator = (_a) => {
 };
 export const SplitCard = (_a) => {
     var { children, className } = _a, attributes = __rest(_a, ["children", "className"]);
-    return (React.createElement(Card, Object.assign({ thin: true, className: cn('is-split', className) }, attributes),
-        React.createElement("div", { className: "split-content" }, children)));
+    return (React.createElement(Card, Object.assign({ thin: true, className: cn(Styles['is-split'], className) }, attributes),
+        React.createElement("div", { className: Styles['split-content'] }, children)));
 };
 export default SplitCard;
 //# sourceMappingURL=split-card.js.map

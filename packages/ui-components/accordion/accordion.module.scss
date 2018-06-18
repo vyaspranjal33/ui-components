@@ -1,3 +1,6 @@
+@import '../styles/global/variables.scss';
+@import '../styles/global/mixins.scss';
+
 .accordion-wrapper {
   background-color: $white;
   border: 1px solid $slate-10;
@@ -15,24 +18,7 @@
 
     .accordion-content {
       @include clearfix;
-      padding: 20px 15px;
-    }
-
-    .card.is-module {
-      float: left;
-      margin-right: 15px;
-      margin-bottom: 15px;
-    }
-
-    .card.is-module:nth-child(3n) {
-      margin-right: 0;
-    }
-
-    .card.is-module:nth-child(7),
-    .card.is-module:nth-child(8),
-    .card.is-module:nth-child(9) {
-      // add 5px to account for consistent bottom of 20px
-      margin-bottom: 5px;
+      padding: 20px 0 5px 15px;
     }
   }
 

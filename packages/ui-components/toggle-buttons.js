@@ -9,46 +9,11 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import Styles from './styles/button.module.scss';
+import ToggleAnything from './toggle-anything';
 import cn from './utilities/classnames';
-import findActiveIndex from './utilities/find-active-index';
-const { map } = React.Children;
 export const ToggleButtons = (_a) => {
-    var { children, onChange, className } = _a, attributes = __rest(_a, ["children", "onChange", "className"]);
-    return (React.createElement("div", Object.assign({ className: cn(Styles['btn-group'], className) }, attributes), map(children, (button, index) => {
-        return React.cloneElement(button, {
-            onClick(event) {
-                const { children: label, onClick } = button.props;
-                onClick(event);
-                onChange(event, label, index);
-            },
-            type: 'group-item',
-        });
-    })));
+    var { keys, selectedKey, children, onChange, className, style } = _a, attributes = __rest(_a, ["keys", "selectedKey", "children", "onChange", "className", "style"]);
+    return (React.createElement(ToggleAnything, { keys: keys, selectedKey: selectedKey, onChange: onChange }, (...args) => (React.createElement("div", Object.assign({ className: cn(className, Styles['btn-group']), style: style }, attributes), children(...args)))));
 };
-export class StatefulToggleButtons extends React.Component {
-    constructor() {
-        super(...arguments);
-        this.state = {
-            activeIndex: findActiveIndex(this.props.children),
-        };
-    }
-    render() {
-        const { activeIndex } = this.state;
-        const buttons = map(this.props.children, (button, index) => {
-            return React.cloneElement(button, {
-                active: index === activeIndex,
-            });
-        });
-        return (React.createElement(ToggleButtons, Object.assign({}, this.props, { onChange: this.handleChange }), buttons));
-    }
-    handleChange(event, label, index) {
-        const { onChange: handleChange } = this.props;
-        this.setState({
-            activeIndex: index,
-        }, () => {
-            handleChange(event, label, index);
-        });
-    }
-}
 export default ToggleButtons;
 //# sourceMappingURL=toggle-buttons.js.map

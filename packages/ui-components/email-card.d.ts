@@ -17,7 +17,7 @@ export interface EmailCardAddButtonProps {
 }
 export declare const EmailCardAddButton: React.SFC<EmailCardAddButtonProps>;
 export interface EmailCardProps {
-    details?: EmailCardDetail[];
+    details?: Array<EmailCardDetail>;
     editing?: boolean;
     editable?: boolean;
     live?: boolean;

@@ -12,6 +12,19 @@
   }
 }
 
+:global {
+  .input-checkbox-wrap,
+  .input-radio-wrap {
+    margin-bottom: 20px;
+
+    .input-info {
+      display: block;
+      margin-bottom: 0;
+      margin-left: 21px;
+    }
+  }
+}
+
 [type="checkbox"],
 [type="radio"] {
   position: absolute;

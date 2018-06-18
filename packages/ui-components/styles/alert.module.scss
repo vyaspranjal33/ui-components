@@ -15,10 +15,12 @@
       color: $alert-success-text;
     }
 
-    .btn-primary {
-      color: $alert-success-text;
-      background: $alert-success;
-      border-color: $alert-success-text;
+    :global {
+      .btn-primary {
+        color: $alert-success-text;
+        background: $alert-success;
+        border-color: $alert-success-text;
+      }
     }
   }
 
@@ -30,10 +32,12 @@
       color: $alert-warning-text;
     }
 
-    .btn-primary {
-      color: $alert-warning-text;
-      background: $alert-warning;
-      border-color: $alert-warning-text;
+    :global {
+      .btn-primary {
+        color: $alert-warning-text;
+        background: $alert-warning;
+        border-color: $alert-warning-text;
+      }
     }
   }
 
@@ -45,10 +49,12 @@
       color: $alert-danger-text;
     }
 
-    .btn-primary {
-      color: $alert-danger-text;
-      background: $alert-danger;
-      border-color: $alert-danger-text;
+    :global {
+      .btn-primary {
+        color: $alert-danger-text;
+        background: $alert-danger;
+        border-color: $alert-danger-text;
+      }
     }
   }
 
@@ -64,10 +70,12 @@
   &.alert-verification {
     background-color: $alert-verification;
 
-    .btn-primary {
-      color: $mantis;
-      background: $white;
-      border-color: $white;
+    :global {
+      .btn-primary {
+        color: $mantis;
+        background: $white;
+        border-color: $white;
+      }
     }
 
     .step,
@@ -91,10 +99,12 @@
   &.alert-trial {
     background-color: $alert-trial;
 
-    .btn-primary {
-      color: $white;
-      background: $slate;
-      border-color: $white;
+    :global {
+      .btn-primary {
+        color: $white;
+        background: $slate;
+        border-color: $white;
+      }
     }
   }
 
@@ -142,23 +152,25 @@
     line-height: 20px;
   }
 
-  .sg-icon {
-    position: absolute;
-    top: 50%;
-    left: -40px;
-    margin-top: -10px;
-    font-size: 20px;
+  :global {
+    .sg-icon {
+      position: absolute;
+      top: 50%;
+      left: -40px;
+      margin-top: -10px;
+      font-size: 20px;
 
-    &.sg-icon-x {
-      right: -40px;
-      left: auto;
-      cursor: pointer;
+      &.sg-icon-x {
+        right: -40px;
+        left: auto;
+        cursor: pointer;
+      }
     }
-  }
 
-  .btn {
-    margin-top: -5px;
-    margin-bottom: -5px;
-    margin-left: 20px;
+    .btn {
+      margin-top: -5px;
+      margin-bottom: -5px;
+      margin-left: 20px;
+    }
   }
 }

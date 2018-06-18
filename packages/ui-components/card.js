@@ -13,15 +13,16 @@ import Badge from './badge';
 import Icon from './icon';
 import Styles from './styles/card.module.scss';
 export const Card = (_a) => {
-    var { badge, body, centered, children, icon, iconSize, inline, thin, title, className, selected } = _a, attributes = __rest(_a, ["badge", "body", "centered", "children", "icon", "iconSize", "inline", "thin", "title", "className", "selected"]);
+    var { badge, body, centered, children, icon, iconSize, inline, thin, title, className, selected, module = false } = _a, attributes = __rest(_a, ["badge", "body", "centered", "children", "icon", "iconSize", "inline", "thin", "title", "className", "selected", "module"]);
     return (React.createElement("div", Object.assign({ className: cn(Styles.card, className, {
             [Styles['is-centered']]: centered,
             [Styles['is-inline']]: inline,
             [Styles['is-selected']]: selected,
             [Styles['is-thin']]: thin,
+            [Styles['is-module']]: module,
         }) }, attributes),
         badge && React.createElement(Badge, Object.assign({}, badge)),
-        icon && (React.createElement("div", { className: "card-icon" },
+        icon && (React.createElement("div", { className: Styles['card-icon'] },
             React.createElement(Icon, { size: iconSize, type: icon }))),
         title && (React.createElement("h2", { className: cn({ [Styles['card-title']]: inline }) }, title)),
         body && React.createElement("p", null, body),

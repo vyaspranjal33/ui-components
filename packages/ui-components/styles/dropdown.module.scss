@@ -67,8 +67,10 @@
     background: $slate-10;
   }
 
-  .sg-icon {
-    margin-right: 12px;
+  :global {
+    .sg-icon {
+      margin-right: 12px;
+    }
   }
 }
 

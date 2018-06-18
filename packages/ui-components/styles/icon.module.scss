@@ -189,6 +189,13 @@
   }
 }
 
+.sg-icon-download,
+.sg-icon-export {
+  &::before {
+    content: $icon-download;
+  }
+}
+
 .sg-icon-drag {
   &::before {
     content: $icon-drag;
@@ -216,6 +223,12 @@
 .sg-icon-ellipsis {
   &::before {
     content: $icon-ellipsis;
+  }
+}
+
+.sg-icon-ellipsis-vertical {
+  &::before {
+    content: $icon-ellipsis-vertical;
   }
 }
 

@@ -11,6 +11,7 @@ import React from 'react';
 import Card from './card';
 import Icon from './icon';
 import cn from './utilities/classnames';
+import Styles from './styles/card.module.scss';
 const iconTypes = {
     button: 'button',
     code: 'code',
@@ -37,7 +38,7 @@ const titles = {
 };
 export const ModuleCard = (_a) => {
     var { type, className } = _a, attributes = __rest(_a, ["type", "className"]);
-    return (React.createElement(Card, Object.assign({ centered: true, thin: true, className: cn('is-module', className) }, attributes),
+    return (React.createElement(Card, Object.assign({ centered: true, thin: true, className: cn('is-module', Styles['is-module'], className) }, attributes),
         React.createElement("p", null,
             React.createElement(Icon, { type: iconTypes[type] }),
             titles[type])));

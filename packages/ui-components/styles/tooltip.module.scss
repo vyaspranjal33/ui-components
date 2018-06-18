@@ -200,24 +200,26 @@
     }
   }
 
-  &.has-underline {
+  :global &.has-underline {
     cursor: help;
     border-bottom: 1px dotted $slate-40;
   }
 }
 
-[data-tooltip],
-.input-info-tooltip {
-  .sg-icon {
-    margin-left: 3px;
-    color: $slate-60;
-    vertical-align: middle;
-    cursor: pointer;
-    transition: 0.3s color;
+:global {
+  [data-tooltip],
+  .input-info-tooltip {
+    .sg-icon {
+      margin-left: 3px;
+      color: $slate-60;
+      vertical-align: middle;
+      cursor: pointer;
+      transition: 0.3s color;
 
-    &:hover,
-    &.is-hovered {
-      color: $slate;
+      &:hover,
+      &.is-hovered {
+        color: $slate;
+      }
     }
   }
 }

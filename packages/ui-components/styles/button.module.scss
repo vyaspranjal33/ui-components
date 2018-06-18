@@ -134,9 +134,13 @@ $btn-selectable-color:         $slate-80;
     @include btn-shadow;
   }
 
-  &.has-badge .badge {
-    color: $btn-primary-badge-color;
-    background-color: $btn-primary-badge-bg;
+  &.has-badge {
+    :global {
+      .badge {
+        color: $btn-primary-badge-color;
+        background-color: $btn-primary-badge-bg;
+      }
+    }
   }
 }
 
@@ -156,9 +160,13 @@ $btn-selectable-color:         $slate-80;
     @include btn-shadow;
   }
 
-  &.has-badge .badge {
-    color: $btn-secondary-badge-color;
-    background-color: $btn-secondary-badge-bg;
+  &.has-badge {
+    :global {
+      .badge {
+        color: $btn-secondary-badge-color;
+        background-color: $btn-secondary-badge-bg;
+      }
+    }
   }
 }
 
@@ -179,9 +187,13 @@ $btn-selectable-color:         $slate-80;
     color: $btn-danger-color;
   }
 
-  &.has-badge .badge {
-    color: $btn-danger-badge-color;
-    background-color: $btn-danger-badge-bg;
+  &.has-badge{
+    :global {
+      .badge {
+        color: $btn-danger-badge-color;
+        background-color: $btn-danger-badge-bg;
+      }
+    }
   }
 }
 
@@ -270,47 +282,52 @@ $btn-selectable-color:         $slate-80;
     }
   }
 
-  &.has-badge .badge {
-    color: $btn-dark-badge-color;
-    background-color: $btn-dark-badge-bg;
+  &.has-badge {
+    :global {
+      .badge {
+        color: $btn-dark-badge-color;
+        background-color: $btn-dark-badge-bg;
+      }
+    }
   }
 }
 
 .btn-group {
   display: inline-block;
+  padding: 4px;
+  border: 1px solid $sg-blue-80;
+  border-radius: $border-radius;
+
+  &.is-disabled {
+    border-color: $btn-disabled-border;
+
+    > .btn-group-item {
+      color: $btn-disabled-secondary-color;
+      pointer-events: none;
+
+      &:hover,
+      &:focus {
+        background-color: transparent;
+      }
+    }
+
+    > .btn-group-item.is-active {
+      color: $btn-disabled-color;
+      background-color: $btn-disabled-bg;
+      border-color: $btn-disabled-border;
+    }
+  }
 
   > .btn-group-item {
     float: left;
-    padding-right: 18px;
-    padding-left: 18px;
-    margin: 0;
+    padding: 6px 18px;
     color: $btn-group-color;
     background-color: $btn-group-bg;
-    border-color: $btn-group-border;
+    border: 1px solid transparent;
 
     &:hover,
     &:focus {
       background-color: $btn-group-bg-hover;
-    }
-
-    &:active {
-      @include btn-shadow;
-    }
-
-    &:first-child {
-      border-top-right-radius: 0;
-      border-bottom-right-radius: 0;
-    }
-
-    &:last-child {
-      margin-left: -1px;
-      border-bottom-right-radius: 0;
-      border-top-left-radius: 0;
-    }
-
-    &:not(:first-child):not(:last-child) {
-      margin-left: -1px;
-      border-radius: 0;
     }
 
     &.is-active {
@@ -318,6 +335,10 @@ $btn-selectable-color:         $slate-80;
       background-color: $btn-group-bg-active;
       border-color: $btn-group-border-active;
     }
+  }
+
+  > .btn-group-item.btn-small {
+    padding: 2px 12px;
   }
 }
 

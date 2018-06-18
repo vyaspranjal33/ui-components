@@ -53,9 +53,11 @@
     }
   }
 
-  .input-text-wrap,
-  .input-select-wrap {
-    margin-bottom: 0;
+  :global {
+    .input-text-wrap,
+    .input-select-wrap {
+      margin-bottom: 0;
+    }
   }
 
   .filter-remove {
