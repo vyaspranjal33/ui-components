@@ -1,4 +1,4 @@
-FROM node:8-slim
+FROM node:8.11.3-jessie
 
 # See https://crbug.com/795759
 
