@@ -10,19 +10,29 @@ var __rest = (this && this.__rest) || function (s, e) {
 import React from 'react';
 import Styles from './styles/dropzone.module.scss';
 import cn from './utilities/classnames';
+const dropzoneStyle = {
+    alignItems: 'center',
+    display: 'flex',
+    fontSize: '14px',
+    justifyContent: 'center',
+};
 export const Dropzone = (_a) => {
-    var { active, children: alert, hovered, large, className } = _a, attributes = __rest(_a, ["active", "children", "hovered", "large", "className"]);
+    var { active, alert, hovered, invalid, large, children, className, onDragOver, onDragLeave, onDragEnd, onDrop } = _a, attributes = __rest(_a, ["active", "alert", "hovered", "invalid", "large", "children", "className", "onDragOver", "onDragLeave", "onDragEnd", "onDrop"]);
     return (React.createElement("section", Object.assign({ className: cn(Styles.dropzone, className, {
             [Styles['has-inline-alert']]: !!alert,
             [Styles['is-active']]: active,
             [Styles['is-hovered']]: hovered,
+            [Styles['is-invalid']]: invalid,
             [Styles['is-large']]: large,
-        }), role: "hidden" }, attributes), alert &&
-        React.cloneElement(alert, Object.assign({}, alert.props, { inline: true }))));
+        }), role: "hidden", style: dropzoneStyle }, attributes, { onDragOver: onDragOver, onDragLeave: onDragLeave, onDragEnd: onDragEnd, onDrop: onDrop }),
+        React.createElement("div", null, children),
+        alert &&
+            React.cloneElement(alert, Object.assign({}, alert.props, { inline: true }))));
 };
 Dropzone.defaultProps = {
     active: false,
     hovered: false,
+    invalid: false,
     large: false,
 };
 export default Dropzone;
