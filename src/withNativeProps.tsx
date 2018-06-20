@@ -3,9 +3,7 @@ import React from 'react';
 // knows what to do with 'primitiveProps'
 const withNativeProps = (WrappedCmp: any) => {
   return (props: any) => {
-    return (
-      <WrappedCmp {...props} />
-    );
+    return <WrappedCmp {...props} />;
   };
 };
 

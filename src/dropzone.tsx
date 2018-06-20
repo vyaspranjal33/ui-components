@@ -6,18 +6,37 @@ import cn from './utilities/classnames';
 
 export interface DropzoneProps {
   active?: boolean;
-  hovered?: boolean;
-  large?: boolean;
-  children?: React.ReactElement<AlertProps>;
+  alert?: React.ReactElement<AlertProps>;
+  children?: string | React.ReactElement<any>;
   className?: string;
+  hovered?: boolean;
+  invalid?: boolean;
+  large?: boolean;
+  onDragEnd?: (event: any) => void;
+  onDragLeave?: (event: any) => void;
+  onDragOver?: (event: any) => void;
+  onDrop?: (event: any) => void;
 }
+
+const dropzoneStyle = {
+  alignItems: 'center',
+  display: 'flex',
+  fontSize: '14px',
+  justifyContent: 'center',
+};
 
 export const Dropzone: React.SFC<DropzoneProps> = ({
   active,
-  children: alert,
+  alert,
   hovered,
+  invalid,
   large,
+  children,
   className,
+  onDragOver,
+  onDragLeave,
+  onDragEnd,
+  onDrop,
   ...attributes
 }) => {
   return (
@@ -26,11 +45,18 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
         [Styles['has-inline-alert']]: !!alert,
         [Styles['is-active']]: active,
         [Styles['is-hovered']]: hovered,
+        [Styles['is-invalid']]: invalid,
         [Styles['is-large']]: large,
       })}
       role="hidden"
+      style={dropzoneStyle}
       {...attributes}
+      onDragOver={onDragOver}
+      onDragLeave={onDragLeave}
+      onDragEnd={onDragEnd}
+      onDrop={onDrop}
     >
+      <div>{children}</div>
       {alert &&
         React.cloneElement(alert, {
           ...alert.props,
@@ -43,6 +69,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
 Dropzone.defaultProps = {
   active: false,
   hovered: false,
+  invalid: false,
   large: false,
 };
 
