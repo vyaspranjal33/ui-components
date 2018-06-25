@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 1.0.1
+- PageHeader styles have been brought inline with typography standards
 ## 0.14.8
 - Support disabling the add new unsub group card
 ## 0.14.7

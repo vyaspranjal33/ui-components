@@ -7733,18 +7733,12 @@ exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page He
   </ol>
   <div
     className="content-header"
-    style={
-      Object {
-        "marginTop": 10,
-      }
-    }
   >
     <h1
       style={
         Object {
           "color": "#294661",
           "fontFamily": "Colfax,Proxima Nova,Helvetica,sans-serif",
-          "fontWeight": 300,
         }
       }
     >
