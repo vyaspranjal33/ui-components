@@ -37284,13 +37284,9 @@ var __rest = undefined && undefined.__rest || function (s, e) {
     }return t;
 };
 
-var headerStyle = {
-    marginTop: 10
-};
 var headingStyle = {
     color: '#294661',
-    fontFamily: 'Colfax,Proxima Nova,Helvetica,sans-serif',
-    fontWeight: 300
+    fontFamily: 'Colfax,Proxima Nova,Helvetica,sans-serif'
 };
 var PageHeader = exports.PageHeader = function PageHeader(_a) {
     var children = _a.children,
@@ -37309,7 +37305,7 @@ var PageHeading = exports.PageHeading = function PageHeading(_a) {
 
     return _react2.default.createElement(
         'div',
-        _extends({ className: (0, _classnames2.default)('content-header', className), style: headerStyle }, attributes),
+        _extends({ className: (0, _classnames2.default)('content-header', className) }, attributes),
         _react2.default.createElement(
             'h1',
             { style: headingStyle },
@@ -41281,4 +41277,4 @@ exports.default = CreateNewGroupCard;
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=preview.a0886229d02d71ecf8c3.bundle.js.map
+//# sourceMappingURL=preview.6c362d70f3fdb2487a4f.bundle.js.map

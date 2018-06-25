@@ -9,13 +9,9 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import cn from './utilities/classnames';
-const headerStyle = {
-    marginTop: 10,
-};
 const headingStyle = {
     color: '#294661',
     fontFamily: 'Colfax,Proxima Nova,Helvetica,sans-serif',
-    fontWeight: 300,
 };
 export const PageHeader = (_a) => {
     var { children } = _a, attributes = __rest(_a, ["children"]);
@@ -23,7 +19,7 @@ export const PageHeader = (_a) => {
 };
 export const PageHeading = (_a) => {
     var { children, className, title } = _a, attributes = __rest(_a, ["children", "className", "title"]);
-    return (React.createElement("div", Object.assign({ className: cn('content-header', className), style: headerStyle }, attributes),
+    return (React.createElement("div", Object.assign({ className: cn('content-header', className) }, attributes),
         React.createElement("h1", { style: headingStyle }, title),
         children && React.createElement("div", { className: "btn-list" }, children)));
 };
