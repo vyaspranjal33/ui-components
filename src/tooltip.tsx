@@ -11,7 +11,7 @@ export interface TooltipProps {
   direction?: TooltipDirection;
   length?: TooltipLength;
   className?: string;
-  children?: React.ReactElement<any>;
+  children?: React.ReactNode | React.ReactElement<any>;
 }
 
 export const Tooltip: React.SFC<TooltipProps> = ({
