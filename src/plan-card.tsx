@@ -22,7 +22,7 @@ function renderPackageDetails(
   return packageDetails.map(p => (
     <div className={cn(Styles['packages-container'])}>
       <Card className={cn(Styles['card-padding'])} inline thin title="">
-        <div className={cn(Styles['col1 small'])}>
+        <div className={cn(Styles.col1, Styles.small)}>
           <h3 className={cn(Styles['package-name'])}>{p.name}</h3>
           <p>{p.packageSummary}</p>
         </div>
