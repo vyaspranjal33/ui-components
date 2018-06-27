@@ -1,8 +1,6 @@
-// import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-// import { Action, Actions } from '../src/actions';
 import { DetailsRow } from '../src/details-row';
 
 import '../src/styles/global/main.scss';

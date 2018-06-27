@@ -1,6 +1,5 @@
 import React, { Fragment } from 'react';
 import Icon from './icon';
-// import { IconType } from './types/icons';
 import Styles from './styles/details-row.module.scss';
 import { Tooltip } from './tooltip';
 import cn from './utilities/classnames';
