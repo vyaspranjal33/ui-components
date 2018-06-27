@@ -9,7 +9,7 @@ import '../src/styles/global/main.scss';
 
 const stories = storiesOf('Details Row', module);
 
-stories.add('Available Row', () => (
+stories.add('Available Details Row', () => (
     <div className="row">
         <div className="col-4" style={{ width: '300px' }}>
             <DetailsRow
@@ -27,7 +27,7 @@ stories.add('Available Row', () => (
     </div>
 ));
 
-stories.add('Unavailable Row', () => (
+stories.add('Unavailable Details Row', () => (
     <div className="row">
         <div className="col-4" style={{ width: '300px' }}>
             <DetailsRow
@@ -45,7 +45,7 @@ stories.add('Unavailable Row', () => (
 
 
 
-stories.add('Example', () => {
+stories.add('Details Row Example', () => {
     const planDetails = [
         {
             title: "Core Email API Features",
