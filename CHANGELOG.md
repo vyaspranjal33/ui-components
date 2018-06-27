@@ -1,5 +1,7 @@
 # CHANGELOG
-
+## 1.1.1
+- Add plan card component
+- Add detail row component
 ## 1.0.1
 - PageHeader styles have been brought inline with typography standards
 ## 0.14.8
