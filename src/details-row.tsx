@@ -21,7 +21,7 @@ export const DetailsRow: React.SFC<DetailsRowProps> = ({
   ...attributes
 }) => {
   return (
-    <p
+    <div
       className={cn(
         Styles['details-row'],
         Styles.title,
@@ -52,7 +52,7 @@ export const DetailsRow: React.SFC<DetailsRowProps> = ({
           title
         )}
       </p>
-    </p>
+    </div>
   );
 };
 

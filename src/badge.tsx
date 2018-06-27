@@ -35,6 +35,7 @@ Badge.defaultProps = {
   children: 0,
   className: '',
   color: '',
+  gradient: false,
 };
 
 export default Badge;
