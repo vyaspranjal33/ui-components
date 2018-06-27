@@ -50,12 +50,10 @@ button{
     margin-left: 270px;
 }
 
-.badge .gradient {
-    font-weight: normal !important;
-    border-radius: 1px;
-    background: linear-gradient(134.5deg, #6AFCB1 0%, #00BCD4 100%) !important;
-}
 .mantis {
     color: $mantis;
+  }
+  .small {
+    font-size: 13px;
   }
 }

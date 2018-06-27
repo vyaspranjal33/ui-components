@@ -8,6 +8,7 @@ export interface BadgeProps {
   color?: string;
   content?: string | number;
   className?: string;
+  gradient?: boolean;
 }
 
 export const Badge: React.SFC<BadgeProps> = ({
@@ -15,9 +16,17 @@ export const Badge: React.SFC<BadgeProps> = ({
   color,
   content,
   className,
+  gradient,
   ...attributes
 }) => (
-  <span className={cn('badge', Styles.badge, Styles[color])} {...attributes}>
+  <span
+    className={cn(
+      'badge',
+      Styles.badge,
+      gradient ? Styles.gradient : Styles[color]
+    )}
+    {...attributes}
+  >
     {children || content}
   </span>
 );

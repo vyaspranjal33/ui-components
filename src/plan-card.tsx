@@ -26,9 +26,12 @@ function renderPackageDetails(
           <h3 className={cn(Styles['package-name'])}>{p.name}</h3>
           <p>{p.packageSummary}</p>
         </div>
-        <div className={cn(Styles['small plan-status'])}>
+        <div className={cn(Styles.small, Styles['plan-status'])}>
           {p.name === selectedPackage ? (
-            <Icon className={cn(Styles['small-icon mantis'])} type="check" />
+            <Icon
+              className={cn(Styles['small-icon'], Styles.mantis)}
+              type="check"
+            />
           ) : null}
           {p.name === selectedPackage ? (
             'Your Current Plan'
@@ -72,13 +75,13 @@ export const PlanCard: React.SFC<PlanCardProps> = ({
     <div className={cn(Styles.col1)}>
       <h2>
         {planTitle}&nbsp;&nbsp;&nbsp;{recommended ? (
-          <Badge className={cn(Styles['plan-card'], Styles.gradient)}>
+          <Badge className={cn(Styles['plan-card'])} gradient>
             RECOMMENDED
           </Badge>
         ) : null}
       </h2>
       {renderPlanDetails(planDetails)}
-      <a className={cn(Styles['small link'])} href="#">
+      <a className={cn(Styles.small, Styles.link)} href="#">
         See Full Plan Comparison
       </a>
     </div>
