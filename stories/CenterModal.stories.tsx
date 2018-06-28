@@ -9,7 +9,10 @@ import { CenterModal } from '../src/center-modal';
 const stories = storiesOf('CenterModal', module);
 
 // Need a way to close/open the modal
+type ExampleContainerState = { isOpen: boolean };
 class ExampleContainer extends Component<any, { isOpen: boolean }> {
+  state: ExampleContainerState;
+
   constructor(props: any) {
     super(props);
 

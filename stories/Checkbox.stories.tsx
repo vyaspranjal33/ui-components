@@ -6,7 +6,10 @@ import { Checkbox } from '../src/checkbox';
 
 const stories = storiesOf('Checkbox', module);
 
+type ExampleState = { checked: boolean };
 class Example extends Component<any, any> {
+  state: ExampleState;
+
   constructor(props: any) {
     super(props);
 

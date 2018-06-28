@@ -5,7 +5,12 @@ import Switch from './index';
 
 const stories = storiesOf('Switch', module);
 
-class SwitchContainer extends Component<any, any> {
+interface SwitchState {
+  on: any;
+}
+class SwitchContainer extends Component<any, SwitchState> {
+  public state: SwitchState;
+
   constructor(props: any) {
     super(props);
 

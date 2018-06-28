@@ -50,7 +50,15 @@ const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
   );
 };
 
-export class AccordionPanel extends React.Component<AccordionPanelProps, any> {
+interface AccordionState {
+  open: any;
+}
+export class AccordionPanel extends React.Component<
+  AccordionPanelProps,
+  AccordionState
+> {
+  public state: AccordionState;
+
   constructor(props: any) {
     super(props);
 

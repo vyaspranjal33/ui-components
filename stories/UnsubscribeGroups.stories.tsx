@@ -3,11 +3,11 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
 import
-  UnsubscribeGroupCard,
-  {
-    CreateNewGroupCard,
-    UnsubscribeGroupAddEdit 
-  } from '../src/unsubscribe-groups/';
+UnsubscribeGroupCard,
+{
+  CreateNewGroupCard,
+  UnsubscribeGroupAddEdit
+} from '../src/unsubscribe-groups/';
 
 const stories = storiesOf('Unsubscribe Groups', module);
 
@@ -51,7 +51,7 @@ stories.add('Unsubscribe Group Card (isDisplayedOnPreferencesPage)', () => (
 stories.add('Create New Group Card', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <CreateNewGroupCard onClickCreate={action('create new group')}/>
+      <CreateNewGroupCard onClickCreate={action('create new group')} />
     </div>
   </div>
 ));
@@ -59,7 +59,7 @@ stories.add('Create New Group Card', () => (
 stories.add('Create New Group Card (disabled)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <CreateNewGroupCard onClickCreate={action('create new group')} disabled/>
+      <CreateNewGroupCard onClickCreate={action('create new group')} disabled />
     </div>
   </div>
 ));
@@ -76,7 +76,10 @@ stories.add('Add Unsubscribe Group', () => (
   />
 ));
 
+type UnsubscribeGroupEditContainerState = { isDeleteGroupModalOpen: boolean };
 class UnsubscribeGroupEditContainer extends Component<any, any> {
+  state: UnsubscribeGroupEditContainerState;
+
   constructor(props: any) {
     super(props);
 
@@ -109,5 +112,5 @@ class UnsubscribeGroupEditContainer extends Component<any, any> {
 }
 
 stories.add('Edit Unsubscribe Group', () => (
-  <UnsubscribeGroupEditContainer/>
+  <UnsubscribeGroupEditContainer />
 ));

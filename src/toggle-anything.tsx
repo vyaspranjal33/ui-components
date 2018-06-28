@@ -20,6 +20,8 @@ export default class ToggleAnything extends React.Component<
   ToggleAnythingProps,
   ToggleAnythingState
 > {
+  public state: ToggleAnythingState;
+
   constructor(props: ToggleAnythingProps) {
     super(props);
     const { selectedKey = null } = props;

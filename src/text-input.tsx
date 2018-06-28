@@ -1,4 +1,4 @@
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, ReactText } from 'react';
 import Styles from './styles/text-input.module.scss';
 import { InputType } from './types/inputs';
 import cn from './utilities/classnames';
@@ -30,10 +30,10 @@ export interface TextInputProps {
   style?: CSSProperties;
 }
 
-export class TextInput extends React.Component<
-  TextInputProps,
-  { isInputFocused: boolean }
-> {
+interface TextInputState {
+  isInputFocused: boolean;
+}
+export class TextInput extends React.Component<TextInputProps, TextInputState> {
   public static defaultProps = {
     fullWidth: false,
     info: '',
@@ -46,6 +46,8 @@ export class TextInput extends React.Component<
     style: {} as CSSProperties,
     value: '',
   };
+
+  public state: TextInputState;
 
   public onInputFocus: (event: any) => void;
 
@@ -147,10 +149,17 @@ export class TextInput extends React.Component<
   }
 }
 
-export class StatefulTextInput extends React.Component<TextInputProps> {
+interface StatefulTextInputState {
+  value: ReactText;
+}
+export class StatefulTextInput extends React.Component<
+  TextInputProps,
+  StatefulTextInputState
+> {
   public static defaultProps: Partial<TextInputProps> = {
     value: '',
   };
+  public state: StatefulTextInputState;
 
   constructor(props: TextInputProps) {
     super(props);

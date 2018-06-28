@@ -39,6 +39,8 @@ export class SortableTable extends React.Component<
   SortableTableProps,
   SortableTableState
 > {
+  public state: SortableTableState;
+
   constructor(props: SortableTableProps) {
     super(props);
 

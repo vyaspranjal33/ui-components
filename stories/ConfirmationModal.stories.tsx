@@ -8,7 +8,10 @@ import { ConfirmationModal } from '../src/confirmation-modal';
 const stories = storiesOf('ConfirmationModal', module);
 
 // Need a way to close/open the modal
-class ExampleContainer extends Component<any, { isOpen: boolean }> {
+type ExampleContainerState = { isOpen: boolean };
+class ExampleContainer extends Component<any, ExampleContainerState> {
+  state: ExampleContainerState;
+
   constructor(props: any) {
     super(props);
 

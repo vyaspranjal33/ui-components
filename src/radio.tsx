@@ -70,12 +70,12 @@ export const Radio: React.SFC<RadioProps> = ({
   );
 };
 
-export class StatefulRadio extends React.Component<
-  RadioProps,
-  {
-    checked: boolean;
-  }
-> {
+interface RadioState {
+  checked: boolean;
+}
+export class StatefulRadio extends React.Component<RadioProps, RadioState> {
+  public state: RadioState;
+
   constructor(props: RadioProps) {
     super(props);
 

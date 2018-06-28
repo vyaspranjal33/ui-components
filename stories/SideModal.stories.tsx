@@ -8,7 +8,10 @@ import { SideModal } from '../src/side-modal';
 const stories = storiesOf('SideModal', module);
 
 // Need a way to close/open the modal
-class ExampleContainer extends Component<any, { isOpen: boolean }> {
+type ExampleContainerState = { isOpen: boolean };
+class ExampleContainer extends Component<any, ExampleContainerState> {
+  state: ExampleContainerState;
+
   public open: (e: any) => void;
   public close: (e: any) => void;
 
