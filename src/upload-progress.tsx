@@ -2,7 +2,7 @@ import React from 'react';
 import Styles from './styles/meter.module.scss';
 
 export interface UploadProgressProps {
-  children: Array<JSX.Element> | JSX.Element;
+  children: Array<React.ReactNode> | React.ReactNode;
   className?: string;
   percent: number;
 }
