@@ -1,1 +1,1 @@
-export default function classNames(...args: any[]): string;
+export default function classNames(...args: Array<any>): string;

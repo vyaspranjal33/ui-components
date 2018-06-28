@@ -3,7 +3,7 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import values from 'lodash/values';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import FilterableList from '../src/filterable-list';
 import { TextInput } from '../src/text-input';
@@ -11,7 +11,7 @@ import { TextInput } from '../src/text-input';
 const stories = storiesOf('FilterableList', module);
 
 const renderItems = (items: any[]) => (
-  <>{items.map((item) => <Item key={item.title} {...item} />)}</>
+  <Fragment>{items.map((item) => <Item key={item.title} {...item} />)}</Fragment>
 );
 
 interface Item {
@@ -107,7 +107,7 @@ stories.add(
         handleFilterNameChange,
         handleFilterTypeChange,
       }) => (
-        <>
+        <Fragment>
           <TextInput
             type="text"
             fullWidth
@@ -124,7 +124,7 @@ stories.add(
             value={type}
             onChange={handleFilterTypeChange}
           />
-        </>
+        </Fragment>
       )}
       renderItems={renderItems}
     />

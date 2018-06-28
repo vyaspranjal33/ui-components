@@ -2,8 +2,10 @@ import React from 'react';
 import Badge from './badge';
 import Icon from './icon';
 import Loader from './loader';
+import Styles from './styles/button.module.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
+import withNativeProps from './withNativeProps';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
 
@@ -20,22 +22,29 @@ export interface AllButtonProps {
   icon?: IconType;
   id?: string;
   isLink?: boolean;
+  className?: string;
 }
 
 export interface ButtonProps extends AllButtonProps {
   children?: string | React.ReactNode;
+  isSubmit?: boolean;
+  isReset?: boolean;
 }
 
 export interface ButtonizedProps extends AllButtonProps {
   children?: React.ReactElement<ButtonProps>;
 }
 
-export const Button: React.SFC<ButtonProps> = (props) => {
+export const Button: React.SFC<ButtonProps> = props => {
+  let btnType = 'button';
+  if (props.isSubmit) {
+    btnType = 'submit';
+  } else if (props.isReset) {
+    btnType = 'reset';
+  }
   return (
-    <Buttonized {...props} >
-      <button>
-        {props.children}
-      </button>
+    <Buttonized {...props}>
+      <button type={btnType}>{props.children}</button>
     </Buttonized>
   );
 };
@@ -53,54 +62,54 @@ export const Buttonized: React.SFC<ButtonizedProps> = ({
   active,
   icon,
   id,
+  className,
+  ...attributes
 }) => {
   const hasBadge: boolean = !!badge || badge === 0;
   const hasIcon: boolean = !!icon;
-  const content: any[] = [];
+  const content: Array<any> = [];
 
   if (hasBadge) {
-    content.push(
-      <Badge key={1}>{badge}</Badge>,
-    );
+    content.push(<Badge key={1}>{badge}</Badge>);
   }
 
   if (hasIcon) {
-    content.push(
-      <Icon key={2} type={icon} />,
-    );
+    content.push(<Icon key={2} type={icon} />);
   }
 
   if (loading) {
-    content.push(
-      <Loader key={3} small onDark={type === 'primary'} />,
-    );
+    content.push(<Loader key={3} small onDark={type === 'primary'} />);
   }
 
   // the children of the element being buttonized
   if (children.props.children) {
-    content.push(
-      children.props.children,
-    );
+    content.push(children.props.children);
   }
 
-  return (
-    React.cloneElement(
-      children,
-      {
-        className: cn('btn', `btn-${type}`, {
-          'btn-on-dark': onDark,
-          'btn-small': small,
-          'has-badge': hasBadge,
-          'has-icon': hasIcon || loading,
-          'is-active': active,
-          'is-disabled': disabled,
-          'is-loading': loading,
-        }),
-        id,
-        onClick,
-      },
-      content,
-    )
+  return React.cloneElement(
+    children,
+    {
+      className: cn(
+        'btn',
+        `btn-${type}`,
+        Styles.btn,
+        Styles[`btn-${type}`],
+        className,
+        {
+          [Styles['btn-on-dark']]: onDark,
+          [Styles['btn-small']]: small,
+          [Styles['has-badge']]: hasBadge,
+          [Styles['has-icon']]: hasIcon || loading,
+          [Styles['is-active']]: active,
+          [Styles['is-disabled']]: disabled,
+          [Styles['is-loading']]: loading,
+        }
+      ),
+      id,
+      onClick,
+      ...attributes,
+    },
+    content
   );
 };
 
@@ -118,4 +127,4 @@ Button.defaultProps = {
   type: 'primary',
 };
 
-export default Button;
+export default withNativeProps(Button);

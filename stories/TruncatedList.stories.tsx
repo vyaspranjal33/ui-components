@@ -1,6 +1,6 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import React from 'react';
+import React, { Fragment } from 'react';
 
 import { TruncatedList } from '../src/truncated-list';
 
@@ -42,19 +42,19 @@ stories.add('Custom Render Props', () => (
   <TruncatedList
     items={objectList}
     link="http://lotr.wikia.com/wiki/Fellowship_of_the_Ring"
-    renderItems={items => (
-      <>
+    renderItems={(items) => (
+      <Fragment>
         {items.map(({ name, dies }) => (
           <span key={name}>
-            {name} { dies && '(Dead)' },{' '}
+            {name} {dies && '(Dead)'},{' '}
           </span>
         ))}
-      </>
+      </Fragment>
     )}
     renderMore={(numberOfItems: string, link: string) => (
-      <>
+      <Fragment>
         <a href={link}>and {numberOfItems} more…</a>
-      </>
+      </Fragment>
     )}
   />
 ));

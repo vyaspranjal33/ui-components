@@ -16,7 +16,7 @@ describe('Input', () => {
           label="Test Input"
           id="test-input-simple"
           onChange={mockOnChange}
-        />,
+        />
       );
     });
 
@@ -38,25 +38,21 @@ describe('Input', () => {
           id="test-input-simple"
           onChange={mockOnChange}
           onBlur={mockOnBlur}
-        />,
+        />
       );
     });
 
     it('calls onChange when value changes', () => {
       const value = 'onBlur called';
       const event = { target: { value } };
-      cmp
-        .find('#test-input-simple')
-        .simulate('change', { target: { value } });
+      cmp.find('#test-input-simple').simulate('change', { target: { value } });
       expect(mockOnChange).toHaveBeenCalledWith(event, value);
     });
 
     it('calls onBlur on blur event with target', () => {
       const value = 'onBlur called';
       const event = { target: { value } };
-      cmp
-        .find('#test-input-simple')
-        .simulate('blur', event);
+      cmp.find('#test-input-simple').simulate('blur', event);
       expect(mockOnBlur).toHaveBeenCalledWith(event, value);
     });
 
@@ -79,7 +75,7 @@ describe('Input', () => {
           id="test-input-simple"
           onChange={mockOnChange}
           onBlur={mockOnBlur}
-        />,
+        />
       );
       cmp
         .find('#test-input-simple')

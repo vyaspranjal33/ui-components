@@ -1,10 +1,10 @@
-/// <reference types="react" />
 import React from 'react';
 export interface CheckboxProps {
     checked: boolean;
     disabled?: boolean;
     id: string;
-    label: string;
+    label?: string;
+    children?: any;
     onChange: (event: any) => void;
     value?: string;
 }

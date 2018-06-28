@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import TableBody from './table-body';
 import TableCell from './table-cell';

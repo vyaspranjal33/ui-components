@@ -1,10 +1,12 @@
 import React from 'react';
+import Styles from './styles/checkbox-radio.module.scss';
 
 export interface CheckboxProps {
   checked: boolean;
   disabled?: boolean;
   id: string;
-  label: string;
+  label?: string;
+  children?: any;
   onChange: (event: any) => void;
   value?: string;
 }
@@ -14,11 +16,13 @@ export const Checkbox: React.SFC<CheckboxProps> = ({
   disabled,
   id,
   label,
+  children,
   onChange,
   value,
+  ...attributes
 }) => {
   return (
-    <div className="input-checkbox-wrap">
+    <div className={Styles['input-checkbox-wrap']}>
       <input
         checked={checked}
         disabled={disabled}
@@ -26,9 +30,10 @@ export const Checkbox: React.SFC<CheckboxProps> = ({
         onChange={onChange}
         type="checkbox"
         value={value}
+        {...attributes}
       />
-      <label className="input-checkbox-label" htmlFor={id}>
-        {label}
+      <label className={Styles['input-checkbox-label']} htmlFor={id}>
+        {children ? children : label}
       </label>
     </div>
   );

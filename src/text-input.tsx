@@ -1,7 +1,7 @@
 import React, { CSSProperties } from 'react';
-import cn from './utilities/classnames';
-
+import Styles from './styles/text-input.module.scss';
 import { InputType } from './types/inputs';
+import cn from './utilities/classnames';
 
 const convertInputValue = (value: string, inputType: InputType) => {
   return inputType === 'number' ? parseInt(value, 10) : value;
@@ -9,50 +9,6 @@ const convertInputValue = (value: string, inputType: InputType) => {
 
 const onInputFocus = function() {
   this.setState({ isInputFocused: true });
-};
-
-const getRenderedTextInput = function(value?: string | number) {
-  const classes = cn('input-text-wrap', {
-    'has-value': !!value || value === 0,
-    'is-disabled': this.props.isDisabled,
-    'is-error': !this.props.isValid,
-    'is-focused': this.state.isInputFocused,
-    'is-large': this.props.isLarge,
-    'is-required': this.props.isRequired,
-    'is-search': this.props.isSearch,
-  });
-
-  const infoId = this.props.info && `${this.props.id}-info`;
-  const children = this.props.children || '';
-
-  return (
-    <div className={classes} style={this.inputStyle}>
-      <label className="input-text-label" htmlFor={this.props.id}>
-        {this.props.label}
-      </label>
-      <input
-        id={this.props.id}
-        value={this.props.value}
-        name={this.props.name}
-        type={this.props.type}
-        onChange={this.onValueChange}
-        onFocus={this.onInputFocus}
-        onBlur={this.onInputBlur}
-        aria-describedby={infoId}
-      />
-      {this.props.info && (
-        <span
-          className={cn('input-info', {
-            danger: !this.props.isValid,
-          })}
-          id={infoId}
-        >
-          {this.props.info}
-        </span>
-      )}
-      {children}
-    </div>
-  );
 };
 
 export interface TextInputProps {
@@ -78,7 +34,6 @@ export class TextInput extends React.Component<
   TextInputProps,
   { isInputFocused: boolean }
 > {
-
   public static defaultProps = {
     fullWidth: false,
     info: '',
@@ -93,13 +48,10 @@ export class TextInput extends React.Component<
   };
 
   public onInputFocus: (event: any) => void;
-
+  public readonly state = { isInputFocused: false };
   constructor(props: TextInputProps) {
     super(props);
 
-    this.state = {
-      isInputFocused: false,
-    };
     this.onInputFocus = onInputFocus.bind(this);
     this.onInputBlur = this.onInputBlur.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
@@ -107,7 +59,9 @@ export class TextInput extends React.Component<
 
   get inputStyle() {
     const { fullWidth, style } = this.props;
-    if (fullWidth) { return {...style, width: '100%'}; }
+    if (fullWidth) {
+      return { ...style, width: '100%' };
+    }
     return style;
   }
 
@@ -126,28 +80,81 @@ export class TextInput extends React.Component<
   }
 
   public render() {
-    return getRenderedTextInput.call(this, this.props.value);
+    const {
+      children,
+      type,
+      id,
+      onChange,
+      value,
+      name,
+      fullWidth,
+      isValid,
+      isRequired,
+      isDisabled,
+      isLarge,
+      isSearch,
+      label,
+      info,
+      onBlur,
+      style,
+      ...attributes
+    } = this.props;
+
+    const classes = cn('input-text-wrap', Styles['input-text-wrap'], {
+      [Styles['has-value']]: !!value || value === 0,
+      [Styles['is-disabled']]: this.props.isDisabled,
+      [Styles['is-error']]: !this.props.isValid,
+      [Styles['is-focused']]: this.state.isInputFocused,
+      [Styles['is-large']]: this.props.isLarge,
+      [Styles['is-required']]: this.props.isRequired,
+      [Styles['is-search']]: this.props.isSearch,
+    });
+
+    const infoId = info && `${id}-info`;
+
+    return (
+      <div className={classes} style={this.inputStyle}>
+        <label className={Styles['input-text-label']} htmlFor={this.props.id}>
+          {label}
+        </label>
+        <input
+          id={id}
+          value={value}
+          name={name}
+          type={type}
+          onChange={this.onValueChange}
+          onFocus={this.onInputFocus}
+          onBlur={this.onInputBlur}
+          aria-describedby={infoId}
+          {...attributes}
+        />
+        {info && (
+          <span
+            className={cn(Styles['input-info'], {
+              [Styles.danger]: !isValid,
+            })}
+            id={infoId}
+          >
+            {info}
+          </span>
+        )}
+        {children || ''}
+      </div>
+    );
   }
 }
-
-export class StatefulTextInput extends React.Component<
-  TextInputProps,
-  { isInputFocused: boolean; value: string | number }
-> {
+const initState = (props: TextInputProps) => {
+  return props.value;
+};
+export class StatefulTextInput extends React.Component<TextInputProps> {
   public static defaultProps: Partial<TextInputProps> = {
-    isValid: true,
+    value: '',
   };
-  public onInputFocus: (event: any) => void;
+
+  public readonly state = { value: initState(this.props) };
 
   constructor(props: TextInputProps) {
     super(props);
-
-    this.state = {
-      isInputFocused: false,
-      value: '',
-    };
-    this.onInputFocus = onInputFocus.bind(this);
-    this.onInputBlur = this.onInputBlur.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
   }
 
@@ -158,18 +165,13 @@ export class StatefulTextInput extends React.Component<
     this.props.onChange(event, value);
   }
 
-  public onInputBlur(event: any) {
-    this.setState({ isInputFocused: false });
-
-    if (event && this.props.onBlur) {
-      const value = convertInputValue(event.target.value, this.props.type);
-
-      this.setState({ value });
-      this.props.onBlur(event, value);
-    }
-  }
-
   public render() {
-    return getRenderedTextInput.call(this, this.state.value);
+    return (
+      <TextInput
+        {...this.props}
+        {...this.state}
+        onChange={this.onValueChange}
+      />
+    );
   }
 }

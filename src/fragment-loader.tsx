@@ -1,13 +1,32 @@
 import React from 'react';
+import Styles from './styles/loader.module.scss';
+import cn from './utilities/classnames';
 
-export const FragmentLoader: React.SFC = () => {
+export interface FragmentLoaderProps {
+  className?: string;
+}
+
+export const FragmentLoader: React.SFC<FragmentLoaderProps> = ({
+  className,
+  ...attributes
+}) => {
   return (
-    <svg
-      className="fragment-loader"
-    >
-      <rect className="fragment-square left" width="10" height="10" />
-      <rect className="fragment-square middle" width="10" height="10" />
-      <rect className="fragment-square right" width="10" height="10" />
+    <svg className={cn(Styles['fragment-loader'], className)} {...attributes}>
+      <rect
+        className={cn(Styles['fragment-square'], Styles.left)}
+        width="10"
+        height="10"
+      />
+      <rect
+        className={cn(Styles['fragment-square'], Styles.middle)}
+        width="10"
+        height="10"
+      />
+      <rect
+        className={cn(Styles['fragment-square'], Styles.right)}
+        width="10"
+        height="10"
+      />
     </svg>
   );
 };

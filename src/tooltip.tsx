@@ -1,11 +1,15 @@
 import React from 'react';
+import Styles from './styles/tooltip.module.scss';
 import cn from './utilities/classnames';
 
 export type TooltipDirection = 'up' | 'down' | 'left' | 'right';
 
+export type TooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
+
 export interface TooltipProps {
   content?: string;
   direction?: TooltipDirection;
+  length?: TooltipLength;
   className?: string;
   children?: React.ReactElement<any>;
 }
@@ -13,28 +17,40 @@ export interface TooltipProps {
 export const Tooltip: React.SFC<TooltipProps> = ({
   content,
   direction,
+  length,
   className,
   children,
+  ...attributes
 }) => {
   return (
     <span
       className={className}
       data-tooltip={content}
       data-tooltip-pos={direction}
+      data-tooltip-length={length}
+      {...attributes}
     >
       {children}
     </span>
   );
 };
 
+Tooltip.defaultProps = {
+  direction: 'up',
+};
+
 export type HtmlTooltipDirection = 'left' | 'right';
 
+export type HtmlTooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
+
 export interface HTMLTooltipProps {
-  direction?: TooltipDirection;
+  direction?: HtmlTooltipDirection;
+  length?: HtmlTooltipLength;
   className?: string;
   children?: React.ReactElement<any>;
   hoverTarget?: React.ReactElement<any>;
   debounce?: number;
+  style?: object;
 }
 
 export interface HTMLTooltipState {
@@ -47,7 +63,6 @@ export class HTMLTooltip extends React.Component<
   HTMLTooltipProps,
   HTMLTooltipState
 > {
-
   public static defaultProps = {
     className: '',
     debounce: 1000,
@@ -83,8 +98,12 @@ export class HTMLTooltip extends React.Component<
   }
 
   public handleHoverIn = () => {
-    this.setState({ hovered: true, opened: true, tooltipHeight: this.tooltipRef.offsetHeight });
-  }
+    this.setState({
+      hovered: true,
+      opened: true,
+      tooltipHeight: this.tooltipRef.offsetHeight,
+    });
+  };
 
   public handleHoverOut = () => {
     this.setState({ hovered: false });
@@ -93,27 +112,42 @@ export class HTMLTooltip extends React.Component<
         this.setState({ opened: false });
       }
     }, this.props.debounce);
-  }
+  };
 
   public render() {
+    const {
+      direction,
+      className,
+      children,
+      hoverTarget,
+      debounce,
+      style,
+      ...attributes
+    } = this.props;
+
     return (
-      <div>
-        <div className="tooltip-js-parent" onMouseEnter={this.handleHoverIn} onMouseLeave={this.handleHoverOut}>
-          {this.props.hoverTarget}
+      <div style={{ position: 'relative', ...style }} {...attributes}>
+        <div
+          className={Styles['tooltip-js-parent']}
+          onMouseEnter={this.handleHoverIn}
+          onMouseLeave={this.handleHoverOut}
+        >
+          {hoverTarget}
         </div>
         <div
-          className={cn(`tooltip-js-content ${this.props.className}`, {
-            'is-left': this.props.direction === 'left',
-            'is-visible': this.state.opened,
+          className={cn(Styles[`tooltip-js-content`], className, {
+            [Styles['is-left']]: direction === 'left',
+            [Styles['is-visible']]: this.state.opened,
           })}
           style={{ top: -(this.state.tooltipHeight / 2) - 3 }}
-          ref={(input) => {
+          data-tooltip-length={this.props.length}
+          ref={input => {
             this.tooltipRef = input;
           }}
           onMouseEnter={this.handleHoverIn}
           onMouseLeave={this.handleHoverOut}
         >
-          {this.props.children}
+          {children}
         </div>
       </div>
     );

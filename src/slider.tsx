@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/slider.module.scss';
 
 export interface SliderProps {
   value: number;
@@ -12,9 +13,10 @@ export const Slider: React.SFC<SliderProps> = ({
   id,
   label,
   onChange: handleChange,
+  ...attributes
 }) => {
   return (
-    <div className="input-range-wrap">
+    <div className={Styles['input-range-wrap']}>
       <input
         id={id}
         max="100"
@@ -22,8 +24,9 @@ export const Slider: React.SFC<SliderProps> = ({
         onChange={handleChange}
         type="range"
         value={value}
+        {...attributes}
       />
-      {label && <div className="input-range-percent">{value}%</div>}
+      {label && <div className={Styles['input-range-percent']}>{value}%</div>}
     </div>
   );
 };
@@ -41,7 +44,7 @@ export class StatefulSlider extends React.Component<
     this.setState({ value }, () => {
       this.props.onChange(event, value);
     });
-  }
+  };
 
   public render() {
     const { onChange } = this.props;

@@ -1,0 +1,110 @@
+@import "./global/variables.scss";
+
+.switch-toggle {
+  position: relative;
+  display: inline-block;
+  padding: 4px;
+  font-size: 10px;
+  background-color: $white;
+  border: 1px solid $slate-20;
+  border-radius: $border-radius;
+  user-select: none;
+
+  &.is-disabled {
+    .switch-checkbox ~ .switch-selector {
+      background-color: $steel;
+      border-color: $steel;
+    }
+
+    .switch-label {
+      cursor: default;
+    }
+
+    .switch-checkbox ~ .switch-label .switch-option-on,
+    .switch-checkbox:checked ~ .switch-label .switch-option-off {
+      color: $steel;
+    }
+
+    .switch-checkbox:checked ~ .switch-label .switch-option-on {
+      color: $white;
+    }
+
+    .switch-checkbox ~ .switch-label .switch-option-on:hover,
+    .switch-checkbox:checked ~ .switch-label .switch-option-off {
+      background-color: transparent;
+    }
+  }
+}
+
+.switch-checkbox {
+  display: none;
+}
+
+.switch-label {
+  position: relative;
+  z-index: $switch-option-z-index;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.switch-option {
+  position: relative;
+  display: inline-block;
+  width: 30px;
+  font-size: 10px;
+  line-height: 20px;
+  color: $slate-60;
+  text-align: center;
+  text-transform: uppercase;
+  transition: color 0.3s, background-color 0.3s;
+}
+
+.switch-option-off,
+.switch-option-on {
+  border-radius: $border-radius;
+}
+
+.switch-option-off {
+  color: $white;
+}
+
+.switch-selector {
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  display: inline-block;
+  width: 30px;
+  height: 20px;
+  background-color: $slate-60;
+  border: 1px solid $slate-80;
+  border-radius: $border-radius;
+  transition: left 0.25s;
+}
+
+.switch-checkbox:checked {
+  ~ .switch-selector {
+    left: 34px;
+    background-color: $sg-blue-80;
+    border-color: $sg-blue;
+  }
+
+  ~ .switch-label .switch-option-off:hover {
+    background-color: $sg-blue-10;
+  }
+
+  ~ .switch-label {
+    .switch-option-off {
+      color: $slate-60;
+    }
+
+    .switch-option-on {
+      color: $white;
+    }
+  }
+}
+
+.switch-checkbox:not(:checked) {
+  ~.switch-label .switch-option-on:hover {
+    background-color: $sg-blue-10;
+  }
+}

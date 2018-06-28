@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import Styles from './styles/checkbox-radio.module.scss';
 
 export interface RadioGroupProps {
   children: Array<React.ReactElement<RadioProps>>;
@@ -7,24 +8,23 @@ export interface RadioGroupProps {
 }
 
 const { map } = React.Children;
-const radioGroupMapper = (props: RadioGroupProps) => (
-  map(props.children, (child: React.ReactElement<RadioProps> | null) => (
-    child && (
-      <child.type
-        key={child.props.value}
-        name={props.name}
-        onChange={props.onChange}
-        {...child.props}
-      />
-    )
-  ))
-);
+const radioGroupMapper = (props: RadioGroupProps) =>
+  map(
+    props.children,
+    (child: React.ReactElement<RadioProps> | null) =>
+      child && (
+        <child.type
+          key={child.props.value}
+          name={props.name}
+          onChange={props.onChange}
+          {...child.props}
+        />
+      )
+  );
 
-export const RadioGroup: React.SFC <RadioGroupProps> = (props: RadioGroupProps) => (
-  <Fragment>
-    {radioGroupMapper(props)}
-  </Fragment>
-);
+export const RadioGroup: React.SFC<RadioGroupProps> = (
+  props: RadioGroupProps
+) => <Fragment>{radioGroupMapper(props)}</Fragment>;
 
 export interface RadioProps {
   checked: boolean;
@@ -37,7 +37,7 @@ export interface RadioProps {
   value: string;
 }
 
-export const Radio: React.SFC <RadioProps> = ({
+export const Radio: React.SFC<RadioProps> = ({
   checked,
   children,
   defaultChecked,
@@ -47,10 +47,11 @@ export const Radio: React.SFC <RadioProps> = ({
   name,
   onChange,
   value,
+  ...attributes
 }) => {
   id = id || `radio-${value.toLowerCase()}`;
   return (
-    <div className="input-radio-wrap">
+    <div className={Styles['input-radio-wrap']}>
       <input
         checked={checked}
         defaultChecked={defaultChecked}
@@ -60,38 +61,41 @@ export const Radio: React.SFC <RadioProps> = ({
         onChange={onChange}
         type="radio"
         value={value}
+        {...attributes}
       />
-      <label className="input-radio-label" htmlFor={id}>
+      <label className={Styles['input-radio-label']} htmlFor={id}>
         {label}
       </label>
     </div>
   );
 };
+const propsChecked = (props: RadioProps) => props.checked;
+export class StatefulRadio extends React.Component<
+  RadioProps,
+  {
+    checked: boolean;
+  }
+> {
+  public readonly state = {
+    checked: propsChecked(this.props),
+  };
 
-export class StatefulRadio extends React.Component < RadioProps, {
-  checked: boolean,
-} > {
   constructor(props: RadioProps) {
     super(props);
 
-    this.state = {
-      checked: props.checked,
-    };
-
-    this.handleChange = this
-      .handleChange
-      .bind(this);
+    this.handleChange = this.handleChange.bind(this);
   }
 
   public handleChange(event: any) {
     event.persist();
-    this.setState({
-      checked: !this.state.checked,
-    }, () => {
-      this
-        .props
-        .onChange(event);
-    });
+    this.setState(
+      {
+        checked: !this.state.checked,
+      },
+      () => {
+        this.props.onChange(event);
+      }
+    );
   }
 
   public render() {

@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/tabs.module.scss';
 import cn from './utilities/classnames';
 import findActiveIndex from './utilities/find-active-index';
 
@@ -10,6 +11,7 @@ export interface TabProps {
   number?: number;
   onClick?: (event: any) => void;
   index?: number;
+  className?: string;
 }
 
 export const Tab: React.SFC<TabProps> = ({
@@ -17,15 +19,19 @@ export const Tab: React.SFC<TabProps> = ({
   children,
   onClick: handleClick,
   number,
+  className,
+  ...attributes
 }) => {
   return (
     <li
-      className={cn('tab', {
-        'is-active': active,
+      className={cn(Styles.tab, className, {
+        [Styles['is-active']]: active,
       })}
       onClick={handleClick}
+      {...attributes}
     >
-      {children} {number && <span className="tab-number">{number}</span>}
+      {children}{' '}
+      {number && <span className={Styles['tab-number']}>{number}</span>}
     </li>
   );
 };
@@ -46,13 +52,16 @@ export const Tabs: React.SFC<any> = ({
   children,
   zeroBorder,
   onChange,
+  className,
+  ...attributes
 }) => {
   return (
     <ul
-      className={cn('tab-wrapper', {
-        'is-centered': centered,
-        'zero-border': zeroBorder,
+      className={cn(Styles['tab-wrapper'], className, {
+        [Styles['is-centered']]: centered,
+        [Styles['zero-border']]: zeroBorder,
       })}
+      {...attributes}
     >
       {map(children, (tab: React.ReactElement<any>, index) => {
         return React.cloneElement(tab, {
@@ -80,9 +89,9 @@ export class StatefulTabs extends React.Component<TabsProps, any> {
       },
       () => {
         handleChange(event, label, index);
-      },
+      }
     );
-  }
+  };
 
   public render() {
     const { activeIndex } = this.state;
@@ -92,7 +101,7 @@ export class StatefulTabs extends React.Component<TabsProps, any> {
         return React.cloneElement(tab, {
           active: index === activeIndex,
         });
-      },
+      }
     );
     return (
       <Tabs {...this.props} onChange={this.handleChange}>

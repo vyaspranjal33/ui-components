@@ -11,28 +11,29 @@ const stories = storiesOf('SideModal', module);
 class ExampleContainer extends Component<any, { isOpen: boolean }> {
   public open: (e: any) => void;
   public close: (e: any) => void;
-
+  public readonly state = { isOpen: false };
   constructor(props: any) {
     super(props);
 
     this.open = () => this.setState({ isOpen: true });
     this.close = () => this.setState({ isOpen: false });
-    this.state = { isOpen: false };
   }
 
   public render() {
     return (
       <Fragment>
-        <Button type="primary" onClick={this.open}>Open Modal</Button>
+        <Button type="primary" onClick={this.open}>
+          Open Modal
+        </Button>
         <SideModal isOpen={this.state.isOpen} onClose={this.close}>
           <h1>Very cool! 😍</h1>
-          <Button type="secondary" onClick={this.close}>Alright then</Button>
+          <Button type="secondary" onClick={this.close}>
+            Alright then
+          </Button>
         </SideModal>
       </Fragment>
     );
   }
 }
 
-stories.add('SideModal', () => (
-  <ExampleContainer />
-));
+stories.add('SideModal', () => <ExampleContainer />);

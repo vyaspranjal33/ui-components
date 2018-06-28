@@ -1,22 +1,24 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
 import { Icon } from './icon';
+import Styles from './styles/confirmation-modal.module.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
-import {
-  ModalProps,
-  modalWillReceiveProps,
-} from './utilities/modals';
+import { ModalProps, modalWillReceiveProps } from './utilities/modals';
 
 export interface ConfirmationModalProps extends ModalProps {
   iconType?: IconType;
+  isOpen?: boolean;
   modalContainer?: Element;
   renderActions: string | (() => React.ReactNode);
   renderBody: string | (() => React.ReactNode);
   renderHeader: string | (() => React.ReactNode);
+  className?: string;
 }
 
-const evaluateRenderProp: (prop: string | (() => React.ReactNode)) => React.ReactNode = (prop) => {
+const evaluateRenderProp: (
+  prop: string | (() => React.ReactNode)
+) => React.ReactNode = prop => {
   return typeof prop === 'string' ? prop : prop();
 };
 
@@ -31,27 +33,48 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
   }
 
   public render() {
+    const {
+      iconType,
+      modalContainer,
+      renderBody,
+      renderActions,
+      renderHeader,
+      isOpen,
+      bodyNode,
+      className,
+      ...attributes
+    } = this.props;
+
     return ReactDOM.createPortal(
-      <div className={cn('sg-modal', { 'is-visible': this.props.isOpen })}>
-        <div className="conf-alert sg-modal-content">
-          <h2 className={cn('conf-alert-header', {'conf-alert-header-with-icon': !!this.props.iconType})}>
-            {
-              !!this.props.iconType &&
-                <Icon type={this.props.iconType} />
-            }
+      <div
+        className={cn(Styles['sg-modal'], className, {
+          [Styles['is-visible']]: this.props.isOpen,
+        })}
+        {...attributes}
+      >
+        <div
+          className={`${Styles['conf-alert']} ${Styles['sg-modal-content']}`}
+        >
+          <h2
+            className={cn(Styles['conf-alert-header'], {
+              [Styles['conf-alert-header-with-icon']]: !!this.props.iconType,
+            })}
+          >
+            {!!this.props.iconType && <Icon type={this.props.iconType} />}
             {evaluateRenderProp(this.props.renderHeader)}
           </h2>
-          <div className="conf-alert-body">
-            <p className="conf-alert-text">
+          <div className={Styles['conf-alert-body']}>
+            <p className={Styles['conf-alert-text']}>
               {evaluateRenderProp(this.props.renderBody)}
             </p>
           </div>
-          <div className="conf-alert-actions">
+          <div className={Styles['conf-alert-actions']}>
             {evaluateRenderProp(this.props.renderActions)}
           </div>
         </div>
-      </div>
-    , this.props.modalContainer);
+      </div>,
+      modalContainer
+    );
   }
 }
 

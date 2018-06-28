@@ -1,22 +1,22 @@
-/// <reference types="react" />
 import React, { PureComponent, ReactElement } from 'react';
 export interface FilterableListContainerProps {
     clearButtonInHeader?: boolean;
     clearButtonLabel?: string;
-    filterTypes?: string[];
-    items?: any[];
+    filterTypes?: Array<string>;
+    items?: Array<any>;
     onClear?: (event?: any) => void;
     onChange?: (event?: any, value?: string | number) => void;
-    onFilter?: (items: any[], filters: {}) => any[];
+    onFilter?: (items: Array<any>, filters: {}) => Array<any>;
     renderControls: (filterOptions: {
         [key: string]: any;
     }, handleFilterChange?: any) => ReactElement<any>;
-    renderItems: (items: any[]) => ReactElement<any>;
+    renderItems: (items: Array<any>) => ReactElement<any>;
     showClearButton?: boolean;
     title: string;
 }
 export interface FilterableListProps extends FilterableListContainerProps {
-    items: any[];
+    items: Array<any>;
+    className?: string;
 }
 export interface FilterableListState {
     [key: string]: string;
@@ -37,7 +37,7 @@ export declare class FilterableList extends PureComponent<FilterableListProps, F
     };
     constructor(props: FilterableListProps);
     handleFilterChange: (filterName: string, event: any) => void;
-    readonly filteredItems: any[];
+    readonly filteredItems: Array<any>;
     readonly clearButton: JSX.Element;
     readonly showClearButtonInHeader: boolean;
     readonly showClearButtonInline: boolean;

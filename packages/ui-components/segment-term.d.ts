@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React, { PureComponent } from 'react';
 export interface SegmentTermProps {
     editable?: boolean;
@@ -16,6 +15,7 @@ export interface SegmentTermProps {
     renderInputs?: () => React.ReactNode;
     showConfirm?: boolean;
     title: string;
+    className?: string;
 }
 export declare class SegmentTerm extends PureComponent<SegmentTermProps> {
     static defaultProps: {

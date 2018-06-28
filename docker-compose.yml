@@ -1,9 +1,43 @@
-version: '2'
+version: '3.3'
 
 services:
-  test:
-    image: docker.sendgrid.net/sendgrid/ui-components:latest
-    command: yarn ci-test
+  app:
+    image: ${IMAGETAG:-docker.sendgrid.net/sendgrid/ui-components:latest}
+    user: ${MYUID:-0}
+    build:
+     context: .  
+    volumes:
+      # Bootstrap the buildkite users into the docker container for permissions
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+      # Add the buildkite-agent user info in for .ssh keys and known_hosts for git
+      # [WARNING] This will break if they change the buildkite-agent user configuration 
+      - /var/lib/buildkite-agent:/var/lib/buildkite-agent
+      # === Use this to run locally and get a as close as we can to the build agent =====
+      # ~/:[localUserPathHere]      
+      # Mount the working directory so docker and the host can communicate for 
+      # git magic (need that .git folder)
+      - ./:/opt/sendgrid/ui-components/
+      # Preserve the node_modules folder in the docker container because we mounted ./
+      - /opt/sendgrid/ui-components/node_modules
+  build:
+    image: ${IMAGETAG:-docker.sendgrid.net/sendgrid/ui-components:latest}
+    shm_size: '3gb'
+    # user: ${MYUID:-0}
+    build:
+      context: .  
+    volumes:
+      - /etc/group:/etc/group:ro
+      - /etc/passwd:/etc/passwd:ro
+      # Only mount the directories we expect to write into our host 
+      # (No permissions issues with node_modules this way)
+      - ./src/:/opt/sendgrid/ui-components/src/
+      - ./stories/:/opt/sendgrid/ui-components/stories/
+      - ./docs/:/opt/sendgrid/ui-components/docs/
+      - ./packages/:/opt/sendgrid/ui-components/packages/
+      - ./test_image/:/opt/sendgrid/ui-components/test_image/
+
+
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest
     build:

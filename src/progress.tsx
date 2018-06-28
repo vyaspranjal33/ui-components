@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/progress.module.scss';
 import cn from './utilities/classnames';
 
 export interface ProgressProps {
@@ -6,16 +7,23 @@ export interface ProgressProps {
   children:
     | React.ReactElement<ProgressStageProps>
     | Array<React.ReactElement<ProgressStageProps>>;
+  className?: string;
 }
 
-export const Progress: React.SFC<ProgressProps> = ({ children, vertical }) => {
+export const Progress: React.SFC<ProgressProps> = ({
+  children,
+  vertical,
+  className,
+  ...attributes
+}) => {
   return (
     <section
-      className={cn('progress-container', {
-        'is-vertical': vertical,
+      className={cn(Styles['progress-container'], className, {
+        [Styles['is-vertical']]: vertical,
       })}
+      {...attributes}
     >
-      <ul className="progress-stages">{children}</ul>
+      <ul className={Styles['progress-stages']}>{children}</ul>
     </section>
   );
 };
@@ -28,19 +36,23 @@ export interface ProgressStageProps {
   done?: boolean;
   selected?: boolean;
   children: string;
+  className?: string;
 }
 
 export const ProgressStage: React.SFC<ProgressStageProps> = ({
   children: label,
   done,
   selected,
+  className,
+  ...attributes
 }) => {
   return (
     <li
-      className={cn({
-        'is-done': done,
-        'is-selected': selected,
+      className={cn(className, {
+        [Styles['is-done']]: done,
+        [Styles['is-selected']]: selected,
       })}
+      {...attributes}
     >
       <label>{label}</label>
     </li>

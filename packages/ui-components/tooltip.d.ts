@@ -1,20 +1,24 @@
-/// <reference types="react" />
 import React from 'react';
 export declare type TooltipDirection = 'up' | 'down' | 'left' | 'right';
+export declare type TooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
 export interface TooltipProps {
     content?: string;
     direction?: TooltipDirection;
+    length?: TooltipLength;
     className?: string;
     children?: React.ReactElement<any>;
 }
 export declare const Tooltip: React.SFC<TooltipProps>;
 export declare type HtmlTooltipDirection = 'left' | 'right';
+export declare type HtmlTooltipLength = 'small' | 'medium' | 'large' | 'xlarge';
 export interface HTMLTooltipProps {
-    direction?: TooltipDirection;
+    direction?: HtmlTooltipDirection;
+    length?: HtmlTooltipLength;
     className?: string;
     children?: React.ReactElement<any>;
     hoverTarget?: React.ReactElement<any>;
     debounce?: number;
+    style?: object;
 }
 export interface HTMLTooltipState {
     hovered: boolean;

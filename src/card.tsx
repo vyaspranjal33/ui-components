@@ -1,21 +1,32 @@
 import React from 'react';
-import Badge from './badge';
-import { color as ValidColor } from './types/color';
+
 import cn from './utilities/classnames';
 
+import Badge from './badge';
+import Icon from './icon';
+import Styles from './styles/card.module.scss';
+import { color as ValidColor } from './types/color';
+import IconSizeType from './types/icon-sizes';
+import { IconType } from './types/icons';
+
 export interface CardProps {
-  children?: React.ReactElement<any>;
+  children?: React.ReactNode;
   centered?: boolean;
   thin?: boolean;
   inline?: boolean;
   title?: string;
   body?: string;
+  className?: string;
   badge?:
     | {
         content: string;
         color: ValidColor;
       }
     | React.ReactElement<any>;
+  icon?: IconType;
+  iconSize?: IconSizeType;
+  selected?: boolean;
+  module?: boolean;
 }
 
 export const Card: React.SFC<CardProps> = ({
@@ -23,24 +34,36 @@ export const Card: React.SFC<CardProps> = ({
   body,
   centered,
   children,
+  icon,
+  iconSize,
   inline,
   thin,
   title,
+  className,
+  selected,
+  module = false,
+  ...attributes
 }) => {
-
-  const titleStyle = {
-    width: '100%',
-  } as React.CSSProperties;
-
   return (
     <div
-      className={cn('card', {
-        'is-centered': centered,
-        'is-thin': thin,
+      className={cn(Styles.card, className, {
+        [Styles['is-centered']]: centered,
+        [Styles['is-inline']]: inline,
+        [Styles['is-selected']]: selected,
+        [Styles['is-thin']]: thin,
+        [Styles['is-module']]: module,
       })}
+      {...attributes}
     >
       {badge && <Badge {...badge} />}
-      {title && <h2 style={titleStyle}>{title}</h2>}
+      {icon && (
+        <div className={Styles['card-icon']}>
+          <Icon size={iconSize} type={icon} />
+        </div>
+      )}
+      {title && (
+        <h2 className={cn({ [Styles['card-title']]: inline })}>{title}</h2>
+      )}
       {body && <p>{body}</p>}
       {children}
     </div>

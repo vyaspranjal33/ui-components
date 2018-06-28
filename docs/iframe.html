@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <base target="_parent">
+    <script>
+        if (window.parent !== window) {
+            try {
+                window.__REACT_DEVTOOLS_GLOBAL_HOOK__ = window.parent.__REACT_DEVTOOLS_GLOBAL_HOOK__;
+            } catch (error) {
+                // The above line can throw if we do not have access to the parent frame -- i.e. cross origin
+            }
+        }
+    </script>
+    <title>Storybook</title>
+    
+<style>
+  body {
+    padding: 4em !important;
+    margin:0px;
+  }
+</style>
+<script>
+if(window.location.origin === "file://"){
+
+  var css = `*, *::before, *::after {
+      -moz-transition: none !important;
+      transition: none !important;
+      -moz-animation: none !important;
+      animation: none !important;
+    }`,
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+  style.type = 'text/css';
+  if (style.styleSheet){
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+
+  head.appendChild(style);
+}
+
+</script>
+
+</head>
+
+<body>
+    <div id="root"></div>
+    <div id="error-display"></div>
+<script type="text/javascript" src="static/preview.6c362d70f3fdb2487a4f.bundle.js"></script></body>
+
+</html>

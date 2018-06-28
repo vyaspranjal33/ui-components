@@ -1,18 +1,19 @@
 const fs = require('fs');
 const path = require('path');
 const rimraf = require('rimraf');
-
+const copy = require('rollup-plugin-copy');
 const rollup = require('rollup');
 const commonjs = require('rollup-plugin-commonjs');
 const resolve = require('rollup-plugin-node-resolve');
 const json = require('rollup-plugin-json');
+const postcss = require('rollup-plugin-postcss');
 const typescriptPlugin = require('rollup-plugin-typescript2');
 const typescript = require('typescript');
 const glob = require('glob');
 const { paramCase } = require('change-case');
 
 const extension = '.tsx';
-const filePath = path.join(__dirname, 'src', 'components');
+const filePath = 'src';
 const packagePath = path.join(__dirname, 'packages', 'ui-components');
 
 const cleanDirectory = directory =>
@@ -28,9 +29,7 @@ const getFiles = () =>
     glob(path.join(filePath, '**/*.tsx'), (error, files) => {
       if (error) return reject(error);
       resolve(
-        files.filter(
-          file => !file.includes('test') && !file.includes('index'),
-        ),
+        files.filter(file => !file.includes('test') && !file.includes('index')),
       );
     });
   });
@@ -39,9 +38,17 @@ const plugins = [
   resolve({ preferBuiltins: true }),
   commonjs(),
   json(),
+  postcss({
+    modules: true
+  }),
   typescriptPlugin({
     typescript,
+    useTsconfigDeclarationDir: true,
   }),
+  copy({
+    "src/styles": "packages/ui-components/styles",
+    verbose: true
+  })
 ];
 
 const inputOptions = {
@@ -55,7 +62,7 @@ const outputOptions = {
     classnames: 'classNames',
   },
   sourcemap: true,
-  format: 'umd',
+  format: 'cjs',
   exports: 'named',
 };
 
@@ -68,32 +75,33 @@ const outputOptions = {
   mainBundle.write({
     ...outputOptions,
     name: 'UI Components',
-    file: 'packages/ui-components/index.js',
+    file: 'packages/ui-components/bundledindex.js',
   });
+// Maybe we delete this
+  // const files = await getFiles();
 
-  const files = await getFiles();
+  // for (const file of files) {
+  //   const component = path.parse(file).name;
+  //   const fileName = paramCase(component);
 
-  for (const file of files) {
-    const component = path.parse(file).name;
-    const fileName = paramCase(component);
+  //   const componentBundle = await rollup.rollup({
+  //     ...inputOptions,
+  //     input: file,
+  //   });
 
-    const componentBundle = await rollup.rollup({
-      ...inputOptions,
-      input: file,
-    });
+  //   componentBundle.write({
+  //     ...outputOptions,
+  //     name: component,
+  //     file: `packages/ui-components/${fileName}.js`,
+  //   });
+  // }
 
-    componentBundle.write({
-      ...outputOptions,
-      name: component,
-      file: `packages/ui-components/${fileName}.js`,
-    });
-  }
-
-  glob('packages/ui-components/components/**/*.d.ts', (error, files) => {
-    for (const file of files) {
-      const fileName = paramCase(path.parse(file).name).replace('-d', '.d');
-      fs.createReadStream(file)
-        .pipe(fs.createWriteStream(`packages/ui-components/${fileName}.ts`));
-    }
-  })
+  // glob('packages/ui-components/components/**/*.d.ts', (error, files) => {
+  //   for (const file of files) {
+  //     const fileName = paramCase(path.parse(file).name).replace('-d', '.d');
+  //     fs
+  //     fs.createReadStream(file)
+  //       .pipe(fs.createWriteStream(`packages/ui-components/${fileName}.ts`));
+  //   }
+  // })
 })();

@@ -1,0 +1,76 @@
+steps: 
+
+  - name: ":yarn: :docker: Build UI-component base image"
+    plugins:
+      docker-compose#v2.3.0:
+        build: build
+        image-repository: docker.sendgrid.net/sendgrid
+        cache-from: build:docker.sendgrid.net/sendgrid/ui-components:latest
+
+  - wait
+
+  - name: ":docker: Push image to latest tag"
+  # We want to push the image to the latest tag to keep the cache up to date to keep things fast
+    plugins:
+      docker-compose#v2.3.0:
+        push:
+        - build:docker.sendgrid.net/sendgrid/ui-components:latest
+
+  - wait
+  
+  - name: ":jest: Lint and Test"
+    command: 
+      - echo "--- 🐳 Pulling the docker image"
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker pull \$IMAGETAG
+      - echo '+++ 🃏 Running Snapshot Testing'
+      - docker-compose run build bash -c "yarn ci-test"
+  
+  - name: ":jest: 📸 :storybook: Image Snapshot Testing"
+    command: 
+      - echo "--- 🐳 Pulling the docker image"
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker pull \$IMAGETAG
+      - echo "+++ 📸 Running Image Snapshots"
+      - ./imageSnapshot.sh --ci
+    artifact_paths:
+      - "test_image/__image_snapshots__/__diff_output__/**/*"
+      
+  - name: ":storybook: Build Storybook"
+    command: 
+      - echo "--- 🐳 Pulling the docker image"
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker pull \$IMAGETAG
+      - echo '+++ 📚 Building Storybook'
+      - docker-compose run build bash -c "yarn build-storybook -o ./docs"
+      - "tar -zcvf docs.tar.gz ./docs"
+      - buildkite-agent artifact upload ./docs.tar.gz
+
+  - name: ":typescript: Build UI-Components"
+    command: 
+      - echo "--- 🐳 Pulling the docker image"
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-build)
+      - docker pull \$IMAGETAG
+      - echo '+++ 🔨 Building Typescript and UI-components'
+      - docker-compose run build bash -c "yarn build"
+      - "tar -zcvf builtPackages.tar.gz ./packages"
+      - buildkite-agent artifact upload ./builtPackages.tar.gz
+
+  - wait 
+
+  - name: ":octocat: Combine build Artifacts and Commit :octocat:"
+    branches: "master"
+    command: 
+      - git fetch
+      - git checkout ${BUILDKITE_BRANCH}
+      - git pull
+      - rm -rf docs/ 
+      - mkdir ./docs
+      - buildkite-agent artifact download builtPackages.tar.gz ./
+      - buildkite-agent artifact download docs.tar.gz ./
+      - tar -zxvf builtPackages.tar.gz
+      - tar -zxvf docs.tar.gz
+      - git add --all docs && git add --all packages
+      - git status
+      - ./.buildkite/determineGitCommitType.sh
+      - git push origin ${BUILDKITE_BRANCH}

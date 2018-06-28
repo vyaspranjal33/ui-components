@@ -5,7 +5,9 @@ import values from 'lodash/values';
 import React, { PureComponent, ReactElement } from 'react';
 import Button from './button';
 import ButtonList from './button-list';
+import Styles from './styles/filters.module.scss';
 import { TextInput } from './text-input';
+import cn from './utilities/classnames';
 
 const filterControlStyle = {
   display: 'flex',
@@ -22,22 +24,23 @@ const inlineClearButtonStyle = {
 export interface FilterableListContainerProps {
   clearButtonInHeader?: boolean;
   clearButtonLabel?: string;
-  filterTypes?: string[];
-  items?: any[];
+  filterTypes?: Array<string>;
+  items?: Array<any>;
   onClear?: (event?: any) => void;
   onChange?: (event?: any, value?: string | number) => void;
-  onFilter?: (items: any[], filters: {}) => any[];
+  onFilter?: (items: Array<any>, filters: {}) => Array<any>;
   renderControls: (
     filterOptions: { [key: string]: any },
-    handleFilterChange?: any,
+    handleFilterChange?: any
   ) => ReactElement<any>;
-  renderItems: (items: any[]) => ReactElement<any>;
+  renderItems: (items: Array<any>) => ReactElement<any>;
   showClearButton?: boolean;
   title: string;
 }
 
 export interface FilterableListProps extends FilterableListContainerProps {
-  items: any[];
+  items: Array<any>;
+  className?: string;
 }
 
 export interface FilterableListState {
@@ -56,7 +59,7 @@ export class FilterableList extends PureComponent<
   };
 
   public static createClass(
-    props: FilterableListContainerProps,
+    props: FilterableListContainerProps
   ): React.ComponentClass<any> {
     return class FilterableListContainer extends PureComponent<
       FilterableListContainerProps
@@ -68,7 +71,9 @@ export class FilterableList extends PureComponent<
   }
 
   public state: { [key: string]: string } = {};
-  public handlers: { [key: string]: (filterName: string, event: any) => void } = {};
+  public handlers: {
+    [key: string]: (filterName: string, event: any) => void;
+  } = {};
 
   constructor(props: FilterableListProps) {
     super(props);
@@ -83,7 +88,7 @@ export class FilterableList extends PureComponent<
         this.state.value = '';
         this.handlers[`handleFilterChange`] = this.handleFilterChange.bind(
           this,
-          'value',
+          'value'
         );
       }
     }
@@ -95,11 +100,11 @@ export class FilterableList extends PureComponent<
       {
         [filterName]: value,
       },
-      this.props.onChange,
+      this.props.onChange
     );
-  }
+  };
 
-  public get filteredItems(): any[] {
+  public get filteredItems(): Array<any> {
     // If a function to filter items is passed in, then use that.
     const { onFilter, items } = this.props;
     if (onFilter) {
@@ -115,14 +120,16 @@ export class FilterableList extends PureComponent<
         .toLowerCase()
         .includes(filters);
 
-    return items.filter((item: string | {}): boolean => {
-      if (typeof item === 'string') {
-        return includesFilters(item);
+    return items.filter(
+      (item: string | {}): boolean => {
+        if (typeof item === 'string') {
+          return includesFilters(item);
+        }
+        return values(item)
+          .map(includesFilters)
+          .some(identity);
       }
-      return values(item)
-        .map(includesFilters)
-        .some(identity);
-    });
+    );
   }
 
   public get clearButton() {
@@ -145,22 +152,33 @@ export class FilterableList extends PureComponent<
 
   public render() {
     const {
+      clearButtonInHeader,
       clearButtonLabel,
-      title,
-      showClearButton,
+      filterTypes,
+      items,
+      onClear,
+      onChange,
+      onFilter,
       renderControls,
       renderItems,
+      showClearButton,
+      title,
+      className,
+      ...attributes
     } = this.props;
 
     return (
-      <section className="FilterableList">
-        <div className="filter-wrap">
-          <div className="filter-header">
-            <p className="filter-title">{title}</p>
+      <section className="FilterableList" {...attributes}>
+        <div className={Styles['filter-wrap']}>
+          <div className={Styles['filter-header']}>
+            <p className={Styles['filter-title']}>{title}</p>
             {this.showClearButtonInHeader && this.clearButton}
           </div>
-          <div className="filter-list" style={filterControlStyle}>
-            {renderControls({ ...this.state, ...this.handlers }, this.handleFilterChange)}
+          <div className={Styles['filter-list']} style={filterControlStyle}>
+            {renderControls(
+              { ...this.state, ...this.handlers },
+              this.handleFilterChange
+            )}
             {this.showClearButtonInline && this.clearButton}
           </div>
         </div>
@@ -178,7 +196,7 @@ export class FilterableList extends PureComponent<
     for (const key of Object.keys(this.state)) {
       this.setState({ [key]: '' });
     }
-  }
+  };
 }
 
 export default FilterableList;

@@ -30,14 +30,14 @@ stories.add('Primary Button with Icon', () => (
   </Button>
 ));
 
-stories.add('Secondary Button with Icon', () => (
-  <Button type="secondary" icon="copy" onClick={action('Button Clicked')}>
+stories.add('Secondary Submit Button with Icon', () => (
+  <Button isSubmit={true} type="secondary" icon="copy" onClick={action('Button Clicked')}>
     Secondary
   </Button>
 ));
 
-stories.add('Danger Button with Icon', () => (
-  <Button type="danger" icon="trash" onClick={action('Button Clicked')}>
+stories.add('Danger Button with Icon and Data Attr', () => (
+  <Button type="danger" icon="trash" onClick={action('Button Clicked')} data-role="test-role">
     Danger
   </Button>
 ));
@@ -60,13 +60,13 @@ stories.add('Danger Button with Badge', () => (
   </Button>
 ));
 
-stories.add('Primary Button (Loading)', () => (
+stories.add('Primary Button (Loading) [animation]', () => (
   <Button type="primary" loading onClick={action('Button Clicked')}>
     Primary (Loading)
   </Button>
 ));
 
-stories.add('Secondary Button (Loading)', () => (
+stories.add('Secondary Button (Loading) [animation]', () => (
   <Button type="secondary" loading onClick={action('Button Clicked')}>
     Secondary (Loading)
   </Button>
@@ -144,13 +144,13 @@ stories.add('Small Danger Button with Badge', () => (
   </Button>
 ));
 
-stories.add('Small Primary Button (Loading)', () => (
+stories.add('Small Primary Button  [animation]', () => (
   <Button type="primary" loading onClick={action('Button Clicked')} small>
     Primary (Loading)
   </Button>
 ));
 
-stories.add('Small Secondary Button (Loading)', () => (
+stories.add('Small Secondary Button (Loading) [animation]', () => (
   <Button type="secondary" loading onClick={action('Button Clicked')} small>
     Secondary (Loading)
   </Button>

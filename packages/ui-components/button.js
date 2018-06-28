@@ -1,25 +1,35 @@
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
     return t;
 };
 import React from 'react';
 import Badge from './badge';
 import Icon from './icon';
 import Loader from './loader';
+import Styles from './styles/button.module.scss';
 import cn from './utilities/classnames';
-export var Button = function (props) {
-    return (React.createElement(Buttonized, __assign({}, props),
-        React.createElement("button", null, props.children)));
+import withNativeProps from './withNativeProps';
+export const Button = props => {
+    let btnType = 'button';
+    if (props.isSubmit) {
+        btnType = 'submit';
+    }
+    else if (props.isReset) {
+        btnType = 'reset';
+    }
+    return (React.createElement(Buttonized, Object.assign({}, props),
+        React.createElement("button", { type: btnType }, props.children)));
 };
-export var Buttonized = function (_a) {
-    var children = _a.children, type = _a.type, badge = _a.badge, disabled = _a.disabled, loading = _a.loading, small = _a.small, onDark = _a.onDark, onClick = _a.onClick, group = _a.group, active = _a.active, icon = _a.icon, id = _a.id;
-    var hasBadge = !!badge || badge === 0;
-    var hasIcon = !!icon;
-    var content = [];
+export const Buttonized = (_a) => {
+    var { children, type, badge, disabled, loading, small, onDark, onClick, group, active, icon, id, className } = _a, attributes = __rest(_a, ["children", "type", "badge", "disabled", "loading", "small", "onDark", "onClick", "group", "active", "icon", "id", "className"]);
+    const hasBadge = !!badge || badge === 0;
+    const hasIcon = !!icon;
+    const content = [];
     if (hasBadge) {
         content.push(React.createElement(Badge, { key: 1 }, badge));
     }
@@ -33,19 +43,16 @@ export var Buttonized = function (_a) {
     if (children.props.children) {
         content.push(children.props.children);
     }
-    return (React.cloneElement(children, {
-        className: cn('btn', "btn-" + type, {
-            'btn-on-dark': onDark,
-            'btn-small': small,
-            'has-badge': hasBadge,
-            'has-icon': hasIcon || loading,
-            'is-active': active,
-            'is-disabled': disabled,
-            'is-loading': loading,
-        }),
-        id: id,
-        onClick: onClick,
-    }, content));
+    return React.cloneElement(children, Object.assign({ className: cn('btn', `btn-${type}`, Styles.btn, Styles[`btn-${type}`], className, {
+            [Styles['btn-on-dark']]: onDark,
+            [Styles['btn-small']]: small,
+            [Styles['has-badge']]: hasBadge,
+            [Styles['has-icon']]: hasIcon || loading,
+            [Styles['is-active']]: active,
+            [Styles['is-disabled']]: disabled,
+            [Styles['is-loading']]: loading,
+        }), id,
+        onClick }, attributes), content);
 };
 Button.defaultProps = {
     active: false,
@@ -55,10 +62,10 @@ Button.defaultProps = {
     group: false,
     icon: null,
     loading: false,
-    onClick: function () { },
+    onClick: () => { },
     onDark: false,
     small: false,
     type: 'primary',
 };
-export default Button;
+export default withNativeProps(Button);
 //# sourceMappingURL=button.js.map

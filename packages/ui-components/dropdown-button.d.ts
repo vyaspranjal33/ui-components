@@ -1,10 +1,10 @@
-/// <reference types="react" />
 import React from 'react';
 import { ButtonProps } from './button';
 export interface DropdownButtonProps {
     children?: any;
     label?: string;
     gear?: boolean;
+    className?: string;
 }
 export interface DropdownButtonState {
     active: boolean;

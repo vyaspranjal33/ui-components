@@ -1,5 +1,6 @@
 import React from 'react';
 import Icon from './icon';
+import Styles from './styles/alert.module.scss';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
@@ -12,6 +13,7 @@ export interface AlertProps {
   inline?: boolean;
   type: AlertType;
   hidden?: boolean;
+  className?: string;
   onClick?: (event: any) => void;
 }
 
@@ -29,13 +31,17 @@ export const Alert: React.SFC<AlertProps> = ({
   inline,
   onClick: handleClick,
   type,
+  hidden,
+  className,
+  ...attributes
 }) => {
   return (
     <div
-      className={cn('alert', `alert-${type}`, {
-        'alert-inline': inline,
+      className={cn('alert', Styles.alert, Styles[`alert-${type}`], {
+        [Styles['alert-inline']]: inline,
       })}
       role="alert"
+      {...attributes}
     >
       <p>
         <Icon type={icon || iconFor(type)} />

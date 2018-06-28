@@ -1,45 +1,46 @@
 import React from 'react';
+import Styles from './styles/email-card.module.scss';
+import cn from './utilities/classnames';
 
-export interface Statistic {
+export const NO_STATS_CHAR = '—';
+export interface StatisticType {
   label: string;
-  amount?: number;
-  format: string;
+  amount?: number | string;
 }
 
 export interface StatisticsProps {
-  statistics?: Statistic[];
-  statsClassName: string;
+  commonClass: string;
+  className?: string;
 }
 
-export const Statistics: React.SFC<StatisticsProps> = ({ statistics, statsClassName }) => {
-  // This uses numbers rather than formatted strings to prepare for locale specific number formatting
-  const formatStatistic = (amount: number, format: string) => {
-    if (typeof amount !== 'number') { return '—'; }
-    if (format === 'number') {
-      return amount.toLocaleString();
-    } else {
-      return (amount * 100).toFixed(2) + '%';
-    }
-  };
+export const EmailCardStat: React.SFC<{
+  statistic: StatisticType;
+  specificClass: string;
+  commonClass?: string;
+}> = ({ statistic, specificClass, commonClass }) => (
+  <div className={commonClass} key={statistic.label}>
+    <p className={cn(Styles.stat, Styles[specificClass])}>
+      {statistic.amount || parseInt(statistic.amount as string, 10) === 0
+        ? statistic.amount
+        : NO_STATS_CHAR}
+    </p>
+    <p className={Styles.label}>{statistic.label}</p>
+  </div>
+);
 
-  const statisticsClassMap = ['', 'delivered', 'unique-opens', 'unique-clicks', 'unsubscribes'];
-  const statisticsElements = statistics && statistics.map((stat, i) => {
-    const value = formatStatistic(stat.amount, stat.format);
-    const specificClass = statisticsClassMap[i] || '';
-    return (
-      <div className={statsClassName} key={stat.label}>
-        <p className={'stat ' + specificClass}>{value}</p>
-        <p className="label">{stat.label}</p>
-      </div>
-    );
-  });
-
-  return statisticsElements ?
-    (
-      <div className="email-card-stats">
-        {statisticsElements}
-      </div>
-    ) : null;
+export const Statistics: React.SFC<StatisticsProps> = ({
+  commonClass,
+  className,
+  children,
+  ...attributes
+}) => {
+  return (
+    <div className={cn(Styles['email-card-stats'], className)} {...attributes}>
+      {React.Children.map(children, (child: React.ReactElement<any>) => {
+        return React.cloneElement(child, { commonClass });
+      })}
+    </div>
+  );
 };
 
 export default Statistics;

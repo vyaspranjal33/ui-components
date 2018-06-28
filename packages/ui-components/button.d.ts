@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { IconType } from './types/icons';
 export declare type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
@@ -15,13 +14,17 @@ export interface AllButtonProps {
     icon?: IconType;
     id?: string;
     isLink?: boolean;
+    className?: string;
 }
 export interface ButtonProps extends AllButtonProps {
     children?: string | React.ReactNode;
+    isSubmit?: boolean;
+    isReset?: boolean;
 }
 export interface ButtonizedProps extends AllButtonProps {
     children?: React.ReactElement<ButtonProps>;
 }
 export declare const Button: React.SFC<ButtonProps>;
 export declare const Buttonized: React.SFC<ButtonizedProps>;
-export default Button;
+declare const _default: (props: any) => JSX.Element;
+export default _default;

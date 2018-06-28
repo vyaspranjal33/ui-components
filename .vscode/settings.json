@@ -1,8 +1,6 @@
 // Place your settings in this file to overwrite default and user settings.
 {
   "javascript.validate.enable": false,
-  "prettier.trailingComma": "all",
-  "prettier.parser": "flow",
-  "prettier.singleQuote": true,
-  "eslint.autoFixOnSave": true
+  "eslint.autoFixOnSave": true,
+  "workbench.editor.enablePreviewFromQuickOpen": false
 }

@@ -1,26 +1,38 @@
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
     return t;
 };
 import React from 'react';
+import Styles from './styles/dropzone.module.scss';
 import cn from './utilities/classnames';
-export var Dropzone = function (_a) {
-    var active = _a.active, alert = _a.children, hovered = _a.hovered, large = _a.large;
-    return (React.createElement("section", { className: cn('dropzone', {
-            'has-inline-alert': !!alert,
-            'is-active': active,
-            'is-hovered': hovered,
-            'is-large': large,
-        }), role: "hidden" }, alert &&
-        React.cloneElement(alert, __assign({}, alert.props, { inline: true }))));
+const dropzoneStyle = {
+    alignItems: 'center',
+    display: 'flex',
+    fontSize: '14px',
+    justifyContent: 'center',
+};
+export const Dropzone = (_a) => {
+    var { active, alert, hovered, invalid, large, children, className, onDragOver, onDragLeave, onDragEnd, onDrop } = _a, attributes = __rest(_a, ["active", "alert", "hovered", "invalid", "large", "children", "className", "onDragOver", "onDragLeave", "onDragEnd", "onDrop"]);
+    return (React.createElement("section", Object.assign({ className: cn(Styles.dropzone, className, {
+            [Styles['has-inline-alert']]: !!alert,
+            [Styles['is-active']]: active,
+            [Styles['is-hovered']]: hovered,
+            [Styles['is-invalid']]: invalid,
+            [Styles['is-large']]: large,
+        }), role: "hidden", style: dropzoneStyle }, attributes, { onDragOver: onDragOver, onDragLeave: onDragLeave, onDragEnd: onDragEnd, onDrop: onDrop }),
+        React.createElement("div", null, children),
+        alert &&
+            React.cloneElement(alert, Object.assign({}, alert.props, { inline: true }))));
 };
 Dropzone.defaultProps = {
     active: false,
     hovered: false,
+    invalid: false,
     large: false,
 };
 export default Dropzone;

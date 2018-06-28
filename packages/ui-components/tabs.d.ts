@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 export interface TabProps {
     active?: boolean;
@@ -6,6 +5,7 @@ export interface TabProps {
     number?: number;
     onClick?: (event: any) => void;
     index?: number;
+    className?: string;
 }
 export declare const Tab: React.SFC<TabProps>;
 export interface TabsProps {

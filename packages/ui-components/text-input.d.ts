@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React, { CSSProperties } from 'react';
 import { InputType } from './types/inputs';
 export interface TextInputProps {
@@ -35,20 +34,21 @@ export declare class TextInput extends React.Component<TextInputProps, {
         value: string;
     };
     onInputFocus: (event: any) => void;
+    readonly state: {
+        isInputFocused: boolean;
+    };
     constructor(props: TextInputProps);
     readonly inputStyle: React.CSSProperties;
     onValueChange(event: any): void;
     onInputBlur(event: any): void;
-    render(): any;
+    render(): JSX.Element;
 }
-export declare class StatefulTextInput extends React.Component<TextInputProps, {
-    isInputFocused: boolean;
-    value: string | number;
-}> {
+export declare class StatefulTextInput extends React.Component<TextInputProps> {
     static defaultProps: Partial<TextInputProps>;
-    onInputFocus: (event: any) => void;
+    readonly state: {
+        value: string | number;
+    };
     constructor(props: TextInputProps);
     onValueChange(event: any): void;
-    onInputBlur(event: any): void;
-    render(): any;
+    render(): JSX.Element;
 }

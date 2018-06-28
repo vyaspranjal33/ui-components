@@ -1,10 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
+import Icon from './icon';
+import Styles from './styles/center-modal.module.scss';
 import cn from './utilities/classnames';
-import {
-  ModalProps,
-  modalWillReceiveProps,
-} from './utilities/modals';
+import { ModalProps, modalWillReceiveProps } from './utilities/modals';
 
 export interface CenterModalProps extends ModalProps {
   hasX?: boolean;
@@ -12,12 +11,16 @@ export interface CenterModalProps extends ModalProps {
   modalContainer?: Element;
   onClose: (evt: any) => void;
   open: boolean;
+  className?: string;
   renderBody: string | React.ReactNode | (() => React.ReactNode);
   renderFooter?: string | React.ReactNode | (() => React.ReactNode);
   renderHeader?: string | React.ReactNode | (() => React.ReactNode);
+  padding?: boolean;
 }
 
-const evaluateRenderProp: (prop: string | React.ReactNode | (() => React.ReactNode)) => React.ReactNode = (prop) => {
+const evaluateRenderProp: (
+  prop: string | React.ReactNode | (() => React.ReactNode)
+) => React.ReactNode = prop => {
   return prop instanceof Function ? prop() : prop;
 };
 
@@ -27,6 +30,7 @@ export class CenterModal extends Component<CenterModalProps> {
     hasX: false,
     large: false,
     modalContainer: document.body,
+    padding: true,
   };
 
   public componentWillReceiveProps(nextProps: CenterModalProps) {
@@ -34,27 +38,49 @@ export class CenterModal extends Component<CenterModalProps> {
   }
 
   public render() {
+    const {
+      hasX,
+      large,
+      padding,
+      modalContainer,
+      onClose,
+      open,
+      renderBody,
+      renderFooter,
+      renderHeader,
+      bodyNode,
+      className,
+      ...attributes
+    } = this.props;
     // Using <> instead of <Fragment> is breaking the linter.
     return ReactDOM.createPortal(
       <Fragment>
-        <div className={cn('center-modal', { 'is-visible': this.props.open, 'is-large': this.props.large })}>
-          {
-            this.props.hasX &&
-              (<i className="sg-icon sg-icon-x" data-role="close-center-modal" onClick={this.props.onClose} />)
-          }
-          {this.props.renderHeader && <h1>{evaluateRenderProp(this.props.renderHeader)}</h1>}
-          {evaluateRenderProp(this.props.renderBody)}
-          {
-            this.props.renderFooter &&
-              (<div className="modal-footer">{evaluateRenderProp(this.props.renderFooter)}</div>)
-          }
+        <div
+          className={cn(Styles['center-modal'], className, {
+            [Styles['is-large']]: large,
+            [Styles['is-visible']]: open,
+            [Styles['has-padding']]: padding,
+          })}
+          {...attributes}
+        >
+          {hasX && (
+            <Icon type="x" data-role="close-center-modal" onClick={onClose} />
+          )}
+          {renderHeader && <h1>{evaluateRenderProp(renderHeader)}</h1>}
+          {evaluateRenderProp(renderBody)}
+          {renderFooter && (
+            <div className={Styles['modal-footer']}>
+              {evaluateRenderProp(this.props.renderFooter)}
+            </div>
+          )}
         </div>
         <div
-          className={cn('modal-mask', { 'is-visible': this.props.open })}
-          onClick={this.props.onClose}
+          className={cn(Styles['modal-mask'], { [Styles['is-visible']]: open })}
+          onClick={onClose}
         />
-      </Fragment>
-    , this.props.modalContainer);
+      </Fragment>,
+      modalContainer
+    );
   }
 }
 

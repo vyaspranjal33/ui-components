@@ -6,6 +6,7 @@ export interface EmptyStateProps {
     icon?: IconType | (() => React.ReactNode);
     buttons?: Array<React.ReactElement<any>>;
     header?: string;
+    className?: string;
 }
 export declare const EmptyState: React.SFC<EmptyStateProps>;
 export default EmptyState;

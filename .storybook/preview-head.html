@@ -1,6 +1,30 @@
-<link href="https://uiux.s3.amazonaws.com/style-guide/css/style-guide.css" rel="stylesheet">
+
 <style>
   body {
     padding: 4em !important;
+    margin:0px;
   }
 </style>
+<script>
+if(window.location.origin === "file://"){
+
+  var css = `*, *::before, *::after {
+      -moz-transition: none !important;
+      transition: none !important;
+      -moz-animation: none !important;
+      animation: none !important;
+    }`,
+    head = document.head || document.getElementsByTagName('head')[0],
+    style = document.createElement('style');
+
+  style.type = 'text/css';
+  if (style.styleSheet){
+    style.styleSheet.cssText = css;
+  } else {
+    style.appendChild(document.createTextNode(css));
+  }
+
+  head.appendChild(style);
+}
+
+</script>
