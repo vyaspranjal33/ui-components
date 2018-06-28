@@ -2544,6 +2544,263 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
 </div>
 `;
 
+exports[`Storyshots Details Row Available Details Row 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="details-row title"
+    >
+      <i
+        className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+        onClick={undefined}
+        style={Object {}}
+      />
+      <p
+        className="small details-row spacing"
+      >
+        <span
+          className="has-underline"
+          data-tooltip="tooltip"
+          data-tooltip-length="medium"
+          data-tooltip-pos="right"
+        >
+           
+          Title with Tooltip
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="details-row title"
+    >
+      <i
+        className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+        onClick={undefined}
+        style={Object {}}
+      />
+      <p
+        className="small details-row spacing"
+      >
+        Title without Tooltip
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Details Row Details Row Example 1`] = `
+Array [
+  <div
+    className="details-row title"
+  >
+    <i
+      className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+      onClick={undefined}
+      style={Object {}}
+    />
+    <p
+      className="small details-row spacing"
+    >
+      Core Email API Features
+    </p>
+  </div>,
+  <div
+    className="details-row title"
+  >
+    <i
+      className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+      onClick={undefined}
+      style={Object {}}
+    />
+    <p
+      className="small details-row spacing"
+    >
+      <span
+        className="has-underline"
+        data-tooltip="Something ┌( ಠ‿ಠ)┘"
+        data-tooltip-length="medium"
+        data-tooltip-pos="right"
+      >
+         
+        Core Marketing Campaigns Features
+      </span>
+    </p>
+  </div>,
+  <div
+    className="details-row title"
+  >
+    <i
+      className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+      onClick={undefined}
+      style={Object {}}
+    />
+    <p
+      className="small details-row spacing"
+    >
+      <span
+        className="has-underline"
+        data-tooltip="Something else (o˘◡˘o)"
+        data-tooltip-length="medium"
+        data-tooltip-pos="right"
+      >
+         
+        Data-rich email activity feed
+      </span>
+    </p>
+  </div>,
+  <div
+    className="details-row title"
+  >
+    <i
+      className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+      onClick={undefined}
+      style={Object {}}
+    />
+    <p
+      className="small details-row spacing"
+    >
+      <span
+        className="has-underline"
+        data-tooltip="Something or other"
+        data-tooltip-length="medium"
+        data-tooltip-pos="right"
+      >
+         
+        Dedicated IP 🎉
+      </span>
+    </p>
+  </div>,
+  <div
+    className="details-row title"
+  >
+    <i
+      className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+      onClick={undefined}
+      style={Object {}}
+    />
+    <p
+      className="small details-row spacing"
+    >
+      <span
+        className="has-underline"
+        data-tooltip="Another one"
+        data-tooltip-length="medium"
+        data-tooltip-pos="right"
+      >
+         
+        Subuser management
+      </span>
+    </p>
+  </div>,
+  <div
+    className="details-row title steel"
+  >
+    <i
+      className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+      onClick={undefined}
+      style={Object {}}
+    />
+    <p
+      className="small details-row spacing"
+    >
+      Customer success manager
+    </p>
+  </div>,
+  <div
+    className="details-row title steel"
+  >
+    <i
+      className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+      onClick={undefined}
+      style={Object {}}
+    />
+    <p
+      className="small details-row spacing"
+    >
+      Prioritized support
+    </p>
+  </div>,
+]
+`;
+
+exports[`Storyshots Details Row Unavailable Details Row 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="details-row title steel"
+    >
+      <i
+        className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+        onClick={undefined}
+        style={Object {}}
+      />
+      <p
+        className="small details-row spacing"
+      >
+        <span
+          className="has-underline"
+          data-tooltip="tooltip"
+          data-tooltip-length="medium"
+          data-tooltip-pos="right"
+        >
+           
+          Title with Tooltip
+        </span>
+      </p>
+    </div>
+  </div>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="details-row title steel"
+    >
+      <i
+        className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+        onClick={undefined}
+        style={Object {}}
+      />
+      <p
+        className="small details-row spacing"
+      >
+        Title without Tooltip
+      </p>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Divider Divider (Thin) 1`] = `
 <hr
   className="is-thin"
@@ -7758,6 +8015,963 @@ exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page He
     </div>
   </div>
 </header>
+`;
+
+exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#FCFCFC",
+      "height": "100%",
+      "padding": 20,
+    }
+  }
+>
+  <div
+    className="plan-card"
+  >
+    <div
+      className="col1"
+    >
+      <h2>
+        Free
+           
+      </h2>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Core Email API Features
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something or other ٩(◕‿◕)۶"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Core Marketing Campaigns Features
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something over here (〃＾▽＾〃)"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Data-rich email activity feed
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Dedicated IP
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Subuser management
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Customer success manager
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Prioritized support
+        </p>
+      </div>
+      <a
+        className="small link"
+        href="#"
+      >
+        See Full Plan Comparison
+      </a>
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Free 100
+          </h3>
+          <p>
+            100 emails/day
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <i
+            className="small-icon mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+            onClick={undefined}
+            style={Object {}}
+          />
+          Your Current Plan
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <br />
+  <hr
+    className=""
+    data-label={null}
+  />
+  <div
+    className="plan-card"
+  >
+    <div
+      className="col1"
+    >
+      <h2>
+        Essentials
+           
+      </h2>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Core Email API Features
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something ┌( ಠ‿ಠ)┘"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Core Marketing Campaigns Features
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something else (o˘◡˘o)"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Data-rich email activity feed
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Dedicated IP
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Subuser management
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Customer success manager
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Prioritized support
+        </p>
+      </div>
+      <a
+        className="small link"
+        href="#"
+      >
+        See Full Plan Comparison
+      </a>
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Essentials 40k
+          </h3>
+          <p>
+            40,000 emails/mo + $0.001 per extra email
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <p
+            className="price"
+          >
+            $
+            9.95
+            /mo*
+            <button
+              className="btn btn-secondary btn btn-secondary select-btn btn-small"
+              id={undefined}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Essentials 100k
+          </h3>
+          <p>
+            100,000 emails/mo + $0.00075 per extra email
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <p
+            className="price"
+          >
+            $
+            19.95
+            /mo*
+            <button
+              className="btn btn-secondary btn btn-secondary select-btn btn-small"
+              id={undefined}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+    <p
+      className="plan-card small taxes-footnote"
+    >
+       
+      * Taxes may apply
+    </p>
+  </div>
+  <br />
+  <hr
+    className=""
+    data-label={null}
+  />
+  <div
+    className="plan-card"
+  >
+    <div
+      className="col1"
+    >
+      <h2>
+        Pro
+           
+        <span
+          className="badge badge gradient"
+        >
+          RECOMMENDED
+        </span>
+      </h2>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Core Email API Features
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something ┌( ಠ‿ಠ)┘"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Core Marketing Campaigns Features
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something else (o˘◡˘o)"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Data-rich email activity feed
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something or other"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Dedicated IP 🎉
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Another one"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Subuser management
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Customer success manager
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Prioritized support
+        </p>
+      </div>
+      <a
+        className="small link"
+        href="#"
+      >
+        See Full Plan Comparison
+      </a>
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Pro 100K
+          </h3>
+          <p>
+            100,000 emails/mo + $0.00085 per extra email
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <p
+            className="price"
+          >
+            $
+            79.95
+            /mo*
+            <button
+              className="btn btn-secondary btn btn-secondary select-btn btn-small"
+              id={undefined}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Pro 300K
+          </h3>
+          <p>
+            300,000 emails/mo + $0.00050 per extra email
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <p
+            className="price"
+          >
+            $
+            199.95
+            /mo*
+            <button
+              className="btn btn-secondary btn btn-secondary select-btn btn-small"
+              id={undefined}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Pro 700K
+          </h3>
+          <p>
+            700,000 emails/mo + $0.00045 per extra email
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <p
+            className="price"
+          >
+            $
+            399.95
+            /mo*
+            <button
+              className="btn btn-secondary btn btn-secondary select-btn btn-small"
+              id={undefined}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Pro 1.5M
+          </h3>
+          <p>
+            1.5 million emails/mo + $0.00045 per extra email
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <p
+            className="price"
+          >
+            $
+            699.95
+            /mo*
+            <button
+              className="btn btn-secondary btn btn-secondary select-btn btn-small"
+              id={undefined}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Pro 2.5M
+          </h3>
+          <p>
+            2.5 million emails/mo + $0.00045 per extra email
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <p
+            className="price"
+          >
+            $
+            949.95
+            /mo*
+            <button
+              className="btn btn-secondary btn btn-secondary select-btn btn-small"
+              id={undefined}
+              onClick={null}
+              type="button"
+            >
+              Select
+            </button>
+          </p>
+        </div>
+      </div>
+      <br />
+    </div>
+    <p
+      className="plan-card small taxes-footnote"
+    >
+       
+      * Taxes may apply
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Plan Card Plan Card 1`] = `
+<div
+  style={
+    Object {
+      "backgroundColor": "#FCFCFC",
+      "height": "75vh",
+      "padding": 20,
+    }
+  }
+>
+  <div
+    className="plan-card"
+  >
+    <div
+      className="col1"
+    >
+      <h2>
+        Free
+           
+      </h2>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Core Email API Features
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something or other ٩(◕‿◕)۶"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Core Marketing Campaigns Features
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title"
+      >
+        <i
+          className="details-row mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          <span
+            className="has-underline"
+            data-tooltip="Something over here (〃＾▽＾〃)"
+            data-tooltip-length="medium"
+            data-tooltip-pos="right"
+          >
+             
+            Data-rich email activity feed
+          </span>
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Dedicated IP
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Subuser management
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Customer success manager
+        </p>
+      </div>
+      <div
+        className="details-row title steel"
+      >
+        <i
+          className="details-row steel sg-icon sg-icon-x-legacy sg-icon sg-icon-x-legacy"
+          onClick={undefined}
+          style={Object {}}
+        />
+        <p
+          className="small details-row spacing"
+        >
+          Prioritized support
+        </p>
+      </div>
+      <a
+        className="small link"
+        href="#"
+      >
+        See Full Plan Comparison
+      </a>
+    </div>
+    <div
+      className="packages-container"
+    >
+      <div
+        className="card card-padding is-inline is-thin"
+      >
+        
+        <div
+          className="col1 small"
+        >
+          <h3
+            className="package-name"
+          >
+            Free 100
+          </h3>
+          <p>
+            100 emails/day
+          </p>
+        </div>
+        <div
+          className="small plan-status"
+        >
+          <i
+            className="small-icon mantis sg-icon sg-icon-check sg-icon sg-icon-check"
+            onClick={undefined}
+            style={Object {}}
+          />
+          Your Current Plan
+        </div>
+      </div>
+      <br />
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Progress Horizontal Progress 1`] = `
