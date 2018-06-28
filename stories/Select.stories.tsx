@@ -1,8 +1,6 @@
-/// <reference path="../src/@types/react-select.d.ts"/>
 import React from 'react';
 import Select, { components } from 'react-select';
 import CreatableSelect from 'react-select/lib/Creatable';
-import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import './select.module.scss';
 
