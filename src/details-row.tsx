@@ -22,19 +22,16 @@ export const DetailsRow: React.SFC<DetailsRowProps> = ({
 }) => {
   return (
     <div
-      className={cn(
-        Styles['details-row'],
-        Styles.title,
-        className,
-        available ? null : Styles.steel
-      )}
+      className={cn(Styles['details-row'], Styles.title, className, {
+        [Styles.steel]: !available,
+      })}
       {...attributes}
     >
       <Icon
-        className={cn(
-          Styles['details-row'],
-          Styles[available ? 'mantis' : 'steel']
-        )}
+        className={cn(Styles['details-row'], {
+          [Styles.mantis]: available,
+          [Styles.steel]: !available,
+        })}
         type={available ? 'check' : 'x-legacy'}
       />
       <p className={cn('small', Styles['details-row'], Styles.spacing)}>

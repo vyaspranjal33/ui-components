@@ -8188,23 +8188,20 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
           Your Current Plan
         </div>
       </div>
-      <br />
     </div>
   </div>
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <br />
-  <hr
-    className=""
-    data-label={null}
-  />
+  <p
+    style={
+      Object {
+        "marginTop": "200px",
+      }
+    }
+  >
+    <hr
+      className=""
+      data-label={null}
+    />
+  </p>
   <div
     className="plan-card"
   >
@@ -8375,7 +8372,6 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
           </p>
         </div>
       </div>
-      <br />
     </div>
     <div
       className="packages-container"
@@ -8416,7 +8412,6 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
           </p>
         </div>
       </div>
-      <br />
     </div>
     <p
       className="plan-card small taxes-footnote"
@@ -8425,11 +8420,18 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
       * Taxes may apply
     </p>
   </div>
-  <br />
-  <hr
-    className=""
-    data-label={null}
-  />
+  <p
+    style={
+      Object {
+        "marginTop": "60px",
+      }
+    }
+  >
+    <hr
+      className=""
+      data-label={null}
+    />
+  </p>
   <div
     className="plan-card"
   >
@@ -8621,7 +8623,6 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
           </p>
         </div>
       </div>
-      <br />
     </div>
     <div
       className="packages-container"
@@ -8662,7 +8663,6 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
           </p>
         </div>
       </div>
-      <br />
     </div>
     <div
       className="packages-container"
@@ -8703,7 +8703,6 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
           </p>
         </div>
       </div>
-      <br />
     </div>
     <div
       className="packages-container"
@@ -8744,7 +8743,6 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
           </p>
         </div>
       </div>
-      <br />
     </div>
     <div
       className="packages-container"
@@ -8785,7 +8783,6 @@ exports[`Storyshots Plan Card Multiple Plan Cards 1`] = `
           </p>
         </div>
       </div>
-      <br />
     </div>
     <p
       className="plan-card small taxes-footnote"
@@ -8968,7 +8965,6 @@ exports[`Storyshots Plan Card Plan Card 1`] = `
           Your Current Plan
         </div>
       </div>
-      <br />
     </div>
   </div>
 </div>
