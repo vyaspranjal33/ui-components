@@ -14,3 +14,4 @@ export const screample: string;
 export const sangria: string;
 export const lavender: string;
 export const steel: string;
+export const gradient: string;

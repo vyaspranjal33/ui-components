@@ -1,4 +1,4 @@
-export const badge: string;
-export const slate: string;
-export const mantis: string;
 export const steel: string;
+export const mantis: string;
+export const title: string;
+export const spacing: string;
