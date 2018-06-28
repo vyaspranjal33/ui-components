@@ -1,10 +1,7 @@
-import React, { Fragment } from 'react';
-import AnimateHeight from 'react-animate-height';
-import Badge from '../badge';
-import Icon from '../icon';
-import Loader from '../loader';
-import { IconType } from '../types/icons';
+import React from 'react';
 import cn from '../utilities/classnames';
+import Styles from './accordion.module.scss';
+
 import {
   AccordionPanel,
   AccordionPanelDescription,
@@ -31,11 +28,11 @@ export const Accordion: React.SFC<AccordionProps> = ({
 }) => {
   return (
     <div
-      className={cn('accordion-wrapper', className, {
-        'accordion-caret-left': caretLeft,
-        'accordion-large': large,
-        'accordion-list': list,
-        'is-editor': editor,
+      className={cn(Styles['accordion-wrapper'], className, {
+        [Styles['accordion-caret-left']]: caretLeft,
+        [Styles['accordion-large']]: large,
+        [Styles['accordion-list']]: list,
+        [Styles['is-editor']]: editor,
       })}
     >
       {children}

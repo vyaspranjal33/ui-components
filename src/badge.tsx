@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/badge.module.scss';
 import { color as validColor } from './types/color';
 import cn from './utilities/classnames';
 
@@ -16,7 +17,7 @@ export const Badge: React.SFC<BadgeProps> = ({
   className,
   ...attributes
 }) => (
-  <span className={cn('badge', className, color)} {...attributes}>
+  <span className={cn('badge', Styles.badge, Styles[color])} {...attributes}>
     {children || content}
   </span>
 );

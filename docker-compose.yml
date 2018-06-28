@@ -2,7 +2,7 @@ version: '3.3'
 
 services:
   app:
-    image: docker.sendgrid.net/sendgrid/ui-components:latest
+    image: ${IMAGETAG:-docker.sendgrid.net/sendgrid/ui-components:latest}
     user: ${MYUID:-0}
     build:
      context: .  
@@ -21,7 +21,8 @@ services:
       # Preserve the node_modules folder in the docker container because we mounted ./
       - /opt/sendgrid/ui-components/node_modules
   build:
-    image: docker.sendgrid.net/sendgrid/ui-components:latest
+    image: ${IMAGETAG:-docker.sendgrid.net/sendgrid/ui-components:latest}
+    shm_size: '3gb'
     # user: ${MYUID:-0}
     build:
       context: .  
@@ -30,8 +31,12 @@ services:
       - /etc/passwd:/etc/passwd:ro
       # Only mount the directories we expect to write into our host 
       # (No permissions issues with node_modules this way)
-      - ./docs:/opt/sendgrid/ui-components/docs
-      - ./packages:/opt/sendgrid/ui-components/packages
+      - ./src/:/opt/sendgrid/ui-components/src/
+      - ./stories/:/opt/sendgrid/ui-components/stories/
+      - ./docs/:/opt/sendgrid/ui-components/docs/
+      - ./packages/:/opt/sendgrid/ui-components/packages/
+      - ./test_image/:/opt/sendgrid/ui-components/test_image/
+
 
   develop:
     image: docker.sendgrid.net/sendgrid/ui-components:latest

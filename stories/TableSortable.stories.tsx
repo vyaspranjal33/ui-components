@@ -1,6 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
+import Icon from '../src/icon';
 
 import SortableTable from '../src/table/sortable-table';
 
@@ -106,7 +107,7 @@ const ColumnRenderer = ({
     ascending={ascending}
     sorted={dataKey === sortBy}
   >
-    <span className="sg-icon sg-icon-button" /> {name}
+    <Icon type="button" /> {name}
   </HeaderCell>
 );
 

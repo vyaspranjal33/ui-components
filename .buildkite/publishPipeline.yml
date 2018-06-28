@@ -32,7 +32,10 @@ steps:
       - git checkout ${BUILDKITE_BRANCH} 
       - git pull 
       - echo "//registry.npmjs.org/:_authToken=${NPM_TOKEN}" > ~/.npmrc
-      - docker pull $(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
+      - echo "--- 🐳 Pulling the docker image"
+      - export IMAGETAG=$(buildkite-agent meta-data get docker-compose-plugin-built-image-tag-app)
+      - docker pull \$IMAGETAG
+      - echo "+++ 🔥 Publishing 🔥"
       - docker-compose run app bash -c "/usr/local/bin/npm config set init.author.name CI && /usr/local/bin/npm config set init.author.email "uicomponents@sendgrid.com" && /usr/local/bin/npx lerna publish --yes --cd-version $(buildkite-agent meta-data get "publish-version")"
       - git status
       - git push

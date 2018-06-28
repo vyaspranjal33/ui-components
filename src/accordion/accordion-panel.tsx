@@ -1,13 +1,11 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import AnimateHeight from 'react-animate-height';
-import Badge from '../badge';
-import Icon from '../icon';
-import Loader from '../loader';
 import { IconType } from '../types/icons';
 import cn from '../utilities/classnames';
 import AccordionPanelDescription from './accordion-panel-description';
 import AccordionPanelIcon from './accordion-panel-icon';
 import AccordionPanelTitle from './accordion-panel-title';
+import Styles from './accordion.module.scss';
 
 export interface AccordionPanelProps {
   children: React.ReactNode;
@@ -31,17 +29,20 @@ const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
 }) => {
   return (
     <div
-      className={cn('accordion-panel', className, {
-        'has-child': noPadding,
-        'is-visible': open,
+      className={cn(Styles['accordion-panel'], className, {
+        [Styles['has-child']]: noPadding,
+        [Styles['is-visible']]: open,
       })}
       {...attributes}
     >
-      <div className="accordion-title" onClick={onClick}>
+      <div className={Styles['accordion-title']} onClick={onClick}>
         {title}
       </div>
       <AnimateHeight duration={500} height={open ? 'auto' : 0}>
-        <div className="accordion-content" style={{ display: 'block' }}>
+        <div
+          className={Styles['accordion-content']}
+          style={{ display: 'block' }}
+        >
           {children}
         </div>
       </AnimateHeight>

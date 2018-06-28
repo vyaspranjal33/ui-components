@@ -1,11 +1,3 @@
-var __assign = (this && this.__assign) || Object.assign || function(t) {
-    for (var s, i = 1, n = arguments.length; i < n; i++) {
-        s = arguments[i];
-        for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p))
-            t[p] = s[p];
-    }
-    return t;
-};
 var __rest = (this && this.__rest) || function (s, e) {
     var t = {};
     for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
@@ -19,7 +11,8 @@ import React from 'react';
 import Card from './card';
 import Icon from './icon';
 import cn from './utilities/classnames';
-var iconTypes = {
+import Styles from './styles/card.module.scss';
+const iconTypes = {
     button: 'button',
     code: 'code',
     columns: 'columns',
@@ -31,7 +24,7 @@ var iconTypes = {
     text: 'text',
     unsubscribe: 'unsubscribe',
 };
-var titles = {
+const titles = {
     button: 'Button',
     code: 'Code',
     columns: 'Columns',
@@ -43,9 +36,9 @@ var titles = {
     text: 'Text',
     unsubscribe: 'Unsubscribe',
 };
-export var ModuleCard = function (_a) {
-    var type = _a.type, className = _a.className, attributes = __rest(_a, ["type", "className"]);
-    return (React.createElement(Card, __assign({ centered: true, thin: true, className: cn('is-module', className) }, attributes),
+export const ModuleCard = (_a) => {
+    var { type, className } = _a, attributes = __rest(_a, ["type", "className"]);
+    return (React.createElement(Card, Object.assign({ centered: true, thin: true, className: cn('is-module', Styles['is-module'], className) }, attributes),
         React.createElement("p", null,
             React.createElement(Icon, { type: iconTypes[type] }),
             titles[type])));

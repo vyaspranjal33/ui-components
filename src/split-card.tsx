@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Card, { CardProps } from './card';
-
+import Styles from './styles/card.module.scss';
 import cn from './utilities/classnames';
 
 export interface SplitCardSeparatorProps {
@@ -29,8 +29,8 @@ export const SplitCard: React.SFC<CardProps> = ({
   ...attributes
 }) => {
   return (
-    <Card thin className={cn('is-split', className)} {...attributes}>
-      <div className="split-content">{children}</div>
+    <Card thin className={cn(Styles['is-split'], className)} {...attributes}>
+      <div className={Styles['split-content']}>{children}</div>
     </Card>
   );
 };

@@ -7,6 +7,8 @@ import Button from '../src/button';
 import Card from '../src/card';
 import Icon from '../src/icon';
 
+import '../src/styles/global/main.scss';
+
 const stories = storiesOf('Card', module);
 
 stories.add('Card with Title and Body', () => (

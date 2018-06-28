@@ -11,6 +11,7 @@ export interface CenterModalProps extends ModalProps {
     renderBody: string | React.ReactNode | (() => React.ReactNode);
     renderFooter?: string | React.ReactNode | (() => React.ReactNode);
     renderHeader?: string | React.ReactNode | (() => React.ReactNode);
+    padding?: boolean;
 }
 export declare class CenterModal extends Component<CenterModalProps> {
     static defaultProps: Partial<CenterModalProps>;

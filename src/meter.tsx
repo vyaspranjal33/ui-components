@@ -1,4 +1,5 @@
 import React from 'react';
+import Styles from './styles/meter.module.scss';
 import cn from './utilities/classnames';
 
 export interface MeterProps {
@@ -14,15 +15,15 @@ export const Meter: React.SFC<MeterProps> = ({
   ...attributes
 }) => {
   return (
-    <div className={cn('meter-container', className)} {...attributes}>
-      <span className="meter-title">{title}</span>{' '}
-      <span className="meter-value">{value}%</span>
-      <div className="meter-bar">
+    <div className={cn(Styles['meter-container'], className)} {...attributes}>
+      <span className={Styles['meter-title']}>{title}</span>{' '}
+      <span className={Styles['meter-value']}>{value}%</span>
+      <div className={Styles['meter-bar']}>
         <div
-          className={cn('meter-bar-fill', {
-            'is-above-50': value >= 50,
-            'is-below-25': value < 25,
-            'is-below-50': value < 50 && value >= 25,
+          className={cn(Styles['meter-bar-fill'], {
+            [Styles['is-above-50']]: value >= 50,
+            [Styles['is-below-25']]: value < 25,
+            [Styles['is-below-50']]: value < 50 && value >= 25,
           })}
           style={{ width: `${value}%` }}
         />

@@ -3,12 +3,15 @@ import IconSizeType from './types/icon-sizes';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
 
+import Styles from './styles/icon.module.scss';
+
 export interface IconProps {
   type: IconType;
   className?: string;
   onClick?: (event: any) => void;
   onDark?: boolean;
   size?: IconSizeType;
+  style?: { [key: string]: string };
 }
 
 const lightStyle = { color: 'white' };
@@ -19,22 +22,39 @@ export const Icon: React.SFC<IconProps> = ({
   onClick: handleClick,
   onDark,
   size,
+  style,
   ...attributes
-}) => (
-  <i
-    className={cn('sg-icon', `sg-icon-${type}`, {
-      [className]: !!className,
-      [`is-size-${size}`]: size,
-    })}
-    onClick={handleClick}
-    style={onDark ? lightStyle : null}
-    {...attributes}
-  />
-);
+}) => {
+  let iconStyle;
+  if (onDark) {
+    iconStyle = { ...style, ...lightStyle };
+  } else {
+    iconStyle = style;
+  }
+
+  return (
+    <i
+      className={cn(
+        className,
+        'sg-icon',
+        `sg-icon-${type}`,
+        Styles['sg-icon'],
+        Styles[`sg-icon-${type}`],
+        {
+          [Styles[`is-size-${size}`]]: size,
+        }
+      )}
+      onClick={handleClick}
+      style={iconStyle}
+      {...attributes}
+    />
+  );
+};
 
 Icon.defaultProps = {
   className: '',
   onDark: false,
+  style: {},
 };
 
 export default Icon;

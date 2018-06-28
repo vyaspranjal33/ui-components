@@ -18,6 +18,18 @@ stories.add('Text Input Simple', () => (
   />
 ));
 
+stories.add('Text Input Simple with a value', () => (
+  <StatefulTextInput
+    type="text"
+    label="Test Input"
+    isRequired={true}
+    isValid={true}
+    value="omg wuuuut"
+    id="test-input-simple"
+    onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
+  />
+));
 stories.add('Text Input Large', () => (
   <StatefulTextInput
     type="text"

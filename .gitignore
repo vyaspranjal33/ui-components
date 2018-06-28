@@ -1,7 +1,10 @@
 # Bundle
 dist
 components
+storybookDist
 .rpt2_cache
+
+test_image/__image_snapshots__/__diff_output__
 
 #Commiting our flow types because we want consistency across dev's and environments
 #flow-typed

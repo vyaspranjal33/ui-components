@@ -1,19 +1,9 @@
 /// <reference types="react" />
-import React from 'react';
+import React, { CSSProperties } from 'react';
+import { ToggleAnythingProps } from './toggle-anything';
 export interface ToggleButtonsProps {
-    children?: any[];
     className?: string;
-    onChange?: (children: React.ReactNode, label?: string, index?: number) => any;
+    style?: CSSProperties;
 }
-export interface ToggleButtonsState {
-    activeIndex: number;
-}
-export declare const ToggleButtons: React.SFC<ToggleButtonsProps>;
-export declare class StatefulToggleButtons extends React.Component<ToggleButtonsProps, ToggleButtonsState> {
-    state: {
-        activeIndex: number;
-    };
-    render(): JSX.Element;
-    private handleChange(event, label, index);
-}
+export declare const ToggleButtons: React.SFC<ToggleAnythingProps & ToggleButtonsProps>;
 export default ToggleButtons;
