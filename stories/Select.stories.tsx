@@ -1,6 +1,7 @@
+/// <reference path="../src/@types/react-select.d.ts"/>
 import React from 'react';
 import Select, { components } from 'react-select';
-import CreatableSelect from 'react-select/lib/Creatable'
+import CreatableSelect from 'react-select/lib/Creatable';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import './select.module.scss';
@@ -41,31 +42,23 @@ stories.add('Standard', () => (
 
 stories.add('With placeholder', () => (
   <div className="input-select-wrap">
-    <Select
-      className="input-select"
-      options={feels}
-      placeholder="Goobers"
-    />
+    <Select className="input-select" options={feels} placeholder="Goobers" />
   </div>
 ));
 
 stories.add('With label', () => (
   <div className="input-select-wrap">
     <label className="input-select-label">Powerups</label>
-    <Select
-      className="input-select"
-      options={powerups} 
-    />
+    <Select className="input-select" options={powerups} />
   </div>
 ));
 
 stories.add('With info', () => (
   <div className="input-select-wrap">
-    <Select
-      className="input-select"
-      options={powerups}
-    />
-    <span className="input-info">Read this to better understand the dropdown.</span>
+    <Select className="input-select" options={powerups} />
+    <span className="input-info">
+      Read this to better understand the dropdown.
+    </span>
   </div>
 ));
 
@@ -104,11 +97,7 @@ stories.add('Multi select', () => (
 
 stories.add('Tagging', () => (
   <div className="input-select-wrap">
-    <CreatableSelect
-      className="input-select"
-      isMulti
-      options={powerups}
-    />
+    <CreatableSelect className="input-select" isMulti options={powerups} />
   </div>
 ));
 
@@ -142,14 +131,14 @@ stories.add('Custom classnames and styles', () => {
       ...base,
       borderBottom: '1px dotted pink',
       cursor: 'pointer',
-    })
+    }),
   };
 
   return (
     <div>
-      { /* i know this looks weird, but this is just to illustrate styling by classnames */ }
+      {/* i know this looks weird, but this is just to illustrate styling by classnames */}
       <style>
-      {`
+        {`
         .my-control-wrapper {
           background: #927;
           color: #eee;
