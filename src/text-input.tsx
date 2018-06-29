@@ -31,7 +31,7 @@ export interface TextInputProps {
 }
 
 export class TextInput extends React.Component<
-  TextInputProps,
+  TextInputProps & Partial<React.InputHTMLAttributes<HTMLInputElement>>,
   { isInputFocused: boolean }
 > {
   public static defaultProps = {
@@ -49,9 +49,10 @@ export class TextInput extends React.Component<
 
   public onInputFocus: (event: any) => void;
 
-  constructor(props: TextInputProps) {
+  constructor(
+    props: TextInputProps & Partial<React.InputHTMLAttributes<HTMLInputElement>>
+  ) {
     super(props);
-
     this.state = {
       isInputFocused: false,
     };
