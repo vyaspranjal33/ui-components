@@ -1,5 +1,5 @@
 /// <reference types="react" />
-import React, { CSSProperties } from 'react';
+import React, { CSSProperties, ReactText } from 'react';
 import { InputType } from './types/inputs';
 export interface TextInputProps {
     children?: React.ReactNode;
@@ -19,9 +19,10 @@ export interface TextInputProps {
     onBlur?: (event: any, value: string | number) => void;
     style?: CSSProperties;
 }
-export declare class TextInput extends React.Component<TextInputProps, {
+export interface TextInputState {
     isInputFocused: boolean;
-}> {
+}
+export declare class TextInput extends React.Component<TextInputProps, TextInputState> {
     static defaultProps: {
         fullWidth: boolean;
         info: string;
@@ -34,6 +35,7 @@ export declare class TextInput extends React.Component<TextInputProps, {
         style: React.CSSProperties;
         value: string;
     };
+    state: TextInputState;
     onInputFocus: (event: any) => void;
     constructor(props: TextInputProps);
     readonly inputStyle: React.CSSProperties;
@@ -41,8 +43,12 @@ export declare class TextInput extends React.Component<TextInputProps, {
     onInputBlur(event: any): void;
     render(): JSX.Element;
 }
-export declare class StatefulTextInput extends React.Component<TextInputProps> {
+export interface StatefulTextInputState {
+    value: ReactText;
+}
+export declare class StatefulTextInput extends React.Component<TextInputProps, any> {
     static defaultProps: Partial<TextInputProps>;
+    state: StatefulTextInputState;
     constructor(props: TextInputProps);
     onValueChange(event: any): void;
     render(): JSX.Element;
