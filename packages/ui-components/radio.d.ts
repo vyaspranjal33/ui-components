@@ -17,11 +17,9 @@ export interface RadioProps {
     value: string;
 }
 export declare const Radio: React.SFC<RadioProps>;
-export interface RadioState {
+export declare class StatefulRadio extends React.Component<RadioProps, {
     checked: boolean;
-}
-export declare class StatefulRadio extends React.Component<RadioProps, RadioState> {
-    state: RadioState;
+}> {
     constructor(props: RadioProps);
     handleChange(event: any): void;
     render(): JSX.Element;

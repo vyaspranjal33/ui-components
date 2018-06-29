@@ -7,7 +7,7 @@ export interface TooltipProps {
     direction?: TooltipDirection;
     length?: TooltipLength;
     className?: string;
-    children?: React.ReactNode | React.ReactElement<any>;
+    children?: React.ReactElement<any>;
 }
 export declare const Tooltip: React.SFC<TooltipProps>;
 export declare type HtmlTooltipDirection = 'left' | 'right';
