@@ -53,3 +53,4 @@ export { TextInput } from './text-input';
 export { ToggleButtons } from './toggle-buttons';
 export { Tooltip, HTMLTooltip } from './tooltip';
 export { TruncatedList } from './truncated-list';
+export { UploadProgress } from './upload-progress';
