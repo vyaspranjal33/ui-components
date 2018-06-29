@@ -175,14 +175,28 @@ stories.add("Multiple Plan Cards", () => (
             packageDetails={PACKAGES.FREE_PACKAGES}
             planDetails={PACKAGES.FREE_PLAN_DETAILS}
         />
-        <p style={{ marginTop: '200px', }}><Divider /></p>
+        {/* sorry for this, we can update the spacing better in a page style? */}
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <Divider />
         <PlanCard
             planTitle="Essentials"
             selectedPackage="Free 100"
             packageDetails={PACKAGES.ESSENTIALS_PACKAGES}
             planDetails={PACKAGES.ESSENTIALS_PLAN_DETAILS}
         />
-        <p style={{ marginTop: '60px', }}><Divider /></p>
+        {/* sorry for this, we can update the spacing better in a page style? */}
+        <br />
+
+        <Divider />
         <PlanCard
             planTitle="Pro"
             recommended

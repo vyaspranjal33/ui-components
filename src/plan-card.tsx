@@ -20,10 +20,10 @@ function renderPackageDetails(
   selectedPackage: string
 ) {
   return packageDetails.map(p => (
-    <div className={Styles['packages-container']}>
-      <Card className={Styles['card-padding']} inline thin title="">
+    <div className={cn(Styles['packages-container'])}>
+      <Card className={cn(Styles['card-padding'])} inline thin title="">
         <div className={cn(Styles.col1, Styles.small)}>
-          <h3 className={Styles['package-name']}>{p.name}</h3>
+          <h3 className={cn(Styles['package-name'])}>{p.name}</h3>
           <p>{p.packageSummary}</p>
         </div>
         <div className={cn(Styles.small, Styles['plan-status'])}>
@@ -36,10 +36,10 @@ function renderPackageDetails(
           {p.name === selectedPackage ? (
             'Your Current Plan'
           ) : (
-            <p className={Styles.price}>
+            <p className={cn(Styles.price)}>
               ${p.price}/mo*
               <Button
-                className={Styles['select-btn']}
+                className={cn(Styles['select-btn'])}
                 type="secondary"
                 onClick={null}
                 small
@@ -50,6 +50,7 @@ function renderPackageDetails(
           )}
         </div>
       </Card>
+      <br />
     </div>
   ));
 }
@@ -70,11 +71,11 @@ export const PlanCard: React.SFC<PlanCardProps> = ({
   packageDetails,
   planDetails,
 }) => (
-  <div className={Styles['plan-card']}>
-    <div className={Styles.col1}>
+  <div className={cn(Styles['plan-card'])}>
+    <div className={cn(Styles.col1)}>
       <h2>
         {planTitle}&nbsp;&nbsp;&nbsp;{recommended ? (
-          <Badge className={Styles['plan-card']} gradient>
+          <Badge className={cn(Styles['plan-card'])} gradient>
             RECOMMENDED
           </Badge>
         ) : null}
