@@ -15,6 +15,7 @@ export interface AnythingKey {
     onClick: (event: Event) => void;
 }
 export default class ToggleAnything extends React.Component<ToggleAnythingProps, ToggleAnythingState> {
+    state: ToggleAnythingState;
     constructor(props: ToggleAnythingProps);
     render(): React.ReactNode;
 }
