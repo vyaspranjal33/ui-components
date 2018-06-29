@@ -30,7 +30,7 @@ export interface TextInputProps {
   style?: CSSProperties;
 }
 
-export interface TextInputState {
+interface TextInputState {
   isInputFocused: boolean;
 }
 export class TextInput extends React.Component<TextInputProps, TextInputState> {
@@ -149,10 +149,13 @@ export class TextInput extends React.Component<TextInputProps, TextInputState> {
   }
 }
 
-export interface StatefulTextInputState {
+interface StatefulTextInputState {
   value: ReactText;
 }
-export class StatefulTextInput extends React.Component<TextInputProps, any> {
+export class StatefulTextInput extends React.Component<
+  TextInputProps,
+  StatefulTextInputState
+> {
   public static defaultProps: Partial<TextInputProps> = {
     value: '',
   };
