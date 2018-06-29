@@ -19,6 +19,7 @@ export interface SortableTableState {
     ascending?: boolean;
 }
 export declare class SortableTable extends React.Component<SortableTableProps, SortableTableState> {
+    state: SortableTableState;
     constructor(props: SortableTableProps);
     componentDidMount(): void;
     handleHeaderClick(dataKey: string, descending: boolean): void;
