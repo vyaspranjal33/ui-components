@@ -22,8 +22,7 @@ export const FeatureList: React.SFC<FeatureListProps> = ({
 }) => {
   return (
     <ul className={className}>
-      {' '}
-      {renderFeatureList(planDetails, attributes)} children{' '}
+      {renderFeatureList(planDetails, attributes)} {children}
     </ul>
   );
 };
