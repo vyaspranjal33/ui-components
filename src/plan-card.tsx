@@ -3,7 +3,7 @@ import React, { Fragment } from 'react';
 import { Badge } from './badge';
 import { Button } from './button';
 import { Card } from './card';
-import { DetailsRow } from './details-row';
+import { FeatureList } from './feature-list';
 import { Icon } from './icon';
 import Styles from './styles/plan-card.module.scss';
 
@@ -12,7 +12,11 @@ export interface PlanCardProps {
   recommended?: boolean;
   selectedPackage?: string;
   packageDetails?: Array<object>;
-  planDetails?: Array<object>;
+  planDetails: Array<{
+    available?: boolean;
+    title?: string;
+    toolTip?: string;
+  }>;
 }
 
 function renderPackageDetails(
@@ -53,15 +57,6 @@ function renderPackageDetails(
     </div>
   ));
 }
-function renderPlanDetails(planDetails: Array<any>) {
-  return planDetails.map(p => (
-    <DetailsRow
-      available={p.available}
-      title={p.title}
-      tooltipContent={p.toolTip}
-    />
-  ));
-}
 
 export const PlanCard: React.SFC<PlanCardProps> = ({
   planTitle,
@@ -79,7 +74,7 @@ export const PlanCard: React.SFC<PlanCardProps> = ({
           </Badge>
         ) : null}
       </h2>
-      {renderPlanDetails(planDetails)}
+      <FeatureList planDetails={planDetails} />
       <a className={cn(Styles.small, Styles.link)} href="#">
         See Full Plan Comparison
       </a>
