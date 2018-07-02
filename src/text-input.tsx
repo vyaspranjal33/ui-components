@@ -33,7 +33,7 @@ export interface TextInputProps {
  * Inorder to allow for ...attributes we need to use
  * Partial<React.InputHTMLAttributes<HTMLInputElement>>
  * to add all of those possible types. However, this component is
- * redefining the function definiton for onBlur, so we must omit the
+ * redefining the function definition for onBlur, so we must omit the
  * original event hook from the possible props.
  */
 export type HTMLInputElementProps = Partial<
