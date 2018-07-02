@@ -2,12 +2,12 @@
 import React from 'react';
 export interface FeatureListProps {
     className?: string;
-    planDetails?: {
+    planDetails: Array<{
         available?: boolean;
         title?: string;
-        tooltipContent?: string;
-    }[];
-    children?: React.ReactNode;
+        toolTip?: string;
+    }>;
+    children?: any;
 }
 export declare const FeatureList: React.SFC<FeatureListProps>;
 export default FeatureList;

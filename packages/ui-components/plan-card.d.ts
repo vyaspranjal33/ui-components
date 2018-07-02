@@ -5,7 +5,11 @@ export interface PlanCardProps {
     recommended?: boolean;
     selectedPackage?: string;
     packageDetails?: Array<object>;
-    planDetails?: Array<object>;
+    planDetails: Array<{
+        available?: boolean;
+        title?: string;
+        toolTip?: string;
+    }>;
 }
 export declare const PlanCard: React.SFC<PlanCardProps>;
 export default PlanCard;
