@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 1.0.2
+- TextInput props include typed HTMLAttributes for TS consumers
 ## 1.0.1
 - PageHeader styles have been brought inline with typography standards
 ## 0.14.8

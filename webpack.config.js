@@ -22,7 +22,7 @@ module.exports = {
         ],
         use: [
           {
-            loader: "typings-for-css-modules-loader?modules&sass&namedExport",
+            loader: "typings-for-css-modules-loader?modules&sass&namedExport&camelCase",
           },
         ]
       },
