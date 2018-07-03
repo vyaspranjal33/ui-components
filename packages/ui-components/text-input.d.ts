@@ -27,7 +27,7 @@ export interface TextInputProps {
  * redefining the function definition for onBlur, so we must omit the
  * original event hook from the possible props.
  */
-export declare type HTMLInputElementProps = Partial<Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onBlur'>>;
+export declare type HTMLInputElementProps = Partial<Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onBlur' | 'onChange'>>;
 export declare class TextInput extends React.Component<TextInputProps & HTMLInputElementProps, {
     isInputFocused: boolean;
 }> {
