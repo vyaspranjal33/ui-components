@@ -1,8 +1,8 @@
-export declare type Diff<T extends string, U extends string> = ({
-    [P in T]: P;
+export declare type Omit<T, K extends keyof T> = Pick<T, ({
+    [P in keyof T]: P;
 } & {
-    [P in U]: never;
+    [P in K]: never;
 } & {
     [x: string]: never;
-})[T];
-export declare type Omit<T, K extends keyof T> = Pick<T, Diff<keyof T, K>>;
+    [x: number]: never;
+})[keyof T]>;
