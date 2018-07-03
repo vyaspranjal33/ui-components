@@ -1,8 +1,12 @@
 # CHANGELOG
 
-
-## 1.0.3
+## 1.1.2
+- Omit generic now also omits onChange in TextInput
+## 1.1.1
 - Fix Omit generic typescript util for TS 2.9
+## 1.1.0
+- Add Upload Progress component
+- Ammend build process to ease use of ui-components in other apps
 ## 1.0.2
 - TextInput props include typed HTMLAttributes for TS consumers
 ## 1.0.1
