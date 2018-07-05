@@ -35,7 +35,5 @@ export default function classNames(...args: Array<any>): string {
     }
   }
 
-  return Object.keys(result)
-    .map(String.prototype.trim)
-    .join(' ');
+  return Object.keys(result).join(' ');
 }
