@@ -1,5 +1,7 @@
 # CHANGELOG
 
+## 1.1.3
+- Fix CSS module issue causing duplicate class names
 ## 1.1.2
 - Omit generic now also omits onChange in TextInput
 ## 1.1.1
