@@ -10,12 +10,16 @@ describe('classNames', () => {
         d: null,
         e: undefined,
         f: 1,
-      }),
+      })
     ).toBe('a f');
   });
 
   it('joins arrays of class names and ignore falsy values', () => {
-    expect(classNames('a', 0, null, undefined, true, 1, 'b')).toBe('a 1 b');
+    expect(classNames('a', 0, null, undefined, true, 1, 'b')).toBe('1 a b');
+  });
+
+  it('disregards duplicate class names', () => {
+    expect(classNames('a', 0, null, 'a', 'c', 1, 'b')).toBe('1 a c b');
   });
 
   it('supports heterogenous arguments', () => {
@@ -85,9 +89,9 @@ describe('classNames', () => {
         undefined,
         whitespace: ' ',
         zero: 0,
-      }),
+      })
     ).toBe(
-      'emptyList emptyObject function greaterZero nonEmptyList nonEmptyObject nonEmptyString whitespace',
+      'emptyList emptyObject function greaterZero nonEmptyList nonEmptyObject nonEmptyString whitespace'
     );
   });
 });

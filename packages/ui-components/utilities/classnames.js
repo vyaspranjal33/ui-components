@@ -28,8 +28,6 @@ export default function classNames(...args) {
             }
         }
     }
-    return Object.keys(result)
-        .map(String.prototype.trim)
-        .join(' ');
+    return Object.keys(result).join(' ').trim();
 }
 //# sourceMappingURL=classnames.js.map
