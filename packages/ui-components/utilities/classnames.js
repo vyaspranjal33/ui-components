@@ -11,7 +11,9 @@ export default function classNames(...args) {
         }
         if (Array.isArray(arg)) {
             const deduped = {};
-            classNames(...arg).split(' ').forEach((key) => {
+            classNames(...arg)
+                .split(' ')
+                .forEach(key => {
                 deduped[key] = true;
             });
             result = Object.assign({}, result, deduped);
@@ -26,6 +28,8 @@ export default function classNames(...args) {
             }
         }
     }
-    return Object.keys(result).join(' ').trim();
+    return Object.keys(result)
+        .map(String.prototype.trim)
+        .join(' ');
 }
 //# sourceMappingURL=classnames.js.map
