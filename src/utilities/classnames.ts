@@ -1,5 +1,8 @@
 export default function classNames(...args: Array<any>): string {
-  let result = '';
+  // Create a hashmap of classnames so that they are not duplicated
+  let result: {
+    [key: string]: boolean;
+  } = {};
 
   for (const arg of args) {
     if (!arg) {
@@ -7,12 +10,18 @@ export default function classNames(...args: Array<any>): string {
     }
 
     if (typeof arg === 'string' || typeof arg === 'number') {
-      result = `${result} ${arg}`;
+      result[`${arg}`] = true;
       continue;
     }
 
     if (Array.isArray(arg)) {
-      result = `${result} ${classNames(...arg)}`;
+      const deduped = {};
+      classNames(...arg)
+        .split(' ')
+        .forEach(key => {
+          deduped[key] = true;
+        });
+      result = { ...result, ...deduped };
       continue;
     }
 
@@ -20,11 +29,13 @@ export default function classNames(...args: Array<any>): string {
       const keys = Object.keys(arg);
       for (const key of keys) {
         if (arg[key]) {
-          result = `${result} ${key}`;
+          result[`${key}`] = true;
         }
       }
     }
   }
 
-  return result.trim();
+  return Object.keys(result)
+    .join(' ')
+    .trim();
 }
