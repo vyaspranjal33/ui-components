@@ -1,1 +1,1 @@
-export {};
+export const numberedSteps: string;

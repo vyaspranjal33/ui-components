@@ -7733,18 +7733,12 @@ exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page He
   </ol>
   <div
     className="content-header"
-    style={
-      Object {
-        "marginTop": 10,
-      }
-    }
   >
     <h1
       style={
         Object {
           "color": "#294661",
           "fontFamily": "Colfax,Proxima Nova,Helvetica,sans-serif",
-          "fontWeight": 300,
         }
       }
     >
@@ -11791,4 +11785,42 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`Storyshots Upload Progress Upload Progress 1`] = `
+<section
+  className="upload-progress undefined"
+  style={
+    Object {
+      "alignItems": "center",
+      "border": "1px solid #e9ecef",
+      "borderRadius": "2px",
+      "display": "flex",
+      "flexDirection": "column",
+      "fontSize": "16px",
+      "justifyContent": "center",
+      "padding": "60px 30px",
+    }
+  }
+>
+  <h2>
+    We're uploading your CSV file
+  </h2>
+  <p>
+    This may take a few moments, so please don't leave this page.
+  </p>
+  <div
+    className="meter-bar"
+  >
+    <div
+      className="meter-bar-fill"
+      style={
+        Object {
+          "backgroundColor": "#1A82e2",
+          "width": "67%",
+        }
+      }
+    />
+  </div>
+</section>
 `;
