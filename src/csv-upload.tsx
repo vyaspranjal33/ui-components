@@ -3,8 +3,13 @@ import React, { Fragment } from 'react';
 import Dropzone from './dropzone';
 import FileUpload, { DroppedFile, FileSelect } from './file-upload';
 
-const CSVUpload = () => (
+export interface CSVUploadProps {
+  onChange: (event: any) => void;
+}
+
+const CSVUpload: React.SFC<CSVUploadProps> = ({ onChange }) => (
   <FileUpload
+    onFileSelect={onChange}
     render={({
       hasFile,
       hovered,
