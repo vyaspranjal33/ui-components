@@ -63,7 +63,6 @@ const SelectStyles = {
     return { ...base };
   },
   control: (base: object, state: any) => {
-    console.log(state);
     const focusState = state.isFocused
       ? {
           borderBottomColor: Styles['sg-blue'],
@@ -161,7 +160,6 @@ const SelectStyles = {
     };
   },
   noOptionsMessage: (base: object, state: Array<any>) => {
-    console.log(base, state);
     return { ...base };
   },
   option: (base: object, state: Array<any>) => {

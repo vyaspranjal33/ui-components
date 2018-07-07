@@ -35,35 +35,25 @@ stories.add('Standard', () => (
 
 stories.add('Standard open', () => (
   <div className="input-select-wrap">
-    <Select className="blah" options={feels} placeholder="Goobers" menuIsOpen />
+    <Select options={feels} placeholder="Goobers" menuIsOpen />
   </div>
 ));
 
 stories.add('With placeholder', () => (
   <div className="input-select-wrap">
-    <Select className="blah" options={feels} placeholder="Goobers" />
+    <Select options={feels} placeholder="Goobers" />
   </div>
 ));
 
 stories.add('Disabled', () => (
   <div className="input-select-wrap is-disabled">
-    <Select
-      className="input-select"
-      defaultValue={feels[7]}
-      disabled
-      options={feels}
-    />
+    <Select defaultValue={feels[7]} disabled options={feels} />
   </div>
 ));
 
 stories.add('Searchable', () => (
   <div className="input-select-wrap">
-    <Select
-      className="input-select"
-      defaultValue={feels[1]}
-      isSearchable
-      options={feels}
-    />
+    <Select defaultValue={feels[1]} isSearchable options={feels} />
   </div>
 ));
 
@@ -87,7 +77,6 @@ stories.add('Tagging', () => (
 stories.add('Option groups', () => (
   <div className="input-select-wrap">
     <Select
-      className="sup bae"
       name="groups"
       placeholder="Feels vs. Powerups"
       options={[
@@ -184,7 +173,6 @@ labelStories.add('label - required', () => (
 
 labelStories.add('info', () => (
   <Select
-    className="input-select"
     options={powerups}
     info={'Read this to better understand the dropdown.'}
   />
