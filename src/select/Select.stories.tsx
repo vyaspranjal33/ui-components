@@ -1,7 +1,7 @@
-import React from 'react';
-import Select, { components } from 'react-select';
-import CreatableSelect from 'react-select/lib/Creatable';
 import { storiesOf } from '@storybook/react';
+import React from 'react';
+import ReactSelect, { components } from 'react-select';
+import Select, { Createable } from './index';
 import './select.module.scss';
 
 const stories = storiesOf('Select', module);
@@ -29,34 +29,19 @@ const powerups = [
 
 stories.add('Standard', () => (
   <div className="input-select-wrap">
-    <Select
-      className="input-select"
-      defaultValue={feels[1]}
-      name="single"
-      options={feels}
-    />
+    <Select defaultValue={feels[1]} name="single" options={feels} />
+  </div>
+));
+
+stories.add('Standard open', () => (
+  <div className="input-select-wrap">
+    <Select className="blah" options={feels} placeholder="Goobers" menuIsOpen />
   </div>
 ));
 
 stories.add('With placeholder', () => (
   <div className="input-select-wrap">
-    <Select className="input-select" options={feels} placeholder="Goobers" />
-  </div>
-));
-
-stories.add('With label', () => (
-  <div className="input-select-wrap">
-    <label className="input-select-label">Powerups</label>
-    <Select className="input-select" options={powerups} />
-  </div>
-));
-
-stories.add('With info', () => (
-  <div className="input-select-wrap">
-    <Select className="input-select" options={powerups} />
-    <span className="input-info">
-      Read this to better understand the dropdown.
-    </span>
+    <Select className="blah" options={feels} placeholder="Goobers" />
   </div>
 ));
 
@@ -65,7 +50,7 @@ stories.add('Disabled', () => (
     <Select
       className="input-select"
       defaultValue={feels[7]}
-      isDisabled
+      disabled
       options={feels}
     />
   </div>
@@ -85,9 +70,9 @@ stories.add('Searchable', () => (
 stories.add('Multi select', () => (
   <div className="input-select-wrap">
     <Select
-      className="input-select"
       defaultValue={[powerups[0], powerups[1]]}
       isSearchable
+      isMulti
       options={powerups}
     />
   </div>
@@ -95,14 +80,14 @@ stories.add('Multi select', () => (
 
 stories.add('Tagging', () => (
   <div className="input-select-wrap">
-    <CreatableSelect className="input-select" isMulti options={powerups} />
+    <Createable isMulti options={powerups} />
   </div>
 ));
 
 stories.add('Option groups', () => (
   <div className="input-select-wrap">
     <Select
-      className="input-select"
+      className="sup bae"
       name="groups"
       placeholder="Feels vs. Powerups"
       options={[
@@ -144,7 +129,7 @@ stories.add('Custom classnames and styles', () => {
         }
       `}
       </style>
-      <Select
+      <ReactSelect
         components={{ Control }}
         options={powerups}
         styles={customStyles}
@@ -152,3 +137,55 @@ stories.add('Custom classnames and styles', () => {
     </div>
   );
 });
+
+const labelStories = storiesOf('Select/Label + Info', module);
+labelStories.add('error', () => (
+  <React.Fragment>
+    <Select label={'Powerups'} options={powerups} error info={`it's a trap`} />
+  </React.Fragment>
+));
+labelStories.add('disabled', () => (
+  <React.Fragment>
+    <Select
+      label={'Powerups'}
+      options={powerups}
+      disabled
+      info={`it's a trap`}
+    />
+  </React.Fragment>
+));
+labelStories.add('disabled + error', () => (
+  <React.Fragment>
+    <Select
+      label={'Powerups'}
+      options={powerups}
+      disabled
+      error
+      info={`it's a trap`}
+    />
+  </React.Fragment>
+));
+
+labelStories.add('label', () => (
+  <React.Fragment>
+    <Select label={'Powerups'} options={powerups} disabled />
+  </React.Fragment>
+));
+labelStories.add('label - required', () => (
+  <React.Fragment>
+    <Select
+      label={'Powerups'}
+      options={powerups}
+      required
+      info={`it's a trap`}
+    />
+  </React.Fragment>
+));
+
+labelStories.add('info', () => (
+  <Select
+    className="input-select"
+    options={powerups}
+    info={'Read this to better understand the dropdown.'}
+  />
+));
