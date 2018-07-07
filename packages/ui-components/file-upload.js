@@ -86,6 +86,7 @@ export class FileUpload extends Component {
         this.handleRemove = (event) => {
             this.setState({ files: null }, () => {
                 this.fileInput.value = null;
+                this.props.onFileSelect(null);
             });
         };
         this.handleChange = (event) => {

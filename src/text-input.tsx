@@ -37,7 +37,7 @@ export interface TextInputProps {
  * original event hook from the possible props.
  */
 export type HTMLInputElementProps = Partial<
-  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onBlur'>
+  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onBlur' | 'onChange'>
 >;
 
 export class TextInput extends React.Component<
