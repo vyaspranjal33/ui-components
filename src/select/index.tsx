@@ -17,12 +17,18 @@ const multiValueBaseStyles = {
   color: Styles.white,
   fontSize: 12,
 };
+const disabledLabel = (disabled: boolean) =>
+  disabled
+    ? {
+        backgroundColor: Styles['select-disabled-color'],
+      }
+    : {};
 
 const SelectStyles = {
-  clearIndicator: (base: object, state: Array<any>) => {
+  clearIndicator: (base: object) => {
     return { display: 'none' };
   },
-  container: (base: object, state: Array<any>) => {
+  container: (base: object) => {
     return { ...base };
   },
   control: (base: object, state: any) => {
@@ -47,17 +53,19 @@ const SelectStyles = {
           boxShadow: `${Styles['sg-blue']} 0 1px 0`,
         }
       : {};
+    const disabledState = state.selectProps.disabled
+      ? {
+          color: Styles['select-disabled-color'],
+        }
+      : {};
+
     const errorState = state.selectProps.error
       ? {
           borderBottomColor: Styles['ron-burgundy'],
           boxShadow: `${Styles['ron-burgundy']} 0 1px 0`,
         }
       : {};
-    const disabledState = state.selectProps.disabled
-      ? {
-          color: Styles['select-disabled-color'],
-        }
-      : {};
+
     const placeholderState = !state.hasValue
       ? {
           color: Styles['slate-40'],
@@ -72,14 +80,14 @@ const SelectStyles = {
       ...placeholderState,
     };
   },
-  dropdownIndicator: (base: object, state: Array<any>) => {
+  dropdownIndicator: (base: object) => {
     const dropdownIndicator = {
       padding: 0,
 
       '&::after': {
         ...mixins,
         color: Styles['slate-60'],
-        content: Styles['icon-caret'],
+        content: `'"${Styles['icon-caret']}"'`,
         position: 'absolute',
         right: 5,
       },
@@ -91,10 +99,11 @@ const SelectStyles = {
 
     return { ...base, ...dropdownIndicator };
   },
-  group: (base: object, state: Array<any>) => {
-    return { ...base };
+  indicatorSeparator: () => {
+    return {};
   },
-  groupHeading: (base: object, state: Array<any>) => {
+
+  groupHeading: (base: object) => {
     const groupStyle = {
       color: Styles.slate,
       fontSize: 13,
@@ -105,22 +114,8 @@ const SelectStyles = {
     };
     return { ...base, ...groupStyle };
   },
-  indicatorSeparator: (base: object, state: Array<any>) => {
-    return {};
-  },
-  indicatorsContainer: (base: object, state: Array<any>) => {
-    return { ...base };
-  },
-  input: (base: object, state: Array<any>) => {
-    return { ...base };
-  },
-  loadingIndicator: (base: object, state: Array<any>) => {
-    return { ...base };
-  },
-  loadingMessage: (base: object, state: Array<any>) => {
-    return { ...base };
-  },
-  menu: (base: object, state: Array<any>) => {
+
+  menu: (base: object) => {
     const menu = {
       ...dropDownShadow,
       backgroundColor: Styles['slate-02'],
@@ -132,13 +127,15 @@ const SelectStyles = {
 
     return { ...base, ...menu };
   },
-  menuList: (base: object, state: Array<any>) => {
-    return { ...base };
+
+  multiValue: (base: object, state: any) => {
+    return {
+      ...base,
+      ...multiValueBaseStyles,
+      ...disabledLabel(state.selectProps.disabled),
+    };
   },
-  multiValue: (base: object, state: Array<any>) => {
-    return { ...base, ...multiValueBaseStyles };
-  },
-  multiValueLabel: (base: object, state: Array<any>) => {
+  multiValueLabel: (base: object, state: any) => {
     return {
       ...base,
       ...multiValueBaseStyles,
@@ -147,9 +144,10 @@ const SelectStyles = {
         paddingLeft: 6,
         paddingTop: 4,
       },
+      ...disabledLabel(state.selectProps.disabled),
     };
   },
-  multiValueRemove: (base: object, state: Array<any>) => {
+  multiValueRemove: (base: object, state: any) => {
     return {
       ...base,
       ...{
@@ -160,19 +158,16 @@ const SelectStyles = {
         },
         paddingLeft: 0,
       },
+      ...disabledLabel(state.selectProps.disabled),
     };
   },
-  noOptionsMessage: (base: object, state: Array<any>) => {
-    return { ...base };
-  },
-  option: (base: object, state: Array<any>) => {
+  option: (base: object) => {
     return { ...base, padding: '9px 30px' };
   },
-  placeholder: (base: object, state: Array<any>) => {},
-  singleValue: (base: object, state: Array<any>) => {
+  singleValue: (base: object) => {
     return { ...base, ...inputSelect };
   },
-  valueContainer: (base: object, state: Array<any>) => {
+  valueContainer: (base: object) => {
     return { ...base, ...inputSelect };
   },
 };
@@ -197,7 +192,10 @@ const Select: React.SFC<any> = props => {
       />
       {props.info && (
         <span
-          className={cn(Styles['input-info'], { [Styles.danger]: props.error })}
+          className={cn(Styles['input-info'], {
+            [Styles.danger]: props.error,
+            [Styles.isDisabled]: props.disabled,
+          })}
         >
           {props.info}
         </span>
@@ -227,7 +225,10 @@ const Createable: React.SFC<any> = props => {
       />
       {props.info && (
         <span
-          className={cn(Styles['input-info'], { [Styles.danger]: props.error })}
+          className={cn(Styles['input-info'], {
+            [Styles.danger]: props.error,
+            [Styles.isDisabled]: props.disabled,
+          })}
         >
           {props.info}
         </span>

@@ -18,6 +18,9 @@
 
   icon-caret: $icon-caret;
 }
+.isDisabled {
+  color: $steel;
+}
 // Duplicated from text-input.module.scss maybe we can use the composes property?
 .input-info,
 .input-text-info {

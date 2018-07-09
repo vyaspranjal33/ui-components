@@ -57,6 +57,12 @@ stories.add('Searchable', () => (
   </div>
 ));
 
+stories.add('Multi select - no values', () => (
+  <div className="input-select-wrap">
+    <Select isSearchable isMulti options={powerups} />
+  </div>
+));
+
 stories.add('Multi select', () => (
   <div className="input-select-wrap">
     <Select
@@ -68,9 +74,36 @@ stories.add('Multi select', () => (
   </div>
 ));
 
+stories.add('Multi select - open', () => (
+  <div className="input-select-wrap">
+    <Select
+      defaultValue={[powerups[0], powerups[1]]}
+      isSearchable
+      isMulti
+      menuIsOpen
+      options={powerups}
+    />
+  </div>
+));
+
 stories.add('Tagging', () => (
   <div className="input-select-wrap">
-    <Createable isMulti options={powerups} />
+    <Createable
+      isMulti
+      options={powerups}
+      value={[powerups[0], powerups[1], { label: 'row', value: 'row' }]}
+    />
+  </div>
+));
+
+stories.add('Tagging - open', () => (
+  <div className="input-select-wrap">
+    <Createable
+      isMulti
+      options={powerups}
+      value={[powerups[0], powerups[1], { label: 'row', value: 'row' }]}
+      menuIsOpen
+    />
   </div>
 ));
 
@@ -79,6 +112,20 @@ stories.add('Option groups', () => (
     <Select
       name="groups"
       placeholder="Feels vs. Powerups"
+      options={[
+        { label: 'Feels', options: feels },
+        { label: 'Powerups', options: powerups },
+      ]}
+    />
+  </div>
+));
+
+stories.add('Option groups - open', () => (
+  <div className="input-select-wrap">
+    <Select
+      name="groups"
+      placeholder="Feels vs. Powerups"
+      menuIsOpen
       options={[
         { label: 'Feels', options: feels },
         { label: 'Powerups', options: powerups },
@@ -116,7 +163,7 @@ stories.add('Custom classnames and styles', () => {
           color: #eee;
           padding: 1em;
         }
-      `}
+      `}f
       </style>
       <ReactSelect
         components={{ Control }}
@@ -128,6 +175,7 @@ stories.add('Custom classnames and styles', () => {
 });
 
 const labelStories = storiesOf('Select/Label + Info', module);
+
 labelStories.add('error', () => (
   <React.Fragment>
     <Select label={'Powerups'} options={powerups} error info={`it's a trap`} />
@@ -139,6 +187,29 @@ labelStories.add('disabled', () => (
       label={'Powerups'}
       options={powerups}
       disabled
+      info={`it's a trap`}
+    />
+  </React.Fragment>
+));
+labelStories.add('disabled - defaultValue', () => (
+  <React.Fragment>
+    <Select
+      label={'Powerups'}
+      defaultValue={powerups[0]}
+      options={powerups}
+      disabled
+      info={`it's a trap`}
+    />
+  </React.Fragment>
+));
+labelStories.add('disabled - defaultValue - multi select', () => (
+  <React.Fragment>
+    <Select
+      label={'Powerups'}
+      defaultValue={powerups[0]}
+      options={powerups}
+      disabled
+      isMulti
       info={`it's a trap`}
     />
   </React.Fragment>
