@@ -29,7 +29,12 @@ const powerups = [
 
 stories.add('Standard', () => (
   <div className="input-select-wrap">
-    <Select defaultValue={feels[1]} name="single" options={feels} />
+    <Select
+      defaultValue={feels[1]}
+      name="single"
+      options={feels}
+      hook="supthug"
+    />
   </div>
 ));
 

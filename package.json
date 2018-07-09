@@ -19,7 +19,8 @@
     "snapshot": "yarn test -u",
     "lint-snapshot": "yarn lint-fix && yarn snapshot",
     "image-snapshots": "./imageSnapshot.sh",
-    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image --forceExit -i"
+    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image --forceExit -i",
+    "cypress": "cypress"
   },
   "lint-staged": {
     "*.scss": [
@@ -71,6 +72,7 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "change-case": "^3.0.2",
     "css-loader": "^0.28.11",
+    "cypress": "^3.0.2",
     "enzyme": "^3.2.0",
     "enzyme-adapter-react-16": "^1.1.0",
     "extract-text-webpack-plugin": "^3.0.2",

@@ -174,6 +174,7 @@ const SelectStyles = {
   },
 };
 const Select: React.SFC<any> = props => {
+  const { hook } = props;
   return (
     <div
       className={cn(Styles['input-select-wrap'], {
@@ -181,6 +182,7 @@ const Select: React.SFC<any> = props => {
         [Styles['is-error']]: props.error,
         [Styles['is-disabled']]: props.disabled,
       })}
+      {...{ hook }}
     >
       {props.label && (
         <label className={cn(Styles['input-select-label'])}>
