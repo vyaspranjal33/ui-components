@@ -11,45 +11,8 @@ const inputSelect = {
   color: 'inherit',
   margin: 0,
 };
-const control = {
-  ':hover': {
-    border: 0,
-    borderBottom: `1px solid ${Styles['slate-20']}`,
-  },
-  backgroundColor: 'transparent',
-  border: 0,
-  borderBottom: `1px solid ${Styles['slate-20']}`,
-  borderRadius: 0,
-  boxShadow: 'none',
-  color: Styles.slate,
-  fontSize: 13,
-  minHeight: 'auto',
-};
-const dropdownIndicator = {
-  padding: 0,
 
-  '&::after': {
-    ...mixins,
-    color: Styles['slate-60'],
-    content: Styles['icon-caret'],
-    position: 'absolute',
-    right: 5,
-  },
-
-  svg: {
-    display: 'none',
-  },
-};
-const menu = {
-  ...dropDownShadow,
-  backgroundColor: Styles['slate-02'],
-  borderColor: Styles['slate-10'],
-  borderRadius: 2,
-  fontSize: 13,
-  margin: 0,
-};
-
-const multiValueLabel = {
+const multiValueBaseStyles = {
   backgroundColor: Styles['sg-blue'],
   color: Styles.white,
   fontSize: 12,
@@ -63,6 +26,21 @@ const SelectStyles = {
     return { ...base };
   },
   control: (base: object, state: any) => {
+    const control = {
+      ':hover': {
+        border: 0,
+        borderBottom: `1px solid ${Styles['slate-20']}`,
+      },
+      backgroundColor: 'transparent',
+      border: 0,
+      borderBottom: `1px solid ${Styles['slate-20']}`,
+      borderRadius: 0,
+      boxShadow: 'none',
+      color: Styles.slate,
+      fontSize: 13,
+      minHeight: 'auto',
+    };
+
     const focusState = state.isFocused
       ? {
           borderBottomColor: Styles['sg-blue'],
@@ -95,6 +73,22 @@ const SelectStyles = {
     };
   },
   dropdownIndicator: (base: object, state: Array<any>) => {
+    const dropdownIndicator = {
+      padding: 0,
+
+      '&::after': {
+        ...mixins,
+        color: Styles['slate-60'],
+        content: Styles['icon-caret'],
+        position: 'absolute',
+        right: 5,
+      },
+
+      svg: {
+        display: 'none',
+      },
+    };
+
     return { ...base, ...dropdownIndicator };
   },
   group: (base: object, state: Array<any>) => {
@@ -127,18 +121,27 @@ const SelectStyles = {
     return { ...base };
   },
   menu: (base: object, state: Array<any>) => {
+    const menu = {
+      ...dropDownShadow,
+      backgroundColor: Styles['slate-02'],
+      borderColor: Styles['slate-10'],
+      borderRadius: 2,
+      fontSize: 13,
+      margin: 0,
+    };
+
     return { ...base, ...menu };
   },
   menuList: (base: object, state: Array<any>) => {
     return { ...base };
   },
   multiValue: (base: object, state: Array<any>) => {
-    return { ...base, ...multiValueLabel };
+    return { ...base, ...multiValueBaseStyles };
   },
   multiValueLabel: (base: object, state: Array<any>) => {
     return {
       ...base,
-      ...multiValueLabel,
+      ...multiValueBaseStyles,
       ...{
         padding: 3,
         paddingLeft: 6,
@@ -150,7 +153,7 @@ const SelectStyles = {
     return {
       ...base,
       ...{
-        ...multiValueLabel,
+        ...multiValueBaseStyles,
         ':hover': {
           backgroundColor: Styles['sg-blue'],
           cursor: 'pointer',
