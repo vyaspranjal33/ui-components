@@ -9,15 +9,10 @@ const stories = storiesOf('SideModal', module);
 
 // Need a way to close/open the modal
 class ExampleContainer extends Component<any, { isOpen: boolean }> {
-  public open: (e: any) => void;
-  public close: (e: any) => void;
   public readonly state = { isOpen: false };
-  constructor(props: any) {
-    super(props);
 
-    this.open = () => this.setState({ isOpen: true });
-    this.close = () => this.setState({ isOpen: false });
-  }
+  public open = () => this.setState({ isOpen: true });
+  public close = () => this.setState({ isOpen: false });
 
   public render() {
     return (

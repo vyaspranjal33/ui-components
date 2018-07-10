@@ -6,7 +6,6 @@ import dropDownShadow from '../styles/global/mixins/dropdownShadow.scss';
 import cn from '../utilities/classnames';
 import Styles from './select.module.scss';
 
-/*tslint:disable no-console */
 const inputSelect = {
   color: 'inherit',
   margin: 0,
@@ -87,7 +86,7 @@ const SelectStyles = {
       '&::after': {
         ...mixins,
         color: Styles['slate-60'],
-        content: `'"${Styles['icon-caret']}"'`,
+        content: `${Styles['icon-caret']}`,
         position: 'absolute',
         right: 5,
       },
