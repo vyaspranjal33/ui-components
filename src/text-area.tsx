@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
+import Icon from './icon';
 import Styles from './styles/text-area.module.scss';
+import Tooltip, { TooltipDirection } from './tooltip';
 import cn from './utilities/classnames';
 
 export interface TextAreaProps {
@@ -8,10 +10,12 @@ export interface TextAreaProps {
   id: string;
   info?: string;
   label: string;
+  maxHeight?: number;
   required?: boolean;
   scrollable?: boolean;
+  tooltip?: string;
+  tooltipDirection?: TooltipDirection;
   value: string;
-  maxHeight?: number;
 }
 
 export class TextArea extends Component<
@@ -46,6 +50,7 @@ export class TextArea extends Component<
 
   public render() {
     const {
+      children,
       disabled,
       error,
       id,
@@ -55,6 +60,8 @@ export class TextArea extends Component<
       required,
       scrollable,
       value,
+      tooltip,
+      tooltipDirection,
       ...attributes
     } = this.props;
 
@@ -84,7 +91,30 @@ export class TextArea extends Component<
           disabled={disabled}
           style={{ height: this.height }}
           ref={textarea => (this.textarea = textarea)}
+          {...attributes}
         />
+        {info && (
+          <span
+            className={cn(Styles['textarea-info'], {
+              [Styles['is-error']]: error,
+            })}
+            id={`${id}-info`}
+          >
+            {info}
+          </span>
+        )}
+        {children}
+        {tooltip && (
+          <div className={Styles['textarea-tooltip']}>
+            <Tooltip
+              content={tooltip}
+              length="large"
+              direction={tooltipDirection}
+            >
+              <Icon type="info-circle" />
+            </Tooltip>
+          </div>
+        )}
       </div>
     );
   }

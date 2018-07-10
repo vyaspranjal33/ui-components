@@ -37,6 +37,14 @@ stories.add('Basic', () => (
   </TextAreaContainer>
 ));
 
+stories.add('Information Message', () => (
+  <TextAreaContainer>
+    {(value, handleChange) => (
+      <TextArea id="textarea-info" label="Label" value={value} onChange={handleChange} info="This is a message." />
+    )}
+  </TextAreaContainer>
+));
+
 stories.add('Required', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
@@ -65,6 +73,14 @@ stories.add('Scrollable', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
       <TextArea id="textarea-scrollable" label="Label" value={value} onChange={handleChange} scrollable />
+    )}
+  </TextAreaContainer>
+));
+
+stories.add('With Tooltip', () => (
+  <TextAreaContainer>
+    {(value, handleChange) => (
+      <TextArea id="textarea-tooltip" label="Label" value={value} onChange={handleChange} tooltip="I am a tooltip." />
     )}
   </TextAreaContainer>
 ));
