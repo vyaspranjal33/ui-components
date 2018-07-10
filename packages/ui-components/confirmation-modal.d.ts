@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React, { Component } from 'react';
 import { IconType } from './types/icons';
 import { ModalProps } from './utilities/modals';

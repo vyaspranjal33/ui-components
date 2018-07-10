@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import ModuleCardType from './types/module-card';
 export interface ModuleCardProps {

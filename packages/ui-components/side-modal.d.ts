@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { ModalProps } from './utilities/modals';
 export interface SideModalProps extends ModalProps {

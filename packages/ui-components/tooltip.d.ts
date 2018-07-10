@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 export declare type TooltipDirection = 'up' | 'down' | 'left' | 'right';
 export declare type TooltipLength = 'small' | 'medium' | 'large' | 'xlarge';

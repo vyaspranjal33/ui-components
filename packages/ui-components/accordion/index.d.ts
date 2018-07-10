@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { AccordionPanel, AccordionPanelDescription, AccordionPanelIcon, AccordionPanelSFC, AccordionPanelTitle } from './accordion-panel';
 export interface AccordionProps {
@@ -10,4 +9,4 @@ export interface AccordionProps {
 }
 export declare const Accordion: React.SFC<AccordionProps>;
 export default Accordion;
-export { AccordionPanel, AccordionPanelSFC, AccordionPanelDescription, AccordionPanelIcon, AccordionPanelTitle };
+export { AccordionPanel, AccordionPanelSFC, AccordionPanelDescription, AccordionPanelIcon, AccordionPanelTitle, };

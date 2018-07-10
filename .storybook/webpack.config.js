@@ -11,7 +11,7 @@ module.exports = function(config, env) {
   config.module.rules.push({
     test: /\.tsx?$/,
     exclude: [/node_modules/, /test_image/],
-    include: [/stories/, /components/],
+    include: [/stories/, /components/, /src/],
     loaders: [
       {
         // JSX -> JS. uses .babelrc

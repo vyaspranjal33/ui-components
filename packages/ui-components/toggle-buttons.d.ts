@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React, { CSSProperties } from 'react';
 import { ToggleAnythingProps } from './toggle-anything';
 export interface ToggleButtonsProps {

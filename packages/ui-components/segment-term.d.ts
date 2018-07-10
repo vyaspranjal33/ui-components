@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React, { PureComponent } from 'react';
 export interface SegmentTermProps {
     editable?: boolean;

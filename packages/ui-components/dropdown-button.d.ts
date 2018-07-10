@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { ButtonProps } from './button';
 export interface DropdownButtonProps {

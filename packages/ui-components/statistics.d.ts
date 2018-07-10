@@ -1,6 +1,5 @@
-/// <reference types="react" />
 import React from 'react';
-export declare const NO_STATS_CHAR = "—";
+export declare const NO_STATS_CHAR = "\u2014";
 export interface StatisticType {
     label: string;
     amount?: number | string;

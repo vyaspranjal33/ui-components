@@ -69,19 +69,19 @@ export const Radio: React.SFC<RadioProps> = ({
     </div>
   );
 };
-
+const propsChecked = (props: RadioProps) => props.checked;
 export class StatefulRadio extends React.Component<
   RadioProps,
   {
     checked: boolean;
   }
 > {
+  public readonly state = {
+    checked: propsChecked(this.props),
+  };
+
   constructor(props: RadioProps) {
     super(props);
-
-    this.state = {
-      checked: props.checked,
-    };
 
     this.handleChange = this.handleChange.bind(this);
   }

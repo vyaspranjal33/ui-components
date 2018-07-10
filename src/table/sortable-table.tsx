@@ -35,18 +35,15 @@ export interface SortableTableState {
   ascending?: boolean;
 }
 
-export class SortableTable extends React.Component<
-  SortableTableProps,
-  SortableTableState
-> {
+export class SortableTable extends React.Component<SortableTableProps> {
+  public readonly state: SortableTableState = {
+    ascending: undefined,
+    data: [],
+    sortBy: undefined,
+  };
+
   constructor(props: SortableTableProps) {
     super(props);
-
-    this.state = {
-      ascending: undefined,
-      data: [],
-      sortBy: undefined,
-    };
 
     this.handleHeaderClick = this.handleHeaderClick.bind(this);
     this.sortData = this.sortData.bind(this);

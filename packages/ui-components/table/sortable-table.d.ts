@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 export interface SortableTableProps {
     children?: React.ReactNode;
@@ -18,13 +17,14 @@ export interface SortableTableState {
     sortBy?: string;
     ascending?: boolean;
 }
-export declare class SortableTable extends React.Component<SortableTableProps, SortableTableState> {
+export declare class SortableTable extends React.Component<SortableTableProps> {
+    readonly state: SortableTableState;
     constructor(props: SortableTableProps);
     componentDidMount(): void;
     handleHeaderClick(dataKey: string, descending: boolean): void;
     sortData(sortBy: string, descending: boolean): void;
     render(): JSX.Element;
-    private performSort(rowData, headerData, sortBy);
+    private performSort;
     private defaultSort;
 }
 export default SortableTable;

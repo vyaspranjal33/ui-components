@@ -1,5 +1,5 @@
-@import "./global/variables.scss";
-@import "./global/mixins";
+@import './global/variables.scss';
+@import './global/mixins';
 
 textarea {
   display: block;
@@ -47,7 +47,7 @@ textarea {
       height: 4px;
       background: $ron-burgundy;
       border-radius: 4px;
-      content: "";
+      content: '';
     }
   }
 

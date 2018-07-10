@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React, { HTMLAttributes } from 'react';
 import { ButtonProps } from './button';
 export interface ButtonListProps extends HTMLAttributes<HTMLDivElement> {

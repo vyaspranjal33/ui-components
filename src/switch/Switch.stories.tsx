@@ -5,12 +5,9 @@ import Switch from './index';
 
 const stories = storiesOf('Switch', module);
 
+const propsToState = (props: any) => props.on;
 class SwitchContainer extends Component<any, any> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = { on: this.props.on };
-  }
+  public readonly state = { on: propsToState(this.props) };
 
   public onChange = (e: any) => {
     this.setState({ on: !this.state.on });

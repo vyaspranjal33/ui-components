@@ -2,12 +2,10 @@ import React, { Component } from 'react';
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 
-import
-  UnsubscribeGroupCard,
-  {
-    CreateNewGroupCard,
-    UnsubscribeGroupAddEdit 
-  } from '../src/unsubscribe-groups/';
+import UnsubscribeGroupCard, {
+  CreateNewGroupCard,
+  UnsubscribeGroupAddEdit,
+} from '../src/unsubscribe-groups/';
 
 const stories = storiesOf('Unsubscribe Groups', module);
 
@@ -51,7 +49,7 @@ stories.add('Unsubscribe Group Card (isDisplayedOnPreferencesPage)', () => (
 stories.add('Create New Group Card', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <CreateNewGroupCard onClickCreate={action('create new group')}/>
+      <CreateNewGroupCard onClickCreate={action('create new group')} />
     </div>
   </div>
 ));
@@ -59,7 +57,7 @@ stories.add('Create New Group Card', () => (
 stories.add('Create New Group Card (disabled)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <CreateNewGroupCard onClickCreate={action('create new group')} disabled/>
+      <CreateNewGroupCard onClickCreate={action('create new group')} disabled />
     </div>
   </div>
 ));
@@ -77,14 +75,14 @@ stories.add('Add Unsubscribe Group', () => (
 ));
 
 class UnsubscribeGroupEditContainer extends Component<any, any> {
-  constructor(props: any) {
-    super(props);
+  public readonly state = { isDeleteGroupModalOpen: false };
 
-    this.state = { isDeleteGroupModalOpen: false };
-  }
-
-  public open = (e: any) => { this.setState({ isDeleteGroupModalOpen: true }); };
-  public close = (e: any) => { this.setState({ isDeleteGroupModalOpen: false }); };
+  public open = (e: any) => {
+    this.setState({ isDeleteGroupModalOpen: true });
+  };
+  public close = (e: any) => {
+    this.setState({ isDeleteGroupModalOpen: false });
+  };
 
   public render() {
     return (
@@ -95,7 +93,9 @@ class UnsubscribeGroupEditContainer extends Component<any, any> {
         id={1234}
         isEdit
         onGroupDescriptionInputChanged={action('change group description')}
-        onGroupDisplayedOnIndexChanged={action('toggle group displayed on index')}
+        onGroupDisplayedOnIndexChanged={action(
+          'toggle group displayed on index'
+        )}
         onGroupNameInputChanged={action('change group name')}
         onDeleteUnsubscribeGroup={action('delete unsubscribe group')}
         onSaveUnsubscribeGroup={action('save unsubscribe group')}
@@ -108,6 +108,4 @@ class UnsubscribeGroupEditContainer extends Component<any, any> {
   }
 }
 
-stories.add('Edit Unsubscribe Group', () => (
-  <UnsubscribeGroupEditContainer/>
-));
+stories.add('Edit Unsubscribe Group', () => <UnsubscribeGroupEditContainer />);

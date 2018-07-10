@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { StatisticType } from './statistics';
 export interface EmailCardDetail {

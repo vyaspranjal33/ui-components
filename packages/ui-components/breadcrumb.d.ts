@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 export interface BreadcrumbProps {
     children: Array<React.ReactElement<ChildProps>> | React.ReactElement<ChildProps>;

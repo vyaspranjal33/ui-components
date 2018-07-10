@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { IconType } from './types/icons';
 export declare type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';

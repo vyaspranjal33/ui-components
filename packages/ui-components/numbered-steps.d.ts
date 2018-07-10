@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 export interface NumberedStepProps {
     children: React.ReactElement<any> | Array<React.ReactElement<any>>;

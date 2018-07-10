@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { IconType } from '../types/icons';
 import AccordionPanelDescription from './accordion-panel-description';
@@ -15,9 +14,11 @@ export interface AccordionPanelProps {
 }
 declare const AccordionPanelSFC: React.SFC<AccordionPanelProps>;
 export declare class AccordionPanel extends React.Component<AccordionPanelProps, any> {
-    constructor(props: any);
+    readonly state: {
+        open: boolean;
+    };
     render(): JSX.Element;
     private onAccordionPanelClick;
 }
 export default AccordionPanel;
-export { AccordionPanelDescription, AccordionPanelTitle, AccordionPanelIcon, AccordionPanelSFC };
+export { AccordionPanelDescription, AccordionPanelTitle, AccordionPanelIcon, AccordionPanelSFC, };

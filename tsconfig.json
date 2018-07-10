@@ -13,8 +13,9 @@
     "allowSyntheticDefaultImports": true,
     "jsx": "react",
     "declaration": true,
-    "declarationDir": "./packages/ui-components"
+    "declarationDir": "./packages/ui-components",
+    "newLine": "lf"
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
-  "exclude": ["./src/**/*.test.*", "**/*.d.ts"]
+  "exclude": ["./src/**/*.test.*"]
 }

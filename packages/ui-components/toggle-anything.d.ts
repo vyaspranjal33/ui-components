@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 export interface ToggleAnythingProps {
     keys: Array<string>;
@@ -15,6 +14,9 @@ export interface AnythingKey {
     onClick: (event: Event) => void;
 }
 export default class ToggleAnything extends React.Component<ToggleAnythingProps, ToggleAnythingState> {
-    constructor(props: ToggleAnythingProps);
+    static defaultProps: Partial<ToggleAnythingProps>;
+    readonly state: {
+        selectedKey: string;
+    };
     render(): React.ReactNode;
 }

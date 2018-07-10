@@ -1,4 +1,3 @@
-/// <reference types="react" />
 import React from 'react';
 import { IconType } from '../types/icons';
 export interface AccordionPanelIconProps {
