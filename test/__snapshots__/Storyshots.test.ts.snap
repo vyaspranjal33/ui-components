@@ -1799,6 +1799,75 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
 </button>
 `;
 
+exports[`Storyshots CSV Upload Basic CSV Upload 1`] = `
+<section
+  onDragEnd={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <section
+    className="dropzone"
+    onDragEnd={undefined}
+    onDragLeave={undefined}
+    onDragOver={undefined}
+    onDrop={undefined}
+    role="hidden"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "fontSize": "14px",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <div>
+      <div
+        className={undefined}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+          }
+        }
+      >
+        <i
+          className="sg-icon sg-icon-csv sg-icon sg-icon-csv is-size-30"
+          onClick={undefined}
+          style={
+            Object {
+              "marginRight": "12px",
+            }
+          }
+        />
+        <span>
+          Drag and drop your CSV file here or
+           
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            select a CSV file to upload
+          </a>
+          .
+        </span>
+      </div>
+    </div>
+  </section>
+  <input
+    accept="text/csv"
+    onChange={[Function]}
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="file"
+  />
+</section>
+`;
+
 exports[`Storyshots Card Card (Inline) 1`] = `
 <div
   className="row"
