@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import React from 'react';
 export interface TableRowProps {
     children?: React.ReactNode;

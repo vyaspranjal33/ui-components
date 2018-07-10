@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import { Component } from 'react';
 import { IconType } from './types/icons';
 export interface FileUploadProps {

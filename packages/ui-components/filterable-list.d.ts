@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import React, { PureComponent, ReactElement } from 'react';
 export interface FilterableListContainerProps {
     clearButtonInHeader?: boolean;

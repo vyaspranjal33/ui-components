@@ -1,3 +1,4 @@
+/// <reference types="react" />
 import React from 'react';
 import { IconType } from '../types/icons';
 import AccordionPanelDescription from './accordion-panel-description';
@@ -21,4 +22,4 @@ export declare class AccordionPanel extends React.Component<AccordionPanelProps,
     private onAccordionPanelClick;
 }
 export default AccordionPanel;
-export { AccordionPanelDescription, AccordionPanelTitle, AccordionPanelIcon, AccordionPanelSFC, };
+export { AccordionPanelDescription, AccordionPanelTitle, AccordionPanelIcon, AccordionPanelSFC };
