@@ -7,11 +7,11 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
-import cn from './utilities/classnames';
-import Icon from './icon';
 import React, { Component } from 'react';
+import Icon from './icon';
 import Styles from './styles/text-area.module.scss';
 import Tooltip from './tooltip';
+import cn from './utilities/classnames';
 export class TextArea extends Component {
     constructor() {
         super(...arguments);
