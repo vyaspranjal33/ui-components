@@ -29,6 +29,10 @@ export class DropdownButton extends React.Component<
     active: false,
   };
 
+  public componentWillUnmount() {
+    document.removeEventListener('click', this.dismissDropdown);
+  }
+
   public render() {
     const {
       active,
