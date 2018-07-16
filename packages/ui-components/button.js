@@ -23,7 +23,7 @@ export const Button = props => {
         btnType = 'reset';
     }
     return (React.createElement(Buttonized, Object.assign({}, props),
-        React.createElement("button", { type: btnType }, props.children)));
+        React.createElement("button", { type: btnType, disabled: props.disabled }, props.children)));
 };
 export const Buttonized = (_a) => {
     var { children, type, badge, disabled, loading, small, onDark, onClick, group, active, icon, id, className } = _a, attributes = __rest(_a, ["children", "type", "badge", "disabled", "loading", "small", "onDark", "onClick", "group", "active", "icon", "id", "className"]);
