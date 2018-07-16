@@ -1,8 +1,9 @@
 import React, { Fragment } from 'react';
 import Styles from './styles/checkbox-radio.module.scss';
+import { Tooltip } from './tooltip';
 
 export interface RadioGroupProps {
-  children: Array<React.ReactElement<RadioProps>>;
+  children: any;
   name: string;
   onChange: (event: any) => void;
 }
@@ -32,6 +33,7 @@ export interface RadioProps {
   disabled?: boolean;
   id?: string;
   label: string;
+  tooltip?: string;
   name?: string;
   onChange?: (event: any) => void;
   value: string;
@@ -44,6 +46,7 @@ export const Radio: React.SFC<RadioProps> = ({
   disabled,
   id,
   label,
+  tooltip,
   name,
   onChange,
   value,
@@ -64,7 +67,13 @@ export const Radio: React.SFC<RadioProps> = ({
         {...attributes}
       />
       <label className={Styles['input-radio-label']} htmlFor={id}>
-        {label}
+        {tooltip ? (
+          <Tooltip content={tooltip} className="has-underline">
+            <span>{label}</span>
+          </Tooltip>
+        ) : (
+          label
+        )}
       </label>
     </div>
   );

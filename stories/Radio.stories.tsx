@@ -55,3 +55,12 @@ stories.add('Multiple radio btns', () => (
     <Radio checked={false} label="Choice 2" value="choice-2" />
   </RadioGroup>
 ));
+
+stories.add('Radio with tooltip', () => (
+  <Radio
+    checked={true}
+    label="Label"
+    tooltip="Tooltip content."
+    value="choice"
+  />
+));
