@@ -3,17 +3,17 @@ import { HeaderCell, Table, TableBody, TableCell, TableHeader, TableRow, } from 
 export class SortableTable extends React.Component {
     constructor(props) {
         super(props);
+        this.state = {
+            ascending: undefined,
+            data: [],
+            sortBy: undefined,
+        };
         this.defaultSort = function (array, dataKey) {
             return array.sort(function (a, b) {
                 const x = a[dataKey];
                 const y = b[dataKey];
                 return x < y ? -1 : x > y ? 1 : 0;
             });
-        };
-        this.state = {
-            ascending: undefined,
-            data: [],
-            sortBy: undefined,
         };
         this.handleHeaderClick = this.handleHeaderClick.bind(this);
         this.sortData = this.sortData.bind(this);

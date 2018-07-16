@@ -773,6 +773,7 @@ exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
     Changes you've made to this email have not been applied to your live automation.
     <button
       className="btn btn-primary btn btn-primary"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -1159,6 +1160,7 @@ exports[`Storyshots Breadcrumb Breadcrumb without trailing slash 1`] = `
 exports[`Storyshots Button Danger Button (Disabled) 1`] = `
 <button
   className="btn btn-danger btn btn-danger is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1170,6 +1172,7 @@ exports[`Storyshots Button Danger Button (Disabled) 1`] = `
 exports[`Storyshots Button Danger Button 1`] = `
 <button
   className="btn btn-danger btn btn-danger"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1181,6 +1184,7 @@ exports[`Storyshots Button Danger Button 1`] = `
 exports[`Storyshots Button Danger Button with Badge 1`] = `
 <button
   className="btn btn-danger btn btn-danger has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1198,6 +1202,7 @@ exports[`Storyshots Button Danger Button with Icon and Data Attr 1`] = `
 <button
   className="btn btn-danger btn btn-danger has-icon"
   data-role="test-role"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1271,6 +1276,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
   >
     <button
       className="btn btn-primary btn btn-primary btn-on-dark"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -1279,6 +1285,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
     </button>
     <button
       className="btn btn-secondary btn btn-secondary btn-on-dark"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -1287,6 +1294,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
     </button>
     <button
       className="btn btn-secondary btn btn-secondary btn-on-dark is-disabled"
+      disabled={true}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -1303,6 +1311,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
 >
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -1311,6 +1320,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
   </button>
   <button
     className="btn btn-secondary btn btn-secondary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -1319,6 +1329,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
   </button>
   <button
     className="btn btn-danger btn btn-danger"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -1331,6 +1342,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
 exports[`Storyshots Button Primary Button (Disabled) 1`] = `
 <button
   className="btn btn-primary btn btn-primary is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1342,6 +1354,7 @@ exports[`Storyshots Button Primary Button (Disabled) 1`] = `
 exports[`Storyshots Button Primary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-primary btn btn-primary has-icon is-loading"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1392,6 +1405,7 @@ exports[`Storyshots Button Primary Button (Loading) [animation] 1`] = `
 exports[`Storyshots Button Primary Button 1`] = `
 <button
   className="btn btn-primary btn btn-primary"
+  disabled={false}
   id="stui-test-locator-abc"
   onClick={[Function]}
   type="button"
@@ -1403,6 +1417,7 @@ exports[`Storyshots Button Primary Button 1`] = `
 exports[`Storyshots Button Primary Button with Badge 1`] = `
 <button
   className="btn btn-primary btn btn-primary has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1419,6 +1434,7 @@ exports[`Storyshots Button Primary Button with Badge 1`] = `
 exports[`Storyshots Button Primary Button with Icon 1`] = `
 <button
   className="btn btn-primary btn btn-primary has-icon"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1435,6 +1451,7 @@ exports[`Storyshots Button Primary Button with Icon 1`] = `
 exports[`Storyshots Button Secondary Button (Disabled) 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1446,6 +1463,7 @@ exports[`Storyshots Button Secondary Button (Disabled) 1`] = `
 exports[`Storyshots Button Secondary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary has-icon is-loading"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1496,6 +1514,7 @@ exports[`Storyshots Button Secondary Button (Loading) [animation] 1`] = `
 exports[`Storyshots Button Secondary Button 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1507,6 +1526,7 @@ exports[`Storyshots Button Secondary Button 1`] = `
 exports[`Storyshots Button Secondary Button with Badge 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1523,6 +1543,7 @@ exports[`Storyshots Button Secondary Button with Badge 1`] = `
 exports[`Storyshots Button Secondary Submit Button with Icon 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary has-icon"
+  disabled={false}
   id={undefined}
   isSubmit={true}
   onClick={[Function]}
@@ -1540,6 +1561,7 @@ exports[`Storyshots Button Secondary Submit Button with Icon 1`] = `
 exports[`Storyshots Button Small Danger Button (Disabled) 1`] = `
 <button
   className="btn btn-danger btn btn-danger btn-small is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1551,6 +1573,7 @@ exports[`Storyshots Button Small Danger Button (Disabled) 1`] = `
 exports[`Storyshots Button Small Danger Button 1`] = `
 <button
   className="btn btn-danger btn btn-danger btn-small"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1562,6 +1585,7 @@ exports[`Storyshots Button Small Danger Button 1`] = `
 exports[`Storyshots Button Small Danger Button with Badge 1`] = `
 <button
   className="btn btn-danger btn btn-danger btn-small has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1578,6 +1602,7 @@ exports[`Storyshots Button Small Danger Button with Badge 1`] = `
 exports[`Storyshots Button Small Danger Button with Icon 1`] = `
 <button
   className="btn btn-danger btn btn-danger btn-small has-icon"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1594,6 +1619,7 @@ exports[`Storyshots Button Small Danger Button with Icon 1`] = `
 exports[`Storyshots Button Small Primary Button  [animation] 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small has-icon is-loading"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1644,6 +1670,7 @@ exports[`Storyshots Button Small Primary Button  [animation] 1`] = `
 exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1655,6 +1682,7 @@ exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
 exports[`Storyshots Button Small Primary Button 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1666,6 +1694,7 @@ exports[`Storyshots Button Small Primary Button 1`] = `
 exports[`Storyshots Button Small Primary Button with Badge 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1682,6 +1711,7 @@ exports[`Storyshots Button Small Primary Button with Badge 1`] = `
 exports[`Storyshots Button Small Primary Button with Icon 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small has-icon"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1698,6 +1728,7 @@ exports[`Storyshots Button Small Primary Button with Icon 1`] = `
 exports[`Storyshots Button Small Secondary Button (Disabled) 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1709,6 +1740,7 @@ exports[`Storyshots Button Small Secondary Button (Disabled) 1`] = `
 exports[`Storyshots Button Small Secondary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small has-icon is-loading"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1759,6 +1791,7 @@ exports[`Storyshots Button Small Secondary Button (Loading) [animation] 1`] = `
 exports[`Storyshots Button Small Secondary Button 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1770,6 +1803,7 @@ exports[`Storyshots Button Small Secondary Button 1`] = `
 exports[`Storyshots Button Small Secondary Button with Badge 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1786,6 +1820,7 @@ exports[`Storyshots Button Small Secondary Button with Badge 1`] = `
 exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small has-icon"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1797,6 +1832,75 @@ exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
   />
   Secondary
 </button>
+`;
+
+exports[`Storyshots CSV Upload Basic CSV Upload 1`] = `
+<section
+  onDragEnd={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <section
+    className="dropzone"
+    onDragEnd={undefined}
+    onDragLeave={undefined}
+    onDragOver={undefined}
+    onDrop={undefined}
+    role="hidden"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "fontSize": "14px",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <div>
+      <div
+        className={undefined}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+          }
+        }
+      >
+        <i
+          className="sg-icon sg-icon-csv sg-icon sg-icon-csv is-size-30"
+          onClick={undefined}
+          style={
+            Object {
+              "marginRight": "12px",
+            }
+          }
+        />
+        <span>
+          Drag and drop your CSV file here or
+           
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            select a CSV file to upload
+          </a>
+          .
+        </span>
+      </div>
+    </div>
+  </section>
+  <input
+    accept="text/csv"
+    onChange={[Function]}
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="file"
+  />
+</section>
 `;
 
 exports[`Storyshots Card Card (Inline) 1`] = `
@@ -1821,6 +1925,7 @@ exports[`Storyshots Card Card (Inline) 1`] = `
       </h2>
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -1854,6 +1959,7 @@ exports[`Storyshots Card Card (Inline, Thin) 1`] = `
       </h2>
       <button
         className="btn btn-secondary btn btn-secondary btn-small"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -1899,6 +2005,7 @@ exports[`Storyshots Card Card (Large) 1`] = `
       </p>
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -2177,6 +2284,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
       </p>
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -2213,6 +2321,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children, Centere
       </p>
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -2256,6 +2365,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2280,6 +2390,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2288,6 +2399,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
         </button>
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2308,6 +2420,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x, large 
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2332,6 +2445,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x, large 
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2340,6 +2454,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x, large 
         </button>
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2360,6 +2475,7 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2433,6 +2549,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2469,6 +2586,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2477,6 +2595,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
         </button>
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2493,6 +2612,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2524,6 +2644,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2532,6 +2653,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
         </button>
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -3698,6 +3820,7 @@ exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -3865,6 +3988,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -4033,6 +4157,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4197,6 +4322,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4361,6 +4487,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4525,6 +4652,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4589,6 +4717,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
   >
     <button
       className="btn btn-secondary btn btn-secondary"
+      disabled={false}
       id={undefined}
       onClick={null}
       type="button"
@@ -4706,6 +4835,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4870,6 +5000,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -5034,6 +5165,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -5198,6 +5330,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -5366,6 +5499,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -5533,6 +5667,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -5623,6 +5758,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
           Changes you've made to this email have not been applied to your live automation.
           <button
             className="btn btn-primary btn btn-primary btn-small"
+            disabled={false}
             id={undefined}
             onClick={[Function]}
             type="button"
@@ -5723,6 +5859,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -5795,6 +5932,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
         Changes you've made to this email have not been applied to your live automation.
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -5913,6 +6051,7 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -6183,6 +6322,7 @@ exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -6259,6 +6399,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
   >
     <button
       className="btn btn-primary btn btn-primary"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -6267,6 +6408,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
     </button>
     <button
       className="btn btn-secondary btn btn-secondary"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -6298,6 +6440,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
     >
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -6306,6 +6449,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
       </button>
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -6766,6 +6910,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -6870,6 +7015,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -7075,6 +7221,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -7749,6 +7896,7 @@ exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page He
     >
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8068,6 +8216,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
     >
       <button
         className="btn btn-danger btn btn-danger btn-small"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8085,6 +8234,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
   >
     <button
       className="btn btn-secondary btn btn-secondary has-icon"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -8163,6 +8313,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
     >
       <button
         className="btn btn-secondary btn btn-secondary btn-small"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8175,6 +8326,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       </button>
       <button
         className="btn btn-danger btn btn-danger btn-small"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8192,6 +8344,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
   >
     <button
       className="btn btn-secondary btn btn-secondary has-icon"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -8244,6 +8397,7 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
         Changes you've made to your entry criteria have not been applied to your live automation.
         <button
           className="btn btn-primary btn btn-primary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -8325,6 +8479,7 @@ exports[`Storyshots Segment Term Segment term with radio btns and alert 1`] = `
         Changes you've made to your exit criteria have not been applied to your live automation.
         <button
           className="btn btn-primary btn btn-primary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -8393,6 +8548,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary has-icon"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8409,10 +8565,3702 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
 </div>
 `;
 
+exports[`Storyshots Select Custom classnames and styles 1`] = `
+<div>
+  <style>
+    
+        .my-control-wrapper {
+          background: #927;
+          color: #eee;
+          padding: 1em;
+        }
+      
+    f
+  </style>
+  <div
+    className="css-10nd86i"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      7 results available.
+    </span>
+    <div
+      className="my-control-wrapper"
+    >
+      <p>
+        My amazing select!
+      </p>
+      <div
+        className="css-1aya2g8"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-1rtrksz"
+        >
+          <div
+            className="css-1492t68"
+          >
+            Select...
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-14-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-d8oujb"
+            role="presentation"
+          />
+          <div
+            className="css-1ep9fjw"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Disabled 1`] = `
+<div
+  className="input-select-wrap is-disabled"
+>
+  <div
+    className="input-select-wrap is-disabled"
+  >
+    <div
+      className="css-1sontr1"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        8 results available.
+      </span>
+      <div
+        className="css-bcrqx"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-zsx35i"
+          >
+            Extraordinary
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={true}
+                id="react-select-5-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Multi select - no values 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        7 results available.
+      </span>
+      <div
+        className="css-18rrerb"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-1492t68"
+          >
+            Select...
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-7-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Multi select - open 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        5 results available.
+      </span>
+      <div
+        className="css-1bhqczi"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              Mushroom
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              Fire flower
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={true}
+                aria-haspopup={true}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns="react-select-9-listbox"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-9-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <div
+            className="css-1hyfx7x"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+              />
+            </svg>
+          </div>
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="css-1wcxi4x"
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+        >
+          <div
+            aria-multiselectable={true}
+            className="css-11unzgr"
+            id="react-select-9-listbox"
+            role="listbox"
+          >
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-9-option-2"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Star
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-9-option-3"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Feather
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-9-option-4"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Frog
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-9-option-5"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Tanooki
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-9-option-6"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              1-up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Multi select 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        5 results available.
+      </span>
+      <div
+        className="css-1bhqczi"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              Mushroom
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              Fire flower
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-8-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <div
+            className="css-1hyfx7x"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+              />
+            </svg>
+          </div>
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Option groups - open 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        15 results available.
+      </span>
+      <div
+        className="css-18rrerb"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-1492t68"
+          >
+            Feels vs. Powerups
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={true}
+                aria-haspopup={true}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns="react-select-13-listbox"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-13-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="css-1wcxi4x"
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+        >
+          <div
+            aria-multiselectable={false}
+            className="css-11unzgr"
+            id="react-select-13-listbox"
+            role="listbox"
+          >
+            <div
+              aria-expanded={true}
+              aria-labelledby="react-select-13-group-0-heading"
+              className="css-1s9izoc"
+              role="group"
+            >
+              <div
+                className="css-1ub2vtp"
+                id="react-select-13-group-0-heading"
+              >
+                Feels
+              </div>
+              <div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-0-0"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Double plus ungood
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-0-1"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Good
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-0-2"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Great
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-0-3"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Grand
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-0-4"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Fantastic
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-0-5"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Superb
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-0-6"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Stupendous
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-0-7"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Extraordinary
+                </div>
+              </div>
+            </div>
+            <div
+              aria-expanded={true}
+              aria-labelledby="react-select-13-group-1-heading"
+              className="css-1s9izoc"
+              role="group"
+            >
+              <div
+                className="css-1ub2vtp"
+                id="react-select-13-group-1-heading"
+              >
+                Powerups
+              </div>
+              <div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-1-0"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Mushroom
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-1-1"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Fire flower
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-1-2"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Star
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-1-3"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Feather
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-1-4"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Frog
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-1-5"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  Tanooki
+                </div>
+                <div
+                  aria-selected={false}
+                  className="css-ixxkql"
+                  id="react-select-13-option-1-6"
+                  onClick={[Function]}
+                  onMouseMove={[Function]}
+                  onMouseOver={[Function]}
+                  role="option"
+                  tabIndex={-1}
+                >
+                  1-up
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <input
+        name="groups"
+        type="hidden"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Option groups 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        15 results available.
+      </span>
+      <div
+        className="css-18rrerb"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-1492t68"
+          >
+            Feels vs. Powerups
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-12-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="groups"
+        type="hidden"
+        value=""
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Searchable 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        8 results available.
+      </span>
+      <div
+        className="css-1bhqczi"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-zsx35i"
+          >
+            Good
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-6-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Standard 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        8 results available.
+      </span>
+      <div
+        className="css-1bhqczi"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-zsx35i"
+          >
+            Good
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-2-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <input
+        name="single"
+        type="hidden"
+        value="sys_good_01"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Standard open 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        8 results available.
+      </span>
+      <div
+        className="css-18rrerb"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-1492t68"
+          >
+            Goobers
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={true}
+                aria-haspopup={true}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns="react-select-3-listbox"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-3-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="css-1wcxi4x"
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+        >
+          <div
+            aria-multiselectable={false}
+            className="css-11unzgr"
+            id="react-select-3-listbox"
+            role="listbox"
+          >
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-3-option-0"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Double plus ungood
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-3-option-1"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Good
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-3-option-2"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Great
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-3-option-3"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Grand
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-3-option-4"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Fantastic
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-3-option-5"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Superb
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-3-option-6"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Stupendous
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-3-option-7"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Extraordinary
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Tagging - open 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        5 results available.
+      </span>
+      <div
+        className="css-1bhqczi"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              Mushroom
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              Fire flower
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              row
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={true}
+                aria-haspopup={true}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns="react-select-11-listbox"
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-11-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <div
+            className="css-1hyfx7x"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+              />
+            </svg>
+          </div>
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div
+          className="css-1wcxi4x"
+          onMouseDown={[Function]}
+          onMouseMove={[Function]}
+        >
+          <div
+            aria-multiselectable={true}
+            className="css-11unzgr"
+            id="react-select-11-listbox"
+            role="listbox"
+          >
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-11-option-2"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Star
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-11-option-3"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Feather
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-11-option-4"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Frog
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-11-option-5"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              Tanooki
+            </div>
+            <div
+              aria-selected={false}
+              className="css-ixxkql"
+              id="react-select-11-option-6"
+              onClick={[Function]}
+              onMouseMove={[Function]}
+              onMouseOver={[Function]}
+              role="option"
+              tabIndex={-1}
+            >
+              1-up
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select Tagging 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        5 results available.
+      </span>
+      <div
+        className="css-1bhqczi"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              Mushroom
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              Fire flower
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-113lvzv"
+          >
+            <div
+              className="css-tue0ws"
+            >
+              row
+            </div>
+            <div
+              className="css-duvmhs"
+              onClick={[Function]}
+              onMouseDown={[Function]}
+            >
+              <svg
+                className="css-19bqh2r"
+                focusable="false"
+                height={14}
+                role="presentation"
+                viewBox="0 0 20 20"
+                width={14}
+              >
+                <path
+                  d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+                />
+              </svg>
+            </div>
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-10-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <div
+            className="css-1hyfx7x"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+              />
+            </svg>
+          </div>
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select With placeholder 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="input-select-wrap"
+  >
+    <div
+      className="css-10nd86i"
+      id={undefined}
+      onKeyDown={[Function]}
+    >
+      <span
+        aria-atomic="true"
+        aria-live="polite"
+        className="css-1uvvha"
+        role="status"
+      >
+        8 results available.
+      </span>
+      <div
+        className="css-18rrerb"
+        onMouseDown={[Function]}
+        onTouchEnd={[Function]}
+      >
+        <div
+          className="css-elp12a"
+        >
+          <div
+            className="css-1492t68"
+          >
+            Goobers
+          </div>
+          <div
+            className="css-rsyb7x"
+          >
+            <div
+              className=""
+              style={
+                Object {
+                  "display": "inline-block",
+                }
+              }
+            >
+              <input
+                aria-activedescendant={undefined}
+                aria-autocomplete="list"
+                aria-busy={false}
+                aria-describedby={undefined}
+                aria-expanded={false}
+                aria-haspopup={false}
+                aria-label={undefined}
+                aria-labelledby={undefined}
+                aria-owns={undefined}
+                autoCapitalize="none"
+                autoComplete="off"
+                autoCorrect="off"
+                className={undefined}
+                disabled={false}
+                id="react-select-4-input"
+                onBlur={[Function]}
+                onChange={[Function]}
+                onFocus={[Function]}
+                role="combobox"
+                spellCheck="false"
+                style={
+                  Object {
+                    "background": 0,
+                    "border": 0,
+                    "boxSizing": "content-box",
+                    "color": "inherit",
+                    "fontSize": "inherit",
+                    "opacity": 1,
+                    "outline": 0,
+                    "padding": 0,
+                    "width": "1px",
+                  }
+                }
+                tabIndex="0"
+                type="text"
+                value=""
+              />
+              <div
+                style={
+                  Object {
+                    "height": 0,
+                    "left": 0,
+                    "overflow": "scroll",
+                    "position": "absolute",
+                    "top": 0,
+                    "visibility": "hidden",
+                    "whiteSpace": "pre",
+                  }
+                }
+              >
+                
+              </div>
+            </div>
+          </div>
+        </div>
+        <div
+          className="css-1wy0on6"
+        >
+          <span
+            className="css-0"
+            role="presentation"
+          />
+          <div
+            className="css-7afory"
+            onMouseDown={[Function]}
+            onTouchEnd={[Function]}
+            role="button"
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={20}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={20}
+            >
+              <path
+                d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info disabled + error 1`] = `
+<div
+  className="input-select-wrap is-error is-disabled"
+>
+  <label
+    className="input-select-label"
+  >
+    Powerups
+  </label>
+  <div
+    className="css-1sontr1"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      7 results available.
+    </span>
+    <div
+      className="css-vqbbd0"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-elp12a"
+      >
+        <div
+          className="css-1492t68"
+        >
+          Select...
+        </div>
+        <div
+          className="css-rsyb7x"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant={undefined}
+              aria-autocomplete="list"
+              aria-busy={false}
+              aria-describedby={undefined}
+              aria-expanded={false}
+              aria-haspopup={false}
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={true}
+              id="react-select-19-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+          role="presentation"
+        />
+        <div
+          className="css-7afory"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          role="button"
+        >
+          <svg
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            role="presentation"
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="input-info danger isDisabled"
+  >
+    it's a trap
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info disabled - defaultValue - multi select 1`] = `
+<div
+  className="input-select-wrap is-disabled"
+>
+  <label
+    className="input-select-label"
+  >
+    Powerups
+  </label>
+  <div
+    className="css-1sontr1"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      6 results available.
+    </span>
+    <div
+      className="css-bcrqx"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-elp12a"
+      >
+        <div
+          className="css-1wvqrm2"
+        >
+          <div
+            className="css-8lpupn"
+          >
+            Mushroom
+          </div>
+          <div
+            className="css-ae68b3"
+            onClick={[Function]}
+            onMouseDown={[Function]}
+          >
+            <svg
+              className="css-19bqh2r"
+              focusable="false"
+              height={14}
+              role="presentation"
+              viewBox="0 0 20 20"
+              width={14}
+            >
+              <path
+                d="M14.348 14.849c-0.469 0.469-1.229 0.469-1.697 0l-2.651-3.030-2.651 3.029c-0.469 0.469-1.229 0.469-1.697 0-0.469-0.469-0.469-1.229 0-1.697l2.758-3.15-2.759-3.152c-0.469-0.469-0.469-1.228 0-1.697s1.228-0.469 1.697 0l2.652 3.031 2.651-3.031c0.469-0.469 1.228-0.469 1.697 0s0.469 1.229 0 1.697l-2.758 3.152 2.758 3.15c0.469 0.469 0.469 1.229 0 1.698z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          className="css-rsyb7x"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant={undefined}
+              aria-autocomplete="list"
+              aria-busy={false}
+              aria-describedby={undefined}
+              aria-expanded={false}
+              aria-haspopup={false}
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={true}
+              id="react-select-18-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+          role="presentation"
+        />
+        <div
+          className="css-7afory"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          role="button"
+        >
+          <svg
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            role="presentation"
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="input-info isDisabled"
+  >
+    it's a trap
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info disabled - defaultValue 1`] = `
+<div
+  className="input-select-wrap is-disabled"
+>
+  <label
+    className="input-select-label"
+  >
+    Powerups
+  </label>
+  <div
+    className="css-1sontr1"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      7 results available.
+    </span>
+    <div
+      className="css-bcrqx"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-elp12a"
+      >
+        <div
+          className="css-zsx35i"
+        >
+          Mushroom
+        </div>
+        <div
+          className="css-rsyb7x"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant={undefined}
+              aria-autocomplete="list"
+              aria-busy={false}
+              aria-describedby={undefined}
+              aria-expanded={false}
+              aria-haspopup={false}
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={true}
+              id="react-select-17-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+          role="presentation"
+        />
+        <div
+          className="css-7afory"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          role="button"
+        >
+          <svg
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            role="presentation"
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="input-info isDisabled"
+  >
+    it's a trap
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info disabled 1`] = `
+<div
+  className="input-select-wrap is-disabled"
+>
+  <label
+    className="input-select-label"
+  >
+    Powerups
+  </label>
+  <div
+    className="css-1sontr1"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      7 results available.
+    </span>
+    <div
+      className="css-14mtm9n"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-elp12a"
+      >
+        <div
+          className="css-1492t68"
+        >
+          Select...
+        </div>
+        <div
+          className="css-rsyb7x"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant={undefined}
+              aria-autocomplete="list"
+              aria-busy={false}
+              aria-describedby={undefined}
+              aria-expanded={false}
+              aria-haspopup={false}
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={true}
+              id="react-select-16-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+          role="presentation"
+        />
+        <div
+          className="css-7afory"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          role="button"
+        >
+          <svg
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            role="presentation"
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="input-info isDisabled"
+  >
+    it's a trap
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info error 1`] = `
+<div
+  className="input-select-wrap is-error"
+>
+  <label
+    className="input-select-label"
+  >
+    Powerups
+  </label>
+  <div
+    className="css-10nd86i"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      7 results available.
+    </span>
+    <div
+      className="css-6qcrv1"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-elp12a"
+      >
+        <div
+          className="css-1492t68"
+        >
+          Select...
+        </div>
+        <div
+          className="css-rsyb7x"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant={undefined}
+              aria-autocomplete="list"
+              aria-busy={false}
+              aria-describedby={undefined}
+              aria-expanded={false}
+              aria-haspopup={false}
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={false}
+              id="react-select-15-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+          role="presentation"
+        />
+        <div
+          className="css-7afory"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          role="button"
+        >
+          <svg
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            role="presentation"
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="input-info danger"
+  >
+    it's a trap
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info info 1`] = `
+<div
+  className="input-select-wrap"
+>
+  <div
+    className="css-10nd86i"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      7 results available.
+    </span>
+    <div
+      className="css-18rrerb"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-elp12a"
+      >
+        <div
+          className="css-1492t68"
+        >
+          Select...
+        </div>
+        <div
+          className="css-rsyb7x"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant={undefined}
+              aria-autocomplete="list"
+              aria-busy={false}
+              aria-describedby={undefined}
+              aria-expanded={false}
+              aria-haspopup={false}
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={false}
+              id="react-select-22-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+          role="presentation"
+        />
+        <div
+          className="css-7afory"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          role="button"
+        >
+          <svg
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            role="presentation"
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="input-info"
+  >
+    Read this to better understand the dropdown.
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info label - required 1`] = `
+<div
+  className="input-select-wrap is-required"
+>
+  <label
+    className="input-select-label"
+  >
+    Powerups
+  </label>
+  <div
+    className="css-10nd86i"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      7 results available.
+    </span>
+    <div
+      className="css-18rrerb"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-elp12a"
+      >
+        <div
+          className="css-1492t68"
+        >
+          Select...
+        </div>
+        <div
+          className="css-rsyb7x"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant={undefined}
+              aria-autocomplete="list"
+              aria-busy={false}
+              aria-describedby={undefined}
+              aria-expanded={false}
+              aria-haspopup={false}
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={false}
+              id="react-select-21-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+          role="presentation"
+        />
+        <div
+          className="css-7afory"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          role="button"
+        >
+          <svg
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            role="presentation"
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+  <span
+    className="input-info"
+  >
+    it's a trap
+  </span>
+</div>
+`;
+
+exports[`Storyshots Select/Label + Info label 1`] = `
+<div
+  className="input-select-wrap is-disabled"
+>
+  <label
+    className="input-select-label"
+  >
+    Powerups
+  </label>
+  <div
+    className="css-1sontr1"
+    id={undefined}
+    onKeyDown={[Function]}
+  >
+    <span
+      aria-atomic="true"
+      aria-live="polite"
+      className="css-1uvvha"
+      role="status"
+    >
+      7 results available.
+    </span>
+    <div
+      className="css-14mtm9n"
+      onMouseDown={[Function]}
+      onTouchEnd={[Function]}
+    >
+      <div
+        className="css-elp12a"
+      >
+        <div
+          className="css-1492t68"
+        >
+          Select...
+        </div>
+        <div
+          className="css-rsyb7x"
+        >
+          <div
+            className=""
+            style={
+              Object {
+                "display": "inline-block",
+              }
+            }
+          >
+            <input
+              aria-activedescendant={undefined}
+              aria-autocomplete="list"
+              aria-busy={false}
+              aria-describedby={undefined}
+              aria-expanded={false}
+              aria-haspopup={false}
+              aria-label={undefined}
+              aria-labelledby={undefined}
+              aria-owns={undefined}
+              autoCapitalize="none"
+              autoComplete="off"
+              autoCorrect="off"
+              className={undefined}
+              disabled={true}
+              id="react-select-20-input"
+              onBlur={[Function]}
+              onChange={[Function]}
+              onFocus={[Function]}
+              role="combobox"
+              spellCheck="false"
+              style={
+                Object {
+                  "background": 0,
+                  "border": 0,
+                  "boxSizing": "content-box",
+                  "color": "inherit",
+                  "fontSize": "inherit",
+                  "opacity": 1,
+                  "outline": 0,
+                  "padding": 0,
+                  "width": "1px",
+                }
+              }
+              tabIndex="0"
+              type="text"
+              value=""
+            />
+            <div
+              style={
+                Object {
+                  "height": 0,
+                  "left": 0,
+                  "overflow": "scroll",
+                  "position": "absolute",
+                  "top": 0,
+                  "visibility": "hidden",
+                  "whiteSpace": "pre",
+                }
+              }
+            >
+              
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        className="css-1wy0on6"
+      >
+        <span
+          className="css-0"
+          role="presentation"
+        />
+        <div
+          className="css-7afory"
+          onMouseDown={[Function]}
+          onTouchEnd={[Function]}
+          role="button"
+        >
+          <svg
+            className="css-19bqh2r"
+            focusable="false"
+            height={20}
+            role="presentation"
+            viewBox="0 0 20 20"
+            width={20}
+          >
+            <path
+              d="M4.516 7.548c0.436-0.446 1.043-0.481 1.576 0l3.908 3.747 3.908-3.747c0.533-0.481 1.141-0.446 1.574 0 0.436 0.445 0.408 1.197 0 1.615-0.406 0.418-4.695 4.502-4.695 4.502-0.217 0.223-0.502 0.335-0.787 0.335s-0.57-0.112-0.789-0.335c0 0-4.287-4.084-4.695-4.502s-0.436-1.17 0-1.615z"
+            />
+          </svg>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots SideModal SideModal 1`] = `
 Array [
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -8427,6 +12275,7 @@ Array [
     </h1>
     <button
       className="btn btn-secondary btn btn-secondary"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -9489,6 +13338,217 @@ exports[`Storyshots Tabs Zero-Border Tabs 1`] = `
 </ul>
 `;
 
+exports[`Storyshots Text Area Basic 1`] = `
+<div
+  className="textarea-wrap"
+>
+  <label
+    className="textarea-label"
+    htmlFor="textarea-basic"
+  >
+    Label
+  </label>
+  <textarea
+    disabled={false}
+    id="textarea-basic"
+    maxHeight={500}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": "25px",
+      }
+    }
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Text Area Disabled 1`] = `
+<div
+  className="textarea-wrap is-disabled"
+>
+  <label
+    className="textarea-label"
+    htmlFor="textarea-disabled"
+  >
+    Label
+  </label>
+  <textarea
+    disabled={true}
+    id="textarea-disabled"
+    maxHeight={500}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": "25px",
+      }
+    }
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Text Area Error 1`] = `
+<div
+  className="textarea-wrap is-error"
+>
+  <label
+    className="textarea-label"
+    htmlFor="textarea-error"
+  >
+    Label
+  </label>
+  <textarea
+    disabled={false}
+    id="textarea-error"
+    maxHeight={500}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": "25px",
+      }
+    }
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Text Area Information Message 1`] = `
+<div
+  className="textarea-wrap"
+>
+  <label
+    className="textarea-label"
+    htmlFor="textarea-info"
+  >
+    Label
+  </label>
+  <textarea
+    disabled={false}
+    id="textarea-info"
+    maxHeight={500}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": "25px",
+      }
+    }
+    value=""
+  />
+  <span
+    className="textarea-info"
+    id="textarea-info-info"
+  >
+    This is a message.
+  </span>
+</div>
+`;
+
+exports[`Storyshots Text Area Required 1`] = `
+<div
+  className="textarea-wrap is-required"
+>
+  <label
+    className="textarea-label"
+    htmlFor="textarea-required"
+  >
+    Label
+  </label>
+  <textarea
+    disabled={false}
+    id="textarea-required"
+    maxHeight={500}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": "25px",
+      }
+    }
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Text Area Scrollable 1`] = `
+<div
+  className="textarea-wrap is-scrollable"
+>
+  <label
+    className="textarea-label"
+    htmlFor="textarea-scrollable"
+  >
+    Label
+  </label>
+  <textarea
+    disabled={false}
+    id="textarea-scrollable"
+    maxHeight={500}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": "25px",
+      }
+    }
+    value=""
+  />
+</div>
+`;
+
+exports[`Storyshots Text Area With Tooltip 1`] = `
+<div
+  className="textarea-wrap"
+>
+  <label
+    className="textarea-label"
+    htmlFor="textarea-tooltip"
+  >
+    Label
+  </label>
+  <textarea
+    disabled={false}
+    id="textarea-tooltip"
+    maxHeight={500}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    style={
+      Object {
+        "height": "25px",
+      }
+    }
+    value=""
+  />
+  <div
+    className="textarea-tooltip"
+  >
+    <span
+      className={undefined}
+      data-tooltip="I am a tooltip."
+      data-tooltip-length="large"
+      data-tooltip-pos="up"
+    >
+      <i
+        className="sg-icon sg-icon-info-circle sg-icon sg-icon-info-circle"
+        onClick={undefined}
+        style={Object {}}
+      />
+    </span>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] = `
 <div
   className="input-text-wrap input-text-wrap"
@@ -9745,6 +13805,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
 >
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -9753,6 +13814,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
   </button>
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -9761,6 +13823,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
   </button>
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -9777,6 +13840,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
 >
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -9785,6 +13849,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
   </button>
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -9793,6 +13858,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
   </button>
   <button
     className="btn btn-group-item btn btn-group-item is-active"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -11220,6 +15286,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
     >
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -11257,6 +15324,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -11265,6 +15333,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
         </button>
         <button
           className="btn btn-danger btn btn-danger btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -11302,6 +15371,7 @@ exports[`Storyshots Unsubscribe Groups Create New Group Card (disabled) 1`] = `
       </p>
       <button
         className="btn btn-primary btn btn-primary is-disabled"
+        disabled={true}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -11338,6 +15408,7 @@ exports[`Storyshots Unsubscribe Groups Create New Group Card 1`] = `
       </p>
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -11500,6 +15571,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
     >
       <button
         className="btn btn-danger btn btn-danger"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -11508,6 +15580,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
       </button>
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -11545,6 +15618,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -11553,6 +15627,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         </button>
         <button
           className="btn btn-danger btn btn-danger btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"

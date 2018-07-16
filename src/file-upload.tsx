@@ -168,6 +168,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
   public handleRemove = (event: any): void => {
     this.setState({ files: null }, () => {
       this.fileInput.value = null;
+      this.props.onFileSelect(null);
     });
   };
 

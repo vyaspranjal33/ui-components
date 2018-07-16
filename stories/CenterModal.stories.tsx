@@ -10,11 +10,7 @@ const stories = storiesOf('CenterModal', module);
 
 // Need a way to close/open the modal
 class ExampleContainer extends Component<any, { isOpen: boolean }> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = { isOpen: true };
-  }
+  public readonly state = { isOpen: true };
 
   public open = (e: any) => {
     this.setState({ isOpen: true });

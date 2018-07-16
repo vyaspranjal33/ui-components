@@ -1,8 +1,8 @@
 import React, { CSSProperties } from 'react';
 import Styles from './styles/text-input.module.scss';
 import { InputType } from './types/inputs';
+import { Omit } from './types/utils';
 import cn from './utilities/classnames';
-
 const convertInputValue = (value: string, inputType: InputType) => {
   return inputType === 'number' ? parseInt(value, 10) : value;
 };
@@ -26,12 +26,22 @@ export interface TextInputProps {
   isSearch?: boolean;
   label?: string;
   info?: string;
-  onBlur?: (event: any, value: string | number) => void;
+  onBlur?: (event: FocusEvent, value: string | number) => void;
   style?: CSSProperties;
 }
+/**
+ * Inorder to allow for ...attributes we need to use
+ * Partial<React.InputHTMLAttributes<HTMLInputElement>>
+ * to add all of those possible types. However, this component is
+ * redefining the function definition for onBlur, so we must omit the
+ * original event hook from the possible props.
+ */
+export type HTMLInputElementProps = Partial<
+  Omit<React.InputHTMLAttributes<HTMLInputElement>, 'onBlur' | 'onChange'>
+>;
 
 export class TextInput extends React.Component<
-  TextInputProps,
+  TextInputProps & HTMLInputElementProps,
   { isInputFocused: boolean }
 > {
   public static defaultProps = {
@@ -48,13 +58,11 @@ export class TextInput extends React.Component<
   };
 
   public onInputFocus: (event: any) => void;
-
-  constructor(props: TextInputProps) {
+  public readonly state = { isInputFocused: false };
+  constructor(
+    props: TextInputProps & Partial<React.InputHTMLAttributes<HTMLInputElement>>
+  ) {
     super(props);
-
-    this.state = {
-      isInputFocused: false,
-    };
     this.onInputFocus = onInputFocus.bind(this);
     this.onInputBlur = this.onInputBlur.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
@@ -146,19 +154,18 @@ export class TextInput extends React.Component<
     );
   }
 }
-
+const initState = (props: TextInputProps) => {
+  return props.value;
+};
 export class StatefulTextInput extends React.Component<TextInputProps> {
   public static defaultProps: Partial<TextInputProps> = {
     value: '',
   };
 
+  public readonly state = { value: initState(this.props) };
+
   constructor(props: TextInputProps) {
     super(props);
-
-    this.state = {
-      value: this.props.value,
-    };
-
     this.onValueChange = this.onValueChange.bind(this);
   }
 

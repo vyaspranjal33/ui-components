@@ -49,15 +49,11 @@ const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
     </div>
   );
 };
-
+const openProps = (props: AccordionPanelProps) => props.open;
 export class AccordionPanel extends React.Component<AccordionPanelProps, any> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      open: props.open,
-    };
-  }
+  public readonly state = {
+    open: openProps(this.props),
+  };
 
   public render() {
     return (

@@ -15,18 +15,15 @@ export interface AnythingKey {
   key: string;
   onClick: (event: Event) => void;
 }
-
+const getToggleProps = (props: ToggleAnythingProps) => props.selectedKey;
 export default class ToggleAnything extends React.Component<
   ToggleAnythingProps,
   ToggleAnythingState
 > {
-  constructor(props: ToggleAnythingProps) {
-    super(props);
-    const { selectedKey = null } = props;
-    this.state = {
-      selectedKey,
-    };
-  }
+  public static defaultProps: Partial<ToggleAnythingProps> = {
+    selectedKey: null,
+  };
+  public readonly state = { selectedKey: getToggleProps(this.props) };
 
   public render() {
     const keyArray: Array<AnythingKey> = this.props.keys.map(key => ({

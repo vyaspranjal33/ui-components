@@ -31,6 +31,7 @@ export { Radio, RadioGroup } from './radio';
 export { SideModal } from './side-modal';
 export { Slider } from './slider';
 export { SegmentTerm } from './segment-term';
+export { Select, Createable } from './select';
 export { SortableTable } from './table/sortable-table';
 export { Switch } from './switch/';
 export { Tab, Tabs } from './tabs';
@@ -39,4 +40,5 @@ export { TextInput } from './text-input';
 export { ToggleButtons } from './toggle-buttons';
 export { Tooltip, HTMLTooltip } from './tooltip';
 export { TruncatedList } from './truncated-list';
+export { UploadProgress } from './upload-progress';
 //# sourceMappingURL=index.js.map

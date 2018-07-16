@@ -1,6 +1,6 @@
 // sendgrid style-guide variables
 
-$font-path: './fonts' !default;
+$font-path: '../fonts' !default;
 $border-radius: 2px;
 
 // modular scale base
@@ -181,11 +181,13 @@ $icon-create: '\e901';
 $icon-csv: '\e92a';
 $icon-desktop-view: '\e627';
 $icon-divider: '\e91a';
+$icon-download: '\e93e';
 $icon-drag: '\e91b';
 $icon-editor-code: '\e934';
 $icon-editor-design: '\e935';
 $icon-editor-old: '\e933';
 $icon-ellipsis: '\e90e';
+$icon-ellipsis-vertical: "\e93a";
 $icon-export: '\e931';
 $icon-gear: '\e608';
 $icon-help: '\e932';
