@@ -44,7 +44,9 @@ export const Button: React.SFC<ButtonProps> = props => {
   }
   return (
     <Buttonized {...props}>
-      <button type={btnType}>{props.children}</button>
+      <button type={btnType} disabled={props.disabled}>
+        {props.children}
+      </button>
     </Buttonized>
   );
 };

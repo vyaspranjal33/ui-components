@@ -773,6 +773,7 @@ exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
     Changes you've made to this email have not been applied to your live automation.
     <button
       className="btn btn-primary btn btn-primary"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -1159,6 +1160,7 @@ exports[`Storyshots Breadcrumb Breadcrumb without trailing slash 1`] = `
 exports[`Storyshots Button Danger Button (Disabled) 1`] = `
 <button
   className="btn btn-danger btn btn-danger is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1170,6 +1172,7 @@ exports[`Storyshots Button Danger Button (Disabled) 1`] = `
 exports[`Storyshots Button Danger Button 1`] = `
 <button
   className="btn btn-danger btn btn-danger"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1181,6 +1184,7 @@ exports[`Storyshots Button Danger Button 1`] = `
 exports[`Storyshots Button Danger Button with Badge 1`] = `
 <button
   className="btn btn-danger btn btn-danger has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1198,6 +1202,7 @@ exports[`Storyshots Button Danger Button with Icon and Data Attr 1`] = `
 <button
   className="btn btn-danger btn btn-danger has-icon"
   data-role="test-role"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1271,6 +1276,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
   >
     <button
       className="btn btn-primary btn btn-primary btn-on-dark"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -1279,6 +1285,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
     </button>
     <button
       className="btn btn-secondary btn btn-secondary btn-on-dark"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -1287,6 +1294,7 @@ exports[`Storyshots Button List Button List on a Dark Background 1`] = `
     </button>
     <button
       className="btn btn-secondary btn btn-secondary btn-on-dark is-disabled"
+      disabled={true}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -1303,6 +1311,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
 >
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -1311,6 +1320,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
   </button>
   <button
     className="btn btn-secondary btn btn-secondary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -1319,6 +1329,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
   </button>
   <button
     className="btn btn-danger btn btn-danger"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -1331,6 +1342,7 @@ exports[`Storyshots Button List Button List on a Light Background 1`] = `
 exports[`Storyshots Button Primary Button (Disabled) 1`] = `
 <button
   className="btn btn-primary btn btn-primary is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1342,6 +1354,7 @@ exports[`Storyshots Button Primary Button (Disabled) 1`] = `
 exports[`Storyshots Button Primary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-primary btn btn-primary has-icon is-loading"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1392,6 +1405,7 @@ exports[`Storyshots Button Primary Button (Loading) [animation] 1`] = `
 exports[`Storyshots Button Primary Button 1`] = `
 <button
   className="btn btn-primary btn btn-primary"
+  disabled={false}
   id="stui-test-locator-abc"
   onClick={[Function]}
   type="button"
@@ -1403,6 +1417,7 @@ exports[`Storyshots Button Primary Button 1`] = `
 exports[`Storyshots Button Primary Button with Badge 1`] = `
 <button
   className="btn btn-primary btn btn-primary has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1419,6 +1434,7 @@ exports[`Storyshots Button Primary Button with Badge 1`] = `
 exports[`Storyshots Button Primary Button with Icon 1`] = `
 <button
   className="btn btn-primary btn btn-primary has-icon"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1435,6 +1451,7 @@ exports[`Storyshots Button Primary Button with Icon 1`] = `
 exports[`Storyshots Button Secondary Button (Disabled) 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1446,6 +1463,7 @@ exports[`Storyshots Button Secondary Button (Disabled) 1`] = `
 exports[`Storyshots Button Secondary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary has-icon is-loading"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1496,6 +1514,7 @@ exports[`Storyshots Button Secondary Button (Loading) [animation] 1`] = `
 exports[`Storyshots Button Secondary Button 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1507,6 +1526,7 @@ exports[`Storyshots Button Secondary Button 1`] = `
 exports[`Storyshots Button Secondary Button with Badge 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1523,6 +1543,7 @@ exports[`Storyshots Button Secondary Button with Badge 1`] = `
 exports[`Storyshots Button Secondary Submit Button with Icon 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary has-icon"
+  disabled={false}
   id={undefined}
   isSubmit={true}
   onClick={[Function]}
@@ -1540,6 +1561,7 @@ exports[`Storyshots Button Secondary Submit Button with Icon 1`] = `
 exports[`Storyshots Button Small Danger Button (Disabled) 1`] = `
 <button
   className="btn btn-danger btn btn-danger btn-small is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1551,6 +1573,7 @@ exports[`Storyshots Button Small Danger Button (Disabled) 1`] = `
 exports[`Storyshots Button Small Danger Button 1`] = `
 <button
   className="btn btn-danger btn btn-danger btn-small"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1562,6 +1585,7 @@ exports[`Storyshots Button Small Danger Button 1`] = `
 exports[`Storyshots Button Small Danger Button with Badge 1`] = `
 <button
   className="btn btn-danger btn btn-danger btn-small has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1578,6 +1602,7 @@ exports[`Storyshots Button Small Danger Button with Badge 1`] = `
 exports[`Storyshots Button Small Danger Button with Icon 1`] = `
 <button
   className="btn btn-danger btn btn-danger btn-small has-icon"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1594,6 +1619,7 @@ exports[`Storyshots Button Small Danger Button with Icon 1`] = `
 exports[`Storyshots Button Small Primary Button  [animation] 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small has-icon is-loading"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1644,6 +1670,7 @@ exports[`Storyshots Button Small Primary Button  [animation] 1`] = `
 exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1655,6 +1682,7 @@ exports[`Storyshots Button Small Primary Button (Disabled) 1`] = `
 exports[`Storyshots Button Small Primary Button 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1666,6 +1694,7 @@ exports[`Storyshots Button Small Primary Button 1`] = `
 exports[`Storyshots Button Small Primary Button with Badge 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1682,6 +1711,7 @@ exports[`Storyshots Button Small Primary Button with Badge 1`] = `
 exports[`Storyshots Button Small Primary Button with Icon 1`] = `
 <button
   className="btn btn-primary btn btn-primary btn-small has-icon"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1698,6 +1728,7 @@ exports[`Storyshots Button Small Primary Button with Icon 1`] = `
 exports[`Storyshots Button Small Secondary Button (Disabled) 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small is-disabled"
+  disabled={true}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1709,6 +1740,7 @@ exports[`Storyshots Button Small Secondary Button (Disabled) 1`] = `
 exports[`Storyshots Button Small Secondary Button (Loading) [animation] 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small has-icon is-loading"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1759,6 +1791,7 @@ exports[`Storyshots Button Small Secondary Button (Loading) [animation] 1`] = `
 exports[`Storyshots Button Small Secondary Button 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1770,6 +1803,7 @@ exports[`Storyshots Button Small Secondary Button 1`] = `
 exports[`Storyshots Button Small Secondary Button with Badge 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small has-badge"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1786,6 +1820,7 @@ exports[`Storyshots Button Small Secondary Button with Badge 1`] = `
 exports[`Storyshots Button Small Secondary Button with Icon 1`] = `
 <button
   className="btn btn-secondary btn btn-secondary btn-small has-icon"
+  disabled={false}
   id={undefined}
   onClick={[Function]}
   type="button"
@@ -1890,6 +1925,7 @@ exports[`Storyshots Card Card (Inline) 1`] = `
       </h2>
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -1923,6 +1959,7 @@ exports[`Storyshots Card Card (Inline, Thin) 1`] = `
       </h2>
       <button
         className="btn btn-secondary btn btn-secondary btn-small"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -1968,6 +2005,7 @@ exports[`Storyshots Card Card (Large) 1`] = `
       </p>
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -2246,6 +2284,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children) 1`] = `
       </p>
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -2282,6 +2321,7 @@ exports[`Storyshots Card Card with Title and Body (with Custom Children, Centere
       </p>
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -2325,6 +2365,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2349,6 +2390,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2357,6 +2399,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
         </button>
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2377,6 +2420,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x, large 
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2401,6 +2445,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x, large 
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2409,6 +2454,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x, large 
         </button>
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2429,6 +2475,7 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2502,6 +2549,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2538,6 +2586,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2546,6 +2595,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
         </button>
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2562,6 +2612,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
 <div>
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -2593,6 +2644,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -2601,6 +2653,7 @@ exports[`Storyshots ConfirmationModal ConfirmationModal with plain contents 1`] 
         </button>
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -3767,6 +3820,7 @@ exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -3934,6 +3988,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -4102,6 +4157,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4266,6 +4322,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4430,6 +4487,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4594,6 +4652,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4658,6 +4717,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
   >
     <button
       className="btn btn-secondary btn btn-secondary"
+      disabled={false}
       id={undefined}
       onClick={null}
       type="button"
@@ -4775,6 +4835,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -4939,6 +5000,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -5103,6 +5165,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -5267,6 +5330,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -5435,6 +5499,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -5602,6 +5667,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -5692,6 +5758,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
           Changes you've made to this email have not been applied to your live automation.
           <button
             className="btn btn-primary btn btn-primary btn-small"
+            disabled={false}
             id={undefined}
             onClick={[Function]}
             type="button"
@@ -5792,6 +5859,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -5864,6 +5932,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
         Changes you've made to this email have not been applied to your live automation.
         <button
           className="btn btn-primary btn btn-primary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -5982,6 +6051,7 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -6252,6 +6322,7 @@ exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -6328,6 +6399,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
   >
     <button
       className="btn btn-primary btn btn-primary"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -6336,6 +6408,7 @@ exports[`Storyshots Empty State Empty State With Buttons 1`] = `
     </button>
     <button
       className="btn btn-secondary btn btn-secondary"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -6367,6 +6440,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
     >
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -6375,6 +6449,7 @@ exports[`Storyshots Empty State Empty State With Everything 1`] = `
       </button>
       <button
         className="btn btn-secondary btn btn-secondary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -6835,6 +6910,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -6939,6 +7015,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -7144,6 +7221,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -7818,6 +7896,7 @@ exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page He
     >
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8105,6 +8184,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
     >
       <button
         className="btn btn-danger btn btn-danger btn-small"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8122,6 +8202,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
   >
     <button
       className="btn btn-secondary btn btn-secondary has-icon"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -8200,6 +8281,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
     >
       <button
         className="btn btn-secondary btn btn-secondary btn-small"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8212,6 +8294,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
       </button>
       <button
         className="btn btn-danger btn btn-danger btn-small"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -8229,6 +8312,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
   >
     <button
       className="btn btn-secondary btn btn-secondary has-icon"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -8281,6 +8365,7 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
         Changes you've made to your entry criteria have not been applied to your live automation.
         <button
           className="btn btn-primary btn btn-primary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -8362,6 +8447,7 @@ exports[`Storyshots Segment Term Segment term with radio btns and alert 1`] = `
         Changes you've made to your exit criteria have not been applied to your live automation.
         <button
           className="btn btn-primary btn btn-primary"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -8430,6 +8516,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
     >
       <button
         className="btn btn-secondary btn btn-secondary has-icon"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -12141,6 +12228,7 @@ exports[`Storyshots SideModal SideModal 1`] = `
 Array [
   <button
     className="btn btn-primary btn btn-primary"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -12155,6 +12243,7 @@ Array [
     </h1>
     <button
       className="btn btn-secondary btn btn-secondary"
+      disabled={false}
       id={undefined}
       onClick={[Function]}
       type="button"
@@ -13684,6 +13773,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
 >
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -13692,6 +13782,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
   </button>
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -13700,6 +13791,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons 1`] = `
   </button>
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -13716,6 +13808,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
 >
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -13724,6 +13817,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
   </button>
   <button
     className="btn btn-group-item btn btn-group-item"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -13732,6 +13826,7 @@ exports[`Storyshots ToggleButtons Toggle Buttons with an Explicit Active Option 
   </button>
   <button
     className="btn btn-group-item btn btn-group-item is-active"
+    disabled={false}
     id={undefined}
     onClick={[Function]}
     type="button"
@@ -15159,6 +15254,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
     >
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -15196,6 +15292,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -15204,6 +15301,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
         </button>
         <button
           className="btn btn-danger btn btn-danger btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -15241,6 +15339,7 @@ exports[`Storyshots Unsubscribe Groups Create New Group Card (disabled) 1`] = `
       </p>
       <button
         className="btn btn-primary btn btn-primary is-disabled"
+        disabled={true}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -15277,6 +15376,7 @@ exports[`Storyshots Unsubscribe Groups Create New Group Card 1`] = `
       </p>
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -15439,6 +15539,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
     >
       <button
         className="btn btn-danger btn btn-danger"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -15447,6 +15548,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
       </button>
       <button
         className="btn btn-primary btn btn-primary"
+        disabled={false}
         id={undefined}
         onClick={[Function]}
         type="button"
@@ -15484,6 +15586,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
       >
         <button
           className="btn btn-secondary btn btn-secondary btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
@@ -15492,6 +15595,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         </button>
         <button
           className="btn btn-danger btn btn-danger btn-small"
+          disabled={false}
           id={undefined}
           onClick={[Function]}
           type="button"
