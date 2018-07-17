@@ -7,18 +7,13 @@ import { Checkbox } from '../src/checkbox';
 const stories = storiesOf('Checkbox', module);
 
 class Example extends Component<any, any> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = { checked: false };
-  }
-
-  onChange = () => {
+  public readonly state = { checked: false };
+  public onChange = () => {
     action('Checkbox changed');
     this.setState({ checked: !this.state.checked });
-  }
+  };
 
-  render() {
+  public render() {
     return (
       <Checkbox
         checked={this.state.checked}
@@ -32,16 +27,9 @@ class Example extends Component<any, any> {
 }
 
 stories.add('Standard Checkbox', () => (
-  <Example
-    id="standard-checkbox"
-    label="Transactional"
-  />
+  <Example id="standard-checkbox" label="Transactional" />
 ));
 
 stories.add('Disabled Checkbox', () => (
-  <Example
-    id="disabled-checkbox"
-    disabled
-    label="Marketing"
-  />
+  <Example id="disabled-checkbox" disabled label="Marketing" />
 ));

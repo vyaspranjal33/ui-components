@@ -44,6 +44,9 @@ export declare class TextInput extends React.Component<TextInputProps & HTMLInpu
         value: string;
     };
     onInputFocus: (event: any) => void;
+    readonly state: {
+        isInputFocused: boolean;
+    };
     constructor(props: TextInputProps & Partial<React.InputHTMLAttributes<HTMLInputElement>>);
     readonly inputStyle: React.CSSProperties;
     onValueChange(event: any): void;
@@ -52,6 +55,9 @@ export declare class TextInput extends React.Component<TextInputProps & HTMLInpu
 }
 export declare class StatefulTextInput extends React.Component<TextInputProps> {
     static defaultProps: Partial<TextInputProps>;
+    readonly state: {
+        value: string | number;
+    };
     constructor(props: TextInputProps);
     onValueChange(event: any): void;
     render(): JSX.Element;

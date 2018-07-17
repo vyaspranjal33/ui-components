@@ -19,11 +19,12 @@ export const Radio = (_a) => {
         React.createElement("input", Object.assign({ checked: checked, defaultChecked: defaultChecked, disabled: disabled, id: id, name: name, onChange: onChange, type: "radio", value: value }, attributes)),
         React.createElement("label", { className: Styles['input-radio-label'], htmlFor: id }, label)));
 };
+const propsChecked = (props) => props.checked;
 export class StatefulRadio extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            checked: props.checked,
+            checked: propsChecked(this.props),
         };
         this.handleChange = this.handleChange.bind(this);
     }

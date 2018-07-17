@@ -29,10 +29,9 @@ export class DropdownButton extends React.Component<
     active: false,
   };
 
-  public handleClick = () => {
-    const { active } = this.state;
-    this.setState({ active: !active });
-  };
+  public componentWillUnmount() {
+    document.removeEventListener('click', this.dismissDropdown);
+  }
 
   public render() {
     const {
@@ -94,7 +93,7 @@ export class DropdownButton extends React.Component<
             },
             className
           )}
-          onClick={this.handleClick}
+          onClick={this.toggleDropdown}
           {...attributes}
         >
           {!gear && hasBadge && <Badge>{badge}</Badge>}
@@ -109,6 +108,21 @@ export class DropdownButton extends React.Component<
       </div>
     );
   }
+
+  private toggleDropdown = (event: React.MouseEvent<HTMLDivElement>) => {
+    const { active: isActive } = this.state;
+
+    return this.setState({ active: !isActive }, () => {
+      if (this.state.active) {
+        document.addEventListener('click', this.dismissDropdown, false);
+      }
+    });
+  };
+
+  private dismissDropdown = () => {
+    this.setState({ active: false });
+    document.removeEventListener('click', this.dismissDropdown, false);
+  };
 }
 
 export default DropdownButton;

@@ -58,14 +58,11 @@ export class TextInput extends React.Component<
   };
 
   public onInputFocus: (event: any) => void;
-
+  public readonly state = { isInputFocused: false };
   constructor(
     props: TextInputProps & Partial<React.InputHTMLAttributes<HTMLInputElement>>
   ) {
     super(props);
-    this.state = {
-      isInputFocused: false,
-    };
     this.onInputFocus = onInputFocus.bind(this);
     this.onInputBlur = this.onInputBlur.bind(this);
     this.onValueChange = this.onValueChange.bind(this);
@@ -157,19 +154,18 @@ export class TextInput extends React.Component<
     );
   }
 }
-
+const initState = (props: TextInputProps) => {
+  return props.value;
+};
 export class StatefulTextInput extends React.Component<TextInputProps> {
   public static defaultProps: Partial<TextInputProps> = {
     value: '',
   };
 
+  public readonly state = { value: initState(this.props) };
+
   constructor(props: TextInputProps) {
     super(props);
-
-    this.state = {
-      value: this.props.value,
-    };
-
     this.onValueChange = this.onValueChange.bind(this);
   }
 

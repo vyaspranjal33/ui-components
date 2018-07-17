@@ -11,7 +11,19 @@
 
 // base icon font styles
 @mixin icon-font-base {
-  font-family: "styleguideicons";
+  font-family: 'styleguideicons';
+  font-size: 16px;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  text-transform: none;
+  speak: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+// Dont hate needed this for select it uses the entirety of the mixins namespace
+:export {
+  font-family: 'styleguideicons';
   font-size: 16px;
   font-style: normal;
   font-weight: normal;
@@ -50,7 +62,7 @@
   &::before,
   &::after {
     display: table;
-    content: "";
+    content: '';
   }
 
   &::after {
@@ -86,8 +98,8 @@
 
 // tooltip svg arrows
 @mixin svg-arrow($color, $position: up) {
-  $width:   18px;
-  $height:  6px;
+  $width: 18px;
+  $height: 6px;
   $degrees: 0;
   @if ($position == down) {
     $degrees: 180 18 6;
@@ -102,7 +114,8 @@
   }
   width: $width;
   height: $height;
-  background: no-repeat url("data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%22#{$width * 2}%22%20height%3D%22#{$height * 2}%22%3E%3Cpath%20fill%3D%22#{$color}%22%20transform%3D%22rotate(#{$degrees})%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E");
+  background: no-repeat
+    url('data:image/svg+xml;charset=utf-8,%3Csvg%20xmlns%3D%22http://www.w3.org/2000/svg%22%20width%3D%22#{$width * 2}%22%20height%3D%22#{$height * 2}%22%3E%3Cpath%20fill%3D%22#{$color}%22%20transform%3D%22rotate(#{$degrees})%22%20d%3D%22M2.658,0.000%20C-13.615,0.000%2050.938,0.000%2034.662,0.000%20C28.662,0.000%2023.035,12.002%2018.660,12.002%20C14.285,12.002%208.594,0.000%202.658,0.000%20Z%22/%3E%3C/svg%3E');
   background-size: 100% auto;
 }
 
@@ -135,16 +148,18 @@
     height: 25px;
     margin-left: -1px;
     border-left: 1px solid $color;
-    content: "";
+    content: '';
   }
 
   &::after {
     position: absolute;
-    right: calc(50% - 3.5px); // subpixel value to align point of arrow w/ border above
+    right: calc(
+      50% - 3.5px
+    ); // subpixel value to align point of arrow w/ border above
     bottom: -30px;
     border-top: 5px solid $color;
     border-right: 5px solid transparent;
     border-left: 5px solid transparent;
-    content: "";
+    content: '';
   }
 }

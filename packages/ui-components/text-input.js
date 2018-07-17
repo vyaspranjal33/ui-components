@@ -19,9 +19,7 @@ const onInputFocus = function () {
 export class TextInput extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            isInputFocused: false,
-        };
+        this.state = { isInputFocused: false };
         this.onInputFocus = onInputFocus.bind(this);
         this.onInputBlur = this.onInputBlur.bind(this);
         this.onValueChange = this.onValueChange.bind(this);
@@ -77,12 +75,13 @@ TextInput.defaultProps = {
     style: {},
     value: '',
 };
+const initState = (props) => {
+    return props.value;
+};
 export class StatefulTextInput extends React.Component {
     constructor(props) {
         super(props);
-        this.state = {
-            value: this.props.value,
-        };
+        this.state = { value: initState(this.props) };
         this.onValueChange = this.onValueChange.bind(this);
     }
     onValueChange(event) {

@@ -1,11 +1,9 @@
 import React from 'react';
+const getToggleProps = (props) => props.selectedKey;
 export default class ToggleAnything extends React.Component {
-    constructor(props) {
-        super(props);
-        const { selectedKey = null } = props;
-        this.state = {
-            selectedKey,
-        };
+    constructor() {
+        super(...arguments);
+        this.state = { selectedKey: getToggleProps(this.props) };
     }
     render() {
         const keyArray = this.props.keys.map(key => ({
@@ -21,4 +19,7 @@ export default class ToggleAnything extends React.Component {
         return this.props.children(...keyArray);
     }
 }
+ToggleAnything.defaultProps = {
+    selectedKey: null,
+};
 //# sourceMappingURL=toggle-anything.js.map

@@ -1,7 +1,7 @@
 /// <reference types="react" />
 import React from 'react';
 export interface RadioGroupProps {
-    children: Array<React.ReactElement<RadioProps>>;
+    children: React.ReactNode;
     name: string;
     onChange: (event: any) => void;
 }
@@ -11,7 +11,7 @@ export interface RadioProps {
     defaultChecked?: boolean;
     disabled?: boolean;
     id?: string;
-    label: string;
+    label: React.ReactNode | string;
     name?: string;
     onChange?: (event: any) => void;
     value: string;
@@ -20,6 +20,9 @@ export declare const Radio: React.SFC<RadioProps>;
 export declare class StatefulRadio extends React.Component<RadioProps, {
     checked: boolean;
 }> {
+    readonly state: {
+        checked: boolean;
+    };
     constructor(props: RadioProps);
     handleChange(event: any): void;
     render(): JSX.Element;

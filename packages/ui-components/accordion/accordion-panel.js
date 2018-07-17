@@ -24,14 +24,15 @@ const AccordionPanelSFC = (_a) => {
         React.createElement(AnimateHeight, { duration: 500, height: open ? 'auto' : 0 },
             React.createElement("div", { className: Styles['accordion-content'], style: { display: 'block' } }, children))));
 };
+const openProps = (props) => props.open;
 export class AccordionPanel extends React.Component {
-    constructor(props) {
-        super(props);
+    constructor() {
+        super(...arguments);
+        this.state = {
+            open: openProps(this.props),
+        };
         this.onAccordionPanelClick = (e) => {
             this.setState({ open: !this.state.open });
-        };
-        this.state = {
-            open: props.open,
         };
     }
     render() {
