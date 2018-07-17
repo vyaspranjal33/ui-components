@@ -8106,7 +8106,7 @@ exports[`Storyshots Radio Radio with tooltip 1`] = `
   >
     <span
       className="has-underline"
-      data-tooltip="Tooltip content."
+      data-tooltip="Tooltip"
       data-tooltip-length={undefined}
       data-tooltip-pos="up"
     >
