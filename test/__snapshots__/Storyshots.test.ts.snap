@@ -8086,6 +8086,38 @@ Array [
 ]
 `;
 
+exports[`Storyshots Radio Radio with tooltip 1`] = `
+<div
+  className="input-radio-wrap"
+>
+  <input
+    checked={true}
+    defaultChecked={undefined}
+    disabled={undefined}
+    id="radio-choice"
+    name={undefined}
+    onChange={undefined}
+    type="radio"
+    value="choice"
+  />
+  <label
+    className="input-radio-label"
+    htmlFor="radio-choice"
+  >
+    <span
+      className="has-underline"
+      data-tooltip="Tooltip"
+      data-tooltip-length={undefined}
+      data-tooltip-pos="up"
+    >
+      <span>
+        Label
+      </span>
+    </span>
+  </label>
+</div>
+`;
+
 exports[`Storyshots Radio Standard Radio 1`] = `
 <div
   className="input-radio-wrap"

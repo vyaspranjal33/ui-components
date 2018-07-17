@@ -3,6 +3,7 @@ import { storiesOf } from '@storybook/react';
 import * as React from 'react';
 
 import { Radio, RadioGroup, StatefulRadio } from '../src/radio';
+import { Tooltip } from '../src/tooltip';
 
 const stories = storiesOf('Radio', module);
 const onChange = action('Radio Changed');
@@ -54,4 +55,16 @@ stories.add('Multiple radio btns', () => (
     <Radio checked label="Choice 1" value="choice-1" />
     <Radio checked={false} label="Choice 2" value="choice-2" />
   </RadioGroup>
+));
+
+stories.add('Radio with tooltip', () => (
+  <Radio
+    checked={true}
+    label={
+      <Tooltip content="Tooltip" className="has-underline">
+        <span>Label</span>
+      </Tooltip>
+    }
+    value="choice"
+  />
 ));
