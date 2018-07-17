@@ -3,7 +3,7 @@ import Styles from './styles/checkbox-radio.module.scss';
 import { Tooltip } from './tooltip';
 
 export interface RadioGroupProps {
-  children: any;
+  children: React.ReactNode;
   name: string;
   onChange: (event: any) => void;
 }
