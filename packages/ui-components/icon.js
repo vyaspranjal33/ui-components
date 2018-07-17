@@ -22,7 +22,7 @@ export const Icon = (_a) => {
     }
     return (React.createElement("i", Object.assign({ className: cn(className, 'sg-icon', `sg-icon-${type}`, Styles['sg-icon'], Styles[`sg-icon-${type}`], {
             [Styles[`is-size-${size}`]]: size,
-        }), onClick: handleClick, style: iconStyle }, attributes)));
+        }), onClick: handleClick, style: Object.keys(iconStyle).length ? iconStyle : null }, attributes)));
 };
 Icon.defaultProps = {
     className: '',

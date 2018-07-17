@@ -45,7 +45,7 @@ export const Icon: React.SFC<IconProps> = ({
         }
       )}
       onClick={handleClick}
-      style={iconStyle}
+      style={Object.keys(iconStyle).length ? iconStyle : null}
       {...attributes}
     />
   );
