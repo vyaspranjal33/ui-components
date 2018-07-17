@@ -1,5 +1,6 @@
 # CHANGELOG
-
+## 1.2.4
+- Allow native HTML Props ( tabIndex ) in Button
 ## 1.1.3
 - Fix CSS module issue causing duplicate class names
 ## 1.1.2
