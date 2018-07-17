@@ -35,7 +35,9 @@ export interface ButtonizedProps extends AllButtonProps {
   children?: React.ReactElement<ButtonProps>;
 }
 
-export const Button: React.SFC<ButtonProps> = props => {
+export const Button: React.SFC<
+  ButtonProps & React.HTMLAttributes<HTMLButtonElement>
+> = props => {
   let btnType = 'button';
   if (props.isSubmit) {
     btnType = 'submit';
