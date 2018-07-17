@@ -21,10 +21,21 @@ export class DropdownButton extends React.Component {
         this.state = {
             active: false,
         };
-        this.handleClick = () => {
-            const { active } = this.state;
-            this.setState({ active: !active });
+        this.toggleDropdown = (event) => {
+            const { active: isActive } = this.state;
+            return this.setState({ active: !isActive }, () => {
+                if (this.state.active) {
+                    document.addEventListener('click', this.dismissDropdown, false);
+                }
+            });
         };
+        this.dismissDropdown = () => {
+            this.setState({ active: false });
+            document.removeEventListener('click', this.dismissDropdown, false);
+        };
+    }
+    componentWillUnmount() {
+        document.removeEventListener('click', this.dismissDropdown);
     }
     render() {
         const _a = this.props, { active, badge, children, disabled, gear, group, icon, label, loading, onClick, onDark, small, type, className } = _a, attributes = __rest(_a, ["active", "badge", "children", "disabled", "gear", "group", "icon", "label", "loading", "onClick", "onDark", "small", "type", "className"]);
@@ -56,7 +67,7 @@ export class DropdownButton extends React.Component {
                     [btnStyles['is-active']]: isActive,
                     [btnStyles['is-disabled']]: disabled,
                     [btnStyles['is-loading']]: loading,
-                }, className), onClick: this.handleClick }, attributes),
+                }, className), onClick: this.toggleDropdown }, attributes),
                 !gear && hasBadge && React.createElement(Badge, null, badge),
                 !gear && hasIcon && React.createElement(Icon, { type: icon, onDark: type === 'primary' }),
                 gear ? (React.createElement(Icon, { className: btnStyles['sg-icon'], type: icon || 'gear' })) : (label),
