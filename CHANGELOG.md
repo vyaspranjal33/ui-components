@@ -1,5 +1,4 @@
 # CHANGELOG
-
 ## 1.2.5
 - Allow INPUT HTML Props ( autofocus ) in Button
 ## 1.2.4
