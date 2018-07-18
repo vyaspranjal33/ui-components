@@ -11,7 +11,7 @@ export interface DropdownButtonState {
     active: boolean;
 }
 export declare class DropdownButton extends React.Component<DropdownButtonProps & ButtonProps, DropdownButtonState> {
-    static defaultProps: Partial<ButtonProps & React.HTMLAttributes<HTMLButtonElement>>;
+    static defaultProps: Partial<ButtonProps & React.HTMLAttributes<HTMLButtonElement> & React.InputHTMLAttributes<HTMLButtonElement>>;
     state: {
         active: boolean;
     };

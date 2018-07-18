@@ -1,4 +1,6 @@
 # CHANGELOG
+## 1.2.5
+- Allow INPUT HTML Props ( autofocus ) in Button
 ## 1.2.4
 - Allow native HTML Props ( tabIndex ) in Button
 ## 1.1.3
