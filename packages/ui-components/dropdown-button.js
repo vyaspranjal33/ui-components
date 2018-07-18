@@ -20,10 +20,19 @@ export class DropdownButton extends React.Component {
         super(...arguments);
         this.state = {
             active: false,
+            menuOffset: 0,
         };
         this.toggleDropdown = (event) => {
             const { active: isActive } = this.state;
-            return this.setState({ active: !isActive }, () => {
+            let menuOffset = 0;
+            const minimumDropdownWidth = 180;
+            const windowWidth = window.innerWidth;
+            const buttonWidth = this.dropdownElement.offsetWidth;
+            const bounding = this.dropdownElement.getBoundingClientRect();
+            if (bounding.x + minimumDropdownWidth > windowWidth) {
+                menuOffset = -(minimumDropdownWidth - buttonWidth);
+            }
+            return this.setState({ active: !isActive, menuOffset }, () => {
                 if (this.state.active) {
                     document.addEventListener('click', this.dismissDropdown, false);
                 }
@@ -67,11 +76,11 @@ export class DropdownButton extends React.Component {
                     [btnStyles['is-active']]: isActive,
                     [btnStyles['is-disabled']]: disabled,
                     [btnStyles['is-loading']]: loading,
-                }, className), onClick: this.toggleDropdown }, attributes),
+                }, className), onClick: this.toggleDropdown, ref: node => (this.dropdownElement = node) }, attributes),
                 !gear && hasBadge && React.createElement(Badge, null, badge),
                 !gear && hasIcon && React.createElement(Icon, { type: icon, onDark: type === 'primary' }),
                 gear ? (React.createElement(Icon, { className: btnStyles['sg-icon'], type: icon || 'gear' })) : (label),
-                React.createElement("ul", { className: Styles['dropdown-menu'] }, links))));
+                React.createElement("ul", { className: Styles['dropdown-menu'], style: { transform: `translate(${this.state.menuOffset}px)` } }, links))));
     }
 }
 DropdownButton.defaultProps = Button.defaultProps;
