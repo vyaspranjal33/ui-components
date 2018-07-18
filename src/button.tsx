@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { InputHTMLAttributes } from 'react';
 import Badge from './badge';
 import Icon from './icon';
 import Loader from './loader';
@@ -36,7 +36,9 @@ export interface ButtonizedProps extends AllButtonProps {
 }
 
 export const Button: React.SFC<
-  ButtonProps & React.HTMLAttributes<HTMLButtonElement>
+  ButtonProps &
+    React.HTMLAttributes<HTMLButtonElement> &
+    React.InputHTMLAttributes<HTMLButtonElement>
 > = props => {
   let btnType = 'button';
   if (props.isSubmit) {
