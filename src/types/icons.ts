@@ -70,6 +70,7 @@ export type IconType =
   | 'trash'
   | 'unlocked'
   | 'unsubscribe'
+  | 'upload'
   | 'user-security'
   | 'view'
   | 'warning'
