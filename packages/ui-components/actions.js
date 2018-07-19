@@ -15,9 +15,10 @@ import EmailCardStyles from './styles/email-card.module.scss';
 export const Actions = (_a) => {
     var { children, className, inEmailCard, vertical } = _a, attributes = __rest(_a, ["children", "className", "inEmailCard", "vertical"]);
     const actions = React.Children.map(children, (action) => {
-        return React.cloneElement(action, {
-            showTitle: vertical,
-        });
+        return (action &&
+            React.cloneElement(action, {
+                showTitle: vertical,
+            }));
     });
     return (React.createElement("div", Object.assign({ className: cn({
             actions: !inEmailCard,

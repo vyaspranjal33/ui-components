@@ -2,7 +2,7 @@
 import React from 'react';
 import { IconType } from './types/icons';
 export interface ActionsProps {
-    children: React.ReactElement<ActionProps> | Array<React.ReactElement<ActionProps>>;
+    children: React.ReactElement<ActionProps> | Array<React.ReactElement<ActionProps | null>> | null;
     className?: string;
     vertical?: boolean;
     inEmailCard?: boolean;
