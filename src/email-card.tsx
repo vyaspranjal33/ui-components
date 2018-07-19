@@ -1,4 +1,5 @@
 import React from 'react';
+import { ActionsProps } from './actions';
 import Alert from './alert';
 import { Button, Buttonized } from './button';
 import Icon from './icon';
@@ -134,6 +135,7 @@ export interface EmailCardProps {
   onSaveAlertClick?: (event: any) => void;
   paused?: boolean;
   renderSendTimeLink?: (value: string) => any;
+  renderActions?: () => React.ReactElement<ActionsProps>;
   renderAlert?: () => any;
   sendTimeValue?: string;
   statistics?: {
@@ -158,20 +160,21 @@ export class EmailCard extends React.Component<EmailCardProps> {
 
   public render() {
     const {
+      className,
       details,
-      editing,
       editable,
+      editing,
+      live,
       n,
       onContentEditClick,
       onSaveAlertClick,
       paused,
-      renderSendTimeLink,
+      renderActions,
       renderAlert,
+      renderSendTimeLink,
       sendTimeValue,
       statistics,
       thumbnailUrl,
-      live,
-      className,
       ...attributes
     } = this.props;
     const alertEl = renderAlert && renderAlert();
@@ -220,6 +223,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
             onContentEditClick={onContentEditClick}
           />
           <EmailCardDetails details={details} />
+          {renderActions && renderActions()}
         </div>
         {alertEl}
       </div>
