@@ -1,4 +1,7 @@
 # CHANGELOG
+
+##1.2.6
+- Allow for Actions children to be null. ie: conditionally removed
 ## 1.2.5
 - Allow INPUT HTML Props ( autofocus ) in Button
 ## 1.2.4

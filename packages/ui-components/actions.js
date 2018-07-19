@@ -14,7 +14,7 @@ import Icon from './icon';
 export const Actions = (_a) => {
     var { children, className, vertical } = _a, attributes = __rest(_a, ["children", "className", "vertical"]);
     const actions = React.Children.map(children, (action) => {
-        return React.cloneElement(action, {
+        return action && React.cloneElement(action, {
             showTitle: vertical,
         });
     });
