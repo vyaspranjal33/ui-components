@@ -1,6 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
+import { Action, Actions } from '../src/actions';
 import Alert from '../src/alert';
 import Button from '../src/button';
 import {
@@ -82,6 +83,22 @@ const cardDataWithImage = {
 };
 
 loaderStories.add('Email Card', () => ( <EmailCard sendTimeValue="Send Instantly" {...cardData} /> ));
+loaderStories.add('Email card with actions', () => (
+  <EmailCard
+    sendTimeValue="Send Instantly"
+    {...cardData}
+    renderActions={() => (
+      <Actions inEmailCard>
+        <Action title="Edit" icon="pencil" onClick={action('edit')} />
+        <Action title="Duplicate" icon="copy" onClick={action('copy')} />
+        <Action title="Create Template" icon="create" onClick={action('create')} />
+        <Action title="Export HTML" icon="export" onClick={action('export')} />
+        <Action title="Preview" icon="view" onClick={action('view')} />
+        <Action title="Delete" icon="trash" onClick={action('delete')} />
+      </Actions>
+    )}
+  />
+));
 
 loaderStories.add('Email Card with No Statistics', () => (
   <EmailCard sendTimeValue="Send Instantly" {...cardDataNoStats} />

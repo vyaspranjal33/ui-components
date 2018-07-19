@@ -11,14 +11,19 @@ import React, { Fragment } from 'react';
 import cn from './utilities/classnames';
 import DropdownButton from './dropdown-button';
 import Icon from './icon';
+import EmailCardStyles from './styles/email-card.module.scss';
 export const Actions = (_a) => {
-    var { children, className, vertical } = _a, attributes = __rest(_a, ["children", "className", "vertical"]);
+    var { children, className, inEmailCard, vertical } = _a, attributes = __rest(_a, ["children", "className", "inEmailCard", "vertical"]);
     const actions = React.Children.map(children, (action) => {
-        return action && React.cloneElement(action, {
-            showTitle: vertical,
-        });
+        return (action &&
+            React.cloneElement(action, {
+                showTitle: vertical,
+            }));
     });
-    return (React.createElement("div", Object.assign({ className: cn('actions', className) }, attributes), vertical ? (React.createElement(DropdownButton, { gear: true, icon: "ellipsis-vertical" }, actions)) : (React.createElement(Fragment, null,
+    return (React.createElement("div", Object.assign({ className: cn({
+            actions: !inEmailCard,
+            [EmailCardStyles['email-row-actions']]: inEmailCard,
+        }, className) }, attributes), vertical ? (React.createElement(DropdownButton, { gear: true, icon: "ellipsis-vertical" }, actions)) : (React.createElement(Fragment, null,
         React.createElement(Icon, { type: "ellipsis" }),
         React.createElement("div", { className: "action-icons" }, children)))));
 };

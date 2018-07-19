@@ -759,6 +759,140 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots Actions Dropdown Actions 1`] = `
+<div
+  className="actions"
+  data-role="group-card-actions-menu"
+>
+  <div
+    className="btn-list"
+  >
+    <div
+      className="btn btn-dropdown dropdown btn-group-item has-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-ellipsis-vertical"
+        onClick={undefined}
+        style={null}
+      />
+      <ul
+        className="dropdown-menu"
+        style={
+          Object {
+            "transform": "translate(0px)",
+          }
+        }
+      >
+        <span
+          className="dropdown-link"
+          data-role="export"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-export"
+            onClick={undefined}
+            style={null}
+          />
+          export
+        </span>
+        <span
+          className="dropdown-link"
+          data-role="view"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-view"
+            onClick={undefined}
+            style={null}
+          />
+          view
+        </span>
+        <span
+          className="dropdown-link"
+          data-role="trash"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-trash"
+            onClick={undefined}
+            style={null}
+          />
+          delete
+        </span>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Actions Dropdown Actions with optional Actions 1`] = `
+<div
+  className="actions"
+  data-role="group-card-actions-menu"
+>
+  <div
+    className="btn-list"
+  >
+    <div
+      className="btn btn-dropdown dropdown btn-group-item has-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-ellipsis-vertical"
+        onClick={undefined}
+        style={null}
+      />
+      <ul
+        className="dropdown-menu"
+        style={
+          Object {
+            "transform": "translate(0px)",
+          }
+        }
+      >
+        <span
+          className="dropdown-link"
+          data-role="export"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-export"
+            onClick={undefined}
+            style={null}
+          />
+          export
+        </span>
+        <span
+          className="dropdown-link"
+          data-role="view"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-view"
+            onClick={undefined}
+            style={null}
+          />
+          view
+        </span>
+        <span
+          className="dropdown-link"
+          data-role="trash"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-trash"
+            onClick={undefined}
+            style={null}
+          />
+          delete
+        </span>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
 <div
   className="alert alert-warning"
@@ -6449,6 +6583,253 @@ exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
           </tr>
         </tbody>
       </table>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email card with actions 1`] = `
+<div
+  className="email-card-wrap"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat"
+      >
+        12230
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat delivered"
+      >
+        966
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-opens"
+      >
+        80.2%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-clicks"
+      >
+        6024
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unsubscribes"
+      >
+        0
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div
+      className="email-row-actions"
+    >
+      <i
+        className="sg-icon sg-icon-ellipsis"
+        onClick={undefined}
+        style={null}
+      />
+      <div
+        className="action-icons"
+      >
+        <span
+          data-tooltip="Edit"
+          data-tooltip-pos="up"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+        </span>
+        <span
+          data-tooltip="Duplicate"
+          data-tooltip-pos="up"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-copy"
+            onClick={undefined}
+            style={null}
+          />
+        </span>
+        <span
+          data-tooltip="Create Template"
+          data-tooltip-pos="up"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-create"
+            onClick={undefined}
+            style={null}
+          />
+        </span>
+        <span
+          data-tooltip="Export HTML"
+          data-tooltip-pos="up"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-export"
+            onClick={undefined}
+            style={null}
+          />
+        </span>
+        <span
+          data-tooltip="Preview"
+          data-tooltip-pos="up"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-view"
+            onClick={undefined}
+            style={null}
+          />
+        </span>
+        <span
+          data-tooltip="Delete"
+          data-tooltip-pos="up"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-trash"
+            onClick={undefined}
+            style={null}
+          />
+        </span>
+      </div>
     </div>
   </div>
 </div>

@@ -1,5 +1,6 @@
 /// <reference types="react" />
 import React from 'react';
+import { ActionsProps } from './actions';
 import { StatisticType } from './statistics';
 export interface EmailCardDetail {
     label: string;
@@ -26,6 +27,7 @@ export interface EmailCardProps {
     onSaveAlertClick?: (event: any) => void;
     paused?: boolean;
     renderSendTimeLink?: (value: string) => any;
+    renderActions?: () => React.ReactElement<ActionsProps>;
     renderAlert?: () => any;
     sendTimeValue?: string;
     statistics?: {
