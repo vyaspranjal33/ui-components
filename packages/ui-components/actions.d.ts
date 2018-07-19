@@ -5,6 +5,7 @@ export interface ActionsProps {
     children: React.ReactElement<ActionProps> | Array<React.ReactElement<ActionProps>>;
     className?: string;
     vertical?: boolean;
+    inEmailCard?: boolean;
 }
 export declare const Actions: React.SFC<ActionsProps>;
 export declare const ActionsCell: React.SFC<ActionsProps>;

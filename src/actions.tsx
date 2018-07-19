@@ -4,6 +4,7 @@ import cn from './utilities/classnames';
 
 import DropdownButton from './dropdown-button';
 import Icon from './icon';
+import EmailCardStyles from './styles/email-card.module.scss';
 
 import { IconType } from './types/icons';
 
@@ -13,11 +14,13 @@ export interface ActionsProps {
     | Array<React.ReactElement<ActionProps>>;
   className?: string;
   vertical?: boolean;
+  inEmailCard?: boolean;
 }
 
 export const Actions: React.SFC<ActionsProps> = ({
   children,
   className,
+  inEmailCard,
   vertical,
   ...attributes
 }) => {
@@ -31,7 +34,16 @@ export const Actions: React.SFC<ActionsProps> = ({
   );
 
   return (
-    <div className={cn('actions', className)} {...attributes}>
+    <div
+      className={cn(
+        {
+          actions: !inEmailCard,
+          [EmailCardStyles['email-row-actions']]: inEmailCard,
+        },
+        className
+      )}
+      {...attributes}
+    >
       {vertical ? (
         <DropdownButton gear icon="ellipsis-vertical">
           {actions}
