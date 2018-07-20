@@ -759,6 +759,140 @@ exports[`Storyshots Accordion Accordion - Standard 1`] = `
 </div>
 `;
 
+exports[`Storyshots Actions Dropdown Actions 1`] = `
+<div
+  className="actions"
+  data-role="group-card-actions-menu"
+>
+  <div
+    className="btn-list"
+  >
+    <div
+      className="btn btn-dropdown dropdown btn-group-item has-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-ellipsis-vertical"
+        onClick={undefined}
+        style={null}
+      />
+      <ul
+        className="dropdown-menu"
+        style={
+          Object {
+            "transform": "translate(0px)",
+          }
+        }
+      >
+        <span
+          className="dropdown-link"
+          data-role="export"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-export"
+            onClick={undefined}
+            style={null}
+          />
+          export
+        </span>
+        <span
+          className="dropdown-link"
+          data-role="view"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-view"
+            onClick={undefined}
+            style={null}
+          />
+          view
+        </span>
+        <span
+          className="dropdown-link"
+          data-role="trash"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-trash"
+            onClick={undefined}
+            style={null}
+          />
+          delete
+        </span>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Actions Dropdown Actions with optional Actions 1`] = `
+<div
+  className="actions"
+  data-role="group-card-actions-menu"
+>
+  <div
+    className="btn-list"
+  >
+    <div
+      className="btn btn-dropdown dropdown btn-group-item has-icon"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-ellipsis-vertical"
+        onClick={undefined}
+        style={null}
+      />
+      <ul
+        className="dropdown-menu"
+        style={
+          Object {
+            "transform": "translate(0px)",
+          }
+        }
+      >
+        <span
+          className="dropdown-link"
+          data-role="export"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-export"
+            onClick={undefined}
+            style={null}
+          />
+          export
+        </span>
+        <span
+          className="dropdown-link"
+          data-role="view"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-view"
+            onClick={undefined}
+            style={null}
+          />
+          view
+        </span>
+        <span
+          className="dropdown-link"
+          data-role="trash"
+          onClick={[Function]}
+        >
+          <i
+            className="sg-icon sg-icon-trash"
+            onClick={undefined}
+            style={null}
+          />
+          delete
+        </span>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Alerts Alert which is not dismissable 1`] = `
 <div
   className="alert alert-warning"
