@@ -13579,6 +13579,46 @@ exports[`Storyshots Tabs Centered Tabs 1`] = `
 </ul>
 `;
 
+exports[`Storyshots Tabs Icon Tabs 1`] = `
+<ul
+  className="tab-wrapper is-centered"
+>
+  <li
+    className="tab is-active"
+    onClick={[Function]}
+  >
+    <i
+      className="sg-icon sg-icon-desktop-view"
+      onClick={undefined}
+      style={null}
+    />
+     
+  </li>
+  <li
+    className="tab"
+    onClick={[Function]}
+  >
+    <i
+      className="sg-icon sg-icon-mobile-view"
+      onClick={undefined}
+      style={null}
+    />
+     
+  </li>
+  <li
+    className="tab"
+    onClick={[Function]}
+  >
+    <i
+      className="sg-icon sg-icon-text-only"
+      onClick={undefined}
+      style={null}
+    />
+     
+  </li>
+</ul>
+`;
+
 exports[`Storyshots Tabs Standard Tabs 1`] = `
 <ul
   className="tab-wrapper"
