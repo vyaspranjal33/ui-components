@@ -2,7 +2,7 @@
 import React from 'react';
 export interface TabProps {
     active?: boolean;
-    children: string;
+    children: React.ReactNode;
     number?: number;
     onClick?: (event: any) => void;
     index?: number;
