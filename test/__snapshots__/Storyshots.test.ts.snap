@@ -875,18 +875,6 @@ exports[`Storyshots Actions Dropdown Actions with optional Actions 1`] = `
           />
           view
         </span>
-        <span
-          className="dropdown-link"
-          data-role="trash"
-          onClick={[Function]}
-        >
-          <i
-            className="sg-icon sg-icon-trash"
-            onClick={undefined}
-            style={null}
-          />
-          delete
-        </span>
       </ul>
     </div>
   </div>

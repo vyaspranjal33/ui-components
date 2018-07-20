@@ -27,7 +27,7 @@ stories.add('Dropdown Actions', () =>
       data-role="trash"
     />
   </Actions>);
-const showDelete = true;
+
 stories.add('Dropdown Actions with optional Actions', () => 
   <Actions vertical data-role="group-card-actions-menu">
     <Action
@@ -42,7 +42,7 @@ stories.add('Dropdown Actions with optional Actions', () =>
       onClick={action('view')}
       data-role="view"
     />
-    { showDelete && <Action
+    { false && <Action
       title={'delete'}
       icon="trash"
       onClick={action('delete')}
