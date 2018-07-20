@@ -11,8 +11,8 @@ import { IconType } from './types/icons';
 export interface ActionsProps {
   children:
     | React.ReactElement<ActionProps>
-    | Array<React.ReactElement<ActionProps | null>>
-    | null;
+    | Array<boolean | React.ReactElement<any>>
+    | boolean;
   className?: string;
   vertical?: boolean;
   inEmailCard?: boolean;
@@ -25,17 +25,14 @@ export const Actions: React.SFC<ActionsProps> = ({
   vertical,
   ...attributes
 }) => {
-  const actions = React.Children.map(
-    children,
-    (action: React.ReactElement<any> | null) => {
-      return (
-        action &&
-        React.cloneElement(action, {
-          showTitle: vertical,
-        })
-      );
+  const actions = React.Children.map(children, child => {
+    if (!child) {
+      return null;
     }
-  );
+    return React.cloneElement(child as React.ReactElement<any>, {
+      showTitle: vertical,
+    });
+  });
 
   return (
     <div
