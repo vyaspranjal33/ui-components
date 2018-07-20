@@ -11,7 +11,7 @@ import { IconType } from './types/icons';
 export interface ActionsProps {
   children:
     | React.ReactElement<ActionProps>
-    | Array<boolean | React.ReactElement<any>>
+    | Array<boolean | React.ReactElement<ActionProps>>
     | boolean;
   className?: string;
   vertical?: boolean;
