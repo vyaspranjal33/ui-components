@@ -49,6 +49,7 @@ export type IconType =
   | 'mail-search'
   | 'mc-design'
   | 'mc-preview'
+  | 'mc-return'
   | 'mobile-view'
   | 'move-left'
   | 'move-right'
