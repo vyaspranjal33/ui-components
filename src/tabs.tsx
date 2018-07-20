@@ -1,5 +1,4 @@
 import React from 'react';
-import { IconProps } from './icon';
 import Styles from './styles/tabs.module.scss';
 import cn from './utilities/classnames';
 import findActiveIndex from './utilities/find-active-index';
@@ -8,7 +7,7 @@ const { map } = React.Children;
 
 export interface TabProps {
   active?: boolean;
-  children: string | React.ReactNode;
+  children: React.ReactNode;
   number?: number;
   onClick?: (event: any) => void;
   index?: number;
