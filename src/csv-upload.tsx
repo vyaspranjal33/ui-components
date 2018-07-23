@@ -7,20 +7,13 @@ export interface CSVUploadProps {
   onChange: (event: any) => void;
 }
 
-const CSVUpload: React.SFC<CSVUploadProps> = ({ onChange }) => (
+const CSVUpload: React.SFC<CSVUploadProps> = ({ onChange, onRemove }) => (
   <FileUpload
     onFileSelect={onChange}
-    render={({
-      hasFile,
-      hovered,
-      invalid,
-      file,
-      handleRemove,
-      FileSelectLink,
-    }) => (
+    render={({ hasFile, hovered, invalid, file, FileSelectLink }) => (
       <Dropzone active={hasFile} hovered={hovered} invalid={invalid}>
         {file ? (
-          <DroppedFile file={file} onRemove={handleRemove} />
+          <DroppedFile file={file} onRemove={onRemove} />
         ) : (
           <FileSelect>
             <Fragment>
