@@ -5,6 +5,7 @@ import FileUpload, { DroppedFile, FileSelect } from './file-upload';
 
 export interface CSVUploadProps {
   onChange: (event: any) => void;
+  onRemove: (event: any) => void;
 }
 
 const CSVUpload: React.SFC<CSVUploadProps> = ({ onChange, onRemove }) => (
