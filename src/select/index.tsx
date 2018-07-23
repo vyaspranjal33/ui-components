@@ -160,8 +160,20 @@ const SelectStyles = {
       ...disabledLabel(state.selectProps.disabled),
     };
   },
-  option: (base: object) => {
-    return { ...base, padding: '9px 30px' };
+  option: (base: object, state: any) => {
+    const focusedState = state.isFocused ? { backgroundColor: '#e9ecef' } : {};
+    const isSelected = state.isSelected
+      ? { backgroundColor: '#d4dadf', color: '#294661' }
+      : {};
+
+    return {
+      ...base,
+      padding: '9px 30px',
+      ...focusedState,
+      ...isSelected,
+      ':active': {},
+      'line-height': '18px',
+    };
   },
   singleValue: (base: object) => {
     return { ...base, ...inputSelect };

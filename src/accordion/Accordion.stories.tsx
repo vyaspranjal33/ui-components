@@ -1,15 +1,15 @@
 import { storiesOf } from '@storybook/react';
 import React, { Fragment } from 'react';
 
-import { Breadcrumb } from '../breadcrumb';
-import Card from '../card';
-import Icon from '../icon';
 import Accordion, {
   AccordionPanel,
   AccordionPanelDescription,
   AccordionPanelIcon,
   AccordionPanelTitle,
-} from './index';
+} from '.';
+import { Breadcrumb } from '../breadcrumb';
+import Card from '../card';
+import Icon from '../icon';
 
 const stories = storiesOf('Accordion', module);
 

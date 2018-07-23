@@ -1,9 +1,11 @@
 import React, { PureComponent } from 'react';
-import { Button } from './button';
-import { ButtonList } from './button-list';
-import { Icon } from './icon';
-import Styles from './styles/segment-term.module.scss';
-import cn from './utilities/classnames';
+import { Button } from '../button';
+import { ButtonList } from '../button-list';
+import { Icon } from '../icon';
+import ScssVars from '../styles/global/variables.scss';
+import Styles from '../styles/segment-term.module.scss';
+import cn from '../utilities/classnames';
+import SegmentWrapper from './segmentWrapper';
 
 export interface SegmentTermProps {
   editable?: boolean;
@@ -12,7 +14,7 @@ export interface SegmentTermProps {
   hasSeparator?: boolean;
   label?: string;
   onAddButtonClick?: (e: any) => void;
-  onCancel?: (e: any) => void;
+  onDelete?: (e: any) => void;
   onConfirm?: (e: any) => void;
   onEdit?: (e: any) => void;
   queryName?: string;
@@ -37,7 +39,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
     const {
       editable,
       editing,
-      onCancel,
+      onDelete,
       onConfirm,
       showConfirm,
       ...attributes
@@ -45,23 +47,26 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
 
     if (editing) {
       return (
-        <ButtonList>
-          {showConfirm && (
-            <Button type="secondary" small onClick={onConfirm}>
-              <Icon type="check-thin" />
-            </Button>
-          )}
-          {onCancel && (
-            <Button type="danger" small onClick={onCancel}>
-              <Icon type="x" />
-            </Button>
-          )}
-        </ButtonList>
+        onDelete && (
+          <a
+            className="btn btn-small btn-trash"
+            style={{ cursor: 'pointer', color: ScssVars['slate-60'] }}
+            onClick={onDelete}
+          >
+            <Icon type="trash" />
+          </a>
+        )
       );
     }
 
     if (editable) {
-      return <Icon type="pencil" className={Styles['segment-term-edit']} />;
+      return (
+        <Icon
+          type="pencil"
+          className={Styles['segment-term-edit']}
+          style={{ opacity: '1', color: ScssVars['slate-60'] }}
+        />
+      );
     }
 
     return null;
@@ -81,7 +86,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       renderAlert,
       renderInputs,
       title,
-      onCancel,
+      onDelete,
       onConfirm,
       showConfirm,
       className,
@@ -124,3 +129,5 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
     );
   }
 }
+
+export { SegmentWrapper };
