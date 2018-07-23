@@ -5,15 +5,18 @@ import FileUpload, { DroppedFile, FileSelect } from './file-upload';
 
 export interface CSVUploadProps {
   onChange: (event: any) => void;
-  onRemove: (event: any) => void;
+  onRemove?: (event: any) => void;
 }
 
 class CSVUpload extends PureComponent<CSVUploadProps> {
   public handleRemove = (
     callback: (event: any) => void
   ): ((event: any) => void) => {
-    return (event: any) => {
-      this.props.onRemove(event);
+    return (event: any): void => {
+      const { onRemove } = this.props;
+      if (onRemove) {
+        onRemove(event);
+      }
       callback(event);
     };
   };
