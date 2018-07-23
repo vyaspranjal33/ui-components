@@ -1,7 +1,11 @@
 /// <reference types="react" />
-import React from 'react';
+import { PureComponent } from 'react';
 export interface CSVUploadProps {
     onChange: (event: any) => void;
+    onRemove?: (event: any) => void;
 }
-declare const CSVUpload: React.SFC<CSVUploadProps>;
+declare class CSVUpload extends PureComponent<CSVUploadProps> {
+    handleRemove: (callback: (event: any) => void) => (event: any) => void;
+    render(): JSX.Element;
+}
 export default CSVUpload;
