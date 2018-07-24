@@ -1,4 +1,4 @@
-export { Accordion, AccordionPanel, AccordionPanelSFC, AccordionPanelTitle, AccordionPanelDescription, AccordionPanelIcon } from './accordion/';
+export { Accordion, AccordionPanel, AccordionPanelSFC, AccordionPanelTitle, AccordionPanelDescription, AccordionPanelIcon } from './accordion';
 export { Action, Actions, ActionsCell } from './actions';
 export { Alert } from './alert';
 export { Badge } from './badge';
@@ -30,10 +30,10 @@ export { PageHeader, PageHeading } from './page-header';
 export { Radio, RadioGroup } from './radio';
 export { SideModal } from './side-modal';
 export { Slider } from './slider';
-export { SegmentTerm } from './segment-term';
+export { SegmentTerm, SegmentWrapper } from './segment-term/';
 export { Select, Createable } from './select';
 export { SortableTable } from './table/sortable-table';
-export { Switch } from './switch/';
+export { Switch } from './switch';
 export { Tab, Tabs } from './tabs';
 export { Table, TableRow, HeaderCell, TableCell, TableHeader, TableBody } from './table/table';
 export { TextInput } from './text-input';

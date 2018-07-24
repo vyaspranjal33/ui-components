@@ -1,8 +1,8 @@
 import { storiesOf } from '@storybook/react';
 import React, { Fragment } from 'react';
+import Accordion, { AccordionPanel, AccordionPanelDescription, AccordionPanelIcon, AccordionPanelTitle, } from '.';
 import Card from '../card';
 import Icon from '../icon';
-import Accordion, { AccordionPanel, AccordionPanelDescription, AccordionPanelIcon, AccordionPanelTitle, } from './index';
 const stories = storiesOf('Accordion', module);
 const LOREM_IPSUM = `Lorem ipsum dolor sit amet, consectetur adipiscing elit.
   Vestibulum vehicula semper eleifend. Morbi tincidunt, magna non hendrerit malesuada,
