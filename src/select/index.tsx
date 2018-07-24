@@ -14,7 +14,7 @@ const inputSelect = {
 
 const multiValueBaseStyles = {
   backgroundColor: SassVars['sg-blue'],
-  color: Styles.white,
+  color: SassVars.white,
   fontSize: 12,
 };
 const disabledLabel = (disabled: boolean) =>
@@ -42,7 +42,7 @@ const SelectStyles = {
       borderBottom: `1px solid ${SassVars['slate-20']}`,
       borderRadius: 0,
       boxShadow: 'none',
-      color: Styles.slate,
+      color: SassVars.slate,
       fontSize: 13,
       minHeight: 'auto',
     };
@@ -105,7 +105,7 @@ const SelectStyles = {
 
   groupHeading: (base: object) => {
     const groupStyle = {
-      color: Styles.slate,
+      color: SassVars.slate,
       fontSize: 13,
       fontWeight: 600,
       marginBottom: 0,
