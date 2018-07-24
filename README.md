@@ -104,7 +104,11 @@ More information: https://semver.org/
 
 ## Testing
 
-To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report. To check image snapshots run `npm run image-snapshots` updating and other commands can be passed through to jest like `npm run image-snapshots --u`
+To make sure your additions don't break `ui-components`, run `npm run test`, which will test all of your changed `*.test.*` files and show a coverage report. To check image snapshots run `npm run image-snapshots` updating and other commands can be passed through to jest like `npm run image-snapshots -u`.
+
+**Image Snapshots & Docker**:
+
+- Since we run image snapshots in Buildkite with docker we need to run them locally with docker as well because different Os's render fonts and other things differently. We don't publish our docker image so you'll have to build and re-build the image any time our dependencies change in package.json. To do so just run the command `docker-compose build build`. This should build the container and be ready to run.
 
 **Image Snapshots & Animations**:
 
