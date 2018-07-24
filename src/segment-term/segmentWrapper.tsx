@@ -46,13 +46,11 @@ export default class SegmentWrapper extends React.Component<
     };
 
     if (
-      !(
-        this.self.current.contains(target) ||
-        (role && role.indexOf('option') !== -1)
-      )
+      !(this.self.current.contains(target) || (role && role.includes('option')))
     ) {
       if (this.props.onSubmit) {
-        if (this.props.onSubmit()) {
+        const isValid = this.props.onSubmit();
+        if (isValid) {
           finishSubmit();
         }
       } else {

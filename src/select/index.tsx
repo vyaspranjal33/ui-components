@@ -3,6 +3,7 @@ import ReactSelect from 'react-select';
 import ReactCreateable from 'react-select/lib/Creatable';
 import mixins from '../styles/global/mixins.scss';
 import dropDownShadow from '../styles/global/mixins/dropdownShadow.scss';
+import SassVars from '../styles/global/variables.scss';
 import cn from '../utilities/classnames';
 import Styles from './select.module.scss';
 
@@ -12,14 +13,14 @@ const inputSelect = {
 };
 
 const multiValueBaseStyles = {
-  backgroundColor: Styles['sg-blue'],
-  color: Styles.white,
+  backgroundColor: SassVars['sg-blue'],
+  color: SassVars.white,
   fontSize: 12,
 };
 const disabledLabel = (disabled: boolean) =>
   disabled
     ? {
-        backgroundColor: Styles['select-disabled-color'],
+        backgroundColor: SassVars['select-disabled-color'],
       }
     : {};
 
@@ -34,40 +35,40 @@ const SelectStyles = {
     const control = {
       ':hover': {
         border: 0,
-        borderBottom: `1px solid ${Styles['slate-20']}`,
+        borderBottom: `1px solid ${SassVars['slate-20']}`,
       },
       backgroundColor: 'transparent',
       border: 0,
-      borderBottom: `1px solid ${Styles['slate-20']}`,
+      borderBottom: `1px solid ${SassVars['slate-20']}`,
       borderRadius: 0,
       boxShadow: 'none',
-      color: Styles.slate,
+      color: SassVars.slate,
       fontSize: 13,
       minHeight: 'auto',
     };
 
     const focusState = state.isFocused
       ? {
-          borderBottomColor: Styles['sg-blue'],
-          boxShadow: `${Styles['sg-blue']} 0 1px 0`,
+          borderBottomColor: SassVars['sg-blue'],
+          boxShadow: `${SassVars['sg-blue']} 0 1px 0`,
         }
       : {};
     const disabledState = state.selectProps.disabled
       ? {
-          color: Styles['select-disabled-color'],
+          color: SassVars['select-disabled-color'],
         }
       : {};
 
     const errorState = state.selectProps.error
       ? {
-          borderBottomColor: Styles['ron-burgundy'],
-          boxShadow: `${Styles['ron-burgundy']} 0 1px 0`,
+          borderBottomColor: SassVars['ron-burgundy'],
+          boxShadow: `${SassVars['ron-burgundy']} 0 1px 0`,
         }
       : {};
 
     const placeholderState = !state.hasValue
       ? {
-          color: Styles['slate-40'],
+          color: SassVars['slate-40'],
         }
       : {};
     return {
@@ -85,8 +86,8 @@ const SelectStyles = {
 
       '&::after': {
         ...mixins,
-        color: Styles['slate-60'],
-        content: `${Styles['icon-caret']}`,
+        color: SassVars['slate-60'],
+        content: `${SassVars['icon-caret']}`,
         position: 'absolute',
         right: 5,
       },
@@ -104,7 +105,7 @@ const SelectStyles = {
 
   groupHeading: (base: object) => {
     const groupStyle = {
-      color: Styles.slate,
+      color: SassVars.slate,
       fontSize: 13,
       fontWeight: 600,
       marginBottom: 0,
@@ -117,8 +118,8 @@ const SelectStyles = {
   menu: (base: object) => {
     const menu = {
       ...dropDownShadow,
-      backgroundColor: Styles['slate-02'],
-      borderColor: Styles['slate-10'],
+      backgroundColor: SassVars['slate-02'],
+      borderColor: SassVars['slate-10'],
       borderRadius: 2,
       fontSize: 13,
       margin: 0,
@@ -152,7 +153,7 @@ const SelectStyles = {
       ...{
         ...multiValueBaseStyles,
         ':hover': {
-          backgroundColor: Styles['sg-blue'],
+          backgroundColor: SassVars['sg-blue'],
           cursor: 'pointer',
         },
         paddingLeft: 0,
@@ -161,9 +162,11 @@ const SelectStyles = {
     };
   },
   option: (base: object, state: any) => {
-    const focusedState = state.isFocused ? { backgroundColor: '#e9ecef' } : {};
+    const focusedState = state.isFocused
+      ? { backgroundColor: SassVars['slate-10'] }
+      : {};
     const isSelected = state.isSelected
-      ? { backgroundColor: '#d4dadf', color: '#294661' }
+      ? { backgroundColor: SassVars['slate-20'], color: SassVars.slate }
       : {};
 
     return {
