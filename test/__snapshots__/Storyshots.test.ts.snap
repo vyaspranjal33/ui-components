@@ -9365,22 +9365,6 @@ exports[`Storyshots Segment Term Segment term with radio btns and alert 1`] = `
         Option 2
       </label>
     </div>
-    <a
-      className="btn btn-small btn-trash"
-      onClick={undefined}
-      style={
-        Object {
-          "color": "slate-60",
-          "cursor": "pointer",
-        }
-      }
-    >
-      <i
-        className="sg-icon sg-icon-trash"
-        onClick={undefined}
-        style={null}
-      />
-    </a>
     <div
       className="alert alert-warning"
       role="alert"
