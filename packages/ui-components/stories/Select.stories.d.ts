@@ -1,1 +1,0 @@
-import './select.module.scss';
