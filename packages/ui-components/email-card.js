@@ -36,8 +36,8 @@ const EmailCardDetails = (_a) => {
 };
 const EmailCardContent = (_a) => {
     var { thumbnailUrl, onContentEditClick, className } = _a, attributes = __rest(_a, ["thumbnailUrl", "onContentEditClick", "className"]);
-    return (React.createElement("div", Object.assign({ className: cn(Styles['email-card-content'], className) }, attributes), thumbnailUrl ? (React.createElement("a", { href: "#" },
-        React.createElement("img", { src: thumbnailUrl, onClick: onContentEditClick }),
+    return (React.createElement("div", Object.assign({ className: cn(Styles['email-card-content'], className) }, attributes), thumbnailUrl ? (React.createElement("a", { onClick: onContentEditClick, href: "javascript: void 0" },
+        React.createElement("img", { src: thumbnailUrl }),
         React.createElement("span", { className: Styles['email-card-content-edit'] },
             React.createElement(Icon, { type: "pencil" }),
             "Edit"))) : (React.createElement(Button, { type: "secondary", onClick: onContentEditClick }, "Add Email Content"))));
