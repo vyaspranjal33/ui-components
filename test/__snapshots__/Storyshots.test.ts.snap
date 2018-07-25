@@ -6288,10 +6288,10 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
       className="email-card-content"
     >
       <a
-        href="#"
+        href="javascript: void 0"
+        onClick={[Function]}
       >
         <img
-          onClick={[Function]}
           src="http://via.placeholder.com/128x88"
         />
         <span
