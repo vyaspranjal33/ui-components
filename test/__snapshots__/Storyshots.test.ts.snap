@@ -946,164 +946,129 @@ exports[`Storyshots Alerts Warning Alert with Custom Icon 1`] = `
 </div>
 `;
 
-exports[`Storyshots Badge bluebird 1`] = `
-<span
-  className="badge bluebird"
->
-  bluebird
-</span>
-`;
-
-exports[`Storyshots Badge burnt-orange 1`] = `
-<span
-  className="badge burnt-orange"
->
-  burnt-orange
-</span>
-`;
-
-exports[`Storyshots Badge caribbean 1`] = `
-<span
-  className="badge caribbean"
->
-  caribbean
-</span>
-`;
-
-exports[`Storyshots Badge carrot 1`] = `
-<span
-  className="badge carrot"
->
-  carrot
-</span>
-`;
-
-exports[`Storyshots Badge cobalt 1`] = `
-<span
-  className="badge cobalt"
->
-  cobalt
-</span>
-`;
-
-exports[`Storyshots Badge crown 1`] = `
-<span
-  className="badge crown"
->
-  crown
-</span>
-`;
-
-exports[`Storyshots Badge grass-stain 1`] = `
-<span
-  className="badge grass-stain"
->
-  grass-stain
-</span>
-`;
-
-exports[`Storyshots Badge lavender 1`] = `
-<span
-  className="badge lavender"
->
-  lavender
-</span>
-`;
-
-exports[`Storyshots Badge lime 1`] = `
-<span
-  className="badge lime"
->
-  lime
-</span>
-`;
-
-exports[`Storyshots Badge mango 1`] = `
-<span
-  className="badge mango"
->
-  mango
-</span>
-`;
-
-exports[`Storyshots Badge mantis 1`] = `
-<span
-  className="badge mantis"
->
-  mantis
-</span>
-`;
-
-exports[`Storyshots Badge ron-burgundy 1`] = `
-<span
-  className="badge ron-burgundy"
->
-  ron-burgundy
-</span>
-`;
-
-exports[`Storyshots Badge sangria 1`] = `
-<span
-  className="badge sangria"
->
-  sangria
-</span>
-`;
-
-exports[`Storyshots Badge screample 1`] = `
-<span
-  className="badge screample"
->
-  screample
-</span>
-`;
-
-exports[`Storyshots Badge seafoam 1`] = `
-<span
-  className="badge seafoam"
->
-  seafoam
-</span>
-`;
-
-exports[`Storyshots Badge sg-blue 1`] = `
-<span
-  className="badge sg-blue"
->
-  sg-blue
-</span>
-`;
-
-exports[`Storyshots Badge slate 1`] = `
-<span
-  className="badge slate"
->
-  slate
-</span>
-`;
-
-exports[`Storyshots Badge spruce 1`] = `
-<span
-  className="badge spruce"
->
-  spruce
-</span>
-`;
-
-exports[`Storyshots Badge steel 1`] = `
-<span
-  className="badge steel"
->
-  steel
-</span>
-`;
-
-exports[`Storyshots Badge wild-strawberry 1`] = `
-<span
-  className="badge wild-strawberry"
->
-  wild-strawberry
-</span>
+exports[`Storyshots Badge All Badges 1`] = `
+Array [
+  <span
+    className="badge sg-blue"
+  >
+    sg-blue
+  </span>,
+  <br />,
+  <span
+    className="badge slate"
+  >
+    slate
+  </span>,
+  <br />,
+  <span
+    className="badge ron-burgundy"
+  >
+    ron-burgundy
+  </span>,
+  <br />,
+  <span
+    className="badge burnt-orange"
+  >
+    burnt-orange
+  </span>,
+  <br />,
+  <span
+    className="badge carrot"
+  >
+    carrot
+  </span>,
+  <br />,
+  <span
+    className="badge mango"
+  >
+    mango
+  </span>,
+  <br />,
+  <span
+    className="badge mantis"
+  >
+    mantis
+  </span>,
+  <br />,
+  <span
+    className="badge spruce"
+  >
+    spruce
+  </span>,
+  <br />,
+  <span
+    className="badge grass-stain"
+  >
+    grass-stain
+  </span>,
+  <br />,
+  <span
+    className="badge lime"
+  >
+    lime
+  </span>,
+  <br />,
+  <span
+    className="badge cobalt"
+  >
+    cobalt
+  </span>,
+  <br />,
+  <span
+    className="badge bluebird"
+  >
+    bluebird
+  </span>,
+  <br />,
+  <span
+    className="badge seafoam"
+  >
+    seafoam
+  </span>,
+  <br />,
+  <span
+    className="badge caribbean"
+  >
+    caribbean
+  </span>,
+  <br />,
+  <span
+    className="badge crown"
+  >
+    crown
+  </span>,
+  <br />,
+  <span
+    className="badge screample"
+  >
+    screample
+  </span>,
+  <br />,
+  <span
+    className="badge sangria"
+  >
+    sangria
+  </span>,
+  <br />,
+  <span
+    className="badge lavender"
+  >
+    lavender
+  </span>,
+  <br />,
+  <span
+    className="badge wild-strawberry"
+  >
+    wild-strawberry
+  </span>,
+  <br />,
+  <span
+    className="badge steel"
+  >
+    steel
+  </span>,
+  <br />,
+]
 `;
 
 exports[`Storyshots Breadcrumb Breadcrumb with single item 1`] = `
@@ -14459,7 +14424,7 @@ exports[`Storyshots Text Area Scrollable 1`] = `
 </div>
 `;
 
-exports[`Storyshots Text Area With Tooltip 1`] = `
+exports[`Storyshots Text Area With Tooltip [skip] 1`] = `
 <div
   className="textarea-wrap"
 >
