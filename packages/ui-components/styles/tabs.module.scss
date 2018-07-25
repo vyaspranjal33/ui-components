@@ -1,4 +1,4 @@
-@import "./global/variables.scss";
+@import './global/variables.scss';
 
 .tab-wrapper {
   display: flex;
@@ -93,6 +93,10 @@
     position: absolute;
     left: 0;
     padding: 15px 0;
+  }
+
+  :global .sg-icon {
+    font-size: 20px;
   }
 
   .badge {
