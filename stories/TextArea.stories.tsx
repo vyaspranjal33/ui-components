@@ -32,7 +32,12 @@ class TextAreaContainer extends Component<{ children: RenderProp }, any> {
 stories.add('Basic', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
-      <TextArea id="textarea-basic" label="Label" value={value} onChange={handleChange} />
+      <TextArea
+        id="textarea-basic"
+        label="Label"
+        value={value}
+        onChange={handleChange}
+      />
     )}
   </TextAreaContainer>
 ));
@@ -40,7 +45,13 @@ stories.add('Basic', () => (
 stories.add('Information Message', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
-      <TextArea id="textarea-info" label="Label" value={value} onChange={handleChange} info="This is a message." />
+      <TextArea
+        id="textarea-info"
+        label="Label"
+        value={value}
+        onChange={handleChange}
+        info="This is a message."
+      />
     )}
   </TextAreaContainer>
 ));
@@ -48,7 +59,13 @@ stories.add('Information Message', () => (
 stories.add('Required', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
-      <TextArea id="textarea-required" label="Label" value={value} onChange={handleChange} required />
+      <TextArea
+        id="textarea-required"
+        label="Label"
+        value={value}
+        onChange={handleChange}
+        required
+      />
     )}
   </TextAreaContainer>
 ));
@@ -56,7 +73,13 @@ stories.add('Required', () => (
 stories.add('Error', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
-      <TextArea id="textarea-error" label="Label" value={value} onChange={handleChange} error />
+      <TextArea
+        id="textarea-error"
+        label="Label"
+        value={value}
+        onChange={handleChange}
+        error
+      />
     )}
   </TextAreaContainer>
 ));
@@ -64,7 +87,13 @@ stories.add('Error', () => (
 stories.add('Disabled', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
-      <TextArea id="textarea-disabled" label="Label" value={value} onChange={handleChange} disabled />
+      <TextArea
+        id="textarea-disabled"
+        label="Label"
+        value={value}
+        onChange={handleChange}
+        disabled
+      />
     )}
   </TextAreaContainer>
 ));
@@ -72,15 +101,27 @@ stories.add('Disabled', () => (
 stories.add('Scrollable', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
-      <TextArea id="textarea-scrollable" label="Label" value={value} onChange={handleChange} scrollable />
+      <TextArea
+        id="textarea-scrollable"
+        label="Label"
+        value={value}
+        onChange={handleChange}
+        scrollable
+      />
     )}
   </TextAreaContainer>
 ));
 
-stories.add('With Tooltip', () => (
+stories.add('With Tooltip [skip]', () => (
   <TextAreaContainer>
     {(value, handleChange) => (
-      <TextArea id="textarea-tooltip" label="Label" value={value} onChange={handleChange} tooltip="I am a tooltip." />
+      <TextArea
+        id="textarea-tooltip"
+        label="Label"
+        value={value}
+        onChange={handleChange}
+        tooltip="I am a tooltip."
+      />
     )}
   </TextAreaContainer>
 ));

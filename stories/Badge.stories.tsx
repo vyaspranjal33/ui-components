@@ -8,6 +8,15 @@ import colors from '../src/utilities/colors';
 
 const stories = storiesOf('Badge', module);
 
-for (const color of colors) {
-  stories.add(color, () => <Badge color={color}>{color}</Badge>);
-}
+stories.add('All Badges', () => (
+  <React.Fragment>
+    {colors.map(color => (
+      <React.Fragment>
+        <Badge color={color} key={color}>
+          {color}
+        </Badge>
+        <br />
+      </React.Fragment>
+    ))}
+  </React.Fragment>
+));

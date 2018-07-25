@@ -24,7 +24,7 @@ const getMatchOptions = ({ context: { kind, story }, url }) => {
 // DontTest is added to the names of storybook stories
 // that render animations/things we dont want to include in imageshots.
 initStoryshots({
-  //   storyNameRegex: /^((?!.*?DontTest).)*$/,
+  storyNameRegex: /^((?!\[skip\]).)*$/,
   suite: 'Image storyshots',
   test: imageSnapshot({ storybookUrl: targetPath, getMatchOptions }),
 });
