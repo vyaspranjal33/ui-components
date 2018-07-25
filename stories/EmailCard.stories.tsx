@@ -46,9 +46,7 @@ const renderSendTimeLink = (value: string) => {
   );
 };
 
-const onContentEditClick = (e: MouseEvent) => {
-  return true;
-};
+const onContentEditClick = action('content edit click');
 
 const cardData = {
   details,

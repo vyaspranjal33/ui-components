@@ -88,8 +88,8 @@ const EmailCardContent: React.SFC<EmailCardContentProps> = ({
 }) => (
   <div className={cn(Styles['email-card-content'], className)} {...attributes}>
     {thumbnailUrl ? (
-      <a href="#">
-        <img src={thumbnailUrl} onClick={onContentEditClick} />
+      <a onClick={onContentEditClick} href="javascript: void 0">
+        <img src={thumbnailUrl} />
         <span className={Styles['email-card-content-edit']}>
           <Icon type="pencil" />
           Edit
