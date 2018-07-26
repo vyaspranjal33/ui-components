@@ -1,5 +1,6 @@
 import initStoryshots, { imageSnapshot } from '@storybook/addon-storyshots';
 import path from 'path';
+import process from 'process';
 
 const target = path.resolve(__dirname, '../docs');
 const targetPath = `file://${target}`;
@@ -7,8 +8,8 @@ let counter = 0;
 
 const getMatchOptions = ({ context: { kind, story }, url }) => {
   counter++;
-  console.log(`${counter} ${story}`);
-
+  // console.log(`${counter} ${story}`);
+  process.stdout.write(`${counter} ${story}\n`);
   // if (story.includes('[animation]')) {
   //   return {
   //     failureThreshold: 0.2,
