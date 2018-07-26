@@ -55,6 +55,7 @@ stories.add('Segment terms', () => (
         />
       )}
     </SegmentWrapper>
+
     <SegmentWrapper
       onSubmit={() => {
         return false;
@@ -66,8 +67,6 @@ stories.add('Segment terms', () => (
           label="Every time a contact is added to"
           queryName="People in Denver"
           editable
-          hasAddButton
-          onAddButtonClick={onAddButtonClick}
           editing={editing}
           onEdit={editClick}
           onDelete={editClick}
@@ -91,6 +90,46 @@ stories.add('Segment terms', () => (
                   id="select-b"
                   options={[{ label: 'Abandons a cart' }]}
                   error={true}
+                />
+              </div>
+            </Fragment>
+          )}
+        />
+      )}
+    </SegmentWrapper>
+    <SegmentWrapper editing={true}>
+      {(editing: boolean, editClick: () => void) => (
+        <SegmentTerm
+          title="Entry Criteria"
+          hasSeparator
+          label="The first time a contact is added to"
+          queryName="People in Los Angeles"
+          editable
+          editing={editing}
+          hasAddButton
+          onAddButtonClick={onAddButtonClick}
+          onEdit={editClick}
+          onDelete={editClick}
+          renderInputs={() => (
+            <Fragment>
+              <div className="input-select-wrap">
+                <label className="input-select-label" htmlFor="select-a">
+                  Select send conditions
+                </label>
+                <Select
+                  id="select-a"
+                  options={[{ label: 'The first time a contact' }]}
+                  defaultValue={{ label: 'The first time a contact' }}
+                />
+              </div>
+              <div className="input-select-wrap">
+                <label className="input-select-label" htmlFor="select-b">
+                  Select contact criteria
+                </label>
+                <Select
+                  id="select-b"
+                  options={[{ label: 'Abandons a cart' }]}
+                  defaultValue={{ label: 'Abandons a cart' }}
                 />
               </div>
             </Fragment>

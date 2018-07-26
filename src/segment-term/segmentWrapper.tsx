@@ -26,6 +26,11 @@ export default class SegmentWrapper extends React.Component<
   public componentWillUnmount() {
     document.removeEventListener('click', this.submit);
   }
+  public componentDidMount() {
+    if (this.props.editing) {
+      document.addEventListener('click', this.submit);
+    }
+  }
   public onEdit = () => {
     this.setState(prev => {
       const editing = !prev.editing;
@@ -39,15 +44,15 @@ export default class SegmentWrapper extends React.Component<
   public submit = (event: MouseEvent) => {
     const target = event.target as Element;
     const role = target.getAttribute('role');
+    const segmentTerm =
+      this.self.current.querySelector('.segment-term') || this.self.current;
 
     const finishSubmit = () => {
       this.setState({ editing: false });
       document.removeEventListener('click', this.submit);
     };
 
-    if (
-      !(this.self.current.contains(target) || (role && role.includes('option')))
-    ) {
+    if (!(segmentTerm.contains(target) || (role && role.includes('option')))) {
       if (this.props.onSubmit) {
         const isValid = this.props.onSubmit();
         if (isValid) {
