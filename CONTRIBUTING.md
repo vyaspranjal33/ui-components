@@ -131,7 +131,7 @@ return (
 | R (Recommend) | Jason Walker                                                 |
 | A (Agree)     | Chris Chalstrom, Alex Wicks                                  |
 | P (Perform)   | All FE Engineers across EI, CL, and MC, Jason Walker (UI/UX) |
-| I (Input)     | Alex Abreu, Alex Thomsen, Eric Tjossem                       |
+| I (Input)     | Alex Abreu, Alex Thomsen, Eric Tjossem, Alan Smith           |
 | D (Decide)    | Steve Kinney                                                 |
 
 [rapid]: https://www.bridgespan.org/insights/library/organizational-effectiveness/rapid-decision-making
