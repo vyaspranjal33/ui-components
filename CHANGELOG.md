@@ -1,4 +1,6 @@
 # CHANGELOG
+## 1.5.5
+- Fix error with <FileUpload /> in FireFox
 ## 1.2.5
 - Allow INPUT HTML Props ( autofocus ) in Button
 ## 1.2.4
