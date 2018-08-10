@@ -148,7 +148,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     const files = getDroppedFiles(event);
 
     this.setState({ hovered: false, invalid: false });
-    this.updateCurrentFile(files);
+    this.updateCurrentFile(files, event);
   };
 
   public handleSelect = (event: any): void => {
@@ -176,7 +176,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     event.preventDefault();
 
     const files = event.target.files;
-    this.updateCurrentFile(files);
+    this.updateCurrentFile(files, event);
   };
 
   public fileTypeIsSupported = (files: DataTransferItemList | FileList) => {
@@ -222,7 +222,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     );
   }
 
-  private updateCurrentFile = (files: FileList) => {
+  private updateCurrentFile = (files: FileList, event: any) => {
     if (!this.fileTypeIsSupported(files)) {
       this.props.onInvalidFile(files);
       return;

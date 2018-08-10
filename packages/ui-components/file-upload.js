@@ -74,7 +74,7 @@ export class FileUpload extends Component {
             event.preventDefault();
             const files = getDroppedFiles(event);
             this.setState({ hovered: false, invalid: false });
-            this.updateCurrentFile(files);
+            this.updateCurrentFile(files, event);
         };
         this.handleSelect = (event) => {
             event.preventDefault();
@@ -92,7 +92,7 @@ export class FileUpload extends Component {
         this.handleChange = (event) => {
             event.preventDefault();
             const files = event.target.files;
-            this.updateCurrentFile(files);
+            this.updateCurrentFile(files, event);
         };
         this.fileTypeIsSupported = (files) => {
             const { supportedType } = this.props;
@@ -101,7 +101,7 @@ export class FileUpload extends Component {
             });
             return isSupported;
         };
-        this.updateCurrentFile = (files) => {
+        this.updateCurrentFile = (files, event) => {
             if (!this.fileTypeIsSupported(files)) {
                 this.props.onInvalidFile(files);
                 return;

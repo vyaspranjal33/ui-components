@@ -17,6 +17,7 @@ export default class SegmentWrapper extends React.Component<SegmentWrapperProps,
     private self;
     render(): JSX.Element;
     componentWillUnmount(): void;
+    componentDidMount(): void;
     onEdit: () => void;
     submit: (event: MouseEvent) => void;
 }
