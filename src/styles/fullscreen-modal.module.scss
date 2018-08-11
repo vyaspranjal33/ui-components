@@ -1,0 +1,58 @@
+@import './global/variables.scss';
+
+.modal-fullscreen {
+  position: fixed;
+  right: 0;
+  bottom: -100%;
+  left: 0;
+  z-index: 999; // z-index one less than alerts. TODO: update z-index system globally
+  height: 100%;
+  background-color: #ffffff;
+  transition: bottom 0.5s cubic-bezier(0.02, 0.01, 0.47, 1);
+  :global &-header {
+    display: flex;
+    align-items: center;
+    height: 70px;
+    background-color: darken($slate, 5%);
+  }
+  :global &-header h2,
+  :global &-header i {
+    color: #ffffff;
+  }
+  :global &-header h2 {
+    margin-bottom: 0;
+    margin-left: 27px;
+  }
+  :global .modal-close {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 70px;
+    height: 70px;
+    cursor: pointer;
+    border-right: 1px solid rgba(0, 0, 0, 0.2);
+  }
+  :global .modal-close i {
+    font-size: 20px;
+  }
+  :global .modal-content {
+    height: calc(100vh - 70px);
+    overflow-y: scroll;
+    :global &.has-padding {
+      padding: 60px;
+    }
+    :global .modal-thumb {
+      margin-bottom: 20px;
+    }
+  }
+}
+
+.is-open {
+  bottom: 0;
+}
+
+:global body {
+  &.modal-open {
+    overflow: hidden;
+  }
+}

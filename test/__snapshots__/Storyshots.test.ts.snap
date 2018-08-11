@@ -7580,6 +7580,48 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
 </section>
 `;
 
+exports[`Storyshots FullScreen Modal ConfirmationModal with plain contents 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    id={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Open Modal
+  </button>
+  <div
+    className="modal-fullscreen is-open"
+  >
+    <header
+      className="modal-fullscreen-header"
+    >
+      <a
+        className="modal-close"
+        onClick={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-x"
+          onClick={undefined}
+          style={null}
+        />
+      </a>
+      <h2>
+        Fullscreen Modal
+      </h2>
+    </header>
+    <div
+      className="modal-content has-padding"
+    >
+      <div
+        className="row"
+      />
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Grid 4/8 Column Config 1`] = `
 <div>
   <div
