@@ -39,6 +39,7 @@ export const Actions: React.SFC<ActionsProps> = ({
         {
           actions: !inEmailCard,
           [EmailCardStyles['email-row-actions']]: inEmailCard,
+          'email-row-actions': inEmailCard,
         },
         className
       )}

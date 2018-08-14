@@ -29,4 +29,8 @@ export const NumberedSteps: React.SFC<NumberedStepsProps> = ({
   children,
   className,
   ...attributes
-}) => <ol className={cn(Styles['numbered-steps'], className)}>{children}</ol>;
+}) => (
+  <ol className={cn('numbered-steps', Styles['numbered-steps'], className)}>
+    {children}
+  </ol>
+);

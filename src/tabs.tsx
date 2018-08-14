@@ -24,14 +24,17 @@ export const Tab: React.SFC<TabProps> = ({
 }) => {
   return (
     <li
-      className={cn(Styles.tab, className, {
+      className={cn('tab', Styles.tab, className, {
         [Styles['is-active']]: active,
+        'is-active': active,
       })}
       onClick={handleClick}
       {...attributes}
     >
       {children}{' '}
-      {number && <span className={Styles['tab-number']}>{number}</span>}
+      {number && (
+        <span className={cn('tab-number', Styles['tab-number'])}>{number}</span>
+      )}
     </li>
   );
 };
@@ -57,9 +60,11 @@ export const Tabs: React.SFC<any> = ({
 }) => {
   return (
     <ul
-      className={cn(Styles['tab-wrapper'], className, {
+      className={cn('tab-wrapper', Styles['tab-wrapper'], className, {
         [Styles['is-centered']]: centered,
+        'is-centered': centered,
         [Styles['zero-border']]: zeroBorder,
+        'zero-border': zeroBorder,
       })}
       {...attributes}
     >

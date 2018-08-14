@@ -48,21 +48,33 @@ export const Card: React.SFC<CardProps> = ({
     <div
       className={cn(Styles.card, className, {
         [Styles['is-centered']]: centered,
+        'is-centered': centered,
         [Styles['is-inline']]: inline,
-        [Styles['is-selected']]: selected,
-        [Styles['is-thin']]: thin,
+        'is-inline': inline,
         [Styles['is-module']]: module,
+        'is-module': module,
+        [Styles['is-selected']]: selected,
+        'is-selected': selected,
+        [Styles['is-thin']]: thin,
+        'is-thin': thin,
       })}
       {...attributes}
     >
       {badge && <Badge {...badge} />}
       {icon && (
-        <div className={Styles['card-icon']}>
+        <div className={cn('card-icon', Styles['card-icon'])}>
           <Icon size={iconSize} type={icon} />
         </div>
       )}
       {title && (
-        <h2 className={cn({ [Styles['card-title']]: inline })}>{title}</h2>
+        <h2
+          className={cn({
+            'card-title': inline,
+            [Styles['card-title']]: inline,
+          })}
+        >
+          {title}
+        </h2>
       )}
       {body && <p>{body}</p>}
       {children}

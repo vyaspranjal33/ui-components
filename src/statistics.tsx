@@ -19,7 +19,9 @@ export const EmailCardStat: React.SFC<{
   commonClass?: string;
 }> = ({ statistic, specificClass, commonClass }) => (
   <div className={commonClass} key={statistic.label}>
-    <p className={cn(Styles.stat, Styles[specificClass])}>
+    <p
+      className={cn('stat', specificClass, Styles.stat, Styles[specificClass])}
+    >
       {statistic.amount || parseInt(statistic.amount as string, 10) === 0
         ? statistic.amount
         : NO_STATS_CHAR}
@@ -35,7 +37,10 @@ export const Statistics: React.SFC<StatisticsProps> = ({
   ...attributes
 }) => {
   return (
-    <div className={cn(Styles['email-card-stats'], className)} {...attributes}>
+    <div
+      className={cn('email-card-stats', Styles['email-card-stats'], className)}
+      {...attributes}
+    >
       {React.Children.map(children, (child: React.ReactElement<any>) => {
         return React.cloneElement(child, { commonClass });
       })}

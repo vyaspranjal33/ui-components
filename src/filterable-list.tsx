@@ -169,12 +169,17 @@ export class FilterableList extends PureComponent<
 
     return (
       <section className="FilterableList" {...attributes}>
-        <div className={Styles['filter-wrap']}>
-          <div className={Styles['filter-header']}>
-            <p className={Styles['filter-title']}>{title}</p>
+        <div className={cn('filter-wrap', Styles['filter-wrap'])}>
+          <div className={cn('filter-header', Styles['filter-header'])}>
+            <p className={cn('filter-title', Styles['filter-title'])}>
+              {title}
+            </p>
             {this.showClearButtonInHeader && this.clearButton}
           </div>
-          <div className={Styles['filter-list']} style={filterControlStyle}>
+          <div
+            className={cn('filter-list', Styles['filter-list'])}
+            style={filterControlStyle}
+          >
             {renderControls(
               { ...this.state, ...this.handlers },
               this.handleFilterChange

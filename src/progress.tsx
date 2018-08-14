@@ -18,12 +18,19 @@ export const Progress: React.SFC<ProgressProps> = ({
 }) => {
   return (
     <section
-      className={cn(Styles['progress-container'], className, {
-        [Styles['is-vertical']]: vertical,
-      })}
+      className={cn(
+        'progress-container',
+        Styles['progress-container'],
+        className,
+        {
+          [Styles['is-vertical']]: vertical,
+        }
+      )}
       {...attributes}
     >
-      <ul className={Styles['progress-stages']}>{children}</ul>
+      <ul className={cn('progress-stages', Styles['progress-stages'])}>
+        {children}
+      </ul>
     </section>
   );
 };
@@ -50,7 +57,9 @@ export const ProgressStage: React.SFC<ProgressStageProps> = ({
     <li
       className={cn(className, {
         [Styles['is-done']]: done,
+        'is-done': done,
         [Styles['is-selected']]: selected,
+        'is-selected': selected,
       })}
       {...attributes}
     >

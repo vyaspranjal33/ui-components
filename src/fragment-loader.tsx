@@ -11,19 +11,34 @@ export const FragmentLoader: React.SFC<FragmentLoaderProps> = ({
   ...attributes
 }) => {
   return (
-    <svg className={cn(Styles['fragment-loader'], className)} {...attributes}>
+    <svg
+      className={cn('fragment-loader', Styles['fragment-loader'], className)}
+      {...attributes}
+    >
       <rect
-        className={cn(Styles['fragment-square'], Styles.left)}
+        className={cn(
+          'fragment-square',
+          Styles['fragment-square'],
+          Styles.left
+        )}
         width="10"
         height="10"
       />
       <rect
-        className={cn(Styles['fragment-square'], Styles.middle)}
+        className={cn(
+          'fragment-square',
+          Styles['fragment-square'],
+          Styles.middle
+        )}
         width="10"
         height="10"
       />
       <rect
-        className={cn(Styles['fragment-square'], Styles.right)}
+        className={cn(
+          'fragment-square',
+          Styles['fragment-square'],
+          Styles.right
+        )}
         width="10"
         height="10"
       />

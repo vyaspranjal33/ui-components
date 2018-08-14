@@ -29,8 +29,14 @@ export const SplitCard: React.SFC<CardProps> = ({
   ...attributes
 }) => {
   return (
-    <Card thin className={cn(Styles['is-split'], className)} {...attributes}>
-      <div className={Styles['split-content']}>{children}</div>
+    <Card
+      thin
+      className={cn('is-split', Styles['is-split'], className)}
+      {...attributes}
+    >
+      <div className={cn('split-content', Styles['split-content'])}>
+        {children}
+      </div>
     </Card>
   );
 };

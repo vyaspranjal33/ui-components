@@ -28,12 +28,21 @@ export const Accordion: React.SFC<AccordionProps> = ({
 }) => {
   return (
     <div
-      className={cn(Styles['accordion-wrapper'], className, {
-        [Styles['accordion-caret-left']]: caretLeft,
-        [Styles['accordion-large']]: large,
-        [Styles['accordion-list']]: list,
-        [Styles['is-editor']]: editor,
-      })}
+      className={cn(
+        'accordion-wrapper',
+        Styles['accordion-wrapper'],
+        className,
+        {
+          [Styles['accordion-caret-left']]: caretLeft,
+          'accordion-caret-left': caretLeft,
+          [Styles['accordion-large']]: large,
+          'accordion-large': large,
+          [Styles['accordion-list']]: list,
+          'accordion-list': list,
+          [Styles['is-editor']]: editor,
+          'is-editor': editor,
+        }
+      )}
     >
       {children}
     </div>

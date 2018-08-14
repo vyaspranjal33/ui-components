@@ -30,7 +30,7 @@ export const EditorBadge: React.SFC<{
   }
 
   return props.type ? (
-    <p className={cn(Styles['editor-type'])}>
+    <p className={cn('editor-type', Styles['editor-type'])}>
       {iconType && <Icon type={iconType as IconType} />}
       {editorCopy}
     </p>
@@ -80,7 +80,7 @@ export const TemplateCard: React.SFC<TemplateCardProps> = ({
           BlankTemplateImage
         )}
         {children}
-        <ButtonList className={cn(Styles['btn-list'])}>
+        <ButtonList className={cn('btn-list', Styles['btn-list'])}>
           <Button onClick={selectItem}>Select</Button>
         </ButtonList>
       </div>
@@ -88,7 +88,9 @@ export const TemplateCard: React.SFC<TemplateCardProps> = ({
       {typeof editorInfo === 'string' ? (
         <EditorBadge type={editorInfo as EditorType} />
       ) : (
-        <div className={cn(Styles['editor-type'])}>{editorInfo}</div>
+        <div className={cn('editor-type', Styles['editor-type'])}>
+          {editorInfo}
+        </div>
       )}
     </div>
   );

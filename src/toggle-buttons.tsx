@@ -26,7 +26,7 @@ export const ToggleButtons: React.SFC<
     <ToggleAnything keys={keys} selectedKey={selectedKey} onChange={onChange}>
       {(...args: Array<AnythingKey>) => (
         <div
-          className={cn(className, Styles['btn-group'])}
+          className={cn(className, 'btn-group', Styles['btn-group'])}
           style={style}
           {...attributes}
         >

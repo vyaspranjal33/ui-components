@@ -1,6 +1,6 @@
 import React from 'react';
 import Styles from './styles/meter.module.scss';
-
+import cn from './utilities/classnames';
 export interface UploadProgressProps {
   children: Array<React.ReactNode> | React.ReactNode;
   className?: string;
@@ -36,9 +36,9 @@ export const UploadProgress: React.SFC<UploadProgressProps> = ({
       style={uploadProgressStyle}
     >
       {children}
-      <div className={Styles['meter-bar']}>
+      <div className={cn('meter-bar', Styles['meter-bar'])}>
         <div
-          className={Styles['meter-bar-fill']}
+          className={cn('meter-bar-fill', Styles['meter-bar-fill'])}
           style={{
             backgroundColor: '#1A82e2',
             width: `${percent}%`,

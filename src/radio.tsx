@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import Styles from './styles/checkbox-radio.module.scss';
-
+import cn from './utilities/classnames';
 export interface RadioGroupProps {
   children: React.ReactNode;
   name: string;
@@ -51,7 +51,7 @@ export const Radio: React.SFC<RadioProps> = ({
 }) => {
   id = id || `radio-${value.toLowerCase()}`;
   return (
-    <div className={Styles['input-radio-wrap']}>
+    <div className={cn('input-radio-wrap', Styles['input-radio-wrap'])}>
       <input
         checked={checked}
         defaultChecked={defaultChecked}
@@ -63,7 +63,10 @@ export const Radio: React.SFC<RadioProps> = ({
         value={value}
         {...attributes}
       />
-      <label className={Styles['input-radio-label']} htmlFor={id}>
+      <label
+        className={cn('input-radio-label', Styles['input-radio-label'])}
+        htmlFor={id}
+      >
         {label}
       </label>
     </div>
