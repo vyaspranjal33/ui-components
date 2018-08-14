@@ -14602,6 +14602,373 @@ exports[`Storyshots Tabs Zero-Border Tabs 1`] = `
 </ul>
 `;
 
+exports[`Storyshots Template Card Blank Card 1`] = `
+<div
+  style={
+    Object {
+      "width": "240px",
+    }
+  }
+>
+  <div
+    className="template-wrap"
+  >
+    <div
+      className="thumb is-blank"
+    >
+      <svg
+        className="blank-template"
+        height="160"
+        viewBox="0 0 160 160"
+        width="160"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <g
+          fill="none"
+          fill-rule="evenodd"
+        >
+          <rect
+            fill="#FFF"
+            height="158.231"
+            stroke="#F4F6F7"
+            stroke-width="1.769"
+            width="158.231"
+            x=".885"
+            y=".885"
+          />
+          <g
+            fill="#F4F6F7"
+            fill-rule="nonzero"
+            transform="translate(14 128)"
+          >
+            <polygon
+              points="0 2 0 0 132 0 132 2"
+            />
+            <polygon
+              points="0 12 0 10 132 10 132 12"
+            />
+            <polygon
+              points="0 21 0 19 132 19 132 21"
+            />
+          </g>
+          <rect
+            fill="#F4F6F7"
+            height="7"
+            rx="3.5"
+            width="73"
+            x="44"
+            y="110"
+          />
+          <g
+            transform="translate(0 33)"
+          >
+            <rect
+              fill="#F4F6F7"
+              height="2"
+              width="160"
+            />
+            <rect
+              fill="#F4F6F7"
+              height="2"
+              width="160"
+              y="62"
+            />
+            <g
+              stroke="#F4F6F7"
+              stroke-linejoin="round"
+              stroke-width="1.769"
+              transform="translate(62 18)"
+            >
+              <polygon
+                points="26.6 7 15.4 23.5 8.4 15.25 0 29 35 29"
+              />
+              <circle
+                cx="7"
+                cy="3"
+                r="3"
+              />
+            </g>
+          </g>
+          <rect
+            fill="#F4F6F7"
+            height="5"
+            width="132"
+            x="14"
+            y="14"
+          />
+        </g>
+      </svg>
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Select
+        </button>
+      </div>
+    </div>
+    <p
+      className="is-size-h4"
+    >
+      Blank Template
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Template Card Card with Image - Code 1`] = `
+<div
+  style={
+    Object {
+      "width": "240px",
+    }
+  }
+>
+  <div
+    className="template-wrap"
+  >
+    <div
+      className="thumb"
+    >
+      <img
+        alt="Template Image"
+        src="http://via.placeholder.com/240"
+      />
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Select
+        </button>
+      </div>
+    </div>
+    <p
+      className="is-size-h4"
+    >
+      Modern
+    </p>
+    <p
+      className="editor-type"
+    >
+      <i
+        className="sg-icon sg-icon-editor-code"
+        onClick={undefined}
+        style={null}
+      />
+      Code Editor
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Template Card Card with Image - Custom Badge 1`] = `
+<div
+  style={
+    Object {
+      "width": "240px",
+    }
+  }
+>
+  <div
+    className="template-wrap"
+  >
+    <div
+      className="thumb"
+    >
+      <img
+        alt="Template Image"
+        src="http://via.placeholder.com/240"
+      />
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Select
+        </button>
+      </div>
+    </div>
+    <p
+      className="is-size-h4"
+    >
+      Modern
+    </p>
+    <div
+      className="editor-type"
+    >
+      <div
+        style={
+          Object {
+            "transform": "rotate(45deg)",
+          }
+        }
+      >
+        Custom Badge
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Template Card Card with Image - Design 1`] = `
+<div
+  style={
+    Object {
+      "width": "240px",
+    }
+  }
+>
+  <div
+    className="template-wrap"
+  >
+    <div
+      className="thumb"
+    >
+      <img
+        alt="Template Image"
+        src="http://via.placeholder.com/240"
+      />
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Select
+        </button>
+      </div>
+    </div>
+    <p
+      className="is-size-h4"
+    >
+      Modern
+    </p>
+    <p
+      className="editor-type"
+    >
+      <i
+        className="sg-icon sg-icon-editor-design"
+        onClick={undefined}
+        style={null}
+      />
+      Design Editor
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Template Card Card with Image - Diff Name 1`] = `
+<div
+  style={
+    Object {
+      "width": "240px",
+    }
+  }
+>
+  <div
+    className="template-wrap"
+  >
+    <div
+      className="thumb"
+    >
+      <img
+        alt="Template Image"
+        src="http://via.placeholder.com/240"
+      />
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Select
+        </button>
+      </div>
+    </div>
+    <p
+      className="is-size-h4"
+    >
+      Underwater Blue
+    </p>
+    <p
+      className="editor-type"
+    >
+      <i
+        className="sg-icon sg-icon-editor-design"
+        onClick={undefined}
+        style={null}
+      />
+      Design Editor
+    </p>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Template Card Card with Image - No badge 1`] = `
+<div
+  style={
+    Object {
+      "width": "240px",
+    }
+  }
+>
+  <div
+    className="template-wrap"
+  >
+    <div
+      className="thumb"
+    >
+      <img
+        alt="Template Image"
+        src="http://via.placeholder.com/240"
+      />
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-primary"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Select
+        </button>
+      </div>
+    </div>
+    <p
+      className="is-size-h4"
+    >
+      Modern
+    </p>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Text Area Basic 1`] = `
 <div
   className="textarea-wrap"

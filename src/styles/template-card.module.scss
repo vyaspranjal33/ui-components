@@ -1,0 +1,56 @@
+@import './global/variables.scss';
+
+.template-wrap {
+  .thumb {
+    position: relative;
+    margin-bottom: 20px;
+    text-align: center;
+    border: 1px solid $slate-20;
+
+    :global(.blank-template) {
+      margin-top: 40px;
+    }
+
+    &:hover {
+      border-color: $sg-blue;
+      img {
+        opacity: 0.1;
+      }
+      .btn-list {
+        opacity: 1;
+      }
+    }
+    &.is-blank {
+      border-style: dashed;
+      height: 240px;
+    }
+    img,
+    .btn-list {
+      transition: opacity 0.3s;
+    }
+    img {
+      display: block;
+      max-width: 100%;
+    }
+    .btn-list {
+      position: absolute;
+      top: calc(50% - 20px);
+      width: 100%;
+      opacity: 0;
+    }
+  }
+  .editor-type {
+    font-size: 13px;
+    line-height: 20px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    :global(.sg-icon) {
+      margin-right: 0;
+    }
+  }
+  &:hover {
+    .editor-type {
+      opacity: 1;
+    }
+  }
+}
