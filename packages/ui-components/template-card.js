@@ -35,13 +35,16 @@ export const EditorBadge = props => {
         editorCopy)) : null;
 };
 export const TemplateCard = (_a) => {
-    var { children, className, blank = false, thumbnailUrl = '', editorInfo = '', name } = _a, attributes = __rest(_a, ["children", "className", "blank", "thumbnailUrl", "editorInfo", "name"]);
+    var { children, className, blank = false, thumbnailUrl = '', editorInfo = '', name, templateId, onSelect } = _a, attributes = __rest(_a, ["children", "className", "blank", "thumbnailUrl", "editorInfo", "name", "templateId", "onSelect"]);
+    const selectItem = (event) => {
+        onSelect(templateId);
+    };
     return (React.createElement("div", Object.assign({ className: cn('template-wrap', Styles['template-wrap'], className) }, attributes),
         React.createElement("div", { className: cn('thumb', Styles.thumb, blank ? ['is-blank', Styles['is-blank']] : '') },
             !blank ? (React.createElement("img", { src: thumbnailUrl, alt: "Template Image" })) : (BlankTemplateImage),
             children,
             React.createElement(ButtonList, { className: cn(Styles['btn-list']) },
-                React.createElement(Button, null, "Select"))),
+                React.createElement(Button, { onClick: selectItem }, "Select"))),
         React.createElement("p", { className: "is-size-h4" }, name),
         typeof editorInfo === 'string' ? (React.createElement(EditorBadge, { type: editorInfo })) : (React.createElement("div", { className: cn(Styles['editor-type']) }, editorInfo))));
 };

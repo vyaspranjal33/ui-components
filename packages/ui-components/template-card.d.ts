@@ -19,6 +19,8 @@ export interface TemplateCardProps {
     thumbnailUrl?: string;
     editorInfo?: any;
     name: string;
+    onSelect: (id: string) => void;
+    templateId: string;
 }
 export declare const TemplateCard: React.SFC<TemplateCardProps>;
 export default TemplateCard;

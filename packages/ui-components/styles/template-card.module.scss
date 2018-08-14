@@ -7,7 +7,7 @@
     text-align: center;
     border: 1px solid $slate-20;
 
-    .blank-template {
+    :global(.blank-template) {
       margin-top: 40px;
     }
 
