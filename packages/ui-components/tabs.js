@@ -14,21 +14,24 @@ import findActiveIndex from './utilities/find-active-index';
 const { map } = React.Children;
 export const Tab = (_a) => {
     var { active, children, onClick: handleClick, number, className } = _a, attributes = __rest(_a, ["active", "children", "onClick", "number", "className"]);
-    return (React.createElement("li", Object.assign({ className: cn(Styles.tab, className, {
+    return (React.createElement("li", Object.assign({ className: cn('tab', Styles.tab, className, {
             [Styles['is-active']]: active,
+            'is-active': active,
         }), onClick: handleClick }, attributes),
         children,
         ' ',
-        number && React.createElement("span", { className: Styles['tab-number'] }, number)));
+        number && (React.createElement("span", { className: cn('tab-number', Styles['tab-number']) }, number))));
 };
 Tab.defaultProps = {
     active: false,
 };
 export const Tabs = (_a) => {
     var { centered, children, zeroBorder, onChange, className } = _a, attributes = __rest(_a, ["centered", "children", "zeroBorder", "onChange", "className"]);
-    return (React.createElement("ul", Object.assign({ className: cn(Styles['tab-wrapper'], className, {
+    return (React.createElement("ul", Object.assign({ className: cn('tab-wrapper', Styles['tab-wrapper'], className, {
             [Styles['is-centered']]: centered,
+            'is-centered': centered,
             [Styles['zero-border']]: zeroBorder,
+            'zero-border': zeroBorder,
         }) }, attributes), map(children, (tab, index) => {
         return React.cloneElement(tab, {
             onClick(event) {

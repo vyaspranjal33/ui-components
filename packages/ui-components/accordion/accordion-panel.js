@@ -16,13 +16,15 @@ import AccordionPanelTitle from './accordion-panel-title';
 import Styles from './accordion.module.scss';
 const AccordionPanelSFC = (_a) => {
     var { children, className, icon, open, noPadding, onClick, title } = _a, attributes = __rest(_a, ["children", "className", "icon", "open", "noPadding", "onClick", "title"]);
-    return (React.createElement("div", Object.assign({ className: cn(Styles['accordion-panel'], className, {
+    return (React.createElement("div", Object.assign({ className: cn('accordion-panel', Styles['accordion-panel'], className, {
             [Styles['has-child']]: noPadding,
+            'has-child': noPadding,
             [Styles['is-visible']]: open,
+            'is-visible': open,
         }) }, attributes),
-        React.createElement("div", { className: Styles['accordion-title'], onClick: onClick }, title),
+        React.createElement("div", { className: cn('accordion-title', Styles['accordion-title']), onClick: onClick }, title),
         React.createElement(AnimateHeight, { duration: 500, height: open ? 'auto' : 0 },
-            React.createElement("div", { className: Styles['accordion-content'], style: { display: 'block' } }, children))));
+            React.createElement("div", { className: cn('accordion-content', Styles['accordion-content']), style: { display: 'block' } }, children))));
 };
 const openProps = (props) => props.open;
 export class AccordionPanel extends React.Component {

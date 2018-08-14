@@ -57,10 +57,12 @@ export class HTMLTooltip extends React.Component {
     render() {
         const _a = this.props, { direction, className, children, hoverTarget, debounce, style } = _a, attributes = __rest(_a, ["direction", "className", "children", "hoverTarget", "debounce", "style"]);
         return (React.createElement("div", Object.assign({ style: Object.assign({ position: 'relative' }, style) }, attributes),
-            React.createElement("div", { className: Styles['tooltip-js-parent'], onMouseEnter: this.handleHoverIn, onMouseLeave: this.handleHoverOut }, hoverTarget),
-            React.createElement("div", { className: cn(Styles[`tooltip-js-content`], className, {
+            React.createElement("div", { className: cn('tooltip-js-parent', Styles['tooltip-js-parent']), onMouseEnter: this.handleHoverIn, onMouseLeave: this.handleHoverOut }, hoverTarget),
+            React.createElement("div", { className: cn('tooltip-js-content', Styles['tooltip-js-content'], className, {
                     [Styles['is-left']]: direction === 'left',
+                    'is-left': direction === 'left',
                     [Styles['is-visible']]: this.state.opened,
+                    'is-visible': this.state.opened,
                 }), style: { top: -(this.state.tooltipHeight / 2) - 3 }, "data-tooltip-length": this.props.length, ref: input => {
                     this.tooltipRef = input;
                 }, onMouseEnter: this.handleHoverIn, onMouseLeave: this.handleHoverOut }, children)));

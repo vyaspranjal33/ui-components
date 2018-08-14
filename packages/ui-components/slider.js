@@ -9,13 +9,14 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import Styles from './styles/slider.module.scss';
+import cn from './utilities/classnames';
 export const Slider = (_a) => {
     var { value, id, label, onChange: handleChange } = _a, attributes = __rest(_a, ["value", "id", "label", "onChange"]);
-    return (React.createElement("div", { className: Styles['input-range-wrap'] },
+    return (React.createElement("div", { className: cn('input-range-wrap', Styles['input-range-wrap']) },
         React.createElement("input", Object.assign({ id: id, max: "100", min: "0", onChange: handleChange, type: "range", value: value }, attributes)),
-        label && React.createElement("div", { className: Styles['input-range-percent'] },
+        label && (React.createElement("div", { className: cn('input-range-percent', Styles['input-range-percent']) },
             value,
-            "%")));
+            "%"))));
 };
 export class StatefulSlider extends React.Component {
     constructor() {

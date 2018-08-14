@@ -23,19 +23,24 @@ export class SegmentTerm extends PureComponent {
                 React.createElement(Icon, { type: "trash" }))));
         }
         if (editable) {
-            return (React.createElement(Icon, { type: "pencil", className: Styles['segment-term-edit'], style: { opacity: '1', color: ScssVars['slate-60'] } }));
+            return (React.createElement(Icon, { type: "pencil", className: cn('segment-term-edit', Styles['segment-term-edit']), style: { opacity: '1', color: ScssVars['slate-60'] } }));
         }
         return null;
     }
     render() {
         const _a = this.props, { hasAddButton, hasSeparator, editable, editing, label, onAddButtonClick, onEdit, queryName, radios, renderAlert, renderInputs, title, onDelete, onConfirm, showConfirm, className } = _a, attributes = __rest(_a, ["hasAddButton", "hasSeparator", "editable", "editing", "label", "onAddButtonClick", "onEdit", "queryName", "radios", "renderAlert", "renderInputs", "title", "onDelete", "onConfirm", "showConfirm", "className"]);
-        return (React.createElement("div", Object.assign({ className: cn(Styles['segment-term-wrap'], className) }, attributes),
-            React.createElement("p", { className: Styles['segment-term-title'] }, title),
+        return (React.createElement("div", Object.assign({ className: cn('segment-term-wrap', Styles['segment-term-wrap'], className) }, attributes),
+            React.createElement("p", { className: cn('segment-term-title', Styles['segment-term-title']) }, title),
             React.createElement("div", { className: cn('segment-term', Styles['segment-term'], {
+                    // Double class names to keep unhashed classes for styleguide
                     [Styles['has-alert']]: !!renderAlert,
+                    'has-alert': !!renderAlert,
                     [Styles['has-radios']]: radios,
+                    'has-radios': radios,
                     [Styles['has-separator']]: hasSeparator,
+                    'has-separator': hasSeparator,
                     [Styles['is-editable']]: editing,
+                    'is-editable': editing,
                 }), onClick: editable && !editing ? onEdit : undefined },
                 editing && renderInputs && renderInputs(),
                 !editing && (React.createElement("p", null,

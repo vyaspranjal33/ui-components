@@ -12,16 +12,17 @@ import Actions, { Action } from '../actions';
 import Card from '../card';
 import Icon from '../icon';
 import Styles from '../styles/card.module.scss';
+import cn from '../utilities/classnames';
 export const UnsubscribeGroupCard = (_a) => {
     var { id, name, description, unsubscribes, isDisplayedOnPreferencesPage, onClickEdit: handleEdit, onClickPreview: handlePreview, onClickUploadCsv: handleUploadCsv, onClickExport: handleExport, onClickManuallyAdd: handleManualAdd } = _a, attributes = __rest(_a, ["id", "name", "description", "unsubscribes", "isDisplayedOnPreferencesPage", "onClickEdit", "onClickPreview", "onClickUploadCsv", "onClickExport", "onClickManuallyAdd"]);
     return (React.createElement(Card, Object.assign({ centered: true, title: name, body: description }, attributes),
-        isDisplayedOnPreferencesPage && (React.createElement("p", { className: Styles['card-unsub-prefs'] },
+        isDisplayedOnPreferencesPage && (React.createElement("p", { className: cn('card-unsub-prefs', Styles['card-unsub-prefs']) },
             React.createElement(Icon, { type: "check-circle" }),
             "Included in opt out preferences")),
-        React.createElement("p", { className: Styles['card-unsubs'] },
+        React.createElement("p", { className: cn('card-unsubs', Styles['card-unsubs']) },
             React.createElement("strong", null, "Unsubscribes"),
             unsubscribes),
-        React.createElement("p", { className: Styles['card-id'] },
+        React.createElement("p", { className: cn('card-id', Styles['card-id']) },
             React.createElement("strong", null, "ID"),
             "\u00A0",
             id),

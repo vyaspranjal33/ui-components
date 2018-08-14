@@ -20,10 +20,15 @@ export const Dropzone = (_a) => {
     var { active, alert, hovered, invalid, large, children, className, onDragOver, onDragLeave, onDragEnd, onDrop } = _a, attributes = __rest(_a, ["active", "alert", "hovered", "invalid", "large", "children", "className", "onDragOver", "onDragLeave", "onDragEnd", "onDrop"]);
     return (React.createElement("section", Object.assign({ className: cn(Styles.dropzone, className, {
             [Styles['has-inline-alert']]: !!alert,
+            'has-inline-alert': !!alert,
             [Styles['is-active']]: active,
+            'is-active': active,
             [Styles['is-hovered']]: hovered,
+            'is-hovered': hovered,
             [Styles['is-invalid']]: invalid,
+            'is-invalid': invalid,
             [Styles['is-large']]: large,
+            'is-large': large,
         }), role: "hidden", style: dropzoneStyle }, attributes, { onDragOver: onDragOver, onDragLeave: onDragLeave, onDragEnd: onDragEnd, onDrop: onDrop }),
         React.createElement("div", null, children),
         alert &&

@@ -19,11 +19,13 @@ export class SideModal extends React.Component {
     render() {
         const _a = this.props, { isOpen, onClose, children, modalContainer, bodyNode, className } = _a, attributes = __rest(_a, ["isOpen", "onClose", "children", "modalContainer", "bodyNode", "className"]);
         return ReactDOM.createPortal(React.createElement(Fragment, null,
-            React.createElement("div", Object.assign({ className: cn(Styles['side-modal'], className, {
+            React.createElement("div", Object.assign({ className: cn('side-modal', Styles['side-modal'], className, {
                     [Styles['is-visible']]: this.props.isOpen,
+                    'is-visible': this.props.isOpen,
                 }) }, attributes), children),
-            React.createElement("div", { className: cn(Styles['modal-mask'], {
+            React.createElement("div", { className: cn('modal-mask', Styles['modal-mask'], {
                     [Styles['is-visible']]: this.props.isOpen,
+                    'is-visible': this.props.isOpen,
                 }), onClick: onClose })), modalContainer);
     }
 }

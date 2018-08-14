@@ -24,16 +24,22 @@ export class CenterModal extends Component {
         const _a = this.props, { hasX, large, padding, modalContainer, onClose, open, renderBody, renderFooter, renderHeader, bodyNode, className } = _a, attributes = __rest(_a, ["hasX", "large", "padding", "modalContainer", "onClose", "open", "renderBody", "renderFooter", "renderHeader", "bodyNode", "className"]);
         // Using <> instead of <Fragment> is breaking the linter.
         return ReactDOM.createPortal(React.createElement(Fragment, null,
-            React.createElement("div", Object.assign({ className: cn(Styles['center-modal'], className, {
-                    [Styles['is-large']]: large,
-                    [Styles['is-visible']]: open,
+            React.createElement("div", Object.assign({ className: cn('center-modal', Styles['center-modal'], className, {
                     [Styles['has-padding']]: padding,
+                    'has-padding': padding,
+                    [Styles['is-large']]: large,
+                    'is-large': large,
+                    [Styles['is-visible']]: open,
+                    'is-visible': open,
                 }) }, attributes),
                 hasX && (React.createElement(Icon, { type: "x", "data-role": "close-center-modal", onClick: onClose })),
                 renderHeader && React.createElement("h1", null, evaluateRenderProp(renderHeader)),
                 evaluateRenderProp(renderBody),
-                renderFooter && (React.createElement("div", { className: Styles['modal-footer'] }, evaluateRenderProp(this.props.renderFooter)))),
-            React.createElement("div", { className: cn(Styles['modal-mask'], { [Styles['is-visible']]: open }), onClick: onClose })), modalContainer);
+                renderFooter && (React.createElement("div", { className: cn('modal-footer', Styles['modal-footer']) }, evaluateRenderProp(this.props.renderFooter)))),
+            React.createElement("div", { className: cn('modal-mask', Styles['modal-mask'], {
+                    'is-visible': open,
+                    [Styles['is-visible']]: open,
+                }), onClick: onClose })), modalContainer);
     }
 }
 CenterModal.defaultProps = {

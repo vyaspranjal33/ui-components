@@ -12,10 +12,10 @@ import Styles from './styles/loader.module.scss';
 import cn from './utilities/classnames';
 export const FragmentLoader = (_a) => {
     var { className } = _a, attributes = __rest(_a, ["className"]);
-    return (React.createElement("svg", Object.assign({ className: cn(Styles['fragment-loader'], className) }, attributes),
-        React.createElement("rect", { className: cn(Styles['fragment-square'], Styles.left), width: "10", height: "10" }),
-        React.createElement("rect", { className: cn(Styles['fragment-square'], Styles.middle), width: "10", height: "10" }),
-        React.createElement("rect", { className: cn(Styles['fragment-square'], Styles.right), width: "10", height: "10" })));
+    return (React.createElement("svg", Object.assign({ className: cn('fragment-loader', Styles['fragment-loader'], className) }, attributes),
+        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], Styles.left), width: "10", height: "10" }),
+        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], Styles.middle), width: "10", height: "10" }),
+        React.createElement("rect", { className: cn('fragment-square', Styles['fragment-square'], Styles.right), width: "10", height: "10" })));
 };
 export default FragmentLoader;
 //# sourceMappingURL=fragment-loader.js.map
