@@ -103,7 +103,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
         {...attributes}
       >
         <p className={cn('segment-term-title', Styles['segment-term-title'])}>
-          {title})
+          {title}
         </p>
         <div
           className={cn('segment-term', Styles['segment-term'], {

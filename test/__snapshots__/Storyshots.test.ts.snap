@@ -2343,7 +2343,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
     Open Modal
   </button>
   <div
-    className="center-modal is-visible has-padding"
+    className="center-modal has-padding is-visible"
     data-role="example"
   >
     <h1>
@@ -2398,7 +2398,7 @@ exports[`Storyshots CenterModal CenterModal with footer and header, no x, large 
     Open Modal
   </button>
   <div
-    className="center-modal is-large is-visible has-padding"
+    className="center-modal has-padding is-large is-visible"
     data-role="example"
   >
     <h1>
@@ -2453,7 +2453,7 @@ exports[`Storyshots CenterModal CenterModal without footer or header, with x 1`]
     Open Modal
   </button>
   <div
-    className="center-modal is-visible has-padding"
+    className="center-modal has-padding is-visible"
     data-role="example"
   >
     <i
@@ -12358,7 +12358,7 @@ exports[`Storyshots Select With placeholder 1`] = `
 
 exports[`Storyshots Select/Label + Info disabled + error 1`] = `
 <div
-  className="input-select-wrap is-error is-disabled"
+  className="input-select-wrap is-disabled is-error"
 >
   <label
     className="input-select-label"
