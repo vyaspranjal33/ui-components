@@ -12,10 +12,10 @@ import Styles from './styles/progress.module.scss';
 import cn from './utilities/classnames';
 export const Progress = (_a) => {
     var { children, vertical, className } = _a, attributes = __rest(_a, ["children", "vertical", "className"]);
-    return (React.createElement("section", Object.assign({ className: cn(Styles['progress-container'], className, {
+    return (React.createElement("section", Object.assign({ className: cn('progress-container', Styles['progress-container'], className, {
             [Styles['is-vertical']]: vertical,
         }) }, attributes),
-        React.createElement("ul", { className: Styles['progress-stages'] }, children)));
+        React.createElement("ul", { className: cn('progress-stages', Styles['progress-stages']) }, children)));
 };
 Progress.defaultProps = {
     vertical: false,
@@ -24,7 +24,9 @@ export const ProgressStage = (_a) => {
     var { children: label, done, selected, className } = _a, attributes = __rest(_a, ["children", "done", "selected", "className"]);
     return (React.createElement("li", Object.assign({ className: cn(className, {
             [Styles['is-done']]: done,
+            'is-done': done,
             [Styles['is-selected']]: selected,
+            'is-selected': selected,
         }) }, attributes),
         React.createElement("label", null, label)));
 };

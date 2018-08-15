@@ -29,18 +29,23 @@ const AccordionPanelSFC: React.SFC<AccordionPanelProps> = ({
 }) => {
   return (
     <div
-      className={cn(Styles['accordion-panel'], className, {
+      className={cn('accordion-panel', Styles['accordion-panel'], className, {
         [Styles['has-child']]: noPadding,
+        'has-child': noPadding,
         [Styles['is-visible']]: open,
+        'is-visible': open,
       })}
       {...attributes}
     >
-      <div className={Styles['accordion-title']} onClick={onClick}>
+      <div
+        className={cn('accordion-title', Styles['accordion-title'])}
+        onClick={onClick}
+      >
         {title}
       </div>
       <AnimateHeight duration={500} height={open ? 'auto' : 0}>
         <div
-          className={Styles['accordion-content']}
+          className={cn('accordion-content', Styles['accordion-content'])}
           style={{ display: 'block' }}
         >
           {children}

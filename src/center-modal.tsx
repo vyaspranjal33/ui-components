@@ -56,10 +56,13 @@ export class CenterModal extends Component<CenterModalProps> {
     return ReactDOM.createPortal(
       <Fragment>
         <div
-          className={cn(Styles['center-modal'], className, {
-            [Styles['is-large']]: large,
-            [Styles['is-visible']]: open,
+          className={cn('center-modal', Styles['center-modal'], className, {
             [Styles['has-padding']]: padding,
+            'has-padding': padding,
+            [Styles['is-large']]: large,
+            'is-large': large,
+            [Styles['is-visible']]: open,
+            'is-visible': open,
           })}
           {...attributes}
         >
@@ -69,13 +72,16 @@ export class CenterModal extends Component<CenterModalProps> {
           {renderHeader && <h1>{evaluateRenderProp(renderHeader)}</h1>}
           {evaluateRenderProp(renderBody)}
           {renderFooter && (
-            <div className={Styles['modal-footer']}>
+            <div className={cn('modal-footer', Styles['modal-footer'])}>
               {evaluateRenderProp(this.props.renderFooter)}
             </div>
           )}
         </div>
         <div
-          className={cn(Styles['modal-mask'], { [Styles['is-visible']]: open })}
+          className={cn('modal-mask', Styles['modal-mask'], {
+            'is-visible': open,
+            [Styles['is-visible']]: open,
+          })}
           onClick={onClose}
         />
       </Fragment>,

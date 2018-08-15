@@ -26,32 +26,46 @@ export const Switch: React.SFC<SwitchProps> = ({
 }) => {
   return (
     <div
-      className={cn(Styles['switch-toggle'], className, {
+      className={cn('switch-toggle', Styles['switch-toggle'], className, {
         [Styles['is-disabled']]: disabled,
+        'is-disabled': disabled,
       })}
     >
       <input
         checked={on}
-        className={Styles['switch-checkbox']}
+        className={cn('switch-checkbox', Styles['switch-checkbox'])}
         disabled={disabled}
         id={id}
         onChange={onChange}
         type="checkbox"
         value={value}
       />
-      <label className={Styles['switch-label']} htmlFor={id}>
+      <label
+        className={cn('switch-label', Styles['switch-label'])}
+        htmlFor={id}
+      >
         <div
-          className={cn(Styles['switch-option'], Styles['switch-option-off'])}
+          className={cn(
+            'switch-option',
+            Styles['switch-option'],
+            'switch-option-off',
+            Styles['switch-option-off']
+          )}
         >
           {offText}
         </div>
         <div
-          className={cn(Styles['switch-option'], Styles['switch-option-on'])}
+          className={cn(
+            'switch-option',
+            Styles['switch-option'],
+            'switch-option-on',
+            Styles['switch-option-on']
+          )}
         >
           {onText}
         </div>
       </label>
-      <div className={Styles['switch-selector']} />
+      <div className={cn('switch-selector', Styles['switch-selector'])} />
     </div>
   );
 };

@@ -26,8 +26,12 @@ const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
   return (
     <div
       className={cn(
+        'email-card-send-time',
         Styles['email-card-send-time'],
-        { [Styles['has-value']]: !!value },
+        {
+          [Styles['has-value']]: !!value,
+          'has-value': !!value,
+        },
         className
       )}
       {...attributes}
@@ -66,7 +70,7 @@ const EmailCardDetails: React.SFC<{
     });
 
   return (
-    <div className={Styles['email-card-details']}>
+    <div className={cn('email-card-details', Styles['email-card-details'])}>
       <table>
         <tbody>{rows}</tbody>
       </table>
@@ -86,11 +90,23 @@ const EmailCardContent: React.SFC<EmailCardContentProps> = ({
   className,
   ...attributes
 }) => (
-  <div className={cn(Styles['email-card-content'], className)} {...attributes}>
+  <div
+    className={cn(
+      'email-card-content',
+      Styles['email-card-content'],
+      className
+    )}
+    {...attributes}
+  >
     {thumbnailUrl ? (
       <a onClick={onContentEditClick} href="javascript: void 0">
         <img src={thumbnailUrl} />
-        <span className={Styles['email-card-content-edit']}>
+        <span
+          className={cn(
+            'email-card-content-edit',
+            Styles['email-card-content-edit']
+          )}
+        >
           <Icon type="pencil" />
           Edit
         </span>
@@ -115,7 +131,13 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
 }) => {
   return (
     <div
-      className={cn(BtnStyles['btn-list'], Styles['email-card-add'], className)}
+      className={cn(
+        'btn-list',
+        BtnStyles['btn-list'],
+        'email-card-add',
+        Styles['email-card-add'],
+        className
+      )}
       {...attributes}
     >
       <Button type="secondary" onClick={onClick}>
@@ -180,11 +202,15 @@ export class EmailCard extends React.Component<EmailCardProps> {
     const alertEl = renderAlert && renderAlert();
     return (
       <div
-        className={cn(Styles['email-card-wrap'], className, {
+        className={cn('email-card-wrap', Styles['email-card-wrap'], className, {
           [Styles['has-alert']]: !!this.props.renderAlert,
+          'has-alert': !!this.props.renderAlert,
           [Styles['is-editable']]: this.props.editable,
+          'is-editable': this.props.editable,
           [Styles['is-live']]: this.props.live,
+          'is-live': this.props.live,
           [Styles['is-paused']]: this.props.paused,
+          'is-paused': this.props.paused,
         })}
         {...attributes}
       >
@@ -214,8 +240,8 @@ export class EmailCard extends React.Component<EmailCardProps> {
             />
           </Statistics>
         )}
-        <div className={cn(Styles['email-card'], 'email-card')}>
-          <div className={Styles['email-card-count']}>
+        <div className={cn('email-card', Styles['email-card'], 'email-card')}>
+          <div className={cn('email-card-count', Styles['email-card-count'])}>
             <p>Email {n}</p>
           </div>
           <EmailCardContent

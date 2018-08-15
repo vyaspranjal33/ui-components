@@ -35,16 +35,18 @@ export class SideModal extends React.Component<SideModalProps> {
     return ReactDOM.createPortal(
       <Fragment>
         <div
-          className={cn(Styles['side-modal'], className, {
+          className={cn('side-modal', Styles['side-modal'], className, {
             [Styles['is-visible']]: this.props.isOpen,
+            'is-visible': this.props.isOpen,
           })}
           {...attributes}
         >
           {children}
         </div>
         <div
-          className={cn(Styles['modal-mask'], {
+          className={cn('modal-mask', Styles['modal-mask'], {
             [Styles['is-visible']]: this.props.isOpen,
+            'is-visible': this.props.isOpen,
           })}
           onClick={onClose}
         />

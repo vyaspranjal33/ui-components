@@ -17,8 +17,8 @@ export const SplitCardSeparator = (_a) => {
 };
 export const SplitCard = (_a) => {
     var { children, className } = _a, attributes = __rest(_a, ["children", "className"]);
-    return (React.createElement(Card, Object.assign({ thin: true, className: cn(Styles['is-split'], className) }, attributes),
-        React.createElement("div", { className: Styles['split-content'] }, children)));
+    return (React.createElement(Card, Object.assign({ thin: true, className: cn('is-split', Styles['is-split'], className) }, attributes),
+        React.createElement("div", { className: cn('split-content', Styles['split-content']) }, children)));
 };
 export default SplitCard;
 //# sourceMappingURL=split-card.js.map

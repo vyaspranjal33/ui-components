@@ -30,7 +30,7 @@ export const EditorBadge = props => {
         iconType = props.designIcon || 'editor-design';
         editorCopy = props.designCopy || 'Design Editor';
     }
-    return props.type ? (React.createElement("p", { className: cn(Styles['editor-type']) },
+    return props.type ? (React.createElement("p", { className: cn('editor-type', Styles['editor-type']) },
         iconType && React.createElement(Icon, { type: iconType }),
         editorCopy)) : null;
 };
@@ -43,10 +43,10 @@ export const TemplateCard = (_a) => {
         React.createElement("div", { className: cn('thumb', Styles.thumb, blank ? ['is-blank', Styles['is-blank']] : '') },
             !blank ? (React.createElement("img", { src: thumbnailUrl, alt: "Template Image" })) : (BlankTemplateImage),
             children,
-            React.createElement(ButtonList, { className: cn(Styles['btn-list']) },
+            React.createElement(ButtonList, { className: cn('btn-list', Styles['btn-list']) },
                 React.createElement(Button, { onClick: selectItem }, "Select"))),
         React.createElement("p", { className: "is-size-h4" }, name),
-        typeof editorInfo === 'string' ? (React.createElement(EditorBadge, { type: editorInfo })) : (React.createElement("div", { className: cn(Styles['editor-type']) }, editorInfo))));
+        typeof editorInfo === 'string' ? (React.createElement(EditorBadge, { type: editorInfo })) : (React.createElement("div", { className: cn('editor-type', Styles['editor-type']) }, editorInfo))));
 };
 export default TemplateCard;
 //# sourceMappingURL=template-card.js.map

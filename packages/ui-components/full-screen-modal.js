@@ -19,7 +19,7 @@ export class FullscreenModal extends Component {
     }
     render() {
         const _a = this.props, { modalContainer, isOpen, bodyNode, onClose, className, children, title } = _a, attributes = __rest(_a, ["modalContainer", "isOpen", "bodyNode", "onClose", "className", "children", "title"]);
-        return ReactDOM.createPortal(React.createElement("div", Object.assign({ className: cn(Styles['modal-fullscreen'], { [Styles['is-open']]: isOpen }, className) }, attributes),
+        return ReactDOM.createPortal(React.createElement("div", Object.assign({ className: cn('modal-fullscreen', Styles['modal-fullscreen'], { [Styles['is-open']]: isOpen }, className) }, attributes),
             React.createElement("header", { className: "modal-fullscreen-header" },
                 React.createElement("a", { className: "modal-close", onClick: onClose },
                     React.createElement(Icon, { type: "x" })),

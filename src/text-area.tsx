@@ -70,16 +70,25 @@ export class TextArea extends Component<
 
     return (
       <div
-        className={cn(Styles['textarea-wrap'], {
+        className={cn('textarea-wrap', Styles['textarea-wrap'], {
           [Styles['has-value']]: hasValue,
+          'has-value': hasValue,
           [Styles['is-disabled']]: disabled,
+          'is-disabled': disabled,
           [Styles['is-error']]: error,
-          [Styles['is-required']]: required,
-          [Styles['is-scrollable']]: scrollable,
+          'is-error': error,
           [Styles['is-focused']]: focused,
+          'is-focused': focused,
+          [Styles['is-required']]: required,
+          'is-required': required,
+          [Styles['is-scrollable']]: scrollable,
+          'is-scrollable': scrollable,
         })}
       >
-        <label className={cn(Styles['textarea-label'])} htmlFor={id}>
+        <label
+          className={cn('textarea-label', Styles['textarea-label'])}
+          htmlFor={id}
+        >
           {label}
         </label>
         <textarea
@@ -95,8 +104,9 @@ export class TextArea extends Component<
         />
         {info && (
           <span
-            className={cn(Styles['textarea-info'], {
+            className={cn('textarea-info', Styles['textarea-info'], {
               [Styles['is-error']]: error,
+              'is-error': error,
             })}
             id={`${id}-info`}
           >
@@ -105,7 +115,7 @@ export class TextArea extends Component<
         )}
         {children}
         {tooltip && (
-          <div className={Styles['textarea-tooltip']}>
+          <div className={cn('textarea-tooltip', Styles['textarea-tooltip'])}>
             <Tooltip
               content={tooltip}
               length="large"

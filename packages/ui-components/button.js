@@ -45,12 +45,19 @@ export const Buttonized = (_a) => {
     }
     return React.cloneElement(children, Object.assign({ className: cn('btn', `btn-${type}`, Styles.btn, Styles[`btn-${type}`], className, {
             [Styles['btn-on-dark']]: onDark,
+            'btn-on-dark': onDark,
             [Styles['btn-small']]: small,
+            'btn-small': small,
             [Styles['has-badge']]: hasBadge,
+            'has-badge': hasBadge,
             [Styles['has-icon']]: hasIcon || loading,
+            'has-icon': hasIcon || loading,
             [Styles['is-active']]: active,
+            'is-active': active,
             [Styles['is-disabled']]: disabled,
+            'is-disabled': disabled,
             [Styles['is-loading']]: loading,
+            'is-loading': loading,
         }), id,
         onClick }, attributes), content);
 };

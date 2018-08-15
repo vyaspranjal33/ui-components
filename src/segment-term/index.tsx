@@ -63,7 +63,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
       return (
         <Icon
           type="pencil"
-          className={Styles['segment-term-edit']}
+          className={cn('segment-term-edit', Styles['segment-term-edit'])}
           style={{ opacity: '1', color: ScssVars['slate-60'] }}
         />
       );
@@ -95,16 +95,27 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
 
     return (
       <div
-        className={cn(Styles['segment-term-wrap'], className)}
+        className={cn(
+          'segment-term-wrap',
+          Styles['segment-term-wrap'],
+          className
+        )}
         {...attributes}
       >
-        <p className={Styles['segment-term-title']}>{title}</p>
+        <p className={cn('segment-term-title', Styles['segment-term-title'])}>
+          {title}
+        </p>
         <div
           className={cn('segment-term', Styles['segment-term'], {
+            // Double class names to keep unhashed classes for styleguide
             [Styles['has-alert']]: !!renderAlert,
+            'has-alert': !!renderAlert,
             [Styles['has-radios']]: radios,
+            'has-radios': radios,
             [Styles['has-separator']]: hasSeparator,
+            'has-separator': hasSeparator,
             [Styles['is-editable']]: editing,
+            'is-editable': editing,
           })}
           onClick={editable && !editing ? onEdit : undefined}
         >

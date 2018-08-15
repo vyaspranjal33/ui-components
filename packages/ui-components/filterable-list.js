@@ -14,6 +14,7 @@ import React, { PureComponent } from 'react';
 import Button from './button';
 import ButtonList from './button-list';
 import Styles from './styles/filters.module.scss';
+import cn from './utilities/classnames';
 const filterControlStyle = {
     display: 'flex',
     justifyContent: 'space-between',
@@ -96,11 +97,11 @@ export class FilterableList extends PureComponent {
     render() {
         const _a = this.props, { clearButtonInHeader, clearButtonLabel, filterTypes, items, onClear, onChange, onFilter, renderControls, renderItems, showClearButton, title, className } = _a, attributes = __rest(_a, ["clearButtonInHeader", "clearButtonLabel", "filterTypes", "items", "onClear", "onChange", "onFilter", "renderControls", "renderItems", "showClearButton", "title", "className"]);
         return (React.createElement("section", Object.assign({ className: "FilterableList" }, attributes),
-            React.createElement("div", { className: Styles['filter-wrap'] },
-                React.createElement("div", { className: Styles['filter-header'] },
-                    React.createElement("p", { className: Styles['filter-title'] }, title),
+            React.createElement("div", { className: cn('filter-wrap', Styles['filter-wrap']) },
+                React.createElement("div", { className: cn('filter-header', Styles['filter-header']) },
+                    React.createElement("p", { className: cn('filter-title', Styles['filter-title']) }, title),
                     this.showClearButtonInHeader && this.clearButton),
-                React.createElement("div", { className: Styles['filter-list'], style: filterControlStyle },
+                React.createElement("div", { className: cn('filter-list', Styles['filter-list']), style: filterControlStyle },
                     renderControls(Object.assign({}, this.state, this.handlers), this.handleFilterChange),
                     this.showClearButtonInline && this.clearButton)),
             React.createElement("div", { className: "FilterableListItems" }, renderItems(this.filteredItems))));

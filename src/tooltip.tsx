@@ -128,17 +128,24 @@ export class HTMLTooltip extends React.Component<
     return (
       <div style={{ position: 'relative', ...style }} {...attributes}>
         <div
-          className={Styles['tooltip-js-parent']}
+          className={cn('tooltip-js-parent', Styles['tooltip-js-parent'])}
           onMouseEnter={this.handleHoverIn}
           onMouseLeave={this.handleHoverOut}
         >
           {hoverTarget}
         </div>
         <div
-          className={cn(Styles[`tooltip-js-content`], className, {
-            [Styles['is-left']]: direction === 'left',
-            [Styles['is-visible']]: this.state.opened,
-          })}
+          className={cn(
+            'tooltip-js-content',
+            Styles['tooltip-js-content'],
+            className,
+            {
+              [Styles['is-left']]: direction === 'left',
+              'is-left': direction === 'left',
+              [Styles['is-visible']]: this.state.opened,
+              'is-visible': this.state.opened,
+            }
+          )}
           style={{ top: -(this.state.tooltipHeight / 2) - 3 }}
           data-tooltip-length={this.props.length}
           ref={input => {

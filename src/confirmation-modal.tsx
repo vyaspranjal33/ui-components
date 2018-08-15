@@ -47,28 +47,37 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
 
     return ReactDOM.createPortal(
       <div
-        className={cn(Styles['sg-modal'], className, {
+        className={cn('sg-modal', Styles['sg-modal'], className, {
           [Styles['is-visible']]: this.props.isOpen,
+          'is-visible': this.props.isOpen,
         })}
         {...attributes}
       >
         <div
-          className={`${Styles['conf-alert']} ${Styles['sg-modal-content']}`}
+          className={cn(
+            'conf-alert',
+            Styles['conf-alert'],
+            'sg-modal-content',
+            Styles['sg-modal-content']
+          )}
         >
           <h2
-            className={cn(Styles['conf-alert-header'], {
+            className={cn('conf-alert-header', Styles['conf-alert-header'], {
               [Styles['conf-alert-header-with-icon']]: !!this.props.iconType,
+              'conf-alert-header-with-icon': !!this.props.iconType,
             })}
           >
             {!!this.props.iconType && <Icon type={this.props.iconType} />}
             {evaluateRenderProp(this.props.renderHeader)}
           </h2>
-          <div className={Styles['conf-alert-body']}>
-            <p className={Styles['conf-alert-text']}>
+          <div className={cn('conf-alert-body', Styles['conf-alert-body'])}>
+            <p className={cn('conf-alert-text', Styles['conf-alert-text'])}>
               {evaluateRenderProp(this.props.renderBody)}
             </p>
           </div>
-          <div className={Styles['conf-alert-actions']}>
+          <div
+            className={cn('conf-alert-actions', Styles['conf-alert-actions'])}
+          >
             {evaluateRenderProp(this.props.renderActions)}
           </div>
         </div>

@@ -43,10 +43,15 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
     <section
       className={cn(Styles.dropzone, className, {
         [Styles['has-inline-alert']]: !!alert,
+        'has-inline-alert': !!alert,
         [Styles['is-active']]: active,
+        'is-active': active,
         [Styles['is-hovered']]: hovered,
+        'is-hovered': hovered,
         [Styles['is-invalid']]: invalid,
+        'is-invalid': invalid,
         [Styles['is-large']]: large,
+        'is-large': large,
       })}
       role="hidden"
       style={dropzoneStyle}

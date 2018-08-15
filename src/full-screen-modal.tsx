@@ -42,6 +42,7 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
     return ReactDOM.createPortal(
       <div
         className={cn(
+          'modal-fullscreen',
           Styles['modal-fullscreen'],
           { [Styles['is-open']]: isOpen },
           className

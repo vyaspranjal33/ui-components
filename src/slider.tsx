@@ -1,6 +1,6 @@
 import React from 'react';
 import Styles from './styles/slider.module.scss';
-
+import cn from './utilities/classnames';
 export interface SliderProps {
   value: number;
   id?: string;
@@ -16,7 +16,7 @@ export const Slider: React.SFC<SliderProps> = ({
   ...attributes
 }) => {
   return (
-    <div className={Styles['input-range-wrap']}>
+    <div className={cn('input-range-wrap', Styles['input-range-wrap'])}>
       <input
         id={id}
         max="100"
@@ -26,7 +26,13 @@ export const Slider: React.SFC<SliderProps> = ({
         value={value}
         {...attributes}
       />
-      {label && <div className={Styles['input-range-percent']}>{value}%</div>}
+      {label && (
+        <div
+          className={cn('input-range-percent', Styles['input-range-percent'])}
+        >
+          {value}%
+        </div>
+      )}
     </div>
   );
 };

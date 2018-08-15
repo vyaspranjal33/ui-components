@@ -22,6 +22,7 @@ export const Actions = (_a) => {
     return (React.createElement("div", Object.assign({ className: cn({
             actions: !inEmailCard,
             [EmailCardStyles['email-row-actions']]: inEmailCard,
+            'email-row-actions': inEmailCard,
         }, className) }, attributes), vertical ? (React.createElement(DropdownButton, { gear: true, icon: "ellipsis-vertical" }, actions)) : (React.createElement(Fragment, null,
         React.createElement(Icon, { type: "ellipsis" }),
         React.createElement("div", { className: "action-icons" }, children)))));

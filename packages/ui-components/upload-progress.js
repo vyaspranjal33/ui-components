@@ -9,6 +9,7 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React from 'react';
 import Styles from './styles/meter.module.scss';
+import cn from './utilities/classnames';
 const uploadProgressStyle = {
     alignItems: 'center',
     border: '1px solid #e9ecef',
@@ -26,8 +27,8 @@ export const UploadProgress = (_a) => {
     }
     return (React.createElement("section", { className: `upload-progress ${className}`, style: uploadProgressStyle },
         children,
-        React.createElement("div", { className: Styles['meter-bar'] },
-            React.createElement("div", { className: Styles['meter-bar-fill'], style: {
+        React.createElement("div", { className: cn('meter-bar', Styles['meter-bar']) },
+            React.createElement("div", { className: cn('meter-bar-fill', Styles['meter-bar-fill']), style: {
                     backgroundColor: '#1A82e2',
                     width: `${percent}%`,
                 } }))));

@@ -13,7 +13,7 @@ import ToggleAnything from './toggle-anything';
 import cn from './utilities/classnames';
 export const ToggleButtons = (_a) => {
     var { keys, selectedKey, children, onChange, className, style } = _a, attributes = __rest(_a, ["keys", "selectedKey", "children", "onChange", "className", "style"]);
-    return (React.createElement(ToggleAnything, { keys: keys, selectedKey: selectedKey, onChange: onChange }, (...args) => (React.createElement("div", Object.assign({ className: cn(className, Styles['btn-group']), style: style }, attributes), children(...args)))));
+    return (React.createElement(ToggleAnything, { keys: keys, selectedKey: selectedKey, onChange: onChange }, (...args) => (React.createElement("div", Object.assign({ className: cn(className, 'btn-group', Styles['btn-group']), style: style }, attributes), children(...args)))));
 };
 export default ToggleButtons;
 //# sourceMappingURL=toggle-buttons.js.map

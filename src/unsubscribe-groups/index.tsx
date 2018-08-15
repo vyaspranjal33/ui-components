@@ -36,16 +36,16 @@ export const UnsubscribeGroupCard: React.SFC<UnsubscribeGroupCardProps> = ({
   return (
     <Card centered title={name} body={description} {...attributes}>
       {isDisplayedOnPreferencesPage && (
-        <p className={Styles['card-unsub-prefs']}>
+        <p className={cn('card-unsub-prefs', Styles['card-unsub-prefs'])}>
           <Icon type="check-circle" />
           Included in opt out preferences
         </p>
       )}
-      <p className={Styles['card-unsubs']}>
+      <p className={cn('card-unsubs', Styles['card-unsubs'])}>
         <strong>Unsubscribes</strong>
         {unsubscribes}
       </p>
-      <p className={Styles['card-id']}>
+      <p className={cn('card-id', Styles['card-id'])}>
         <strong>ID</strong>
         &nbsp;{id}
       </p>

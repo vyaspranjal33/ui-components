@@ -16,7 +16,10 @@ import Styles from './styles/email-card.module.scss';
 import cn from './utilities/classnames';
 const EmailCardSendTime = (_a) => {
     var { value, renderSendTimeLink, alert = '', className } = _a, attributes = __rest(_a, ["value", "renderSendTimeLink", "alert", "className"]);
-    return (React.createElement("div", Object.assign({ className: cn(Styles['email-card-send-time'], { [Styles['has-value']]: !!value }, className) }, attributes),
+    return (React.createElement("div", Object.assign({ className: cn('email-card-send-time', Styles['email-card-send-time'], {
+            [Styles['has-value']]: !!value,
+            'has-value': !!value,
+        }, className) }, attributes),
         React.createElement(Buttonized, { type: "secondary", className: Styles.btn }, renderSendTimeLink && renderSendTimeLink(value)),
         alert));
 };
@@ -30,32 +33,36 @@ const EmailCardDetails = (_a) => {
                     detail.renderEditDetailLink(detail.value)) ||
                     detail.value)));
         });
-    return (React.createElement("div", { className: Styles['email-card-details'] },
+    return (React.createElement("div", { className: cn('email-card-details', Styles['email-card-details']) },
         React.createElement("table", null,
             React.createElement("tbody", null, rows))));
 };
 const EmailCardContent = (_a) => {
     var { thumbnailUrl, onContentEditClick, className } = _a, attributes = __rest(_a, ["thumbnailUrl", "onContentEditClick", "className"]);
-    return (React.createElement("div", Object.assign({ className: cn(Styles['email-card-content'], className) }, attributes), thumbnailUrl ? (React.createElement("a", { onClick: onContentEditClick, href: "javascript: void 0" },
+    return (React.createElement("div", Object.assign({ className: cn('email-card-content', Styles['email-card-content'], className) }, attributes), thumbnailUrl ? (React.createElement("a", { onClick: onContentEditClick, href: "javascript: void 0" },
         React.createElement("img", { src: thumbnailUrl }),
-        React.createElement("span", { className: Styles['email-card-content-edit'] },
+        React.createElement("span", { className: cn('email-card-content-edit', Styles['email-card-content-edit']) },
             React.createElement(Icon, { type: "pencil" }),
             "Edit"))) : (React.createElement(Button, { type: "secondary", onClick: onContentEditClick }, "Add Email Content"))));
 };
 export const EmailCardAddButton = (_a) => {
     var { onClick, className } = _a, attributes = __rest(_a, ["onClick", "className"]);
-    return (React.createElement("div", Object.assign({ className: cn(BtnStyles['btn-list'], Styles['email-card-add'], className) }, attributes),
+    return (React.createElement("div", Object.assign({ className: cn('btn-list', BtnStyles['btn-list'], 'email-card-add', Styles['email-card-add'], className) }, attributes),
         React.createElement(Button, { type: "secondary", onClick: onClick }, "Add an Email")));
 };
 export class EmailCard extends React.Component {
     render() {
         const _a = this.props, { className, details, editable, editing, live, n, onContentEditClick, onSaveAlertClick, paused, renderActions, renderAlert, renderSendTimeLink, sendTimeValue, statistics, thumbnailUrl } = _a, attributes = __rest(_a, ["className", "details", "editable", "editing", "live", "n", "onContentEditClick", "onSaveAlertClick", "paused", "renderActions", "renderAlert", "renderSendTimeLink", "sendTimeValue", "statistics", "thumbnailUrl"]);
         const alertEl = renderAlert && renderAlert();
-        return (React.createElement("div", Object.assign({ className: cn(Styles['email-card-wrap'], className, {
+        return (React.createElement("div", Object.assign({ className: cn('email-card-wrap', Styles['email-card-wrap'], className, {
                 [Styles['has-alert']]: !!this.props.renderAlert,
+                'has-alert': !!this.props.renderAlert,
                 [Styles['is-editable']]: this.props.editable,
+                'is-editable': this.props.editable,
                 [Styles['is-live']]: this.props.live,
+                'is-live': this.props.live,
                 [Styles['is-paused']]: this.props.paused,
+                'is-paused': this.props.paused,
             }) }, attributes),
             React.createElement(EmailCardSendTime, { value: sendTimeValue, renderSendTimeLink: renderSendTimeLink, alert: alertEl }),
             statistics && (React.createElement(Statistics, { commonClass: "email-stats" },
@@ -64,8 +71,8 @@ export class EmailCard extends React.Component {
                 React.createElement(EmailCardStat, { specificClass: "unique-opens", statistic: statistics.opens }),
                 React.createElement(EmailCardStat, { specificClass: "unique-clicks", statistic: statistics.clicks }),
                 React.createElement(EmailCardStat, { specificClass: "unsubscribes", statistic: statistics.unsubscribes }))),
-            React.createElement("div", { className: cn(Styles['email-card'], 'email-card') },
-                React.createElement("div", { className: Styles['email-card-count'] },
+            React.createElement("div", { className: cn('email-card', Styles['email-card'], 'email-card') },
+                React.createElement("div", { className: cn('email-card-count', Styles['email-card-count']) },
                     React.createElement("p", null,
                         "Email ",
                         n)),

@@ -9,15 +9,16 @@ var __rest = (this && this.__rest) || function (s, e) {
 };
 import React, { Fragment } from 'react';
 import Styles from './styles/checkbox-radio.module.scss';
+import cn from './utilities/classnames';
 const { map } = React.Children;
 const radioGroupMapper = (props) => map(props.children, (child) => child && (React.createElement(child.type, Object.assign({ key: child.props.value, name: props.name, onChange: props.onChange }, child.props))));
 export const RadioGroup = (props) => React.createElement(Fragment, null, radioGroupMapper(props));
 export const Radio = (_a) => {
     var { checked, children, defaultChecked, disabled, id, label, name, onChange, value } = _a, attributes = __rest(_a, ["checked", "children", "defaultChecked", "disabled", "id", "label", "name", "onChange", "value"]);
     id = id || `radio-${value.toLowerCase()}`;
-    return (React.createElement("div", { className: Styles['input-radio-wrap'] },
+    return (React.createElement("div", { className: cn('input-radio-wrap', Styles['input-radio-wrap']) },
         React.createElement("input", Object.assign({ checked: checked, defaultChecked: defaultChecked, disabled: disabled, id: id, name: name, onChange: onChange, type: "radio", value: value }, attributes)),
-        React.createElement("label", { className: Styles['input-radio-label'], htmlFor: id }, label)));
+        React.createElement("label", { className: cn('input-radio-label', Styles['input-radio-label']), htmlFor: id }, label)));
 };
 const propsChecked = (props) => props.checked;
 export class StatefulRadio extends React.Component {
