@@ -19,6 +19,7 @@ export const FragmentLoader: React.SFC<FragmentLoaderProps> = ({
         className={cn(
           'fragment-square',
           Styles['fragment-square'],
+          'left',
           Styles.left
         )}
         width="10"
@@ -28,6 +29,7 @@ export const FragmentLoader: React.SFC<FragmentLoaderProps> = ({
         className={cn(
           'fragment-square',
           Styles['fragment-square'],
+          'middle',
           Styles.middle
         )}
         width="10"
@@ -37,6 +39,7 @@ export const FragmentLoader: React.SFC<FragmentLoaderProps> = ({
         className={cn(
           'fragment-square',
           Styles['fragment-square'],
+          'right',
           Styles.right
         )}
         width="10"

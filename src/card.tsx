@@ -46,7 +46,7 @@ export const Card: React.SFC<CardProps> = ({
 }) => {
   return (
     <div
-      className={cn(Styles.card, className, {
+      className={cn('card', Styles.card, className, {
         [Styles['is-centered']]: centered,
         'is-centered': centered,
         [Styles['is-inline']]: inline,

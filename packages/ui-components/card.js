@@ -14,7 +14,7 @@ import Icon from './icon';
 import Styles from './styles/card.module.scss';
 export const Card = (_a) => {
     var { badge, body, centered, children, icon, iconSize, inline, thin, title, className, selected, module = false } = _a, attributes = __rest(_a, ["badge", "body", "centered", "children", "icon", "iconSize", "inline", "thin", "title", "className", "selected", "module"]);
-    return (React.createElement("div", Object.assign({ className: cn(Styles.card, className, {
+    return (React.createElement("div", Object.assign({ className: cn('card', Styles.card, className, {
             [Styles['is-centered']]: centered,
             'is-centered': centered,
             [Styles['is-inline']]: inline,

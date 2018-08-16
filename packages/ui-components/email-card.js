@@ -20,7 +20,7 @@ const EmailCardSendTime = (_a) => {
             [Styles['has-value']]: !!value,
             'has-value': !!value,
         }, className) }, attributes),
-        React.createElement(Buttonized, { type: "secondary", className: Styles.btn }, renderSendTimeLink && renderSendTimeLink(value)),
+        React.createElement(Buttonized, { type: "secondary", className: cn('btn', Styles.btn) }, renderSendTimeLink && renderSendTimeLink(value)),
         alert));
 };
 const EmailCardDetails = (_a) => {
@@ -28,7 +28,7 @@ const EmailCardDetails = (_a) => {
     const rows = details &&
         details.map(detail => {
             return (React.createElement("tr", { key: detail.label },
-                React.createElement("td", { className: Styles.label }, detail.label),
+                React.createElement("td", { className: cn('label', Styles.label) }, detail.label),
                 React.createElement("td", null, (detail.renderEditDetailLink &&
                     detail.renderEditDetailLink(detail.value)) ||
                     detail.value)));

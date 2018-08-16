@@ -26,7 +26,7 @@ export const EmailCardStat: React.SFC<{
         ? statistic.amount
         : NO_STATS_CHAR}
     </p>
-    <p className={Styles.label}>{statistic.label}</p>
+    <p className={cn('label', Styles.label)}>{statistic.label}</p>
   </div>
 );
 

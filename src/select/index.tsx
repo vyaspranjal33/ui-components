@@ -212,7 +212,9 @@ const Select: React.SFC<any> = props => {
       {props.info && (
         <span
           className={cn('input-info', Styles['input-info'], {
+            danger: props.error,
             [Styles.danger]: props.error,
+            isDisabled: props.disabled,
             [Styles.isDisabled]: props.disabled,
           })}
         >
@@ -250,7 +252,9 @@ const Createable: React.SFC<any> = props => {
       {props.info && (
         <span
           className={cn('input-info', Styles['input-info'], {
+            danger: props.error,
             [Styles.danger]: props.error,
+            isDisabled: props.disabled,
             [Styles.isDisabled]: props.disabled,
           })}
         >

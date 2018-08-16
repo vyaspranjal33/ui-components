@@ -14631,14 +14631,14 @@ exports[`Storyshots Template Card Blank Card 1`] = `
             fill="#FFF"
             height="158.231"
             stroke="#F4F6F7"
-            stroke-width="1.769"
+            strokeWidth="1.769"
             width="158.231"
             x=".885"
             y=".885"
           />
           <g
             fill="#F4F6F7"
-            fill-rule="nonzero"
+            fillRule="nonzero"
             transform="translate(14 128)"
           >
             <polygon
@@ -14675,8 +14675,8 @@ exports[`Storyshots Template Card Blank Card 1`] = `
             />
             <g
               stroke="#F4F6F7"
-              stroke-linejoin="round"
-              stroke-width="1.769"
+              strokeLinejoin="round"
+              strokeWidth="1.769"
               transform="translate(62 18)"
             >
               <polygon

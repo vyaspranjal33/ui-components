@@ -36,7 +36,7 @@ const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
       )}
       {...attributes}
     >
-      <Buttonized type="secondary" className={Styles.btn}>
+      <Buttonized type="secondary" className={cn('btn', Styles.btn)}>
         {renderSendTimeLink && renderSendTimeLink(value)}
       </Buttonized>
       {alert}
@@ -59,7 +59,7 @@ const EmailCardDetails: React.SFC<{
     details.map(detail => {
       return (
         <tr key={detail.label}>
-          <td className={Styles.label}>{detail.label}</td>
+          <td className={cn('label', Styles.label)}>{detail.label}</td>
           <td>
             {(detail.renderEditDetailLink &&
               detail.renderEditDetailLink(detail.value)) ||

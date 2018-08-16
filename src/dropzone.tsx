@@ -41,7 +41,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
 }) => {
   return (
     <section
-      className={cn(Styles.dropzone, className, {
+      className={cn('dropzone', Styles.dropzone, className, {
         [Styles['has-inline-alert']]: !!alert,
         'has-inline-alert': !!alert,
         [Styles['is-active']]: active,

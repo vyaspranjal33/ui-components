@@ -15,9 +15,9 @@ const BlankTemplateImage = (
         y=".885"
         fill="#FFF"
         stroke="#F4F6F7"
-        stroke-width="1.769"
+        strokeWidth="1.769"
       />
-      <g fill="#F4F6F7" fill-rule="nonzero" transform="translate(14 128)">
+      <g fill="#F4F6F7" fillRule="nonzero" transform="translate(14 128)">
         <polygon points="0 2 0 0 132 0 132 2" />
         <polygon points="0 12 0 10 132 10 132 12" />
         <polygon points="0 21 0 19 132 19 132 21" />
@@ -28,8 +28,8 @@ const BlankTemplateImage = (
         <rect width="160" height="2" y="62" fill="#F4F6F7" />
         <g
           stroke="#F4F6F7"
-          stroke-linejoin="round"
-          stroke-width="1.769"
+          strokeLinejoin="round"
+          strokeWidth="1.769"
           transform="translate(62 18)"
         >
           <polygon points="26.6 7 15.4 23.5 8.4 15.25 0 29 35 29" />
