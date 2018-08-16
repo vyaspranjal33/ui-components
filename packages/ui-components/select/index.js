@@ -138,9 +138,9 @@ const Select = props => {
         props.label && (React.createElement("label", { className: cn('input-select-label', Styles['input-select-label']) }, props.label)),
         React.createElement(ReactSelect, Object.assign({}, props, { styles: Object.assign({}, SelectStyles, props.styles), isDisabled: props.disabled })),
         props.info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
-                'danger': props.error,
+                danger: props.error,
                 [Styles.danger]: props.error,
-                'isDisabled': props.disabled,
+                isDisabled: props.disabled,
                 [Styles.isDisabled]: props.disabled,
             }) }, props.info))));
 };
@@ -156,9 +156,9 @@ const Createable = props => {
         props.label && (React.createElement("label", { className: cn('input-select-label', Styles['input-select-label']) }, props.label)),
         React.createElement(ReactCreateable, Object.assign({}, props, { styles: Object.assign({}, SelectStyles, props.styles), isDisabled: props.disabled })),
         props.info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
-                'danger': props.error,
+                danger: props.error,
                 [Styles.danger]: props.error,
-                'isDisabled': props.disabled,
+                isDisabled: props.disabled,
                 [Styles.isDisabled]: props.disabled,
             }) }, props.info))));
 };
