@@ -19,7 +19,7 @@ const iconFor = (type) => {
 };
 export const Alert = (_a) => {
     var { children, dismissable, icon, inline, onClick: handleClick, type, hidden, className } = _a, attributes = __rest(_a, ["children", "dismissable", "icon", "inline", "onClick", "type", "hidden", "className"]);
-    return (React.createElement("div", Object.assign({ className: cn('alert', Styles.alert, Styles[`alert-${type}`], {
+    return (React.createElement("div", Object.assign({ className: cn('alert', Styles.alert, `alert-${type}`, Styles[`alert-${type}`], {
             [Styles['alert-inline']]: inline,
             'alert-inline': inline,
         }), role: "alert" }, attributes),
