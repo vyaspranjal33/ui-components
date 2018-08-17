@@ -1,6 +1,8 @@
 import React, { CSSProperties } from 'react';
 import Styles from './styles/text-input.module.scss';
+import { InputIcons } from './types/input-icons';
 import { InputType } from './types/inputs';
+import { Units } from './types/units';
 import { Omit } from './types/utils';
 import cn from './utilities/classnames';
 const convertInputValue = (value: string, inputType: InputType) => {
@@ -19,6 +21,7 @@ export interface TextInputProps {
   value?: string | number;
   name?: string;
   fullWidth?: boolean;
+  icon?: InputIcons;
   isValid?: boolean;
   isRequired?: boolean;
   isDisabled?: boolean;
@@ -28,6 +31,7 @@ export interface TextInputProps {
   info?: string;
   onBlur?: (event: FocusEvent, value: string | number) => void;
   style?: CSSProperties;
+  units?: Units;
 }
 /**
  * Inorder to allow for ...attributes we need to use
@@ -99,6 +103,7 @@ export class TextInput extends React.Component<
       value,
       name,
       fullWidth,
+      icon,
       isValid,
       isRequired,
       isDisabled,
@@ -108,10 +113,15 @@ export class TextInput extends React.Component<
       info,
       onBlur,
       style,
+      units,
       ...attributes
     } = this.props;
 
     const classes = cn('input-text-wrap', Styles['input-text-wrap'], {
+      [Styles[`has-space-${icon}`]]: this.props.icon,
+      [`has-space-${icon}`]: this.props.icon,
+      [Styles['has-units']]: this.props.units,
+      'has-units': this.props.units,
       [Styles['has-value']]: !!value || value === 0,
       'has-value': !!value || value === 0,
       [Styles['is-disabled']]: this.props.isDisabled,
@@ -129,9 +139,10 @@ export class TextInput extends React.Component<
     });
 
     const infoId = info && `${id}-info`;
+    const dataUnits = units && { 'data-units': units };
 
     return (
-      <div className={classes} style={this.inputStyle}>
+      <div className={classes} style={this.inputStyle} {...dataUnits}>
         <label
           className={cn('input-text-label', Styles['input-text-label'])}
           htmlFor={this.props.id}

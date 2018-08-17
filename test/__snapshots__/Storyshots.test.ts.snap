@@ -15367,6 +15367,38 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
 </div>
 `;
 
+exports[`Storyshots Text Input Text Input With Icon & Units (px) 1`] = `
+<div
+  className="input-text-wrap has-space-left has-units"
+  data-units="px"
+  style={Object {}}
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    
+  </label>
+  <input
+    aria-describedby="test-input-simple-info"
+    id="test-input-simple"
+    name={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="number"
+    value=""
+  />
+  <span
+    className="input-info"
+    id="test-input-simple-info"
+  >
+    This input always returns a number, not a string.
+  </span>
+  
+</div>
+`;
+
 exports[`Storyshots Text Input Text Input With Info 1`] = `
 <div
   className="input-text-wrap"
@@ -15408,6 +15440,70 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
     htmlFor="test-input-simple"
   >
     A Number
+  </label>
+  <input
+    aria-describedby="test-input-simple-info"
+    id="test-input-simple"
+    name={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="number"
+    value=""
+  />
+  <span
+    className="input-info"
+    id="test-input-simple-info"
+  >
+    This input always returns a number, not a string.
+  </span>
+  
+</div>
+`;
+
+exports[`Storyshots Text Input Text Input With Units (%) 1`] = `
+<div
+  className="input-text-wrap has-units"
+  data-units="%"
+  style={Object {}}
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    
+  </label>
+  <input
+    aria-describedby="test-input-simple-info"
+    id="test-input-simple"
+    name={undefined}
+    onBlur={[Function]}
+    onChange={[Function]}
+    onFocus={[Function]}
+    type="number"
+    value=""
+  />
+  <span
+    className="input-info"
+    id="test-input-simple-info"
+  >
+    This input always returns a number, not a string.
+  </span>
+  
+</div>
+`;
+
+exports[`Storyshots Text Input Text Input With Units (px) 1`] = `
+<div
+  className="input-text-wrap has-units"
+  data-units="px"
+  style={Object {}}
+>
+  <label
+    className="input-text-label"
+    htmlFor="test-input-simple"
+  >
+    
   </label>
   <input
     aria-describedby="test-input-simple-info"
