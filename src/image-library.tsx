@@ -16,7 +16,7 @@ export class ImageLibrary extends Component<ImageLibraryProps> {
 
     return (
       <ImageUpload
-        autoClearOnDrop
+        clearOnDrop
         alert={uploadAlert}
         onFileSelect={this.onFileSelect}
         onInvalidFile={this.onInvalidFile}

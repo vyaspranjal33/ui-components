@@ -1,3 +1,4 @@
+import every from 'lodash/every';
 import includes from 'lodash/includes';
 import slice from 'lodash/slice';
 import some from 'lodash/some';
@@ -181,16 +182,21 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
   };
 
   public fileIsValid = (files: DataTransferItemList | FileList) => {
-    const { supportedType, validateFile } = this.props;
-    const isSupported = some(files, (file: File) => {
-      return includes(supportedType, file.type);
-    });
+    const validations = [this.fileTypeIsSupported];
+    const { validateFile } = this.props;
 
     if (validateFile) {
-      return isSupported && validateFile(files);
+      validations.push(validateFile);
     }
 
-    return isSupported;
+    return every(validations, validation => validation(files));
+  };
+
+  public fileTypeIsSupported = (files: DataTransferItemList | FileList) => {
+    const { supportedType } = this.props;
+    return some(files, (file: File) => {
+      return includes(supportedType, file.type);
+    });
   };
 
   public render() {

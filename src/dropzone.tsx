@@ -1,5 +1,5 @@
+import { FlexWrapProperty } from 'csstype';
 import React from 'react';
-import { FlexWrapProperty } from '../node_modules/csstype';
 import Alert from './alert';
 import { AlertProps } from './alert';
 import Styles from './styles/dropzone.module.scss';
@@ -25,6 +25,17 @@ const dropzoneStyle = {
   flexWrap: 'wrap' as FlexWrapProperty,
   fontSize: '14px',
   justifyContent: 'center',
+};
+
+// If we show an alert, the dropzone children needs a special css rule to display properly
+const dropzoneChildrenStyle = (
+  style: React.CSSProperties,
+  alert?: React.ReactElement<AlertProps>
+) => {
+  if (!!alert) {
+    return { ...style, alignSelf: 'flex-end' };
+  }
+  return style;
 };
 
 export const Dropzone: React.SFC<DropzoneProps> = ({
@@ -63,7 +74,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
       onDragEnd={onDragEnd}
       onDrop={onDrop}
     >
-      <div style={!!alert ? { alignSelf: 'flex-end' } : {}}>{children}</div>
+      <div style={dropzoneChildrenStyle({}, alert)}>{children}</div>
       {alert &&
         React.cloneElement(alert, {
           ...alert.props,

@@ -6,7 +6,7 @@ import FileUpload, { DroppedFile, FileSelect } from './file-upload';
 
 export interface ImageUploadProps {
   alert?: React.ReactElement<AlertProps>;
-  autoClearOnDrop?: boolean; // clears file out on drop (image library needs this)
+  clearOnDrop?: boolean; // clears file out on drop (image library needs this)
   maximumImageBytes: number;
   onFileSelect: (files: FileList) => void;
   onInvalidFile?: (files: FileList) => void;
@@ -17,7 +17,7 @@ class ImageUpload extends PureComponent<ImageUploadProps> {
   public render() {
     const {
       alert,
-      autoClearOnDrop,
+      clearOnDrop,
       onFileSelect,
       onInvalidFile,
       onRemove,
@@ -42,7 +42,7 @@ class ImageUpload extends PureComponent<ImageUploadProps> {
             invalid={invalid}
             alert={alert}
           >
-            {file && !autoClearOnDrop ? (
+            {file && !clearOnDrop ? (
               <DroppedFile file={file} onRemove={handleRemove} />
             ) : (
               <FileSelect icon="image">
@@ -67,7 +67,7 @@ class ImageUpload extends PureComponent<ImageUploadProps> {
     }
 
     const file = files[0];
-    const isDataTransferItem = file.constructor === DataTransferItem;
+    const isDataTransferItem = file instanceof DataTransferItem;
 
     // can't validate size of data transfer item, .getAsFile() returns null
     if (isDataTransferItem) {
