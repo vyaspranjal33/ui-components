@@ -10,7 +10,7 @@ interface ImageLibraryProps {
 }
 
 // add to this when each subcomponent is created
-class ImageLibrary extends Component<ImageLibraryProps> {
+export class ImageLibrary extends Component<ImageLibraryProps> {
   public render() {
     const { maximumImageBytes, uploadAlert } = this.props;
 
