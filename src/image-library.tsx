@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import { AlertProps } from './alert';
 import ImageUpload from './image-upload';
 
-interface ImageLibraryProps {
+export interface ImageLibraryProps {
   maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
   onUpload: (promise: Promise<File | string>) => void;
   uploadAlert?: React.ReactElement<AlertProps>;
