@@ -43,8 +43,12 @@ export class TextInput extends React.Component {
         }
     }
     render() {
-        const _a = this.props, { children, type, id, onChange, value, name, fullWidth, isValid, isRequired, isDisabled, isLarge, isSearch, label, info, onBlur, style } = _a, attributes = __rest(_a, ["children", "type", "id", "onChange", "value", "name", "fullWidth", "isValid", "isRequired", "isDisabled", "isLarge", "isSearch", "label", "info", "onBlur", "style"]);
+        const _a = this.props, { children, type, id, onChange, value, name, fullWidth, icon, isValid, isRequired, isDisabled, isLarge, isSearch, label, info, onBlur, style, units } = _a, attributes = __rest(_a, ["children", "type", "id", "onChange", "value", "name", "fullWidth", "icon", "isValid", "isRequired", "isDisabled", "isLarge", "isSearch", "label", "info", "onBlur", "style", "units"]);
         const classes = cn('input-text-wrap', Styles['input-text-wrap'], {
+            [Styles[`has-space-${icon}`]]: this.props.icon,
+            [`has-space-${icon}`]: this.props.icon,
+            [Styles['has-units']]: this.props.units,
+            'has-units': this.props.units,
             [Styles['has-value']]: !!value || value === 0,
             'has-value': !!value || value === 0,
             [Styles['is-disabled']]: this.props.isDisabled,
@@ -61,7 +65,8 @@ export class TextInput extends React.Component {
             'is-search': this.props.isSearch,
         });
         const infoId = info && `${id}-info`;
-        return (React.createElement("div", { className: classes, style: this.inputStyle },
+        const dataUnits = units && { 'data-units': units };
+        return (React.createElement("div", Object.assign({ className: classes, style: this.inputStyle }, dataUnits),
             React.createElement("label", { className: cn('input-text-label', Styles['input-text-label']), htmlFor: this.props.id }, label),
             React.createElement("input", Object.assign({ id: id, value: value, name: name, type: type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }, attributes)),
             info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {

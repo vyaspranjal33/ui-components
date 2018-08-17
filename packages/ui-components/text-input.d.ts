@@ -1,6 +1,8 @@
 /// <reference types="react" />
 import React, { CSSProperties } from 'react';
+import { InputIcons } from './types/input-icons';
 import { InputType } from './types/inputs';
+import { Units } from './types/units';
 import { Omit } from './types/utils';
 export interface TextInputProps {
     children?: React.ReactNode;
@@ -10,6 +12,7 @@ export interface TextInputProps {
     value?: string | number;
     name?: string;
     fullWidth?: boolean;
+    icon?: InputIcons;
     isValid?: boolean;
     isRequired?: boolean;
     isDisabled?: boolean;
@@ -19,6 +22,7 @@ export interface TextInputProps {
     info?: string;
     onBlur?: (event: FocusEvent, value: string | number) => void;
     style?: CSSProperties;
+    units?: Units;
 }
 /**
  * Inorder to allow for ...attributes we need to use
