@@ -2,6 +2,7 @@ import React, { CSSProperties } from 'react';
 import Styles from './styles/text-input.module.scss';
 import { InputIcons } from './types/input-icons';
 import { InputType } from './types/inputs';
+import { Units } from './types/units';
 import { Omit } from './types/utils';
 import cn from './utilities/classnames';
 const convertInputValue = (value: string, inputType: InputType) => {
@@ -30,7 +31,7 @@ export interface TextInputProps {
   info?: string;
   onBlur?: (event: FocusEvent, value: string | number) => void;
   style?: CSSProperties;
-  units?: string;
+  units?: Units;
 }
 /**
  * Inorder to allow for ...attributes we need to use
