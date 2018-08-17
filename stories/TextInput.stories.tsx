@@ -87,6 +87,40 @@ stories.add('Text Input With Numbers', () => (
   />
 ));
 
+stories.add('Text Input With Units (px)', () => (
+  <StatefulTextInput
+    type="number"
+    id="test-input-simple"
+    onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
+    info="This input always returns a number, not a string."
+    units="px"
+  />
+));
+
+stories.add('Text Input With Icon & Units (px)', () => (
+  <StatefulTextInput
+    type="number"
+    id="test-input-simple"
+    onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
+    info="This input always returns a number, not a string."
+    units="px"
+    icon="left"
+  />
+));
+
+stories.add('Text Input With Units (%)', () => (
+  <StatefulTextInput
+    type="number"
+    id="test-input-simple"
+    onChange={action('Input Changed')}
+    onBlur={action('onBlur Called')}
+    info="This input always returns a number, not a string."
+    units="%"
+  />
+));
+
 stories.add('Stateless Text Input with a Value Passed as a Prop', () => (
   <TextInput
     type="text"
