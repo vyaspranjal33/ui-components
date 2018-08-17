@@ -5,7 +5,8 @@ import ImageUpload from './image-upload';
 
 export interface ImageLibraryProps {
   maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
-  onUpload: (promise: Promise<File | string>) => void;
+  onUpload: (file: File) => void;
+  onUploadFailure?: (msg: string) => void;
   uploadAlert?: React.ReactElement<AlertProps>;
 }
 
@@ -27,12 +28,14 @@ export class ImageLibrary extends Component<ImageLibraryProps> {
 
   private onFileSelect = (files: FileList) => {
     const { onUpload } = this.props;
-    onUpload(Promise.resolve(files[0]));
+    onUpload(files[0]);
   };
 
   private onInvalidFile = (files: FileList) => {
-    const { onUpload } = this.props;
-    onUpload(Promise.reject(ERROR_CODES.FILE_SIZE));
+    const { onUploadFailure } = this.props;
+    if (onUploadFailure) {
+      onUploadFailure(ERROR_CODES.FILE_SIZE);
+    }
   };
 }
 
