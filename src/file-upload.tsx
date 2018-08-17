@@ -17,6 +17,7 @@ export interface FileUploadProps {
   onInvalidFile?: (files: FileList) => void;
   render: FileUploadRenderCallback;
   supportedType: string;
+  validateFile?: (files: DataTransferItemList | FileList) => boolean;
 }
 
 export interface FileUploadRenderCallbackArguments {
@@ -129,7 +130,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     event.preventDefault();
 
     const files = getDraggedFiles(event);
-    const isSupported = this.fileTypeIsSupported(files);
+    const isSupported = this.fileIsValid(files);
 
     this.setState({ hovered: isSupported, invalid: !isSupported });
     this.props.onDragOver(event, files);
@@ -179,11 +180,16 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     this.updateCurrentFile(files, event);
   };
 
-  public fileTypeIsSupported = (files: DataTransferItemList | FileList) => {
-    const { supportedType } = this.props;
+  public fileIsValid = (files: DataTransferItemList | FileList) => {
+    const { supportedType, validateFile } = this.props;
     const isSupported = some(files, (file: File) => {
       return includes(supportedType, file.type);
     });
+
+    if (validateFile) {
+      return isSupported && validateFile(files);
+    }
+
     return isSupported;
   };
 
@@ -223,7 +229,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
   }
 
   private updateCurrentFile = (files: FileList, event: any) => {
-    if (!this.fileTypeIsSupported(files)) {
+    if (!this.fileIsValid(files)) {
       this.props.onInvalidFile(files);
       return;
     }

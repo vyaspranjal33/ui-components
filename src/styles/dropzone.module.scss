@@ -12,6 +12,11 @@
     background-color: $dropzone-bg-active;
     border-color: $dropzone-border-active;
   }
+  &.is-invalid {
+    color: $dropzone-invalid-color;
+    background-color: $dropzone-invalid-bg;
+    border-color: $dropzone-invalid-border;
+  }
 
   &.is-hovered,
   &.is-editor {

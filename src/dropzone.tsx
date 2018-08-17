@@ -1,4 +1,5 @@
 import React from 'react';
+import { FlexWrapProperty } from '../node_modules/csstype';
 import Alert from './alert';
 import { AlertProps } from './alert';
 import Styles from './styles/dropzone.module.scss';
@@ -21,6 +22,7 @@ export interface DropzoneProps {
 const dropzoneStyle = {
   alignItems: 'center',
   display: 'flex',
+  flexWrap: 'wrap' as FlexWrapProperty,
   fontSize: '14px',
   justifyContent: 'center',
 };
@@ -61,7 +63,7 @@ export const Dropzone: React.SFC<DropzoneProps> = ({
       onDragEnd={onDragEnd}
       onDrop={onDrop}
     >
-      <div>{children}</div>
+      <div style={!!alert ? { alignSelf: 'flex-end' } : {}}>{children}</div>
       {alert &&
         React.cloneElement(alert, {
           ...alert.props,
