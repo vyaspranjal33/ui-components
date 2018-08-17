@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
 
 import { AlertProps } from './alert';
-import ImageUpload from './image-upload';
 import {
   ImageLibraryThumbnailList,
   SGLibraryImage,
 } from './image-library-thumbnail-list';
+import ImageUpload from './image-upload';
 
 export interface ImageLibraryProps {
   maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18

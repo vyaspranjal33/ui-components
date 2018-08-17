@@ -8,7 +8,7 @@ import ImageLibrary from '../src/image-library';
 const stories = storiesOf('Image Library', module);
 
 let imageIdCounter = 0;
-const makeLibraryImage = (width: number, height: number) => ({
+const makeLibraryImage = (width: number, height: number, uploadPercent?: number) => ({
   id: 'abcd-ef01-' + imageIdCounter++,
   name: 'name_abcd-ef01-' + imageIdCounter,
   created: 100000,
@@ -16,11 +16,12 @@ const makeLibraryImage = (width: number, height: number) => ({
   thumbnailUrl: `https://via.placeholder.com/${width}x${height}`,
   width,
   height,
+  uploadPercent,
 });
 
 const images = [
-  makeLibraryImage(100, 300),
-  makeLibraryImage(300, 300),
+  makeLibraryImage(100, 300, 33.5),
+  makeLibraryImage(300, 300, 95),
   makeLibraryImage(300, 100),
   makeLibraryImage(25, 25),
   makeLibraryImage(50, 400),
