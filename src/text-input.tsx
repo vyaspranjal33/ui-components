@@ -6,7 +6,7 @@ import { Units } from './types/units';
 import { Omit } from './types/utils';
 import cn from './utilities/classnames';
 const convertInputValue = (value: string, inputType: InputType) => {
-  return inputType === 'number' ? parseInt(value, 10) : value;
+  return inputType === 'number' ? Number(value) : value;
 };
 
 const onInputFocus = function() {
@@ -31,6 +31,7 @@ export interface TextInputProps {
   info?: string;
   onBlur?: (event: FocusEvent, value: string | number) => void;
   style?: CSSProperties;
+  step?: number;
   units?: Units;
 }
 /**
@@ -192,6 +193,7 @@ export class StatefulTextInput extends React.Component<TextInputProps> {
   }
 
   public onValueChange(event: any) {
+    const significantDigits = this.props.units === '%' ? 2 : 0;
     const value = convertInputValue(event.target.value, this.props.type);
 
     this.setState({ value });
