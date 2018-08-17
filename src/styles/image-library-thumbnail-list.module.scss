@@ -1,0 +1,14 @@
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  overflow-y: auto;
+  height: calc(100% - 25px);
+
+  &::after {
+    content: '';
+    flex: auto;
+  }
+}

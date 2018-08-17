@@ -2,20 +2,26 @@ import React, { Component } from 'react';
 
 import { AlertProps } from './alert';
 import ImageUpload from './image-upload';
+import {
+  ImageLibraryThumbnailList,
+  SGLibraryImage,
+} from './image-library-thumbnail-list';
 
 export interface ImageLibraryProps {
   maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
   onUpload: (file: File) => void;
   onUploadFailure?: (msg: string) => void;
   uploadAlert?: React.ReactElement<AlertProps>;
+  images: Array<SGLibraryImage>;
 }
 
 // add to this when each subcomponent is created
 export class ImageLibrary extends Component<ImageLibraryProps> {
   public render() {
-    const { maximumImageBytes, uploadAlert } = this.props;
+    const { images, maximumImageBytes, uploadAlert } = this.props;
 
     return (
+      <article>
       <ImageUpload
         clearOnDrop
         alert={uploadAlert}
@@ -23,6 +29,10 @@ export class ImageLibrary extends Component<ImageLibraryProps> {
         onInvalidFile={this.onInvalidFile}
         maximumImageBytes={maximumImageBytes}
       />
+      <ImageLibraryThumbnailList
+        images={images}
+      />
+      </article>
     );
   }
 
