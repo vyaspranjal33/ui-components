@@ -22,13 +22,14 @@
 
   &.is-uploading {
     cursor: default;
+    pointer-events: none;
     img {
       filter: grayscale(100%);
       opacity: 0.6;
     }
   }
 
-  &:hover {
+  &:not(.is-uploading):hover {
     outline: 1px solid $sg-blue;
   }
 
@@ -42,11 +43,6 @@
     height: auto;
     margin: auto;
     transition: opacity 0.5s, filter 0.5s;
-
-    &.is-uploading {
-      // filter: grayscale(100%);
-      // opacity: 0.6;
-    }
   }
 
   .upload-progress-container {

@@ -5,6 +5,7 @@ import Styles from './styles/image-library-thumbnail-list.module.scss';
 
 export interface ImageLibraryThumbnailListProps {
   images: Array<SGLibraryImage>;
+  uploadingImages: Array<UploadingImage>;
 }
 
 export interface SGLibraryImage {
@@ -15,21 +16,38 @@ export interface SGLibraryImage {
   thumbnailUrl: string;
   width: number; // px
   height: number; // px
-  uploadPercent?: number;
+}
+
+// TODO need a new type for images currently uploading (no id yet, etc)
+// TODO fig some base64 encoded img to add to stories
+export interface UploadingImage {
+  name: string;
+  uploadPercent: number;
+  url: string;
 }
 
 // this has state of selected img by id
-export class ImageLibraryThumbnailList extends Component<ImageLibraryThumbnailListProps> {
-  public render () {
-    const { images } = this.props;
+export class ImageLibraryThumbnailList extends Component<
+  ImageLibraryThumbnailListProps
+> {
+  public render() {
+    const { images, uploadingImages } = this.props;
 
     return (
       <section className={Styles.list}>
-        {images.map(({ id, thumbnailUrl, uploadPercent }) => (
+        {uploadingImages.map(({ name, uploadPercent, url }) => (
+          <ImageLibraryThumbnail
+            key={name}
+            url={url}
+            uploadPercent={uploadPercent}
+            isSelected={false}
+          />
+        ))}
+
+        {images.map(({ id, thumbnailUrl }) => (
           <ImageLibraryThumbnail
             key={id}
             url={thumbnailUrl}
-            uploadPercent={uploadPercent}
             isSelected={false}
             onClick={this.onThumbnailClick}
           />
@@ -38,6 +56,7 @@ export class ImageLibraryThumbnailList extends Component<ImageLibraryThumbnailLi
     );
   }
   private onThumbnailClick = () => {
+    // todo select img
   };
 }
 
@@ -45,37 +64,31 @@ interface ImageLibraryThumbnailProps {
   url: string;
   isSelected: boolean;
   uploadPercent?: number;
-  onClick: () => void;
+  onClick?: () => void;
 }
 
 class ImageLibraryThumbnail extends Component<ImageLibraryThumbnailProps> {
-  public render () {
+  public render() {
     const { isSelected, onClick, uploadPercent, url } = this.props;
-    const isUploading = uploadPercent !== undefined;
+    const isUploading = uploadPercent !== undefined && uploadPercent < 99;
 
     return (
       <article
-        className={cn(
-          Styles['thumbnail-container'], {
-            [Styles['is-uploading']]: isUploading,
-            [Styles['is-selected']]: isSelected,
-          }
-        )}
+        className={cn(Styles['thumbnail-container'], {
+          [Styles['is-uploading']]: isUploading,
+          [Styles['is-selected']]: isSelected,
+        })}
         onClick={onClick}
       >
-        {
-          isUploading && (
-            <span className={Styles['upload-progress-container']}>
-              <div className={Styles['upload-progress']} style={{ width: uploadPercent }} />
-            </span>
-          )
-        }
-        <img
-          className={cn(
-            Styles.thumbnail,
-          )}
-          src={url}
-        />
+        {isUploading && (
+          <span className={Styles['upload-progress-container']}>
+            <div
+              className={Styles['upload-progress']}
+              style={{ width: `${uploadPercent}%` }}
+            />
+          </span>
+        )}
+        <img className={cn(Styles.thumbnail)} src={url} />
       </article>
     );
   }

@@ -4,6 +4,7 @@ import { AlertProps } from './alert';
 import {
   ImageLibraryThumbnailList,
   SGLibraryImage,
+  UploadingImage,
 } from './image-library-thumbnail-list';
 import ImageUpload from './image-upload';
 
@@ -13,25 +14,32 @@ export interface ImageLibraryProps {
   onUploadFailure?: (msg: string) => void;
   uploadAlert?: React.ReactElement<AlertProps>;
   images: Array<SGLibraryImage>;
+  uploadingImages: Array<UploadingImage>;
 }
 
 // add to this when each subcomponent is created
 export class ImageLibrary extends Component<ImageLibraryProps> {
   public render() {
-    const { images, maximumImageBytes, uploadAlert } = this.props;
+    const {
+      images,
+      uploadingImages,
+      maximumImageBytes,
+      uploadAlert,
+    } = this.props;
 
     return (
       <article>
-      <ImageUpload
-        clearOnDrop
-        alert={uploadAlert}
-        onFileSelect={this.onFileSelect}
-        onInvalidFile={this.onInvalidFile}
-        maximumImageBytes={maximumImageBytes}
-      />
-      <ImageLibraryThumbnailList
-        images={images}
-      />
+        <ImageUpload
+          clearOnDrop
+          alert={uploadAlert}
+          onFileSelect={this.onFileSelect}
+          onInvalidFile={this.onInvalidFile}
+          maximumImageBytes={maximumImageBytes}
+        />
+        <ImageLibraryThumbnailList
+          images={images}
+          uploadingImages={uploadingImages}
+        />
       </article>
     );
   }
