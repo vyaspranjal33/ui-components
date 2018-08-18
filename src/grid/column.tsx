@@ -1,5 +1,6 @@
 import React from 'react';
 import cn from '../utilities/classnames';
+import Styles from './grid.module.scss';
 
 export interface ColumnProps {
   children?: React.ReactNode;
@@ -7,18 +8,18 @@ export interface ColumnProps {
   offset?: number;
 }
 
-export const Column: React.SFC<ColumnProps> = ({
-  children,
-  width,
-  offset,
-}) => {
+export const Column: React.SFC<ColumnProps> = ({ children, width, offset }) => {
+  const colClass = width > 0 ? `col-${width}` : '';
+  const offsetClass = offset > 0 ? `col-offset-${offset}` : '';
 
   return (
     <div
-      className={cn(
-        (width > 0 ? 'col-' + width.toString() : ''),
-        (offset > 0 ? 'col-offset-' + offset.toString() : ''),
-      )}
+      className={cn({
+        [colClass]: width > 0,
+        [Styles[colClass]]: width > 0,
+        [offsetClass]: offset > 0,
+        [Styles[offsetClass]]: offset > 0,
+      })}
     >
       {children}
     </div>
