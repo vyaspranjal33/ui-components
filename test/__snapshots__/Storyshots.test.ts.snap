@@ -7985,7 +7985,6 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
       onClick={[Function]}
     >
       <img
-        className="thumbnail"
         src="https://via.placeholder.com/100x300"
       />
     </article>
@@ -7994,7 +7993,6 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
       onClick={[Function]}
     >
       <img
-        className="thumbnail"
         src="https://via.placeholder.com/300x300"
       />
     </article>
@@ -8003,7 +8001,6 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
       onClick={[Function]}
     >
       <img
-        className="thumbnail"
         src="https://via.placeholder.com/300x100"
       />
     </article>
@@ -8012,7 +8009,6 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
       onClick={[Function]}
     >
       <img
-        className="thumbnail"
         src="https://via.placeholder.com/25x25"
       />
     </article>
@@ -8021,7 +8017,6 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
       onClick={[Function]}
     >
       <img
-        className="thumbnail"
         src="https://via.placeholder.com/50x400"
       />
     </article>
@@ -8030,7 +8025,6 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
       onClick={[Function]}
     >
       <img
-        className="thumbnail"
         src="https://via.placeholder.com/400x50"
       />
     </article>

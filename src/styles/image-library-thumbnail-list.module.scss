@@ -17,7 +17,7 @@
   height: 150px;
   margin-bottom: 25px;
   position: relative;
-  border: 1px solid $slate-10;
+  outline: 1px solid $slate-10;
   cursor: pointer;
 
   &.is-uploading {

@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React, { Component, Fragment } from 'react';
 
 import Alert from '../src/alert';
-import ImageLibrary from '../src/image-library';
+import ImageLibrary, { SGLibraryImage } from '../src/image-library';
 
 const stories = storiesOf('Image Library', module);
 
@@ -28,35 +28,58 @@ const images = [
 ];
 
 const fileReader = new FileReader();
-class ExampleContainer extends Component<any, any> {
-  state: any = {
+
+interface ExampleContainerState {
+  images: Array<SGLibraryImage>;
+  uploadingImage?: SGLibraryImage;
+}
+
+// some stuff i did in here might be dubious but this was done mostly for me to
+// better understand the requirements of the ui-components designed
+class ExampleContainer extends Component<any, ExampleContainerState> {
+  public state: ExampleContainerState = {
+    images: [],
     uploadingImage: null,
   };
 
-  componentDidMount () {
+  public componentDidMount () {
     fileReader.onload = (e: any) => {
-      this.setState({
-        uploadingImage: { url: e.target.result, name: 'file.jpg', uploadPercent: 0 }
+      this.setState((prevState) => {
+        const { uploadingImage } = prevState;
+        return {
+          uploadingImage: { ...uploadingImage, thumbnailUrl: e.target.result }
+        };
       });
     };
   }
 
-  render () {
-    const { uploadingImage } = this.state;
+  public render () {
+    const images = this.getImages();
 
     return (
       <ImageLibrary
         maximumImageBytes={4 * (1 << 20) /* 4 MB */}
         onUpload={this.handleUpload}
         onUploadFailure={action('invalid upload')}
-        images={[]}
-        uploadingImages={uploadingImage ? [uploadingImage] : []}
         {...this.props}
+
+        images={images}
       />
     );
   }
 
-  handleUpload = (file: File) => {
+  private getImages = () => {
+    const { uploadingImage } = this.state;
+    const images = this.state.images.concat(this.props.images);
+
+    if (!uploadingImage || !uploadingImage.thumbnailUrl) {
+      return images;
+    }
+
+    return [uploadingImage].concat(images);
+  };
+
+  private handleUpload = (file: File) => {
     fileReader.readAsDataURL(file);
 
     const uploadIllusion = () => {
@@ -66,6 +89,8 @@ class ExampleContainer extends Component<any, any> {
 
         if (uploadPercent < 100) {
           setTimeout(uploadIllusion, 18);
+        } else {
+          this.handleUploadComplete();
         }
 
         return { uploadingImage: { ...uploadingImage, uploadPercent } };
@@ -73,6 +98,17 @@ class ExampleContainer extends Component<any, any> {
     };
 
     setTimeout(uploadIllusion, 18);
+    this.setState({ uploadingImage: { id: file.name, name: file.name, uploadPercent: 0 }});
+  };
+
+  private handleUploadComplete = () => {
+    this.setState((prevState) => {
+      const { images, uploadingImage } = prevState;
+      return {
+        images: [uploadingImage].concat(images),
+        uploadingImage: null,
+      };
+    });
   };
 }
 

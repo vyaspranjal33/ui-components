@@ -1,12 +1,19 @@
 import React, { Component } from 'react';
 
 import { AlertProps } from './alert';
-import {
-  ImageLibraryThumbnailList,
-  SGLibraryImage,
-  UploadingImage,
-} from './image-library-thumbnail-list';
+import { ImageLibraryThumbnailList } from './image-library-thumbnail-list';
 import ImageUpload from './image-upload';
+
+export interface SGLibraryImage {
+  id: string;
+  name: string;
+  created?: number; // milliseconds since the epoch
+  originalUrl?: string; // url of original image before any resize
+  thumbnailUrl?: string;
+  width?: number; // px
+  height?: number; // px
+  uploadPercent?: number;
+}
 
 export interface ImageLibraryProps {
   maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
@@ -14,10 +21,9 @@ export interface ImageLibraryProps {
   onUploadFailure?: (msg: string) => void;
   uploadAlert?: React.ReactElement<AlertProps>;
   images: Array<SGLibraryImage>;
-  uploadingImages: Array<UploadingImage>;
 }
 
-interface ImageLibraryState {
+export interface ImageLibraryState {
   selectedImageId?: string;
 }
 
@@ -31,12 +37,7 @@ export class ImageLibrary extends Component<
   };
 
   public render() {
-    const {
-      images,
-      uploadingImages,
-      maximumImageBytes,
-      uploadAlert,
-    } = this.props;
+    const { images, maximumImageBytes, uploadAlert } = this.props;
 
     return (
       <article>
@@ -51,7 +52,6 @@ export class ImageLibrary extends Component<
           images={images}
           onThumbnailClick={this.onThumbnailClick}
           selectedImageId={this.state.selectedImageId}
-          uploadingImages={uploadingImages}
         />
       </article>
     );
