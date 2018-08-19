@@ -26,9 +26,9 @@ export class ImageLibrary extends Component<
   ImageLibraryProps,
   ImageLibraryState
 > {
-  public state = {
+  public state: ImageLibraryState = {
     selectedImageId: null,
-  } as ImageLibraryState;
+  };
 
   public render() {
     const {
