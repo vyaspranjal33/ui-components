@@ -29,7 +29,7 @@
     }
   }
 
-  &:not(.is-uploading):hover {
+  &:not(.is-uploading):not(.is-selected):hover {
     outline: 1px solid $sg-blue;
   }
 

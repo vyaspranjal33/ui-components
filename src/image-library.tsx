@@ -17,8 +17,19 @@ export interface ImageLibraryProps {
   uploadingImages: Array<UploadingImage>;
 }
 
+interface ImageLibraryState {
+  selectedImageId?: string;
+}
+
 // add to this when each subcomponent is created
-export class ImageLibrary extends Component<ImageLibraryProps> {
+export class ImageLibrary extends Component<
+  ImageLibraryProps,
+  ImageLibraryState
+> {
+  public state = {
+    selectedImageId: null,
+  } as ImageLibraryState;
+
   public render() {
     const {
       images,
@@ -38,11 +49,17 @@ export class ImageLibrary extends Component<ImageLibraryProps> {
         />
         <ImageLibraryThumbnailList
           images={images}
+          onThumbnailClick={this.onThumbnailClick}
+          selectedImageId={this.state.selectedImageId}
           uploadingImages={uploadingImages}
         />
       </article>
     );
   }
+
+  private onThumbnailClick = (selectedImageId: string) => {
+    this.setState({ selectedImageId });
+  };
 
   private onFileSelect = (files: FileList) => {
     const { onUpload } = this.props;

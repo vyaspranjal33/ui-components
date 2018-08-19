@@ -5,6 +5,8 @@ import Styles from './styles/image-library-thumbnail-list.module.scss';
 
 export interface ImageLibraryThumbnailListProps {
   images: Array<SGLibraryImage>;
+  onThumbnailClick: (id: string) => void;
+  selectedImageId?: string;
   uploadingImages: Array<UploadingImage>;
 }
 
@@ -18,20 +20,22 @@ export interface SGLibraryImage {
   height: number; // px
 }
 
-// TODO need a new type for images currently uploading (no id yet, etc)
-// TODO fig some base64 encoded img to add to stories
 export interface UploadingImage {
   name: string;
   uploadPercent: number;
   url: string;
 }
 
-// this has state of selected img by id
 export class ImageLibraryThumbnailList extends Component<
   ImageLibraryThumbnailListProps
 > {
   public render() {
-    const { images, uploadingImages } = this.props;
+    const {
+      images,
+      onThumbnailClick,
+      selectedImageId,
+      uploadingImages,
+    } = this.props;
 
     return (
       <section className={Styles.list}>
@@ -48,16 +52,13 @@ export class ImageLibraryThumbnailList extends Component<
           <ImageLibraryThumbnail
             key={id}
             url={thumbnailUrl}
-            isSelected={false}
-            onClick={this.onThumbnailClick}
+            isSelected={selectedImageId === id}
+            onClick={() => onThumbnailClick(id)}
           />
         ))}
       </section>
     );
   }
-  private onThumbnailClick = () => {
-    // todo select img
-  };
 }
 
 interface ImageLibraryThumbnailProps {
