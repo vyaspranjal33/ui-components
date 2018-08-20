@@ -22,7 +22,6 @@ export const hasSpaceRight: string;
 export const hasSpaceBottom: string;
 export const hasSpaceLeft: string;
 export const isLarge: string;
-export const inputInfoTooltip: string;
 export const inputSearchResults: string;
 export const loading: string;
 export const isVisible: string;
