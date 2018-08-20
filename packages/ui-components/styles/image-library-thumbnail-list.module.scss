@@ -1,0 +1,61 @@
+@import './global/variables.scss';
+
+.list {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+  margin: 25px 0;
+  padding-top: 2px;
+  height: calc(100% - 25px);
+  position: relative;
+}
+
+.thumbnail-container {
+  display: flex;
+  width: 150px;
+  height: 150px;
+  margin-bottom: 25px;
+  position: relative;
+  outline: 1px solid $slate-10;
+  cursor: pointer;
+
+  &.is-uploading {
+    cursor: default;
+    pointer-events: none;
+    img {
+      filter: grayscale(100%);
+      opacity: 0.6;
+    }
+  }
+
+  &:not(.is-uploading):not(.is-selected):hover {
+    outline: 1px solid $sg-blue;
+  }
+
+  &.is-selected {
+    outline: 2px solid $sg-blue;
+  }
+
+  img {
+    max-width: 150px;
+    max-height: 150px;
+    height: auto;
+    margin: auto;
+    transition: opacity 0.5s, filter 0.5s;
+  }
+
+  .upload-progress-container {
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    overflow: hidden;
+    z-index: 1;
+
+    .upload-progress {
+      width: 0;
+      height: 100%;
+      background: $spruce;
+    }
+  }
+}

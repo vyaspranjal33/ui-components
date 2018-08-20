@@ -1,9 +1,16 @@
 import React, { Component } from 'react';
+import { ImageLibraryThumbnailList } from './image-library-thumbnail-list';
 import ImageUpload from './image-upload';
 // add to this when each subcomponent is created
 export class ImageLibrary extends Component {
     constructor() {
         super(...arguments);
+        this.state = {
+            selectedImageId: null,
+        };
+        this.onThumbnailClick = (selectedImageId) => {
+            this.setState({ selectedImageId });
+        };
         this.onFileSelect = (files) => {
             const { onUpload } = this.props;
             onUpload(files[0]);
@@ -16,8 +23,10 @@ export class ImageLibrary extends Component {
         };
     }
     render() {
-        const { maximumImageBytes, uploadAlert } = this.props;
-        return (React.createElement(ImageUpload, { clearOnDrop: true, alert: uploadAlert, onFileSelect: this.onFileSelect, onInvalidFile: this.onInvalidFile, maximumImageBytes: maximumImageBytes }));
+        const { images, maximumImageBytes, uploadAlert } = this.props;
+        return (React.createElement("article", null,
+            React.createElement(ImageUpload, { clearOnDrop: true, alert: uploadAlert, onFileSelect: this.onFileSelect, onInvalidFile: this.onInvalidFile, maximumImageBytes: maximumImageBytes }),
+            React.createElement(ImageLibraryThumbnailList, { images: images, onThumbnailClick: this.onThumbnailClick, selectedImageId: this.state.selectedImageId })));
     }
 }
 export const ERROR_CODES = {
