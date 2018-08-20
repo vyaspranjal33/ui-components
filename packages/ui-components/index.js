@@ -31,7 +31,7 @@ export { PageHeader, PageHeading } from './page-header';
 export { Radio, RadioGroup } from './radio';
 export { SideModal } from './side-modal';
 export { Slider } from './slider';
-export { SegmentTerm, SegmentWrapper } from './segment-term/';
+export { SegmentTerm, SegmentWrapper } from './segment-term';
 export { Select, Createable } from './select';
 export { SortableTable } from './table/sortable-table';
 export { Switch } from './switch';

@@ -100,6 +100,11 @@ $btn-secondary-color: $sg-blue;
 $btn-secondary-badge-bg: $sg-blue;
 $btn-secondary-badge-color: $white;
 
+$btn-tertiary-bg: $white;
+$btn-tertiary-color: $slate-80;
+$btn-tertiary-color-hover: $slate;
+$btn-tertiary-badge-bg: $slate-80;
+
 $btn-danger-bg: rgba($ron-burgundy, 0.8);
 $btn-danger-bg-hover: $ron-burgundy;
 $btn-danger-border: $ron-burgundy;
@@ -154,7 +159,7 @@ $dropzone-invalid-border: $ron-burgundy;
 $dropzone-invalid-color: $ron-burgundy;
 
 // filters
-$segment-term-max-width: 1279px;
+$segment-term-max-width: 768px;
 
 // icons
 $icon-airplane: '\e90b';
@@ -175,6 +180,7 @@ $icon-check-thin: '\e938';
 $icon-clean-ui: '\e916';
 $icon-click: '\e93b';
 $icon-clock: '\e90d';
+$icon-cloud-question: '\e93c';
 $icon-code: '\e919';
 $icon-columns: '\e923';
 $icon-contacts: '\e913';
@@ -194,6 +200,7 @@ $icon-ellipsis-vertical: '\e93a';
 $icon-export: '\e931';
 $icon-gear: '\e608';
 $icon-help: '\e932';
+$icon-help-error: '\e93d';
 $icon-image: '\e91e';
 $icon-images: '\e924';
 $icon-image-text: '\e922';
@@ -203,7 +210,14 @@ $icon-list: '\e92b';
 $icon-locked: '\e91d';
 $icon-mail: '\e61d';
 $icon-mail-search: '\e92d';
+$icon-mc-code: '\e942';
+$icon-mc-design: '\e629';
+$icon-mc-preview: '\e602';
+$icon-mc-return: '\e615';
+$icon-mc-test-data: '\e943';
 $icon-mobile-view: '\e61c';
+$icon-move-right: '\e940';
+$icon-move-left: '\e941';
 $icon-pencil: '\e624';
 $icon-people: '\e601';
 $icon-pie-chart: '\e606';
@@ -215,6 +229,7 @@ $icon-segment: '\e609';
 $icon-social: '\e925';
 $icon-sort-asc: '\e910';
 $icon-sort-desc: '\e90f';
+$icon-space: '\e944';
 $icon-spacer: '\e91f';
 $icon-status-caution: '\e92f';
 $icon-status-negative: '\e930';
@@ -226,6 +241,7 @@ $icon-text-only: '\e603';
 $icon-trash: '\e62b';
 $icon-unlocked: '\e91c';
 $icon-unsubscribe: '\e936';
+$icon-upload: '\e931';
 $icon-user-security: '\e90a';
 $icon-view: '\e600';
 $icon-warning: '\e909';
