@@ -1817,12 +1817,15 @@ exports[`Storyshots CSV Upload Basic CSV Upload 1`] = `
       Object {
         "alignItems": "center",
         "display": "flex",
+        "flexWrap": "wrap",
         "fontSize": "14px",
         "justifyContent": "center",
       }
     }
   >
-    <div>
+    <div
+      style={Object {}}
+    >
       <div
         className={undefined}
         style={
@@ -3530,12 +3533,15 @@ exports[`Storyshots Dropzone Dropzone (Active) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div />
+  <div
+    style={Object {}}
+  />
 </section>
 `;
 
@@ -3551,12 +3557,15 @@ exports[`Storyshots Dropzone Dropzone (Hovered) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div />
+  <div
+    style={Object {}}
+  />
 </section>
 `;
 
@@ -3572,12 +3581,15 @@ exports[`Storyshots Dropzone Dropzone (Invalid) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div />
+  <div
+    style={Object {}}
+  />
 </section>
 `;
 
@@ -3593,12 +3605,15 @@ exports[`Storyshots Dropzone Dropzone (Large) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div />
+  <div
+    style={Object {}}
+  />
 </section>
 `;
 
@@ -3614,12 +3629,19 @@ exports[`Storyshots Dropzone Dropzone (with Alert) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div />
+  <div
+    style={
+      Object {
+        "alignSelf": "flex-end",
+      }
+    }
+  />
   <div
     className="alert alert-warning alert-inline"
     role="alert"
@@ -3659,12 +3681,19 @@ exports[`Storyshots Dropzone Dropzone (with JSX Content and Alert) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div>
+  <div
+    style={
+      Object {
+        "alignSelf": "flex-end",
+      }
+    }
+  >
     <span>
       <a
         href="https://github.com/sendgrid/style-guide/issues/198"
@@ -3713,12 +3742,15 @@ exports[`Storyshots Dropzone Dropzone (with JSX Content) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div>
+  <div
+    style={Object {}}
+  >
     <span>
       Drag and drop your file or 
       <a
@@ -3744,12 +3776,19 @@ exports[`Storyshots Dropzone Dropzone (with String Content and Alert) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div>
+  <div
+    style={
+      Object {
+        "alignSelf": "flex-end",
+      }
+    }
+  >
     This currently doesn't look great and I am well aware of that.
   </div>
   <div
@@ -3791,12 +3830,15 @@ exports[`Storyshots Dropzone Dropzone (with String Content) 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div>
+  <div
+    style={Object {}}
+  >
     Drag and drop your file here.
   </div>
 </section>
@@ -3814,12 +3856,15 @@ exports[`Storyshots Dropzone Dropzone 1`] = `
     Object {
       "alignItems": "center",
       "display": "flex",
+      "flexWrap": "wrap",
       "fontSize": "14px",
       "justifyContent": "center",
     }
   }
 >
-  <div />
+  <div
+    style={Object {}}
+  />
 </section>
 `;
 
@@ -6835,12 +6880,15 @@ exports[`Storyshots File Upload Basic File Upload with JSX Content 1`] = `
       Object {
         "alignItems": "center",
         "display": "flex",
+        "flexWrap": "wrap",
         "fontSize": "14px",
         "justifyContent": "center",
       }
     }
   >
-    <div>
+    <div
+      style={Object {}}
+    >
       <div
         className={undefined}
         style={
@@ -7757,6 +7805,172 @@ exports[`Storyshots Grid Width 12 1`] = `
     </div>
   </div>
 </div>
+`;
+
+exports[`Storyshots Image Library with upload alert 1`] = `
+<section
+  onDragEnd={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <section
+    className="dropzone has-inline-alert"
+    onDragEnd={undefined}
+    onDragLeave={undefined}
+    onDragOver={undefined}
+    onDrop={undefined}
+    role="hidden"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexWrap": "wrap",
+        "fontSize": "14px",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <div
+      style={
+        Object {
+          "alignSelf": "flex-end",
+        }
+      }
+    >
+      <div
+        className={undefined}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+          }
+        }
+      >
+        <i
+          className="sg-icon sg-icon-image is-size-30"
+          onClick={undefined}
+          style={
+            Object {
+              "marginRight": "12px",
+            }
+          }
+        />
+        <span>
+          Drag and drop your images here, or
+           
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            choose images to upload
+          </a>
+          .
+        </span>
+      </div>
+    </div>
+    <div
+      className="alert alert-danger alert-inline"
+      role="alert"
+    >
+      <p>
+        <i
+          className="sg-icon sg-icon-warning"
+          onClick={undefined}
+          style={null}
+        />
+        The image you're attempting to upload exceeds our per-image size limit.
+        <i
+          className="sg-icon sg-icon-x"
+          onClick={undefined}
+          style={null}
+        />
+      </p>
+    </div>
+  </section>
+  <input
+    accept="image/gif,image/jpeg,image/png"
+    onChange={[Function]}
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="file"
+  />
+</section>
+`;
+
+exports[`Storyshots Image Library without upload alert 1`] = `
+<section
+  onDragEnd={[Function]}
+  onDragLeave={[Function]}
+  onDragOver={[Function]}
+  onDrop={[Function]}
+>
+  <section
+    className="dropzone"
+    onDragEnd={undefined}
+    onDragLeave={undefined}
+    onDragOver={undefined}
+    onDrop={undefined}
+    role="hidden"
+    style={
+      Object {
+        "alignItems": "center",
+        "display": "flex",
+        "flexWrap": "wrap",
+        "fontSize": "14px",
+        "justifyContent": "center",
+      }
+    }
+  >
+    <div
+      style={Object {}}
+    >
+      <div
+        className={undefined}
+        style={
+          Object {
+            "alignItems": "center",
+            "display": "flex",
+          }
+        }
+      >
+        <i
+          className="sg-icon sg-icon-image is-size-30"
+          onClick={undefined}
+          style={
+            Object {
+              "marginRight": "12px",
+            }
+          }
+        />
+        <span>
+          Drag and drop your images here, or
+           
+          <a
+            href="#"
+            onClick={[Function]}
+          >
+            choose images to upload
+          </a>
+          .
+        </span>
+      </div>
+    </div>
+  </section>
+  <input
+    accept="image/gif,image/jpeg,image/png"
+    onChange={[Function]}
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+    type="file"
+  />
+</section>
 `;
 
 exports[`Storyshots Loaders Centered Loader 1`] = `
