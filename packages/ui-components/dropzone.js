@@ -13,8 +13,16 @@ import cn from './utilities/classnames';
 const dropzoneStyle = {
     alignItems: 'center',
     display: 'flex',
+    flexWrap: 'wrap',
     fontSize: '14px',
     justifyContent: 'center',
+};
+// If we show an alert, the dropzone children needs a special css rule to display properly
+const dropzoneChildrenStyle = (style, alert) => {
+    if (!!alert) {
+        return Object.assign({}, style, { alignSelf: 'flex-end' });
+    }
+    return style;
 };
 export const Dropzone = (_a) => {
     var { active, alert, hovered, invalid, large, children, className, onDragOver, onDragLeave, onDragEnd, onDrop } = _a, attributes = __rest(_a, ["active", "alert", "hovered", "invalid", "large", "children", "className", "onDragOver", "onDragLeave", "onDragEnd", "onDrop"]);
@@ -30,7 +38,7 @@ export const Dropzone = (_a) => {
             [Styles['is-large']]: large,
             'is-large': large,
         }), role: "hidden", style: dropzoneStyle }, attributes, { onDragOver: onDragOver, onDragLeave: onDragLeave, onDragEnd: onDragEnd, onDrop: onDrop }),
-        React.createElement("div", null, children),
+        React.createElement("div", { style: dropzoneChildrenStyle({}, alert) }, children),
         alert &&
             React.cloneElement(alert, Object.assign({}, alert.props, { inline: true }))));
 };

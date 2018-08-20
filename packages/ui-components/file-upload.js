@@ -1,3 +1,4 @@
+import every from 'lodash/every';
 import includes from 'lodash/includes';
 import slice from 'lodash/slice';
 import some from 'lodash/some';
@@ -61,7 +62,7 @@ export class FileUpload extends Component {
         this.handleDragOver = (event) => {
             event.preventDefault();
             const files = getDraggedFiles(event);
-            const isSupported = this.fileTypeIsSupported(files);
+            const isSupported = this.fileIsValid(files);
             this.setState({ hovered: isSupported, invalid: !isSupported });
             this.props.onDragOver(event, files);
         };
@@ -94,15 +95,22 @@ export class FileUpload extends Component {
             const files = event.target.files;
             this.updateCurrentFile(files, event);
         };
+        this.fileIsValid = (files) => {
+            const validations = [this.fileTypeIsSupported];
+            const { validateFile } = this.props;
+            if (validateFile) {
+                validations.push(validateFile);
+            }
+            return every(validations, validation => validation(files));
+        };
         this.fileTypeIsSupported = (files) => {
             const { supportedType } = this.props;
-            const isSupported = some(files, (file) => {
+            return some(files, (file) => {
                 return includes(supportedType, file.type);
             });
-            return isSupported;
         };
         this.updateCurrentFile = (files, event) => {
-            if (!this.fileTypeIsSupported(files)) {
+            if (!this.fileIsValid(files)) {
                 this.props.onInvalidFile(files);
                 return;
             }
