@@ -15394,6 +15394,125 @@ exports[`Storyshots Text Area With Tooltip [skip] 1`] = `
 </div>
 `;
 
+exports[`Storyshots Text Input Quad Input 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-1"
+  >
+    <div
+      className="input-text-wrap has-space-top has-units has-value"
+      data-units="px"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="quad-input-top"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="quad-input-top"
+        name="top"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="number"
+        value={1}
+      />
+      
+      
+    </div>
+  </div>
+  <div
+    className="col-1"
+  >
+    <div
+      className="input-text-wrap has-space-right has-units has-value"
+      data-units="px"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="quad-input-right"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="quad-input-right"
+        name="right"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="number"
+        value={2}
+      />
+      
+      
+    </div>
+  </div>
+  <div
+    className="col-1"
+  >
+    <div
+      className="input-text-wrap has-space-bottom has-units has-value"
+      data-units="px"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="quad-input-bottom"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="quad-input-bottom"
+        name="bottom"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="number"
+        value={3}
+      />
+      
+      
+    </div>
+  </div>
+  <div
+    className="col-1"
+  >
+    <div
+      className="input-text-wrap has-space-left has-units has-value"
+      data-units="px"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="quad-input-left"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="quad-input-left"
+        name="left"
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="number"
+        value={4}
+      />
+      
+      
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] = `
 <div
   className="input-text-wrap"
@@ -15583,33 +15702,36 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
 
 exports[`Storyshots Text Input Text Input With Icon & Units (px) 1`] = `
 <div
-  className="input-text-wrap has-space-left has-units"
-  data-units="px"
-  style={Object {}}
+  className="row"
 >
-  <label
-    className="input-text-label"
-    htmlFor="test-input-simple"
+  <div
+    className="col-1"
   >
-    
-  </label>
-  <input
-    aria-describedby="test-input-simple-info"
-    id="test-input-simple"
-    name={undefined}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    type="number"
-    value=""
-  />
-  <span
-    className="input-info"
-    id="test-input-simple-info"
-  >
-    This input always returns a number, not a string.
-  </span>
-  
+    <div
+      className="input-text-wrap has-space-left has-units"
+      data-units="px"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="test-input-simple"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="test-input-simple"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="number"
+        value=""
+      />
+      
+      
+    </div>
+  </div>
 </div>
 `;
 
@@ -15677,65 +15799,71 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
 
 exports[`Storyshots Text Input Text Input With Units (%) 1`] = `
 <div
-  className="input-text-wrap has-units"
-  data-units="%"
-  style={Object {}}
+  className="row"
 >
-  <label
-    className="input-text-label"
-    htmlFor="test-input-simple"
+  <div
+    className="col-1"
   >
-    
-  </label>
-  <input
-    aria-describedby="test-input-simple-info"
-    id="test-input-simple"
-    name={undefined}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    type="number"
-    value=""
-  />
-  <span
-    className="input-info"
-    id="test-input-simple-info"
-  >
-    This input always returns a number, not a string.
-  </span>
-  
+    <div
+      className="input-text-wrap has-units"
+      data-units="%"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="test-input-simple"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="test-input-simple"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="number"
+        value=""
+      />
+      
+      
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Storyshots Text Input Text Input With Units (px) 1`] = `
 <div
-  className="input-text-wrap has-units"
-  data-units="px"
-  style={Object {}}
+  className="row"
 >
-  <label
-    className="input-text-label"
-    htmlFor="test-input-simple"
+  <div
+    className="col-1"
   >
-    
-  </label>
-  <input
-    aria-describedby="test-input-simple-info"
-    id="test-input-simple"
-    name={undefined}
-    onBlur={[Function]}
-    onChange={[Function]}
-    onFocus={[Function]}
-    type="number"
-    value=""
-  />
-  <span
-    className="input-info"
-    id="test-input-simple-info"
-  >
-    This input always returns a number, not a string.
-  </span>
-  
+    <div
+      className="input-text-wrap has-units"
+      data-units="px"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="test-input-simple"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="test-input-simple"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        type="number"
+        value=""
+      />
+      
+      
+    </div>
+  </div>
 </div>
 `;
 
