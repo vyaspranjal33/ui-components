@@ -8,8 +8,9 @@ import { ModalProps, modalWillReceiveProps } from './utilities/modals';
 import Styles from './styles/fullscreen-modal.module.scss';
 
 export interface FullScreenModelProps extends ModalProps {
-  children?: React.ReactChildren;
+  children?: React.ReactNode;
   className?: string;
+  hasPadding?: boolean;
   isOpen?: boolean;
   onClose?: (event: any) => void;
   modalContainer?: Element;
@@ -19,6 +20,7 @@ export interface FullScreenModelProps extends ModalProps {
 export class FullscreenModal extends Component<FullScreenModelProps> {
   public static defaultProps: Partial<FullScreenModelProps> = {
     bodyNode: document.body,
+    hasPadding: true,
     modalContainer: document.body,
     onClose: () => {},
   };
@@ -29,12 +31,13 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
 
   public render() {
     const {
-      modalContainer,
-      isOpen,
       bodyNode,
-      onClose,
-      className,
       children,
+      className,
+      hasPadding,
+      isOpen,
+      modalContainer,
+      onClose,
       title,
       ...attributes
     } = this.props;
@@ -55,7 +58,7 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
           </a>
           <h2>{title}</h2>
         </header>
-        <div className="modal-content has-padding">
+        <div className={cn('modal-content', { 'has-padding': hasPadding })}>
           <div className="row">{children}</div>
         </div>
       </div>,

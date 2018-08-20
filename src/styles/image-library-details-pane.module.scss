@@ -1,0 +1,49 @@
+@import './global/variables.scss';
+
+.wrap {
+  padding: 60px;
+  position: relative;
+}
+
+.img-wrap {
+  background-color: $slate-02;
+  border: 1px solid $slate-10;
+  display: flex;
+  margin: 25px 0;
+
+  height: 200px;
+  width: 300px;
+
+  img {
+    max-height: 200px;
+    max-width: 300px;
+    height: auto;
+    margin: auto;
+  }
+}
+
+.metadata-wrap {
+  margin-bottom: 18px;
+  max-width: 300px;
+
+  h3,
+  p {
+    display: inline;
+    word-break: break-word;
+  }
+}
+
+.x-wrap {
+  display: flex;
+
+  right: 30px;
+  top: 30px;
+  position: absolute;
+}
+
+.x {
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0.6;
+  color: $slate-80;
+}

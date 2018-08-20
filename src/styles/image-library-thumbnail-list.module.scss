@@ -6,8 +6,8 @@
   justify-content: space-between;
   align-items: center;
   margin: 25px 0;
+  margin-right: -15px; // https://github.com/w3c/csswg-drafts/issues/592#issue-182388371
   padding-top: 2px;
-  height: calc(100% - 25px);
   position: relative;
 }
 
@@ -16,6 +16,7 @@
   width: 150px;
   height: 150px;
   margin-bottom: 25px;
+  margin-right: 15px;
   position: relative;
   outline: 1px solid $slate-10;
   cursor: pointer;
