@@ -34,6 +34,7 @@ const fileReader = new FileReader();
 
 interface ExampleContainerState {
   images: Array<SGLibraryImage>;
+  showDetailsSuccess: boolean;
   uploadingImage?: SGLibraryImage;
 }
 
@@ -42,6 +43,7 @@ interface ExampleContainerState {
 class ExampleContainer extends Component<any, ExampleContainerState> {
   public state: ExampleContainerState = {
     images: [],
+    showDetailsSuccess: false,
     uploadingImage: null,
   };
 
@@ -74,6 +76,7 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
       >
         <ImageLibrary
           dateFormatter={(millis) => new Date(millis).toString()}
+          detailsAlert={this.getDetailsAlert()}
           maximumImageBytes={4 * (1 << 20) /* 4 MB */}
           onUpload={this.handleUpload}
           onUploadFailure={action('invalid upload')}
@@ -85,13 +88,33 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
               <Button type="secondary" onClick={() => {}}>
                 Delete
               </Button>
-              <Button type="primary" onClick={() => {}}>
+              <Button type="primary" onClick={this.handleConfirm}>
                 Insert Image
               </Button>
             </ButtonList>
           )}
         />
       </FullscreenModal>
+    );
+  }
+
+  private handleConfirm = () => {
+    // i don't want to use real transition group code here to avoid bloating the pkg.json
+    this.setState({ showDetailsSuccess: true });
+    setTimeout(() => this.setState({ showDetailsSuccess: false }), 3500);
+  }
+
+  private getDetailsAlert = () => {
+    if (!this.state.showDetailsSuccess) return null;
+
+    // consumer will use "real" transition group code.
+    // wrapped in a div to prove we don't type check that the alert has "AlertProps".
+    return (
+      <div>
+        <Alert type="success" dismissable={false}>
+          Wow! A good thing happened.
+        </Alert>
+      </div>
     );
   }
 

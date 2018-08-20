@@ -7,7 +7,7 @@ import { SGLibraryImage } from './image-library';
 import Styles from './styles/image-library-details-pane.module.scss';
 
 export interface ImageLibraryDetailsPaneProps {
-  alert?: React.ReactElement<AlertProps>;
+  alert?: React.ReactNode;
   dateFormatter: (utcMillis: number) => string;
   image: SGLibraryImage;
   onClose: (image: SGLibraryImage) => void;
@@ -27,6 +27,7 @@ export class ImageLibraryDetailsPane extends Component<
 
     return (
       <section className={Styles.wrap}>
+        {!!alert && <div className={Styles['alert-wrap']}>{alert}</div>}
         <a
           href="javascript: void 0"
           onClick={this.onClose}

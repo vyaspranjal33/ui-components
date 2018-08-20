@@ -20,14 +20,18 @@ export interface SGLibraryImage {
 }
 
 export interface ImageLibraryProps {
+  // this component shouldn't be "smart enough" to figure out how to display the date
   dateFormatter: (utcMillis: number) => string;
-  detailsAlert?: React.ReactElement<AlertProps>;
+
+  // don't enforce AlertProps children so consumer can use transition groups here
+  detailsAlert?: React.ReactNode;
+
   images: Array<SGLibraryImage>;
   maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
   onImageDeselected?: (image?: SGLibraryImage) => void;
   onImageSelected?: (image: SGLibraryImage) => void;
   onUpload: (file: File) => void;
-  onUploadFailure?: (msg: string) => void;
+  onUploadFailure?: () => void;
   renderImageDetailsActions: (image: SGLibraryImage) => React.ReactNode;
   uploadAlert?: React.ReactElement<AlertProps>;
 }
@@ -113,15 +117,12 @@ export class ImageLibrary extends Component<
   };
 
   private onInvalidFile = (files: FileList) => {
-    const { onUploadFailure } = this.props;
-    if (onUploadFailure) {
-      onUploadFailure(ERROR_CODES.FILE_SIZE);
-    }
+    // no great way currently to communicate back specifically why the file was invalid,
+    // probably best to leave it to the client to figure out why for now.
+    // i don't want to go mucking about the internals in the file-upload to address
+    // this without a larger discussion first.
+    this.props.onUploadFailure();
   };
 }
-
-export const ERROR_CODES = {
-  FILE_SIZE: 'imageLibrary.errors.fileSize',
-};
 
 export default ImageLibrary;

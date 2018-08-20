@@ -2,14 +2,23 @@
 
 $img-wrap-width: 420px;
 $img-wrap-height: 300px;
+$pane-padding: 60px;
 
 .wrap {
-  padding: 60px;
+  padding: $pane-padding;
   position: relative;
 
   :global(.btn-list) {
     margin-top: 27px;
   }
+}
+
+// user-friendly place to dump an alert
+.alert-wrap {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  margin-left: -($pane-padding);
 }
 
 .img-wrap {
