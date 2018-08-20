@@ -10,16 +10,13 @@ import { StatefulTextInput, TextInput } from '../src/text-input';
 const stories = storiesOf('Text Input', module);
 
 class QuadInputContainer extends Component<any, any> {
-  constructor(props: any) {
-    super(props);
-
-    this.state = {
-      values: {
-        bottom: 3,
-        left: 4,
-        right: 2,
-        top: 1,
-      }
+  
+  public state = {
+    values: {
+      bottom: 3,
+      left: 4,
+      right: 2,
+      top: 1,
     }
   }
 

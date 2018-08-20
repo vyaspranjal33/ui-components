@@ -21,12 +21,13 @@ export class QuadInput extends PureComponent<QuadInputProps> {
   }
 
   public render() {
-    const { id, units, values } = this.props;
+    const { id, units, values, ...attributes } = this.props;
     return (
       <Row>
         {inputs.map(inputName => (
-          <Column width={1}>
+          <Column key={`quad-input-column-${inputName}`} width={1}>
             <TextInput
+              {...attributes}
               id={`${id}-${inputName}`}
               type="number"
               name={inputName}
