@@ -1,3 +1,4 @@
+import every from 'lodash/every';
 import includes from 'lodash/includes';
 import slice from 'lodash/slice';
 import some from 'lodash/some';
@@ -17,6 +18,7 @@ export interface FileUploadProps {
   onInvalidFile?: (files: FileList) => void;
   render: FileUploadRenderCallback;
   supportedType: string;
+  validateFile?: (files: DataTransferItemList | FileList) => boolean;
 }
 
 export interface FileUploadRenderCallbackArguments {
@@ -129,7 +131,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     event.preventDefault();
 
     const files = getDraggedFiles(event);
-    const isSupported = this.fileTypeIsSupported(files);
+    const isSupported = this.fileIsValid(files);
 
     this.setState({ hovered: isSupported, invalid: !isSupported });
     this.props.onDragOver(event, files);
@@ -179,12 +181,22 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
     this.updateCurrentFile(files, event);
   };
 
+  public fileIsValid = (files: DataTransferItemList | FileList) => {
+    const validations = [this.fileTypeIsSupported];
+    const { validateFile } = this.props;
+
+    if (validateFile) {
+      validations.push(validateFile);
+    }
+
+    return every(validations, validation => validation(files));
+  };
+
   public fileTypeIsSupported = (files: DataTransferItemList | FileList) => {
     const { supportedType } = this.props;
-    const isSupported = some(files, (file: File) => {
+    return some(files, (file: File) => {
       return includes(supportedType, file.type);
     });
-    return isSupported;
   };
 
   public render() {
@@ -223,7 +235,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
   }
 
   private updateCurrentFile = (files: FileList, event: any) => {
-    if (!this.fileTypeIsSupported(files)) {
+    if (!this.fileIsValid(files)) {
       this.props.onInvalidFile(files);
       return;
     }

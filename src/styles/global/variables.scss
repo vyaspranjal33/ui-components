@@ -154,6 +154,9 @@ $dropzone-bg-active: $slate-05;
 $dropzone-border-active: $slate-60;
 $dropzone-hovered-bg: #e7f9f0;
 $dropzone-hovered-border: $mantis;
+$dropzone-invalid-bg: rgba(183, 28, 28, 0.1);
+$dropzone-invalid-border: $ron-burgundy;
+$dropzone-invalid-color: $ron-burgundy;
 
 // filters
 $segment-term-max-width: 768px;
