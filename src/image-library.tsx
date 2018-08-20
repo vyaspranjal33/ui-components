@@ -28,11 +28,17 @@ export interface ImageLibraryProps {
 
   images: Array<SGLibraryImage>;
   maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
+
+  // params optional - maybe consumer doesn't care about the image, just the event
   onImageDeselected?: (image?: SGLibraryImage) => void;
-  onImageSelected?: (image: SGLibraryImage) => void;
+  onImageSelected?: (image?: SGLibraryImage) => void;
+
   onUpload: (file: File) => void;
   onUploadFailure?: () => void;
-  renderImageDetailsActions: (image: SGLibraryImage) => React.ReactNode;
+  renderImageDetailsActions: (
+    image?: SGLibraryImage,
+    closeDetailsPane?: () => void
+  ) => React.ReactNode;
   uploadAlert?: React.ReactElement<AlertProps>;
 }
 
@@ -40,7 +46,6 @@ export interface ImageLibraryState {
   selectedImage?: SGLibraryImage;
 }
 
-// add to this when each subcomponent is created
 export class ImageLibrary extends Component<
   ImageLibraryProps,
   ImageLibraryState

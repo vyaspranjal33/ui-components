@@ -10,7 +10,7 @@ export interface ImageLibraryDetailsPaneProps {
   alert?: React.ReactNode;
   dateFormatter: (utcMillis: number) => string;
   image: SGLibraryImage;
-  onClose: (image: SGLibraryImage) => void;
+  onClose: (image?: SGLibraryImage) => void;
 
   // allow consumer to explicitly close the details pane when actions are clicked
   renderActions: (

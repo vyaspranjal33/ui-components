@@ -6,7 +6,7 @@ import Styles from './styles/image-library-thumbnail-list.module.scss';
 
 export interface ImageLibraryThumbnailListProps {
   images: Array<SGLibraryImage>;
-  onThumbnailClick: (image: SGLibraryImage) => void;
+  onThumbnailClick: (image?: SGLibraryImage) => void;
   selectedImage?: SGLibraryImage;
 }
 
