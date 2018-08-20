@@ -20,6 +20,8 @@ export interface SGLibraryImage {
 }
 
 export interface ImageLibraryProps {
+  dateFormatter: (utcMillis: number) => string;
+  detailsAlert?: React.ReactElement<AlertProps>;
   images: Array<SGLibraryImage>;
   maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
   onImageDeselected?: (image?: SGLibraryImage) => void;
@@ -28,7 +30,6 @@ export interface ImageLibraryProps {
   onUploadFailure?: (msg: string) => void;
   renderImageDetailsActions: (image: SGLibraryImage) => React.ReactNode;
   uploadAlert?: React.ReactElement<AlertProps>;
-  detailsAlert?: React.ReactElement<AlertProps>;
 }
 
 export interface ImageLibraryState {
@@ -46,6 +47,7 @@ export class ImageLibrary extends Component<
 
   public render() {
     const {
+      dateFormatter,
       detailsAlert,
       images,
       maximumImageBytes,
@@ -77,6 +79,7 @@ export class ImageLibrary extends Component<
         {selectedImage && (
           <ImageLibraryDetailsPane
             alert={detailsAlert}
+            dateFormatter={dateFormatter}
             onClose={this.onImageDeselected}
             image={selectedImage}
             renderActions={renderImageDetailsActions}

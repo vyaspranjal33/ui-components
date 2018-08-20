@@ -8,6 +8,7 @@ import Styles from './styles/image-library-details-pane.module.scss';
 
 export interface ImageLibraryDetailsPaneProps {
   alert?: React.ReactElement<AlertProps>;
+  dateFormatter: (utcMillis: number) => string;
   image: SGLibraryImage;
   onClose: (image: SGLibraryImage) => void;
 
@@ -22,7 +23,7 @@ export class ImageLibraryDetailsPane extends Component<
   ImageLibraryDetailsPaneProps
 > {
   public render() {
-    const { alert, image, renderActions } = this.props;
+    const { alert, dateFormatter, image, renderActions } = this.props;
 
     return (
       <section className={Styles.wrap}>
@@ -45,7 +46,7 @@ export class ImageLibraryDetailsPane extends Component<
 
         <div className={Styles['metadata-wrap']}>
           <h3>Upload: </h3>
-          <p className="small">{image.created}</p>
+          <p className="small">{dateFormatter(image.created)}</p>
         </div>
 
         <div className={Styles['metadata-wrap']}>

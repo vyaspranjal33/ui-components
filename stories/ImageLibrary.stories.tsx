@@ -73,6 +73,7 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
         title="Image Library"
       >
         <ImageLibrary
+          dateFormatter={(millis) => new Date(millis).toString()}
           maximumImageBytes={4 * (1 << 20) /* 4 MB */}
           onUpload={this.handleUpload}
           onUploadFailure={action('invalid upload')}
