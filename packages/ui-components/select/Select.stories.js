@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 import ReactSelect, { components } from 'react-select';
-import Select, { Createable } from './index';
+import Select, { Createable } from '.';
 import './select.module.scss';
 const stories = storiesOf('Select', module);
 const feels = [

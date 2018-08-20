@@ -1,5 +1,6 @@
 export const dropzone: string;
 export const isActive: string;
+export const isInvalid: string;
 export const isHovered: string;
 export const isEditor: string;
 export const isLarge: string;

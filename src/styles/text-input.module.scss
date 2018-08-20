@@ -1,5 +1,5 @@
-@import "./global/variables.scss";
-@import "./global/mixins";
+@import './global/variables.scss';
+@import './global/mixins';
 
 input {
   &:focus,
@@ -34,7 +34,7 @@ input {
       height: 4px;
       background: $ron-burgundy;
       border-radius: 4px;
-      content: "";
+      content: '';
     }
   }
 
@@ -56,11 +56,11 @@ input {
       color: $text-input-disabled-color;
     }
 
-    [type="text"],
-    [type="password"],
-    [type="number"],
-    [type="email"],
-    [type="tel"] {
+    [type='text'],
+    [type='password'],
+    [type='number'],
+    [type='email'],
+    [type='tel'] {
       pointer-events: none;
       border-bottom-color: $text-input-disabled-border;
     }
@@ -69,11 +69,11 @@ input {
   &.is-error,
   &.is-error.is-focused,
   &.is-error.has-value {
-    [type="text"],
-    [type="password"],
-    [type="number"],
-    [type="email"],
-    [type="tel"] {
+    [type='text'],
+    [type='password'],
+    [type='number'],
+    [type='email'],
+    [type='tel'] {
       border-bottom-color: $ron-burgundy;
       box-shadow: $ron-burgundy 0 1px 0;
     }
@@ -88,7 +88,6 @@ input {
     right: 0;
     pointer-events: none;
   }
-
 
   &.is-valid::after {
     color: $mantis;
@@ -127,41 +126,56 @@ input {
   }
 
   &.has-units {
-    &[class*="has-arrow-"]::before {
+    &[class*='has-arrow-']::before,
+    &[class*='has-space-']::before {
       @include icon-font-base;
       position: absolute;
-      top: 19px;
+      top: 20px;
       left: 0;
     }
 
-    &.has-arrow-top::before {
+    &.has-arrow-top::before,
+    &.has-arrow-right::before,
+    &.has-arrow-bottom::before,
+    &.has-arrow-left::before {
       content: $icon-sort-asc;
     }
 
-    &.has-arrow-right::before {
-      content: $icon-sort-asc;
+    &.has-space-top::before,
+    &.has-space-right::before,
+    &.has-space-bottom::before,
+    &.has-space-left::before {
+      content: $icon-space;
+    }
+
+    &.has-arrow-right::before,
+    &.has-space-right::before {
       transform: rotate(90deg);
     }
 
-    &.has-arrow-bottom::before {
-      content: $icon-sort-desc;
+    &.has-arrow-bottom::before,
+    &.has-space-bottom::before {
+      transform: rotate(180deg);
     }
 
-    &.has-arrow-left::before {
-      content: $icon-sort-asc;
+    &.has-arrow-left::before,
+    &.has-space-left::before {
       transform: rotate(-90deg);
     }
 
     &::after {
       position: absolute;
       top: 20px;
-      right: 3px;
+      right: 0;
       font-size: 12px;
+      line-height: 18px;
       content: attr(data-units);
     }
 
-    &[class*="has-arrow-"] [type="text"],
-    &[class*="has-arrow-"] [type="number"] {
+    &[class*='has-arrow-'] [type='text'],
+    &[class*='has-arrow-'] [type='number'],
+    &[class*='has-space-'] [type='text'],
+    &[class*='has-space-'] [type='number'] {
       padding-right: 20px;
       padding-left: 20px;
       text-align: right;
@@ -175,11 +189,11 @@ input {
       line-height: 27px;
     }
 
-    [type="text"],
-    [type="password"],
-    [type="number"],
-    [type="email"],
-    [type="tel"] {
+    [type='text'],
+    [type='password'],
+    [type='number'],
+    [type='email'],
+    [type='tel'] {
       font-size: 18px;
       line-height: 27px;
     }
@@ -194,11 +208,11 @@ input {
     }
   }
 
-  [type="text"],
-  [type="password"],
-  [type="number"],
-  [type="email"],
-  [type="tel"] {
+  [type='text'],
+  [type='password'],
+  [type='number'],
+  [type='email'],
+  [type='tel'] {
     display: block;
     width: 100%;
     padding: 0;
@@ -221,8 +235,7 @@ input {
     }
   }
 
-  // add right padding to push number selector over so it does not overlap icons
-  [type="number"] {
+  [type='number'] {
     padding-right: 20px;
   }
 }

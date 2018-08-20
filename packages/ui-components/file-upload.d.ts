@@ -10,6 +10,7 @@ export interface FileUploadProps {
     onInvalidFile?: (files: FileList) => void;
     render: FileUploadRenderCallback;
     supportedType: string;
+    validateFile?: (files: DataTransferItemList | FileList) => boolean;
 }
 export interface FileUploadRenderCallbackArguments {
     hasFile: boolean;
@@ -80,6 +81,7 @@ export declare class FileUpload extends Component<FileUploadProps, FileUploadSta
     }) => JSX.Element;
     handleRemove: (event: any) => void;
     handleChange: (event: any) => void;
+    fileIsValid: (files: FileList | DataTransferItemList) => boolean;
     fileTypeIsSupported: (files: FileList | DataTransferItemList) => boolean;
     render(): JSX.Element;
     private updateCurrentFile;

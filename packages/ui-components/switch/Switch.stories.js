@@ -1,6 +1,6 @@
 import { storiesOf } from '@storybook/react';
 import React, { Component } from 'react';
-import Switch from './index';
+import Switch from '.';
 const stories = storiesOf('Switch', module);
 const propsToState = (props) => props.on;
 class SwitchContainer extends Component {
