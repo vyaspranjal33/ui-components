@@ -1,8 +1,15 @@
 @import './global/variables.scss';
 
+$img-wrap-width: 420px;
+$img-wrap-height: 300px;
+
 .wrap {
   padding: 60px;
   position: relative;
+
+  :global(.btn-list) {
+    margin-top: 27px;
+  }
 }
 
 .img-wrap {
@@ -11,12 +18,12 @@
   display: flex;
   margin: 25px 0;
 
-  height: 200px;
-  width: 300px;
+  width: $img-wrap-width;
+  height: $img-wrap-height;
 
   img {
-    max-height: 200px;
-    max-width: 300px;
+    max-width: $img-wrap-width;
+    max-height: $img-wrap-height;
     height: auto;
     margin: auto;
   }

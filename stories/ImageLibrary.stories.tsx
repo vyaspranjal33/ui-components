@@ -50,7 +50,6 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
       this.setState((prevState) => {
         const { uploadingImage } = prevState;
         const { result } = e.target;
-        debugger;
         return {
           uploadingImage: {
             ...uploadingImage,
