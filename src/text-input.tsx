@@ -9,6 +9,19 @@ const convertInputValue = (value: string, inputType: InputType) => {
   return inputType === 'number' ? Number(value) : value;
 };
 
+// Calculates the step size based on how many decimal points are used
+// ie: 1.3 => .1, 1.35 => 0.01, etc
+const getStepSize = (value: string | number) => {
+  const valueAsNumber = Number(value);
+  if (valueAsNumber !== Math.floor(valueAsNumber)) {
+    const split = value.toString().split('.');
+    if (split[1]) {
+      return 1 / Math.pow(10, split[1].length);
+    }
+  }
+  return 1;
+};
+
 const onInputFocus = function() {
   this.setState({ isInputFocused: true });
 };
@@ -141,7 +154,8 @@ export class TextInput extends React.Component<
 
     const infoId = info && `${id}-info`;
     const dataUnits = units && { 'data-units': units };
-
+    const step =
+      type === 'number' ? this.props.step || getStepSize(value) : null;
     return (
       <div className={classes} style={this.inputStyle} {...dataUnits}>
         <label
@@ -155,6 +169,7 @@ export class TextInput extends React.Component<
           value={value}
           name={name}
           type={type}
+          step={step}
           onChange={this.onValueChange}
           onFocus={this.onInputFocus}
           onBlur={this.onInputBlur}
@@ -180,25 +195,30 @@ export class TextInput extends React.Component<
 const initState = (props: TextInputProps) => {
   return props.value;
 };
-export class StatefulTextInput extends React.Component<TextInputProps> {
+
+// In order to allow inheritance with a subset of the parent's props, we have to do some crazy generics typing
+// 2 type variable: AdditionalProps and ExcludedProps neither are required
+// AdditionalProps: Any props you want to add in addition to the normal TextInput Props
+// ExcludedProps: Any props that you want to remove from the normal TextInput Props
+
+// I could not get AdditionalProps to work. Should be as simple as adding a & AdditionalProps, but noooo :(
+
+export type BaseProps = TextInputProps & HTMLInputElementProps;
+
+export class StatefulTextInput<
+  ExcludedProps extends keyof BaseProps = never
+> extends React.Component<Omit<BaseProps, ExcludedProps>> {
   public static defaultProps: Partial<TextInputProps> = {
     value: '',
   };
 
   public readonly state = { value: initState(this.props) };
 
-  constructor(props: TextInputProps) {
-    super(props);
-    this.onValueChange = this.onValueChange.bind(this);
-  }
-
-  public onValueChange(event: any) {
-    const significantDigits = this.props.units === '%' ? 2 : 0;
-    const value = convertInputValue(event.target.value, this.props.type);
-
+  public onValueChange = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    const value = convertInputValue(event.currentTarget.value, this.props.type);
     this.setState({ value });
     this.props.onChange(event, value);
-  }
+  };
 
   public render() {
     return (

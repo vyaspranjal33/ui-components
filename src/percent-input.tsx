@@ -1,37 +1,38 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import Icon from './icon';
-import Styles from './styles/center-modal.module.scss';
-import cn from './utilities/classnames';
-import { ModalProps, modalWillReceiveProps } from './utilities/modals';
+import {
+  HTMLInputElementProps,
+  StatefulTextInput,
+  TextInputProps,
+} from './text-input';
+import { InputType } from './types/inputs';
+import { Units } from './types/units';
+import { Omit } from './types/utils';
 
-export interface PercentInputProps {
-  onChange: (e: React.KeyboardEvent<HTMLInputElement>) => void;
-  value?: number;
-}
+export type OmittedProps = 'type' | 'units' | 'placeholder' | 'max';
+export class PercentInput extends StatefulTextInput<OmittedProps> {
+  public static defaultProps: Partial<
+    TextInputProps & HTMLInputElementProps
+  > = {
+    max: 100,
+    placeholder: 'AUTO',
+    type: 'number',
+    units: '%',
+  };
+  public onValueChange = (event: React.KeyboardEvent<HTMLInputElement>) => {
+    let value = event.currentTarget.value.length
+      ? Number(event.currentTarget.value)
+      : undefined;
+    value =
+      value < 0 || event.currentTarget.value === '-0'
+        ? undefined
+        : value > 100
+          ? 100
+          : value;
 
-const evaluateRenderProp: (
-  prop: string | React.ReactNode | (() => React.ReactNode)
-) => React.ReactNode = prop => {
-  return prop instanceof Function ? prop() : prop;
-};
-
-export class PercentInput extends Component<
-  PercentInputProps & React.InputHTMLAttributes<HTMLInputElement>
-> {
-  public render() {
-    const { value, onChange, ...attributes } = this.props;
-    return (
-      <input
-        type="number"
-        onChange={onChange}
-        max={100}
-        value={value}
-        placeholder="AUTO"
-        {...attributes}
-      />
-    );
-  }
+    this.setState({ value });
+    this.props.onChange(event, value);
+  };
 }
 
 export default PercentInput;
