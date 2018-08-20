@@ -251,7 +251,7 @@ input {
   transition-timing-function: cubic-bezier(0.02, 0.01, 0.47, 1);
 }
 
-.input-info-tooltip {
+:global .input-info-tooltip {
   position: absolute;
   top: 19px;
   right: 0;
