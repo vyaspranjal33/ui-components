@@ -1,8 +1,12 @@
 import React, { Component } from 'react';
+import cn from './utilities/classnames';
 
 import { AlertProps } from './alert';
+import { ImageLibraryDetailsPane } from './image-library-details-pane';
 import { ImageLibraryThumbnailList } from './image-library-thumbnail-list';
 import ImageUpload from './image-upload';
+
+import Styles from './styles/image-library.module.scss';
 
 export interface SGLibraryImage {
   id: string;
@@ -16,49 +20,100 @@ export interface SGLibraryImage {
 }
 
 export interface ImageLibraryProps {
-  maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
-  onUpload: (file: File) => void;
-  onUploadFailure?: (msg: string) => void;
-  uploadAlert?: React.ReactElement<AlertProps>;
+  // this component shouldn't be "smart enough" to figure out how to display the date
+  dateFormatter: (utcMillis: number) => string;
+
+  // don't enforce AlertProps children so consumer can use transition groups here
+  detailsAlert?: React.ReactNode;
+
   images: Array<SGLibraryImage>;
+  maximumImageBytes: number; // current api supports roughly 4.3 MB: 8/17/18
+
+  // params optional - maybe consumer doesn't care about the image, just the event
+  onImageDeselected?: (image?: SGLibraryImage) => void;
+  onImageSelected?: (image?: SGLibraryImage) => void;
+
+  onUpload: (file: File) => void;
+  onUploadFailure?: () => void;
+  renderImageDetailsActions: (
+    image?: SGLibraryImage,
+    closeDetailsPane?: () => void
+  ) => React.ReactNode;
+  uploadAlert?: React.ReactElement<AlertProps>;
 }
 
 export interface ImageLibraryState {
-  selectedImageId?: string;
+  selectedImage?: SGLibraryImage;
 }
 
-// add to this when each subcomponent is created
 export class ImageLibrary extends Component<
   ImageLibraryProps,
   ImageLibraryState
 > {
   public state: ImageLibraryState = {
-    selectedImageId: null,
+    selectedImage: null,
   };
 
   public render() {
-    const { images, maximumImageBytes, uploadAlert } = this.props;
+    const {
+      dateFormatter,
+      detailsAlert,
+      images,
+      maximumImageBytes,
+      renderImageDetailsActions,
+      uploadAlert,
+    } = this.props;
+    const { selectedImage } = this.state;
 
     return (
-      <article>
-        <ImageUpload
-          clearOnDrop
-          alert={uploadAlert}
-          onFileSelect={this.onFileSelect}
-          onInvalidFile={this.onInvalidFile}
-          maximumImageBytes={maximumImageBytes}
-        />
-        <ImageLibraryThumbnailList
-          images={images}
-          onThumbnailClick={this.onThumbnailClick}
-          selectedImageId={this.state.selectedImageId}
-        />
-      </article>
+      <div className={Styles.wrap}>
+        <div
+          className={cn(Styles['list-container'], {
+            [Styles['details-open']]: !!selectedImage,
+          })}
+        >
+          <ImageUpload
+            clearOnDrop
+            alert={uploadAlert}
+            onFileSelect={this.onFileSelect}
+            onInvalidFile={this.onInvalidFile}
+            maximumImageBytes={maximumImageBytes}
+          />
+          <ImageLibraryThumbnailList
+            images={images}
+            onThumbnailClick={this.onThumbnailClick}
+            selectedImage={selectedImage}
+          />
+        </div>
+        {selectedImage && (
+          <ImageLibraryDetailsPane
+            alert={detailsAlert}
+            dateFormatter={dateFormatter}
+            onClose={this.onImageDeselected}
+            image={selectedImage}
+            renderActions={renderImageDetailsActions}
+          />
+        )}
+      </div>
     );
   }
 
-  private onThumbnailClick = (selectedImageId: string) => {
-    this.setState({ selectedImageId });
+  private onThumbnailClick = (selectedImage: SGLibraryImage) => {
+    const { onImageSelected } = this.props;
+    this.setState({ selectedImage });
+
+    if (onImageSelected) {
+      onImageSelected(selectedImage);
+    }
+  };
+
+  private onImageDeselected = (deselectedImage: SGLibraryImage) => {
+    const { onImageDeselected } = this.props;
+    this.setState({ selectedImage: null });
+
+    if (onImageDeselected) {
+      onImageDeselected(deselectedImage);
+    }
   };
 
   private onFileSelect = (files: FileList) => {
@@ -67,15 +122,12 @@ export class ImageLibrary extends Component<
   };
 
   private onInvalidFile = (files: FileList) => {
-    const { onUploadFailure } = this.props;
-    if (onUploadFailure) {
-      onUploadFailure(ERROR_CODES.FILE_SIZE);
-    }
+    // no great way currently to communicate back specifically why the file was invalid,
+    // probably best to leave it to the client to figure out why for now.
+    // i don't want to go mucking about the internals in the file-upload to address
+    // this without a larger discussion first.
+    this.props.onUploadFailure();
   };
 }
-
-export const ERROR_CODES = {
-  FILE_SIZE: 'imageLibrary.errors.fileSize',
-};
 
 export default ImageLibrary;

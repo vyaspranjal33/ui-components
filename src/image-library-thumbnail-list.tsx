@@ -6,25 +6,24 @@ import Styles from './styles/image-library-thumbnail-list.module.scss';
 
 export interface ImageLibraryThumbnailListProps {
   images: Array<SGLibraryImage>;
-  onThumbnailClick: (id: string) => void;
-  selectedImageId?: string;
+  onThumbnailClick: (image?: SGLibraryImage) => void;
+  selectedImage?: SGLibraryImage;
 }
 
 export class ImageLibraryThumbnailList extends Component<
   ImageLibraryThumbnailListProps
 > {
   public render() {
-    const { images, onThumbnailClick, selectedImageId } = this.props;
+    const { images, onThumbnailClick, selectedImage } = this.props;
 
     return (
       <section className={Styles.list}>
-        {images.map(({ id, thumbnailUrl, uploadPercent }) => (
+        {images.map(image => (
           <ImageLibraryThumbnail
-            key={id}
-            url={thumbnailUrl}
-            uploadPercent={uploadPercent}
-            isSelected={selectedImageId === id}
-            onClick={() => onThumbnailClick(id)}
+            key={image.id}
+            image={image}
+            isSelected={selectedImage === image}
+            onClick={onThumbnailClick}
           />
         ))}
       </section>
@@ -33,24 +32,24 @@ export class ImageLibraryThumbnailList extends Component<
 }
 
 interface ImageLibraryThumbnailProps {
-  url: string;
+  image: SGLibraryImage;
   isSelected: boolean;
-  uploadPercent?: number;
-  onClick?: () => void;
+  onClick: (image: SGLibraryImage) => void;
 }
 
 class ImageLibraryThumbnail extends Component<ImageLibraryThumbnailProps> {
   public render() {
-    const { isSelected, onClick, uploadPercent, url } = this.props;
+    const { isSelected, image } = this.props;
+    const { uploadPercent, thumbnailUrl } = image;
     const isUploading = uploadPercent !== undefined && uploadPercent < 99;
 
     return (
-      <article
+      <div
         className={cn(Styles['thumbnail-container'], {
           [Styles['is-uploading']]: isUploading,
           [Styles['is-selected']]: isSelected,
         })}
-        onClick={onClick}
+        onClick={this.onClick}
       >
         {isUploading && (
           <span className={Styles['upload-progress-container']}>
@@ -60,10 +59,15 @@ class ImageLibraryThumbnail extends Component<ImageLibraryThumbnailProps> {
             />
           </span>
         )}
-        <img src={url} />
-      </article>
+        <img src={thumbnailUrl} />
+      </div>
     );
   }
+
+  private onClick = () => {
+    const { onClick, image } = this.props;
+    onClick(image);
+  };
 }
 
 export default ImageLibraryThumbnailList;
