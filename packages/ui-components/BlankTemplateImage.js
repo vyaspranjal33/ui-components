@@ -1,6 +1,6 @@
 import React from 'react';
 const BlankTemplateImage = (React.createElement("svg", { className: "blank-template", xmlns: "http://www.w3.org/2000/svg", width: "160", height: "160", viewBox: "0 0 160 160" },
-    React.createElement("g", { fill: "none", fillRule: "evenodd" },
+    React.createElement("g", { fill: "none", "fill-rule": "evenodd" },
         React.createElement("rect", { width: "158.231", height: "158.231", x: ".885", y: ".885", fill: "#FFF", stroke: "#F4F6F7", strokeWidth: "1.769" }),
         React.createElement("g", { fill: "#F4F6F7", fillRule: "nonzero", transform: "translate(14 128)" },
             React.createElement("polygon", { points: "0 2 0 0 132 0 132 2" }),

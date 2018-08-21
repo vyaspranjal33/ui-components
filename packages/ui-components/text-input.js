@@ -11,19 +11,7 @@ import React from 'react';
 import Styles from './styles/text-input.module.scss';
 import cn from './utilities/classnames';
 const convertInputValue = (value, inputType) => {
-    return inputType === 'number' ? Number(value) : value;
-};
-// Calculates the step size based on how many decimal points are used
-// ie: 1.3 => .1, 1.35 => 0.01, etc
-const getStepSize = (value) => {
-    const valueAsNumber = Number(value);
-    if (valueAsNumber !== Math.floor(valueAsNumber)) {
-        const split = value.toString().split('.');
-        if (split[1]) {
-            return 1 / Math.pow(10, split[1].length);
-        }
-    }
-    return 1;
+    return inputType === 'number' ? parseInt(value, 10) : value;
 };
 const onInputFocus = function () {
     this.setState({ isInputFocused: true });
@@ -78,10 +66,9 @@ export class TextInput extends React.Component {
         });
         const infoId = info && `${id}-info`;
         const dataUnits = units && { 'data-units': units };
-        const step = type === 'number' ? this.props.step || getStepSize(value) : null;
         return (React.createElement("div", Object.assign({ className: classes, style: this.inputStyle }, dataUnits),
             React.createElement("label", { className: cn('input-text-label', Styles['input-text-label']), htmlFor: this.props.id }, label),
-            React.createElement("input", Object.assign({ id: id, value: value, name: name, type: type, step: step, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }, attributes)),
+            React.createElement("input", Object.assign({ id: id, value: value, name: name, type: type, onChange: this.onValueChange, onFocus: this.onInputFocus, onBlur: this.onInputBlur, "aria-describedby": infoId }, attributes)),
             info && (React.createElement("span", { className: cn('input-info', Styles['input-info'], {
                     [Styles.danger]: !isValid,
                     danger: !isValid,
@@ -105,14 +92,15 @@ const initState = (props) => {
     return props.value;
 };
 export class StatefulTextInput extends React.Component {
-    constructor() {
-        super(...arguments);
+    constructor(props) {
+        super(props);
         this.state = { value: initState(this.props) };
-        this.onValueChange = (event) => {
-            const value = convertInputValue(event.currentTarget.value, this.props.type);
-            this.setState({ value });
-            this.props.onChange(event, value);
-        };
+        this.onValueChange = this.onValueChange.bind(this);
+    }
+    onValueChange(event) {
+        const value = convertInputValue(event.target.value, this.props.type);
+        this.setState({ value });
+        this.props.onChange(event, value);
     }
     render() {
         return (React.createElement(TextInput, Object.assign({}, this.props, this.state, { onChange: this.onValueChange })));
