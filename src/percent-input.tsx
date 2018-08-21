@@ -1,38 +1,49 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import {
-  HTMLInputElementProps,
-  StatefulTextInput,
-  TextInputProps,
-} from './text-input';
+import { HTMLInputElementProps, TextInput, TextInputProps } from './text-input';
 import { InputType } from './types/inputs';
 import { Units } from './types/units';
 import { Omit } from './types/utils';
 
 export type OmittedProps = 'type' | 'units' | 'placeholder' | 'max';
-export class PercentInput extends StatefulTextInput<OmittedProps> {
-  public static defaultProps: Partial<
-    TextInputProps & HTMLInputElementProps
-  > = {
-    max: 100,
-    placeholder: 'AUTO',
-    type: 'number',
-    units: '%',
-  };
-  public onValueChange = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    let value = event.currentTarget.value.length
-      ? Number(event.currentTarget.value)
-      : undefined;
-    value =
-      value < 0 || event.currentTarget.value === '-0'
-        ? undefined
-        : value > 100
-          ? 100
-          : value;
+export type PercentInputProps = Omit<
+  TextInputProps & HTMLInputElementProps,
+  OmittedProps
+>;
+export class PercentInput extends React.Component<PercentInputProps> {
+  public onValueChange = (
+    event: React.KeyboardEvent<HTMLInputElement>
+  ): any => {
+    // Have to use `undefined` in order to show the AUTO placeholder
+    // Other falsey values show a 0.
+    let value;
+    if (event.currentTarget.value.length) {
+      value = Number(event.currentTarget.value);
+    } else {
+      value = undefined;
+    }
+    if (value < 0 || event.currentTarget.value === '-0') {
+      value = undefined;
+    }
+    if (value > 100) {
+      value = 100;
+    }
 
-    this.setState({ value });
     this.props.onChange(event, value);
   };
+
+  public render() {
+    return (
+      <TextInput
+        {...this.props}
+        onChange={this.onValueChange}
+        max={100}
+        placeholder={'AUTO'}
+        type="number"
+        units="%"
+      />
+    );
+  }
 }
 
 export default PercentInput;
