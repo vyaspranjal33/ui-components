@@ -7661,11 +7661,7 @@ exports[`Storyshots FullScreen Modal ConfirmationModal with plain contents 1`] =
     </header>
     <div
       className="modal-content has-padding"
-    >
-      <div
-        className="row"
-      />
-    </div>
+    />
   </div>
 </div>
 `;
@@ -7832,110 +7828,106 @@ exports[`Storyshots Image Library with upload alert, no images 1`] = `
     className="modal-content"
   >
     <div
-      className="row"
+      className="wrap"
     >
-      <article
-        className="wrap"
+      <div
+        className="list-container"
       >
-        <div
-          className="list-container"
+        <section
+          onDragEnd={[Function]}
+          onDragLeave={[Function]}
+          onDragOver={[Function]}
+          onDrop={[Function]}
         >
           <section
-            onDragEnd={[Function]}
-            onDragLeave={[Function]}
-            onDragOver={[Function]}
-            onDrop={[Function]}
+            className="dropzone has-inline-alert"
+            onDragEnd={undefined}
+            onDragLeave={undefined}
+            onDragOver={undefined}
+            onDrop={undefined}
+            role="hidden"
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexWrap": "wrap",
+                "fontSize": "14px",
+                "justifyContent": "center",
+              }
+            }
           >
-            <section
-              className="dropzone has-inline-alert"
-              onDragEnd={undefined}
-              onDragLeave={undefined}
-              onDragOver={undefined}
-              onDrop={undefined}
-              role="hidden"
+            <div
               style={
                 Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexWrap": "wrap",
-                  "fontSize": "14px",
-                  "justifyContent": "center",
+                  "alignSelf": "flex-end",
                 }
               }
             >
               <div
+                className={undefined}
                 style={
                   Object {
-                    "alignSelf": "flex-end",
+                    "alignItems": "center",
+                    "display": "flex",
                   }
                 }
               >
-                <div
-                  className={undefined}
+                <i
+                  className="sg-icon sg-icon-image is-size-30"
+                  onClick={undefined}
                   style={
                     Object {
-                      "alignItems": "center",
-                      "display": "flex",
+                      "marginRight": "12px",
                     }
                   }
-                >
-                  <i
-                    className="sg-icon sg-icon-image is-size-30"
-                    onClick={undefined}
-                    style={
-                      Object {
-                        "marginRight": "12px",
-                      }
-                    }
-                  />
-                  <span>
-                    Drag and drop your images here, or
-                     
-                    <a
-                      href="#"
-                      onClick={[Function]}
-                    >
-                      choose images to upload
-                    </a>
-                    .
-                  </span>
-                </div>
+                />
+                <span>
+                  Drag and drop your images here, or
+                   
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    choose images to upload
+                  </a>
+                  .
+                </span>
               </div>
-              <div
-                className="alert alert-danger alert-inline"
-                role="alert"
-              >
-                <p>
-                  <i
-                    className="sg-icon sg-icon-warning"
-                    onClick={undefined}
-                    style={null}
-                  />
-                  The image you're attempting to upload exceeds our per-image size limit.
-                  <i
-                    className="sg-icon sg-icon-x"
-                    onClick={undefined}
-                    style={null}
-                  />
-                </p>
-              </div>
-            </section>
-            <input
-              accept="image/gif,image/jpeg,image/png"
-              onChange={[Function]}
-              style={
-                Object {
-                  "display": "none",
-                }
-              }
-              type="file"
-            />
+            </div>
+            <div
+              className="alert alert-danger alert-inline"
+              role="alert"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-warning"
+                  onClick={undefined}
+                  style={null}
+                />
+                The image you're attempting to upload exceeds our per-image size limit.
+                <i
+                  className="sg-icon sg-icon-x"
+                  onClick={undefined}
+                  style={null}
+                />
+              </p>
+            </div>
           </section>
-          <section
-            className="list"
+          <input
+            accept="image/gif,image/jpeg,image/png"
+            onChange={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            type="file"
           />
-        </div>
-      </article>
+        </section>
+        <section
+          className="list"
+        />
+      </div>
     </div>
   </div>
 </div>
@@ -7966,137 +7958,133 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
     className="modal-content"
   >
     <div
-      className="row"
+      className="wrap"
     >
-      <article
-        className="wrap"
+      <div
+        className="list-container"
       >
-        <div
-          className="list-container"
+        <section
+          onDragEnd={[Function]}
+          onDragLeave={[Function]}
+          onDragOver={[Function]}
+          onDrop={[Function]}
         >
           <section
-            onDragEnd={[Function]}
-            onDragLeave={[Function]}
-            onDragOver={[Function]}
-            onDrop={[Function]}
-          >
-            <section
-              className="dropzone"
-              onDragEnd={undefined}
-              onDragLeave={undefined}
-              onDragOver={undefined}
-              onDrop={undefined}
-              role="hidden"
-              style={
-                Object {
-                  "alignItems": "center",
-                  "display": "flex",
-                  "flexWrap": "wrap",
-                  "fontSize": "14px",
-                  "justifyContent": "center",
-                }
+            className="dropzone"
+            onDragEnd={undefined}
+            onDragLeave={undefined}
+            onDragOver={undefined}
+            onDrop={undefined}
+            role="hidden"
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexWrap": "wrap",
+                "fontSize": "14px",
+                "justifyContent": "center",
               }
+            }
+          >
+            <div
+              style={Object {}}
             >
               <div
-                style={Object {}}
+                className={undefined}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                  }
+                }
               >
-                <div
-                  className={undefined}
+                <i
+                  className="sg-icon sg-icon-image is-size-30"
+                  onClick={undefined}
                   style={
                     Object {
-                      "alignItems": "center",
-                      "display": "flex",
+                      "marginRight": "12px",
                     }
                   }
-                >
-                  <i
-                    className="sg-icon sg-icon-image is-size-30"
-                    onClick={undefined}
-                    style={
-                      Object {
-                        "marginRight": "12px",
-                      }
-                    }
-                  />
-                  <span>
-                    Drag and drop your images here, or
-                     
-                    <a
-                      href="#"
-                      onClick={[Function]}
-                    >
-                      choose images to upload
-                    </a>
-                    .
-                  </span>
-                </div>
+                />
+                <span>
+                  Drag and drop your images here, or
+                   
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    choose images to upload
+                  </a>
+                  .
+                </span>
               </div>
-            </section>
-            <input
-              accept="image/gif,image/jpeg,image/png"
-              onChange={[Function]}
-              style={
-                Object {
-                  "display": "none",
-                }
+            </div>
+          </section>
+          <input
+            accept="image/gif,image/jpeg,image/png"
+            onChange={[Function]}
+            style={
+              Object {
+                "display": "none",
               }
-              type="file"
-            />
-          </section>
-          <section
-            className="list"
+            }
+            type="file"
+          />
+        </section>
+        <section
+          className="list"
+        >
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
           >
-            <article
-              className="thumbnail-container"
-              onClick={[Function]}
-            >
-              <img
-                src="https://via.placeholder.com/100x300"
-              />
-            </article>
-            <article
-              className="thumbnail-container"
-              onClick={[Function]}
-            >
-              <img
-                src="https://via.placeholder.com/300x300"
-              />
-            </article>
-            <article
-              className="thumbnail-container"
-              onClick={[Function]}
-            >
-              <img
-                src="https://via.placeholder.com/300x100"
-              />
-            </article>
-            <article
-              className="thumbnail-container"
-              onClick={[Function]}
-            >
-              <img
-                src="https://via.placeholder.com/25x25"
-              />
-            </article>
-            <article
-              className="thumbnail-container"
-              onClick={[Function]}
-            >
-              <img
-                src="https://via.placeholder.com/50x400"
-              />
-            </article>
-            <article
-              className="thumbnail-container"
-              onClick={[Function]}
-            >
-              <img
-                src="https://via.placeholder.com/400x50"
-              />
-            </article>
-          </section>
-        </div>
-      </article>
+            <img
+              src="https://via.placeholder.com/100x300"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/300x300"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/300x100"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/25x25"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/50x400"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/400x50"
+            />
+          </div>
+        </section>
+      </div>
     </div>
   </div>
 </div>
