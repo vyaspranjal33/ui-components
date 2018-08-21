@@ -44,7 +44,7 @@ class ImageLibraryThumbnail extends Component<ImageLibraryThumbnailProps> {
     const isUploading = uploadPercent !== undefined && uploadPercent < 99;
 
     return (
-      <article
+      <div
         className={cn(Styles['thumbnail-container'], {
           [Styles['is-uploading']]: isUploading,
           [Styles['is-selected']]: isSelected,
@@ -60,7 +60,7 @@ class ImageLibraryThumbnail extends Component<ImageLibraryThumbnailProps> {
           </span>
         )}
         <img src={thumbnailUrl} />
-      </article>
+      </div>
     );
   }
 

@@ -66,7 +66,7 @@ export class ImageLibrary extends Component<
     const { selectedImage } = this.state;
 
     return (
-      <article className={Styles.wrap}>
+      <div className={Styles.wrap}>
         <div
           className={cn(Styles['list-container'], {
             [Styles['details-open']]: !!selectedImage,
@@ -94,7 +94,7 @@ export class ImageLibrary extends Component<
             renderActions={renderImageDetailsActions}
           />
         )}
-      </article>
+      </div>
     );
   }
 

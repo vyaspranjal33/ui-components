@@ -26,7 +26,7 @@ export class ImageLibraryDetailsPane extends Component<
     const { alert, dateFormatter, image, renderActions } = this.props;
 
     return (
-      <section className={Styles.wrap}>
+      <div className={Styles.wrap}>
         {!!alert && <div className={Styles['alert-wrap']}>{alert}</div>}
         <a
           href="javascript: void 0"
@@ -61,7 +61,7 @@ export class ImageLibraryDetailsPane extends Component<
         </div>
 
         {renderActions(image, this.onClose)}
-      </section>
+      </div>
     );
   }
 

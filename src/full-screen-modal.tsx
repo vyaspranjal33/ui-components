@@ -59,7 +59,7 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
           <h2>{title}</h2>
         </header>
         <div className={cn('modal-content', { 'has-padding': hasPadding })}>
-          <div className="row">{children}</div>
+          {children}
         </div>
       </div>,
       modalContainer
