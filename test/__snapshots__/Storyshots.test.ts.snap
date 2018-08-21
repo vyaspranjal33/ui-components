@@ -7667,11 +7667,7 @@ exports[`Storyshots FullScreen Modal ConfirmationModal with plain contents 1`] =
     </header>
     <div
       className="modal-content has-padding"
-    >
-      <div
-        className="row"
-      />
-    </div>
+    />
   </div>
 </div>
 `;
@@ -7814,228 +7810,290 @@ exports[`Storyshots Grid Width 12 1`] = `
 `;
 
 exports[`Storyshots Image Library with upload alert, no images 1`] = `
-<article>
-  <section
-    onDragEnd={[Function]}
-    onDragLeave={[Function]}
-    onDragOver={[Function]}
-    onDrop={[Function]}
+<div
+  className="modal-fullscreen is-open"
+>
+  <header
+    className="modal-fullscreen-header"
   >
-    <section
-      className="dropzone has-inline-alert"
-      onDragEnd={undefined}
-      onDragLeave={undefined}
-      onDragOver={undefined}
-      onDrop={undefined}
-      role="hidden"
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "flexWrap": "wrap",
-          "fontSize": "14px",
-          "justifyContent": "center",
-        }
-      }
+    <a
+      className="modal-close"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={undefined}
+        style={null}
+      />
+    </a>
+    <h2>
+      Image Library
+    </h2>
+  </header>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="wrap"
     >
       <div
-        style={
-          Object {
-            "alignSelf": "flex-end",
-          }
-        }
+        className="list-container"
       >
-        <div
-          className={undefined}
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-            }
-          }
+        <section
+          onDragEnd={[Function]}
+          onDragLeave={[Function]}
+          onDragOver={[Function]}
+          onDrop={[Function]}
         >
-          <i
-            className="sg-icon sg-icon-image is-size-30"
-            onClick={undefined}
+          <section
+            className="dropzone has-inline-alert"
+            onDragEnd={undefined}
+            onDragLeave={undefined}
+            onDragOver={undefined}
+            onDrop={undefined}
+            role="hidden"
             style={
               Object {
-                "marginRight": "12px",
+                "alignItems": "center",
+                "display": "flex",
+                "flexWrap": "wrap",
+                "fontSize": "14px",
+                "justifyContent": "center",
               }
             }
-          />
-          <span>
-            Drag and drop your images here, or
-             
-            <a
-              href="#"
-              onClick={[Function]}
+          >
+            <div
+              style={
+                Object {
+                  "alignSelf": "flex-end",
+                }
+              }
             >
-              choose images to upload
-            </a>
-            .
-          </span>
-        </div>
-      </div>
-      <div
-        className="alert alert-danger alert-inline"
-        role="alert"
-      >
-        <p>
-          <i
-            className="sg-icon sg-icon-warning"
-            onClick={undefined}
-            style={null}
+              <div
+                className={undefined}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                  }
+                }
+              >
+                <i
+                  className="sg-icon sg-icon-image is-size-30"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "marginRight": "12px",
+                    }
+                  }
+                />
+                <span>
+                  Drag and drop your images here, or
+                   
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    choose images to upload
+                  </a>
+                  .
+                </span>
+              </div>
+            </div>
+            <div
+              className="alert alert-danger alert-inline"
+              role="alert"
+            >
+              <p>
+                <i
+                  className="sg-icon sg-icon-warning"
+                  onClick={undefined}
+                  style={null}
+                />
+                The image you're attempting to upload exceeds our per-image size limit.
+                <i
+                  className="sg-icon sg-icon-x"
+                  onClick={undefined}
+                  style={null}
+                />
+              </p>
+            </div>
+          </section>
+          <input
+            accept="image/gif,image/jpeg,image/png"
+            onChange={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            type="file"
           />
-          The image you're attempting to upload exceeds our per-image size limit.
-          <i
-            className="sg-icon sg-icon-x"
-            onClick={undefined}
-            style={null}
-          />
-        </p>
+        </section>
+        <section
+          className="list"
+        />
       </div>
-    </section>
-    <input
-      accept="image/gif,image/jpeg,image/png"
-      onChange={[Function]}
-      style={
-        Object {
-          "display": "none",
-        }
-      }
-      type="file"
-    />
-  </section>
-  <section
-    className="list"
-  />
-</article>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Image Library without upload alert, with images 1`] = `
-<article>
-  <section
-    onDragEnd={[Function]}
-    onDragLeave={[Function]}
-    onDragOver={[Function]}
-    onDrop={[Function]}
+<div
+  className="modal-fullscreen is-open"
+>
+  <header
+    className="modal-fullscreen-header"
   >
-    <section
-      className="dropzone"
-      onDragEnd={undefined}
-      onDragLeave={undefined}
-      onDragOver={undefined}
-      onDrop={undefined}
-      role="hidden"
-      style={
-        Object {
-          "alignItems": "center",
-          "display": "flex",
-          "flexWrap": "wrap",
-          "fontSize": "14px",
-          "justifyContent": "center",
-        }
-      }
+    <a
+      className="modal-close"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={undefined}
+        style={null}
+      />
+    </a>
+    <h2>
+      Image Library
+    </h2>
+  </header>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="wrap"
     >
       <div
-        style={Object {}}
+        className="list-container"
       >
-        <div
-          className={undefined}
-          style={
-            Object {
-              "alignItems": "center",
-              "display": "flex",
-            }
-          }
+        <section
+          onDragEnd={[Function]}
+          onDragLeave={[Function]}
+          onDragOver={[Function]}
+          onDrop={[Function]}
         >
-          <i
-            className="sg-icon sg-icon-image is-size-30"
-            onClick={undefined}
+          <section
+            className="dropzone"
+            onDragEnd={undefined}
+            onDragLeave={undefined}
+            onDragOver={undefined}
+            onDrop={undefined}
+            role="hidden"
             style={
               Object {
-                "marginRight": "12px",
+                "alignItems": "center",
+                "display": "flex",
+                "flexWrap": "wrap",
+                "fontSize": "14px",
+                "justifyContent": "center",
               }
             }
-          />
-          <span>
-            Drag and drop your images here, or
-             
-            <a
-              href="#"
-              onClick={[Function]}
+          >
+            <div
+              style={Object {}}
             >
-              choose images to upload
-            </a>
-            .
-          </span>
-        </div>
+              <div
+                className={undefined}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                  }
+                }
+              >
+                <i
+                  className="sg-icon sg-icon-image is-size-30"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "marginRight": "12px",
+                    }
+                  }
+                />
+                <span>
+                  Drag and drop your images here, or
+                   
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    choose images to upload
+                  </a>
+                  .
+                </span>
+              </div>
+            </div>
+          </section>
+          <input
+            accept="image/gif,image/jpeg,image/png"
+            onChange={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            type="file"
+          />
+        </section>
+        <section
+          className="list"
+        >
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/100x300"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/300x300"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/300x100"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/25x25"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/50x400"
+            />
+          </div>
+          <div
+            className="thumbnail-container"
+            onClick={[Function]}
+          >
+            <img
+              src="https://via.placeholder.com/400x50"
+            />
+          </div>
+        </section>
       </div>
-    </section>
-    <input
-      accept="image/gif,image/jpeg,image/png"
-      onChange={[Function]}
-      style={
-        Object {
-          "display": "none",
-        }
-      }
-      type="file"
-    />
-  </section>
-  <section
-    className="list"
-  >
-    <article
-      className="thumbnail-container"
-      onClick={[Function]}
-    >
-      <img
-        src="https://via.placeholder.com/100x300"
-      />
-    </article>
-    <article
-      className="thumbnail-container"
-      onClick={[Function]}
-    >
-      <img
-        src="https://via.placeholder.com/300x300"
-      />
-    </article>
-    <article
-      className="thumbnail-container"
-      onClick={[Function]}
-    >
-      <img
-        src="https://via.placeholder.com/300x100"
-      />
-    </article>
-    <article
-      className="thumbnail-container"
-      onClick={[Function]}
-    >
-      <img
-        src="https://via.placeholder.com/25x25"
-      />
-    </article>
-    <article
-      className="thumbnail-container"
-      onClick={[Function]}
-    >
-      <img
-        src="https://via.placeholder.com/50x400"
-      />
-    </article>
-    <article
-      className="thumbnail-container"
-      onClick={[Function]}
-    >
-      <img
-        src="https://via.placeholder.com/400x50"
-      />
-    </article>
-  </section>
-</article>
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Loaders Centered Loader 1`] = `

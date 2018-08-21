@@ -18,18 +18,18 @@ export class FullscreenModal extends Component {
         modalWillReceiveProps(nextProps, this.props);
     }
     render() {
-        const _a = this.props, { modalContainer, isOpen, bodyNode, onClose, className, children, title } = _a, attributes = __rest(_a, ["modalContainer", "isOpen", "bodyNode", "onClose", "className", "children", "title"]);
+        const _a = this.props, { bodyNode, children, className, hasPadding, isOpen, modalContainer, onClose, title } = _a, attributes = __rest(_a, ["bodyNode", "children", "className", "hasPadding", "isOpen", "modalContainer", "onClose", "title"]);
         return ReactDOM.createPortal(React.createElement("div", Object.assign({ className: cn('modal-fullscreen', Styles['modal-fullscreen'], { [Styles['is-open']]: isOpen }, className) }, attributes),
             React.createElement("header", { className: "modal-fullscreen-header" },
                 React.createElement("a", { className: "modal-close", onClick: onClose },
                     React.createElement(Icon, { type: "x" })),
                 React.createElement("h2", null, title)),
-            React.createElement("div", { className: "modal-content has-padding" },
-                React.createElement("div", { className: "row" }, children))), modalContainer);
+            React.createElement("div", { className: cn('modal-content', { 'has-padding': hasPadding }) }, children)), modalContainer);
     }
 }
 FullscreenModal.defaultProps = {
     bodyNode: document.body,
+    hasPadding: true,
     modalContainer: document.body,
     onClose: () => { },
 };

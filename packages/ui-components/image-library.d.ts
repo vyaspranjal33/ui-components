@@ -12,23 +12,26 @@ export interface SGLibraryImage {
     uploadPercent?: number;
 }
 export interface ImageLibraryProps {
-    maximumImageBytes: number;
-    onUpload: (file: File) => void;
-    onUploadFailure?: (msg: string) => void;
-    uploadAlert?: React.ReactElement<AlertProps>;
+    dateFormatter: (utcMillis: number) => string;
+    detailsAlert?: React.ReactNode;
     images: Array<SGLibraryImage>;
+    maximumImageBytes: number;
+    onImageDeselected?: (image?: SGLibraryImage) => void;
+    onImageSelected?: (image?: SGLibraryImage) => void;
+    onUpload: (file: File) => void;
+    onUploadFailure?: () => void;
+    renderImageDetailsActions: (image?: SGLibraryImage, closeDetailsPane?: () => void) => React.ReactNode;
+    uploadAlert?: React.ReactElement<AlertProps>;
 }
 export interface ImageLibraryState {
-    selectedImageId?: string;
+    selectedImage?: SGLibraryImage;
 }
 export declare class ImageLibrary extends Component<ImageLibraryProps, ImageLibraryState> {
     state: ImageLibraryState;
     render(): JSX.Element;
     private onThumbnailClick;
+    private onImageDeselected;
     private onFileSelect;
     private onInvalidFile;
 }
-export declare const ERROR_CODES: {
-    FILE_SIZE: string;
-};
 export default ImageLibrary;
