@@ -22,6 +22,7 @@ export interface TextInputProps {
     info?: string;
     onBlur?: (event: FocusEvent, value: string | number) => void;
     style?: CSSProperties;
+    step?: number;
     units?: Units;
 }
 /**
@@ -57,12 +58,12 @@ export declare class TextInput extends React.Component<TextInputProps & HTMLInpu
     onInputBlur(event: any): void;
     render(): JSX.Element;
 }
-export declare class StatefulTextInput extends React.Component<TextInputProps> {
+export declare type BaseProps = TextInputProps & HTMLInputElementProps;
+export declare class StatefulTextInput<ExcludedProps extends keyof BaseProps = never> extends React.Component<Omit<BaseProps, ExcludedProps>> {
     static defaultProps: Partial<TextInputProps>;
     readonly state: {
         value: string | number;
     };
-    constructor(props: TextInputProps);
-    onValueChange(event: any): void;
+    onValueChange: (event: React.KeyboardEvent<HTMLInputElement>) => void;
     render(): JSX.Element;
 }
