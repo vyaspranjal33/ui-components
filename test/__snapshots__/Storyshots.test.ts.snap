@@ -6979,6 +6979,7 @@ exports[`Storyshots FilterableList FilterableList 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          step={null}
           type="text"
           value=""
         />
@@ -7100,6 +7101,7 @@ exports[`Storyshots FilterableList FilterableList as a Container Component 1`] =
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          step={null}
           type="text"
           value=""
         />
@@ -7221,6 +7223,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button 1`] = `
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          step={null}
           type="text"
           value=""
         />
@@ -7384,6 +7387,7 @@ exports[`Storyshots FilterableList FilterableList with Clear Button in Header 1`
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          step={null}
           type="text"
           value=""
         />
@@ -7505,6 +7509,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          step={null}
           type="text"
           value=""
         />
@@ -7532,6 +7537,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
           onBlur={[Function]}
           onChange={[Function]}
           onFocus={[Function]}
+          step={null}
           type="text"
           value=""
         />
@@ -8561,6 +8567,44 @@ exports[`Storyshots PageHeader Page Header containing: Breadcrumbs and a Page He
     </div>
   </div>
 </header>
+`;
+
+exports[`Storyshots Percent Input Basic 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-1"
+  >
+    <div
+      className="input-text-wrap has-units"
+      data-units="%"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="test-percentage"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="test-percentage"
+        max={100}
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="AUTO"
+        step={1}
+        type="number"
+        value=""
+      />
+      
+      
+    </div>
+  </div>
+</div>
 `;
 
 exports[`Storyshots Progress Horizontal Progress 1`] = `
@@ -14956,7 +15000,7 @@ exports[`Storyshots Template Card Blank Card 1`] = `
       >
         <g
           fill="none"
-          fill-rule="evenodd"
+          fillRule="evenodd"
         >
           <rect
             fill="#FFF"
@@ -15536,6 +15580,7 @@ exports[`Storyshots Text Input Quad Input 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={1}
         type="number"
         value={1}
       />
@@ -15564,6 +15609,7 @@ exports[`Storyshots Text Input Quad Input 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={1}
         type="number"
         value={2}
       />
@@ -15592,6 +15638,7 @@ exports[`Storyshots Text Input Quad Input 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={1}
         type="number"
         value={3}
       />
@@ -15620,6 +15667,7 @@ exports[`Storyshots Text Input Quad Input 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={1}
         type="number"
         value={4}
       />
@@ -15648,6 +15696,7 @@ exports[`Storyshots Text Input Stateless Text Input with No Value Passed In 1`] 
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={null}
     type="text"
     value=""
   />
@@ -15674,6 +15723,7 @@ exports[`Storyshots Text Input Stateless Text Input with a Value Passed as a Pro
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={null}
     type="text"
     value="Passed-In Value"
   />
@@ -15700,6 +15750,7 @@ exports[`Storyshots Text Input Text Input Is Disabled 1`] = `
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={null}
     type="text"
     value=""
   />
@@ -15726,6 +15777,7 @@ exports[`Storyshots Text Input Text Input Large 1`] = `
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={null}
     type="text"
     value=""
   />
@@ -15752,6 +15804,7 @@ exports[`Storyshots Text Input Text Input Simple 1`] = `
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={null}
     type="text"
     value=""
   />
@@ -15778,6 +15831,7 @@ exports[`Storyshots Text Input Text Input Simple with a value 1`] = `
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={null}
     type="text"
     value="omg wuuuut"
   />
@@ -15804,6 +15858,7 @@ exports[`Storyshots Text Input Text Input With Error 1`] = `
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={null}
     type="text"
     value=""
   />
@@ -15842,6 +15897,7 @@ exports[`Storyshots Text Input Text Input With Icon & Units (px) 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={1}
         type="number"
         value=""
       />
@@ -15870,6 +15926,7 @@ exports[`Storyshots Text Input Text Input With Info 1`] = `
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={null}
     type="text"
     value=""
   />
@@ -15901,6 +15958,7 @@ exports[`Storyshots Text Input Text Input With Numbers 1`] = `
     onBlur={[Function]}
     onChange={[Function]}
     onFocus={[Function]}
+    step={1}
     type="number"
     value=""
   />
@@ -15939,6 +15997,7 @@ exports[`Storyshots Text Input Text Input With Units (%) 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={1}
         type="number"
         value=""
       />
@@ -15974,6 +16033,7 @@ exports[`Storyshots Text Input Text Input With Units (px) 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={1}
         type="number"
         value=""
       />
@@ -16087,6 +16147,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value=""
       />
@@ -16161,6 +16222,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value=""
       />
@@ -16235,6 +16297,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value=""
       />
@@ -16305,6 +16368,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value=""
       />
@@ -16379,6 +16443,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value=""
       />
@@ -16450,6 +16515,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value=""
       />
@@ -16525,6 +16591,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value=""
       />
@@ -16596,6 +16663,7 @@ exports[`Storyshots Tooltip HTML Content 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value=""
       />
@@ -17391,6 +17459,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value="Event Announcements"
       />
@@ -17419,6 +17488,7 @@ exports[`Storyshots Unsubscribe Groups Add Unsubscribe Group 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value="Learn when we're coming to a city near you"
       />
@@ -17676,6 +17746,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value="Event Announcements"
       />
@@ -17704,6 +17775,7 @@ exports[`Storyshots Unsubscribe Groups Edit Unsubscribe Group 1`] = `
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
+        step={null}
         type="text"
         value="Learn when we're coming to a city near you"
       />

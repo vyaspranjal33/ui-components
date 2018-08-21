@@ -14,7 +14,8 @@
     "jsx": "react",
     "declaration": true,
     "declarationDir": "./packages/ui-components",
-    "newLine": "lf"
+    "newLine": "lf",
+    "noErrorTruncation": true
   },
   "include": ["./src/**/*.ts", "./src/**/*.tsx"],
   "exclude": ["./src/**/*.test.*"]

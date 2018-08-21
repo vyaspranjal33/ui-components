@@ -7,7 +7,7 @@ const BlankTemplateImage = (
     height="160"
     viewBox="0 0 160 160"
   >
-    <g fill="none" fill-rule="evenodd">
+    <g fill="none" fillRule="evenodd">
       <rect
         width="158.231"
         height="158.231"
