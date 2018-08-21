@@ -34,15 +34,15 @@ stories.add('Card with Image - Diff Name', () =>
 );
 
 
-stories.add('Card with Image - No badge', () =>
+stories.add('Card with Image - No editor type', () =>
   <div style={{width: '240px'}}>
     <TemplateCard onSelect={onSelect} templateId="09876"  name="Modern" thumbnailUrl="http://via.placeholder.com/240"/>
   </div>
 );
 
-const CustomEditBadge = <div style={{transform: 'rotate(45deg)'}}>Custom Badge</div>
+const CustomEditBadge = <div style={{color: 'red'}}>Styled Editor</div>
 
-stories.add('Card with Image - Custom Badge', () =>
+stories.add('Card with Image - Custom editor type', () =>
   <div style={{width: '240px'}}>
     <TemplateCard onSelect={onSelect} templateId="67890"  editorInfo={CustomEditBadge} name="Modern" thumbnailUrl="http://via.placeholder.com/240"/>
   </div>
