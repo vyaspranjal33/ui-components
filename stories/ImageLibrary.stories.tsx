@@ -3,7 +3,10 @@ import { storiesOf } from '@storybook/react';
 import React, { Component, Fragment } from 'react';
 
 import Alert from '../src/alert';
+import Button from '../src/button';
+import ButtonList from '../src/button-list';
 import ImageLibrary, { SGLibraryImage } from '../src/image-library';
+import FullscreenModal from '../src/full-screen-modal';
 
 const stories = storiesOf('Image Library', module);
 
@@ -31,6 +34,7 @@ const fileReader = new FileReader();
 
 interface ExampleContainerState {
   images: Array<SGLibraryImage>;
+  showDetailsSuccess: boolean;
   uploadingImage?: SGLibraryImage;
 }
 
@@ -39,6 +43,7 @@ interface ExampleContainerState {
 class ExampleContainer extends Component<any, ExampleContainerState> {
   public state: ExampleContainerState = {
     images: [],
+    showDetailsSuccess: false,
     uploadingImage: null,
   };
 
@@ -46,8 +51,15 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
     fileReader.onload = (e: any) => {
       this.setState((prevState) => {
         const { uploadingImage } = prevState;
+        const { result } = e.target;
         return {
-          uploadingImage: { ...uploadingImage, thumbnailUrl: e.target.result }
+          uploadingImage: {
+            ...uploadingImage,
+            thumbnailUrl: result,
+            originalUrl: result,
+            width: 999, // can't easily get width or height from filereader result
+            height: 888,
+          }
         };
       });
     };
@@ -57,14 +69,52 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
     const images = this.getImages();
 
     return (
-      <ImageLibrary
-        maximumImageBytes={4 * (1 << 20) /* 4 MB */}
-        onUpload={this.handleUpload}
-        onUploadFailure={action('invalid upload')}
-        {...this.props}
+      <FullscreenModal
+        hasPadding={false}
+        isOpen
+        title="Image Library"
+      >
+        <ImageLibrary
+          dateFormatter={(millis) => new Date(millis).toString()}
+          detailsAlert={this.getDetailsAlert()}
+          maximumImageBytes={4 * (1 << 20) /* 4 MB */}
+          onUpload={this.handleUpload}
+          onUploadFailure={action('invalid upload')}
+          {...this.props}
 
-        images={images}
-      />
+          images={images}
+          renderImageDetailsActions={(image) => (
+            <ButtonList>
+              <Button type="secondary" onClick={() => {}}>
+                Delete
+              </Button>
+              <Button type="primary" onClick={this.handleConfirm}>
+                Insert Image
+              </Button>
+            </ButtonList>
+          )}
+        />
+      </FullscreenModal>
+    );
+  }
+
+  private handleConfirm = () => {
+    // i don't want to use real transition group code here to avoid bloating the pkg.json
+    this.setState({ showDetailsSuccess: true });
+    setTimeout(() => this.setState({ showDetailsSuccess: false }), 3500);
+  }
+
+  private getDetailsAlert = () => {
+    if (!this.state.showDetailsSuccess) return null;
+
+    // consumer will use "real" transition group code.
+    // wrapped in a div to prove we don't type check that the alert has "AlertProps".
+    return (
+      <div>
+        <Alert type="success" dismissable={false}>
+          Wow! A good thing happened.
+        </Alert>
+      </div>
     );
   }
 
@@ -98,7 +148,12 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
     };
 
     setTimeout(uploadIllusion, 18);
-    this.setState({ uploadingImage: { id: file.name, name: file.name, uploadPercent: 0 }});
+    this.setState({ uploadingImage: {
+      id: file.name,
+      name: file.name,
+      uploadPercent: 0,
+      created: (new Date() as any) - 0, // date math is valid but ts complains
+    }});
   };
 
   private handleUploadComplete = () => {

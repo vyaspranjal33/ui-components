@@ -2,8 +2,9 @@
 import React, { Component } from 'react';
 import { ModalProps } from './utilities/modals';
 export interface FullScreenModelProps extends ModalProps {
-    children?: React.ReactChildren;
+    children?: React.ReactNode;
     className?: string;
+    hasPadding?: boolean;
     isOpen?: boolean;
     onClose?: (event: any) => void;
     modalContainer?: Element;

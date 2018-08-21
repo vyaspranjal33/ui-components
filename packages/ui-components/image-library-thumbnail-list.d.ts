@@ -3,8 +3,8 @@ import { Component } from 'react';
 import { SGLibraryImage } from './image-library';
 export interface ImageLibraryThumbnailListProps {
     images: Array<SGLibraryImage>;
-    onThumbnailClick: (id: string) => void;
-    selectedImageId?: string;
+    onThumbnailClick: (image?: SGLibraryImage) => void;
+    selectedImage?: SGLibraryImage;
 }
 export declare class ImageLibraryThumbnailList extends Component<ImageLibraryThumbnailListProps> {
     render(): JSX.Element;

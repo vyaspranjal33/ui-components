@@ -1,0 +1,15 @@
+@import './global/variables.scss';
+
+.wrap {
+  display: flex;
+}
+
+.list-container {
+  border: 0;
+  padding: 60px;
+  width: 100%;
+
+  &.details-open {
+    border-right: 1px solid $slate-10;
+  }
+}

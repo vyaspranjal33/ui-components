@@ -1,0 +1,63 @@
+@import './global/variables.scss';
+
+$img-wrap-width: 420px;
+$img-wrap-height: 300px;
+$pane-padding: 60px;
+
+.wrap {
+  padding: $pane-padding;
+  position: relative;
+
+  :global(.btn-list) {
+    margin-top: 27px;
+  }
+}
+
+// user-friendly place to dump an alert
+.alert-wrap {
+  position: absolute;
+  width: 100%;
+  top: 0;
+  margin-left: -($pane-padding);
+}
+
+.img-wrap {
+  background-color: $slate-02;
+  border: 1px solid $slate-10;
+  display: flex;
+  margin: 25px 0;
+
+  width: $img-wrap-width;
+  height: $img-wrap-height;
+
+  img {
+    max-width: 100%;
+    max-height: 100%;
+    margin: auto;
+  }
+}
+
+.metadata-wrap {
+  margin-bottom: 18px;
+  max-width: 300px;
+
+  h3,
+  p {
+    display: inline;
+    word-break: break-word;
+  }
+}
+
+.x-wrap {
+  display: flex;
+
+  right: 30px;
+  top: 30px;
+  position: absolute;
+}
+
+.x {
+  font-size: 20px;
+  cursor: pointer;
+  color: $slate-80;
+}
