@@ -15147,7 +15147,7 @@ exports[`Storyshots Template Card Card with Image - Code 1`] = `
 </div>
 `;
 
-exports[`Storyshots Template Card Card with Image - Custom Badge 1`] = `
+exports[`Storyshots Template Card Card with Image - Custom editor type 1`] = `
 <div
   style={
     Object {
@@ -15190,11 +15190,11 @@ exports[`Storyshots Template Card Card with Image - Custom Badge 1`] = `
       <div
         style={
           Object {
-            "transform": "rotate(45deg)",
+            "color": "red",
           }
         }
       >
-        Custom Badge
+        Styled Editor
       </div>
     </div>
   </div>
@@ -15303,7 +15303,7 @@ exports[`Storyshots Template Card Card with Image - Diff Name 1`] = `
 </div>
 `;
 
-exports[`Storyshots Template Card Card with Image - No badge 1`] = `
+exports[`Storyshots Template Card Card with Image - No editor type 1`] = `
 <div
   style={
     Object {
