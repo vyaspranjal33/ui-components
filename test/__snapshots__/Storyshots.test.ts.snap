@@ -7813,170 +7813,229 @@ exports[`Storyshots Grid Width 12 1`] = `
 </div>
 `;
 
-exports[`Storyshots Image Library with upload alert 1`] = `
-<section
-  onDragEnd={[Function]}
-  onDragLeave={[Function]}
-  onDragOver={[Function]}
-  onDrop={[Function]}
->
+exports[`Storyshots Image Library with upload alert, no images 1`] = `
+<article>
   <section
-    className="dropzone has-inline-alert"
-    onDragEnd={undefined}
-    onDragLeave={undefined}
-    onDragOver={undefined}
-    onDrop={undefined}
-    role="hidden"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexWrap": "wrap",
-        "fontSize": "14px",
-        "justifyContent": "center",
-      }
-    }
+    onDragEnd={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
   >
-    <div
+    <section
+      className="dropzone has-inline-alert"
+      onDragEnd={undefined}
+      onDragLeave={undefined}
+      onDragOver={undefined}
+      onDrop={undefined}
+      role="hidden"
       style={
         Object {
-          "alignSelf": "flex-end",
+          "alignItems": "center",
+          "display": "flex",
+          "flexWrap": "wrap",
+          "fontSize": "14px",
+          "justifyContent": "center",
         }
       }
     >
       <div
-        className={undefined}
         style={
           Object {
-            "alignItems": "center",
-            "display": "flex",
+            "alignSelf": "flex-end",
           }
         }
       >
-        <i
-          className="sg-icon sg-icon-image is-size-30"
-          onClick={undefined}
+        <div
+          className={undefined}
           style={
             Object {
-              "marginRight": "12px",
+              "alignItems": "center",
+              "display": "flex",
             }
           }
-        />
-        <span>
-          Drag and drop your images here, or
-           
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            choose images to upload
-          </a>
-          .
-        </span>
+        >
+          <i
+            className="sg-icon sg-icon-image is-size-30"
+            onClick={undefined}
+            style={
+              Object {
+                "marginRight": "12px",
+              }
+            }
+          />
+          <span>
+            Drag and drop your images here, or
+             
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              choose images to upload
+            </a>
+            .
+          </span>
+        </div>
       </div>
-    </div>
-    <div
-      className="alert alert-danger alert-inline"
-      role="alert"
-    >
-      <p>
-        <i
-          className="sg-icon sg-icon-warning"
-          onClick={undefined}
-          style={null}
-        />
-        The image you're attempting to upload exceeds our per-image size limit.
-        <i
-          className="sg-icon sg-icon-x"
-          onClick={undefined}
-          style={null}
-        />
-      </p>
-    </div>
-  </section>
-  <input
-    accept="image/gif,image/jpeg,image/png"
-    onChange={[Function]}
-    style={
-      Object {
-        "display": "none",
+      <div
+        className="alert alert-danger alert-inline"
+        role="alert"
+      >
+        <p>
+          <i
+            className="sg-icon sg-icon-warning"
+            onClick={undefined}
+            style={null}
+          />
+          The image you're attempting to upload exceeds our per-image size limit.
+          <i
+            className="sg-icon sg-icon-x"
+            onClick={undefined}
+            style={null}
+          />
+        </p>
+      </div>
+    </section>
+    <input
+      accept="image/gif,image/jpeg,image/png"
+      onChange={[Function]}
+      style={
+        Object {
+          "display": "none",
+        }
       }
-    }
-    type="file"
+      type="file"
+    />
+  </section>
+  <section
+    className="list"
   />
-</section>
+</article>
 `;
 
-exports[`Storyshots Image Library without upload alert 1`] = `
-<section
-  onDragEnd={[Function]}
-  onDragLeave={[Function]}
-  onDragOver={[Function]}
-  onDrop={[Function]}
->
+exports[`Storyshots Image Library without upload alert, with images 1`] = `
+<article>
   <section
-    className="dropzone"
-    onDragEnd={undefined}
-    onDragLeave={undefined}
-    onDragOver={undefined}
-    onDrop={undefined}
-    role="hidden"
-    style={
-      Object {
-        "alignItems": "center",
-        "display": "flex",
-        "flexWrap": "wrap",
-        "fontSize": "14px",
-        "justifyContent": "center",
-      }
-    }
+    onDragEnd={[Function]}
+    onDragLeave={[Function]}
+    onDragOver={[Function]}
+    onDrop={[Function]}
   >
-    <div
-      style={Object {}}
+    <section
+      className="dropzone"
+      onDragEnd={undefined}
+      onDragLeave={undefined}
+      onDragOver={undefined}
+      onDrop={undefined}
+      role="hidden"
+      style={
+        Object {
+          "alignItems": "center",
+          "display": "flex",
+          "flexWrap": "wrap",
+          "fontSize": "14px",
+          "justifyContent": "center",
+        }
+      }
     >
       <div
-        className={undefined}
-        style={
-          Object {
-            "alignItems": "center",
-            "display": "flex",
-          }
-        }
+        style={Object {}}
       >
-        <i
-          className="sg-icon sg-icon-image is-size-30"
-          onClick={undefined}
+        <div
+          className={undefined}
           style={
             Object {
-              "marginRight": "12px",
+              "alignItems": "center",
+              "display": "flex",
             }
           }
-        />
-        <span>
-          Drag and drop your images here, or
-           
-          <a
-            href="#"
-            onClick={[Function]}
-          >
-            choose images to upload
-          </a>
-          .
-        </span>
+        >
+          <i
+            className="sg-icon sg-icon-image is-size-30"
+            onClick={undefined}
+            style={
+              Object {
+                "marginRight": "12px",
+              }
+            }
+          />
+          <span>
+            Drag and drop your images here, or
+             
+            <a
+              href="#"
+              onClick={[Function]}
+            >
+              choose images to upload
+            </a>
+            .
+          </span>
+        </div>
       </div>
-    </div>
-  </section>
-  <input
-    accept="image/gif,image/jpeg,image/png"
-    onChange={[Function]}
-    style={
-      Object {
-        "display": "none",
+    </section>
+    <input
+      accept="image/gif,image/jpeg,image/png"
+      onChange={[Function]}
+      style={
+        Object {
+          "display": "none",
+        }
       }
-    }
-    type="file"
-  />
-</section>
+      type="file"
+    />
+  </section>
+  <section
+    className="list"
+  >
+    <article
+      className="thumbnail-container"
+      onClick={[Function]}
+    >
+      <img
+        src="https://via.placeholder.com/100x300"
+      />
+    </article>
+    <article
+      className="thumbnail-container"
+      onClick={[Function]}
+    >
+      <img
+        src="https://via.placeholder.com/300x300"
+      />
+    </article>
+    <article
+      className="thumbnail-container"
+      onClick={[Function]}
+    >
+      <img
+        src="https://via.placeholder.com/300x100"
+      />
+    </article>
+    <article
+      className="thumbnail-container"
+      onClick={[Function]}
+    >
+      <img
+        src="https://via.placeholder.com/25x25"
+      />
+    </article>
+    <article
+      className="thumbnail-container"
+      onClick={[Function]}
+    >
+      <img
+        src="https://via.placeholder.com/50x400"
+      />
+    </article>
+    <article
+      className="thumbnail-container"
+      onClick={[Function]}
+    >
+      <img
+        src="https://via.placeholder.com/400x50"
+      />
+    </article>
+  </section>
+</article>
 `;
 
 exports[`Storyshots Loaders Centered Loader 1`] = `
