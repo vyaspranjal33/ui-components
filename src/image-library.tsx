@@ -34,7 +34,7 @@ export interface ImageLibraryProps {
   onImageSelected?: (image?: SGLibraryImage) => void;
 
   onUpload: (file: File) => void;
-  onUploadFailure?: () => void;
+  onUploadFailure?: (file: File) => void;
   renderImageDetailsActions: (
     image?: SGLibraryImage,
     closeDetailsPane?: () => void
@@ -126,7 +126,7 @@ export class ImageLibrary extends Component<
     // probably best to leave it to the client to figure out why for now.
     // i don't want to go mucking about the internals in the file-upload to address
     // this without a larger discussion first.
-    this.props.onUploadFailure();
+    this.props.onUploadFailure(files[0]);
   };
 }
 
