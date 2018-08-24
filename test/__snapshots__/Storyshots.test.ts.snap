@@ -153,7 +153,7 @@ exports[`Storyshots Accordion Accordion - Caret Left 1`] = `
 
 exports[`Storyshots Accordion Accordion - Editor 1`] = `
 <div
-  className="accordion-wrapper is-editor"
+  className="accordion-wrapper accordion-caret-left is-editor"
 >
   <div
     className="accordion-panel is-visible"

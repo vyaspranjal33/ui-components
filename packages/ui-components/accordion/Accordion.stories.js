@@ -46,7 +46,7 @@ stories.add('Accordion - Large', () => (React.createElement(Accordion, { large: 
 const CardContent = ({ title, iconType }) => (React.createElement("p", null,
     React.createElement(Icon, { type: iconType }),
     title));
-stories.add('Accordion - Editor', () => (React.createElement(Accordion, { editor: true },
+stories.add('Accordion - Editor', () => (React.createElement(Accordion, { editor: true, caretLeft: true },
     React.createElement(AccordionPanel, { open: true, title: React.createElement("h4", null, "Add Modules") },
         React.createElement("div", null,
             React.createElement(Card, { module: true, centered: true },
