@@ -103,7 +103,7 @@ const CardContent: React.SFC<any> = ({ title, iconType }) => (
 );
 
 stories.add('Accordion - Editor', () => (
-  <Accordion editor>
+  <Accordion editor caretLeft>
     <AccordionPanel open title={<h4>Add Modules</h4>}>
       <div>
         <Card module centered>

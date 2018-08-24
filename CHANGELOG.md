@@ -1,4 +1,6 @@
 # CHANGELOG
+## 1.5.6
+- Update editor accordion style, caret position
 ## 1.5.5
 - Fix error with <FileUpload /> in FireFox
 ## 1.2.5
