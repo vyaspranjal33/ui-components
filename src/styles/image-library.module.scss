@@ -9,6 +9,7 @@
   border: 0;
   padding: 60px;
   width: 100%;
+  overflow: auto;
 
   &.details-open {
     border-right: 1px solid $slate-10;
