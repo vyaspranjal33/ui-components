@@ -19,7 +19,7 @@ export interface ImageLibraryProps {
     onImageDeselected?: (image?: SGLibraryImage) => void;
     onImageSelected?: (image?: SGLibraryImage) => void;
     onUpload: (file: File) => void;
-    onUploadFailure?: () => void;
+    onUploadFailure?: (file: File) => void;
     renderImageDetailsActions: (image?: SGLibraryImage, closeDetailsPane?: () => void) => React.ReactNode;
     uploadAlert?: React.ReactElement<AlertProps>;
 }
