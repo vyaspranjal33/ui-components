@@ -2518,6 +2518,434 @@ exports[`Storyshots Checkbox Standard Checkbox 1`] = `
 </div>
 `;
 
+exports[`Storyshots Color Palette Bare 1`] = `
+<div
+  className="dismissable-background"
+  onClick={[Function]}
+>
+  <div
+    className="color-palette"
+    style={
+      Object {
+        "left": 0,
+        "top": 0,
+      }
+    }
+  >
+    <div
+      className="saturation"
+    >
+      <div
+        onMouseDown={[Function]}
+        onTouchMove={[Function]}
+        onTouchStart={[Function]}
+        style={
+          Object {
+            "MozBorderRadius": undefined,
+            "OBorderRadius": undefined,
+            "WebkitBorderRadius": undefined,
+            "background": "hsl(249.99999999999994,100%, 50%)",
+            "borderRadius": undefined,
+            "bottom": "0px",
+            "left": "0px",
+            "msBorderRadius": undefined,
+            "position": "absolute",
+            "right": "0px",
+            "top": "0px",
+          }
+        }
+      >
+        <style>
+          
+          .saturation-white {
+            background: -webkit-linear-gradient(to right, #fff, rgba(255,255,255,0));
+            background: linear-gradient(to right, #fff, rgba(255,255,255,0));
+          }
+          .saturation-black {
+            background: -webkit-linear-gradient(to top, #000, rgba(0,0,0,0));
+            background: linear-gradient(to top, #000, rgba(0,0,0,0));
+          }
+        
+        </style>
+        <div
+          className="saturation-white"
+          style={
+            Object {
+              "MozBorderRadius": undefined,
+              "OBorderRadius": undefined,
+              "WebkitBorderRadius": undefined,
+              "borderRadius": undefined,
+              "bottom": "0px",
+              "left": "0px",
+              "msBorderRadius": undefined,
+              "position": "absolute",
+              "right": "0px",
+              "top": "0px",
+            }
+          }
+        >
+          <div
+            className="saturation-black"
+            style={
+              Object {
+                "MozBorderRadius": undefined,
+                "MozBoxShadow": undefined,
+                "OBorderRadius": undefined,
+                "OBoxShadow": undefined,
+                "WebkitBorderRadius": undefined,
+                "WebkitBoxShadow": undefined,
+                "borderRadius": undefined,
+                "bottom": "0px",
+                "boxShadow": undefined,
+                "left": "0px",
+                "msBorderRadius": undefined,
+                "msBoxShadow": undefined,
+                "position": "absolute",
+                "right": "0px",
+                "top": "0px",
+              }
+            }
+          />
+          <div
+            style={
+              Object {
+                "cursor": "default",
+                "left": "66.66666666666667%",
+                "position": "absolute",
+                "top": "70%",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "MozBorderRadius": "50%",
+                  "MozBoxShadow": "0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4)",
+                  "MozTransform": "translate(-2px, -2px)",
+                  "OBorderRadius": "50%",
+                  "OBoxShadow": "0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4)",
+                  "OTransform": "translate(-2px, -2px)",
+                  "WebkitBorderRadius": "50%",
+                  "WebkitBoxShadow": "0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4)",
+                  "WebkitTransform": "translate(-2px, -2px)",
+                  "borderRadius": "50%",
+                  "boxShadow": "0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4)",
+                  "cursor": "hand",
+                  "height": "4px",
+                  "msBorderRadius": "50%",
+                  "msBoxShadow": "0 0 0 1.5px #fff, inset 0 0 1px 1px rgba(0,0,0,.3),
+            0 0 1px 2px rgba(0,0,0,.4)",
+                  "msTransform": "translate(-2px, -2px)",
+                  "transform": "translate(-2px, -2px)",
+                  "width": "4px",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="hue"
+    >
+      <div
+        style={
+          Object {
+            "MozBorderRadius": undefined,
+            "MozBoxShadow": undefined,
+            "OBorderRadius": undefined,
+            "OBoxShadow": undefined,
+            "WebkitBorderRadius": undefined,
+            "WebkitBoxShadow": undefined,
+            "borderRadius": undefined,
+            "bottom": "0px",
+            "boxShadow": undefined,
+            "left": "0px",
+            "msBorderRadius": undefined,
+            "msBoxShadow": undefined,
+            "position": "absolute",
+            "right": "0px",
+            "top": "0px",
+          }
+        }
+      >
+        <div
+          className="hue-horizontal"
+          onMouseDown={[Function]}
+          onTouchMove={[Function]}
+          onTouchStart={[Function]}
+          style={
+            Object {
+              "MozBorderRadius": undefined,
+              "OBorderRadius": undefined,
+              "WebkitBorderRadius": undefined,
+              "borderRadius": undefined,
+              "height": "100%",
+              "msBorderRadius": undefined,
+              "padding": "0 2px",
+              "position": "relative",
+            }
+          }
+        >
+          <style>
+            
+            .hue-horizontal {
+              background: linear-gradient(to right, #f00 0%, #ff0 17%, #0f0
+                33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+              background: -webkit-linear-gradient(to right, #f00 0%, #ff0
+                17%, #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+            }
+
+            .hue-vertical {
+              background: linear-gradient(to top, #f00 0%, #ff0 17%, #0f0 33%,
+                #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+              background: -webkit-linear-gradient(to top, #f00 0%, #ff0 17%,
+                #0f0 33%, #0ff 50%, #00f 67%, #f0f 83%, #f00 100%);
+            }
+          
+          </style>
+          <div
+            style={
+              Object {
+                "left": "69.44444444444443%",
+                "position": "absolute",
+              }
+            }
+          >
+            <div
+              style={
+                Object {
+                  "MozBorderRadius": "1px",
+                  "MozBoxShadow": "0 0 2px rgba(0, 0, 0, .6)",
+                  "MozTransform": "translateX(-2px)",
+                  "OBorderRadius": "1px",
+                  "OBoxShadow": "0 0 2px rgba(0, 0, 0, .6)",
+                  "OTransform": "translateX(-2px)",
+                  "WebkitBorderRadius": "1px",
+                  "WebkitBoxShadow": "0 0 2px rgba(0, 0, 0, .6)",
+                  "WebkitTransform": "translateX(-2px)",
+                  "background": "#fff",
+                  "borderRadius": "1px",
+                  "boxShadow": "0 0 2px rgba(0, 0, 0, .6)",
+                  "height": "8px",
+                  "marginTop": "1px",
+                  "msBorderRadius": "1px",
+                  "msBoxShadow": "0 0 2px rgba(0, 0, 0, .6)",
+                  "msTransform": "translateX(-2px)",
+                  "transform": "translateX(-2px)",
+                  "width": "4px",
+                }
+              }
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="ColorPalette-controls controls"
+    >
+      <article
+        className="color-swatch current-color-swatch"
+        onClick={[Function]}
+        style={
+          Object {
+            "background": "#22194d",
+          }
+        }
+      />
+      <div
+        className="HexColorControl hex-color-control"
+      >
+        <div
+          style={
+            Object {
+              "position": "relative",
+            }
+          }
+        >
+          <input
+            onBlur={[Function]}
+            onChange={[Function]}
+            onKeyDown={[Function]}
+            placeholder={undefined}
+            spellCheck="false"
+            style={Object {}}
+            value="#22194D"
+          />
+          <span
+            onMouseDown={[Function]}
+            style={Object {}}
+          >
+            hex
+          </span>
+        </div>
+      </div>
+      <div
+        className="RGBCColorControls rgb-color-controls"
+      >
+        <div
+          className="rgb-color-control"
+        >
+          <div
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <input
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder={undefined}
+              spellCheck="false"
+              style={Object {}}
+              value="34"
+            />
+            <span
+              onMouseDown={[Function]}
+              style={Object {}}
+            >
+              r
+            </span>
+          </div>
+        </div>
+        <div
+          className="rgb-color-control"
+        >
+          <div
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <input
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder={undefined}
+              spellCheck="false"
+              style={Object {}}
+              value="25"
+            />
+            <span
+              onMouseDown={[Function]}
+              style={Object {}}
+            >
+              g
+            </span>
+          </div>
+        </div>
+        <div
+          className="rgb-color-control"
+        >
+          <div
+            style={
+              Object {
+                "position": "relative",
+              }
+            }
+          >
+            <input
+              onBlur={[Function]}
+              onChange={[Function]}
+              onKeyDown={[Function]}
+              placeholder={undefined}
+              spellCheck="false"
+              style={Object {}}
+              value="77"
+            />
+            <span
+              onMouseDown={[Function]}
+              style={Object {}}
+            >
+              b
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section
+      className="SavedColorList saved-color-list"
+    >
+      <button
+        className="add-color-button"
+        onClick={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-plus"
+          onClick={undefined}
+          style={null}
+        />
+      </button>
+    </section>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Color Palette Color Picker 1`] = `
+<div
+  className="picker-wrapper"
+>
+  <label />
+  <div
+    className="inputs-wrapper"
+  >
+    <i
+      className="reset-button sg-icon sg-icon-reload"
+      data-role="reset-button"
+      onClick={[Function]}
+      style={null}
+      title="Reset to Default Color"
+    />
+    <div
+      className="input-text-wrap"
+      style={Object {}}
+    >
+      <label
+        className="input-text-label"
+        htmlFor="color-picker"
+      >
+        
+      </label>
+      <input
+        aria-describedby=""
+        id="color-picker"
+        name={undefined}
+        onBlur={[Function]}
+        onChange={[Function]}
+        onFocus={[Function]}
+        placeholder="auto"
+        step={null}
+        type="text"
+        value=""
+      />
+      
+      
+    </div>
+    <button
+      className="bubble"
+      data-role="color-picker-trigger"
+      onClick={[Function]}
+      style={
+        Object {
+          "backgroundColor": "",
+        }
+      }
+    />
+  </div>
+  <div
+    className="cp-default"
+    role="color-picker-container"
+  />
+</div>
+`;
+
 exports[`Storyshots ConfirmationModal ConfirmationModal with icon 1`] = `
 <div>
   <button
@@ -9664,7 +10092,7 @@ exports[`Storyshots Segment Term Segment term with alert 1`] = `
       style={
         Object {
           "color": "slate-60",
-          "opacity": "1",
+          "opacity": 1,
         }
       }
     />
@@ -9800,7 +10228,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
           style={
             Object {
               "color": "slate-60",
-              "opacity": "1",
+              "opacity": 1,
             }
           }
         />
@@ -9832,7 +10260,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
           style={
             Object {
               "color": "slate-60",
-              "opacity": "1",
+              "opacity": 1,
             }
           }
         />

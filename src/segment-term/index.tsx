@@ -64,7 +64,7 @@ export class SegmentTerm extends PureComponent<SegmentTermProps> {
         <Icon
           type="pencil"
           className={cn('segment-term-edit', Styles['segment-term-edit'])}
-          style={{ opacity: '1', color: ScssVars['slate-60'] }}
+          style={{ opacity: 1, color: ScssVars['slate-60'] }}
         />
       );
     }

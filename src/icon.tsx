@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { ButtonHTMLAttributes } from 'react';
 import IconSizeType from './types/icon-sizes';
 import { IconType } from './types/icons';
 import cn from './utilities/classnames';
@@ -11,12 +11,13 @@ export interface IconProps {
   onClick?: (event: any) => void;
   onDark?: boolean;
   size?: IconSizeType;
-  style?: { [key: string]: string };
 }
 
 const lightStyle = { color: 'white' };
 
-export const Icon: React.SFC<IconProps> = ({
+export const Icon: React.SFC<
+  IconProps & React.InputHTMLAttributes<HTMLButtonElement>
+> = ({
   type,
   className,
   onClick: handleClick,
