@@ -8,9 +8,6 @@ export interface IconProps {
     onClick?: (event: any) => void;
     onDark?: boolean;
     size?: IconSizeType;
-    style?: {
-        [key: string]: string;
-    };
 }
-export declare const Icon: React.SFC<IconProps>;
+export declare const Icon: React.SFC<IconProps & React.InputHTMLAttributes<HTMLButtonElement>>;
 export default Icon;

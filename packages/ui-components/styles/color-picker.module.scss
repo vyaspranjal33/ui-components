@@ -1,0 +1,45 @@
+.picker-wrapper {
+  display: flex;
+  width: 100%;
+
+  label {
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+}
+
+.inputs-wrapper {
+  display: flex;
+
+  :global .input-text-wrap {
+    margin: auto;
+    padding: 0;
+    width: 75px;
+
+    input {
+      text-transform: uppercase;
+    }
+  }
+}
+
+.bubble {
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(69, 69, 69, 0.5);
+  margin-left: 5px;
+  cursor: pointer;
+  outline: none;
+}
+
+.reset-button {
+  font-size: 20px;
+  line-height: 25px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+// if you set allowEmpty = true, it gives a big ugly x in the color picker window, so hide that sucka
+:global .sp-container .sp-clear.sp-clear-display {
+  display: none;
+}
