@@ -15,9 +15,7 @@ export interface IconProps {
 
 const lightStyle = { color: 'white' };
 
-export const Icon: React.SFC<
-  IconProps & React.InputHTMLAttributes<HTMLButtonElement>
-> = ({
+export const Icon: React.SFC<IconProps & React.InputHTMLAttributes<any>> = ({
   type,
   className,
   onClick: handleClick,
