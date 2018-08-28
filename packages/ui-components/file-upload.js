@@ -106,7 +106,8 @@ export class FileUpload extends Component {
         this.fileTypeIsSupported = (files) => {
             const { supportedType } = this.props;
             return some(files, (file) => {
-                return includes(supportedType, file.type);
+                // osx directories & apps have type of empty string.
+                return !!file.type && includes(supportedType, file.type);
             });
         };
         this.updateCurrentFile = (files, event) => {
