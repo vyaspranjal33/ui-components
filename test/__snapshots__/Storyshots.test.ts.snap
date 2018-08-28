@@ -9268,6 +9268,424 @@ exports[`Storyshots Radio Standard Radio 1`] = `
 </div>
 `;
 
+exports[`Storyshots Save Button Primary 1`] = `
+<button
+  className="btn btn-primary btn-save undefined"
+  disabled={false}
+  hasIcon={undefined}
+  id="stui-test-locator-abc"
+  onClick={[Function]}
+  saved={false}
+  saving={false}
+  type="button"
+>
+  <svg
+    className="sg-loader is-small loader-on-dark"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-right"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={5}
+      width={5}
+    />
+  </svg>
+  <i
+    className="sg-icon sg-icon-check"
+    onClick={undefined}
+    style={null}
+  />
+  <div
+    className="btn-text"
+  >
+    Save
+  </div>
+</button>
+`;
+
+exports[`Storyshots Save Button Primary on dark 1`] = `
+<div
+  style={
+    Object {
+      "background": "#060235",
+      "padding": "25px",
+      "width": "300px",
+    }
+  }
+>
+  <button
+    className="btn btn-primary btn-save undefined btn-on-dark"
+    disabled={false}
+    hasIcon={undefined}
+    id="stui-test-locator-abc"
+    onClick={[Function]}
+    saved={false}
+    saving={false}
+    type="button"
+  >
+    <svg
+      className="sg-loader is-small loader-on-dark"
+    >
+      <rect
+        className="logo-square bottom-left"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square bottom-middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square top-middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square top-right"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle-left"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle-right"
+        height={5}
+        width={5}
+      />
+    </svg>
+    <i
+      className="sg-icon sg-icon-check"
+      onClick={undefined}
+      style={null}
+    />
+    <div
+      className="btn-text"
+    >
+      Save
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Save Button Secondary 1`] = `
+<button
+  className="btn btn-secondary btn-save undefined"
+  disabled={false}
+  hasIcon={undefined}
+  id="stui-test-locator-abc"
+  onClick={[Function]}
+  saved={false}
+  saving={false}
+  type="button"
+>
+  <svg
+    className="sg-loader is-small"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-right"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={5}
+      width={5}
+    />
+  </svg>
+  <i
+    className="sg-icon sg-icon-check"
+    onClick={undefined}
+    style={null}
+  />
+  <div
+    className="btn-text"
+  >
+    Save
+  </div>
+</button>
+`;
+
+exports[`Storyshots Save Button Secondary on dark 1`] = `
+<div
+  style={
+    Object {
+      "background": "#060235",
+      "padding": "25px",
+      "width": "300px",
+    }
+  }
+>
+  <button
+    className="btn btn-secondary btn-save undefined btn-on-dark"
+    disabled={false}
+    hasIcon={undefined}
+    id="stui-test-locator-abc"
+    onClick={[Function]}
+    saved={false}
+    saving={false}
+    type="button"
+  >
+    <svg
+      className="sg-loader is-small loader-on-dark"
+    >
+      <rect
+        className="logo-square bottom-left"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square bottom-middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square top-middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square top-right"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle-left"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle-right"
+        height={5}
+        width={5}
+      />
+    </svg>
+    <i
+      className="sg-icon sg-icon-check"
+      onClick={undefined}
+      style={null}
+    />
+    <div
+      className="btn-text"
+    >
+      Save
+    </div>
+  </button>
+</div>
+`;
+
+exports[`Storyshots Save Button With icon 1`] = `
+<button
+  className="btn btn-secondary btn-save undefined has-icon"
+  disabled={false}
+  hasIcon={true}
+  id="stui-test-locator-abc"
+  onClick={[Function]}
+  saved={false}
+  saving={false}
+  type="button"
+>
+  <i
+    className="sg-icon sg-icon-save-draft"
+    onClick={undefined}
+    style={null}
+  />
+  <svg
+    className="sg-loader is-small"
+  >
+    <rect
+      className="logo-square bottom-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square bottom-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-middle"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square top-right"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-left"
+      height={5}
+      width={5}
+    />
+    <rect
+      className="logo-square middle-right"
+      height={5}
+      width={5}
+    />
+  </svg>
+  <i
+    className="sg-icon sg-icon-check"
+    onClick={undefined}
+    style={null}
+  />
+  <div
+    className="btn-text"
+  >
+    Save
+  </div>
+</button>
+`;
+
+exports[`Storyshots Save Button With icon on dark 1`] = `
+<div
+  style={
+    Object {
+      "background": "#060235",
+      "padding": "25px",
+      "width": "300px",
+    }
+  }
+>
+  <button
+    className="btn btn-secondary btn-save undefined btn-on-dark has-icon"
+    disabled={false}
+    hasIcon={true}
+    id="stui-test-locator-abc"
+    onClick={[Function]}
+    saved={false}
+    saving={false}
+    type="button"
+  >
+    <i
+      className="sg-icon sg-icon-save-draft"
+      onClick={undefined}
+      style={null}
+    />
+    <svg
+      className="sg-loader is-small loader-on-dark"
+    >
+      <rect
+        className="logo-square bottom-left"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square bottom-middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square top-middle"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square top-right"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle-left"
+        height={5}
+        width={5}
+      />
+      <rect
+        className="logo-square middle-right"
+        height={5}
+        width={5}
+      />
+    </svg>
+    <i
+      className="sg-icon sg-icon-check"
+      onClick={undefined}
+      style={null}
+    />
+    <div
+      className="btn-text"
+    >
+      Save
+    </div>
+  </button>
+</div>
+`;
+
 exports[`Storyshots Segment Term Segment term which cannot be edited 1`] = `
 <div
   className="segment-term-wrap"
