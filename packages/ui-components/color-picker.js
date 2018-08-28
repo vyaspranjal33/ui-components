@@ -1,4 +1,13 @@
 /* eslint jsx-a11y/label-has-for: 0, jsx-a11y/aria-role: 0 */
+var __rest = (this && this.__rest) || function (s, e) {
+    var t = {};
+    for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0)
+        t[p] = s[p];
+    if (s != null && typeof Object.getOwnPropertySymbols === "function")
+        for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) if (e.indexOf(p[i]) < 0)
+            t[p[i]] = s[p[i]];
+    return t;
+};
 import React from 'react';
 import ColorPalette from './color-palette';
 import { Icon } from './icon';
@@ -24,18 +33,18 @@ export class ColorPicker extends React.Component {
         this.onReset = (event) => {
             const { onChange, resetValue } = this.props;
             event.preventDefault();
-            onChange(resetValue);
+            onChange(event, resetValue);
         };
         this.handleChangeFromTextInput = (e, color) => {
             if (!color && !e) {
-                this.props.onChange('');
+                this.props.onChange(e, '');
             }
             else {
-                this.props.onChange(e.currentTarget.value);
+                this.props.onChange(e, e.currentTarget.value);
             }
         };
         this.handleChangeFromColorPalette = (color) => {
-            this.props.onChange(color.hex);
+            this.props.onChange(null, color.hex);
         };
         this.toggleColorPalette = () => {
             const displayColorPalette = !this.state.displayColorPalette;
@@ -55,13 +64,13 @@ export class ColorPicker extends React.Component {
         };
     }
     render() {
-        const { labelText, resetValue, value } = this.props;
+        const _a = this.props, { labelText, resetValue, value, onChange } = _a, attributes = __rest(_a, ["labelText", "resetValue", "value", "onChange"]);
         const { displayColorPalette, top, left } = this.state;
         return (React.createElement("div", { className: Styles['picker-wrapper'] },
             React.createElement("label", null, labelText),
             React.createElement("div", { className: Styles['inputs-wrapper'] },
                 (resetValue || typeof resetValue === 'string') && (React.createElement(Icon, { className: Styles['reset-button'], type: "reload", "data-role": "reset-button", title: "Reset to Default Color", onClick: this.onReset })),
-                React.createElement(TextInput, { placeholder: "auto", type: 'text', id: "color-picker", value: value, onChange: this.handleChangeFromTextInput }),
+                React.createElement(TextInput, Object.assign({}, attributes, { id: this.props.id, onChange: this.handleChangeFromTextInput, placeholder: "auto", step: this.props.step, type: 'text', value: value })),
                 React.createElement("button", { className: Styles.bubble, "data-role": "color-picker-trigger", style: { backgroundColor: value }, onClick: this.toggleColorPalette, ref: element => {
                         this.colorPaletteButton = element;
                     } }),
