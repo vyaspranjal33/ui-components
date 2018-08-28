@@ -9,6 +9,21 @@ Re-useable React components based on the SendGrid's Style Guide.
 npm install @sendgrid/ui-components
 ```
 
+### Using your local UI-components in your project
+
+```bash
+cd ~/ui-components/packages/ui-components
+yarn link
+> info You can now run `yarn link "@sendgrid/ui-components"` in the projects where you want to use this package and it will be used instead.
+cd ~/ui-components/
+npx tsc --newline lf --watch
+```
+
+```bash
+cd ~/myCoolProject/
+yarn link "@sendgrid/ui-components"
+```
+
 ### Importing UI Components into Your Project
 
 To import the component on your desired page:
