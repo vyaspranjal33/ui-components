@@ -1,0 +1,53 @@
+.btn-save {
+  position: relative;
+  width: 90px;
+  padding-right: 0;
+  padding-left: 0;
+
+  :global {
+    .sg-icon-check,
+    .sg-loader,
+    .badge {
+      position: absolute;
+      top: calc(50% - 8px);
+      left: calc(50% - 8px);
+      float: none;
+      margin: 0 auto;
+      opacity: 0;
+    }
+
+    .badge {
+      margin-bottom: 0;
+    }
+  }
+
+  &.is-loading {
+    .btn-save-label,
+    .btn-text {
+      opacity: 0;
+    }
+
+    :global(.sg-loader) {
+      opacity: 1;
+    }
+  }
+
+  &.is-saved {
+    .btn-save-label,
+    .btn-text {
+      opacity: 0;
+    }
+    :global(.sg-icon-check) {
+      opacity: 1;
+    }
+    :global(.sg-loader) {
+      opacity: 0;
+    }
+  }
+
+  .btn-save-label,
+  :global(.sg-icon-check),
+  :global(.sg-loader) {
+    transition: opacity 0.3s;
+  }
+}
