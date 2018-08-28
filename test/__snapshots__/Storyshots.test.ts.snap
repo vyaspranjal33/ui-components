@@ -2909,19 +2909,20 @@ exports[`Storyshots Color Palette Color Picker 1`] = `
     >
       <label
         className="input-text-label"
-        htmlFor="color-picker"
+        htmlFor="test-color"
       >
         
       </label>
       <input
         aria-describedby=""
-        id="color-picker"
-        name={undefined}
+        data-role="color-value"
+        id="test-color"
+        name="color-story"
         onBlur={[Function]}
         onChange={[Function]}
         onFocus={[Function]}
         placeholder="auto"
-        step={null}
+        step={undefined}
         type="text"
         value=""
       />

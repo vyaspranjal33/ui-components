@@ -8,7 +8,7 @@ import ColorPalette from './color-palette';
 import { ColorResult } from 'react-color';
 import { Icon } from './icon';
 import Styles from './styles/color-picker.module.scss';
-import { TextInput } from './text-input';
+import { HTMLInputElementProps, TextInput } from './text-input';
 
 export function getPalettePosition(
   clientHeight: number,
@@ -28,12 +28,14 @@ export function getPalettePosition(
 
 export interface ColorPickerPropsTypes {
   labelText?: string;
+  name: string;
+  id: string;
   resetValue?: string; // reset color value and show/hide reset anchor
   value: string; // the actual value selected
-  onChange: (value: string) => void; // callback for what happens on change
+  onChange: (event: React.SyntheticEvent, value: string) => void; // callback for what happens on change
 }
 export class ColorPicker extends React.Component<
-  ColorPickerPropsTypes,
+  ColorPickerPropsTypes & HTMLInputElementProps,
   {
     displayColorPalette: boolean;
     top: number;
@@ -51,7 +53,7 @@ export class ColorPicker extends React.Component<
   public onReset = (event: React.MouseEvent<HTMLButtonElement>) => {
     const { onChange, resetValue } = this.props;
     event.preventDefault();
-    onChange(resetValue);
+    onChange(event, resetValue);
   };
 
   public handleChangeFromTextInput = (
@@ -59,14 +61,14 @@ export class ColorPicker extends React.Component<
     color: string
   ) => {
     if (!color && !e) {
-      this.props.onChange('');
+      this.props.onChange(e, '');
     } else {
-      this.props.onChange(e.currentTarget.value);
+      this.props.onChange(e, e.currentTarget.value);
     }
   };
 
   public handleChangeFromColorPalette = (color: ColorResult) => {
-    this.props.onChange(color.hex);
+    this.props.onChange(null, color.hex);
   };
 
   public toggleColorPalette = () => {
@@ -97,7 +99,13 @@ export class ColorPicker extends React.Component<
   };
 
   public render() {
-    const { labelText, resetValue, value } = this.props;
+    const {
+      labelText,
+      resetValue,
+      value,
+      onChange,
+      ...attributes
+    } = this.props;
     const { displayColorPalette, top, left } = this.state;
     return (
       <div className={Styles['picker-wrapper']}>
@@ -113,11 +121,13 @@ export class ColorPicker extends React.Component<
             />
           )}
           <TextInput
-            placeholder="auto"
-            type={'text'}
-            id="color-picker"
-            value={value}
+            {...attributes}
+            id={this.props.id}
             onChange={this.handleChangeFromTextInput}
+            placeholder="auto"
+            step={this.props.step as number} // weird typing issues with Input types
+            type={'text'}
+            value={value}
           />
           <button
             className={Styles.bubble}

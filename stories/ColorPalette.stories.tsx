@@ -10,7 +10,7 @@ class ColorWrapper extends React.Component<any, {value: string}> {
   public state = {
     value: ''
   }
-  public onChange = (value: string) => {
+  public onChange = (e: React.SyntheticEvent<HTMLInputElement>, value: string) => {
     this.setState({ value });
   }
   public render(){
@@ -20,6 +20,8 @@ class ColorWrapper extends React.Component<any, {value: string}> {
       value={this.state.value}
       data-role="color-value"
       resetValue=""
+      name="color-story"
+      id="test-color"
     />);
   }
 }
