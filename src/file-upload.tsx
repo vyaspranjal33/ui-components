@@ -195,7 +195,8 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
   public fileTypeIsSupported = (files: DataTransferItemList | FileList) => {
     const { supportedType } = this.props;
     return some(files, (file: File) => {
-      return includes(supportedType, file.type);
+      // osx directories & apps have type of empty string.
+      return !!file.type && includes(supportedType, file.type);
     });
   };
 
