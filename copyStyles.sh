@@ -6,4 +6,5 @@ mkdir -p packages/
 cd src
 
 rsync --relative -r --include="*/" --include="*.scss" --exclude="*" ./ ../packages/ui-components/
+rsync -r --prune-empty-dirs  --include="*.d.ts" ./@types/ ../packages/ui-components/@types/
 rsync --relative -r --prune-empty-dirs  --include="*/" --include="*.scss.d.ts" --exclude="*" ./ ../packages/ui-components/@types/

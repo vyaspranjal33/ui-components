@@ -32,7 +32,7 @@ export interface ColorPickerPropsTypes {
   id: string;
   resetValue?: string; // reset color value and show/hide reset anchor
   value: string; // the actual value selected
-  onChange: (event: React.SyntheticEvent, value: string) => void; // callback for what happens on change
+  onChange: (event: React.SyntheticEvent<any>, value: string) => void; // callback for what happens on change
 }
 export class ColorPicker extends React.Component<
   ColorPickerPropsTypes & HTMLInputElementProps,
