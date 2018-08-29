@@ -1,8 +1,8 @@
 import React, { PureComponent, ReactText } from 'react';
-import { Column } from './grid/column';
-import { Row } from './grid/row';
 import { TextInput } from './text-input';
 import { Units } from './types/units';
+
+import Styles from './styles/quad-input.module.scss';
 
 export type QuadInputs = 'top' | 'right' | 'bottom' | 'left';
 export type QuadInputValues = { [k in QuadInputs]: number };
@@ -23,22 +23,21 @@ export class QuadInput extends PureComponent<QuadInputProps> {
   public render() {
     const { id, units, values, ...attributes } = this.props;
     return (
-      <Row>
+      <div className={Styles['quad-input-wrap']}>
         {inputs.map(inputName => (
-          <Column key={`quad-input-column-${inputName}`} width={1}>
-            <TextInput
-              {...attributes}
-              id={`${id}-${inputName}`}
-              type="number"
-              name={inputName}
-              onChange={this.handleChange}
-              icon={inputName}
-              units={units}
-              value={values[inputName]}
-            />
-          </Column>
+          <TextInput
+            {...attributes}
+            key={`quad-input-column-${inputName}`}
+            id={`${id}-${inputName}`}
+            type="number"
+            name={inputName}
+            onChange={this.handleChange}
+            icon={inputName}
+            units={units}
+            value={values[inputName]}
+          />
         ))}
-      </Row>
+      </div>
     );
   }
 
