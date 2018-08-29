@@ -1,6 +1,6 @@
 .btn-save {
   position: relative;
-  width: 90px;
+  min-width: 90px;
   padding-right: 0;
   padding-left: 0;
 
@@ -19,6 +19,10 @@
     .badge {
       margin-bottom: 0;
     }
+  }
+
+  .btn-text {
+    display: inline;
   }
 
   &.is-loading {

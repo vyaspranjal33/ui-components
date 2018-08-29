@@ -9278,6 +9278,11 @@ exports[`Storyshots Save Button Primary 1`] = `
   onClick={[Function]}
   saved={false}
   saving={false}
+  style={
+    Object {
+      "minWidth": "123px",
+    }
+  }
   type="button"
 >
   <svg
@@ -9327,7 +9332,7 @@ exports[`Storyshots Save Button Primary 1`] = `
   <div
     className="btn-text"
   >
-    Save
+    Save Draft
   </div>
 </button>
 `;
@@ -9350,6 +9355,11 @@ exports[`Storyshots Save Button Primary on dark 1`] = `
     onClick={[Function]}
     saved={false}
     saving={false}
+    style={
+      Object {
+        "minWidth": "123px",
+      }
+    }
     type="button"
   >
     <svg
@@ -9399,7 +9409,7 @@ exports[`Storyshots Save Button Primary on dark 1`] = `
     <div
       className="btn-text"
     >
-      Save
+      Save Draft
     </div>
   </button>
 </div>
@@ -9414,6 +9424,11 @@ exports[`Storyshots Save Button Secondary 1`] = `
   onClick={[Function]}
   saved={false}
   saving={false}
+  style={
+    Object {
+      "minWidth": "123px",
+    }
+  }
   type="button"
 >
   <svg
@@ -9463,7 +9478,7 @@ exports[`Storyshots Save Button Secondary 1`] = `
   <div
     className="btn-text"
   >
-    Save
+    Save Draft
   </div>
 </button>
 `;
@@ -9486,6 +9501,11 @@ exports[`Storyshots Save Button Secondary on dark 1`] = `
     onClick={[Function]}
     saved={false}
     saving={false}
+    style={
+      Object {
+        "minWidth": "123px",
+      }
+    }
     type="button"
   >
     <svg
@@ -9535,7 +9555,7 @@ exports[`Storyshots Save Button Secondary on dark 1`] = `
     <div
       className="btn-text"
     >
-      Save
+      Save Draft
     </div>
   </button>
 </div>
@@ -9550,6 +9570,11 @@ exports[`Storyshots Save Button With icon 1`] = `
   onClick={[Function]}
   saved={false}
   saving={false}
+  style={
+    Object {
+      "minWidth": "123px",
+    }
+  }
   type="button"
 >
   <i
@@ -9604,7 +9629,7 @@ exports[`Storyshots Save Button With icon 1`] = `
   <div
     className="btn-text"
   >
-    Save
+    Save Draft
   </div>
 </button>
 `;
@@ -9627,6 +9652,11 @@ exports[`Storyshots Save Button With icon on dark 1`] = `
     onClick={[Function]}
     saved={false}
     saving={false}
+    style={
+      Object {
+        "minWidth": "123px",
+      }
+    }
     type="button"
   >
     <i
@@ -9681,7 +9711,7 @@ exports[`Storyshots Save Button With icon on dark 1`] = `
     <div
       className="btn-text"
     >
-      Save
+      Save Draft
     </div>
   </button>
 </div>

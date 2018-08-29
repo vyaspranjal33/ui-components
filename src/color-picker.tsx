@@ -6,6 +6,7 @@ import classnames from './utilities/classnames';
 import ColorPalette from './color-palette';
 
 import { ColorResult } from 'react-color';
+
 import { Icon } from './icon';
 import Styles from './styles/color-picker.module.scss';
 import { HTMLInputElementProps, TextInput } from './text-input';
@@ -42,61 +43,13 @@ export class ColorPicker extends React.Component<
     left: number;
   }
 > {
-  public state = {
+  public readonly state = {
     displayColorPalette: false,
     left: 0,
     top: 0,
   };
-  public paletteTriggerRect: ClientRect = null;
-  public colorPaletteButton: Element;
-
-  public onReset = (event: React.MouseEvent<HTMLButtonElement>) => {
-    const { onChange, resetValue } = this.props;
-    event.preventDefault();
-    onChange(event, resetValue);
-  };
-
-  public handleChangeFromTextInput = (
-    e: React.MouseEvent<HTMLButtonElement>,
-    color: string
-  ) => {
-    if (!color && !e) {
-      this.props.onChange(e, '');
-    } else {
-      this.props.onChange(e, e.currentTarget.value);
-    }
-  };
-
-  public handleChangeFromColorPalette = (color: ColorResult) => {
-    this.props.onChange(null, color.hex);
-  };
-
-  public toggleColorPalette = () => {
-    const displayColorPalette = !this.state.displayColorPalette;
-
-    // not in didMount so we can only compute this if we need it
-    this.paletteTriggerRect = this.colorPaletteButton.getBoundingClientRect();
-    const initialTop = this.paletteTriggerRect.top;
-    const initialLeft =
-      this.paletteTriggerRect.left + this.paletteTriggerRect.width / 2;
-
-    this.setState({ displayColorPalette, top: initialTop, left: initialLeft });
-  };
-
-  // Need to do some calculations to determine if this is being clipped by the window edge
-  // Also scoot it left by half its width to center it on the "bubble"
-  // Note: this needs to run AFTER toggleColorPalette so the palette can be rendered and
-  //   its initial size and position can be calculated.
-  public handleColorPaletteMount = (paletteRect: ClientRect) => {
-    this.setState(
-      getPalettePosition(
-        document.documentElement.clientHeight,
-        this.paletteTriggerRect ||
-          this.colorPaletteButton.getBoundingClientRect(),
-        paletteRect
-      )
-    );
-  };
+  private paletteTriggerRect: ClientRect = null;
+  private colorPaletteButton: Element;
 
   public render() {
     const {
@@ -153,6 +106,54 @@ export class ColorPicker extends React.Component<
       </div>
     );
   }
+
+  private onReset = (event: React.MouseEvent<HTMLButtonElement>) => {
+    const { onChange, resetValue } = this.props;
+    event.preventDefault();
+    onChange(event, resetValue);
+  };
+
+  private handleChangeFromTextInput = (
+    e: React.MouseEvent<HTMLButtonElement>,
+    color: string
+  ) => {
+    if (!color && !e) {
+      this.props.onChange(e, '');
+    } else {
+      this.props.onChange(e, e.currentTarget.value);
+    }
+  };
+
+  private handleChangeFromColorPalette = (color: ColorResult) => {
+    this.props.onChange(null, color.hex);
+  };
+
+  private toggleColorPalette = () => {
+    const displayColorPalette = !this.state.displayColorPalette;
+
+    // not in didMount so we can only compute this if we need it
+    this.paletteTriggerRect = this.colorPaletteButton.getBoundingClientRect();
+    const initialTop = this.paletteTriggerRect.top;
+    const initialLeft =
+      this.paletteTriggerRect.left + this.paletteTriggerRect.width / 2;
+
+    this.setState({ displayColorPalette, top: initialTop, left: initialLeft });
+  };
+
+  // Need to do some calculations to determine if this is being clipped by the window edge
+  // Also scoot it left by half its width to center it on the "bubble"
+  // Note: this needs to run AFTER toggleColorPalette so the palette can be rendered and
+  //   its initial size and position can be calculated.
+  private handleColorPaletteMount = (paletteRect: ClientRect) => {
+    this.setState(
+      getPalettePosition(
+        document.documentElement.clientHeight,
+        this.paletteTriggerRect ||
+          this.colorPaletteButton.getBoundingClientRect(),
+        paletteRect
+      )
+    );
+  };
 }
 
 export default ColorPicker;

@@ -43,9 +43,10 @@ class Wrapper extends React.Component<any, {
       onDark={this.props.onDark}
       onClick={this.handleClick}
       hasIcon={this.props.hasIcon}
+      style={{minWidth: '123px'}}
       id="stui-test-locator-abc"
     >
-      Save
+      Save Draft
     </SaveButton>
   }
 }
