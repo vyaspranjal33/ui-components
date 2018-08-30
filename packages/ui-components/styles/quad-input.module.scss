@@ -1,0 +1,8 @@
+.quad-input-wrap {
+  display: flex;
+  justify-content: space-between;
+  :global .input-text-wrap {
+    width: 25%;
+    margin-right: 10px;
+  }
+}

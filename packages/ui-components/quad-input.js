@@ -8,9 +8,8 @@ var __rest = (this && this.__rest) || function (s, e) {
     return t;
 };
 import React, { PureComponent } from 'react';
-import { Column } from './grid/column';
-import { Row } from './grid/row';
 import { TextInput } from './text-input';
+import Styles from './styles/quad-input.module.scss';
 const inputs = ['top', 'right', 'bottom', 'left'];
 export class QuadInput extends PureComponent {
     constructor(props) {
@@ -22,8 +21,7 @@ export class QuadInput extends PureComponent {
     }
     render() {
         const _a = this.props, { id, units, values } = _a, attributes = __rest(_a, ["id", "units", "values"]);
-        return (React.createElement(Row, null, inputs.map(inputName => (React.createElement(Column, { key: `quad-input-column-${inputName}`, width: 1 },
-            React.createElement(TextInput, Object.assign({}, attributes, { id: `${id}-${inputName}`, type: "number", name: inputName, onChange: this.handleChange, icon: inputName, units: units, value: values[inputName] })))))));
+        return (React.createElement("div", { className: Styles['quad-input-wrap'] }, inputs.map(inputName => (React.createElement(TextInput, Object.assign({}, attributes, { key: `quad-input-column-${inputName}`, id: `${id}-${inputName}`, type: "number", name: inputName, onChange: this.handleChange, icon: inputName, units: units, value: values[inputName] }))))));
     }
 }
 export default QuadInput;
