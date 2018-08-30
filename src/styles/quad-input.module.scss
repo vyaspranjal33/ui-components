@@ -1,8 +1,8 @@
 .quad-input-wrap {
   display: flex;
   justify-content: space-between;
-  max-width: 310px;
-  input[type='number'] {
-    width: 60px;
+  :global .input-text-wrap {
+    width: 25%;
+    margin-right: 10px;
   }
 }
