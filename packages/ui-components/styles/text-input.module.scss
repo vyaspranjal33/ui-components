@@ -176,8 +176,8 @@ input {
     &[class*='has-arrow-'] [type='number'],
     &[class*='has-space-'] [type='text'],
     &[class*='has-space-'] [type='number'] {
-      padding-right: 20px;
-      padding-left: 20px;
+      padding-right: 15px;
+      padding-left: 15px;
       text-align: right;
     }
   }
@@ -237,6 +237,12 @@ input {
 
   [type='number'] {
     padding-right: 20px;
+    &::-webkit-inner-spin-button,
+    &::-webkit-outer-spin-button {
+      -webkit-appearance: none;
+      -moz-appearance: textfield;
+      margin: 0;
+    }
   }
 }
 
