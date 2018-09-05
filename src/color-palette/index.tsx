@@ -1,6 +1,14 @@
+import debounce from 'lodash/debounce';
 import React from 'react';
-import { Color, CustomPicker, HSLColor, RGBColor } from 'react-color';
+import {
+  Color,
+  ColorResult,
+  CustomPicker,
+  HSLColor,
+  RGBColor,
+} from 'react-color';
 import { Saturation } from 'react-color/lib/components/common';
+import { ColorWrapChangeHandler } from 'react-color/lib/components/common/ColorWrap';
 import {
   ExportedColorProps,
   InjectedColorProps,
@@ -16,6 +24,7 @@ import Styles from '../styles/color-palette.module.scss';
 export interface ColorPaletteProps {
   onMount: (rectangle: any) => void;
   toggleColorPalette: (rectangle: any) => void;
+  onChangeComplete?: ColorWrapChangeHandler;
   top?: number;
   left?: number;
 }
@@ -23,9 +32,13 @@ export interface ColorPaletteProps {
 class ColorPalette extends React.Component<
   ColorPaletteProps & InjectedColorProps
 > {
+  public onChangeComplete: ColorWrapChangeHandler;
   public palette: Element;
   public componentDidMount() {
     this.props.onMount(this.palette && this.palette.getBoundingClientRect());
+    this.onChangeComplete = this.props.onChangeComplete
+      ? debounce(this.props.onChangeComplete, 100)
+      : () => {};
   }
 
   public render() {
@@ -33,7 +46,7 @@ class ColorPalette extends React.Component<
     const injectedProps = {
       hex: this.props.hex,
       hsl: this.props.hsl,
-      onChange: this.props.onChange,
+      onChange: this.onChange,
       rgb: this.props.rgb,
     };
     return (
@@ -46,18 +59,20 @@ class ColorPalette extends React.Component<
           }}
         >
           <div className={Styles.saturation}>
-            <Saturation {...this.props} onChange={this.props.onChange} />
+            <Saturation {...this.props} onChange={this.onChange} />
           </div>
           <HueSlider {...injectedProps} />
           <ColorControls colorProps={injectedProps} />
-          <ColorStorage
-            color={injectedProps.hex}
-            onChange={injectedProps.onChange}
-          />
+          <ColorStorage color={injectedProps.hex} onChange={this.onChange} />
         </div>
       </DismissableBackground>
     );
   }
+
+  private onChange: ColorWrapChangeHandler = color => {
+    this.props.onChange(color);
+    this.onChangeComplete(color);
+  };
 }
 
 export default CustomPicker<ColorPaletteProps>(ColorPalette);
