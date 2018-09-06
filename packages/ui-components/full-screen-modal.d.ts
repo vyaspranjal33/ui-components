@@ -12,7 +12,7 @@ export interface FullScreenModelProps extends ModalProps {
 }
 export declare class FullscreenModal extends Component<FullScreenModelProps> {
     static defaultProps: Partial<FullScreenModelProps>;
-    componentWillReceiveProps(nextProps: FullScreenModelProps): void;
+    componentDidUpdate(prevProps: FullScreenModelProps): void;
     render(): React.ReactPortal;
 }
 export default FullscreenModal;

@@ -17,8 +17,8 @@ const evaluateRenderProp = prop => {
     return typeof prop === 'string' ? prop : prop();
 };
 export class ConfirmationModal extends Component {
-    componentWillReceiveProps(nextProps) {
-        modalWillReceiveProps(nextProps, this.props);
+    componentDidUpdate(prevProps) {
+        modalWillReceiveProps(this.props, prevProps);
     }
     render() {
         const _a = this.props, { iconType, modalContainer, renderBody, renderActions, renderHeader, isOpen, bodyNode, className } = _a, attributes = __rest(_a, ["iconType", "modalContainer", "renderBody", "renderActions", "renderHeader", "isOpen", "bodyNode", "className"]);

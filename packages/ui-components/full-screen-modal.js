@@ -14,8 +14,8 @@ import cn from './utilities/classnames';
 import { modalWillReceiveProps } from './utilities/modals';
 import Styles from './styles/fullscreen-modal.module.scss';
 export class FullscreenModal extends Component {
-    componentWillReceiveProps(nextProps) {
-        modalWillReceiveProps(nextProps, this.props);
+    componentDidUpdate(prevProps) {
+        modalWillReceiveProps(this.props, prevProps);
     }
     render() {
         const _a = this.props, { bodyNode, children, className, hasPadding, isOpen, modalContainer, onClose, title } = _a, attributes = __rest(_a, ["bodyNode", "children", "className", "hasPadding", "isOpen", "modalContainer", "onClose", "title"]);

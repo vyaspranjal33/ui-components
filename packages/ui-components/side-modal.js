@@ -13,8 +13,8 @@ import Styles from './styles/modal.module.scss';
 import cn from './utilities/classnames';
 import { modalWillReceiveProps } from './utilities/modals';
 export class SideModal extends React.Component {
-    componentWillReceiveProps(nextProps) {
-        modalWillReceiveProps(nextProps, this.props);
+    componentDidUpdate(prevProps) {
+        modalWillReceiveProps(this.props, prevProps);
     }
     render() {
         const _a = this.props, { isOpen, onClose, children, modalContainer, bodyNode, className } = _a, attributes = __rest(_a, ["isOpen", "onClose", "children", "modalContainer", "bodyNode", "className"]);

@@ -15,7 +15,7 @@ export interface CenterModalProps extends ModalProps {
 }
 export declare class CenterModal extends Component<CenterModalProps> {
     static defaultProps: Partial<CenterModalProps>;
-    componentWillReceiveProps(nextProps: CenterModalProps): void;
+    componentDidUpdate(prevProps: CenterModalProps): void;
     render(): React.ReactPortal;
 }
 export default CenterModal;

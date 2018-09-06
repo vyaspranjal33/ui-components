@@ -13,7 +13,7 @@ export interface ConfirmationModalProps extends ModalProps {
 }
 export declare class ConfirmationModal extends Component<ConfirmationModalProps> {
     static defaultProps: Partial<ConfirmationModalProps>;
-    componentWillReceiveProps(nextProps: ConfirmationModalProps): void;
+    componentDidUpdate(prevProps: ConfirmationModalProps): void;
     render(): React.ReactPortal;
 }
 export default ConfirmationModal;

@@ -17,8 +17,8 @@ const evaluateRenderProp = prop => {
     return prop instanceof Function ? prop() : prop;
 };
 export class CenterModal extends Component {
-    componentWillReceiveProps(nextProps) {
-        modalWillReceiveProps(nextProps, this.props);
+    componentDidUpdate(prevProps) {
+        modalWillReceiveProps(this.props, prevProps);
     }
     render() {
         const _a = this.props, { hasX, large, padding, modalContainer, onClose, open, renderBody, renderFooter, renderHeader, bodyNode, className } = _a, attributes = __rest(_a, ["hasX", "large", "padding", "modalContainer", "onClose", "open", "renderBody", "renderFooter", "renderHeader", "bodyNode", "className"]);
