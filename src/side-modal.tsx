@@ -17,8 +17,8 @@ export class SideModal extends React.Component<SideModalProps> {
     modalContainer: document.body,
   };
 
-  public componentWillReceiveProps(nextProps: SideModalProps) {
-    modalWillReceiveProps(nextProps, this.props);
+  public componentDidUpdate(prevProps: SideModalProps) {
+    modalWillReceiveProps(this.props, prevProps);
   }
 
   public render() {

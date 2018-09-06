@@ -9273,11 +9273,8 @@ exports[`Storyshots Save Button Primary 1`] = `
 <button
   className="btn btn-primary btn-save undefined"
   disabled={false}
-  hasIcon={undefined}
   id="stui-test-locator-abc"
   onClick={[Function]}
-  saved={false}
-  saving={false}
   style={
     Object {
       "minWidth": "123px",
@@ -9350,11 +9347,8 @@ exports[`Storyshots Save Button Primary on dark 1`] = `
   <button
     className="btn btn-primary btn-save undefined btn-on-dark"
     disabled={false}
-    hasIcon={undefined}
     id="stui-test-locator-abc"
     onClick={[Function]}
-    saved={false}
-    saving={false}
     style={
       Object {
         "minWidth": "123px",
@@ -9419,11 +9413,8 @@ exports[`Storyshots Save Button Secondary 1`] = `
 <button
   className="btn btn-secondary btn-save undefined"
   disabled={false}
-  hasIcon={undefined}
   id="stui-test-locator-abc"
   onClick={[Function]}
-  saved={false}
-  saving={false}
   style={
     Object {
       "minWidth": "123px",
@@ -9496,11 +9487,8 @@ exports[`Storyshots Save Button Secondary on dark 1`] = `
   <button
     className="btn btn-secondary btn-save undefined btn-on-dark"
     disabled={false}
-    hasIcon={undefined}
     id="stui-test-locator-abc"
     onClick={[Function]}
-    saved={false}
-    saving={false}
     style={
       Object {
         "minWidth": "123px",
@@ -9565,11 +9553,8 @@ exports[`Storyshots Save Button With icon 1`] = `
 <button
   className="btn btn-secondary btn-save undefined has-icon"
   disabled={false}
-  hasIcon={true}
   id="stui-test-locator-abc"
   onClick={[Function]}
-  saved={false}
-  saving={false}
   style={
     Object {
       "minWidth": "123px",
@@ -9647,11 +9632,8 @@ exports[`Storyshots Save Button With icon on dark 1`] = `
   <button
     className="btn btn-secondary btn-save undefined btn-on-dark has-icon"
     disabled={false}
-    hasIcon={true}
     id="stui-test-locator-abc"
     onClick={[Function]}
-    saved={false}
-    saving={false}
     style={
       Object {
         "minWidth": "123px",

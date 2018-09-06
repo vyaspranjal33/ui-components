@@ -2,10 +2,10 @@ import React, { InputHTMLAttributes } from 'react';
 import Styles from './styles/save-button.module.scss';
 import cn from './utilities/classnames';
 
+import omit from 'lodash/omit';
 import Button, { ButtonProps } from './button';
 import Icon from './icon';
 import Loader from './loader';
-
 export interface SaveButtonProps {
   hasIcon: boolean;
   saving: boolean;
@@ -23,7 +23,7 @@ export class SaveButton extends React.Component<
         : null;
     return (
       <Button
-        {...this.props}
+        {...omit(this.props, ['hasIcon', 'saving', 'saved'])}
         icon={iconType}
         className={cn({
           'btn-save': true,

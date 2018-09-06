@@ -33,8 +33,8 @@ export class CenterModal extends Component<CenterModalProps> {
     padding: true,
   };
 
-  public componentWillReceiveProps(nextProps: CenterModalProps) {
-    modalWillReceiveProps(nextProps, this.props);
+  public componentDidUpdate(prevProps: CenterModalProps) {
+    modalWillReceiveProps(this.props, prevProps);
   }
 
   public render() {

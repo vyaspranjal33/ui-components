@@ -25,8 +25,8 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
     onClose: () => {},
   };
 
-  public componentWillReceiveProps(nextProps: FullScreenModelProps) {
-    modalWillReceiveProps(nextProps, this.props);
+  public componentDidUpdate(prevProps: FullScreenModelProps) {
+    modalWillReceiveProps(this.props, prevProps);
   }
 
   public render() {

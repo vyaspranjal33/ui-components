@@ -28,8 +28,8 @@ export class ConfirmationModal extends Component<ConfirmationModalProps> {
     modalContainer: document.body,
   };
 
-  public componentWillReceiveProps(nextProps: ConfirmationModalProps) {
-    modalWillReceiveProps(nextProps, this.props);
+  public componentDidUpdate(prevProps: ConfirmationModalProps) {
+    modalWillReceiveProps(this.props, prevProps);
   }
 
   public render() {
