@@ -1,4 +1,6 @@
 # CHANGELOG
+## 1.6.0
+- Update icon font w/ mc editor icons
 ## 1.5.6
 - Update editor accordion style, caret position
 ## 1.5.5
