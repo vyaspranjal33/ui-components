@@ -61,6 +61,7 @@ export class FileUpload extends Component {
         this.fileInput = null;
         this.handleDragOver = (event) => {
             event.preventDefault();
+            event.stopPropagation();
             const files = getDraggedFiles(event);
             const isSupported = this.fileIsValid(files);
             this.setState({ hovered: isSupported, invalid: !isSupported });
