@@ -129,6 +129,7 @@ export class FileUpload extends Component<FileUploadProps, FileUploadState> {
 
   public handleDragOver = (event: any): void => {
     event.preventDefault();
+    event.stopPropagation();
 
     const files = getDraggedFiles(event);
     const isSupported = this.fileIsValid(files);
