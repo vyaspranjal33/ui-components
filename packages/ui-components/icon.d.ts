@@ -5,7 +5,7 @@ import { IconType } from './types/icons';
 export interface IconProps {
     type: IconType;
     className?: string;
-    onClick?: (event: any) => void;
+    onClick?: (event: React.MouseEvent<HTMLElement>) => void;
     onDark?: boolean;
     size?: IconSizeType;
 }
