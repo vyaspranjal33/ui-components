@@ -8,7 +8,7 @@ import Styles from './styles/icon.module.scss';
 export interface IconProps {
   type: IconType;
   className?: string;
-  onClick?: (event: any) => void;
+  onClick?: (event: React.MouseEvent<HTMLElement>) => void;
   onDark?: boolean;
   size?: IconSizeType;
 }

@@ -19,7 +19,8 @@
     "snapshot": "yarn test -u",
     "lint-snapshot": "yarn lint-fix && yarn snapshot",
     "image-snapshots": "./imageSnapshot.sh",
-    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image --forceExit -i"
+    "ci-only-image-snapshots": "yarn build-storybook && jest --projects=./test_image --forceExit -i",
+    "update-icon-types": "./updateIconTypes.sh && git add ./src/types/icons.ts"
   },
   "lint-staged": {
     "*.scss": [

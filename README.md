@@ -116,6 +116,7 @@ More information: https://semver.org/
 - `yarn build-storybook`: Build a deployable version of the Storybook.
 - `yarn prepare`: Used by npm to build the assets before publishing.
 - `yarn run image-snapshots`: Builds a static index.html file and runs image snapshot tests.
+- `yarn update-icon-types`: Pull latest styleguide css and update the types of icon to match all found instances of sg-icon-${type}
 
 ## Testing
 
