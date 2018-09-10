@@ -1,8 +1,8 @@
 import React from 'react';
-import Icon from './icon';
-import Styles from './styles/alert.module.scss';
-import { IconType } from './types/icons';
-import cn from './utilities/classnames';
+import Icon from '../icon';
+import { IconType } from '../types/icons';
+import cn from '../utilities/classnames';
+import Styles from './alert.module.scss';
 
 export type AlertType = 'success' | 'warning' | 'danger';
 

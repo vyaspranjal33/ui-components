@@ -2,10 +2,10 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Alert from '../src/alert';
-import Button from '../src/button';
+import Button from '../button';
+import Alert from './alert';
 
-import '../src/styles/global/main.scss';
+import '../styles/global/main.scss';
 
 const stories = storiesOf('Alerts', module);
 
@@ -53,7 +53,8 @@ stories.add('Danger Alert with Custom Icon', () => (
 
 stories.add('Alert which is not dismissable', () => (
   <Alert type="warning" dismissable={false}>
-    Changes you've made to this email have not been applied to your live automation.
+    Changes you've made to this email have not been applied to your live
+    automation.
     <Button type="primary">Save and Apply</Button>
   </Alert>
 ));

@@ -1,6 +1,6 @@
 import React from 'react';
 import { ActionsProps } from './actions';
-import Alert from './alert';
+import Alert from './alerts/alert';
 import { Button, Buttonized } from './button';
 import Icon from './icon';
 import { EmailCardStat, Statistics, StatisticType } from './statistics';

@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 
-import { AlertProps } from './alert';
+import { AlertProps } from './alerts/alert';
 import Icon from './icon';
 import { SGLibraryImage } from './image-library';
 

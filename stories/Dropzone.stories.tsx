@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Alert from '../src/alert';
+import Alert from '../src/alerts/alert';
 import Dropzone from '../src/dropzone';
 
 const stories = storiesOf('Dropzone', module);

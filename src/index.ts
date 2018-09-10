@@ -7,7 +7,7 @@ export {
   AccordionPanelIcon,
 } from './accordion';
 export { Action, Actions, ActionsCell } from './actions';
-export { Alert } from './alert';
+export { Alert } from './alerts/alert';
 export { Badge } from './badge';
 export { Breadcrumb } from './breadcrumb';
 export { Button, Buttonized } from './button';

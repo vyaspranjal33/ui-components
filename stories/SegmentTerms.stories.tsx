@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React, { Fragment, RefObject } from 'react';
 
 import { timingSafeEqual } from 'crypto';
-import Alert from '../src/alert';
+import Alert from '../src/alerts/alert';
 import Button from '../src/button';
 import { Radio, RadioGroup } from '../src/radio';
 import { SegmentTerm, SegmentWrapper } from '../src/segment-term/';

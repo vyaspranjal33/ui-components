@@ -1,6 +1,6 @@
 import React, { Fragment, PureComponent } from 'react';
 
-import { AlertProps } from './alert';
+import { AlertProps } from './alerts/alert';
 import Dropzone from './dropzone';
 import FileUpload, { DroppedFile, FileSelect } from './file-upload';
 

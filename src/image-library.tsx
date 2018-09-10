@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import cn from './utilities/classnames';
 
-import { AlertProps } from './alert';
+import { AlertProps } from './alerts/alert';
 import { ImageLibraryDetailsPane } from './image-library-details-pane';
 import { ImageLibraryThumbnailList } from './image-library-thumbnail-list';
 import ImageUpload from './image-upload';
