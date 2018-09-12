@@ -2334,6 +2334,76 @@ exports[`Storyshots Card Card with Title and Body 1`] = `
 </div>
 `;
 
+exports[`Storyshots Card Card with falsy actions and link actions 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Event Annoucements
+      </h2>
+      <p>
+        Hear about our latest events and when we're coming to a city near you.
+      </p>
+      <div
+        className="actions"
+      >
+        <div
+          className="btn-list"
+        >
+          <div
+            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-ellipsis-vertical"
+              onClick={undefined}
+              style={null}
+            />
+            <ul
+              className="dropdown-menu"
+              style={
+                Object {
+                  "transform": "translate(0px)",
+                }
+              }
+            >
+              <a
+                className="dropdown-link"
+                href="javascript: void 0"
+              >
+                <span
+                  onClick={[Function]}
+                >
+                  <i
+                    className="sg-icon sg-icon-pencil"
+                    onClick={undefined}
+                    style={null}
+                  />
+                  Edit
+                </span>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots CenterModal CenterModal with footer and header, no x 1`] = `
 <div>
   <button
@@ -15462,8 +15532,6 @@ exports[`Storyshots Table Standard 1`] = `
           className="action-icons"
         >
           <span
-            data-tooltip="View"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15471,10 +15539,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            View
           </span>
           <span
-            data-tooltip="Edit"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15482,10 +15549,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Edit
           </span>
           <span
-            data-tooltip="Copy"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15493,10 +15559,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Copy
           </span>
           <span
-            data-tooltip="Delete"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15504,6 +15569,7 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Delete
           </span>
         </div>
       </td>
@@ -15547,8 +15613,6 @@ exports[`Storyshots Table Standard 1`] = `
           className="action-icons"
         >
           <span
-            data-tooltip="View"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15556,10 +15620,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            View
           </span>
           <span
-            data-tooltip="Edit"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15567,10 +15630,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Edit
           </span>
           <span
-            data-tooltip="Copy"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15578,10 +15640,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Copy
           </span>
           <span
-            data-tooltip="Delete"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15589,6 +15650,7 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Delete
           </span>
         </div>
       </td>
@@ -15632,8 +15694,6 @@ exports[`Storyshots Table Standard 1`] = `
           className="action-icons"
         >
           <span
-            data-tooltip="View"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15641,10 +15701,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            View
           </span>
           <span
-            data-tooltip="Edit"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15652,10 +15711,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Edit
           </span>
           <span
-            data-tooltip="Copy"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15663,10 +15721,9 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Copy
           </span>
           <span
-            data-tooltip="Delete"
-            data-tooltip-pos="up"
             onClick={[Function]}
           >
             <i
@@ -15674,6 +15731,7 @@ exports[`Storyshots Table Standard 1`] = `
               onClick={undefined}
               style={null}
             />
+            Delete
           </span>
         </div>
       </td>
