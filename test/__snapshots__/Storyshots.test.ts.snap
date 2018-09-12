@@ -8308,6 +8308,185 @@ exports[`Storyshots Grid Width 12 1`] = `
 </div>
 `;
 
+exports[`Storyshots Image Library with initial image that does not exist in the library 1`] = `
+<div
+  className="modal-fullscreen is-open"
+>
+  <header
+    className="modal-fullscreen-header"
+  >
+    <a
+      className="modal-close"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={undefined}
+        style={null}
+      />
+    </a>
+    <h2>
+      Image Library
+    </h2>
+  </header>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="wrap"
+    >
+      <div
+        className="list-container details-open"
+      >
+        <section
+          onDragEnd={[Function]}
+          onDragLeave={[Function]}
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        >
+          <section
+            className="dropzone"
+            onDragEnd={undefined}
+            onDragLeave={undefined}
+            onDragOver={undefined}
+            onDrop={undefined}
+            role="hidden"
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexWrap": "wrap",
+                "fontSize": "14px",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <div
+              style={Object {}}
+            >
+              <div
+                className={undefined}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                  }
+                }
+              >
+                <i
+                  className="sg-icon sg-icon-image is-size-30"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "marginRight": "12px",
+                    }
+                  }
+                />
+                <span>
+                  Drag and drop your images here, or
+                   
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    choose images to upload
+                  </a>
+                  .
+                </span>
+              </div>
+            </div>
+          </section>
+          <input
+            accept="image/gif,image/jpeg,image/png"
+            onChange={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            type="file"
+          />
+        </section>
+        <section
+          className="list"
+        />
+      </div>
+      <div
+        className="wrap"
+      >
+        <a
+          className="x-wrap"
+          href="javascript: void 0"
+          onClick={[Function]}
+        >
+          <i
+            className="x sg-icon sg-icon-x"
+            onClick={undefined}
+            style={null}
+          />
+        </a>
+        <h3>
+          Image Details
+        </h3>
+        <div
+          className="img-wrap"
+        >
+          <img
+            src="https://via.placeholder.com/45x15"
+          />
+        </div>
+        <div
+          className="metadata-wrap"
+        >
+          <h3>
+            File Name: 
+          </h3>
+          <p
+            className="small"
+          >
+            image.jpeg
+          </p>
+        </div>
+        <div
+          className="metadata-wrap"
+        >
+          <h3>
+            Image URL: 
+          </h3>
+          <p
+            className="small"
+          >
+            https://via.placeholder.com/45x15
+          </p>
+        </div>
+        <div
+          className="btn-list"
+        >
+          <button
+            className="btn btn-secondary"
+            disabled={false}
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary"
+            disabled={false}
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            Insert Image
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Image Library with upload alert, no images 1`] = `
 <div
   className="modal-fullscreen is-open"
