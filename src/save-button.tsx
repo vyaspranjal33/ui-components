@@ -3,7 +3,7 @@ import Styles from './styles/save-button.module.scss';
 import cn from './utilities/classnames';
 
 import omit from 'lodash/omit';
-import Button, { ButtonProps } from './button';
+import Button, { ButtonProps } from './buttons/button';
 import Icon from './icon';
 import Loader from './loader';
 export interface SaveButtonProps {

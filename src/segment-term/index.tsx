@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react';
-import { Button } from '../button';
 import { ButtonList } from '../button-list';
+import { Button } from '../buttons/button';
 import { Icon } from '../icon';
 import ScssVars from '../styles/global/variables.scss';
 import Styles from '../styles/segment-term.module.scss';

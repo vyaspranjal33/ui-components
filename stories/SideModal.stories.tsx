@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React, { Component, Fragment } from 'react';
 
-import Button from '../src/button';
+import Button from '../src/buttons/button';
 import { SideModal } from '../src/side-modal';
 
 const stories = storiesOf('SideModal', module);

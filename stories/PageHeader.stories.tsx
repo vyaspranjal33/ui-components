@@ -2,8 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Breadcrumb } from '../src/breadcrumb/breadcrumb';
-import { Button } from '../src/button';
+import { Breadcrumb } from '../src/breadcrumbs/breadcrumb';
+import { Button } from '../src/buttons/button';
 import { PageHeader, PageHeading } from '../src/page-header';
 
 const stories = storiesOf('PageHeader', module);

@@ -1,8 +1,8 @@
 import React from 'react';
 import Badge from './badges/badge';
-import { Button, ButtonProps, ButtonType } from './button';
+import { Button, ButtonProps, ButtonType } from './buttons/button';
+import btnStyles from './buttons/button.module.scss';
 import Icon from './icon';
-import btnStyles from './styles/button.module.scss';
 import Styles from './styles/dropdown.module.scss';
 import cn from './utilities/classnames';
 

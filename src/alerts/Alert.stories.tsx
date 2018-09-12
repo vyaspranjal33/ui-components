@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Button from '../button';
+import Button from '../buttons/button';
 import Alert from './alert';
 
 import '../styles/global/main.scss';

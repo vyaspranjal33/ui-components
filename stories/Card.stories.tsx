@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import { Action, Actions } from '../src/actions';
-import Button from '../src/button';
+import Button from '../src/buttons/button';
 import Card from '../src/card';
 import Icon from '../src/icon';
 

@@ -1,5 +1,5 @@
 import React, { CSSProperties } from 'react';
-import Styles from './styles/button.module.scss';
+import Styles from './buttons/button.module.scss';
 import ToggleAnything, {
   AnythingKey,
   ToggleAnythingProps,

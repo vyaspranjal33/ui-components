@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Button from '../button';
+import Button from '../buttons/button';
 import Card, { CardProps } from '../card';
 
 import cn from '../utilities/classnames';

@@ -7,7 +7,7 @@ import Accordion, {
   AccordionPanelIcon,
   AccordionPanelTitle,
 } from '.';
-import { Breadcrumb } from '../breadcrumb/breadcrumb';
+import { Breadcrumb } from '../breadcrumbs/breadcrumb';
 import Card from '../card';
 import Icon from '../icon';
 

@@ -9,8 +9,8 @@ export {
 export { Action, Actions, ActionsCell } from './actions';
 export { Alert } from './alerts/alert';
 export { Badge } from './badges/badge';
-export { Breadcrumb } from './breadcrumb/breadcrumb';
-export { Button, Buttonized } from './button';
+export { Breadcrumb } from './breadcrumbs/breadcrumb';
+export { Button, Buttonized } from './buttons/button';
 export { ButtonList } from './button-list';
 export { Card } from './card';
 export { ModuleCard } from './module-card';

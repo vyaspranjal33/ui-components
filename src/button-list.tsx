@@ -1,6 +1,6 @@
 import React, { HTMLAttributes } from 'react';
-import { ButtonProps } from './button';
-import Styles from './styles/button.module.scss';
+import { ButtonProps } from './buttons/button';
+import Styles from './buttons/button.module.scss';
 import cn from './utilities/classnames';
 
 export interface ButtonListProps extends HTMLAttributes<HTMLDivElement> {

@@ -4,7 +4,7 @@ import React, { Fragment, RefObject } from 'react';
 
 import { timingSafeEqual } from 'crypto';
 import Alert from '../src/alerts/alert';
-import Button from '../src/button';
+import Button from '../src/buttons/button';
 import { Radio, RadioGroup } from '../src/radio';
 import { SegmentTerm, SegmentWrapper } from '../src/segment-term/';
 import Select from '../src/select';

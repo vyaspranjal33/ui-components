@@ -1,11 +1,11 @@
 import React, { InputHTMLAttributes } from 'react';
-import Badge from './badges/badge';
-import Icon from './icon';
-import Loader from './loader';
-import Styles from './styles/button.module.scss';
-import { IconType } from './types/icons';
-import cn from './utilities/classnames';
-import withNativeProps from './withNativeProps';
+import Badge from '../badges/badge';
+import Icon from '../icon';
+import Loader from '../loader';
+import { IconType } from '../types/icons';
+import cn from '../utilities/classnames';
+import withNativeProps from '../withNativeProps';
+import Styles from './button.module.scss';
 
 export type ButtonType = 'primary' | 'secondary' | 'danger' | 'group-item';
 

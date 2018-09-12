@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React, { Component } from 'react';
 
-import Button from '../src/button';
+import Button from '../src/buttons/button';
 import ButtonList from '../src/button-list';
 import { CenterModal } from '../src/center-modal';
 

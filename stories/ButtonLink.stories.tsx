@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Buttonized } from '../src/button';
+import { Buttonized } from '../src/buttons/button';
 
 const stories = storiesOf('Button Link', module);
 

@@ -1,8 +1,8 @@
 import React, { Fragment } from 'react';
 
-import Breadcrumb from '../breadcrumb/breadcrumb';
-import { Button } from '../button';
+import Breadcrumb from '../breadcrumbs/breadcrumb';
 import { ButtonList } from '../button-list';
+import { Button } from '../buttons/button';
 import { Card } from '../card';
 import { Checkbox } from '../checkbox';
 import { ConfirmationModal } from '../confirmation-modal';
