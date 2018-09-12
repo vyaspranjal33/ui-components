@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 
-import Breadcrumb from '../breadcrumb';
+import Breadcrumb from '../breadcrumb/breadcrumb';
 import { Button } from '../button';
 import { ButtonList } from '../button-list';
 import { Card } from '../card';

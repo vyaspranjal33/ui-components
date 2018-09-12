@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Breadcrumb } from '../src/breadcrumb';
+import { Breadcrumb } from './breadcrumb';
 
 const stories = storiesOf('Breadcrumb', module);
 

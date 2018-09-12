@@ -1,5 +1,5 @@
 import React, { InputHTMLAttributes } from 'react';
-import Badge from './badge';
+import Badge from './badges/badge';
 import Icon from './icon';
 import Loader from './loader';
 import Styles from './styles/button.module.scss';

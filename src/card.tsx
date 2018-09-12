@@ -2,7 +2,7 @@ import React from 'react';
 
 import cn from './utilities/classnames';
 
-import Badge from './badge';
+import Badge from './badges/badge';
 import Icon from './icon';
 import Styles from './styles/card.module.scss';
 import { color as ValidColor } from './types/color';

@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Breadcrumb } from '../src/breadcrumb';
+import { Breadcrumb } from '../src/breadcrumb/breadcrumb';
 import { Button } from '../src/button';
 import { PageHeader, PageHeading } from '../src/page-header';
 

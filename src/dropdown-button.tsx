@@ -1,5 +1,5 @@
 import React from 'react';
-import Badge from './badge';
+import Badge from './badges/badge';
 import { Button, ButtonProps, ButtonType } from './button';
 import Icon from './icon';
 import btnStyles from './styles/button.module.scss';

@@ -1,6 +1,6 @@
 import React from 'react';
-import Styles from './styles/breadcrumb.module.scss';
-import cn from './utilities/classnames';
+import cn from '../utilities/classnames';
+import Styles from './breadcrumb.module.scss';
 
 export interface BreadcrumbProps {
   children:

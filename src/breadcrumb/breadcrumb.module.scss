@@ -1,4 +1,4 @@
-@import './global/variables.scss';
+@import '../styles/global/variables.scss';
 
 .breadcrumb {
   li {
@@ -10,6 +10,6 @@
   li + li::before {
     padding: 0 6px;
     color: $steel;
-    content: "/\00a0";
+    content: '/\00a0';
   }
 }
