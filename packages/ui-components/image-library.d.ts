@@ -22,14 +22,16 @@ export interface ImageLibraryProps {
     onUploadFailure?: (file: File) => void;
     renderImageDetailsActions: (image?: SGLibraryImage, closeDetailsPane?: () => void) => React.ReactNode;
     uploadAlert?: React.ReactElement<AlertProps>;
+    initialImage?: SGLibraryImage;
 }
 export interface ImageLibraryState {
     selectedImage?: SGLibraryImage;
 }
 export declare class ImageLibrary extends Component<ImageLibraryProps, ImageLibraryState> {
     state: ImageLibraryState;
+    componentDidMount(): void;
     render(): JSX.Element;
-    private onThumbnailClick;
+    private onImageSelected;
     private onImageDeselected;
     private onFileSelect;
     private onInvalidFile;

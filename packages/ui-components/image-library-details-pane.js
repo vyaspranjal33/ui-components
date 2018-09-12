@@ -11,6 +11,7 @@ export class ImageLibraryDetailsPane extends Component {
     }
     render() {
         const { alert, dateFormatter, image, renderActions } = this.props;
+        const dimensionsKnown = image.width && image.height;
         return (React.createElement("div", { className: Styles.wrap },
             !!alert && React.createElement("div", { className: Styles['alert-wrap'] }, alert),
             React.createElement("a", { href: "javascript: void 0", onClick: this.onClose, className: Styles['x-wrap'] },
@@ -21,14 +22,14 @@ export class ImageLibraryDetailsPane extends Component {
             React.createElement("div", { className: Styles['metadata-wrap'] },
                 React.createElement("h3", null, "File Name: "),
                 React.createElement("p", { className: "small" }, image.name)),
-            React.createElement("div", { className: Styles['metadata-wrap'] },
+            image.created && (React.createElement("div", { className: Styles['metadata-wrap'] },
                 React.createElement("h3", null, "Upload: "),
-                React.createElement("p", { className: "small" }, dateFormatter(image.created))),
-            React.createElement("div", { className: Styles['metadata-wrap'] },
+                React.createElement("p", { className: "small" }, dateFormatter(image.created)))),
+            dimensionsKnown && (React.createElement("div", { className: Styles['metadata-wrap'] },
                 React.createElement("h3", null, "Dimensions: "),
                 React.createElement("p", { className: "small" },
                     `${image.width} x ${image.height}`,
-                    " px")),
+                    " px"))),
             React.createElement("div", { className: Styles['metadata-wrap'] },
                 React.createElement("h3", null, "Image URL: "),
                 React.createElement("p", { className: "small" }, image.originalUrl)),

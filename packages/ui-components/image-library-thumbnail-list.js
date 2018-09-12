@@ -4,7 +4,7 @@ import Styles from './styles/image-library-thumbnail-list.module.scss';
 export class ImageLibraryThumbnailList extends Component {
     render() {
         const { images, onThumbnailClick, selectedImage } = this.props;
-        return (React.createElement("section", { className: Styles.list }, images.map(image => (React.createElement(ImageLibraryThumbnail, { key: image.id, image: image, isSelected: selectedImage === image, onClick: onThumbnailClick })))));
+        return (React.createElement("section", { className: Styles.list }, images.map(image => (React.createElement(ImageLibraryThumbnail, { key: image.id, image: image, isSelected: selectedImage && selectedImage.id === image.id, onClick: onThumbnailClick })))));
     }
 }
 class ImageLibraryThumbnail extends Component {
