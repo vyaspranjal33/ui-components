@@ -52,7 +52,7 @@ export const EmailCardAddButton = (_a) => {
 };
 export class EmailCard extends React.Component {
     render() {
-        const _a = this.props, { className, details, editable, editing, live, n, onContentEditClick, onSaveAlertClick, paused, renderActions, renderAlert, renderSendTimeLink, sendTimeValue, statistics, thumbnailUrl } = _a, attributes = __rest(_a, ["className", "details", "editable", "editing", "live", "n", "onContentEditClick", "onSaveAlertClick", "paused", "renderActions", "renderAlert", "renderSendTimeLink", "sendTimeValue", "statistics", "thumbnailUrl"]);
+        const _a = this.props, { className, details, disableInboxDetails, editable, editing, live, n, onContentEditClick, onSaveAlertClick, paused, renderActions, renderAlert, renderSendTimeLink, sendTimeValue, statistics, thumbnailUrl } = _a, attributes = __rest(_a, ["className", "details", "disableInboxDetails", "editable", "editing", "live", "n", "onContentEditClick", "onSaveAlertClick", "paused", "renderActions", "renderAlert", "renderSendTimeLink", "sendTimeValue", "statistics", "thumbnailUrl"]);
         const alertEl = renderAlert && renderAlert();
         return (React.createElement("div", Object.assign({ className: cn('email-card-wrap', Styles['email-card-wrap'], className, {
                 [Styles['has-alert']]: !!this.props.renderAlert,
@@ -63,6 +63,7 @@ export class EmailCard extends React.Component {
                 'is-live': this.props.live,
                 [Styles['is-paused']]: this.props.paused,
                 'is-paused': this.props.paused,
+                [Styles['is-disable-inbox-details']]: this.props.disableInboxDetails,
             }) }, attributes),
             React.createElement(EmailCardSendTime, { value: sendTimeValue, renderSendTimeLink: renderSendTimeLink, alert: alertEl }),
             statistics && (React.createElement(Statistics, { commonClass: "email-stats" },
@@ -83,6 +84,7 @@ export class EmailCard extends React.Component {
     }
 }
 EmailCard.defaultProps = {
+    disableInboxDetails: false,
     editable: false,
     editing: false,
     live: false,
