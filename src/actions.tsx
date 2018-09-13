@@ -57,10 +57,14 @@ export const ActionsCell: React.SFC<ActionsProps> = ({
   className,
   ...attributes
 }) => (
-  <td className={cn('actions', className)} {...attributes}>
-    <Icon type="ellipsis" />
-    <div className="action-icons">{children}</div>
-  </td>
+  <Provider
+    value={{ showTitle: false /* vertical not yet supported in tables */ }}
+  >
+    <td className={cn('actions', className)} {...attributes}>
+      <Icon type="ellipsis" />
+      <div className="action-icons">{children}</div>
+    </td>
+  </Provider>
 );
 
 export interface ActionProps {
