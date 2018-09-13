@@ -29,9 +29,10 @@ export const Actions = (_a) => {
 };
 export const ActionsCell = (_a) => {
     var { children, className } = _a, attributes = __rest(_a, ["children", "className"]);
-    return (React.createElement("td", Object.assign({ className: cn('actions', className) }, attributes),
-        React.createElement(Icon, { type: "ellipsis" }),
-        React.createElement("div", { className: "action-icons" }, children)));
+    return (React.createElement(Provider, { value: { showTitle: false /* vertical not yet supported in tables */ } },
+        React.createElement("td", Object.assign({ className: cn('actions', className) }, attributes),
+            React.createElement(Icon, { type: "ellipsis" }),
+            React.createElement("div", { className: "action-icons" }, children))));
 };
 export const Action = (_a) => {
     var { title, icon, onClick: handleClick } = _a, attributes = __rest(_a, ["title", "icon", "onClick"]);
