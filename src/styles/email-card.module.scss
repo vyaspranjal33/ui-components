@@ -33,11 +33,6 @@
   &:not(:last-child) {
     @include email-card-connector();
   }
-
-  .email-card-details a {
-    color: $slate;
-    pointer-events: none;
-  }
 }
 
 // modifiers for .is-live
@@ -47,10 +42,18 @@
   }
 }
 
-// modifiers for is-paused
+// modifiers for .is-paused
 .email-card-wrap.is-paused {
   .email-card-send-time {
     border-top: 2px solid $burnt-orange;
+  }
+}
+
+// modifiers for .is-disable-inbox-details
+.email-card-wrap.is-disable-inbox-details {
+  .email-card-details a {
+    color: $slate;
+    pointer-events: none;
   }
 }
 

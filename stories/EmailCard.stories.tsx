@@ -113,7 +113,9 @@ loaderStories.add('Email Card - Edit Mode', () => (<EmailCard {...cardDataNoStat
 
 loaderStories.add('Email Card - Live', () => ( <EmailCard {...cardData} sendTimeValue="Send Instantly" live /> ));
 
-loaderStories.add('Email Card - Paused', () => ( <EmailCard {...cardData} sendTimeValue="Send Instantly" paused/> ));
+loaderStories.add('Email Card - Paused', () => ( <EmailCard {...cardData} sendTimeValue="Send Instantly" paused /> ));
+
+loaderStories.add('Email Card - Disable Inbox Details', () => ( <EmailCard {...cardData} disableInboxDetails /> ));
 
 loaderStories.add('Email Card - Multi Editable', () => (
   <div>

@@ -149,6 +149,7 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
 
 export interface EmailCardProps {
   details?: Array<EmailCardDetail>;
+  disableInboxDetails?: boolean;
   editing?: boolean;
   editable?: boolean;
   live?: boolean;
@@ -173,6 +174,7 @@ export interface EmailCardProps {
 
 export class EmailCard extends React.Component<EmailCardProps> {
   public static defaultProps = {
+    disableInboxDetails: false,
     editable: false,
     editing: false,
     live: false,
@@ -184,6 +186,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
     const {
       className,
       details,
+      disableInboxDetails,
       editable,
       editing,
       live,
@@ -211,6 +214,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
           'is-live': this.props.live,
           [Styles['is-paused']]: this.props.paused,
           'is-paused': this.props.paused,
+          [Styles['is-disable-inbox-details']]: this.props.disableInboxDetails,
         })}
         {...attributes}
       >
