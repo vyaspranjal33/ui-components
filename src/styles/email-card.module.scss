@@ -26,17 +26,31 @@
   }
 }
 
-// modifiers for .is-live
-.email-card-wrap.is-live {
-  // show for all children except the last (.email-card-add should be hidden for .is-live)
+// modifiers for .is-live and .is-paused
+.email-card-wrap.is-live,
+.email-card-wrap.is-paused {
+  // show for all children except the last (.email-card-add should be hidden for .is-live and .is-paused)
   &:not(:last-child) {
     @include email-card-connector();
   }
+}
 
+// modifiers for .is-live
+.email-card-wrap.is-live {
   .email-card-send-time {
     border-top: 2px solid $sg-blue;
   }
+}
 
+// modifiers for .is-paused
+.email-card-wrap.is-paused {
+  .email-card-send-time {
+    border-top: 2px solid $burnt-orange;
+  }
+}
+
+// modifiers for .is-disable-inbox-details
+.email-card-wrap.is-disable-inbox-details {
   .email-card-details a {
     color: $slate;
     pointer-events: none;
@@ -65,13 +79,6 @@
       max-width: 100%;
       margin: 0 20px 0 60px;
     }
-  }
-}
-
-// modifiers for is-paused
-.email-card-wrap.is-paused {
-  .email-card-send-time {
-    border-top: 2px solid $burnt-orange;
   }
 }
 
