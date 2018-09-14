@@ -8301,7 +8301,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
 </section>
 `;
 
-exports[`Storyshots FullScreen Modal ConfirmationModal with plain contents 1`] = `
+exports[`Storyshots FullScreen Modal Fullscreen Modal 1`] = `
 <div>
   <button
     className="btn btn-primary"
@@ -8334,7 +8334,85 @@ exports[`Storyshots FullScreen Modal ConfirmationModal with plain contents 1`] =
     </header>
     <div
       className="modal-content has-padding"
-    />
+    >
+      <div>
+        Here is some content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FullScreen Modal Fullscreen Modal with renderProps 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    id={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Open Modal
+  </button>
+  <div
+    className="modal-fullscreen is-open"
+  >
+    <header
+      className="modal-fullscreen-header"
+    >
+      <a
+        className="modal-close"
+        onClick={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-x"
+          onClick={undefined}
+          style={null}
+        />
+      </a>
+      <h2>
+        With Render Props
+        <span
+          data-tooltip="here is a tooltip"
+          data-tooltip-pos="down"
+        >
+          <i
+            className="sg-icon sg-icon-info-circle"
+            onClick={undefined}
+            style={null}
+          />
+        </span>
+      </h2>
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-primary btn-on-dark"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Confirm
+        </button>
+        <button
+          className="btn btn-secondary btn-on-dark"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </header>
+    <div
+      className="modal-content has-padding"
+    >
+      <div>
+        Here is some content
+      </div>
+    </div>
   </div>
 </div>
 `;

@@ -5,25 +5,46 @@
   right: 0;
   bottom: -100%;
   left: 0;
-  z-index: 999; // z-index one less than alerts. TODO: update z-index system globally
+  z-index: 999; // TODO: z-index needs a system so we don't have arbitrary numbers like this
   height: 100%;
-  background-color: #ffffff;
+  background-color: $white;
   transition: bottom 0.5s cubic-bezier(0.02, 0.01, 0.47, 1);
-  :global &-header {
+  &.is-open {
+    bottom: 0;
+  }
+  &-header {
     display: flex;
     align-items: center;
     height: 70px;
     background-color: darken($slate, 5%);
   }
-  :global &-header h2,
-  :global &-header i {
-    color: #ffffff;
+  :global {
+    h2,
+    [data-tooltip] i,
+    i,
+    [data-tooltip] i:hover {
+      color: $white;
+    }
+    [data-tooltip] i {
+      margin-left: 6px;
+    }
   }
-  :global &-header h2 {
+  &-header h2 {
+    flex: 1;
     margin-bottom: 0;
     margin-left: 27px;
   }
-  :global .modal-close {
+  &-header [data-tooltip] .sg-icon,
+  &-header [data-tooltip] .sg-icon:hover {
+    color: $white;
+  }
+  :global {
+    .btn-list {
+      margin-right: 20px;
+      justify-self: flex-end;
+    }
+  }
+  .modal-close {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,27 +53,17 @@
     cursor: pointer;
     border-right: 1px solid rgba(0, 0, 0, 0.2);
   }
-  :global .modal-close i {
+  .modal-close i {
     font-size: 20px;
   }
-  :global .modal-content {
+  .modal-content {
     height: calc(100vh - 70px);
     overflow-y: scroll;
-    :global &.has-padding {
+    &.has-padding {
       padding: 60px;
     }
-    :global .modal-thumb {
+    .modal-thumb {
       margin-bottom: 20px;
     }
-  }
-}
-
-.is-open {
-  bottom: 0;
-}
-
-:global body {
-  &.modal-open {
-    overflow: hidden;
   }
 }
