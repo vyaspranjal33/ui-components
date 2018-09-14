@@ -14,6 +14,7 @@ export interface FullScreenModelProps extends ModalProps {
   isOpen?: boolean;
   onClose?: (event: any) => void;
   modalContainer?: Element;
+  renderActions?: React.ReactNode;
   title: string;
 }
 
@@ -39,6 +40,7 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
       modalContainer,
       onClose,
       title,
+      renderActions,
       ...attributes
     } = this.props;
 
@@ -57,6 +59,7 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
             <Icon type="x" />
           </a>
           <h2>{title}</h2>
+          {renderActions}
         </header>
         <div className={cn('modal-content', { 'has-padding': hasPadding })}>
           {children}
