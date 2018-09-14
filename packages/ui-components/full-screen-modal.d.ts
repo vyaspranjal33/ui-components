@@ -8,7 +8,9 @@ export interface FullScreenModelProps extends ModalProps {
     isOpen?: boolean;
     onClose?: (event: any) => void;
     modalContainer?: Element;
+    renderHeaderActions?: () => React.ReactNode;
     title: string;
+    tooltipText?: string;
 }
 export declare class FullscreenModal extends Component<FullScreenModelProps> {
     static defaultProps: Partial<FullScreenModelProps>;

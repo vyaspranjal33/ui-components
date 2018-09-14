@@ -18,12 +18,16 @@ export class FullscreenModal extends Component {
         modalWillReceiveProps(this.props, prevProps);
     }
     render() {
-        const _a = this.props, { bodyNode, children, className, hasPadding, isOpen, modalContainer, onClose, title } = _a, attributes = __rest(_a, ["bodyNode", "children", "className", "hasPadding", "isOpen", "modalContainer", "onClose", "title"]);
+        const _a = this.props, { bodyNode, children, className, hasPadding, isOpen, modalContainer, onClose, renderHeaderActions, title, tooltipText } = _a, attributes = __rest(_a, ["bodyNode", "children", "className", "hasPadding", "isOpen", "modalContainer", "onClose", "renderHeaderActions", "title", "tooltipText"]);
         return ReactDOM.createPortal(React.createElement("div", Object.assign({ className: cn('modal-fullscreen', Styles['modal-fullscreen'], { [Styles['is-open']]: isOpen }, className) }, attributes),
-            React.createElement("header", { className: "modal-fullscreen-header" },
-                React.createElement("a", { className: "modal-close", onClick: onClose },
+            React.createElement("header", { className: Styles['modal-fullscreen-header'] },
+                React.createElement("a", { className: Styles['modal-close'], onClick: onClose },
                     React.createElement(Icon, { type: "x" })),
-                React.createElement("h2", null, title)),
+                React.createElement("h2", null,
+                    title,
+                    tooltipText && (React.createElement("span", { "data-tooltip": tooltipText, "data-tooltip-pos": "down" },
+                        React.createElement(Icon, { type: "info-circle" })))),
+                renderHeaderActions && renderHeaderActions()),
             React.createElement("div", { className: cn('modal-content', { 'has-padding': hasPadding }) }, children)), modalContainer);
     }
 }
