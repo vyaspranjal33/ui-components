@@ -1,6 +1,6 @@
 import React from 'react';
-import Styles from './styles/checkbox-radio.module.scss';
-import cn from './utilities/classnames';
+import cn from '../utilities/classnames';
+import Styles from './checkbox-radio.module.scss';
 export interface CheckboxProps {
   checked: boolean;
   disabled?: boolean;

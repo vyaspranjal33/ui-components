@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import CSVUpload from '../src/csv-upload';
+import CSVUpload from './csv-upload';
 
 const stories = storiesOf('CSV Upload', module);
 

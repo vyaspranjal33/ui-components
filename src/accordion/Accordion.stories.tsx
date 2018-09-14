@@ -8,7 +8,7 @@ import Accordion, {
   AccordionPanelTitle,
 } from '.';
 import { Breadcrumb } from '../breadcrumbs/breadcrumb';
-import Card from '../card';
+import Card from '../cards/card';
 import Icon from '../icon';
 
 const stories = storiesOf('Accordion', module);

@@ -3,7 +3,7 @@ import identity from 'lodash/identity';
 import isFunction from 'lodash/isFunction';
 import values from 'lodash/values';
 import React, { PureComponent, ReactElement } from 'react';
-import ButtonList from './button-list';
+import ButtonList from './button-list/button-list';
 import Button from './buttons/button';
 import Styles from './styles/filters.module.scss';
 import { TextInput } from './text-input';

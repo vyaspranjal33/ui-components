@@ -4,7 +4,7 @@ import React, { Component, Fragment } from 'react';
 
 import Alert from '../src/alerts/alert';
 import Button from '../src/buttons/button';
-import ButtonList from '../src/button-list';
+import ButtonList from '../src/button-list/button-list';
 import ImageLibrary, { SGLibraryImage } from '../src/image-library';
 import FullscreenModal from '../src/full-screen-modal';
 

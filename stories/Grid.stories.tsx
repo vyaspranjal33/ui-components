@@ -2,7 +2,7 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Card } from '../src/card';
+import { Card } from '../src/cards/card';
 import Divider from '../src/divider';
 import { Column } from '../src/grid/column';
 import { Row } from '../src/grid/row';

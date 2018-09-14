@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { ButtonList } from '../button-list';
+import { ButtonList } from '../button-list/button-list';
 import { Button } from '../buttons/button';
 import { Icon } from '../icon';
 import ScssVars from '../styles/global/variables.scss';

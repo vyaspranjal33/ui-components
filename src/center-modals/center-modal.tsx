@@ -1,9 +1,9 @@
 import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
-import Icon from './icon';
-import Styles from './styles/center-modal.module.scss';
-import cn from './utilities/classnames';
-import { ModalProps, modalWillReceiveProps } from './utilities/modals';
+import Icon from '../icon';
+import cn from '../utilities/classnames';
+import { ModalProps, modalWillReceiveProps } from '../utilities/modals';
+import Styles from './center-modal.module.scss';
 
 export interface CenterModalProps extends ModalProps {
   hasX?: boolean;

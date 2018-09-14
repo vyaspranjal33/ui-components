@@ -1,7 +1,7 @@
 import React, { Fragment, PureComponent } from 'react';
 
-import Dropzone from './dropzone';
-import FileUpload, { DroppedFile, FileSelect } from './file-upload';
+import Dropzone from '../dropzone';
+import FileUpload, { DroppedFile, FileSelect } from '../file-upload';
 
 export interface CSVUploadProps {
   onChange: (event: any) => void;

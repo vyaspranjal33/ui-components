@@ -1,10 +1,10 @@
 import React from 'react';
 
 import Actions, { Action } from '../actions';
-import Card from '../card';
+import Card from '../cards/card';
 import Icon from '../icon';
 
-import Styles from '../styles/card.module.scss';
+import Styles from '../cards/card.module.scss';
 import cn from '../utilities/classnames';
 
 export interface UnsubscribeGroupCardProps {

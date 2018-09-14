@@ -1,5 +1,5 @@
 import React from 'react';
-import Checkbox from '../checkbox';
+import Checkbox from '../checkboxes/checkbox';
 import Styles from '../styles/switches.module.scss';
 import cn from '../utilities/classnames';
 

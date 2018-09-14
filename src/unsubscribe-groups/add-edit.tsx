@@ -1,10 +1,10 @@
 import React, { Fragment } from 'react';
 
 import Breadcrumb from '../breadcrumbs/breadcrumb';
-import { ButtonList } from '../button-list';
+import { ButtonList } from '../button-list/button-list';
 import { Button } from '../buttons/button';
-import { Card } from '../card';
-import { Checkbox } from '../checkbox';
+import { Card } from '../cards/card';
+import { Checkbox } from '../checkboxes/checkbox';
 import { ConfirmationModal } from '../confirmation-modal';
 import { Icon } from '../icon';
 import { TextInput } from '../text-input';

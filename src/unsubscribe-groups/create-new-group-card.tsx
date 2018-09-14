@@ -1,7 +1,7 @@
 import React from 'react';
 
 import Button from '../buttons/button';
-import Card, { CardProps } from '../card';
+import Card, { CardProps } from '../cards/card';
 
 import cn from '../utilities/classnames';
 

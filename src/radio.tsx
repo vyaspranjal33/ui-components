@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import Styles from './styles/checkbox-radio.module.scss';
+import Styles from './checkboxes/checkbox-radio.module.scss';
 import cn from './utilities/classnames';
 export interface RadioGroupProps {
   children: React.ReactNode;

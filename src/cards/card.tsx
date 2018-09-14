@@ -1,13 +1,13 @@
 import React from 'react';
 
-import cn from './utilities/classnames';
+import cn from '../utilities/classnames';
 
-import Badge from './badges/badge';
-import Icon from './icon';
-import Styles from './styles/card.module.scss';
-import { color as ValidColor } from './types/color';
-import IconSizeType from './types/icon-sizes';
-import { IconType } from './types/icons';
+import Badge from '../badges/badge';
+import Icon from '../icon';
+import { color as ValidColor } from '../types/color';
+import IconSizeType from '../types/icon-sizes';
+import { IconType } from '../types/icons';
+import Styles from './card.module.scss';
 
 export interface CardProps {
   children?: React.ReactNode;

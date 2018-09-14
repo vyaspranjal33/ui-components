@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react';
 import React from 'react';
 
 import Button from '../src/buttons/button';
-import ButtonList from '../src/button-list';
+import ButtonList from '../src/button-list/button-list';
 import EmptyState from '../src/empty-state';
 import Footer from '../src/small-footer';
 

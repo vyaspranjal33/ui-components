@@ -2,9 +2,9 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React, { Component } from 'react';
 
-import Button from '../src/buttons/button';
-import ButtonList from '../src/button-list';
-import { CenterModal } from '../src/center-modal';
+import ButtonList from '../button-list/button-list';
+import Button from '../buttons/button';
+import { CenterModal } from './center-modal';
 
 const stories = storiesOf('CenterModal', module);
 

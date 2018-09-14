@@ -1,13 +1,13 @@
 import React from 'react';
 
-import Card from './card';
+import Card from './cards/card';
 import Icon from './icon';
 
 import { IconType } from './types/icons';
 import ModuleCardType from './types/module-card';
 import cn from './utilities/classnames';
 
-import Styles from './styles/card.module.scss';
+import Styles from './cards/card.module.scss';
 
 const iconTypes: { [k in ModuleCardType]: IconType } = {
   button: 'button',

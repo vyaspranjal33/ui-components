@@ -1,6 +1,6 @@
 import React, { Fragment } from 'react';
 import BlankTemplateImage from './BlankTemplateImage';
-import { ButtonList } from './button-list';
+import { ButtonList } from './button-list/button-list';
 import { Button } from './buttons/button';
 import Icon from './icon';
 import Styles from './styles/template-card.module.scss';

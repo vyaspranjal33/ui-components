@@ -2,12 +2,12 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Action, Actions } from '../src/actions';
-import Button from '../src/buttons/button';
-import Card from '../src/card';
-import Icon from '../src/icon';
+import { Action, Actions } from '../actions';
+import Button from '../buttons/button';
+import Icon from '../icon';
+import Card from './card';
 
-import '../src/styles/global/main.scss';
+import '../styles/global/main.scss';
 
 const stories = storiesOf('Card', module);
 
@@ -74,7 +74,7 @@ stories.add(
         </Card>
       </div>
     </div>
-  ),
+  )
 );
 
 stories.add('Card with Badge', () => (
@@ -168,14 +168,10 @@ stories.add('Card (Large)', () => (
   </div>
 ));
 
-
 stories.add('Card (Inline)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <Card
-        title="Node.js"
-        inline
-      >
+      <Card title="Node.js" inline>
         <Button type="secondary">Choose</Button>
       </Card>
     </div>
@@ -185,12 +181,10 @@ stories.add('Card (Inline)', () => (
 stories.add('Card (Inline, Thin)', () => (
   <div className="row">
     <div className="col-4" style={{ width: '300px' }}>
-      <Card
-        title="Node.js"
-        inline
-        thin
-      >
-        <Button small type="secondary">Choose</Button>
+      <Card title="Node.js" inline thin>
+        <Button small type="secondary">
+          Choose
+        </Button>
       </Card>
     </div>
   </div>

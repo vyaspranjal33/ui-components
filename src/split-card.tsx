@@ -1,7 +1,7 @@
 import React from 'react';
 
-import Card, { CardProps } from './card';
-import Styles from './styles/card.module.scss';
+import Card, { CardProps } from './cards/card';
+import Styles from './cards/card.module.scss';
 import cn from './utilities/classnames';
 
 export interface SplitCardSeparatorProps {
