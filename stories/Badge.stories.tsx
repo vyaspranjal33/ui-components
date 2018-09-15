@@ -20,3 +20,9 @@ stories.add('All Badges', () => (
     ))}
   </React.Fragment>
 ));
+
+stories.add('Badge with custom classname', () => (
+  <Badge className="custom-class">
+    custom
+  </Badge>
+));

@@ -1071,6 +1071,14 @@ Array [
 ]
 `;
 
+exports[`Storyshots Badge Badge with custom classname 1`] = `
+<span
+  className="badge custom-class"
+>
+  custom
+</span>
+`;
+
 exports[`Storyshots Breadcrumb Breadcrumb with single item 1`] = `
 <ol
   className="breadcrumb"
