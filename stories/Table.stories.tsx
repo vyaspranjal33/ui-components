@@ -10,7 +10,7 @@ const stories = storiesOf('Table', module);
 stories.add('Standard', () => (
   <Table>
     <TableHeader>
-      <TableRow>
+      <TableRow data-name={"name1"}>
         <HeaderCell>Contacts</HeaderCell>
         <HeaderCell>Date Added</HeaderCell>
         <HeaderCell>Last Opened</HeaderCell>

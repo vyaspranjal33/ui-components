@@ -8,9 +8,10 @@ export interface TableRowProps {
 export const TableRow: React.SFC<TableRowProps> = ({
   children,
   className,
+  ...attributes
 }) => {
   return (
-    <tr className={className}>
+    <tr className={className} {...attributes}>
       {children}
     </tr>
   );
