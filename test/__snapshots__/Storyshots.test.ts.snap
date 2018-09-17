@@ -15890,6 +15890,7 @@ exports[`Storyshots Table Standard 1`] = `
   >
     <tr
       className={undefined}
+      data-name="name1"
     >
       <th
         className=""
