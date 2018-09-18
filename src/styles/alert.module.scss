@@ -153,18 +153,18 @@
   }
 
   :global {
-    .sg-icon {
+    .sg-icon-info-circle {
       position: absolute;
       top: 50%;
       left: -40px;
       margin-top: -10px;
       font-size: 20px;
+    }
 
-      &.sg-icon-x {
-        right: -40px;
-        left: auto;
-        cursor: pointer;
-      }
+    .sg-icon-x {
+      right: -40px;
+      left: auto;
+      cursor: pointer;
     }
 
     .btn {
