@@ -2,10 +2,10 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import { Card } from '../src/cards/card';
-import Divider from '../src/divider';
-import { Column } from '../src/grid/column';
-import { Row } from '../src/grid/row';
+import { Card } from '../cards/card';
+import Divider from '../dividers/divider';
+import { Column } from './column';
+import { Row } from './row';
 
 const stories = storiesOf('Grid', module);
 
@@ -63,12 +63,12 @@ stories.add('Width 12', () => (
 ));
 
 stories.add('Offset 5', () => (
-   <Row>
-     <Column offset={5}>
-       <Card
-         title="An Offset Only Column"
-         body="This card specifies 5 offset and no width."
-       />
-     </Column>
-   </Row>
- ));
+  <Row>
+    <Column offset={5}>
+      <Card
+        title="An Offset Only Column"
+        body="This card specifies 5 offset and no width."
+      />
+    </Column>
+  </Row>
+));

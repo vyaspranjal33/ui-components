@@ -2,8 +2,8 @@ import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React, { Component, Fragment } from 'react';
 
-import Button from '../src/buttons/button';
-import { ConfirmationModal } from '../src/confirmation-modal';
+import Button from '../buttons/button';
+import { ConfirmationModal } from './confirmation-modal';
 
 const stories = storiesOf('ConfirmationModal', module);
 

@@ -2,9 +2,9 @@ import React, { Fragment } from 'react';
 
 import cn from './utilities/classnames';
 
-import DropdownButton from './dropdown-button';
+import DropdownButton from './dropdown-buttons/dropdown-button';
+import EmailCardStyles from './email-cards/email-card.module.scss';
 import Icon from './icon';
-import EmailCardStyles from './styles/email-card.module.scss';
 
 import { IconType } from './types/icons';
 

@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import { Icon } from './icon';
-import Styles from './styles/confirmation-modal.module.scss';
-import { IconType } from './types/icons';
-import cn from './utilities/classnames';
-import { ModalProps, modalWillReceiveProps } from './utilities/modals';
+import { Icon } from '../icon';
+import { IconType } from '../types/icons';
+import cn from '../utilities/classnames';
+import { ModalProps, modalWillReceiveProps } from '../utilities/modals';
+import Styles from './confirmation-modal.module.scss';
 
 export interface ConfirmationModalProps extends ModalProps {
   iconType?: IconType;

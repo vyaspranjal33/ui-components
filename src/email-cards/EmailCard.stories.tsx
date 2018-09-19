@@ -1,13 +1,10 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React from 'react';
-import { Action, Actions } from '../src/actions';
-import Alert from '../src/alerts/alert';
-import Button from '../src/buttons/button';
-import {
-  EmailCard,
-  EmailCardAddButton,
-} from '../src/email-card';
+import { Action, Actions } from '../actions';
+import Alert from '../alerts/alert';
+import Button from '../buttons/button';
+import { EmailCard, EmailCardAddButton } from './email-card';
 const loaderStories = storiesOf('EmailCard', module);
 
 const statistics = {
@@ -25,25 +22,25 @@ const blankStatistics = {
   unsubscribes: { label: 'Unsubscribes' },
 };
 const renderEditDetailLink = (value: string) => {
-  return (
-    <a href="#">
-      {value}
-    </a>
-  );
+  return <a href="#">{value}</a>;
 };
 
 const details = [
   { label: 'Subject', value: 'Welcome to SendGrid', renderEditDetailLink },
-  { label: 'Preheader', value: 'Get starting sending up to 12,000 emails Today', renderEditDetailLink },
-  { label: 'From Sender', value: 'Tyler Hale <tyler.hale@sendgrid.com>', renderEditDetailLink },
+  {
+    label: 'Preheader',
+    value: 'Get starting sending up to 12,000 emails Today',
+    renderEditDetailLink,
+  },
+  {
+    label: 'From Sender',
+    value: 'Tyler Hale <tyler.hale@sendgrid.com>',
+    renderEditDetailLink,
+  },
 ];
 
 const renderSendTimeLink = (value: string) => {
-  return (
-    <a href="#">
-      {value || 'Select Send Time'}
-    </a>
-  );
+  return <a href="#">{value || 'Select Send Time'}</a>;
 };
 
 const onContentEditClick = action('content edit click');
@@ -80,7 +77,9 @@ const cardDataWithImage = {
   thumbnailUrl: 'http://via.placeholder.com/128x88',
 };
 
-loaderStories.add('Email Card', () => ( <EmailCard sendTimeValue="Send Instantly" {...cardData} /> ));
+loaderStories.add('Email Card', () => (
+  <EmailCard sendTimeValue="Send Instantly" {...cardData} />
+));
 loaderStories.add('Email card with actions', () => (
   <EmailCard
     sendTimeValue="Send Instantly"
@@ -89,7 +88,11 @@ loaderStories.add('Email card with actions', () => (
       <Actions inEmailCard>
         <Action title="Edit" icon="pencil" onClick={action('edit')} />
         <Action title="Duplicate" icon="copy" onClick={action('copy')} />
-        <Action title="Create Template" icon="create" onClick={action('create')} />
+        <Action
+          title="Create Template"
+          icon="create"
+          onClick={action('create')}
+        />
         <Action title="Export HTML" icon="export" onClick={action('export')} />
         <Action title="Preview" icon="view" onClick={action('view')} />
         <Action title="Delete" icon="trash" onClick={action('delete')} />
@@ -109,11 +112,17 @@ loaderStories.add('Email Card with Content', () => (
   <EmailCard sendTimeValue="Send Instantly" {...cardDataWithImage} />
 ));
 
-loaderStories.add('Email Card - Edit Mode', () => (<EmailCard {...cardDataNoStats} editing /> ));
+loaderStories.add('Email Card - Edit Mode', () => (
+  <EmailCard {...cardDataNoStats} editing />
+));
 
-loaderStories.add('Email Card - Live', () => ( <EmailCard {...cardData} sendTimeValue="Send Instantly" live /> ));
+loaderStories.add('Email Card - Live', () => (
+  <EmailCard {...cardData} sendTimeValue="Send Instantly" live />
+));
 
-loaderStories.add('Email Card - Paused', () => ( <EmailCard {...cardData} sendTimeValue="Send Instantly" paused/> ));
+loaderStories.add('Email Card - Paused', () => (
+  <EmailCard {...cardData} sendTimeValue="Send Instantly" paused />
+));
 
 loaderStories.add('Email Card - Multi Editable', () => (
   <div>
@@ -127,25 +136,47 @@ loaderStories.add('Email Card - Multi Editable', () => (
 
 loaderStories.add('Email Card - Multi Live', () => (
   <div>
-    <EmailCard {...cardData} live sendTimeValue="Send Instantly"/>
-    <EmailCard {...cardData} n={2} live sendTimeValue="Send 3 Days After Email 1"/>
-    <EmailCard {...cardData} n={3} live sendTimeValue="Send 3 Days After Email 2"/>
-    <EmailCard {...cardData} n={4} live sendTimeValue="Send 3 Days After Email 3"/>
+    <EmailCard {...cardData} live sendTimeValue="Send Instantly" />
+    <EmailCard
+      {...cardData}
+      n={2}
+      live
+      sendTimeValue="Send 3 Days After Email 1"
+    />
+    <EmailCard
+      {...cardData}
+      n={3}
+      live
+      sendTimeValue="Send 3 Days After Email 2"
+    />
+    <EmailCard
+      {...cardData}
+      n={4}
+      live
+      sendTimeValue="Send 3 Days After Email 3"
+    />
   </div>
 ));
 
 const renderAlert = () => {
   return (
     <Alert dismissable={false} type="warning" icon="info-circle">
-    <p>
-      Changes you've made to this email have not been applied to your live automation.
-      <Button type="primary" small>
-        Save and Apply
-      </Button>
-    </p>
-  </Alert>);
+      <p>
+        Changes you've made to this email have not been applied to your live
+        automation.
+        <Button type="primary" small>
+          Save and Apply
+        </Button>
+      </p>
+    </Alert>
+  );
 };
 
 loaderStories.add('Email Card with Alerts ', () => (
-  <EmailCard {...cardData} live renderAlert={renderAlert} sendTimeValue="Send Instantly"/>
+  <EmailCard
+    {...cardData}
+    live
+    renderAlert={renderAlert}
+    sendTimeValue="Send Instantly"
+  />
 ));

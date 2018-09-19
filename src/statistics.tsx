@@ -1,5 +1,5 @@
 import React from 'react';
-import Styles from './styles/email-card.module.scss';
+import Styles from './email-cards/email-card.module.scss';
 import cn from './utilities/classnames';
 
 export const NO_STATS_CHAR = '—';

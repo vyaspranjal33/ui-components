@@ -1,13 +1,13 @@
 import React from 'react';
-import { ActionsProps } from './actions';
-import Alert from './alerts/alert';
-import { Button, Buttonized } from './buttons/button';
-import BtnStyles from './buttons/button.module.scss';
-import Icon from './icon';
-import { EmailCardStat, Statistics, StatisticType } from './statistics';
-import Styles from './styles/email-card.module.scss';
-import cn from './utilities/classnames';
-import findActiveIndex from './utilities/find-active-index';
+import { ActionsProps } from '../actions';
+import Alert from '../alerts/alert';
+import { Button, Buttonized } from '../buttons/button';
+import BtnStyles from '../buttons/button.module.scss';
+import Icon from '../icon';
+import { EmailCardStat, Statistics, StatisticType } from '../statistics';
+import cn from '../utilities/classnames';
+import findActiveIndex from '../utilities/find-active-index';
+import Styles from './email-card.module.scss';
 
 interface EmailCardSendTimeProps {
   value?: string;

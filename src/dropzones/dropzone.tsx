@@ -1,9 +1,9 @@
 import { FlexWrapProperty } from 'csstype';
 import React from 'react';
-import Alert from './alerts/alert';
-import { AlertProps } from './alerts/alert';
-import Styles from './styles/dropzone.module.scss';
-import cn from './utilities/classnames';
+import Alert from '../alerts/alert';
+import { AlertProps } from '../alerts/alert';
+import cn from '../utilities/classnames';
+import Styles from './dropzone.module.scss';
 
 export interface DropzoneProps {
   active?: boolean;

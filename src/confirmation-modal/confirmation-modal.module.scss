@@ -1,6 +1,6 @@
-@import './global/variables.scss';
-@import './global/mixins.scss';
-@import './modal.module.scss';
+@import '../styles/global/variables.scss';
+@import '../styles/global/mixins.scss';
+@import '../styles/modal.module.scss';
 
 .conf-alert {
   @include dropdown-shadow;

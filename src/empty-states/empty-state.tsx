@@ -1,7 +1,7 @@
 import React from 'react';
-import Icon from './icon';
-import { IconType } from './types/icons';
-import cn from './utilities/classnames';
+import Icon from '../icon';
+import { IconType } from '../types/icons';
+import cn from '../utilities/classnames';
 
 const evaluateRenderProp: (
   prop: IconType | (() => React.ReactNode)

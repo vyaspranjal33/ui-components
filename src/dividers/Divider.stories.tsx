@@ -1,7 +1,7 @@
 import { storiesOf } from '@storybook/react';
 import React from 'react';
 
-import Divider from '../src/divider';
+import Divider from './divider';
 
 const stories = storiesOf('Divider', module);
 

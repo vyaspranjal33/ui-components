@@ -1,7 +1,7 @@
 import React, { Fragment, PureComponent } from 'react';
 
 import { AlertProps } from './alerts/alert';
-import Dropzone from './dropzone';
+import Dropzone from './dropzones/dropzone';
 import FileUpload, { DroppedFile, FileSelect } from './file-upload';
 
 export interface ImageUploadProps {

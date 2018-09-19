@@ -1,10 +1,10 @@
 import React from 'react';
-import Badge from './badges/badge';
-import { Button, ButtonProps, ButtonType } from './buttons/button';
-import btnStyles from './buttons/button.module.scss';
-import Icon from './icon';
-import Styles from './styles/dropdown.module.scss';
-import cn from './utilities/classnames';
+import Badge from '../badges/badge';
+import { Button, ButtonProps, ButtonType } from '../buttons/button';
+import btnStyles from '../buttons/button.module.scss';
+import Icon from '../icon';
+import cn from '../utilities/classnames';
+import Styles from './dropdown.module.scss';
 
 export interface DropdownButtonProps {
   children?: any;

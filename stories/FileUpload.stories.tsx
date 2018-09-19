@@ -1,7 +1,7 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
 import React, { Fragment } from 'react';
-import Dropzone from '../src/dropzone';
+import Dropzone from '../src/dropzones/dropzone';
 
 import FileUpload, { DroppedFile, FileSelect } from '../src/file-upload';
 

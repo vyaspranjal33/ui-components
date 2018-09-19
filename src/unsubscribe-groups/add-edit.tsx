@@ -5,7 +5,7 @@ import { ButtonList } from '../button-list/button-list';
 import { Button } from '../buttons/button';
 import { Card } from '../cards/card';
 import { Checkbox } from '../checkboxes/checkbox';
-import { ConfirmationModal } from '../confirmation-modal';
+import { ConfirmationModal } from '../confirmation-modal/confirmation-modal';
 import { Icon } from '../icon';
 import { TextInput } from '../text-input';
 import { Tooltip } from '../tooltip';
