@@ -6673,18 +6673,27 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
         onClick={undefined}
         style={null}
       />
-      <p>
-        Changes you've made to this email have not been applied to your live automation.
-        <button
-          className="btn btn-primary btn-small"
-          disabled={false}
-          id={undefined}
+      Changes you've made to this email have not been applied to your live automation.
+      <button
+        className="btn btn-primary btn-small"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Save and Apply
+      </button>
+      <span
+        className="discard-icon"
+        data-tooltip="Discard Changes"
+        data-tooltip-pos="up"
+      >
+        <i
+          className="sg-icon sg-icon-trash"
           onClick={[Function]}
-          type="button"
-        >
-          Save and Apply
-        </button>
-      </p>
+          style={null}
+        />
+      </span>
     </p>
   </div>
 </div>
