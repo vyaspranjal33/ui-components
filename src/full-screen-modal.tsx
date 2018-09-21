@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 import ReactDOM from 'react-dom';
 import { Icon } from './icon';
 
@@ -14,7 +14,9 @@ export interface FullScreenModelProps extends ModalProps {
   isOpen?: boolean;
   onClose?: (event: any) => void;
   modalContainer?: Element;
+  renderHeaderActions?: () => React.ReactNode;
   title: string;
+  tooltipText?: string;
 }
 
 export class FullscreenModal extends Component<FullScreenModelProps> {
@@ -38,7 +40,9 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
       isOpen,
       modalContainer,
       onClose,
+      renderHeaderActions,
       title,
+      tooltipText,
       ...attributes
     } = this.props;
 
@@ -52,11 +56,20 @@ export class FullscreenModal extends Component<FullScreenModelProps> {
         )}
         {...attributes}
       >
-        <header className="modal-fullscreen-header">
-          <a className="modal-close" onClick={onClose}>
+        <header className={Styles['modal-fullscreen-header']}>
+          <a className={Styles['modal-close']} onClick={onClose}>
             <Icon type="x" />
           </a>
-          <h2>{title}</h2>
+
+          <h2>
+            {title}
+            {tooltipText && (
+              <span data-tooltip={tooltipText} data-tooltip-pos="down">
+                <Icon type="info-circle" />
+              </span>
+            )}
+          </h2>
+          {renderHeaderActions && renderHeaderActions()}
         </header>
         <div className={cn('modal-content', { 'has-padding': hasPadding })}>
           {children}

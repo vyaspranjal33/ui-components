@@ -152,6 +152,31 @@ stories.add('Card w/Actions (Vertical)', () => (
   </div>
 ));
 
+stories.add('Card with falsy actions and link actions', () => (
+  <div className="row">
+    <div className="col-4" style={{ width: '300px' }}>
+      <Card
+        title="Event Annoucements"
+        body="Hear about our latest events and when we're coming to a city near you."
+        centered
+      >
+        <Actions vertical>
+          {/* imagine this a tag is a react-router link or some other useful component. */}
+          <a href="javascript: void 0">
+            <Action
+              title="Edit"
+              icon="pencil"
+              onClick={action('Edit Action Clicked')}
+            />
+          </a>
+          {false /*sometimes conditionals should eval to false as children*/}
+          {null}
+        </Actions>
+      </Card>
+    </div>
+  </div>
+));
+
 stories.add('Card (Large)', () => (
   <div className="row">
     <div className="col-8" style={{ width: '800px' }}>

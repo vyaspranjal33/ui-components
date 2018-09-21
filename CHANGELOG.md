@@ -1,4 +1,6 @@
 # CHANGELOG
+## 1.7.0
+ - FullscreenModal now supports a render prop for header content
 ## 1.6.0
 - Update icon font w/ mc editor icons
 ## 1.5.6

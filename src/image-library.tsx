@@ -40,6 +40,10 @@ export interface ImageLibraryProps {
     closeDetailsPane?: () => void
   ) => React.ReactNode;
   uploadAlert?: React.ReactElement<AlertProps>;
+
+  // setting this mounts the library with as much info as we have available about the image
+  // even if the image is not in the user's library.
+  initialImage?: SGLibraryImage;
 }
 
 export interface ImageLibraryState {
@@ -53,6 +57,14 @@ export class ImageLibrary extends Component<
   public state: ImageLibraryState = {
     selectedImage: null,
   };
+
+  public componentDidMount() {
+    const { initialImage } = this.props;
+
+    if (initialImage) {
+      this.onImageSelected(initialImage);
+    }
+  }
 
   public render() {
     const {
@@ -81,7 +93,7 @@ export class ImageLibrary extends Component<
           />
           <ImageLibraryThumbnailList
             images={images}
-            onThumbnailClick={this.onThumbnailClick}
+            onThumbnailClick={this.onImageSelected}
             selectedImage={selectedImage}
           />
         </div>
@@ -98,7 +110,7 @@ export class ImageLibrary extends Component<
     );
   }
 
-  private onThumbnailClick = (selectedImage: SGLibraryImage) => {
+  private onImageSelected = (selectedImage: SGLibraryImage) => {
     const { onImageSelected } = this.props;
     this.setState({ selectedImage });
 

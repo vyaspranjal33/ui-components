@@ -1,8 +1,8 @@
-import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import Button from '../src/buttons/button';
+import ButtonList from '../src/button-list/button-list';
 import FullscreenModal from '../src/full-screen-modal';
 
 const stories = storiesOf('FullScreen Modal', module);
@@ -22,19 +22,50 @@ class ExampleContainer extends Component<any, { isOpen: boolean }> {
         <Button type="primary" onClick={this.open}>
           Open Modal
         </Button>
-        <FullscreenModal
-          isOpen={this.state.isOpen}
-          title="Fullscreen Modal"
-          onClose={this.close}
-        />
+        { this.props.render({
+          isOpen: this.state.isOpen,
+          onClose: this.close,
+        }) }
       </div>
     );
   }
 }
 
-stories.add('ConfirmationModal with plain contents', () => (
+stories.add('Fullscreen Modal', () => (
   <ExampleContainer
-    renderHeader="Very cool! 😍"
-    renderBody="This will make a thing happen."
+    render={({isOpen, onClose}: any) => (
+      <FullscreenModal
+        isOpen={isOpen}
+        title="Fullscreen Modal"
+        onClose={onClose}
+      >
+        <div>Here is some content</div>
+      </FullscreenModal>
+    )}
+  />
+));
+
+stories.add('Fullscreen Modal with renderProps', () => (
+  <ExampleContainer
+    render={({isOpen, onClose}: any) => (
+      <FullscreenModal
+        isOpen={isOpen}
+        onClose={onClose}
+        title="With Render Props"
+        tooltipText="here is a tooltip"
+        renderHeaderActions={() => (
+          <ButtonList onDark>
+            <Button>
+              Confirm
+            </Button>
+            <Button type="secondary" onClick={onClose}>
+              Cancel
+            </Button>
+          </ButtonList>
+        )}
+      >
+        <div>Here is some content</div>
+      </FullscreenModal>
+    )}
   />
 ));

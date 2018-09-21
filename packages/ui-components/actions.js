@@ -7,43 +7,42 @@ var __rest = (this && this.__rest) || function (s, e) {
             t[p[i]] = s[p[i]];
     return t;
 };
-import React, { Fragment } from 'react';
+import React, { createContext, Fragment } from 'react';
 import cn from './utilities/classnames';
 import DropdownButton from './dropdown-button';
 import Icon from './icon';
 import EmailCardStyles from './styles/email-card.module.scss';
+// using Children.map to attach this prop is problematic because we
+// may wish to render <Link> elements as opposed to <Action> elements
+// as children, or provide expressions which evaluate to false as children.
+const { Provider, Consumer } = createContext({ showTitle: true });
 export const Actions = (_a) => {
     var { children, className, inEmailCard, vertical } = _a, attributes = __rest(_a, ["children", "className", "inEmailCard", "vertical"]);
-    const actions = React.Children.map(children, (action) => {
-        return React.cloneElement(action, {
-            showTitle: vertical,
-        });
-    });
     return (React.createElement("div", Object.assign({ className: cn({
             actions: !inEmailCard,
             [EmailCardStyles['email-row-actions']]: inEmailCard,
             'email-row-actions': inEmailCard,
-        }, className) }, attributes), vertical ? (React.createElement(DropdownButton, { gear: true, icon: "ellipsis-vertical" }, actions)) : (React.createElement(Fragment, null,
-        React.createElement(Icon, { type: "ellipsis" }),
-        React.createElement("div", { className: "action-icons" }, children)))));
+        }, className) }, attributes),
+        React.createElement(Provider, { value: { showTitle: vertical } }, vertical ? (React.createElement(DropdownButton, { gear: true, icon: "ellipsis-vertical" }, children)) : (React.createElement(Fragment, null,
+            React.createElement(Icon, { type: "ellipsis" }),
+            React.createElement("div", { className: "action-icons" }, children))))));
 };
 export const ActionsCell = (_a) => {
     var { children, className } = _a, attributes = __rest(_a, ["children", "className"]);
-    return (React.createElement("td", Object.assign({ className: cn('actions', className) }, attributes),
-        React.createElement(Icon, { type: "ellipsis" }),
-        React.createElement("div", { className: "action-icons" }, children)));
+    return (React.createElement(Provider, { value: { showTitle: false /* vertical not yet supported in tables */ } },
+        React.createElement("td", Object.assign({ className: cn('actions', className) }, attributes),
+            React.createElement(Icon, { type: "ellipsis" }),
+            React.createElement("div", { className: "action-icons" }, children))));
 };
 export const Action = (_a) => {
-    var { title, icon, onClick: handleClick, showTitle } = _a, attributes = __rest(_a, ["title", "icon", "onClick", "showTitle"]);
-    const tooltipAttributes = showTitle
-        ? {}
-        : {
-            'data-tooltip': title,
-            'data-tooltip-pos': 'up',
-        };
-    return (React.createElement("span", Object.assign({}, tooltipAttributes, { onClick: handleClick }, attributes),
+    var { title, icon, onClick: handleClick } = _a, attributes = __rest(_a, ["title", "icon", "onClick"]);
+    const hiddenTitleTooltipAttributes = {
+        'data-tooltip': title,
+        'data-tooltip-pos': 'up',
+    };
+    return (React.createElement(Consumer, null, ({ showTitle }) => (React.createElement("span", Object.assign({}, (showTitle ? {} : hiddenTitleTooltipAttributes), { onClick: handleClick }, attributes),
         React.createElement(Icon, { type: icon }),
-        showTitle && title));
+        showTitle && title))));
 };
 export default Actions;
 //# sourceMappingURL=actions.js.map

@@ -1,10 +1,12 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import React from 'react';
+import React, { Fragment } from 'react';
 import { Action, Actions } from '../actions';
 import Alert from '../alerts/alert';
 import Button from '../buttons/button';
+import Icon from '../icon';
 import { EmailCard, EmailCardAddButton } from './email-card';
+
 const loaderStories = storiesOf('EmailCard', module);
 
 const statistics = {
@@ -29,13 +31,13 @@ const details = [
   { label: 'Subject', value: 'Welcome to SendGrid', renderEditDetailLink },
   {
     label: 'Preheader',
-    value: 'Get starting sending up to 12,000 emails Today',
     renderEditDetailLink,
+    value: 'Get starting sending up to 12,000 emails Today',
   },
   {
     label: 'From Sender',
-    value: 'Tyler Hale <tyler.hale@sendgrid.com>',
     renderEditDetailLink,
+    value: 'Tyler Hale <tyler.hale@sendgrid.com>',
   },
 ];
 
@@ -124,6 +126,10 @@ loaderStories.add('Email Card - Paused', () => (
   <EmailCard {...cardData} sendTimeValue="Send Instantly" paused />
 ));
 
+loaderStories.add('Email Card - Disable Inbox Details', () => (
+  <EmailCard {...cardData} disableInboxDetails />
+));
+
 loaderStories.add('Email Card - Multi Editable', () => (
   <div>
     <EmailCard {...cardData} editable />
@@ -161,13 +167,20 @@ loaderStories.add('Email Card - Multi Live', () => (
 const renderAlert = () => {
   return (
     <Alert dismissable={false} type="warning" icon="info-circle">
-      <p>
+      <Fragment>
         Changes you've made to this email have not been applied to your live
         automation.
-        <Button type="primary" small>
+        <Button onClick={() => {}} type="primary" small>
           Save and Apply
         </Button>
-      </p>
+        <span
+          className="discard-icon"
+          data-tooltip="Discard Changes"
+          data-tooltip-pos="up"
+        >
+          <Icon type="trash" onClick={() => {}} />
+        </span>
+      </Fragment>
     </Alert>
   );
 };

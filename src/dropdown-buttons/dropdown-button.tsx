@@ -68,6 +68,11 @@ export class DropdownButton extends React.Component<
     }
 
     const links = map(children, (link: React.ReactElement<any>) => {
+      // allow false or null children
+      if (!link) {
+        return link;
+      }
+
       return React.cloneElement(link, {
         className: cn(
           link.props.className,

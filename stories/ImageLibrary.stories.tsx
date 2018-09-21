@@ -1,12 +1,12 @@
 import { action } from '@storybook/addon-actions';
 import { storiesOf } from '@storybook/react';
-import React, { Component, Fragment } from 'react';
+import React, { Component } from 'react';
 
 import Alert from '../src/alerts/alert';
 import Button from '../src/buttons/button';
 import ButtonList from '../src/button-list/button-list';
-import ImageLibrary, { SGLibraryImage } from '../src/image-library';
 import FullscreenModal from '../src/full-screen-modal';
+import ImageLibrary, { SGLibraryImage } from '../src/image-library';
 
 const stories = storiesOf('Image Library', module);
 
@@ -105,7 +105,7 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
   }
 
   private getDetailsAlert = () => {
-    if (!this.state.showDetailsSuccess) return null;
+    if (!this.state.showDetailsSuccess) { return null; }
 
     // consumer will use "real" transition group code.
     // wrapped in a div to prove we don't type check that the alert has "AlertProps".
@@ -170,6 +170,17 @@ class ExampleContainer extends Component<any, ExampleContainerState> {
 stories.add('without upload alert, with images', () => (
   <ExampleContainer
     images={images}
+  />
+));
+
+stories.add('with initial image that does not exist in the library', () => (
+  <ExampleContainer
+    images={[]}
+    initialImage={{
+      id: 'story-fake-id',
+      name: 'image.jpeg',
+      originalUrl: 'https://via.placeholder.com/45x15',
+    }}
   />
 ));
 

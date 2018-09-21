@@ -1071,6 +1071,14 @@ Array [
 ]
 `;
 
+exports[`Storyshots Badge Badge with custom classname 1`] = `
+<span
+  className="badge custom-class"
+>
+  custom
+</span>
+`;
+
 exports[`Storyshots Breadcrumb Breadcrumb with single item 1`] = `
 <ol
   className="breadcrumb"
@@ -2329,6 +2337,76 @@ exports[`Storyshots Card Card with Title and Body 1`] = `
       <p>
         The easiest way to send email. It only requires modifying your application’s SMTP configuration.
       </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Card Card with falsy actions and link actions 1`] = `
+<div
+  className="row"
+>
+  <div
+    className="col-4"
+    style={
+      Object {
+        "width": "300px",
+      }
+    }
+  >
+    <div
+      className="card is-centered"
+    >
+      <h2
+        className=""
+      >
+        Event Annoucements
+      </h2>
+      <p>
+        Hear about our latest events and when we're coming to a city near you.
+      </p>
+      <div
+        className="actions"
+      >
+        <div
+          className="btn-list"
+        >
+          <div
+            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-ellipsis-vertical"
+              onClick={undefined}
+              style={null}
+            />
+            <ul
+              className="dropdown-menu"
+              style={
+                Object {
+                  "transform": "translate(0px)",
+                }
+              }
+            >
+              <a
+                className="dropdown-link"
+                href="javascript: void 0"
+              >
+                <span
+                  onClick={[Function]}
+                >
+                  <i
+                    className="sg-icon sg-icon-pencil"
+                    onClick={undefined}
+                    style={null}
+                  />
+                  Edit
+                </span>
+              </a>
+            </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -4297,6 +4375,175 @@ exports[`Storyshots Dropzone Dropzone 1`] = `
 </section>
 `;
 
+exports[`Storyshots EmailCard Email Card - Disable Inbox Details 1`] = `
+<div
+  className="email-card-wrap is-disable-inbox-details"
+>
+  <div
+    className="email-card-send-time"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Select Send Time
+    </a>
+    
+  </div>
+  <div
+    className="email-card-stats"
+  >
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat"
+      >
+        12230
+      </p>
+      <p
+        className="label"
+      >
+        Emails Sent
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat delivered"
+      >
+        966
+      </p>
+      <p
+        className="label"
+      >
+        Delivered
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-opens"
+      >
+        80.2%
+      </p>
+      <p
+        className="label"
+      >
+        Unique Opens
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unique-clicks"
+      >
+        6024
+      </p>
+      <p
+        className="label"
+      >
+        Unique Clicks
+      </p>
+    </div>
+    <div
+      className="email-stats"
+    >
+      <p
+        className="stat unsubscribes"
+      >
+        0
+      </p>
+      <p
+        className="label"
+      >
+        Unsubscribes
+      </p>
+    </div>
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content"
+    >
+      <button
+        className="btn btn-secondary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Welcome to SendGrid
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              Preheader
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Get starting sending up to 12,000 emails Today
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
 <div
   className="email-card-wrap"
@@ -4312,6 +4559,7 @@ exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
     >
       Select Send Time
     </a>
+    
   </div>
   <div
     className="email-card"
@@ -4406,6 +4654,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
     >
       Send Instantly
     </a>
+    
   </div>
   <div
     className="email-card-stats"
@@ -4575,6 +4824,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         Select Send Time
       </a>
+      
     </div>
     <div
       className="email-card-stats"
@@ -4740,6 +4990,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         Select Send Time
       </a>
+      
     </div>
     <div
       className="email-card-stats"
@@ -4905,6 +5156,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         Select Send Time
       </a>
+      
     </div>
     <div
       className="email-card-stats"
@@ -5070,6 +5322,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
       >
         Select Send Time
       </a>
+      
     </div>
     <div
       className="email-card-stats"
@@ -5253,6 +5506,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         Send Instantly
       </a>
+      
     </div>
     <div
       className="email-card-stats"
@@ -5418,6 +5672,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         Send 3 Days After Email 1
       </a>
+      
     </div>
     <div
       className="email-card-stats"
@@ -5583,6 +5838,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         Send 3 Days After Email 2
       </a>
+      
     </div>
     <div
       className="email-card-stats"
@@ -5748,6 +6004,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
       >
         Send 3 Days After Email 3
       </a>
+      
     </div>
     <div
       className="email-card-stats"
@@ -5917,6 +6174,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
     >
       Send Instantly
     </a>
+    
   </div>
   <div
     className="email-card-stats"
@@ -6085,6 +6343,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
     >
       Send Instantly
     </a>
+    
   </div>
   <div
     className="email-card-stats"
@@ -6253,30 +6512,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
     >
       Send Instantly
     </a>
-    <div
-      className="alert alert-warning"
-      role="alert"
-    >
-      <p>
-        <i
-          className="sg-icon sg-icon-info-circle"
-          onClick={undefined}
-          style={null}
-        />
-        <p>
-          Changes you've made to this email have not been applied to your live automation.
-          <button
-            className="btn btn-primary btn-small"
-            disabled={false}
-            id={undefined}
-            onClick={[Function]}
-            type="button"
-          >
-            Save and Apply
-          </button>
-        </p>
-      </p>
-    </div>
+    
   </div>
   <div
     className="email-card-stats"
@@ -6437,18 +6673,27 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
         onClick={undefined}
         style={null}
       />
-      <p>
-        Changes you've made to this email have not been applied to your live automation.
-        <button
-          className="btn btn-primary btn-small"
-          disabled={false}
-          id={undefined}
+      Changes you've made to this email have not been applied to your live automation.
+      <button
+        className="btn btn-primary btn-small"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Save and Apply
+      </button>
+      <span
+        className="discard-icon"
+        data-tooltip="Discard Changes"
+        data-tooltip-pos="up"
+      >
+        <i
+          className="sg-icon sg-icon-trash"
           onClick={[Function]}
-          type="button"
-        >
-          Save and Apply
-        </button>
-      </p>
+          style={null}
+        />
+      </span>
     </p>
   </div>
 </div>
@@ -6469,6 +6714,7 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
     >
       Send Instantly
     </a>
+    
   </div>
   <div
     className="email-card-stats"
@@ -6637,6 +6883,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
     >
       Send Instantly
     </a>
+    
   </div>
   <div
     className="email-card-stats"
@@ -6814,6 +7061,7 @@ exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
     >
       Send Instantly
     </a>
+    
   </div>
   <div
     className="email-card"
@@ -6908,6 +7156,7 @@ exports[`Storyshots EmailCard Email card with actions 1`] = `
     >
       Send Instantly
     </a>
+    
   </div>
   <div
     className="email-card-stats"
@@ -8063,7 +8312,7 @@ exports[`Storyshots FilterableList FilterableList with Two Input Fields and Cust
 </section>
 `;
 
-exports[`Storyshots FullScreen Modal ConfirmationModal with plain contents 1`] = `
+exports[`Storyshots FullScreen Modal Fullscreen Modal 1`] = `
 <div>
   <button
     className="btn btn-primary"
@@ -8096,7 +8345,85 @@ exports[`Storyshots FullScreen Modal ConfirmationModal with plain contents 1`] =
     </header>
     <div
       className="modal-content has-padding"
-    />
+    >
+      <div>
+        Here is some content
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots FullScreen Modal Fullscreen Modal with renderProps 1`] = `
+<div>
+  <button
+    className="btn btn-primary"
+    disabled={false}
+    id={undefined}
+    onClick={[Function]}
+    type="button"
+  >
+    Open Modal
+  </button>
+  <div
+    className="modal-fullscreen is-open"
+  >
+    <header
+      className="modal-fullscreen-header"
+    >
+      <a
+        className="modal-close"
+        onClick={[Function]}
+      >
+        <i
+          className="sg-icon sg-icon-x"
+          onClick={undefined}
+          style={null}
+        />
+      </a>
+      <h2>
+        With Render Props
+        <span
+          data-tooltip="here is a tooltip"
+          data-tooltip-pos="down"
+        >
+          <i
+            className="sg-icon sg-icon-info-circle"
+            onClick={undefined}
+            style={null}
+          />
+        </span>
+      </h2>
+      <div
+        className="btn-list"
+      >
+        <button
+          className="btn btn-primary btn-on-dark"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Confirm
+        </button>
+        <button
+          className="btn btn-secondary btn-on-dark"
+          disabled={false}
+          id={undefined}
+          onClick={[Function]}
+          type="button"
+        >
+          Cancel
+        </button>
+      </div>
+    </header>
+    <div
+      className="modal-content has-padding"
+    >
+      <div>
+        Here is some content
+      </div>
+    </div>
   </div>
 </div>
 `;
@@ -8233,6 +8560,185 @@ exports[`Storyshots Grid Width 12 1`] = `
       <p>
         This card specifies 12 width and no offset.
       </p>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Image Library with initial image that does not exist in the library 1`] = `
+<div
+  className="modal-fullscreen is-open"
+>
+  <header
+    className="modal-fullscreen-header"
+  >
+    <a
+      className="modal-close"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-x"
+        onClick={undefined}
+        style={null}
+      />
+    </a>
+    <h2>
+      Image Library
+    </h2>
+  </header>
+  <div
+    className="modal-content"
+  >
+    <div
+      className="wrap"
+    >
+      <div
+        className="list-container details-open"
+      >
+        <section
+          onDragEnd={[Function]}
+          onDragLeave={[Function]}
+          onDragOver={[Function]}
+          onDrop={[Function]}
+        >
+          <section
+            className="dropzone"
+            onDragEnd={undefined}
+            onDragLeave={undefined}
+            onDragOver={undefined}
+            onDrop={undefined}
+            role="hidden"
+            style={
+              Object {
+                "alignItems": "center",
+                "display": "flex",
+                "flexWrap": "wrap",
+                "fontSize": "14px",
+                "justifyContent": "center",
+              }
+            }
+          >
+            <div
+              style={Object {}}
+            >
+              <div
+                className={undefined}
+                style={
+                  Object {
+                    "alignItems": "center",
+                    "display": "flex",
+                  }
+                }
+              >
+                <i
+                  className="sg-icon sg-icon-image is-size-30"
+                  onClick={undefined}
+                  style={
+                    Object {
+                      "marginRight": "12px",
+                    }
+                  }
+                />
+                <span>
+                  Drag and drop your images here, or
+                   
+                  <a
+                    href="#"
+                    onClick={[Function]}
+                  >
+                    choose images to upload
+                  </a>
+                  .
+                </span>
+              </div>
+            </div>
+          </section>
+          <input
+            accept="image/gif,image/jpeg,image/png"
+            onChange={[Function]}
+            style={
+              Object {
+                "display": "none",
+              }
+            }
+            type="file"
+          />
+        </section>
+        <section
+          className="list"
+        />
+      </div>
+      <div
+        className="wrap"
+      >
+        <a
+          className="x-wrap"
+          href="javascript: void 0"
+          onClick={[Function]}
+        >
+          <i
+            className="x sg-icon sg-icon-x"
+            onClick={undefined}
+            style={null}
+          />
+        </a>
+        <h3>
+          Image Details
+        </h3>
+        <div
+          className="img-wrap"
+        >
+          <img
+            src="https://via.placeholder.com/45x15"
+          />
+        </div>
+        <div
+          className="metadata-wrap"
+        >
+          <h3>
+            File Name: 
+          </h3>
+          <p
+            className="small"
+          >
+            image.jpeg
+          </p>
+        </div>
+        <div
+          className="metadata-wrap"
+        >
+          <h3>
+            Image URL: 
+          </h3>
+          <p
+            className="small"
+          >
+            https://via.placeholder.com/45x15
+          </p>
+        </div>
+        <div
+          className="btn-list"
+        >
+          <button
+            className="btn btn-secondary"
+            disabled={false}
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            Delete
+          </button>
+          <button
+            className="btn btn-primary"
+            disabled={false}
+            id={undefined}
+            onClick={[Function]}
+            type="button"
+          >
+            Insert Image
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 </div>
@@ -15387,6 +15893,7 @@ exports[`Storyshots Table Standard 1`] = `
   >
     <tr
       className={undefined}
+      data-name="name1"
     >
       <th
         className=""

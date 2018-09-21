@@ -22,7 +22,7 @@ export class ImageLibraryThumbnailList extends Component<
           <ImageLibraryThumbnail
             key={image.id}
             image={image}
-            isSelected={selectedImage === image}
+            isSelected={selectedImage && selectedImage.id === image.id}
             onClick={onThumbnailClick}
           />
         ))}

@@ -22,10 +22,15 @@ const getMatchOptions = ({ context: { kind, story }, url }) => {
   // };
 };
 
+// our components sometimes setState on mount, thus we ought to allow a short delay
+// before the screenshot is captured for consistency's sake
+const beforeScreenshot = () => new Promise(resolve => setTimeout(resolve, 300));
+
 // DontTest is added to the names of storybook stories
 // that render animations/things we dont want to include in imageshots.
 initStoryshots({
   storyNameRegex: /^((?!\[skip\]).)*$/,
   suite: 'Image storyshots',
   test: imageSnapshot({ storybookUrl: targetPath, getMatchOptions }),
+  beforeScreenshot,
 });

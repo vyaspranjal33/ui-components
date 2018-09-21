@@ -24,6 +24,7 @@ export class ImageLibraryDetailsPane extends Component<
 > {
   public render() {
     const { alert, dateFormatter, image, renderActions } = this.props;
+    const dimensionsKnown = image.width && image.height;
 
     return (
       <div className={Styles.wrap}>
@@ -45,15 +46,20 @@ export class ImageLibraryDetailsPane extends Component<
           <p className="small">{image.name}</p>
         </div>
 
-        <div className={Styles['metadata-wrap']}>
-          <h3>Upload: </h3>
-          <p className="small">{dateFormatter(image.created)}</p>
-        </div>
+        {/* not known for images outside user's library */}
+        {image.created && (
+          <div className={Styles['metadata-wrap']}>
+            <h3>Upload: </h3>
+            <p className="small">{dateFormatter(image.created)}</p>
+          </div>
+        )}
 
-        <div className={Styles['metadata-wrap']}>
-          <h3>Dimensions: </h3>
-          <p className="small">{`${image.width} x ${image.height}`} px</p>
-        </div>
+        {dimensionsKnown && (
+          <div className={Styles['metadata-wrap']}>
+            <h3>Dimensions: </h3>
+            <p className="small">{`${image.width} x ${image.height}`} px</p>
+          </div>
+        )}
 
         <div className={Styles['metadata-wrap']}>
           <h3>Image URL: </h3>

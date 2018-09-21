@@ -19,6 +19,7 @@ export interface EmailCardAddButtonProps {
 export declare const EmailCardAddButton: React.SFC<EmailCardAddButtonProps>;
 export interface EmailCardProps {
     details?: Array<EmailCardDetail>;
+    disableInboxDetails?: boolean;
     editing?: boolean;
     editable?: boolean;
     live?: boolean;
@@ -27,6 +28,7 @@ export interface EmailCardProps {
     onSaveAlertClick?: (event: any) => void;
     paused?: boolean;
     renderSendTimeLink?: (value: string) => any;
+    renderSendTimeAlert?: () => any;
     renderActions?: () => React.ReactElement<ActionsProps>;
     renderAlert?: () => any;
     sendTimeValue?: string;
@@ -42,6 +44,7 @@ export interface EmailCardProps {
 }
 export declare class EmailCard extends React.Component<EmailCardProps> {
     static defaultProps: {
+        disableInboxDetails: boolean;
         editable: boolean;
         editing: boolean;
         live: boolean;

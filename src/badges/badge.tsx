@@ -17,7 +17,10 @@ export const Badge: React.SFC<BadgeProps> = ({
   className,
   ...attributes
 }) => (
-  <span className={cn('badge', Styles.badge, Styles[color])} {...attributes}>
+  <span
+    className={cn('badge', className, Styles.badge, Styles[color])}
+    {...attributes}
+  >
     {children || content}
   </span>
 );

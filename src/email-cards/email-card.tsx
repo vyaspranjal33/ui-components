@@ -149,6 +149,7 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
 
 export interface EmailCardProps {
   details?: Array<EmailCardDetail>;
+  disableInboxDetails?: boolean;
   editing?: boolean;
   editable?: boolean;
   live?: boolean;
@@ -157,6 +158,7 @@ export interface EmailCardProps {
   onSaveAlertClick?: (event: any) => void;
   paused?: boolean;
   renderSendTimeLink?: (value: string) => any;
+  renderSendTimeAlert?: () => any;
   renderActions?: () => React.ReactElement<ActionsProps>;
   renderAlert?: () => any;
   sendTimeValue?: string;
@@ -173,6 +175,7 @@ export interface EmailCardProps {
 
 export class EmailCard extends React.Component<EmailCardProps> {
   public static defaultProps = {
+    disableInboxDetails: false,
     editable: false,
     editing: false,
     live: false,
@@ -184,6 +187,7 @@ export class EmailCard extends React.Component<EmailCardProps> {
     const {
       className,
       details,
+      disableInboxDetails,
       editable,
       editing,
       live,
@@ -194,12 +198,14 @@ export class EmailCard extends React.Component<EmailCardProps> {
       renderActions,
       renderAlert,
       renderSendTimeLink,
+      renderSendTimeAlert,
       sendTimeValue,
       statistics,
       thumbnailUrl,
       ...attributes
     } = this.props;
     const alertEl = renderAlert && renderAlert();
+    const sendTimeAlert = renderSendTimeAlert && renderSendTimeAlert();
     return (
       <div
         className={cn('email-card-wrap', Styles['email-card-wrap'], className, {
@@ -211,13 +217,14 @@ export class EmailCard extends React.Component<EmailCardProps> {
           'is-live': this.props.live,
           [Styles['is-paused']]: this.props.paused,
           'is-paused': this.props.paused,
+          [Styles['is-disable-inbox-details']]: this.props.disableInboxDetails,
         })}
         {...attributes}
       >
         <EmailCardSendTime
           value={sendTimeValue}
           renderSendTimeLink={renderSendTimeLink}
-          alert={alertEl}
+          alert={sendTimeAlert}
         />
         {statistics && (
           <Statistics commonClass="email-stats">

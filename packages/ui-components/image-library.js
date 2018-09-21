@@ -10,7 +10,7 @@ export class ImageLibrary extends Component {
         this.state = {
             selectedImage: null,
         };
-        this.onThumbnailClick = (selectedImage) => {
+        this.onImageSelected = (selectedImage) => {
             const { onImageSelected } = this.props;
             this.setState({ selectedImage });
             if (onImageSelected) {
@@ -36,6 +36,12 @@ export class ImageLibrary extends Component {
             this.props.onUploadFailure(files[0]);
         };
     }
+    componentDidMount() {
+        const { initialImage } = this.props;
+        if (initialImage) {
+            this.onImageSelected(initialImage);
+        }
+    }
     render() {
         const { dateFormatter, detailsAlert, images, maximumImageBytes, renderImageDetailsActions, uploadAlert, } = this.props;
         const { selectedImage } = this.state;
@@ -44,7 +50,7 @@ export class ImageLibrary extends Component {
                     [Styles['details-open']]: !!selectedImage,
                 }) },
                 React.createElement(ImageUpload, { clearOnDrop: true, alert: uploadAlert, onFileSelect: this.onFileSelect, onInvalidFile: this.onInvalidFile, maximumImageBytes: maximumImageBytes }),
-                React.createElement(ImageLibraryThumbnailList, { images: images, onThumbnailClick: this.onThumbnailClick, selectedImage: selectedImage })),
+                React.createElement(ImageLibraryThumbnailList, { images: images, onThumbnailClick: this.onImageSelected, selectedImage: selectedImage })),
             selectedImage && (React.createElement(ImageLibraryDetailsPane, { alert: detailsAlert, dateFormatter: dateFormatter, onClose: this.onImageDeselected, image: selectedImage, renderActions: renderImageDetailsActions }))));
     }
 }
