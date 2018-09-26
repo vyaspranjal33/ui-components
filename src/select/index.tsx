@@ -208,9 +208,7 @@ const SelectStyles = {
       ...base,
       ...inputSelect,
       ...{
-        padding: 2,
-        paddingLeft: 0,
-        paddingRight: 0,
+        padding: 0,
       },
     };
   },
