@@ -10272,7 +10272,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
             onTouchEnd={[Function]}
           >
             <div
-              className="css-5wsn6x"
+              className="css-vkq1bj"
             >
               <div
                 className="css-pka8w3"
@@ -10408,7 +10408,7 @@ exports[`Storyshots Segment Term Segment term which is being edited 1`] = `
             onTouchEnd={[Function]}
           >
             <div
-              className="css-5wsn6x"
+              className="css-vkq1bj"
             >
               <div
                 className="css-pka8w3"
@@ -10595,7 +10595,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
             onTouchEnd={[Function]}
           >
             <div
-              className="css-5wsn6x"
+              className="css-vkq1bj"
             >
               <div
                 className="css-1v8euj5"
@@ -10731,7 +10731,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
             onTouchEnd={[Function]}
           >
             <div
-              className="css-5wsn6x"
+              className="css-vkq1bj"
             >
               <div
                 className="css-pka8w3"
@@ -10861,7 +10861,7 @@ exports[`Storyshots Segment Term Segment term which is being edited and is fille
             onTouchEnd={[Function]}
           >
             <div
-              className="css-5wsn6x"
+              className="css-vkq1bj"
             >
               <div
                 className="css-pka8w3"
@@ -11248,7 +11248,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
                 onTouchEnd={[Function]}
               >
                 <div
-                  className="css-5wsn6x"
+                  className="css-vkq1bj"
                 >
                   <div
                     className="css-1v8euj5"
@@ -11384,7 +11384,7 @@ exports[`Storyshots Segment Term Segment terms 1`] = `
                 onTouchEnd={[Function]}
               >
                 <div
-                  className="css-5wsn6x"
+                  className="css-vkq1bj"
                 >
                   <div
                     className="css-1v8euj5"
@@ -11699,7 +11699,7 @@ exports[`Storyshots Select Disabled 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-1v8euj5"
@@ -11832,7 +11832,7 @@ exports[`Storyshots Select Multi select - no values 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-pka8w3"
@@ -11965,7 +11965,7 @@ exports[`Storyshots Select Multi select - open 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-113lvzv"
@@ -12241,7 +12241,7 @@ exports[`Storyshots Select Multi select 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-113lvzv"
@@ -12442,7 +12442,7 @@ exports[`Storyshots Select Option groups - open 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-pka8w3"
@@ -12805,7 +12805,7 @@ exports[`Storyshots Select Option groups 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-pka8w3"
@@ -12943,7 +12943,7 @@ exports[`Storyshots Select Searchable 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-1v8euj5"
@@ -13076,7 +13076,7 @@ exports[`Storyshots Select Standard 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-1v8euj5"
@@ -13214,7 +13214,7 @@ exports[`Storyshots Select Standard open 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-pka8w3"
@@ -13458,7 +13458,7 @@ exports[`Storyshots Select Tagging - open 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-113lvzv"
@@ -13761,7 +13761,7 @@ exports[`Storyshots Select Tagging 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-113lvzv"
@@ -13989,7 +13989,7 @@ exports[`Storyshots Select With placeholder 1`] = `
         onTouchEnd={[Function]}
       >
         <div
-          className="css-5wsn6x"
+          className="css-vkq1bj"
         >
           <div
             className="css-pka8w3"
@@ -14124,7 +14124,7 @@ exports[`Storyshots Select/Label + Info disabled + error 1`] = `
       onTouchEnd={[Function]}
     >
       <div
-        className="css-5wsn6x"
+        className="css-vkq1bj"
       >
         <div
           className="css-pka8w3"
@@ -14263,7 +14263,7 @@ exports[`Storyshots Select/Label + Info disabled - defaultValue - multi select 1
       onTouchEnd={[Function]}
     >
       <div
-        className="css-5wsn6x"
+        className="css-vkq1bj"
       >
         <div
           className="css-1wvqrm2"
@@ -14424,7 +14424,7 @@ exports[`Storyshots Select/Label + Info disabled - defaultValue 1`] = `
       onTouchEnd={[Function]}
     >
       <div
-        className="css-5wsn6x"
+        className="css-vkq1bj"
       >
         <div
           className="css-1v8euj5"
@@ -14563,7 +14563,7 @@ exports[`Storyshots Select/Label + Info disabled 1`] = `
       onTouchEnd={[Function]}
     >
       <div
-        className="css-5wsn6x"
+        className="css-vkq1bj"
       >
         <div
           className="css-pka8w3"
@@ -14702,7 +14702,7 @@ exports[`Storyshots Select/Label + Info error 1`] = `
       onTouchEnd={[Function]}
     >
       <div
-        className="css-5wsn6x"
+        className="css-vkq1bj"
       >
         <div
           className="css-pka8w3"
@@ -14836,7 +14836,7 @@ exports[`Storyshots Select/Label + Info info 1`] = `
       onTouchEnd={[Function]}
     >
       <div
-        className="css-5wsn6x"
+        className="css-vkq1bj"
       >
         <div
           className="css-pka8w3"
@@ -14975,7 +14975,7 @@ exports[`Storyshots Select/Label + Info label - required 1`] = `
       onTouchEnd={[Function]}
     >
       <div
-        className="css-5wsn6x"
+        className="css-vkq1bj"
       >
         <div
           className="css-pka8w3"
@@ -15114,7 +15114,7 @@ exports[`Storyshots Select/Label + Info label 1`] = `
       onTouchEnd={[Function]}
     >
       <div
-        className="css-5wsn6x"
+        className="css-vkq1bj"
       >
         <div
           className="css-pka8w3"
