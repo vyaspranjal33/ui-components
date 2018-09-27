@@ -16734,6 +16734,16 @@ exports[`Storyshots Text Area Basic 1`] = `
     }
     value=""
   />
+  <textarea
+    style={
+      Object {
+        "border": 0,
+        "height": 0,
+        "visibility": "hidden",
+      }
+    }
+    value=""
+  />
 </div>
 `;
 
@@ -16757,6 +16767,16 @@ exports[`Storyshots Text Area Disabled 1`] = `
     style={
       Object {
         "height": "25px",
+      }
+    }
+    value=""
+  />
+  <textarea
+    style={
+      Object {
+        "border": 0,
+        "height": 0,
+        "visibility": "hidden",
       }
     }
     value=""
@@ -16788,6 +16808,16 @@ exports[`Storyshots Text Area Error 1`] = `
     }
     value=""
   />
+  <textarea
+    style={
+      Object {
+        "border": 0,
+        "height": 0,
+        "visibility": "hidden",
+      }
+    }
+    value=""
+  />
 </div>
 `;
 
@@ -16811,6 +16841,16 @@ exports[`Storyshots Text Area Information Message 1`] = `
     style={
       Object {
         "height": "25px",
+      }
+    }
+    value=""
+  />
+  <textarea
+    style={
+      Object {
+        "border": 0,
+        "height": 0,
+        "visibility": "hidden",
       }
     }
     value=""
@@ -16848,6 +16888,16 @@ exports[`Storyshots Text Area Required 1`] = `
     }
     value=""
   />
+  <textarea
+    style={
+      Object {
+        "border": 0,
+        "height": 0,
+        "visibility": "hidden",
+      }
+    }
+    value=""
+  />
 </div>
 `;
 
@@ -16875,6 +16925,16 @@ exports[`Storyshots Text Area Scrollable 1`] = `
     }
     value=""
   />
+  <textarea
+    style={
+      Object {
+        "border": 0,
+        "height": 0,
+        "visibility": "hidden",
+      }
+    }
+    value=""
+  />
 </div>
 `;
 
@@ -16898,6 +16958,16 @@ exports[`Storyshots Text Area With Tooltip [skip] 1`] = `
     style={
       Object {
         "height": "25px",
+      }
+    }
+    value=""
+  />
+  <textarea
+    style={
+      Object {
+        "border": 0,
+        "height": 0,
+        "visibility": "hidden",
       }
     }
     value=""
