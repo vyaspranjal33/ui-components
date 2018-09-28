@@ -9031,6 +9031,101 @@ exports[`Storyshots Image Library without upload alert, with images 1`] = `
 </div>
 `;
 
+exports[`Storyshots Label Labels 1`] = `
+Array [
+  <span
+    className="label label-sent"
+  >
+    Sent
+  </span>,
+  <br />,
+  <span
+    className="label label-delivered"
+  >
+    Delivered
+  </span>,
+  <br />,
+  <span
+    className="label label-live"
+  >
+    Live
+  </span>,
+  <br />,
+  <span
+    className="label label-success"
+  >
+    Success
+  </span>,
+  <br />,
+  <span
+    className="label label-scheduled"
+  >
+    Scheduled
+  </span>,
+  <br />,
+  <span
+    className="label label-pick-winner"
+  >
+    Pick Winner
+  </span>,
+  <br />,
+  <span
+    className="label label-draft"
+  >
+    Draft
+  </span>,
+  <br />,
+  <span
+    className="label label-global"
+  >
+    Global
+  </span>,
+  <br />,
+  <span
+    className="label label-list"
+  >
+    List
+  </span>,
+  <br />,
+  <span
+    className="label label-progress"
+  >
+    Progress
+  </span>,
+  <br />,
+  <span
+    className="label label-bounced"
+  >
+    Bounced
+  </span>,
+  <br />,
+  <span
+    className="label label-canceled"
+  >
+    Canceled
+  </span>,
+  <br />,
+  <span
+    className="label label-paused"
+  >
+    Paused
+  </span>,
+  <br />,
+  <span
+    className="label label-error"
+  >
+    Error
+  </span>,
+  <br />,
+  <span
+    className="label label-optimized"
+  >
+    Optimized
+  </span>,
+  <br />,
+]
+`;
+
 exports[`Storyshots Loaders Centered Loader 1`] = `
 <div
   style={
