@@ -58,6 +58,7 @@
   &-bounced,
   &-canceled,
   &-paused,
+  &-disabled,
   &-error {
     @include label($ron-burgundy);
   }
