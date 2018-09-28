@@ -21,9 +21,12 @@
   }
 
   &-sent,
-  &-delivered,
-  &-live {
+  &-delivered {
     @include label($mantis);
+  }
+
+  &-live {
+    @include label($sg-blue);
   }
 
   &-success {
