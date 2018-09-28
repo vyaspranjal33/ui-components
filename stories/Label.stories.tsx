@@ -5,24 +5,6 @@ import Label from '../src/label';
 
 const stories = storiesOf('Label', module);
 
-const validLabels = [
-  'sent',
-  'delivered',
-  'live',
-  'success',
-  'scheduled',
-  'pick-winner',
-  'draft',
-  'global',
-  'list',
-  'progress',
-  'bounced',
-  'canceled',
-  'paused',
-  'error',
-  'optimized'
-];
-
 stories.add('Labels', () =>
   <Fragment>
     <Label text="Sent" type="sent" /><br />
@@ -37,6 +19,7 @@ stories.add('Labels', () =>
     <Label text="Progress" type="progress" /><br />
     <Label text="Bounced" type="bounced" /><br />
     <Label text="Canceled" type="canceled" /><br />
+    <Label text="Disabled" type="disabled" /><br />
     <Label text="Paused" type="paused" /><br />
     <Label text="Error" type="error" /><br />
     <Label text="Optimized" type="optimized" /><br />

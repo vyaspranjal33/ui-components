@@ -9106,6 +9106,12 @@ Array [
   </span>,
   <br />,
   <span
+    className="label label-disabled"
+  >
+    Disabled
+  </span>,
+  <br />,
+  <span
     className="label label-paused"
   >
     Paused

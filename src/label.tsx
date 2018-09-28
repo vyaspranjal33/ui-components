@@ -18,6 +18,7 @@ export interface LabelProps {
     | 'progress'
     | 'bounced'
     | 'canceled'
+    | 'disabled'
     | 'paused'
     | 'error'
     | 'optimized';
