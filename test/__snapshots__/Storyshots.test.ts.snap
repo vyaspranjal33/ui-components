@@ -2023,7 +2023,7 @@ exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
           className="btn-list"
         >
           <div
-            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            className="btn btn-dropdown dropdown has-icon"
             onClick={[Function]}
           >
             <i
@@ -2033,11 +2033,6 @@ exports[`Storyshots Card Card w/Actions (Vertical) 1`] = `
             />
             <ul
               className="dropdown-menu"
-              style={
-                Object {
-                  "transform": "translate(0px)",
-                }
-              }
             >
               <span
                 className="dropdown-link"
@@ -2372,7 +2367,7 @@ exports[`Storyshots Card Card with falsy actions and link actions 1`] = `
           className="btn-list"
         >
           <div
-            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            className="btn btn-dropdown dropdown has-icon"
             onClick={[Function]}
           >
             <i
@@ -2382,11 +2377,6 @@ exports[`Storyshots Card Card with falsy actions and link actions 1`] = `
             />
             <ul
               className="dropdown-menu"
-              style={
-                Object {
-                  "transform": "translate(0px)",
-                }
-              }
             >
               <a
                 className="dropdown-link"
@@ -3461,7 +3451,7 @@ exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
   className="btn-list"
 >
   <div
-    className="btn btn-dropdown dropdown btn-secondary btn-dropdown-gear"
+    className="btn btn-dropdown dropdown btn-dropdown-gear"
     onClick={[Function]}
   >
     <i
@@ -3471,11 +3461,6 @@ exports[`Storyshots Dropdown Button Gear Dropdown 1`] = `
     />
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3511,11 +3496,6 @@ exports[`Storyshots Dropdown Button Primary Dropdown (Small) 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3551,11 +3531,6 @@ exports[`Storyshots Dropdown Button Primary Dropdown 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3596,11 +3571,6 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Badge (Small) 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3641,11 +3611,6 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Badge 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3690,11 +3655,6 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Icon (Small) 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3739,11 +3699,6 @@ exports[`Storyshots Dropdown Button Primary Dropdown with Icon 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3779,11 +3734,6 @@ exports[`Storyshots Dropdown Button Secondary Dropdown (Small) 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3819,11 +3769,6 @@ exports[`Storyshots Dropdown Button Secondary Dropdown 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3864,11 +3809,6 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Badge (Small) 1`] = 
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3909,11 +3849,6 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Badge 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3954,11 +3889,6 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon (Small) 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -3999,11 +3929,6 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
     Button
     <ul
       className="dropdown-menu"
-      style={
-        Object {
-          "transform": "translate(0px)",
-        }
-      }
     >
       <a
         className="dropdown-link"
@@ -19476,7 +19401,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
           className="btn-list"
         >
           <div
-            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            className="btn btn-dropdown dropdown has-icon"
             onClick={[Function]}
           >
             <i
@@ -19486,11 +19411,6 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card (isDisplayedOnPref
             />
             <ul
               className="dropdown-menu"
-              style={
-                Object {
-                  "transform": "translate(0px)",
-                }
-              }
             >
               <span
                 className="dropdown-link"
@@ -19603,7 +19523,7 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
           className="btn-list"
         >
           <div
-            className="btn btn-dropdown dropdown btn-group-item has-icon"
+            className="btn btn-dropdown dropdown has-icon"
             onClick={[Function]}
           >
             <i
@@ -19613,11 +19533,6 @@ exports[`Storyshots Unsubscribe Groups Unsubscribe Group Card 1`] = `
             />
             <ul
               className="dropdown-menu"
-              style={
-                Object {
-                  "transform": "translate(0px)",
-                }
-              }
             >
               <span
                 className="dropdown-link"
