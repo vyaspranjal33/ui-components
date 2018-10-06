@@ -109,3 +109,13 @@ stories.add('Gear Dropdown', () => (
     <a href="#">Add new Template</a>
   </DropdownButton>
 ));
+
+stories.add('With menu positioned to the left', () => (
+  <div style={{ display: 'flex', justifyContent: 'flex-end' }}>
+    <DropdownButton gear left>
+      <a href="#">Add new Sender</a>
+      <a href="#">Add new IP</a>
+      <a href="#">Add new Template</a>
+    </DropdownButton>
+  </div>
+));

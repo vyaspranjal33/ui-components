@@ -3953,6 +3953,54 @@ exports[`Storyshots Dropdown Button Secondary Dropdown with Icon 1`] = `
 </div>
 `;
 
+exports[`Storyshots Dropdown Button With menu positioned to the left 1`] = `
+<div
+  style={
+    Object {
+      "display": "flex",
+      "justifyContent": "flex-end",
+    }
+  }
+>
+  <div
+    className="btn-list"
+  >
+    <div
+      className="btn btn-dropdown dropdown btn-dropdown-gear is-left"
+      onClick={[Function]}
+    >
+      <i
+        className="sg-icon sg-icon-gear"
+        onClick={undefined}
+        style={null}
+      />
+      <ul
+        className="dropdown-menu"
+      >
+        <a
+          className="dropdown-link"
+          href="#"
+        >
+          Add new Sender
+        </a>
+        <a
+          className="dropdown-link"
+          href="#"
+        >
+          Add new IP
+        </a>
+        <a
+          className="dropdown-link"
+          href="#"
+        >
+          Add new Template
+        </a>
+      </ul>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Dropzone Dropzone (Active) 1`] = `
 <section
   className="dropzone is-active"
@@ -16193,6 +16241,217 @@ exports[`Storyshots Table Standard 1`] = `
           >
             <i
               className="sg-icon sg-icon-copy"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Delete"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-trash"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+        </div>
+      </td>
+    </tr>
+  </tbody>
+</table>
+`;
+
+exports[`Storyshots Table With dropdown menu 1`] = `
+<table
+  className="table-wrap"
+>
+  <thead
+    className={undefined}
+  >
+    <tr
+      className={undefined}
+    >
+      <th
+        className="sort"
+        onClick={[Function]}
+      >
+        Status
+      </th>
+      <th
+        className="sort"
+        onClick={[Function]}
+      >
+        Campaign name
+      </th>
+      <th
+        className="sort"
+        onClick={[Function]}
+      >
+        Delivered
+      </th>
+      <th
+        className="sort"
+        onClick={[Function]}
+      >
+        Opens
+      </th>
+      <th
+        className="sort"
+        onClick={[Function]}
+      >
+        Clicks
+      </th>
+      <th
+        className="sort"
+        onClick={[Function]}
+      >
+        Unsubscribes
+      </th>
+      <th
+        className="actions"
+        onClick={[Function]}
+      >
+        <div
+          className="btn-list"
+        >
+          <div
+            className="btn btn-dropdown dropdown btn-dropdown-gear"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-gear"
+              onClick={undefined}
+              style={null}
+            />
+            <ul
+              className="dropdown-menu"
+            >
+              <a
+                className="dropdown-link"
+                href="javascript: void 0"
+              >
+                View stats as numbers
+              </a>
+              <a
+                className="dropdown-link"
+                href="javascript: void 0"
+              >
+                View stats as percentages
+              </a>
+            </ul>
+          </div>
+        </div>
+      </th>
+    </tr>
+  </thead>
+  <tbody
+    className={undefined}
+  >
+    <tr
+      className={undefined}
+    >
+      <td
+        className="cell-label"
+      >
+        <span
+          className="label label-draft"
+        >
+          Draft
+        </span>
+      </td>
+      <td
+        className="campaign-name"
+      >
+        <a
+          href="javascript: void 0"
+        >
+          Fall Into Action
+        </a>
+      </td>
+      <td
+        className="stats-delivered"
+      >
+        —
+      </td>
+      <td
+        className="stats-opens"
+      >
+        —
+      </td>
+      <td
+        className="stats-clicks"
+      >
+        —
+      </td>
+      <td
+        className="stats-unsubscribes"
+      >
+        —
+      </td>
+      <td
+        className="actions"
+      >
+        <i
+          className="sg-icon sg-icon-ellipsis"
+          onClick={undefined}
+          style={null}
+        />
+        <div
+          className="action-icons"
+        >
+          <span
+            data-tooltip="Edit"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Duplicate"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-copy"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Create template"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-create"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Export HTML"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-export"
+              onClick={undefined}
+              style={null}
+            />
+          </span>
+          <span
+            data-tooltip="Preview"
+            data-tooltip-pos="up"
+            onClick={[Function]}
+          >
+            <i
+              className="sg-icon sg-icon-view"
               onClick={undefined}
               style={null}
             />

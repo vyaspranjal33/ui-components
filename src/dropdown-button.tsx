@@ -11,6 +11,7 @@ export interface DropdownButtonProps {
   label?: string;
   gear?: boolean;
   className?: string;
+  left?: boolean;
 }
 
 export interface DropdownButtonState {
@@ -49,6 +50,7 @@ export class DropdownButton extends React.Component<
       small,
       type,
       className,
+      left,
       ...attributes
     } = this.props;
     const isActive = this.state.active;
@@ -104,6 +106,7 @@ export class DropdownButton extends React.Component<
               'is-disabled': disabled,
               [btnStyles['is-loading']]: loading,
               'is-loading': loading,
+              [Styles['is-left']]: left,
             },
             className
           )}
