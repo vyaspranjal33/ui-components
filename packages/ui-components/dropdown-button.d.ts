@@ -6,6 +6,7 @@ export interface DropdownButtonProps {
     label?: string;
     gear?: boolean;
     className?: string;
+    left?: boolean;
 }
 export interface DropdownButtonState {
     active: boolean;

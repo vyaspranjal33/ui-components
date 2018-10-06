@@ -20,6 +20,14 @@
   }
 }
 
+// in styles/global/tables, this is set for table headers
+.is-left .dropdown-menu {
+  right: 0;
+  left: auto;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
 .dropdown-menu {
   @include dropdown-shadow;
   position: absolute;

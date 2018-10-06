@@ -38,7 +38,7 @@ export class DropdownButton extends React.Component {
         document.removeEventListener('click', this.dismissDropdown);
     }
     render() {
-        const _a = this.props, { active, badge, children, disabled, gear, group, icon, label, loading, onClick, onDark, small, type, className } = _a, attributes = __rest(_a, ["active", "badge", "children", "disabled", "gear", "group", "icon", "label", "loading", "onClick", "onDark", "small", "type", "className"]);
+        const _a = this.props, { active, badge, children, disabled, gear, group, icon, label, loading, onClick, onDark, small, type, className, left } = _a, attributes = __rest(_a, ["active", "badge", "children", "disabled", "gear", "group", "icon", "label", "loading", "onClick", "onDark", "small", "type", "className", "left"]);
         const isActive = this.state.active;
         const hasBadge = !!badge || badge === 0;
         const hasIcon = !!icon;
@@ -75,6 +75,7 @@ export class DropdownButton extends React.Component {
                     'is-disabled': disabled,
                     [btnStyles['is-loading']]: loading,
                     'is-loading': loading,
+                    [Styles['is-left']]: left,
                 }, className), onClick: this.toggleDropdown }, attributes),
                 !gear && hasBadge && React.createElement(Badge, null, badge),
                 !gear && hasIcon && React.createElement(Icon, { type: icon, onDark: type === 'primary' }),
