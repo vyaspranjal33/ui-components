@@ -1,4 +1,7 @@
 # CHANGELOG
+## 1.7.1
+- Add style support for alerts that have tooltips with underlines
+- Adjust styles for tooltips w/ has-underline to use mixin
 ## 1.7.0
  - FullscreenModal now supports a render prop for header content
 ## 1.6.0

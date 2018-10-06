@@ -1,5 +1,5 @@
-@import "./global/variables.scss";
-@import "./global/mixins";
+@import './global/variables.scss';
+@import './global/mixins';
 
 // license: https://goo.gl/f4lsjz
 // scss-lint:disable NestingDepth
@@ -31,7 +31,7 @@
     @include base-effects();
     position: absolute;
     z-index: 10;
-    content: "";
+    content: '';
   }
 
   &:hover,
@@ -50,7 +50,7 @@
     }
   }
 
-  &[data-tooltip-pos="up"] {
+  &[data-tooltip-pos='up'] {
     &::after {
       @include transform(translate(-50%, 10px));
       @include transform-origin(top);
@@ -80,7 +80,7 @@
     }
   }
 
-  &[data-tooltip-pos="down"] {
+  &[data-tooltip-pos='down'] {
     &::after {
       @include transform(translate(-50%, -10px));
       top: 100%;
@@ -89,7 +89,7 @@
     }
 
     &::before {
-      @include svg-arrow($tooltip-bg, "down");
+      @include svg-arrow($tooltip-bg, 'down');
       @include transform(translate(-50%, -10px));
       top: 100%;
       left: 50%;
@@ -109,7 +109,7 @@
     }
   }
 
-  &[data-tooltip-pos="left"] {
+  &[data-tooltip-pos='left'] {
     &::after {
       @include transform(translate(10px, -50%));
       top: 50%;
@@ -118,7 +118,7 @@
     }
 
     &::before {
-      @include svg-arrow($tooltip-bg, "left");
+      @include svg-arrow($tooltip-bg, 'left');
       @include transform(translate(10px, -50%));
       top: 50%;
       right: 100%;
@@ -138,7 +138,7 @@
     }
   }
 
-  &[data-tooltip-pos="right"] {
+  &[data-tooltip-pos='right'] {
     &::after {
       @include transform(translate(-10px, -50%));
       top: 50%;
@@ -147,7 +147,7 @@
     }
 
     &::before {
-      @include svg-arrow($tooltip-bg, "right");
+      @include svg-arrow($tooltip-bg, 'right');
       @include transform(translate(-10px, -50%));
       top: 50%;
       left: 100%;
@@ -167,28 +167,28 @@
     }
   }
 
-  &[data-tooltip-length="small"] {
+  &[data-tooltip-length='small'] {
     &::after {
       width: 80px;
       white-space: normal;
     }
   }
 
-  &[data-tooltip-length="medium"] {
+  &[data-tooltip-length='medium'] {
     &::after {
       width: 150px;
       white-space: normal;
     }
   }
 
-  &[data-tooltip-length="large"] {
+  &[data-tooltip-length='large'] {
     &::after {
       width: 260px;
       white-space: normal;
     }
   }
 
-  &[data-tooltip-length="xlarge"] {
+  &[data-tooltip-length='xlarge'] {
     &::after {
       width: 380px;
       white-space: normal;
@@ -201,8 +201,8 @@
   }
 
   :global &.has-underline {
+    @include dotted-underline;
     cursor: help;
-    border-bottom: 1px dotted $slate-40;
   }
 }
 
@@ -250,7 +250,7 @@
     margin-top: -4px;
     background: $slate;
     border-radius: $border-radius;
-    content: "";
+    content: '';
     transform: rotate(45deg);
   }
 
@@ -273,19 +273,19 @@
     }
   }
 
-  &[data-tooltip-length="small"] {
+  &[data-tooltip-length='small'] {
     width: 80px;
   }
 
-  &[data-tooltip-length="medium"] {
+  &[data-tooltip-length='medium'] {
     width: 150px;
   }
 
-  &[data-tooltip-length="large"] {
+  &[data-tooltip-length='large'] {
     width: 240px;
   }
 
-  &[data-tooltip-length="xlarge"] {
+  &[data-tooltip-length='xlarge'] {
     width: 380px;
   }
 

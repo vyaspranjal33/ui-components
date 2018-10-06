@@ -163,3 +163,11 @@
     content: '';
   }
 }
+
+@mixin dotted-underline {
+  text-decoration: none;
+  background-image: linear-gradient(to right, $slate 33%, $white 0%);
+  background-position: bottom;
+  background-repeat: repeat-x;
+  background-size: 3px 1px;
+}
