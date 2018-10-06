@@ -21,6 +21,14 @@
         background: $alert-success;
         border-color: $alert-success-text;
       }
+
+      [data-tooltip].has-underline {
+        background-image: linear-gradient(
+          90deg,
+          $alert-warning-text 33%,
+          transparent 0
+        );
+      }
     }
   }
 
@@ -38,6 +46,14 @@
         background: $alert-warning;
         border-color: $alert-warning-text;
       }
+
+      [data-tooltip].has-underline {
+        background-image: linear-gradient(
+          90deg,
+          $alert-warning-text 33%,
+          transparent 0
+        );
+      }
     }
   }
 
@@ -54,6 +70,14 @@
         color: $alert-danger-text;
         background: $alert-danger;
         border-color: $alert-danger-text;
+      }
+
+      [data-tooltip].has-underline {
+        background-image: linear-gradient(
+          90deg,
+          $alert-danger-text 33%,
+          transparent 0
+        );
       }
     }
   }
