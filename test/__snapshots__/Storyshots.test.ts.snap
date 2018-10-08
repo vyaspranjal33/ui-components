@@ -9453,11 +9453,6 @@ exports[`Storyshots NumberedSteps Numbered Steps with longer content 1`] = `
 >
   <div
     className="col-4"
-    style={
-      Object {
-        "width": "300px",
-      }
-    }
   >
     <ol
       className="numbered-steps"
@@ -9497,11 +9492,6 @@ exports[`Storyshots NumberedSteps Numbered Steps with short content 1`] = `
 >
   <div
     className="col-4"
-    style={
-      Object {
-        "width": "300px",
-      }
-    }
   >
     <ol
       className="numbered-steps"
