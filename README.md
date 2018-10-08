@@ -5,8 +5,16 @@ Re-useable React components based on the SendGrid's Style Guide.
 
 ## Getting Started
 
+Make sure your project has all required dependencies and development dependencies installed.
+
+Install devDependencies with:
 ```
-npm install @sendgrid/ui-components
+yarn add node-sass -D
+```
+
+Install dependencies with:
+```
+yarn add lodash raf react react-animate-height react-color react-dom react-select @sendgrid/ui-components
 ```
 
 ### Using your local UI-components in your project
