@@ -25,25 +25,20 @@ const EmailCardSendTime = (_a) => {
 };
 const EmailCardDetails = (_a) => {
     var { details, className } = _a, attributes = __rest(_a, ["details", "className"]);
-    const rows = details &&
-        details.map(detail => {
-            return (React.createElement("tr", { key: detail.label },
-                React.createElement("td", { className: cn('label', Styles.label) }, detail.label),
-                React.createElement("td", null, (detail.renderEditDetailLink &&
-                    detail.renderEditDetailLink(detail.value)) ||
-                    detail.value)));
-        });
     return (React.createElement("div", { className: cn('email-card-details', Styles['email-card-details']) },
         React.createElement("table", null,
-            React.createElement("tbody", null, rows))));
+            React.createElement("tbody", null, details && details.map(detail => (React.createElement("tr", { key: detail.label },
+                React.createElement("td", { className: cn('label', Styles.label, { [Styles.required]: detail.required }) }, detail.label),
+                React.createElement("td", null, (detail.renderEditDetailLink &&
+                    detail.renderEditDetailLink(detail.value)) ||
+                    detail.value))))))));
 };
 const EmailCardContent = (_a) => {
-    var { thumbnailUrl, onContentEditClick, className } = _a, attributes = __rest(_a, ["thumbnailUrl", "onContentEditClick", "className"]);
-    return (React.createElement("div", Object.assign({ className: cn('email-card-content', Styles['email-card-content'], className) }, attributes), thumbnailUrl ? (React.createElement("a", { onClick: onContentEditClick, href: "javascript: void 0" },
-        React.createElement("img", { src: thumbnailUrl }),
-        React.createElement("span", { className: cn('email-card-content-edit', Styles['email-card-content-edit']) },
+    var { onContentEditClick, hasContent, invalid, className } = _a, attributes = __rest(_a, ["onContentEditClick", "hasContent", "invalid", "className"]);
+    return (React.createElement("div", Object.assign({ className: cn('email-card-content', Styles['email-card-content'], { [Styles['invalid-content']]: invalid }, className) }, attributes),
+        React.createElement(Button, { type: "secondary", onClick: onContentEditClick }, hasContent ? (React.createElement("span", { className: cn('email-card-content-edit', Styles['email-card-content-edit']) },
             React.createElement(Icon, { type: "pencil" }),
-            "Edit"))) : (React.createElement(Button, { type: "secondary", onClick: onContentEditClick }, "Add Email Content"))));
+            "Edit")) : ('Add Email Content'))));
 };
 export const EmailCardAddButton = (_a) => {
     var { onClick, className } = _a, attributes = __rest(_a, ["onClick", "className"]);
@@ -52,7 +47,7 @@ export const EmailCardAddButton = (_a) => {
 };
 export class EmailCard extends React.Component {
     render() {
-        const _a = this.props, { className, details, disableInboxDetails, editable, editing, live, n, onContentEditClick, onSaveAlertClick, paused, renderActions, renderAlert, renderSendTimeLink, renderSendTimeAlert, sendTimeValue, statistics, thumbnailUrl } = _a, attributes = __rest(_a, ["className", "details", "disableInboxDetails", "editable", "editing", "live", "n", "onContentEditClick", "onSaveAlertClick", "paused", "renderActions", "renderAlert", "renderSendTimeLink", "renderSendTimeAlert", "sendTimeValue", "statistics", "thumbnailUrl"]);
+        const _a = this.props, { className, contentInvalid, details, disableInboxDetails, editable, editing, hasContent, live, n, onContentEditClick, onSaveAlertClick, paused, renderActions, renderAlert, renderSendTimeLink, renderSendTimeAlert, sendTimeValue, statistics } = _a, attributes = __rest(_a, ["className", "contentInvalid", "details", "disableInboxDetails", "editable", "editing", "hasContent", "live", "n", "onContentEditClick", "onSaveAlertClick", "paused", "renderActions", "renderAlert", "renderSendTimeLink", "renderSendTimeAlert", "sendTimeValue", "statistics"]);
         const alertEl = renderAlert && renderAlert();
         const sendTimeAlert = renderSendTimeAlert && renderSendTimeAlert();
         return (React.createElement("div", Object.assign({ className: cn('email-card-wrap', Styles['email-card-wrap'], className, {
@@ -78,7 +73,7 @@ export class EmailCard extends React.Component {
                     React.createElement("p", null,
                         "Email ",
                         n)),
-                React.createElement(EmailCardContent, { thumbnailUrl: thumbnailUrl, onContentEditClick: onContentEditClick }),
+                React.createElement(EmailCardContent, { hasContent: hasContent, onContentEditClick: onContentEditClick, invalid: contentInvalid }),
                 React.createElement(EmailCardDetails, { details: details }),
                 renderActions && renderActions()),
             alertEl));

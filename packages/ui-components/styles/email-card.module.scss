@@ -245,20 +245,10 @@
   width: 166px;
   padding: 18px;
 
-  a {
-    position: relative;
-    display: block;
-
-    &:hover .email-card-content-edit {
-      opacity: 1;
+  &.invalid-content {
+    :global(.btn) {
+      border-color: $ron-burgundy;
     }
-  }
-
-  img {
-    display: block;
-    max-width: 100%;
-    border: 1px solid $slate-40;
-    border-radius: $border-radius;
   }
 
   :global .btn {
@@ -266,20 +256,12 @@
     padding: 28px 12px;
   }
 
-  // offset by 1px on all sides to avoid covering border
   .email-card-content-edit {
-    position: absolute;
-    top: 1px;
-    right: 1px;
-    bottom: 1px;
-    left: 1px;
+    line-height: 2em; // make same size as "Add Email Content" version with 2 lines of copy
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 13px;
-    background-color: rgba($white, 0.95);
-    opacity: 0;
-    transition: opacity 0.3s;
 
     .sg-icon {
       padding-right: 6px;
@@ -303,6 +285,18 @@
     display: table-cell; // overrides inline-block set by generic .label
     width: 120px;
     font-weight: 600;
+
+    &.required::after {
+      position: relative;
+      display: inline-block;
+      bottom: 5px;
+      left: 9px;
+      width: 4px;
+      height: 4px;
+      background: $ron-burgundy;
+      border-radius: 4px;
+      content: '';
+    }
   }
 }
 

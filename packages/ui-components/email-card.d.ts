@@ -4,12 +4,14 @@ import { ActionsProps } from './actions';
 import { StatisticType } from './statistics';
 export interface EmailCardDetail {
     label: string;
+    required?: boolean;
     value: string;
     renderEditDetailLink?: (value: string) => any;
 }
 export interface EmailCardContentProps {
-    thumbnailUrl: string;
     onContentEditClick: (event: any) => void;
+    hasContent: boolean;
+    invalid: boolean;
     className?: string;
 }
 export interface EmailCardAddButtonProps {
@@ -18,10 +20,12 @@ export interface EmailCardAddButtonProps {
 }
 export declare const EmailCardAddButton: React.SFC<EmailCardAddButtonProps>;
 export interface EmailCardProps {
+    contentInvalid?: boolean;
     details?: Array<EmailCardDetail>;
     disableInboxDetails?: boolean;
     editing?: boolean;
     editable?: boolean;
+    hasContent: boolean;
     live?: boolean;
     n: number;
     onContentEditClick?: (event: any) => void;
@@ -39,7 +43,6 @@ export interface EmailCardProps {
         clicks: StatisticType;
         unsubscribes: StatisticType;
     };
-    thumbnailUrl?: string;
     className?: string;
 }
 export declare class EmailCard extends React.Component<EmailCardProps> {
