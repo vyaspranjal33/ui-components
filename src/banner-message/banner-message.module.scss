@@ -1,0 +1,27 @@
+@import '../styles/global/variables.scss';
+
+.banner-message {
+  display: inline-block;
+  font-size: 13px;
+  padding: 9px 12px;
+  text-align: left;
+
+  p {
+    max-width: none;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: underline;
+  }
+
+  &-beta {
+    background-color: rgba($screample, 0.05);
+    border-left: 2px solid $screample;
+  }
+
+  &-info {
+    background-color: rgba($sg-blue, 0.05);
+    border-left: 2px solid $sg-blue;
+  }
+}

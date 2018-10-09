@@ -1079,6 +1079,26 @@ exports[`Storyshots Badge Badge with custom classname 1`] = `
 </span>
 `;
 
+exports[`Storyshots Banner Message Banner Messages 1`] = `
+Array [
+  <div
+    className="banner-message banner-message-info"
+  >
+    Hello, this is an info banner Message
+  </div>,
+  <br />,
+  <br />,
+  <div
+    className="banner-message banner-message-beta"
+  >
+    Beta banner with 
+    <strong>
+      some jsx
+    </strong>
+  </div>,
+]
+`;
+
 exports[`Storyshots Breadcrumb Breadcrumb with single item 1`] = `
 <ol
   className="breadcrumb"
