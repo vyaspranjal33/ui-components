@@ -1,13 +1,11 @@
 import React from 'react';
 import { ActionsProps } from './actions';
-import Alert from './alert';
 import { Button, Buttonized } from './button';
 import Icon from './icon';
 import { EmailCardStat, Statistics, StatisticType } from './statistics';
 import BtnStyles from './styles/button.module.scss';
 import Styles from './styles/email-card.module.scss';
 import cn from './utilities/classnames';
-import findActiveIndex from './utilities/find-active-index';
 
 interface EmailCardSendTimeProps {
   value?: string;
@@ -46,6 +44,7 @@ const EmailCardSendTime: React.SFC<EmailCardSendTimeProps> = ({
 
 export interface EmailCardDetail {
   label: string;
+  required?: boolean;
   value: string;
   renderEditDetailLink?: (value: string) => any;
 }
@@ -53,40 +52,38 @@ export interface EmailCardDetail {
 const EmailCardDetails: React.SFC<{
   details?: Array<EmailCardDetail>;
   className?: string;
-}> = ({ details, className, ...attributes }) => {
-  const rows =
-    details &&
-    details.map(detail => {
-      return (
-        <tr key={detail.label}>
-          <td className={cn('label', Styles.label)}>{detail.label}</td>
-          <td>
-            {(detail.renderEditDetailLink &&
-              detail.renderEditDetailLink(detail.value)) ||
-              detail.value}
-          </td>
-        </tr>
-      );
-    });
-
-  return (
-    <div className={cn('email-card-details', Styles['email-card-details'])}>
-      <table>
-        <tbody>{rows}</tbody>
-      </table>
-    </div>
-  );
-};
+}> = ({ details, className, ...attributes }) => (
+  <div className={cn('email-card-details', Styles['email-card-details'])}>
+    <table>
+      <tbody>
+        {details && details.map(detail => (
+          <tr key={detail.label}>
+            <td className={cn('label', Styles.label, { [Styles.required]: detail.required })}>
+              {detail.label}
+            </td>
+            <td>
+              {(detail.renderEditDetailLink &&
+                detail.renderEditDetailLink(detail.value)) ||
+                detail.value}
+            </td>
+          </tr>
+        ))}
+      </tbody>
+    </table>
+  </div>
+);
 
 export interface EmailCardContentProps {
-  thumbnailUrl: string;
   onContentEditClick: (event: any) => void;
+  hasContent: boolean;
+  invalid: boolean;
   className?: string;
 }
 
 const EmailCardContent: React.SFC<EmailCardContentProps> = ({
-  thumbnailUrl,
   onContentEditClick,
+  hasContent,
+  invalid,
   className,
   ...attributes
 }) => (
@@ -94,13 +91,13 @@ const EmailCardContent: React.SFC<EmailCardContentProps> = ({
     className={cn(
       'email-card-content',
       Styles['email-card-content'],
+      { [Styles['invalid-content']]: invalid },
       className
     )}
     {...attributes}
   >
-    {thumbnailUrl ? (
-      <a onClick={onContentEditClick} href="javascript: void 0">
-        <img src={thumbnailUrl} />
+    <Button type="secondary" onClick={onContentEditClick}>
+      {hasContent ? (
         <span
           className={cn(
             'email-card-content-edit',
@@ -110,12 +107,10 @@ const EmailCardContent: React.SFC<EmailCardContentProps> = ({
           <Icon type="pencil" />
           Edit
         </span>
-      </a>
-    ) : (
-      <Button type="secondary" onClick={onContentEditClick}>
-        Add Email Content
-      </Button>
-    )}
+      ) : (
+        'Add Email Content'
+      )}
+    </Button>
   </div>
 );
 
@@ -148,10 +143,12 @@ export const EmailCardAddButton: React.SFC<EmailCardAddButtonProps> = ({
 };
 
 export interface EmailCardProps {
+  contentInvalid?: boolean;
   details?: Array<EmailCardDetail>;
   disableInboxDetails?: boolean;
   editing?: boolean;
   editable?: boolean;
+  hasContent: boolean;
   live?: boolean;
   n: number;
   onContentEditClick?: (event: any) => void;
@@ -169,7 +166,6 @@ export interface EmailCardProps {
     clicks: StatisticType;
     unsubscribes: StatisticType;
   };
-  thumbnailUrl?: string;
   className?: string;
 }
 
@@ -186,10 +182,12 @@ export class EmailCard extends React.Component<EmailCardProps> {
   public render() {
     const {
       className,
+      contentInvalid,
       details,
       disableInboxDetails,
       editable,
       editing,
+      hasContent,
       live,
       n,
       onContentEditClick,
@@ -201,7 +199,6 @@ export class EmailCard extends React.Component<EmailCardProps> {
       renderSendTimeAlert,
       sendTimeValue,
       statistics,
-      thumbnailUrl,
       ...attributes
     } = this.props;
     const alertEl = renderAlert && renderAlert();
@@ -252,8 +249,9 @@ export class EmailCard extends React.Component<EmailCardProps> {
             <p>Email {n}</p>
           </div>
           <EmailCardContent
-            thumbnailUrl={thumbnailUrl}
+            hasContent={hasContent}
             onContentEditClick={onContentEditClick}
+            invalid={contentInvalid}
           />
           <EmailCardDetails details={details} />
           {renderActions && renderActions()}

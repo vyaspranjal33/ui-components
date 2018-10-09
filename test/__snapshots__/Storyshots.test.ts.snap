@@ -4480,7 +4480,16 @@ exports[`Storyshots EmailCard Email Card - Disable Inbox Details 1`] = `
         onClick={[Function]}
         type="button"
       >
-        Add Email Content
+        <span
+          className="email-card-content-edit"
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+          Edit
+        </span>
       </button>
     </div>
     <div
@@ -4490,7 +4499,7 @@ exports[`Storyshots EmailCard Email Card - Disable Inbox Details 1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -4518,7 +4527,7 @@ exports[`Storyshots EmailCard Email Card - Disable Inbox Details 1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>
@@ -4585,7 +4594,7 @@ exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -4613,7 +4622,7 @@ exports[`Storyshots EmailCard Email Card - Edit Mode 1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>
@@ -4744,7 +4753,16 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
         onClick={[Function]}
         type="button"
       >
-        Add Email Content
+        <span
+          className="email-card-content-edit"
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+          Edit
+        </span>
       </button>
     </div>
     <div
@@ -4754,7 +4772,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -4782,7 +4800,7 @@ exports[`Storyshots EmailCard Email Card - Live 1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>
@@ -4914,7 +4932,16 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Add Email Content
+          <span
+            className="email-card-content-edit"
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+            Edit
+          </span>
         </button>
       </div>
       <div
@@ -4924,7 +4951,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           <tbody>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 Subject
               </td>
@@ -4952,7 +4979,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
             </tr>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 From Sender
               </td>
@@ -5080,7 +5107,16 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Add Email Content
+          <span
+            className="email-card-content-edit"
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+            Edit
+          </span>
         </button>
       </div>
       <div
@@ -5090,7 +5126,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           <tbody>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 Subject
               </td>
@@ -5118,7 +5154,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
             </tr>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 From Sender
               </td>
@@ -5246,7 +5282,16 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Add Email Content
+          <span
+            className="email-card-content-edit"
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+            Edit
+          </span>
         </button>
       </div>
       <div
@@ -5256,7 +5301,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           <tbody>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 Subject
               </td>
@@ -5284,7 +5329,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
             </tr>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 From Sender
               </td>
@@ -5412,7 +5457,16 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Add Email Content
+          <span
+            className="email-card-content-edit"
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+            Edit
+          </span>
         </button>
       </div>
       <div
@@ -5422,7 +5476,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
           <tbody>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 Subject
               </td>
@@ -5450,7 +5504,7 @@ exports[`Storyshots EmailCard Email Card - Multi Editable 1`] = `
             </tr>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 From Sender
               </td>
@@ -5596,7 +5650,16 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Add Email Content
+          <span
+            className="email-card-content-edit"
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+            Edit
+          </span>
         </button>
       </div>
       <div
@@ -5606,7 +5669,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           <tbody>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 Subject
               </td>
@@ -5634,7 +5697,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
             </tr>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 From Sender
               </td>
@@ -5762,7 +5825,16 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Add Email Content
+          <span
+            className="email-card-content-edit"
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+            Edit
+          </span>
         </button>
       </div>
       <div
@@ -5772,7 +5844,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           <tbody>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 Subject
               </td>
@@ -5800,7 +5872,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
             </tr>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 From Sender
               </td>
@@ -5928,7 +6000,16 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Add Email Content
+          <span
+            className="email-card-content-edit"
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+            Edit
+          </span>
         </button>
       </div>
       <div
@@ -5938,7 +6019,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           <tbody>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 Subject
               </td>
@@ -5966,7 +6047,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
             </tr>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 From Sender
               </td>
@@ -6094,7 +6175,16 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           onClick={[Function]}
           type="button"
         >
-          Add Email Content
+          <span
+            className="email-card-content-edit"
+          >
+            <i
+              className="sg-icon sg-icon-pencil"
+              onClick={undefined}
+              style={null}
+            />
+            Edit
+          </span>
         </button>
       </div>
       <div
@@ -6104,7 +6194,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
           <tbody>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 Subject
               </td>
@@ -6132,7 +6222,7 @@ exports[`Storyshots EmailCard Email Card - Multi Live 1`] = `
             </tr>
             <tr>
               <td
-                className="label"
+                className="label required"
               >
                 From Sender
               </td>
@@ -6264,7 +6354,16 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
         onClick={[Function]}
         type="button"
       >
-        Add Email Content
+        <span
+          className="email-card-content-edit"
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+          Edit
+        </span>
       </button>
     </div>
     <div
@@ -6274,7 +6373,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -6302,7 +6401,7 @@ exports[`Storyshots EmailCard Email Card - Paused 1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>
@@ -6433,7 +6532,16 @@ exports[`Storyshots EmailCard Email Card 1`] = `
         onClick={[Function]}
         type="button"
       >
-        Add Email Content
+        <span
+          className="email-card-content-edit"
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+          Edit
+        </span>
       </button>
     </div>
     <div
@@ -6443,7 +6551,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -6471,7 +6579,7 @@ exports[`Storyshots EmailCard Email Card 1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>
@@ -6602,7 +6710,16 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
         onClick={[Function]}
         type="button"
       >
-        Add Email Content
+        <span
+          className="email-card-content-edit"
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+          Edit
+        </span>
       </button>
     </div>
     <div
@@ -6612,7 +6729,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -6640,7 +6757,7 @@ exports[`Storyshots EmailCard Email Card with Alerts  1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>
@@ -6804,175 +6921,6 @@ exports[`Storyshots EmailCard Email Card with Blank Statistics 1`] = `
         onClick={[Function]}
         type="button"
       >
-        Add Email Content
-      </button>
-    </div>
-    <div
-      className="email-card-details"
-    >
-      <table>
-        <tbody>
-          <tr>
-            <td
-              className="label"
-            >
-              Subject
-            </td>
-            <td>
-              <a
-                href="#"
-              >
-                Welcome to SendGrid
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td
-              className="label"
-            >
-              Preheader
-            </td>
-            <td>
-              <a
-                href="#"
-              >
-                Get starting sending up to 12,000 emails Today
-              </a>
-            </td>
-          </tr>
-          <tr>
-            <td
-              className="label"
-            >
-              From Sender
-            </td>
-            <td>
-              <a
-                href="#"
-              >
-                Tyler Hale &lt;tyler.hale@sendgrid.com&gt;
-              </a>
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Storyshots EmailCard Email Card with Content 1`] = `
-<div
-  className="email-card-wrap"
->
-  <div
-    className="email-card-send-time has-value"
-  >
-    <a
-      className="btn btn-secondary"
-      href="#"
-      id={undefined}
-      onClick={undefined}
-    >
-      Send Instantly
-    </a>
-    
-  </div>
-  <div
-    className="email-card-stats"
-  >
-    <div
-      className="email-stats"
-    >
-      <p
-        className="stat"
-      >
-        12230
-      </p>
-      <p
-        className="label"
-      >
-        Emails Sent
-      </p>
-    </div>
-    <div
-      className="email-stats"
-    >
-      <p
-        className="stat delivered"
-      >
-        966
-      </p>
-      <p
-        className="label"
-      >
-        Delivered
-      </p>
-    </div>
-    <div
-      className="email-stats"
-    >
-      <p
-        className="stat unique-opens"
-      >
-        80.2%
-      </p>
-      <p
-        className="label"
-      >
-        Unique Opens
-      </p>
-    </div>
-    <div
-      className="email-stats"
-    >
-      <p
-        className="stat unique-clicks"
-      >
-        6024
-      </p>
-      <p
-        className="label"
-      >
-        Unique Clicks
-      </p>
-    </div>
-    <div
-      className="email-stats"
-    >
-      <p
-        className="stat unsubscribes"
-      >
-        0
-      </p>
-      <p
-        className="label"
-      >
-        Unsubscribes
-      </p>
-    </div>
-  </div>
-  <div
-    className="email-card"
-  >
-    <div
-      className="email-card-count"
-    >
-      <p>
-        Email 
-        1
-      </p>
-    </div>
-    <div
-      className="email-card-content"
-    >
-      <a
-        href="javascript: void 0"
-        onClick={[Function]}
-      >
-        <img
-          src="http://via.placeholder.com/128x88"
-        />
         <span
           className="email-card-content-edit"
         >
@@ -6983,7 +6931,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
           />
           Edit
         </span>
-      </a>
+      </button>
     </div>
     <div
       className="email-card-details"
@@ -6992,7 +6940,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -7020,7 +6968,7 @@ exports[`Storyshots EmailCard Email Card with Content 1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>
@@ -7087,7 +7035,7 @@ exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -7115,7 +7063,7 @@ exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>
@@ -7130,6 +7078,127 @@ exports[`Storyshots EmailCard Email Card with No Statistics 1`] = `
         </tbody>
       </table>
     </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots EmailCard Email Card with validation errors 1`] = `
+<div
+  className="email-card-wrap has-alert"
+>
+  <div
+    className="email-card-send-time has-value"
+  >
+    <a
+      className="btn btn-secondary"
+      href="#"
+      id={undefined}
+      onClick={undefined}
+    >
+      Send Instantly
+    </a>
+    
+  </div>
+  <div
+    className="email-card"
+  >
+    <div
+      className="email-card-count"
+    >
+      <p>
+        Email 
+        1
+      </p>
+    </div>
+    <div
+      className="email-card-content invalid-content"
+    >
+      <button
+        className="btn btn-secondary"
+        disabled={false}
+        id={undefined}
+        onClick={[Function]}
+        type="button"
+      >
+        Add Email Content
+      </button>
+    </div>
+    <div
+      className="email-card-details"
+    >
+      <table>
+        <tbody>
+          <tr>
+            <td
+              className="label required"
+            >
+              Subject
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Edit Subject
+              </a>
+            </td>
+          </tr>
+          <tr>
+            <td
+              className="label required"
+            >
+              From Sender
+            </td>
+            <td>
+              <a
+                href="#"
+              >
+                Select Sender
+              </a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div
+    className="alert alert-danger"
+    role="alert"
+  >
+    <p>
+      <i
+        className="sg-icon sg-icon-warning"
+        onClick={undefined}
+        style={null}
+      />
+      Please select a
+       
+      <strong>
+        <a
+          href="javascript: void 0"
+        >
+          subject
+        </a>
+      </strong>
+       and
+       
+      <strong>
+        <a
+          href="javascript: void 0"
+        >
+          sender
+        </a>
+      </strong>
+      , and add
+       
+      <strong>
+        <a
+          href="javascript: void 0"
+        >
+          content
+        </a>
+      </strong>
+       to this email.
+    </p>
   </div>
 </div>
 `;
@@ -7246,7 +7315,16 @@ exports[`Storyshots EmailCard Email card with actions 1`] = `
         onClick={[Function]}
         type="button"
       >
-        Add Email Content
+        <span
+          className="email-card-content-edit"
+        >
+          <i
+            className="sg-icon sg-icon-pencil"
+            onClick={undefined}
+            style={null}
+          />
+          Edit
+        </span>
       </button>
     </div>
     <div
@@ -7256,7 +7334,7 @@ exports[`Storyshots EmailCard Email card with actions 1`] = `
         <tbody>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               Subject
             </td>
@@ -7284,7 +7362,7 @@ exports[`Storyshots EmailCard Email card with actions 1`] = `
           </tr>
           <tr>
             <td
-              className="label"
+              className="label required"
             >
               From Sender
             </td>

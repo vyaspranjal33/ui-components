@@ -28,3 +28,4 @@ export const emailCardContent: string;
 export const emailCardContentEdit: string;
 export const sgIcon: string;
 export const emailRowActions: string;
+export const required: string;

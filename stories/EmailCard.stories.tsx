@@ -34,9 +34,9 @@ const renderEditDetailLink = (value: string) => {
 };
 
 const details = [
-  { label: 'Subject', value: 'Welcome to SendGrid', renderEditDetailLink },
+  { label: 'Subject', value: 'Welcome to SendGrid', required: true, renderEditDetailLink },
   { label: 'Preheader', value: 'Get starting sending up to 12,000 emails Today', renderEditDetailLink },
-  { label: 'From Sender', value: 'Tyler Hale <tyler.hale@sendgrid.com>', renderEditDetailLink },
+  { label: 'From Sender', value: 'Tyler Hale <tyler.hale@sendgrid.com>', required: true, renderEditDetailLink },
 ];
 
 const renderSendTimeLink = (value: string) => {
@@ -51,6 +51,7 @@ const onContentEditClick = action('content edit click');
 
 const cardData = {
   details,
+  hasContent: true,
   n: 1,
   onContentEditClick,
   renderSendTimeLink,
@@ -59,6 +60,7 @@ const cardData = {
 
 const cardDataNoStats = {
   details,
+  hasContent: false,
   n: 1,
   onContentEditClick,
   renderSendTimeLink,
@@ -66,19 +68,20 @@ const cardDataNoStats = {
 
 const cardDataBlankStats = {
   details,
+  hasContent: true,
   n: 1,
   onContentEditClick,
   renderSendTimeLink,
   statistics: blankStatistics,
 };
 
-const cardDataWithImage = {
+const cardDataWithContent = {
   details,
+  hasContent: true,
   n: 1,
   onContentEditClick,
   renderSendTimeLink,
   statistics,
-  thumbnailUrl: 'http://via.placeholder.com/128x88',
 };
 
 loaderStories.add('Email Card', () => ( <EmailCard sendTimeValue="Send Instantly" {...cardData} /> ));
@@ -104,10 +107,6 @@ loaderStories.add('Email Card with No Statistics', () => (
 ));
 loaderStories.add('Email Card with Blank Statistics', () => (
   <EmailCard sendTimeValue="Send Instantly" {...cardDataBlankStats} />
-));
-
-loaderStories.add('Email Card with Content', () => (
-  <EmailCard sendTimeValue="Send Instantly" {...cardDataWithImage} />
 ));
 
 loaderStories.add('Email Card - Edit Mode', () => (<EmailCard {...cardDataNoStats} editing /> ));
@@ -137,7 +136,7 @@ loaderStories.add('Email Card - Multi Live', () => (
   </div>
 ));
 
-const renderAlert = () => {
+const renderWarningAlert = () => {
   return (
     <Alert dismissable={false} type="warning" icon="info-circle">
         <Fragment>
@@ -153,5 +152,25 @@ const renderAlert = () => {
 };
 
 loaderStories.add('Email Card with Alerts ', () => (
-  <EmailCard {...cardData} live renderAlert={renderAlert} sendTimeValue="Send Instantly"/>
+  <EmailCard {...cardData} live renderAlert={renderWarningAlert} sendTimeValue="Send Instantly"/>
+));
+
+loaderStories.add('Email Card with validation errors', () => (
+  <EmailCard
+    {...cardDataNoStats}
+    details={[
+      { label: 'Subject', value: 'Edit Subject', required: true, renderEditDetailLink },
+      { label: 'From Sender', value: 'Select Sender', required: true, renderEditDetailLink }
+    ]}
+    contentInvalid
+    sendTimeValue="Send Instantly"
+    renderAlert={() => (
+      <Alert dismissable={false} type="danger">
+        Please select a
+        {' '}<strong><a href="javascript: void 0">subject</a></strong> and
+        {' '}<strong><a href="javascript: void 0">sender</a></strong>, and add
+        {' '}<strong><a href="javascript: void 0">content</a></strong> to this email.
+      </Alert>
+    )}
+  />
 ));
