@@ -17,6 +17,18 @@ Eventually, we aim to move this into pull requests and engage in [documentation-
 
 [ddd]: https://medium.com/blacklane-engineering/documentation-driven-development-8b2ff119104f
 
+### Component Folder Structure
+
+When creating new components, please follow the structure below. This pattern has components organized by folder, with all the related files for that component within the folder (stories, styles, and types).
+
+ui-components/
+├── src/
+│   ├── component-name/
+│       └── component-name.stories.tsx
+│       └── component-name.module.scss
+│       └── component-name.module.scss.d.ts
+│       └── index.tsx
+
 ## Building and Testing
 
 The build and test structure is fairly primitive at the moment. There are various npm scripts that can be run:
