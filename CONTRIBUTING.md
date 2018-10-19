@@ -21,14 +21,15 @@ Eventually, we aim to move this into pull requests and engage in [documentation-
 
 When creating new components, please follow the structure below. This pattern has components organized by folder, with all the related files for that component within the folder (stories, styles, and types).
 
-ui-components/<br />
-├ src/<br />
-&nbsp;&nbsp;&nbsp;├ component-name/<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ component-name.stories.tsx<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ component-name.module.scss<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ component-name.module.scss.d.ts<br />
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;└ index.tsx<br />
-
+```
+ui-components/
+├── src/
+│   ├── component-name/
+│       └── component-name.stories.tsx
+│       └── component-name.module.scss
+│       └── component-name.module.scss.d.ts
+│       └──
+```
 ## Building and Testing
 
 The build and test structure is fairly primitive at the moment. There are various npm scripts that can be run:
