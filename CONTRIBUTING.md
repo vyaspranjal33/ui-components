@@ -28,7 +28,7 @@ ui-components/
 │       └── component-name.stories.tsx
 │       └── component-name.module.scss
 │       └── component-name.module.scss.d.ts
-│       └──
+│       └── index.tsx
 ```
 ## Building and Testing
 
