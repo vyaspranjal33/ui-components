@@ -10377,7 +10377,7 @@ exports[`Storyshots Segment Term Segment term which cannot be edited 1`] = `
     Entry Criteria
   </p>
   <div
-    className="segment-term"
+    className="segment-term is-live"
     onClick={undefined}
   >
     <p>
