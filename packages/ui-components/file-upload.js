@@ -109,7 +109,7 @@ export class FileUpload extends Component {
             return some(files, (file) => {
                 // windows files, plus osx directories & apps have type of empty string.
                 return ((!!file.type && includes(supportedType, file.type)) ||
-                    some(supportedExtensions, supportedExtension => file.name.includes(`.${supportedExtension}`)));
+                    some(supportedExtensions, supportedExtension => !!file.name && file.name.includes(`.${supportedExtension}`)));
             });
         };
         this.updateCurrentFile = (files, event) => {
