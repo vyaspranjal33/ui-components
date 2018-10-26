@@ -70,7 +70,7 @@ export class ColorPicker extends React.Component {
             React.createElement("label", null, labelText),
             React.createElement("div", { className: Styles['inputs-wrapper'] },
                 (resetValue || typeof resetValue === 'string') && (React.createElement(Icon, { className: Styles['reset-button'], type: "reload", "data-role": "reset-button", title: "Reset to Default Color", onClick: this.onReset })),
-                React.createElement(TextInput, Object.assign({}, attributes, { id: this.props.id, onChange: this.handleChangeFromTextInput, placeholder: "auto", step: this.props.step, type: 'text', value: value })),
+                React.createElement(TextInput, Object.assign({}, attributes, { id: this.props.id, onChange: this.handleChangeFromTextInput, placeholder: "auto", step: this.props.step, type: 'text', value: value, isDisabled: true })),
                 React.createElement("button", { className: Styles.bubble, "data-role": "color-picker-trigger", style: { backgroundColor: value }, onClick: this.toggleColorPalette, ref: element => {
                         this.colorPaletteButton = element;
                     } }),
