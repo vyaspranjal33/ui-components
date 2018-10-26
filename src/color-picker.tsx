@@ -81,6 +81,7 @@ export class ColorPicker extends React.Component<
             step={this.props.step as number} // weird typing issues with Input types
             type={'text'}
             value={value}
+            isDisabled
           />
           <button
             className={Styles.bubble}

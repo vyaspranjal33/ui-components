@@ -2992,7 +2992,7 @@ exports[`Storyshots Color Palette Color Picker 1`] = `
       title="Reset to Default Color"
     />
     <div
-      className="input-text-wrap"
+      className="input-text-wrap is-disabled"
       style={Object {}}
     >
       <label
