@@ -10,7 +10,7 @@
 Re-useable React components based on the SendGrid Style Guide.
 [Hosted StoryBook](https://sendgrid.github.io/ui-components)
 
-## Getting Started
+## Getting Started with UI-components in your project
 
 Make sure your project has all required dependencies and development dependencies installed.
 
@@ -98,17 +98,26 @@ import '../path_to_uicomponents/packages/styles/global/main.scss';
 
 After running `npm install` and ensuring that style-guide is pulled properly just run `npm run storybook` and you should be good to go!
 
-## Adding Test Hooks
+### Adding Test Hooks
 
 For many components, it's useful for testing to have attributes that make them easy to query for and select.
 
-For this, use `attributes={{'data-test':"some-test-id}}"` as an attribute that describes the component. If it's possible, you can and should name the props passed in to create a unique identifier.
+For this, use `attributes={{'data-test':"some-test-id}}"` as an attribute that describes the component. If it's possible, you can and should include the `data-test` attribute to create a unique identifier.
 
 ### What are these Stateful Components?
 
 State is hard and all of the UI components should be purely presentational. But, that makes them hard to test out in Storybook. The stateful components (e.g. `StatefulTextInput`) are solely for working with Storybook and are not supported or endorsed in any way. Think of them as a private API. They can be removed at any time. You've been warned.
 
-# Semver Versioning
+## Contributing to UI Components
+
+See [CONTRIBUTING.md](https://github.com/sendgrid/ui-components/blob/master/CONTRIBUTING.md)
+
+Install project dependencies with:
+```
+yarn
+```
+
+## Semver Versioning
 
 When making a pull request, make sure the title has a [semver](https://semver.org/) bump level defined (**#major**, **#minor**, or **#patch**).
 
@@ -117,7 +126,7 @@ Patches and minor changes will be updated automatically, but major changes will 
 
 More information: https://semver.org/
 
-# Available Commands
+## Available Commands
 
 - `yarn start`: This is an alias for `yarn run storybook`
 - `yarn storybook`: Start Storybook on port 6006.
@@ -144,10 +153,6 @@ To make sure your additions don't break `ui-components`, run `npm run test`, whi
 **Image Snapshots & Animations**:
 
 - We add a css rule in storybook when we detect the `file://` pattern that disables all animations on the page so we can get consistent image snapshots with animations.
-
-# Contributing
-
-See [CONTRIBUTING.md](https://github.com/sendgrid/ui-components/blob/master/CONTRIBUTING.md)
 
 ## Deploying
 
