@@ -7,7 +7,7 @@
 [![MIT licensed](https://img.shields.io/badge/license-MIT-blue.svg)](./license)
 
 
-Re-useable React components based on the SendGrid's Style Guide.
+Re-useable React components based on the SendGrid Style Guide.
 [Hosted StoryBook](https://sendgrid.github.io/ui-components)
 
 ## Getting Started
@@ -102,18 +102,18 @@ After running `npm install` and ensuring that style-guide is pulled properly jus
 
 For many components, it's useful for testing to have attributes that make them easy to query for and select.
 
-For this, use `attributes={{'data-test':"some-test-id}}"` as an attribute that describes the component. If it's possible, you can and should the props passed in to create a unique identifier.
+For this, use `attributes={{'data-test':"some-test-id}}"` as an attribute that describes the component. If it's possible, you can and should name the props passed in to create a unique identifier.
 
 ### What are these Stateful Components?
 
-State is hard and all of the UI components should be purely presentational. But, that makes them hard to test out in Storybook. The stateful components (e.g. `StatefulTextInput`) are solely for working with Storybook and are not supported or endorsed in anyway. Think of them as a private API. They can be removed at any time. You've been warned.
+State is hard and all of the UI components should be purely presentational. But, that makes them hard to test out in Storybook. The stateful components (e.g. `StatefulTextInput`) are solely for working with Storybook and are not supported or endorsed in any way. Think of them as a private API. They can be removed at any time. You've been warned.
 
 # Semver Versioning
 
 When making a pull request, make sure the title has a [semver](https://semver.org/) bump level defined (**#major**, **#minor**, or **#patch**).
 
 Semver bumps are used to know when to update the [@sendgrid/ui-components npm package](https://www.npmjs.com/package/@sendgrid/ui-components).
-Patch and minor changes will be updated automatically, but major changes will update if you update your npm package version manually.
+Patches and minor changes will be updated automatically, but major changes will update if you update your npm package version manually.
 
 More information: https://semver.org/
 
@@ -139,11 +139,11 @@ To make sure your additions don't break `ui-components`, run `npm run test`, whi
 
 **Image Snapshots & Docker**:
 
-- Since we run image snapshots in Buildkite with docker we need to run them locally with docker as well because different Os's render fonts and other things differently. We don't publish our docker image so you'll have to build and re-build the image any time our dependencies change in package.json. To do so just run the command `docker-compose build build`. This should build the container and be ready to run.
+- Since we run image snapshots in Buildkite with docker we need to run them locally with docker as well because different OSs render fonts and other things differently. We don't publish our docker image so you'll have to build and re-build the image any time our dependencies change in package.json. To do so just run the command `docker-compose build build`. This should build the container and be ready to run.
 
 **Image Snapshots & Animations**:
 
-- We add a css rule in storybook when we detect the `file://` pattern that disables all animations on the page so we can get consistent image snapshots with animations
+- We add a css rule in storybook when we detect the `file://` pattern that disables all animations on the page so we can get consistent image snapshots with animations.
 
 # Contributing
 

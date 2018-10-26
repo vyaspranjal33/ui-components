@@ -1,6 +1,6 @@
 # Bug Report
 
-## Which components are effected?
+## Which components are affected?
 
 <!-- List effected components here. -->
 
